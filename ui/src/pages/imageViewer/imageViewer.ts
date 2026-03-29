@@ -32,6 +32,7 @@ const imageViewer = defineComponent({
             $page: {} as FalconPage<ImageViewerOptions>,
             
             currentImage: '' as string,
+            currentImageData: '' as string,
             imageName: '' as string,
             currentDirectory: '/userdisk' as string,
             imageList: [] as string[],
@@ -62,7 +63,6 @@ const imageViewer = defineComponent({
         await this.initializeShell();
         await this.loadRecentImages();
         
-        // 检查是否有初始路径参数
         const options = this.$page.loadOptions;
         if (options.directory) {
             this.currentDirectory = options.directory;
@@ -70,7 +70,7 @@ const imageViewer = defineComponent({
         if (options.initialPath) {
             this.currentImage = options.initialPath;
             this.imageName = options.initialPath.split('/').pop() || '';
-            await this.selectImage();
+            await this.loadImage(options.initialPath);
         }
     },
 
@@ -87,6 +87,49 @@ const imageViewer = defineComponent({
                 console.error('Shell初始化失败:', error);
                 showError('Shell初始化失败');
             }
+        },
+
+        async loadImage(imagePath: string) {
+            if (!this.shellInitialized) {
+                showError('Shell未初始化');
+                return;
+            }
+            
+            try {
+                showLoading('正在加载图片...');
+                
+                const ext = imagePath.split('.').pop()?.toLowerCase() || 'jpg';
+                const mimeType = this.getMimeType(ext);
+                
+                const cmd = `base64 "${imagePath}" 2>/dev/null`;
+                const result = await Shell.exec(cmd);
+                
+                if (result && result.trim()) {
+                    this.currentImageData = `data:${mimeType};base64,${result.trim()}`;
+                    this.currentImage = imagePath;
+                    this.imageName = imagePath.split('/').pop() || '';
+                    showSuccess('图片加载成功');
+                } else {
+                    showError('图片加载失败');
+                }
+            } catch (error: any) {
+                console.error('加载图片失败:', error);
+                showError('加载图片失败: ' + error.message);
+            } finally {
+                hideLoading();
+            }
+        },
+        
+        getMimeType(ext: string): string {
+            const mimeTypes: { [key: string]: string } = {
+                'jpg': 'image/jpeg',
+                'jpeg': 'image/jpeg',
+                'png': 'image/png',
+                'gif': 'image/gif',
+                'bmp': 'image/bmp',
+                'webp': 'image/webp'
+            };
+            return mimeTypes[ext] || 'image/jpeg';
         },
 
         async selectImage() {
@@ -107,8 +150,7 @@ const imageViewer = defineComponent({
                     
                     if (this.imageList.length > 0) {
                         this.currentImageIndex = 0;
-                        this.currentImage = this.imageList[0];
-                        this.imageName = this.imageList[0].split('/').pop() || '';
+                        await this.loadImage(this.imageList[0]);
                         showSuccess(`找到 ${this.imageList.length} 张图片`);
                         
                         this.addToRecent(this.imageName, this.currentImage);
@@ -136,21 +178,19 @@ const imageViewer = defineComponent({
             );
         },
         
-        nextImage() {
+        async nextImage() {
             if (this.imageList.length === 0) return;
             
             this.currentImageIndex = (this.currentImageIndex + 1) % this.imageList.length;
-            this.currentImage = this.imageList[this.currentImageIndex];
-            this.imageName = this.currentImage.split('/').pop() || '';
+            await this.loadImage(this.imageList[this.currentImageIndex]);
             this.resetZoom();
         },
         
-        prevImage() {
+        async prevImage() {
             if (this.imageList.length === 0) return;
             
             this.currentImageIndex = (this.currentImageIndex - 1 + this.imageList.length) % this.imageList.length;
-            this.currentImage = this.imageList[this.currentImageIndex];
-            this.imageName = this.currentImage.split('/').pop() || '';
+            await this.loadImage(this.imageList[this.currentImageIndex]);
             this.resetZoom();
         },
 
@@ -204,11 +244,10 @@ const imageViewer = defineComponent({
             }
         },
 
-        loadRecentImage(index: number) {
+        async loadRecentImage(index: number) {
             const img = this.recentImages[index];
             if (img) {
-                this.currentImage = img.path;
-                this.imageName = img.name;
+                await this.loadImage(img.path);
                 this.resetZoom();
             }
         },

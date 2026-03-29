@@ -34,9 +34,9 @@
           <text class="btn" @click="selectImage">扫描当前目录</text>
         </div>
         
-        <div v-if="currentImage" class="image-preview">
+        <div v-if="currentImageData" class="image-preview">
           <image 
-            :src="currentImage" 
+            :src="currentImageData" 
             :style="imageStyle"
             class="preview-image"
             resize="contain"

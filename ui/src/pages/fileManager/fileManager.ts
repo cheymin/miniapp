@@ -669,6 +669,11 @@ export default defineComponent({
     
     // 删除文件/目录
     async deleteItem(item: FileItem) {
+      if (!this.shellInitialized) {
+        showError('Shell未初始化');
+        return;
+      }
+      
       this.showConfirmModal = true;
       this.confirmTitle = '确认删除';
       this.confirmMessage = `确定要删除 ${item.name} 吗？此操作不可恢复！`;
@@ -678,15 +683,17 @@ export default defineComponent({
           
           console.log('删除:', item.fullPath);
           
-          // 使用 rm -rf 删除文件和目录
-          await Shell.exec(`rm -rf "${item.fullPath}"`);
+          const cmd = `rm -rf "${item.fullPath}"`;
+          console.log('执行命令:', cmd);
+          const result = await Shell.exec(cmd);
+          console.log('删除结果:', result);
           
           showSuccess(`删除成功: ${item.name}`);
           await this.loadDirectory();
           
         } catch (error: any) {
           console.error('删除失败:', error);
-          showError(`删除失败: ${error.message}`);
+          showError(`删除失败: ${error.message || error}`);
         } finally {
           hideLoading();
           this.showConfirmModal = false;
@@ -696,6 +703,11 @@ export default defineComponent({
     
     // 重命名文件/目录
     async renameItem(item: FileItem) {
+      if (!this.shellInitialized) {
+        showError('Shell未初始化');
+        return;
+      }
+      
       openSoftKeyboard(
         () => item.name,
         async (newName) => {
@@ -715,15 +727,17 @@ export default defineComponent({
             
             console.log('重命名:', item.fullPath, '->', newPath);
             
-            // 重命名
-            await Shell.exec(`mv "${item.fullPath}" "${newPath}"`);
+            const cmd = `mv "${item.fullPath}" "${newPath}"`;
+            console.log('执行命令:', cmd);
+            const result = await Shell.exec(cmd);
+            console.log('重命名结果:', result);
             
             showSuccess(`重命名成功: ${item.name} -> ${newName}`);
             await this.loadDirectory();
             
           } catch (error: any) {
             console.error('重命名失败:', error);
-            showError(`重命名失败: ${error.message}`);
+            showError(`重命名失败: ${error.message || error}`);
           } finally {
             hideLoading();
           }

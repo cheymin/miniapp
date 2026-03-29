@@ -170,7 +170,7 @@ const videoPlayer = defineComponent({
                     return;
                 }
                 
-                const cmd = `nohup mplayer -vo fbdev2 -ao alsa -volume ${this.volume} -speed ${this.playbackSpeed} "${this.currentVideo}" > /dev/null 2>&1 &`;
+                const cmd = `xdg-open "${this.currentVideo}" 2>/dev/null || nohup mplayer -vo fbdev2 -ao alsa -volume ${this.volume} -speed ${this.playbackSpeed} "${this.currentVideo}" > /dev/null 2>&1 &`;
                 await Shell.exec(cmd);
                 
                 this.isPlaying = true;

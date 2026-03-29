@@ -36,7 +36,6 @@ const aiSettings = defineComponent({
             topP: 0,
             systemPrompt: '',
 
-            userBalance: 0.0,
             availableModels: [] as string[],
             showAllModels: false,
         };
@@ -55,7 +54,6 @@ const aiSettings = defineComponent({
         try {
             AI.initialize();
             this.loadSettings();
-            this.refreshBalance();
             this.refreshModels();
         } catch (e) {
             showError(e as string || 'AI 初始化失败');
@@ -76,18 +74,6 @@ const aiSettings = defineComponent({
             } catch (e) {
                 showError(e as string || '加载设置失败');
             }
-        },
-
-        refreshBalance() {
-            this.userBalance = 0.0;
-            showLoading();
-            AI.getUserBalance().then((balance) => {
-                this.userBalance = balance;
-            }).catch((e) => {
-                showError(`获取余额失败: ${e}`);
-            }).finally(() => {
-                hideLoading();
-            });
         },
 
         refreshModels() {

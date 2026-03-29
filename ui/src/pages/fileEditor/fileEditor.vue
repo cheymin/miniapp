@@ -37,7 +37,7 @@
                   v-model="fileContent"
                   @input="onContentChange"
                   placeholder="在此输入文本..."
-                  wrap="soft"
+                  wrap="hard"
                   spellcheck="false"
                   autocorrect="off"
                   autocapitalize="off">
