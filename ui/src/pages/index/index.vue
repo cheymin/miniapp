@@ -29,16 +29,18 @@
         </div>
         
         <div class="section">
+            <text class="section-title">实用工具</text>
+            
+            <div class="item"><text class="item-text" @click="Clock">时钟/日历</text></div>
+            <div class="item"><text class="item-text" @click="Memo">备忘录</text></div>
+            <div class="item"><text class="item-text" @click="UnitConverter">单位转换器</text></div>
+        </div>
+        
+        <div class="section">
             <text class="section-title">媒体功能</text>
             
             <div class="item"><text class="item-text" @click="ImageViewer">图片查看器</text></div>
             <div class="item"><text class="item-text" @click="VideoPlayer">视频播放器</text></div>
-        </div>
-        
-        <div class="section">
-            <text class="section-title">实用工具</text>
-            
-            <div class="item"><text class="item-text" @click="Browser">简易浏览器</text></div>
         </div>
         
         <div class="section">

@@ -101,20 +101,34 @@ const imageViewer = defineComponent({
                 const ext = imagePath.split('.').pop()?.toLowerCase() || 'jpg';
                 const mimeType = this.getMimeType(ext);
                 
-                const cmd = `base64 "${imagePath}" 2>/dev/null`;
-                const result = await Shell.exec(cmd);
+                let result = '';
+                
+                try {
+                    result = await Shell.exec(`base64 "${imagePath}"`);
+                } catch (e) {
+                    try {
+                        result = await Shell.exec(`cat "${imagePath}" | base64`);
+                    } catch (e2) {
+                        try {
+                            result = await Shell.exec(`od -An -tx1 "${imagePath}" | tr -d ' \\n' | xxd -r -p | base64`);
+                        } catch (e3) {
+                            throw new Error('无法读取图片文件');
+                        }
+                    }
+                }
                 
                 if (result && result.trim()) {
-                    this.currentImageData = `data:${mimeType};base64,${result.trim()}`;
+                    const base64Data = result.trim().replace(/\s/g, '');
+                    this.currentImageData = `data:${mimeType};base64,${base64Data}`;
                     this.currentImage = imagePath;
                     this.imageName = imagePath.split('/').pop() || '';
                     showSuccess('图片加载成功');
                 } else {
-                    showError('图片加载失败');
+                    showError('图片加载失败：无法读取文件');
                 }
             } catch (error: any) {
                 console.error('加载图片失败:', error);
-                showError('加载图片失败: ' + error.message);
+                showError('加载图片失败: ' + (error.message || error));
             } finally {
                 hideLoading();
             }

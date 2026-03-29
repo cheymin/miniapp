@@ -19,7 +19,6 @@
 
 <template>
   <div class="container">
-    <!-- 终端输出区域 -->
     <div class="terminal-content">
       <scroller 
         class="terminal-scroller"
@@ -31,22 +30,22 @@
           <text :class="['line-text', line.type]">{{ line.content }}</text>
         </div>
         
-        <!-- 命令提示符 -->
         <div class="command-prompt">
           <text class="prompt">{{ currentDir }} $</text>
+          <text class="input-display">{{ inputText }}</text>
           <text v-if="!isExecuting" class="cursor">█</text>
-          <text v-else class="loading">⌛ 执行中...</text>
+          <text v-else class="loading">⌛</text>
         </div>
       </scroller>
     </div>
 
-    <!-- 输入区域 -->
     <div class="input-section">
       <div class="input-container" @click="openKeyboard">
-        <text class="input-text">{{ inputText || '点击输入命令...' }}</text>
+        <text class="input-placeholder" v-if="!inputText">点击输入命令...</text>
+        <text class="input-text" v-else>{{ inputText }}</text>
       </div>
-     <div class="action-buttons"><text class="btn btn-execute" @click="executeCommand">发送</text></div>
-     <div class="action-buttons"><text class="btn btn-clear" @click="clearTerminal">清空</text></div>
+      <text class="btn btn-execute" @click="executeCommand">发送</text>
+      <text class="btn btn-clear" @click="clearTerminal">清空</text>
     </div>
   </div>
 </template>

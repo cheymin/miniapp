@@ -1,0 +1,170 @@
+@import url('../../styles/section.less');
+
+.clock-display {
+    padding: 30px 20px;
+    background-color: #1a1a2e;
+    border-radius: 15px;
+    align-items: center;
+    border: 1px solid #2a2a3e;
+}
+
+.time-text {
+    font-size: 48px;
+    color: #00d4ff;
+    font-weight: bold;
+    font-family: 'Monaco', 'Consolas', monospace;
+    margin-bottom: 10px;
+}
+
+.date-text {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.weekday-text {
+    font-size: 18px;
+    color: #8888aa;
+}
+
+.calendar-display {
+    padding: 30px 20px;
+    background-color: #1a2a1a;
+    border-radius: 15px;
+    align-items: center;
+    border: 1px solid #28a745;
+}
+
+.year-text {
+    font-size: 16px;
+    color: #8888aa;
+    margin-bottom: 5px;
+}
+
+.month-text {
+    font-size: 24px;
+    color: #00ff88;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.day-text {
+    font-size: 64px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.weekday-small {
+    font-size: 16px;
+    color: #8888aa;
+}
+
+.operations-row {
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.alarm-item {
+    flex-direction: row;
+    align-items: center;
+    padding: 12px;
+    background-color: #1a1a2e;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    border: 1px solid #2a2a3e;
+}
+
+.alarm-time {
+    font-size: 24px;
+    color: #00d4ff;
+    font-weight: bold;
+    font-family: 'Monaco', 'Consolas', monospace;
+    min-width: 80px;
+}
+
+.alarm-label {
+    flex: 1;
+    font-size: 14px;
+    color: #8888aa;
+    margin-left: 10px;
+}
+
+.btn-small {
+    min-width: 50px;
+    height: 28px;
+    font-size: 12px;
+    line-height: 28px;
+    padding: 0 10px;
+    margin-left: 5px;
+}
+
+.empty-state {
+    padding: 20px 0;
+    align-items: center;
+}
+
+.empty-text {
+    font-size: 14px;
+    color: #666688;
+}
+
+.modal-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    width: 300px;
+    background-color: #1a1a2e;
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid #2a2a3e;
+}
+
+.modal-title {
+    font-size: 18px;
+    color: #00d4ff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.time-picker {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.time-input {
+    font-size: 48px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 'Monaco', 'Consolas', monospace;
+    padding: 10px 20px;
+    background-color: #0a0a1e;
+    border-radius: 10px;
+    border: 1px solid #2a2a3e;
+}
+
+.time-separator {
+    font-size: 48px;
+    color: #8888aa;
+    margin: 0 10px;
+}
+
+.modal-buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}

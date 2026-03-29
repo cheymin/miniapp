@@ -54,8 +54,14 @@ const index = defineComponent({
         VideoPlayer() {
             $falcon.navTo("videoPlayer", {});
         },
-        Browser() {
-            $falcon.navTo("browser", {});
+        Clock() {
+            $falcon.navTo("clock", {});
+        },
+        Memo() {
+            $falcon.navTo("memo", {});
+        },
+        UnitConverter() {
+            $falcon.navTo("unitConverter", {});
         }
     }
 });

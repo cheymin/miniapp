@@ -9,7 +9,6 @@
   flex-direction: column;
 }
 
-/* 终端输出区域 - 占据大部分空间 */
 .terminal-content {
   flex: 1;
   width: 100%;
@@ -65,6 +64,12 @@
   margin-right: 5px;
 }
 
+.input-display {
+  color: #ffffff;
+  font-size: 14px;
+  font-family: 'Monaco', 'Consolas', monospace;
+}
+
 .cursor {
   color: #00ff00;
   font-size: 14px;
@@ -78,7 +83,6 @@
   font-size: 14px;
 }
 
-/* 输入区域 - 固定在底部 */
 .input-section {
   height: 50px;
   flex-direction: row;
@@ -101,16 +105,16 @@
   justify-content: center;
 }
 
+.input-placeholder {
+  font-size: 14px;
+  color: #666666;
+  line-height: 36px;
+}
+
 .input-text {
   font-size: 14px;
   color: #ffffff;
   line-height: 36px;
-}
-
-/* 操作按钮 - 紧凑布局 */
-.action-buttons {
-  flex-direction: row;
-  margin-left: 8px;
 }
 
 .btn {
@@ -123,7 +127,7 @@
   text-align: center;
   line-height: 36px;
   border-radius: 4px;
-  margin-left: 4px;
+  margin-left: 8px;
 }
 
 .btn-execute {

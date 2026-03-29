@@ -170,14 +170,40 @@ const videoPlayer = defineComponent({
                     return;
                 }
                 
-                const cmd = `xdg-open "${this.currentVideo}" 2>/dev/null || nohup mplayer -vo fbdev2 -ao alsa -volume ${this.volume} -speed ${this.playbackSpeed} "${this.currentVideo}" > /dev/null 2>&1 &`;
-                await Shell.exec(cmd);
+                showLoading('正在打开视频...');
                 
-                this.isPlaying = true;
-                showSuccess('开始播放');
+                let success = false;
                 
-                this.startProgressUpdate();
+                const commands = [
+                    `am start -a android.intent.action.VIEW -d file://${this.currentVideo} -t video/* 2>/dev/null`,
+                    `xdg-open "${this.currentVideo}" 2>/dev/null`,
+                    `open "${this.currentVideo}" 2>/dev/null`,
+                    `nohup mplayer -vo fbdev2 -ao alsa "${this.currentVideo}" > /dev/null 2>&1 &`,
+                    `nohup mpv "${this.currentVideo}" > /dev/null 2>&1 &`,
+                    `nohup ffplay -autoexit "${this.currentVideo}" > /dev/null 2>&1 &`
+                ];
+                
+                for (const cmd of commands) {
+                    try {
+                        await Shell.exec(cmd);
+                        success = true;
+                        break;
+                    } catch (e) {
+                        continue;
+                    }
+                }
+                
+                hideLoading();
+                
+                if (success) {
+                    this.isPlaying = true;
+                    showSuccess('视频已打开');
+                    this.startProgressUpdate();
+                } else {
+                    showError('无法打开视频，请检查系统是否安装了视频播放器');
+                }
             } catch (error: any) {
+                hideLoading();
                 console.error('播放失败:', error);
                 showError('播放失败: ' + error.message);
             }
