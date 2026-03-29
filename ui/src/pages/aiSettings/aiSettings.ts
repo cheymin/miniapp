@@ -38,7 +38,17 @@ const aiSettings = defineComponent({
 
             userBalance: 0.0,
             availableModels: [] as string[],
+            showAllModels: false,
         };
+    },
+
+    computed: {
+        displayModels(): string[] {
+            if (this.showAllModels || this.availableModels.length <= 5) {
+                return this.availableModels;
+            }
+            return this.availableModels.slice(0, 5);
+        }
     },
 
     mounted() {
@@ -94,6 +104,11 @@ const aiSettings = defineComponent({
 
         selectModel(model: string) {
             this.modelName = model;
+            this.$forceUpdate();
+        },
+        
+        toggleShowAllModels() {
+            this.showAllModels = !this.showAllModels;
             this.$forceUpdate();
         },
 

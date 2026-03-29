@@ -54,15 +54,6 @@ const index = defineComponent({
         VideoPlayer() {
             $falcon.navTo("videoPlayer", {});
         },
-        MusicPlayer() {
-            $falcon.navTo("musicPlayer", {});
-        },
-        Calculator() {
-            $falcon.navTo("calculator", {});
-        },
-        QRCodeGenerator() {
-            $falcon.navTo("qrcodeGenerator", {});
-        },
         Browser() {
             $falcon.navTo("browser", {});
         }

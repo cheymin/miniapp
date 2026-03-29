@@ -33,14 +33,6 @@
                     <text class="item-text">基础 URL</text>
                     <text class="item-input" @click="editBaseUrl">{{ baseUrl || '点击输入基础URL' }}</text>
                 </div>
-
-                <div class="item">
-                    <text class="item-text">账户余额</text>
-                    <text :class="'balance-text balance-' + (userBalance ? '' : 'un') + 'available'">{{
-                        userBalance ? `¥${userBalance.toFixed(2)}` : '余额不可用'
-                    }}</text>
-                    <text @click="refreshBalance" class="btn btn-info">刷新</text>
-                </div>
             </div>
 
             <div class="section">
@@ -49,11 +41,14 @@
                 <div class="item">
                     <text class="item-text">可用模型</text>
                     <div class="models-grid">
-                        <text v-for="model in availableModels" :key="model" @click="selectModel(model)"
+                        <text v-for="model in displayModels" :key="model" @click="selectModel(model)"
                             :class="'item-text model model-item ' + (modelName === model ? 'model-selected' : '')">{{
                                 model
                             }}</text>
                     </div>
+                    <text v-if="availableModels.length > 5" @click="toggleShowAllModels" class="btn btn-info">
+                        {{ showAllModels ? '显示更少' : '显示更多' }}
+                    </text>
                     <text @click="refreshModels" class="btn btn-info">刷新模型</text>
                 </div>
 

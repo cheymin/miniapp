@@ -98,8 +98,7 @@ const imageViewer = defineComponent({
             try {
                 showLoading('正在扫描目录...');
                 
-                const extensions = 'jpg|jpeg|png|gif|bmp|webp';
-                const cmd = `find "${this.currentDirectory}" -type f \\( -iname "*\\.\\(${extensions}\\)" \\) 2>/dev/null | sort`;
+                const cmd = `find "${this.currentDirectory}" -type f \\( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.bmp" -o -iname "*.webp" \\) 2>/dev/null | sort`;
                 
                 const result = await Shell.exec(cmd);
                 

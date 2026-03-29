@@ -18,7 +18,7 @@
 -->
 
 <template>
-  <div class="container">
+  <scroller class="container" scroll-direction="vertical" :show-scrollbar="true">
     <div class="section">
       <text class="section-title">简易浏览器</text>
       
@@ -65,7 +65,7 @@
     
     <Loading />
     <ToastMessage />
-  </div>
+  </scroller>
 </template>
 
 <style lang="less" scoped>

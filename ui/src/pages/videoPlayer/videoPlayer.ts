@@ -94,8 +94,7 @@ const videoPlayer = defineComponent({
             try {
                 showLoading('正在扫描视频...');
                 
-                const extensions = 'mp4|avi|mkv|mov|flv|wmv|webm';
-                const cmd = `find "${this.currentDirectory}" -type f \\( -iname "*\\.\\(${extensions}\\)" \\) 2>/dev/null | sort`;
+                const cmd = `find "${this.currentDirectory}" -type f \\( -iname "*.mp4" -o -iname "*.avi" -o -iname "*.mkv" -o -iname "*.mov" -o -iname "*.flv" -o -iname "*.wmv" -o -iname "*.webm" \\) 2>/dev/null | sort`;
                 
                 const result = await Shell.exec(cmd);
                 

@@ -105,8 +105,7 @@ const musicPlayer = defineComponent({
             try {
                 showLoading('正在扫描音乐...');
                 
-                const extensions = 'mp3|wav|flac|ogg|m4a|aac|wma';
-                const cmd = `find "${this.currentDirectory}" -type f \\( -iname "*\\.\\(${extensions}\\)" \\) 2>/dev/null | sort`;
+                const cmd = `find "${this.currentDirectory}" -type f \\( -iname "*.mp3" -o -iname "*.wav" -o -iname "*.flac" -o -iname "*.ogg" -o -iname "*.m4a" -o -iname "*.aac" -o -iname "*.wma" \\) 2>/dev/null | sort`;
                 
                 const result = await Shell.exec(cmd);
                 

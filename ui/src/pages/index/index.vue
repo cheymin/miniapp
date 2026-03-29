@@ -33,14 +33,11 @@
             
             <div class="item"><text class="item-text" @click="ImageViewer">图片查看器</text></div>
             <div class="item"><text class="item-text" @click="VideoPlayer">视频播放器</text></div>
-            <div class="item"><text class="item-text" @click="MusicPlayer">音乐播放器</text></div>
         </div>
         
         <div class="section">
             <text class="section-title">实用工具</text>
             
-            <div class="item"><text class="item-text" @click="Calculator">计算器</text></div>
-            <div class="item"><text class="item-text" @click="QRCodeGenerator">二维码生成器</text></div>
             <div class="item"><text class="item-text" @click="Browser">简易浏览器</text></div>
         </div>
         
