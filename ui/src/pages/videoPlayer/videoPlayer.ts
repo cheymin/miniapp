@@ -175,12 +175,14 @@ const videoPlayer = defineComponent({
                 let success = false;
                 
                 const commands = [
-                    `am start -a android.intent.action.VIEW -d file://${this.currentVideo} -t video/* 2>/dev/null`,
-                    `xdg-open "${this.currentVideo}" 2>/dev/null`,
-                    `open "${this.currentVideo}" 2>/dev/null`,
+                    `nohup ffmpeg -i "${this.currentVideo}" -f fbdev /dev/fb0 -nostats -loglevel 0 > /dev/null 2>&1 &`,
+                    `nohup ffmpeg -i "${this.currentVideo}" -f sdl "Video" -nostats -loglevel 0 > /dev/null 2>&1 &`,
+                    `nohup ffplay -autoexit -nodisp "${this.currentVideo}" > /dev/null 2>&1 &`,
                     `nohup mplayer -vo fbdev2 -ao alsa "${this.currentVideo}" > /dev/null 2>&1 &`,
                     `nohup mpv "${this.currentVideo}" > /dev/null 2>&1 &`,
-                    `nohup ffplay -autoexit "${this.currentVideo}" > /dev/null 2>&1 &`
+                    `am start -a android.intent.action.VIEW -d file://${this.currentVideo} -t video/* 2>/dev/null`,
+                    `xdg-open "${this.currentVideo}" 2>/dev/null`,
+                    `open "${this.currentVideo}" 2>/dev/null`
                 ];
                 
                 for (const cmd of commands) {
@@ -211,7 +213,7 @@ const videoPlayer = defineComponent({
 
         async pauseVideo() {
             try {
-                await Shell.exec('killall -STOP mplayer 2>/dev/null || true');
+                await Shell.exec('killall -STOP ffmpeg 2>/dev/null || killall -STOP mplayer 2>/dev/null || killall -STOP mpv 2>/dev/null || killall -STOP ffplay 2>/dev/null || true');
                 this.isPlaying = false;
                 showInfo('已暂停');
             } catch (error: any) {

@@ -17,7 +17,10 @@
     "videoPlayer": "pages/videoPlayer/videoPlayer.vue",
     "musicPlayer": "pages/musicPlayer/musicPlayer.vue",
     "calculator": "pages/calculator/calculator.vue",
-    "qrcodeGenerator": "pages/qrcodeGenerator/qrcodeGenerator.vue"
+    "qrcodeGenerator": "pages/qrcodeGenerator/qrcodeGenerator.vue",
+    "memo": "pages/memo/memo.vue",
+    "unitConverter": "pages/unitConverter/unitConverter.vue",
+    "clock": "pages/clock/clock.vue"
   },
   "options": {
     "style": {

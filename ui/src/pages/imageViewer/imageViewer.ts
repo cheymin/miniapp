@@ -103,17 +103,21 @@ const imageViewer = defineComponent({
                 
                 let result = '';
                 
-                try {
-                    result = await Shell.exec(`base64 "${imagePath}"`);
-                } catch (e) {
+                const encodingMethods = [
+                    `perl -MMIME::Base64 -0777 -ne 'print encode_base64(\$_)' "${imagePath}"`,
+                    `perl -e 'use MIME::Base64; open(F, "<", $ARGV[0]); binmode(F); local $/; print encode_base64(<F>);' "${imagePath}"`,
+                    `xxd -p "${imagePath}" | tr -d '\\n' | perl -e 'use MIME::Base64; my $hex = <STDIN>; $hex =~ s/\\s//g; my $bin = pack("H*", $hex); print encode_base64($bin);'`,
+                    `hexdump -ve '1/1 "%.2x"' "${imagePath}" | perl -e 'use MIME::Base64; my $hex = <STDIN>; $hex =~ s/\\s//g; my $bin = pack("H*", $hex); print encode_base64($bin);'`
+                ];
+                
+                for (const cmd of encodingMethods) {
                     try {
-                        result = await Shell.exec(`cat "${imagePath}" | base64`);
-                    } catch (e2) {
-                        try {
-                            result = await Shell.exec(`od -An -tx1 "${imagePath}" | tr -d ' \\n' | xxd -r -p | base64`);
-                        } catch (e3) {
-                            throw new Error('无法读取图片文件');
+                        result = await Shell.exec(cmd);
+                        if (result && result.trim()) {
+                            break;
                         }
+                    } catch (e) {
+                        continue;
                     }
                 }
                 
