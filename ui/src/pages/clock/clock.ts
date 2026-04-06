@@ -53,18 +53,25 @@ const clock = defineComponent({
     },
 
     mounted() {
+        this.$page.$npage.setSupportBack(true);
+        this.$page.$npage.on("backpressed", this.handleBackPress);
         this.updateTime();
         this.timer = setInterval(this.updateTime, 1000);
         this.loadAlarms();
     },
 
     beforeDestroy() {
+        this.$page.$npage.off("backpressed", this.handleBackPress);
         if (this.timer) {
             clearInterval(this.timer);
         }
     },
 
     methods: {
+        handleBackPress() {
+            $falcon.navBack();
+        },
+        
         updateTime() {
             const now = new Date();
             

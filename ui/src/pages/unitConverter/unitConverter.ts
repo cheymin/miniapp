@@ -120,11 +120,21 @@ const unitConverter = defineComponent({
     },
 
     mounted() {
+        this.$page.$npage.setSupportBack(true);
+        this.$page.$npage.on("backpressed", this.handleBackPress);
         this.fromUnit = 0;
         this.toUnit = 1;
     },
+    
+    beforeDestroy() {
+        this.$page.$npage.off("backpressed", this.handleBackPress);
+    },
 
     methods: {
+        handleBackPress() {
+            $falcon.navBack();
+        },
+        
         selectType(index: number) {
             this.currentType = index;
             this.fromUnit = 0;

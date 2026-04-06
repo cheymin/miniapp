@@ -55,10 +55,24 @@ const memo = defineComponent({
     },
 
     async mounted() {
+        this.$page.$npage.setSupportBack(true);
+        this.$page.$npage.on("backpressed", this.handleBackPress);
         await this.loadMemos();
+    },
+    
+    beforeDestroy() {
+        this.$page.$npage.off("backpressed", this.handleBackPress);
     },
 
     methods: {
+        handleBackPress() {
+            if (this.isEditing) {
+                this.cancelEdit();
+            } else {
+                $falcon.navBack();
+            }
+        },
+        
         async loadMemos() {
             try {
                 const data = await $falcon.storage.get('memos');
