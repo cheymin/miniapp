@@ -56,14 +56,8 @@ const gallery = defineComponent({
         },
 
         async initShell() {
-            try {
-                await Shell.init();
-                this.shellInitialized = true;
-                this.loadImages();
-            } catch (error: any) {
-                console.error('Shell初始化失败:', error);
-                showError('Shell初始化失败');
-            }
+            this.shellInitialized = true;
+            this.loadImages();
         },
 
         async loadImages() {

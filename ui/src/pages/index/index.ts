@@ -51,9 +51,6 @@ const index = defineComponent({
         ImageViewer() {
             $falcon.navTo("imageViewer", {});
         },
-        VideoPlayer() {
-            $falcon.navTo("videoPlayer", {});
-        },
         Clock() {
             $falcon.navTo("clock", {});
         },

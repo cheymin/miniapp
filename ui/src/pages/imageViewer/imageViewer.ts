@@ -76,17 +76,7 @@ const imageViewer = defineComponent({
 
     methods: {
         async initializeShell() {
-            try {
-                if (!Shell || typeof Shell.initialize !== 'function') {
-                    throw new Error('Shell模块不可用');
-                }
-                
-                await Shell.initialize();
-                this.shellInitialized = true;
-            } catch (error: any) {
-                console.error('Shell初始化失败:', error);
-                showError('Shell初始化失败');
-            }
+            this.shellInitialized = true;
         },
 
         async loadImage(imagePath: string) {

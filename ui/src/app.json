@@ -14,7 +14,6 @@
     "misc": "pages/misc/misc.vue",
     "deviceinfo": "pages/deviceinfo/deviceinfo.vue",
     "imageViewer": "pages/imageViewer/imageViewer.vue",
-    "videoPlayer": "pages/videoPlayer/videoPlayer.vue",
     "musicPlayer": "pages/musicPlayer/musicPlayer.vue",
     "calculator": "pages/calculator/calculator.vue",
     "qrcodeGenerator": "pages/qrcodeGenerator/qrcodeGenerator.vue",
