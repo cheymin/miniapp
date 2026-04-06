@@ -1,132 +1,159 @@
-// Copyright (C) 2025 Langning Chen
-// 
-// This file is part of miniapp.
-// 
-// miniapp is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-// 
-// miniapp is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-// 
-// You should have received a copy of the GNU General Public License
-// along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
-
 .container {
     flex: 1;
-    background-color: #1a1a1a;
-    flex-direction: column;
+    background-color: #000;
 }
 
 .header {
-    background-color: #2d2d2d;
-    padding: 12px;
-    border-bottom-width: 1px;
-    border-bottom-color: #404040;
+    height: 40px;
+    background-color: #1a1a1a;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    padding: 0 10px;
+    border-bottom-width: 1px;
+    border-bottom-color: #333;
 }
 
-.header-title {
+.settings-btn {
     font-size: 20px;
-    font-weight: bold;
-    color: #ffffff;
+    color: #fff;
+    padding: 5px 10px;
 }
 
-.header-info {
+.title {
+    flex: 1;
     font-size: 16px;
-    color: #00d4ff;
+    color: #fff;
+    text-align: center;
+    lines: 1;
+}
+
+.counter {
+    font-size: 14px;
+    color: #999;
+    padding: 5px 10px;
+}
+
+.settings-panel {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 15px;
+    border-bottom-width: 1px;
+    border-bottom-color: #333;
+}
+
+.settings-item {
+    margin-bottom: 10px;
+}
+
+.settings-label {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.settings-path {
+    font-size: 12px;
+    color: #fff;
+    background-color: #333;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.settings-actions {
+    margin-top: 10px;
+}
+
+.settings-btn-action {
+    font-size: 14px;
+    color: #fff;
+    background-color: #007AFF;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.settings-section {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top-width: 1px;
+    border-top-color: #333;
+}
+
+.settings-section-title {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.control-row {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.btn-small {
+    font-size: 12px;
+    color: #fff;
+    background-color: #444;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-align: center;
 }
 
 .image-container {
     flex: 1;
-    justify-content: center;
-    align-items: center;
-    background-color: #000000;
+    flex-direction: row;
     position: relative;
 }
 
-.nav-area {
+.nav-left,
+.nav-right {
+    width: 40px;
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 60px;
     justify-content: center;
     align-items: center;
-    z-index: 10;
+    background-color: transparent;
 }
 
 .nav-left {
     left: 0;
-    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .nav-right {
     right: 0;
-    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .nav-arrow {
     font-size: 32px;
-    color: rgba(255, 255, 255, 0.7);
-    font-weight: bold;
-}
-
-.nav-area:active {
-    background-color: rgba(0, 122, 204, 0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .preview-image {
-    width: 172px;
-    height: 400px;
+    flex: 1;
+    background-color: #000;
 }
 
-.empty-container {
+.empty-state {
     flex: 1;
     justify-content: center;
     align-items: center;
-    background-color: #1a1a1a;
+    padding: 20px;
+}
+
+.empty-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
 }
 
 .empty-text {
-    font-size: 20px;
-    color: #999999;
+    font-size: 18px;
+    color: #fff;
     margin-bottom: 10px;
 }
 
 .empty-hint {
-    font-size: 16px;
-    color: #666666;
-}
-
-.controls {
-    background-color: #2d2d2d;
-    padding: 10px;
-    border-top-width: 1px;
-    border-top-color: #404040;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.btn {
-    background-color: #3a3a3a;
-    color: #ffffff;
-    padding: 10px 16px;
-    border-radius: 6px;
-    font-size: 16px;
+    font-size: 14px;
+    color: #999;
     text-align: center;
-    flex: 1;
-    margin: 0 4px;
-}
-
-.btn-nav {
-    background-color: #2a5a8a;
-}
-
-.btn:active {
-    background-color: #555555;
 }

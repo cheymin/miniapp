@@ -20,34 +20,66 @@
 <template>
   <div class="container">
     <div class="header">
-      <text class="header-title">图片查看器</text>
-      <text class="header-info" v-if="imageList.length > 0">{{ currentImageIndex + 1 }}/{{ imageList.length }}</text>
+      <text class="settings-btn" @click="toggleSettings">⚙</text>
+      <text class="title">{{ imageName || '图片查看器' }}</text>
+      <text v-if="imageList.length > 0" class="counter">{{ currentImageIndex + 1 }}/{{ imageList.length }}</text>
+    </div>
+    
+    <div v-if="showSettingsPanel" class="settings-panel">
+      <div class="settings-item">
+        <text class="settings-label">当前目录:</text>
+        <text class="settings-path">{{ currentDirectory }}</text>
+      </div>
+      
+      <div class="settings-actions">
+        <text class="settings-btn-action" @click="selectDirectory">选择目录</text>
+      </div>
+      
+      <div v-if="currentImage" class="settings-section">
+        <text class="settings-section-title">图片操作</text>
+        
+        <div class="control-row">
+          <text class="btn-small" @click="zoomIn">放大</text>
+          <text class="btn-small" @click="zoomOut">缩小</text>
+          <text class="btn-small" @click="resetZoom">重置</text>
+        </div>
+        
+        <div class="control-row">
+          <text class="btn-small" @click="rotateLeft">左转</text>
+          <text class="btn-small" @click="rotateRight">右转</text>
+        </div>
+        
+        <div class="control-row">
+          <text class="btn-small" @click="moveUp">上</text>
+          <text class="btn-small" @click="moveDown">下</text>
+          <text class="btn-small" @click="moveLeft">左</text>
+          <text class="btn-small" @click="moveRight">右</text>
+        </div>
+      </div>
     </div>
     
     <div v-if="currentImageData" class="image-container">
-      <div v-if="imageList.length > 1" class="nav-area nav-left" @click="prevImage">
-        <text class="nav-arrow">◀</text>
+      <div class="nav-left" @click="prevImage">
+        <text class="nav-arrow">‹</text>
       </div>
       
       <image 
         :src="currentImageData" 
+        :style="imageStyle"
         class="preview-image"
         resize="contain"
+        @click="handleImageClick"
       />
       
-      <div v-if="imageList.length > 1" class="nav-area nav-right" @click="nextImage">
-        <text class="nav-arrow">▶</text>
+      <div class="nav-right" @click="nextImage">
+        <text class="nav-arrow">›</text>
       </div>
     </div>
     
-    <div v-else class="empty-container">
-      <text class="empty-text">未选择图片</text>
-      <text class="empty-hint">请从图库中选择图片</text>
-    </div>
-    
-    <div v-if="imageList.length > 1" class="controls">
-      <text class="btn btn-nav" @click="prevImage">◀ 上一张</text>
-      <text class="btn btn-nav" @click="nextImage">下一张 ▶</text>
+    <div v-else class="empty-state">
+      <text class="empty-icon">📁</text>
+      <text class="empty-text">请选择目录</text>
+      <text class="empty-hint">点击左上角设置按钮选择图片目录</text>
     </div>
     
     <Loading />

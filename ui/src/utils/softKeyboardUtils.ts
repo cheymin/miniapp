@@ -31,75 +31,17 @@ function normalizeKeyboardData(data: any): string {
     return '';
 }
 
-async function getKeyboardType(): Promise<'soft' | 'system'> {
+export async function getKeyboardType(): Promise<string> {
     try {
         const data = await $falcon.storage.get('keyboard_type');
-        return (data as 'soft' | 'system') || 'soft';
+        return data || 'soft';
     } catch (error) {
+        console.error('获取键盘类型失败:', error);
         return 'soft';
     }
 }
 
 export function openSoftKeyboard(
-    get: () => string,
-    set: (value: string) => void,
-    validate?: (value: string) => string | undefined
-) {
-    getKeyboardType().then(keyboardType => {
-        if (keyboardType === 'system') {
-            openSystemKeyboard(get, set, validate);
-        } else {
-            openCustomKeyboard(get, set, validate);
-        }
-    });
-}
-
-function openSystemKeyboard(
-    get: () => string,
-    set: (value: string) => void,
-    validate?: (value: string) => string | undefined
-) {
-    const currentValue = get();
-    
-    try {
-        const uuid = ($falcon as any).startTextEdit({
-            placeholder: '请输入内容',
-            text: currentValue,
-            maxLength: 500
-        });
-
-        const handler = (data: any) => {
-            const result = typeof data === 'string' ? JSON.parse(data) : data;
-            
-            if (result.editConfirmed) {
-                const newValue = result.text || '';
-                
-                if (validate) {
-                    const validationError = validate(newValue);
-                    if (validationError) {
-                        showWarning(validationError);
-                        return;
-                    }
-                }
-                
-                set(newValue);
-            }
-            
-            try {
-                ($falcon as any).closeTextEdit(uuid);
-            } catch (e) {
-                console.error('关闭系统键盘失败:', e);
-            }
-        };
-
-        ($falcon as any).textEditFinished?.on(handler);
-    } catch (error) {
-        console.error('系统键盘不可用，回退到软键盘:', error);
-        openCustomKeyboard(get, set, validate);
-    }
-}
-
-function openCustomKeyboard(
     get: () => string,
     set: (value: string) => void,
     validate?: (value: string) => string | undefined
@@ -124,4 +66,60 @@ function openCustomKeyboard(
     };
 
     $falcon.on('softKeyboard', handler);
+}
+
+export async function openKeyboard(
+    get: () => string,
+    set: (value: string) => void,
+    validate?: (value: string) => string | undefined
+) {
+    const keyboardType = await getKeyboardType();
+    
+    if (keyboardType === 'system') {
+        try {
+            const NativeSDK = (globalThis as any).NativeSDK;
+            if (NativeSDK && NativeSDK.startTextEdit) {
+                const currentValue = get();
+                const uuid = NativeSDK.startTextEdit({
+                    text: currentValue,
+                    maxlength: 1000,
+                    enterButtonText: '确定',
+                    inputType: 'text'
+                });
+                
+                const handler = (editUuid: string, jsonData: string) => {
+                    if (editUuid !== uuid) return;
+                    
+                    const result = JSON.parse(jsonData);
+                    if (result.editConfirmed) {
+                        const newValue = (result.text || '').replace(/\n/g, '');
+                        
+                        if (validate) {
+                            const validationError = validate(newValue);
+                            if (validationError) {
+                                showWarning(validationError);
+                                return;
+                            }
+                        }
+                        
+                        set(newValue);
+                    }
+                    
+                    if (NativeSDK.globalModule && NativeSDK.globalModule().closeTextEdit) {
+                        NativeSDK.globalModule().closeTextEdit(uuid);
+                    }
+                };
+                
+                if (NativeSDK.globalModule && NativeSDK.globalModule().textEditFinished) {
+                    NativeSDK.globalModule().textEditFinished.on(handler);
+                }
+                
+                return;
+            }
+        } catch (error) {
+            console.error('系统键盘调用失败，使用软键盘:', error);
+        }
+    }
+    
+    openSoftKeyboard(get, set, validate);
 }

@@ -13,8 +13,7 @@
 
 /* 删除标题栏样式，将其合并到功能栏 */
 .editor-header {
-    height: 0;
-    opacity: 0;
+    display: none; /* 隐藏标题栏 */
 }
 
 /* 编辑区域 - 增大面积 */
@@ -53,7 +52,7 @@
 .editor-scroller {
     flex: 1;
     height: 100%;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .editor-textarea {
@@ -73,8 +72,7 @@
 
 /* 删除状态栏样式 */
 .editor-status {
-    height: 0;
-    opacity: 0;
+    display: none; /* 隐藏状态栏 */
 }
 
 /* 功能栏 - 改为左右滑动式 */
@@ -92,12 +90,12 @@
     align-items: center;
     padding: 0 10px;
     gap: 8px;
-    overflow: hidden;
+    overflow: scroll;
     white-space: nowrap;
 }
 
 .toolbar-item {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 5px;
     flex-shrink: 0;
@@ -181,7 +179,7 @@
     border-radius: 5px;
     padding: 15px;
     z-index: 1001;
-    box-shadow: 4px 4px 20px #000000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
 }
 
 .modal-title {

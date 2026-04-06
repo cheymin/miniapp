@@ -60,10 +60,26 @@
         <text class="section-title">手电筒控制</text>
         <div class="block">
           <div class="btn-row">
-            <div class="btn-item-wide" @click="toggleTorch">
+            <div class="btn-item wide" @click="toggleTorch">
               <text class="btn-text">{{ torchOn ? '关闭手电筒' : '打开手电筒' }}</text>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- 键盘选择 -->
+      <div class="section">
+        <text class="section-title">键盘设置</text>
+        <div class="block">
+          <div class="btn-row">
+            <div class="btn-item" :class="{ 'btn-item-active': keyboardType === 'soft' }" @click="setKeyboardType('soft')">
+              <text class="btn-text">软键盘</text>
+            </div>
+            <div class="btn-item" :class="{ 'btn-item-active': keyboardType === 'system' }" @click="setKeyboardType('system')">
+              <text class="btn-text">系统键盘</text>
+            </div>
+          </div>
+          <text class="hint-text">当前: {{ keyboardType === 'soft' ? '软键盘' : '系统键盘' }}</text>
         </div>
       </div>
 

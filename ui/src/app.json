@@ -14,14 +14,11 @@
     "misc": "pages/misc/misc.vue",
     "deviceinfo": "pages/deviceinfo/deviceinfo.vue",
     "imageViewer": "pages/imageViewer/imageViewer.vue",
+    "gallery": "pages/gallery/gallery.vue",
     "musicPlayer": "pages/musicPlayer/musicPlayer.vue",
     "calculator": "pages/calculator/calculator.vue",
     "qrcodeGenerator": "pages/qrcodeGenerator/qrcodeGenerator.vue",
-    "unitConverter": "pages/unitConverter/unitConverter.vue",
-    "clock": "pages/clock/clock.vue",
-    "gallery": "pages/gallery/gallery.vue",
-    "settings": "pages/settings/settings.vue",
-    "playlist": "pages/playlist/playlist.vue"
+    "unitConverter": "pages/unitConverter/unitConverter.vue"
   },
   "options": {
     "style": {

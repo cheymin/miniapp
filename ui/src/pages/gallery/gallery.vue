@@ -19,66 +19,51 @@
 
 <template>
   <div class="container">
-    <div v-if="!showDirectoryList">
-      <div class="header">
-        <text class="title">图库</text>
-        <text class="path-text" @click="selectDirectory">{{ currentPath }}</text>
-      </div>
-      
-      <div class="actions">
-        <text class="btn" @click="goToParent">上一级</text>
-        <text class="btn btn-primary" @click="loadImages">刷新</text>
-      </div>
-      
-      <scroller class="scroll-area" scroll-direction="vertical" :show-scrollbar="true">
-        <div class="gallery-grid">
-          <div 
-            v-for="(image, index) in images" 
-            :key="index"
-            class="gallery-item"
-            @click="openImage(image)">
-            <image 
-              :src="image.base64" 
-              class="gallery-image"
-              mode="aspectFill" />
-            <text class="image-name">{{ image.name }}</text>
-          </div>
-        </div>
-        
-        <div v-if="images.length === 0" class="empty-state">
-          <text class="empty-text">暂无图片</text>
-          <text class="empty-hint">点击上方路径选择其他目录</text>
-        </div>
-      </scroller>
+    <div class="header">
+      <text class="settings-btn" @click="toggleSettings">⚙</text>
+      <text class="title">图库</text>
+      <text v-if="imageList.length > 0" class="counter">{{ imageList.length }}张</text>
     </div>
     
-    <div v-if="showDirectoryList" class="directory-list">
-      <div class="header">
-        <text class="title">选择目录</text>
-        <text class="path-text">{{ currentPath }}</text>
+    <div v-if="showSettingsPanel" class="settings-panel">
+      <div class="settings-item">
+        <text class="settings-label">当前目录:</text>
+        <text class="settings-path">{{ currentDirectory }}</text>
       </div>
       
-      <scroller class="scroll-area" scroll-direction="vertical" :show-scrollbar="true">
+      <div class="settings-actions">
+        <text class="settings-btn-action" @click="selectDirectory">选择目录</text>
+      </div>
+    </div>
+    
+    <scroller v-if="imageList.length > 0" class="gallery-grid" scroll-direction="vertical" :show-scrollbar="true">
+      <div class="grid-row" v-for="(row, rowIndex) in gridRows" :key="rowIndex">
         <div 
-          v-for="(dir, index) in directories" 
-          :key="index"
-          class="directory-item"
-          @click="changeDirectory(dir)">
-          <text class="directory-icon">📁</text>
-          <text class="directory-name">{{ dir.name }}</text>
+          v-for="(item, colIndex) in row" 
+          :key="item.path"
+          class="grid-item"
+          @click="openImage(rowIndex * 3 + colIndex)">
+          <image 
+            v-if="item.thumbnail"
+            :src="item.thumbnail" 
+            class="thumbnail"
+            resize="cover"
+          />
+          <div v-else class="thumbnail-placeholder">
+            <text class="placeholder-icon">🖼</text>
+          </div>
+          <text class="image-name" :lines="1">{{ item.name }}</text>
         </div>
-        
-        <div v-if="directories.length === 0" class="empty-state">
-          <text class="empty-text">没有子目录</text>
-        </div>
-      </scroller>
-      
-      <div class="actions">
-        <text class="btn" @click="goToParent">上一级</text>
-        <text class="btn btn-primary" @click="showDirectoryList = false">取消</text>
       </div>
+    </scroller>
+    
+    <div v-else class="empty-state">
+      <text class="empty-icon">📁</text>
+      <text class="empty-text">暂无图片</text>
+      <text class="empty-hint">点击左上角设置按钮选择图片目录</text>
     </div>
     
+    <Loading />
     <ToastMessage />
   </div>
 </template>
@@ -89,11 +74,22 @@
 
 <script>
 import gallery from './gallery';
+import Loading from '../../components/Loading.vue';
 import ToastMessage from '../../components/ToastMessage.vue';
 export default {
   ...gallery,
   components: {
+    Loading,
     ToastMessage
+  },
+  computed: {
+    gridRows(): any[] {
+      const rows = [];
+      for (let i = 0; i < this.imageList.length; i += 3) {
+        rows.push(this.imageList.slice(i, i + 3));
+      }
+      return rows;
+    }
   }
 };
 </script>

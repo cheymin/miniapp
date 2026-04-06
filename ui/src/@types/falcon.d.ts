@@ -29,24 +29,7 @@ type Falcon = {
     off<T>(eventName: string, callback?: FalconCallback<T>): void,
     trigger<T>(eventName: string, data: T): void,
     navTo<T>(target: String, options: T): void,
-    navBack(): void,
-    storage: {
-        set(key: string, data: string): Promise<void>;
-        get(key: string): Promise<string | null>;
-    },
     trigger<T>(eventName: string, data: T): void,
-    startTextEdit(options: {
-        placeholder?: string;
-        text?: string;
-        maxLength?: number;
-    }): string,
-    closeTextEdit(uuid: string): void,
-    textEditFinished?: {
-        on(callback: (data: any) => void): void;
-        off(callback?: (data: any) => void): void;
-    },
-    HandlePlayer(action: 'player' | 'play' | 'pause'): void,
-    playAlbum(playInfo: any, playOptions: any): Promise<void>,
     jsapi: {
         storage: {
             setStorage(params: { key: string; data: string }): Promise<any>;

@@ -64,7 +64,7 @@
     <div class="history-section">
       <text class="history-title">计算历史</text>
       <scroller class="history-list" scroll-direction="vertical" :show-scrollbar="true">
-        <div v-for="(item, index) in history" :key="index" class="history-item" @click="loadHistoryItem(index)">
+        <div v-for="(item, index) in history" :key="index" class="history-item" @click="loadHistory(index)">
           <text class="history-expression">{{ item.expression }}</text>
           <text class="history-result">= {{ item.result }}</text>
         </div>

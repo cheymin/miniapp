@@ -16,21 +16,17 @@
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
 import { defineComponent } from 'vue';
-import { showSuccess, showError } from '../../components/ToastMessage';
-import { showLoading, hideLoading } from '../../components/Loading';
 import { Shell } from 'langningchen';
+import { showError, showSuccess } from '../../components/ToastMessage';
+import { hideLoading, showLoading } from '../../components/Loading';
+import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
 
 export type GalleryOptions = {};
 
 interface ImageItem {
     path: string;
     name: string;
-    base64: string;
-}
-
-interface DirectoryItem {
-    name: string;
-    path: string;
+    thumbnail: string;
 }
 
 const gallery = defineComponent({
@@ -38,138 +34,175 @@ const gallery = defineComponent({
         return {
             $page: {} as FalconPage<GalleryOptions>,
             
-            currentPath: '/mnt',
-            images: [] as ImageItem[],
-            directories: [] as DirectoryItem[],
-            shellInitialized: false,
-            showDirectoryList: false
+            currentDirectory: '/userdisk' as string,
+            imageList: [] as ImageItem[],
+            showSettingsPanel: false as boolean,
+            
+            shellInitialized: false
         };
     },
 
-    mounted() {
-        this.$page.$npage.setSupportBack(true);
+    async mounted() {
         this.$page.$npage.on("backpressed", this.handleBackPress);
-        this.initShell();
+        await this.initializeShell();
     },
-
+    
     beforeDestroy() {
         this.$page.$npage.off("backpressed", this.handleBackPress);
     },
 
     methods: {
         handleBackPress() {
-            if (this.showDirectoryList) {
-                this.showDirectoryList = false;
+            if (this.showSettingsPanel) {
+                this.showSettingsPanel = false;
             } else {
-                this.$page.finish();
+                $falcon.navBack();
             }
         },
-
-        async initShell() {
-            this.shellInitialized = true;
-            this.loadImages();
+        
+        toggleSettings() {
+            this.showSettingsPanel = !this.showSettingsPanel;
         },
 
-        async loadDirectories() {
+        async initializeShell() {
             try {
-                showLoading('加载目录...');
-                const result = await Shell.exec(`ls -d "${this.currentPath}"/*/ 2>/dev/null | head -20`);
-                const dirs = result.split('\n').filter(d => d.trim());
+                if (!Shell || typeof Shell.initialize !== 'function') {
+                    throw new Error('Shell模块不可用');
+                }
                 
-                this.directories = dirs.map(dir => {
-                    const path = dir.replace(/\/$/, '');
-                    const name = path.split('/').pop();
-                    return { name, path };
-                });
-                
-                hideLoading();
-            } catch (error) {
-                hideLoading();
-                console.error('加载目录失败:', error);
-                this.directories = [];
+                await Shell.initialize();
+                this.shellInitialized = true;
+            } catch (error: any) {
+                console.error('Shell初始化失败:', error);
+                showError('Shell初始化失败');
             }
         },
 
-        selectDirectory() {
-            this.loadDirectories();
-            this.showDirectoryList = true;
+        async selectDirectory() {
+            openSoftKeyboard(
+                () => this.currentDirectory,
+                async (value: string) => {
+                    this.currentDirectory = value;
+                    this.showSettingsPanel = false;
+                    await this.scanImages();
+                }
+            );
         },
 
-        changeDirectory(dir: DirectoryItem) {
-            this.currentPath = dir.path;
-            this.showDirectoryList = false;
-            this.loadImages();
-        },
-
-        async loadImages() {
+        async scanImages() {
             if (!this.shellInitialized) {
                 showError('Shell未初始化');
                 return;
             }
-
+            
             try {
-                showLoading('正在加载图片...');
+                showLoading('正在扫描图片...');
                 
-                const imageExtensions = ['jpg', 'jpeg', 'png', 'gif', 'bmp', 'webp'];
-                const findCmd = `find "${this.currentPath}" -maxdepth 1 -type f \\( ${imageExtensions.map(ext => `-iname "*.${ext}"`).join(' -o ')} \\) 2>/dev/null | head -50`;
+                const cmd = `find "${this.currentDirectory}" -type f \\( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.bmp" -o -iname "*.webp" \\) 2>/dev/null | sort`;
                 
-                const result = await Shell.exec(findCmd);
-                const files = result.split('\n').filter(f => f.trim());
+                const result = await Shell.exec(cmd);
                 
-                this.images = [];
-                
-                for (const file of files) {
-                    try {
-                        const base64Cmd = `perl -MMIME::Base64 -e 'open(F, "<", $ARGV[0]) or die; binmode(F); local $/; print encode_base64(<F>);' "${file}"`;
-                        const base64 = await Shell.exec(base64Cmd);
-                        
-                        if (base64 && base64.length > 0) {
-                            const ext = file.split('.').pop().toLowerCase();
-                            let mimeType = 'image/jpeg';
-                            if (ext === 'png') mimeType = 'image/png';
-                            else if (ext === 'gif') mimeType = 'image/gif';
-                            else if (ext === 'bmp') mimeType = 'image/bmp';
-                            else if (ext === 'webp') mimeType = 'image/webp';
-                            
-                            this.images.push({
-                                path: file,
-                                name: file.split('/').pop(),
-                                base64: `data:${mimeType};base64,${base64.replace(/\n/g, '')}`
-                            });
-                        }
-                    } catch (e) {
-                        console.error('加载图片失败:', file, e);
+                if (result && result.trim()) {
+                    const paths = result.trim().split('\n').filter((path: string) => path);
+                    
+                    this.imageList = [];
+                    
+                    for (const path of paths) {
+                        const name = path.split('/').pop() || '';
+                        this.imageList.push({
+                            path: path,
+                            name: name,
+                            thumbnail: ''
+                        });
                     }
-                }
-                
-                hideLoading();
-                
-                if (this.images.length === 0) {
-                    showSuccess('此目录没有图片');
+                    
+                    showSuccess(`找到 ${this.imageList.length} 张图片`);
+                    
+                    this.loadThumbnails();
+                } else {
+                    this.imageList = [];
+                    showError('未找到图片文件');
                 }
             } catch (error: any) {
+                console.error('扫描图片失败:', error);
+                showError('扫描图片失败: ' + error.message);
+            } finally {
                 hideLoading();
-                console.error('加载图片失败:', error);
-                showError('加载图片失败: ' + error.message);
             }
         },
 
-        openImage(image: ImageItem) {
-            $falcon.navTo("imageViewer", { 
-                file: image.path,
-                base64: image.base64
-            });
+        async loadThumbnails() {
+            if (!this.shellInitialized) return;
+            
+            for (let i = 0; i < Math.min(this.imageList.length, 20); i++) {
+                const item = this.imageList[i];
+                try {
+                    const thumbnail = await this.generateThumbnail(item.path);
+                    if (thumbnail) {
+                        this.imageList[i].thumbnail = thumbnail;
+                    }
+                } catch (e) {
+                    console.error('生成缩略图失败:', e);
+                }
+            }
         },
 
-        getParentPath(): string {
-            const parts = this.currentPath.split('/');
-            parts.pop();
-            return parts.join('/') || '/';
+        async generateThumbnail(imagePath: string): Promise<string> {
+            if (!this.shellInitialized) return '';
+            
+            try {
+                const ext = imagePath.split('.').pop()?.toLowerCase() || 'jpg';
+                const mimeType = this.getMimeType(ext);
+                
+                let result = '';
+                
+                const encodingMethods = [
+                    `perl -MMIME::Base64 -0777 -ne 'print encode_base64(\$_)' "${imagePath}"`,
+                    `perl -e 'use MIME::Base64; open(F, "<", $ARGV[0]); binmode(F); local $/; print encode_base64(<F>);' "${imagePath}"`
+                ];
+                
+                for (const cmd of encodingMethods) {
+                    try {
+                        result = await Shell.exec(cmd);
+                        if (result && result.trim()) {
+                            break;
+                        }
+                    } catch (e) {
+                        continue;
+                    }
+                }
+                
+                if (result && result.trim()) {
+                    const base64Data = result.trim().replace(/\s/g, '');
+                    return `data:${mimeType};base64,${base64Data}`;
+                }
+            } catch (error: any) {
+                console.error('生成缩略图失败:', error);
+            }
+            
+            return '';
+        },
+        
+        getMimeType(ext: string): string {
+            const mimeTypes: { [key: string]: string } = {
+                'jpg': 'image/jpeg',
+                'jpeg': 'image/jpeg',
+                'png': 'image/png',
+                'gif': 'image/gif',
+                'bmp': 'image/bmp',
+                'webp': 'image/webp'
+            };
+            return mimeTypes[ext] || 'image/jpeg';
         },
 
-        goToParent() {
-            this.currentPath = this.getParentPath();
-            this.loadImages();
+        openImage(index: number) {
+            const item = this.imageList[index];
+            if (item) {
+                $falcon.navTo("imageViewer", {
+                    initialPath: item.path,
+                    directory: this.currentDirectory
+                });
+            }
         }
     }
 });

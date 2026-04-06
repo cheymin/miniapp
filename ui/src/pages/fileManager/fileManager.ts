@@ -358,7 +358,7 @@ export default defineComponent({
         const findCmd = `cd "${this.currentPath}" && find . -maxdepth 1 -type f -o -type d | sort`;
         const result = await Shell.exec(findCmd);
         
-        const lines = result.trim().split('\n').filter((line: string) => line && line !== '.');
+        const lines = result.trim().split('\n').filter(line => line && line !== '.');
         const files: FileItem[] = [];
         
         for (const line of lines) {
@@ -758,12 +758,13 @@ export default defineComponent({
     },
     
     // 显示上下文菜单
-    openContextMenu(event: any, item: FileItem) {
+    showContextMenu(event: any, item: FileItem) {
       this.selectedFile = item;
       this.contextMenuX = event.x || 100;
       this.contextMenuY = event.y || 100;
       this.showContextMenu = true;
       
+      // 点击其他地方关闭菜单
       setTimeout(() => {
         const handler = () => {
           this.showContextMenu = false;

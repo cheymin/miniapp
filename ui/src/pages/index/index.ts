@@ -51,20 +51,11 @@ const index = defineComponent({
         ImageViewer() {
             $falcon.navTo("imageViewer", {});
         },
-        Clock() {
-            $falcon.navTo("clock", {});
-        },
-        UnitConverter() {
-            $falcon.navTo("unitConverter", {});
-        },
         Gallery() {
             $falcon.navTo("gallery", {});
         },
-        Settings() {
-            $falcon.navTo("settings", {});
-        },
-        Playlist() {
-            $falcon.navTo("playlist", {});
+        UnitConverter() {
+            $falcon.navTo("unitConverter", {});
         }
     }
 });

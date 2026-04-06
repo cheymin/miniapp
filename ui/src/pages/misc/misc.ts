@@ -9,6 +9,7 @@ export default defineComponent({
 
       shellInitialized: false,
       torchOn: false,
+      keyboardType: 'soft' as string,
     };
   },
 
@@ -19,6 +20,9 @@ export default defineComponent({
 
     // 初始化 Shell（后台）
     await this.initShell();
+    
+    // 加载键盘设置
+    await this.loadKeyboardType();
   },
 
   beforeDestroy() {
@@ -78,6 +82,28 @@ export default defineComponent({
         `led_utils ${this.torchOn ? 1 : 0}`,
         this.torchOn ? '手电已打开' : '手电已关闭'
       );
+    },
+    
+    /* ========== 键盘设置 ========== */
+    async loadKeyboardType() {
+      try {
+        const data = await $falcon.storage.get('keyboard_type');
+        if (data) {
+          this.keyboardType = data;
+        }
+      } catch (error) {
+        console.error('加载键盘设置失败:', error);
+      }
+    },
+    
+    async setKeyboardType(type: string) {
+      this.keyboardType = type;
+      try {
+        await $falcon.storage.set('keyboard_type', type);
+        showSuccess(`已切换到${type === 'soft' ? '软键盘' : '系统键盘'}`);
+      } catch (error) {
+        showError('保存键盘设置失败');
+      }
     }
   }
 });

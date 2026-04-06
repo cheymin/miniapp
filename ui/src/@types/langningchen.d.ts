@@ -56,7 +56,3 @@ export declare class ScanInput {
     static deinitialize(): Promise<void>;
     static on(event: 'scan_input', callback: (data: string) => void): void;
 }
-
-export declare class Shell {
-    static exec(command: string): Promise<string>;
-}

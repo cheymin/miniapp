@@ -314,19 +314,16 @@ const softKeyboard = defineComponent({
             let leftOffset = 0;
             for (const index in this.visibleCandidates) {
                 const candidate = this.visibleCandidates[index];
-                const hanZiText = candidate.hanZi || '?';
-                const displayText = `${Number(index) + 1}. ${hanZiText}`;
-                const textWidth = hanZiText.length * 16 + 40;
                 elements.push({
                     id: `candidate-${index}`,
-                    display: displayText,
+                    display: `${Number(index) + 1}. ${candidate.hanZi}`,
                     style: {
                         left: `${leftOffset}px`,
-                        width: `${textWidth}px`,
+                        width: `${candidate.hanZi.length * 16 + 16}px`,
                     },
                     selected: index == this.selectedCandidateIndex,
                 });
-                leftOffset += textWidth + 5;
+                leftOffset += candidate.hanZi.length * 16 + 16 + 5;
             }
             return elements;
         },

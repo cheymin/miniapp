@@ -186,7 +186,7 @@ const calculator = defineComponent({
             this.saveHistory();
         },
 
-        loadHistoryItem(index: number) {
+        loadHistory(index: number) {
             const item = this.history[index];
             if (item) {
                 this.expression = item.expression;
