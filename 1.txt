@@ -1,0 +1,149 @@
+@rollup/plugin-typescript TS2554: Expected 0 arguments, but got 1.
+pages/shell/shell.vue?scopeId=data-v-1847b63d&aiot-vue-cli=styles.0.less:32-3
+WARNING: `word-break` is not a standard property name (may not be supported)
+pages/shell/shell.vue?scopeId=data-v-1847b63d&aiot-vue-cli=styles.0.less:35-1
+ERROR: Selector `.line-text.command` is not supported. Weex only support single-classname selector
+pages/shell/shell.vue?scopeId=data-v-1847b63d&aiot-vue-cli=styles.0.less:39-1
+ERROR: Selector `.line-text.output` is not supported. Weex only support single-classname selector
+pages/shell/shell.vue?scopeId=data-v-1847b63d&aiot-vue-cli=styles.0.less:42-1
+ERROR: Selector `.line-text.error` is not supported. Weex only support single-classname selector
+pages/deviceinfo/deviceinfo.vue?scopeId=data-v-18e2f79b&aiot-vue-cli=styles.0.less:49-3
+ERROR: property value `0 2px 8px rgba(30, 144, 255, 0.3)` is not supported for `box-shadow` (supported like: `box-shadow:10px 10px 10px #000000`)
+pages/deviceinfo/deviceinfo.vue?scopeId=data-v-18e2f79b&aiot-vue-cli=styles.0.less:62-3
+ERROR: property value `none` is not supported for `display` (supported values are: `flex`)
+pages/deviceinfo/deviceinfo.vue?scopeId=data-v-18e2f79b&aiot-vue-cli=styles.0.less:77-3
+WARNING: `word-break` is not a standard property name (may not be supported)
+pages/calculator/calculator.vue?scopeId=data-v-5b432cdb&aiot-vue-cli=styles.0.less:20-3
+WARNING: `word-wrap` is not a standard property name (may not be supported)
+pages/calculator/calculator.vue?scopeId=data-v-5b432cdb&aiot-vue-cli=styles.0.less:28-3
+WARNING: `word-wrap` is not a standard property name (may not be supported)
+pages/videoPlayer/videoPlayer.vue?scopeId=data-v-2d4a7795&aiot-vue-cli=styles.0.less:13-3
+ERROR: property value `0 2px 4px rgba(0, 0, 0, 0.1)` is not supported for `box-shadow` (supported like: `box-shadow:10px 10px 10px #000000`)
+pages/musicPlayer/musicPlayer.vue?scopeId=data-v-00daba2e&aiot-vue-cli=styles.0.less:13-3
+ERROR: property value `0 2px 4px rgba(0, 0, 0, 0.1)` is not supported for `box-shadow` (supported like: `box-shadow:10px 10px 10px #000000`)
+pages/qrcodeGenerator/qrcodeGenerator.vue?scopeId=data-v-d54c3d32&aiot-vue-cli=styles.0.less:13-3
+ERROR: property value `0 2px 4px rgba(0, 0, 0, 0.1)` is not supported for `box-shadow` (supported like: `box-shadow:10px 10px 10px #000000`)
+pages/qrcodeGenerator/qrcodeGenerator.vue?scopeId=data-v-d54c3d32&aiot-vue-cli=styles.0.less:43-3
+WARNING: `word-wrap` is not a standard property name (may not be supported)
+pages/qrcodeGenerator/qrcodeGenerator.vue?scopeId=data-v-d54c3d32&aiot-vue-cli=styles.0.less:84-3
+WARNING: `word-wrap` is not a standard property name (may not be supported)
+pages/ai/ai.vue?scopeId=data-v-2f7d581b&aiot-vue-cli=styles.0.less:135-3
+WARNING: `word-wrap` is not a standard property name (may not be supported)
+pages/ai/ai.vue?scopeId=data-v-2f7d581b&aiot-vue-cli=styles.0.less:144-3
+WARNING: `border` is not a standard property name (may not be supported)
+pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:101-3
+WARNING: `border` is not a standard property name (may not be supported)
+pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:102-3
+ERROR: property value `0 2px 8px rgba(0, 0, 0, 0.2)` is not supported for `box-shadow` (supported like: `box-shadow:10px 10px 10px #000000`)
+pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:111-3
+WARNING: `border` is not a standard property name (may not be supported)
+pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:114-3
+ERROR: property value `0 2px 8px rgba(0, 0, 0, 0.2)` is not supported for `box-shadow` (supported like: `box-shadow:10px 10px 10px #000000`)
+pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:238-3
+WARNING: `border` is not a standard property name (may not be supported)
+pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:244-3
+WARNING: `white-space` is not a standard property name (may not be supported)
+pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:249-3
+WARNING: `cursor` is not a standard property name (may not be supported)
+pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:250-3
+WARNING: `user-select` is not a standard property name (may not be supported)
+pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:256-1
+ERROR: Selector `.action-btn.disabled` is not supported. Weex only support single-classname selector
+pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:258-3
+WARNING: `pointer-events` is not a standard property name (may not be supported)
+pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:311-3
+WARNING: `border-left` is not a standard property name (may not be supported)
+pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:336-3
+WARNING: `border` is not a standard property name (may not be supported)
+pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:357-3
+WARNING: `border` is not a standard property name (may not be supported)
+pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:414-3
+WARNING: `white-space` is not a standard property name (may not be supported)
+pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:436-3
+WARNING: `word-wrap` is not a standard property name (may not be supported)
+pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:444-3
+WARNING: `border-bottom` is not a standard property name (may not be supported)
+pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:457-3
+WARNING: `border-bottom` is not a standard property name (may not be supported)
+pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:477-3
+WARNING: `white-space` is not a standard property name (may not be supported)
+pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:478-3
+ERROR: property value `justify` is not supported for `text-align` (supported values are: `left`|`center`|`right`)
+pages/about/about.vue?scopeId=data-v-04440b92&aiot-vue-cli=styles.0.less:101-3
+WARNING: `border` is not a standard property name (may not be supported)
+pages/about/about.vue?scopeId=data-v-04440b92&aiot-vue-cli=styles.0.less:116-3
+ERROR: property value `justify` is not supported for `text-align` (supported values are: `left`|`center`|`right`)
+pages/about/about.vue?scopeId=data-v-04440b92&aiot-vue-cli=styles.0.less:117-3
+WARNING: `word-wrap` is not a standard property name (may not be supported)
+pages/about/about.vue?scopeId=data-v-04440b92&aiot-vue-cli=styles.0.less:118-3
+WARNING: `overflow-wrap` is not a standard property name (may not be supported)
+pages/about/about.vue?scopeId=data-v-04440b92&aiot-vue-cli=styles.0.less:129-3
+WARNING: `border` is not a standard property name (may not be supported)
+pages/about/about.vue?scopeId=data-v-04440b92&aiot-vue-cli=styles.0.less:140-3
+WARNING: `white-space` is not a standard property name (may not be supported)
+pages/about/about.vue?scopeId=data-v-04440b92&aiot-vue-cli=styles.0.less:154-3
+WARNING: `border-bottom` is not a standard property name (may not be supported)
+pages/about/about.vue?scopeId=data-v-04440b92&aiot-vue-cli=styles.0.less:166-3
+WARNING: `border-bottom` is not a standard property name (may not be supported)
+pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:103-3
+ERROR: property value `none` is not supported for `display` (supported values are: `flex`)
+pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:119-3
+WARNING: `border-right` is not a standard property name (may not be supported)
+pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:138-3
+ERROR: property value `scroll` is not supported for `overflow` (supported values are: `visible`|`hidden`)
+pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:149-3
+WARNING: `border` is not a standard property name (may not be supported)
+pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:150-3
+WARNING: `outline` is not a standard property name (may not be supported)
+pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:151-3
+WARNING: `white-space` is not a standard property name (may not be supported)
+pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:152-3
+WARNING: `word-wrap` is not a standard property name (may not be supported)
+pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:156-3
+ERROR: property value `none` is not supported for `display` (supported values are: `flex`)
+pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:164-3
+WARNING: `border-top` is not a standard property name (may not be supported)
+pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:174-3
+ERROR: property value `scroll` is not supported for `overflow` (supported values are: `visible`|`hidden`)
+pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:175-3
+WARNING: `white-space` is not a standard property name (may not be supported)
+pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:178-3
+ERROR: property value `inline-flex` is not supported for `display` (supported values are: `flex`)
+pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:246-3
+WARNING: `border` is not a standard property name (may not be supported)
+pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:250-3
+ERROR: property value `0 4px 20px rgba(0, 0, 0, 0.7)` is not supported for `box-shadow` (supported like: `box-shadow:10px 10px 10px #000000`)
+pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:267-3
+WARNING: `border` is not a standard property name (may not be supported)
+pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:285-3
+WARNING: `border` is not a standard property name (may not be supported)
+pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:308-3
+WARNING: `white-space` is not a standard property name (may not be supported)
+pages/misc/misc.vue?scopeId=data-v-28659a4a&aiot-vue-cli=styles.0.less:120-3
+WARNING: `border` is not a standard property name (may not be supported)
+pages/misc/misc.vue?scopeId=data-v-28659a4a&aiot-vue-cli=styles.0.less:127-1
+ERROR: Selector `.btn-item.wide` is not supported. Weex only support single-classname selector
+pages/fileManager/fileManager.vue?scopeId=data-v-2a78f1bf&aiot-vue-cli=styles.0.less:102-3
+WARNING: `white-space` is not a standard property name (may not be supported)
+pages/fileManager/fileManager.vue?scopeId=data-v-2a78f1bf&aiot-vue-cli=styles.0.less:103-3
+WARNING: `border` is not a standard property name (may not be supported)
+pages/fileManager/fileManager.vue?scopeId=data-v-2a78f1bf&aiot-vue-cli=styles.0.less:114-3
+WARNING: `border` is not a standard property name (may not be supported)
+pages/fileManager/fileManager.vue?scopeId=data-v-2a78f1bf&aiot-vue-cli=styles.0.less:122-3
+WARNING: `border-bottom` is not a standard property name (may not be supported)
+pages/fileManager/fileManager.vue?scopeId=data-v-2a78f1bf&aiot-vue-cli=styles.0.less:168-3
+WARNING: `white-space` is not a standard property name (may not be supported)
+pages/fileManager/fileManager.vue?scopeId=data-v-2a78f1bf&aiot-vue-cli=styles.0.less:224-3
+WARNING: `border` is not a standard property name (may not be supported)
+pages/fileManager/fileManager.vue?scopeId=data-v-2a78f1bf&aiot-vue-cli=styles.0.less:246-3
+WARNING: `border` is not a standard property name (may not be supported)
+pages/fileManager/fileManager.vue?scopeId=data-v-2a78f1bf&aiot-vue-cli=styles.0.less:250-3
+ERROR: property value `0 4px 15px rgba(0, 0, 0, 0.6)` is not supported for `box-shadow` (supported like: `box-shadow:10px 10px 10px #000000`)
+pages/fileManager/fileManager.vue?scopeId=data-v-2a78f1bf&aiot-vue-cli=styles.0.less:272-3
+WARNING: `border` is not a standard property name (may not be supported)
+pages/fileManager/fileManager.vue?scopeId=data-v-2a78f1bf&aiot-vue-cli=styles.0.less:277-3
+ERROR: property value `0 4px 20px rgba(0, 0, 0, 0.7)` is not supported for `box-shadow` (supported like: `box-shadow:10px 10px 10px #000000`)
+pages/unitConverter/unitConverter.vue?scopeId=data-v-7b3a2e56&aiot-vue-cli=styles.0.less:120-3
+WARNING: `border` is not a standard property name (may not be supported)
+pages/unitConverter/unitConverter.vue?scopeId=data-v-7b3a2e56&aiot-vue-cli=styles.0.less:136-3
+WARNING: `border` is not a standard property name (may not be supported)

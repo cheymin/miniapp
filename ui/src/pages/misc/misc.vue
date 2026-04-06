@@ -60,7 +60,7 @@
         <text class="section-title">手电筒控制</text>
         <div class="block">
           <div class="btn-row">
-            <div class="btn-item wide" @click="toggleTorch">
+            <div class="btn-item-wide" @click="toggleTorch">
               <text class="btn-text">{{ torchOn ? '关闭手电筒' : '打开手电筒' }}</text>
             </div>
           </div>

@@ -27,7 +27,10 @@
         :show-scrollbar="true"
       >
         <div v-for="line in terminalLines" :key="line.id" class="terminal-line">
-          <text :class="['line-text', line.type]">{{ line.content }}</text>
+          <text v-if="line.type === 'command'" class="line-command">{{ line.content }}</text>
+          <text v-else-if="line.type === 'output'" class="line-output">{{ line.content }}</text>
+          <text v-else-if="line.type === 'error'" class="line-error">{{ line.content }}</text>
+          <text v-else class="line-text">{{ line.content }}</text>
         </div>
         
         <div class="command-prompt">
