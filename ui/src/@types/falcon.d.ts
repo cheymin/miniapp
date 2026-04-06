@@ -29,6 +29,11 @@ type Falcon = {
     off<T>(eventName: string, callback?: FalconCallback<T>): void,
     trigger<T>(eventName: string, data: T): void,
     navTo<T>(target: String, options: T): void,
+    navBack(): void,
+    storage: {
+        set(key: string, data: string): Promise<void>;
+        get(key: string): Promise<string | null>;
+    },
     trigger<T>(eventName: string, data: T): void,
     jsapi: {
         storage: {

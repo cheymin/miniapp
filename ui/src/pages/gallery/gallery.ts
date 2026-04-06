@@ -16,9 +16,10 @@
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
 import { defineComponent } from 'vue';
-import { showSuccess, showError, showLoading, hideLoading } from '../../components/ToastMessage';
+import { showSuccess, showError } from '../../components/ToastMessage';
+import { showLoading, hideLoading } from '../../components/Loading';
 import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
-import Shell from '../../utils/shell';
+import { Shell } from 'langningchen';
 
 export type GalleryOptions = {};
 
@@ -51,7 +52,7 @@ const gallery = defineComponent({
 
     methods: {
         handleBackPress() {
-            $falcon.navBack();
+            this.$page.finish();
         },
 
         async initShell() {

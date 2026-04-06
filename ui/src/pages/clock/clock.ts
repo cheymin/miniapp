@@ -56,7 +56,7 @@ const clock = defineComponent({
 
     methods: {
         handleBackPress() {
-            $falcon.navBack();
+            this.$page.finish();
         },
         
         updateTime() {

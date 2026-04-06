@@ -132,7 +132,7 @@ const unitConverter = defineComponent({
 
     methods: {
         handleBackPress() {
-            $falcon.navBack();
+            this.$page.finish();
         },
         
         selectType(index: number) {

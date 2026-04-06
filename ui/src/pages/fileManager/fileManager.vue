@@ -69,7 +69,7 @@
         <div v-for="file in filteredFiles" :key="file.fullPath" 
              class="file-item" 
              @click="openItem(file)"
-             @contextmenu="showContextMenu($event, file)">
+             @contextmenu="openContextMenu($event, file)">
           
           <text :class="getFileIconClass(file)">{{ file.icon }}</text>
           <text class="file-name">{{ file.name }}</text>
