@@ -29,6 +29,7 @@ type Falcon = {
     off<T>(eventName: string, callback?: FalconCallback<T>): void,
     trigger<T>(eventName: string, data: T): void,
     navTo<T>(target: String, options: T): void,
+    navBack(): void,
     trigger<T>(eventName: string, data: T): void,
     jsapi: {
         storage: {
@@ -45,6 +46,10 @@ type Falcon = {
                 timeout?: number,
             }): Promise<HttpResponse>;
         }
+    },
+    storage: {
+        get(key: string): Promise<string>;
+        set(key: string, value: string): Promise<void>;
     },
     closeApp: () => void,
     closePageByName: (pageName: string) => void,

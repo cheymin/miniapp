@@ -1,415 +1,256 @@
-Run sed -i "s/const DEVICE_MODEL = 'a6p'/const DEVICE_MODEL = '$DEVICE'/" ./ui/src/pages/update/update.ts
-[INFO] Starting miniapp build process...
-[INFO] Creating necessary directories...
-[INFO] Checking version consistency...
+[信息]开始小应用构建流程......
+[信息]创建必要的目录......
+[信息]检查版本一致性......
 
-[ERROR] Version mismatch detected!
 ========================================
-  package.json version: v1.2.11
-  update.ts version:    v1.2.4
+[错误]检测到版本不匹配！
+package.json版本：v1.2.11
+update.ts版本：v1.2.4
 ========================================
 
-[INFO] Auto-updating version in update.ts...
-[SUCCESS] Updated version in ./ui/src/pages/update/update.ts to v1.2.11
-[INFO] Setting up toolchain...
-[INFO] Using toolchain: jsapi/toolchains/armv7-eabihf--uclibc--bleeding-edge-2018.11-1
-[INFO] Using cross compiler prefix: /home/runner/work/miniapp/miniapp/jsapi/toolchains/armv7-eabihf--uclibc--bleeding-edge-2018.11-1/bin/arm-buildroot-linux-uclibcgnueabihf-
-[INFO] Building native library...
--- The C compiler identification is GNU 13.3.0
--- The CXX compiler identification is GNU 13.3.0
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: /usr/bin/cc - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: /usr/bin/c++ - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
-CURL_LIBRARY: /home/runner/work/miniapp/miniapp/jsapi/lib/libcurl.so
-SQLITE_LIBRARY: /home/runner/work/miniapp/miniapp/jsapi/lib/libsqlite3.so
--- Configuring done (1.0s)
--- Generating done (0.0s)
--- Build files have been written to: /home/runner/work/miniapp/miniapp/jsapi/build
-make: Entering directory '/home/runner/work/miniapp/miniapp/jsapi/build'
-make[1]: Entering directory '/home/runner/work/miniapp/miniapp/jsapi/build'
-make[2]: Entering directory '/home/runner/work/miniapp/miniapp/jsapi/build'
-make[2]: Entering directory '/home/runner/work/miniapp/miniapp/jsapi/build'
-make[2]: Leaving directory '/home/runner/work/miniapp/miniapp/jsapi/build'
-make[2]: Leaving directory '/home/runner/work/miniapp/miniapp/jsapi/build'
-make[2]: Entering directory '/home/runner/work/miniapp/miniapp/jsapi/build'
-make[2]: Entering directory '/home/runner/work/miniapp/miniapp/jsapi/build'
-[  2%] Generating /home/runner/work/miniapp/miniapp/jsapi/src/IME/rawdict_data.hpp
-[  5%] Building CXX object CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQAsyncExecutor.cpp.o
-make[2]: Leaving directory '/home/runner/work/miniapp/miniapp/jsapi/build'
-[  5%] Built target generate_rawdict_data_hpp
-[  7%] Building CXX object CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQAsyncSchedule.cpp.o
-[ 10%] Building CXX object CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQBaseObject.cpp.o
-[ 13%] Building CXX object CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQBaseObjectExt.cpp.o
-[ 15%] Building CXX object CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQFuncDef.cpp.o
-[ 18%] Building CXX object CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQFunctionTemplate.cpp.o
-[ 21%] Building CXX object CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQIterObject.cpp.o
-[ 23%] Building CXX object CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQNamedThread.cpp.o
-[ 26%] Building CXX object CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQObjectTemplate.cpp.o
-[ 28%] Building CXX object CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQPublishObject.cpp.o
-[ 31%] Building CXX object CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQRefCpp.cpp.o
-[ 34%] Building CXX object CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQTemplateEnv.cpp.o
-[ 36%] Building CXX object CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQTypes.cpp.o
-[ 39%] Building CXX object CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/jqbson.cpp.o
-[ 42%] Building CXX object CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/jqmisc.cpp.o
-[ 44%] Linking CXX static library libiot_sdk_lib.a
-make[2]: Leaving directory '/home/runner/work/miniapp/miniapp/jsapi/build'
-[ 44%] Built target iot_sdk_lib
-make[2]: Entering directory '/home/runner/work/miniapp/miniapp/jsapi/build'
-make[2]: Leaving directory '/home/runner/work/miniapp/miniapp/jsapi/build'
-make[2]: Entering directory '/home/runner/work/miniapp/miniapp/jsapi/build'
-[ 47%] Building CXX object CMakeFiles/jsapi_langningchen.dir/src/AI/AI.cpp.o
-[ 50%] Building CXX object CMakeFiles/jsapi_langningchen.dir/src/AI/ConversationManager.cpp.o
-[ 52%] Building CXX object CMakeFiles/jsapi_langningchen.dir/src/AI/JSAI.cpp.o
-[ 55%] Building CXX object CMakeFiles/jsapi_langningchen.dir/src/Database/Database.cpp.o
-[ 57%] Building CXX object CMakeFiles/jsapi_langningchen.dir/src/Database/Delete.cpp.o
-[ 60%] Building CXX object CMakeFiles/jsapi_langningchen.dir/src/Database/Insert.cpp.o
-[ 63%] Building CXX object CMakeFiles/jsapi_langningchen.dir/src/Database/Select.cpp.o
-[ 65%] Building CXX object CMakeFiles/jsapi_langningchen.dir/src/Database/Size.cpp.o
-[ 68%] Building CXX object CMakeFiles/jsapi_langningchen.dir/src/Database/Table.cpp.o
-[ 71%] Building CXX object CMakeFiles/jsapi_langningchen.dir/src/Database/Update.cpp.o
-[ 73%] Building CXX object CMakeFiles/jsapi_langningchen.dir/src/Fetch.cpp.o
-[ 76%] Building CXX object CMakeFiles/jsapi_langningchen.dir/src/IME/IME.cpp.o
-[ 78%] Building CXX object CMakeFiles/jsapi_langningchen.dir/src/IME/JSIME.cpp.o
-[ 81%] Building CXX object CMakeFiles/jsapi_langningchen.dir/src/JSAPI.cpp.o
-[ 84%] Building CXX object CMakeFiles/jsapi_langningchen.dir/src/ScanInput/JSScanInput.cpp.o
-[ 86%] Building CXX object CMakeFiles/jsapi_langningchen.dir/src/ScanInput/ScanInput.cpp.o
-[ 89%] Building CXX object CMakeFiles/jsapi_langningchen.dir/src/Shell/JSShell.cpp.o
-[ 92%] Building CXX object CMakeFiles/jsapi_langningchen.dir/src/Shell/Shell.cpp.o
-/home/runner/work/miniapp/miniapp/jsapi/src/Shell/Shell.cpp: In static member function ‘static std::__cxx11::string Shell::exec(const string&)’:
-/home/runner/work/miniapp/miniapp/jsapi/src/Shell/Shell.cpp:24:9: warning: unused variable ‘status’ [-Wunused-variable]
-     int status = pclose(pipe);
+[信息]update.ts 自动更新版本......
+[成功]./ui/src/pages/update/update.ts 版本更新为 v1.2.11
+[信息]正在设置工具链......
+[信息]Using toolchain： jsapi/toolchains/armv7-eabihf--uclibc--bleeding-edge-2018.11-1
+[信息]使用交叉编译器前缀：/home/runner/work/miniapp/miniapp/jsapi/toolchains/armv7-eabihf--uclibc--bleeding-edge-2018.11-1/bin/arm-buildroot-linux-uclibcgnueabihf-
+[信息]构建原生图书馆......
+——C 编译器识别码为 GNU 13.3.0
+—— CXX 编译器识别码为 GNU 13.3.0
+——检测C编译器ABI信息
+——检测到C编译器ABI信息 - 已完成
+—— 检查 C 编译器是否正常工作：/usr/bin/cc - 跳过
+——检测C语言编译功能
+——检测C编译功能 - 已完成
+——检测CXX编译器ABI信息
+——检测CXX编译器ABI信息 - 已完成
+—— 检查 CXX 编译器是否正常工作：/usr/bin/c++ - 跳过
+—— 检测 CXX 编译功能
+——检测CXX编译功能 - 已完成
+CURL_LIBRARY：/home/runner/work/miniapp/miniapp/jsapi/lib/libcurl.so
+SQLITE_LIBRARY： /home/runner/work/miniapp/miniapp/jsapi/lib/libsqlite3.so
+——配置完成（0.8秒）
+—— 生成完成（0.0秒）
+——构建文件已写入：/home/runner/work/miniapp/miniapp/jsapi/build
+make： 输入目录 '/home/runner/work/miniapp/miniapp/jsapi/build'
+make[1]： 进入目录 '/home/runner/work/miniapp/miniapp/jsapi/build'
+make[2]： 进入目录 '/home/runner/work/miniapp/miniapp/jsapi/build'
+make[2]： 进入目录 '/home/runner/work/miniapp/miniapp/jsapi/build'
+make[2]： 离开目录 '/home/runner/work/miniapp/miniapp/jsapi/build'
+make[2]： 离开目录 '/home/runner/work/miniapp/miniapp/jsapi/build'
+make[2]： 进入目录 '/home/runner/work/miniapp/miniapp/jsapi/build'
+make[2]： 进入目录 '/home/runner/work/miniapp/miniapp/jsapi/build'
+[ 2%]生成 /home/runner/work/miniapp/miniapp/jsapi/src/IME/rawdict_data.hpp
+[ 5%]构建CXX对象CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQAsyncExecutor.cpp.o
+make[2]： 离开目录 '/home/runner/work/miniapp/miniapp/jsapi/build'
+[ 5%]目标generate_rawdict_data_hpp
+[ 7%]构建CXX对象 CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQAsyncSchedule.cpp.o
+[ 10%]构建CXX对象CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQBaseObject.cpp.o
+[ 13%]构建CXX对象CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQBaseObjectExt.cpp.o
+[ 15%]构建CXX对象 CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQFuncDef.cpp.o
+[ 18%]构建CXX对象CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQFunctionTemplate.cpp.o
+[ 21%]构建CXX对象 CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQIterObject.cpp.o
+[ 23%]构建CXX对象CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQNamedThread.cpp.o
+[ 26%]构建CXX对象CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQObjectTemplate.cpp.o
+[ 28%]构建CXX对象CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQPublishObject.cpp.o
+[ 31%]构建CXX对象 CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQRefCpp.cpp.o
+[ 34%]构建CXX对象 CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQTemplateEnv.cpp.o
+[ 36%]构建CXX对象 CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/JQTypes.cpp.o
+[ 39%]构建CXX对象CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/jqbson.cpp.o
+[ 42%]构建CXX对象 CMakeFiles/iot_sdk_lib.dir/iot-miniapp-sdk/src/jqutil_v2/jqmisc.cpp.o
+[ 44%]链接CXX静态库libiot_sdk_lib.a
+make[2]： 离开目录 '/home/runner/work/miniapp/miniapp/jsapi/build'
+[ 44%]目标iot_sdk_lib
+make[2]： 进入目录 '/home/runner/work/miniapp/miniapp/jsapi/build'
+make[2]： 离开目录 '/home/runner/work/miniapp/miniapp/jsapi/build'
+make[2]： 进入目录 '/home/runner/work/miniapp/miniapp/jsapi/build'
+[ 47%]构建CXX对象 CMakeFiles/jsapi_langningchen.dir/src/AI/AI.cpp.o
+[ 50%]构建CXX对象CMakeFiles/jsapi_langningchen.dir/src/AI/ConversationManager.cpp.o
+[ 52%]构建CXX对象CMakeFiles/jsapi_langningchen.dir/src/AI/JSAI.cpp.o
+[ 55%]构建CXX对象 CMakeFiles/jsapi_langningchen.dir/src/Database/Database.cpp.o
+[ 57%]构建CXX对象 CMakeFiles/jsapi_langningchen.dir/src/Database/Delete.cpp.o
+[ 60%]构建CXX对象CMakeFiles/jsapi_langningchen.dir/src/Database/Insert.cpp.o
+[ 63%]构建CXX对象 CMakeFiles/jsapi_langningchen.dir/src/Database/Select.cpp.o
+[ 65%]构建CXX对象CMakeFiles/jsapi_langningchen.dir/src/Database/Size.cpp.o
+[ 68%]构建CXX对象CMakeFiles/jsapi_langningchen.dir/src/Database/Table.cpp.o
+[ 71%]构建CXX对象CMakeFiles/jsapi_langningchen.dir/src/Database/Update.cpp.o
+[ 73%]构建CXX对象CMakeFiles/jsapi_langningchen.dir/src/IME/IME.cpp.o
+[ 76%]构建CXX对象 CMakeFiles/jsapi_langningchen.dir/src/Fetch.cpp.o
+[ 78%]构建CXX对象CMakeFiles/jsapi_langningchen.dir/src/IME/JSIME.cpp.o
+[ 81%]构建CXX对象CMakeFiles/jsapi_langningchen.dir/src/JSAPI.cpp.o
+[ 84%]构建CXX对象CMakeFiles/jsapi_langningchen.dir/src/ScanInput/JSScanInput.cpp.o
+[ 86%]构建CXX对象CMakeFiles/jsapi_langningchen.dir/src/ScanInput/ScanInput.cpp.o
+[ 89%]构建CXX对象CMakeFiles/jsapi_langningchen.dir/src/Shell/JSShell.cpp.o
+[ 92%]构建CXX对象 CMakeFiles/jsapi_langningchen.dir/src/Shell/Shell.cpp.o
+/home/runner/work/miniapp/miniapp/jsapi/src/Shell/Shell.cpp：在静态成员函数 'static std：：__cxx11：：string Shell：：exec（const string&）'：
+/home/runner/work/miniapp/miniapp/jsapi/src/Shell/Shell.cpp：24：9： 警告：未使用变量“status” [-Wunused-variable]
+int status = pclose（管道）;
          ^~~~~~
-[ 94%] Building CXX object CMakeFiles/jsapi_langningchen.dir/src/Update/JSUpdate.cpp.o
-[ 97%] Building CXX object CMakeFiles/jsapi_langningchen.dir/src/strUtils.cpp.o
-[100%] Linking CXX shared library libjsapi_langningchen.so
-make[2]: Leaving directory '/home/runner/work/miniapp/miniapp/jsapi/build'
-[100%] Built target jsapi_langningchen
-make[1]: Leaving directory '/home/runner/work/miniapp/miniapp/jsapi/build'
-make: Leaving directory '/home/runner/work/miniapp/miniapp/jsapi/build'
-[INFO] Native library build completed successfully
-[INFO] Packaging UI...
+[ 94%]构建CXX对象CMakeFiles/jsapi_langningchen.dir/src/Update/JSUpdate.cpp.o
+[ 97%]构建CXX对象CMakeFiles/jsapi_langningchen.dir/src/strUtils.cpp.o
+[100%]连接CXX共享库libjsapi_langningchen.so
+make[2]： 离开目录 '/home/runner/work/miniapp/miniapp/jsapi/build'
+[100%]目标制造 jsapi_langningchen
+make[1]： 离开目录 '/home/runner/work/miniapp/miniapp/jsapi/build'
+make： 离开目录 '/home/runner/work/miniapp/miniapp/jsapi/build'
+[信息]原生库构建成功完成
+[信息]打包界面......
 
 > min的工具箱@1.2.11 package /home/runner/work/miniapp/miniapp/ui
 > aiot-cli -c -q -p
 
-cli版本: aiot-vue-cli@1.0.32
-正在执行 b 
-(node:2514) [DEP0111] DeprecationWarning: Access to process.binding('http_parser') is deprecated.
-(Use `node --trace-deprecation ...` to show where the warning was created)
+cli版本： aiot-vue-cli@1.0.32
+（节点：2600）[DEP0111]DeprecationWarning：访问 process.binding（'http_parser'）已被弃用。
+（使用“node --trace-deprecation ...”来显示警告的创建位置）
+正在执行 b
+@rollup/plugin-typescript TS2339：类型“Falcon”上不存在属性“storage”。
+@rollup/plugin-typescript TS2339：类型“Falcon”上不存在属性“storage”。
+@rollup/plugin-typescript TS2339：类型“Falcon”上不存在属性“storage”。
+@rollup/plugin-typescript TS2300：重复标识符“loadHistory”。
+@rollup/plugin-typescript TS2339：类型“Falcon”上不存在属性“storage”。
+@rollup/plugin-typescript TS2305：模块“langningchen”没有导出成员“Shell”。
+@rollup/plugin-typescript TS2305：模块“langningchen”没有导出成员“Shell”。
+@rollup/plugin-typescript TS2305：模块“langningchen”没有导出成员“Shell”。
+@rollup/plugin-typescript TS7006：参数“行”隐含了“任意”类型。
+@rollup/plugin-typescript TS2322： 类型 'true' 无法被分配为类型 'boolean & （（event： any， item： FileItem） => void）'。
+@rollup/plugin-typescript TS2322：类型“false”无法分配到类型“boolean & （（event： any， item： FileItem） => void''。
+@rollup/plugin-typescript TS2322：类型“false”无法分配到类型“boolean & （（event： any， item： FileItem） => void''。
+@rollup/plugin-typescript TS2322：类型“false”无法分配到类型“boolean & （（event： any， item： FileItem） => void''。
+@rollup/plugin-typescript TS2305：模块“langningchen”没有导出成员“Shell”。
+@rollup/plugin-typescript TS2339：类型“Falcon”上不存在属性“navBack”。
+@rollup/plugin-typescript TS2554：预期参数为0，结果只有1个。
+@rollup/plugin-typescript TS2305：模块“langningchen”没有导出成员“Shell”。
+@rollup/plugin-typescript TS2339：类型“Falcon”上不存在属性“navBack”。
+@rollup/plugin-typescript TS2554：预期参数为0，结果只有1个。
+@rollup/plugin-typescript TS2554: Expected 0 arguments, but got 1.
+@rollup/plugin-typescript TS2305: Module '"langningchen"' has no exported member 'Shell'.
 @rollup/plugin-typescript TS2339: Property 'storage' does not exist on type 'Falcon'.
 @rollup/plugin-typescript TS2339: Property 'storage' does not exist on type 'Falcon'.
-@rollup/plugin-typescript TS2339: Property 'storage' does not exist on type 'Falcon'.
-@rollup/plugin-typescript TS2300: Duplicate identifier 'loadHistory'.
-@rollup/plugin-typescript TS2339: Property 'storage' does not exist on type 'Falcon'.
-@rollup/plugin-typescript TS2339: Property 'navBack' does not exist on type 'Falcon'.
-@rollup/plugin-typescript TS2305: Module '"langningchen"' has no exported member 'Shell'.
-@rollup/plugin-typescript TS2305: Module '"langningchen"' has no exported member 'Shell'.
-@rollup/plugin-typescript TS2305: Module '"langningchen"' has no exported member 'Shell'.
-@rollup/plugin-typescript TS7006: Parameter 'line' implicitly has an 'any' type.
-@rollup/plugin-typescript TS2322: Type 'true' is not assignable to type 'boolean & ((event: any, item: FileItem) => void)'.
-@rollup/plugin-typescript TS2322: Type 'false' is not assignable to type 'boolean & ((event: any, item: FileItem) => void)'.
-@rollup/plugin-typescript TS2322: Type 'false' is not assignable to type 'boolean & ((event: any, item: FileItem) => void)'.
-@rollup/plugin-typescript TS2322: Type 'false' is not assignable to type 'boolean & ((event: any, item: FileItem) => void)'.
-@rollup/plugin-typescript TS2614: Module '"../../components/ToastMessage"' has no exported member 'showLoading'. Did you mean to use 'import showLoading from "../../components/ToastMessage"' instead?
-@rollup/plugin-typescript TS2614: Module '"../../components/ToastMessage"' has no exported member 'hideLoading'. Did you mean to use 'import hideLoading from "../../components/ToastMessage"' instead?
-@rollup/plugin-typescript TS2307: Cannot find module '../../utils/shell' or its corresponding type declarations.
-@rollup/plugin-typescript TS2339: Property 'navBack' does not exist on type 'Falcon'.
-@rollup/plugin-typescript TS7006: Parameter 'f' implicitly has an 'any' type.
-@rollup/plugin-typescript TS2305: Module '"langningchen"' has no exported member 'Shell'.
-@rollup/plugin-typescript TS2554: Expected 0 arguments, but got 1.
-@rollup/plugin-typescript TS2554: Expected 0 arguments, but got 1.
-@rollup/plugin-typescript TS2339: Property 'storage' does not exist on type 'Falcon'.
-@rollup/plugin-typescript TS2339: Property 'storage' does not exist on type 'Falcon'.
-@rollup/plugin-typescript TS2305: Module '"langningchen"' has no exported member 'Shell'.
-@rollup/plugin-typescript TS2305: Module '"langningchen"' has no exported member 'Shell'.
-@rollup/plugin-typescript TS2554: Expected 0 arguments, but got 1.
-@rollup/plugin-typescript TS2305: Module '"langningchen"' has no exported member 'Shell'.
-@rollup/plugin-typescript TS2554: Expected 0 arguments, but got 1.
-@rollup/plugin-typescript TS2339: Property 'storage' does not exist on type 'Falcon'.
-@rollup/plugin-typescript TS2339: Property 'storage' does not exist on type 'Falcon'.
-@rollup/plugin-typescript TS2305: Module '"langningchen"' has no exported member 'Shell'.
-@rollup/plugin-typescript TS2339: Property 'navBack' does not exist on type 'Falcon'.
-@rollup/plugin-typescript TS2305: Module '"langningchen"' has no exported member 'Shell'.
-@rollup/plugin-typescript TS2554: Expected 0 arguments, but got 1.
-@rollup/plugin-typescript TS2554: Expected 0 arguments, but got 1.
-@rollup/plugin-typescript TS2554: Expected 0 arguments, but got 1.
-@rollup/plugin-typescript TS2305: Module '"langningchen"' has no exported member 'Shell'.
-@rollup/plugin-typescript TS2554: Expected 0 arguments, but got 1.
-@rollup/plugin-typescript TS2554: Expected 0 arguments, but got 1.
-pages/deviceinfo/deviceinfo.vue?scopeId=data-v-18e2f79b&aiot-vue-cli=styles.0.less:78-3
-WARNING: `word-break` is not a standard property name (may not be supported)
-pages/calculator/calculator.vue?scopeId=data-v-5b432cdb&aiot-vue-cli=styles.0.less:20-3
-WARNING: `word-wrap` is not a standard property name (may not be supported)
-pages/calculator/calculator.vue?scopeId=data-v-5b432cdb&aiot-vue-cli=styles.0.less:28-3
-WARNING: `word-wrap` is not a standard property name (may not be supported)
-pages/qrcodeGenerator/qrcodeGenerator.vue?scopeId=data-v-d54c3d32&aiot-vue-cli=styles.0.less:43-3
-WARNING: `word-wrap` is not a standard property name (may not be supported)
-pages/qrcodeGenerator/qrcodeGenerator.vue?scopeId=data-v-d54c3d32&aiot-vue-cli=styles.0.less:84-3
-WARNING: `word-wrap` is not a standard property name (may not be supported)
-pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:101-3
-WARNING: `border` is not a standard property name (may not be supported)
-pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:110-3
-WARNING: `border` is not a standard property name (may not be supported)
-pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:236-3
-WARNING: `border` is not a standard property name (may not be supported)
-pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:242-3
-WARNING: `white-space` is not a standard property name (may not be supported)
-pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:247-3
-WARNING: `cursor` is not a standard property name (may not be supported)
-pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:248-3
-WARNING: `user-select` is not a standard property name (may not be supported)
-pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:256-3
-WARNING: `pointer-events` is not a standard property name (may not be supported)
-pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:309-3
-WARNING: `border-left` is not a standard property name (may not be supported)
-pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:334-3
-WARNING: `border` is not a standard property name (may not be supported)
-pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:355-3
-WARNING: `border` is not a standard property name (may not be supported)
-pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:412-3
-WARNING: `white-space` is not a standard property name (may not be supported)
-pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:434-3
-WARNING: `word-wrap` is not a standard property name (may not be supported)
-pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:442-3
-WARNING: `border-bottom` is not a standard property name (may not be supported)
-pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:455-3
-WARNING: `border-bottom` is not a standard property name (may not be supported)
-pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less:475-3
-WARNING: `white-space` is not a standard property name (may not be supported)
-pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:119-3
-WARNING: `border-right` is not a standard property name (may not be supported)
-pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:149-3
-WARNING: `border` is not a standard property name (may not be supported)
-pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:150-3
-WARNING: `outline` is not a standard property name (may not be supported)
-pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:151-3
-WARNING: `white-space` is not a standard property name (may not be supported)
-pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:152-3
-WARNING: `word-wrap` is not a standard property name (may not be supported)
-pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:164-3
-WARNING: `border-top` is not a standard property name (may not be supported)
-pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:175-3
-WARNING: `white-space` is not a standard property name (may not be supported)
-pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:246-3
-WARNING: `border` is not a standard property name (may not be supported)
-pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:267-3
-WARNING: `border` is not a standard property name (may not be supported)
-pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:285-3
-WARNING: `border` is not a standard property name (may not be supported)
-pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less:308-3
-WARNING: `white-space` is not a standard property name (may not be supported)
-pages/misc/misc.vue?scopeId=data-v-28659a4a&aiot-vue-cli=styles.0.less:120-3
-WARNING: `border` is not a standard property name (may not be supported)
-pages/fileManager/fileManager.vue?scopeId=data-v-2a78f1bf&aiot-vue-cli=styles.0.less:102-3
-WARNING: `white-space` is not a standard property name (may not be supported)
-pages/fileManager/fileManager.vue?scopeId=data-v-2a78f1bf&aiot-vue-cli=styles.0.less:103-3
-WARNING: `border` is not a standard property name (may not be supported)
-pages/fileManager/fileManager.vue?scopeId=data-v-2a78f1bf&aiot-vue-cli=styles.0.less:114-3
-WARNING: `border` is not a standard property name (may not be supported)
-pages/fileManager/fileManager.vue?scopeId=data-v-2a78f1bf&aiot-vue-cli=styles.0.less:122-3
-WARNING: `border-bottom` is not a standard property name (may not be supported)
-pages/fileManager/fileManager.vue?scopeId=data-v-2a78f1bf&aiot-vue-cli=styles.0.less:168-3
-WARNING: `white-space` is not a standard property name (may not be supported)
-pages/fileManager/fileManager.vue?scopeId=data-v-2a78f1bf&aiot-vue-cli=styles.0.less:224-3
-WARNING: `border` is not a standard property name (may not be supported)
-pages/fileManager/fileManager.vue?scopeId=data-v-2a78f1bf&aiot-vue-cli=styles.0.less:246-3
-WARNING: `border` is not a standard property name (may not be supported)
-pages/fileManager/fileManager.vue?scopeId=data-v-2a78f1bf&aiot-vue-cli=styles.0.less:272-3
-WARNING: `border` is not a standard property name (may not be supported)
-pages/about/about.vue?scopeId=data-v-04440b92&aiot-vue-cli=styles.0.less:101-3
-WARNING: `border` is not a standard property name (may not be supported)
-pages/about/about.vue?scopeId=data-v-04440b92&aiot-vue-cli=styles.0.less:117-3
-WARNING: `word-wrap` is not a standard property name (may not be supported)
-pages/about/about.vue?scopeId=data-v-04440b92&aiot-vue-cli=styles.0.less:118-3
-WARNING: `overflow-wrap` is not a standard property name (may not be supported)
-pages/about/about.vue?scopeId=data-v-04440b92&aiot-vue-cli=styles.0.less:129-3
-WARNING: `border` is not a standard property name (may not be supported)
-pages/about/about.vue?scopeId=data-v-04440b92&aiot-vue-cli=styles.0.less:140-3
-WARNING: `white-space` is not a standard property name (may not be supported)
-pages/about/about.vue?scopeId=data-v-04440b92&aiot-vue-cli=styles.0.less:154-3
-WARNING: `border-bottom` is not a standard property name (may not be supported)
-pages/about/about.vue?scopeId=data-v-04440b92&aiot-vue-cli=styles.0.less:166-3
-WARNING: `border-bottom` is not a standard property name (may not be supported)
-pages/ai/ai.vue?scopeId=data-v-2f7d581b&aiot-vue-cli=styles.0.less:135-3
-WARNING: `word-wrap` is not a standard property name (may not be supported)
-pages/ai/ai.vue?scopeId=data-v-2f7d581b&aiot-vue-cli=styles.0.less:144-3
-WARNING: `border` is not a standard property name (may not be supported)
-pages/unitConverter/unitConverter.vue?scopeId=data-v-7b3a2e56&aiot-vue-cli=styles.0.less:120-3
-WARNING: `border` is not a standard property name (may not be supported)
-pages/unitConverter/unitConverter.vue?scopeId=data-v-7b3a2e56&aiot-vue-cli=styles.0.less:136-3
-WARNING: `border` is not a standard property name (may not be supported)
-Use of eval is strongly discouraged, as it poses security risks and may cause issues with minification
-构建失败: 'showLoading' is not exported by src/components/ToastMessage.ts, imported by src/pages/gallery/gallery.ts
-未找到以下模块,可能会导致应用运行时异常(如模块为原生模块请忽略):
-../../utils/shell,langningchen
-
-  File: /home/runner/work/miniapp/miniapp/ui/src/pages/gallery/gallery.ts
-  16: // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
-  17: import { defineComponent } from 'vue';
-  18: import { showSuccess, showError, showLoading, hideLoading } from '../../components/ToastMessage';
-                                       ^
-  19: import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
-  20: import Shell from '../../utils/shell';
-      at error (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:198:30)
-      at Module.error (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:12560:16)
-      at Module.traceVariable (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:12919:29)
-      at ModuleScope.findVariable (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:11571:39)
-      at FunctionScope.findVariable (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:6503:38)
-      at ChildScope.findVariable (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:6503:38)
-      at BlockScope.findVariable (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:6503:38)
-      at Identifier.bind (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:7570:40)
-      at CallExpression.bind (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:5400:23)
-      at CallExpression.bind (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:9066:15)
-      at ExpressionStatement.bind (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:5400:23)
-      at BlockStatement.bind (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:5396:73)
-      at TryStatement.bind (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:5400:23)
-      at BlockStatement.bind (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:5396:73)
-      at FunctionExpression.bind (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:5400:23)
-      at Property.bind (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:5400:23)
-Error: 'showLoading' is not exported by src/components/ToastMessage.ts, imported by src/pages/gallery/gallery.ts
-    at error (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:198:30)
-    at Module.error (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:12560:16)
-    at Module.traceVariable (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:12919:29)
-    at ModuleScope.findVariable (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:11571:39)
-    at FunctionScope.findVariable (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:6503:38)
-    at ChildScope.findVariable (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:6503:38)
-    at BlockScope.findVariable (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:6503:38)
-    at Identifier.bind (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:7570:40)
-    at CallExpression.bind (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:5400:23)
-    at CallExpression.bind (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:9066:15)
-    at ExpressionStatement.bind (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:5400:23)
-    at BlockStatement.bind (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:5396:73)
-    at TryStatement.bind (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:5400:23)
-    at BlockStatement.bind (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:5396:73)
-    at FunctionExpression.bind (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:5400:23)
-    at Property.bind (/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js:5400:23) {
-  code: 'MISSING_EXPORT',
-  url: 'https://rollupjs.org/guide/en/#error-name-is-not-exported-by-module',
-  id: '/home/runner/work/miniapp/miniapp/ui/src/pages/gallery/gallery.ts',
-  pos: 768,
-  loc: {
-    column: 33,
-    file: '/home/runner/work/miniapp/miniapp/ui/src/pages/gallery/gallery.ts',
-    line: 18
-  },
-  frame: '16: // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.\n' +
-    "17: import { defineComponent } from 'vue';\n" +
-    "18: import { showSuccess, showError, showLoading, hideLoading } from '../../components/ToastMessage';\n" +
-    '                                     ^\n' +
-    "19: import { openSoftKeyboard } from '../../utils/softKeyboardUtils';\n" +
-    "20: import Shell from '../../utils/shell';",
-  watchFiles: [
-    '/home/runner/work/miniapp/miniapp/ui/src/app.js',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/ai/ai.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/index/index.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/update/update.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/about/about.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/shell/shell.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/softKeyboard/softKeyboard.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/aiHistory/aiHistory.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/aiNav/aiNav.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/fileEditor/fileEditor.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/fileManager/fileManager.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/misc/misc.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/deviceinfo/deviceinfo.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/imageViewer/imageViewer.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/musicPlayer/musicPlayer.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/videoPlayer/videoPlayer.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/calculator/calculator.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/unitConverter/unitConverter.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/qrcodeGenerator/qrcodeGenerator.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/clock/clock.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/gallery/gallery.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/aiSettings/aiSettings.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/app.js?from=originapp.js',
-    '__http_image_loader.js__$./images/refresh.png',
-    '__http_image_loader.js__$./images/license.png',
-    '/home/runner/work/miniapp/miniapp/ui/src/base-page.js',
-    '__http_image_loader.js__$./images/repo.png',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=script.js',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/update/update.vue?scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/softKeyboard/softKeyboard.vue?scopeId=data-v-3857000a&aiot-vue-cli=script.js',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/index/index.vue?scopeId=data-v-1badc801&aiot-vue-cli=styles.0.less',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/softKeyboard/softKeyboard.vue?scopeId=data-v-3857000a&aiot-vue-cli=styles.0.less',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/shell/shell.vue?scopeId=data-v-1847b63d&aiot-vue-cli=styles.0.less',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/aiHistory/aiHistory.vue?scopeId=data-v-c96cb616&aiot-vue-cli=styles.0.less',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/shell/shell.vue?scopeId=data-v-1847b63d&aiot-vue-cli=script.js',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=script.js',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/aiHistory/aiHistory.vue?scopeId=data-v-c96cb616&aiot-vue-cli=script.js',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/fileEditor/fileEditor.vue?scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/aiNav/aiNav.vue?scopeId=data-v-412e0b5a&aiot-vue-cli=script.js',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/aiNav/aiNav.vue?scopeId=data-v-412e0b5a&aiot-vue-cli=styles.0.less',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/fileManager/fileManager.vue?scopeId=data-v-2a78f1bf&aiot-vue-cli=script.js',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/misc/misc.vue?scopeId=data-v-28659a4a&aiot-vue-cli=script.js',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/misc/misc.vue?scopeId=data-v-28659a4a&aiot-vue-cli=styles.0.less',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/fileManager/fileManager.vue?scopeId=data-v-2a78f1bf&aiot-vue-cli=styles.0.less',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/ai/ai.vue?scopeId=data-v-2f7d581b&aiot-vue-cli=styles.0.less',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/about/about.vue?scopeId=data-v-04440b92&aiot-vue-cli=styles.0.less',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/about/about.vue?scopeId=data-v-04440b92&aiot-vue-cli=script.js',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/musicPlayer/musicPlayer.vue?scopeId=data-v-00daba2e&aiot-vue-cli=script.js',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/musicPlayer/musicPlayer.vue?scopeId=data-v-00daba2e&aiot-vue-cli=styles.0.less',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/deviceinfo/deviceinfo.vue?scopeId=data-v-18e2f79b&aiot-vue-cli=script.js',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/deviceinfo/deviceinfo.vue?scopeId=data-v-18e2f79b&aiot-vue-cli=styles.0.less',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/videoPlayer/videoPlayer.vue?scopeId=data-v-2d4a7795&aiot-vue-cli=script.js',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/ai/ai.vue?scopeId=data-v-2f7d581b&aiot-vue-cli=script.js',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/unitConverter/unitConverter.vue?scopeId=data-v-7b3a2e56&aiot-vue-cli=script.js',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/unitConverter/unitConverter.vue?scopeId=data-v-7b3a2e56&aiot-vue-cli=styles.0.less',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/gallery/gallery.vue?scopeId=data-v-abf3737e&aiot-vue-cli=script.js',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/videoPlayer/videoPlayer.vue?scopeId=data-v-2d4a7795&aiot-vue-cli=styles.0.less',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/gallery/gallery.vue?scopeId=data-v-abf3737e&aiot-vue-cli=styles.0.less',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/imageViewer/imageViewer.vue?scopeId=data-v-727fcd37&aiot-vue-cli=styles.0.less',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/clock/clock.vue?scopeId=data-v-5455550e&aiot-vue-cli=script.js',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/imageViewer/imageViewer.vue?scopeId=data-v-727fcd37&aiot-vue-cli=script.js',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/clock/clock.vue?scopeId=data-v-5455550e&aiot-vue-cli=styles.0.less',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/calculator/calculator.vue?scopeId=data-v-5b432cdb&aiot-vue-cli=script.js',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/calculator/calculator.vue?scopeId=data-v-5b432cdb&aiot-vue-cli=styles.0.less',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/aiSettings/aiSettings.vue?scopeId=data-v-1b75313b&aiot-vue-cli=script.js',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/qrcodeGenerator/qrcodeGenerator.vue?scopeId=data-v-d54c3d32&aiot-vue-cli=script.js',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/qrcodeGenerator/qrcodeGenerator.vue?scopeId=data-v-d54c3d32&aiot-vue-cli=styles.0.less',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/index/index.vue?scopeId=data-v-1badc801&aiot-vue-cli=script.js',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/aiSettings/aiSettings.vue?scopeId=data-v-1b75313b&aiot-vue-cli=styles.0.less',
-    '/home/runner/work/miniapp/miniapp/ui/src/components/Loading.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/components/ToastMessage.vue',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/update/update.ts',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/softKeyboard/softKeyboard.ts',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/fileManager/fileManager.ts',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/musicPlayer/musicPlayer.ts',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/about/about.ts',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/aiNav/aiNav.ts',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/gallery/gallery.ts',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/unitConverter/unitConverter.ts',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/deviceinfo/deviceinfo.ts',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/ai/ai.ts',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/qrcodeGenerator/qrcodeGenerator.ts',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/clock/clock.ts',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/index/index.ts',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/aiSettings/aiSettings.ts',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/misc/misc.ts',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/imageViewer/imageViewer.ts',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/calculator/calculator.ts',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/shell/shell.ts',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/fileEditor/fileEditor.ts',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/aiHistory/aiHistory.ts',
-    '/home/runner/work/miniapp/miniapp/ui/src/pages/videoPlayer/videoPlayer.ts',
-    '/home/runner/work/miniapp/miniapp/ui/images/loading/01.png',
-    '/home/runner/work/miniapp/miniapp/ui/images/loading/03.png',
-    '/home/runner/work/miniapp/miniapp/ui/images/loading/04.png',
-    '/home/runner/work/miniapp/miniapp/ui/images/loading/06.png',
-    '/home/runner/work/miniapp/miniapp/ui/images/loading/05.png',
-    '/home/runner/work/miniapp/miniapp/ui/images/loading/07.png',
-    '/home/runner/work/miniapp/miniapp/ui/images/loading/08.png',
-    '/home/runner/work/miniapp/miniapp/ui/images/loading/09.png',
-    ... 34 more items
+@rollup/plugin-typescript TS2305：模块“langningchen”没有导出成员“Shell”。
+@rollup/plugin-typescript TS2554：预期参数为0，结果只有1个。
+@rollup/plugin-typescript TS2305：模块“langningchen”没有导出成员“Shell”。
+@rollup/plugin-typescript TS2554：预期参数为0，结果只有1个。
+@rollup/plugin-typescript TS2339：类型“Falcon”上不存在属性“storage”。
+@rollup/plugin-typescript TS2339：类型“Falcon”上不存在属性“storage”。
+@rollup/plugin-typescript TS2305：模块“langningchen”没有导出成员“Shell”。
+@rollup/plugin-typescript TS2339：类型“Falcon”上不存在属性“navBack”。
+@rollup/plugin-typescript TS2305：模块“langningchen”没有导出成员“Shell”。
+@rollup/plugin-typescript TS2554：预期参数为0，结果只有1个。
+@rollup/plugin-typescript TS2554：预期参数为0，结果只有1个。
+@rollup/plugin-typescript TS2554：预期参数为0，结果只有1个。
+@rollup/plugin-typescript TS2339：类型“Falcon”上不存在属性“storage”。
+构建失败：Unexpected token （86：14） in /home/runner/work/miniapp/miniapp/ui/src/pages/gallery/gallery.vue？scopeId=data-v-abf3737e&aiot-vue-cli=script.js
+插件：commonjs
+文件：/home/runner/work/miniapp/miniapp/ui/src/pages/gallery/gallery.vue？scopeId=data-v-abf3737e&aiot-vue-cli=script.js
+84: },
+85：计算：{
+86： gridRows（）： any[] {
+                    ^
+87：连续行数 = [];
+88：对于（设i = 0;i < this.imageList.length;i += 3） {
+按PP$4。加价（/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：19551：13）
+价格为PP$9。意外（/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：16845：8）
+价格为9页。预计（/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：16839：26）
+at pp$8.parseBlock （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：17318：8）
+at pp$5.parseFunctionBody （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：19377：22）
+地址：pp$5.parseMethod （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：19316：8）
+地址：pp$5.parsePropertyValue （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：19236：23）
+地址：pp$5.parseProperty （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：19221：8）
+地址：pp$5.parseObj （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：19167：21）
+地址：pp$5.parseExprAtom （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：18902：17）
+at pp$5.parseExprSubscripts （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：18718：19）
+页面为pp$5。parseMaybeUnary （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：18684：17）
+at pp$5.parseExprOps （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：18611：19）
+在pp$5.parseMaybeConditional（/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：18594：19）
+地址：pp$5.parseMaybeAssign （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：18561：19）
+地址：pp$5.parsePropertyValue （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：19230：87）
+语法错误：/home/runner/work/miniapp/miniapp/ui/src/pages/gallery/gallery.vue 中的意外令牌（86：14）？scopeId=data-v-abf3737e&aiot-vue-cli=script.js
+按PP$4。加价（/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：19551：13）
+价格为PP$9。意外（/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：16845：8）
+价格为9页。预计（/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：16839：26）
+at pp$8.parseBlock （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：17318：8）
+at pp$5.parseFunctionBody （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：19377：22）
+地址：pp$5.parseMethod （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：19316：8）
+地址：pp$5.parsePropertyValue （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：19236：23）
+地址：pp$5.parseProperty （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：19221：8）
+地址：pp$5.parseObj （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：19167：21）
+地址：pp$5.parseExprAtom （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：18902：17）
+at pp$5.parseExprSubscripts （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：18718：19）
+页面为pp$5。parseMaybeUnary （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：18684：17）
+at pp$5.parseExprOps （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：18611：19）
+在pp$5.parseMaybeConditional（/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：18594：19）
+地址：pp$5.parseMaybeAssign （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：18561：19）
+at pp$5.parsePropertyValue （/home/runner/work/miniapp/miniapp/node_modules/.pnpm/rollup@2.79.2/node_modules/rollup/dist/shared/rollup.js：19230：87） {
+位置：480，
+LOC： {
+列：14，
+文件：'/home/runner/work/miniapp/miniapp/ui/src/pages/gallery/gallery.vue？scopeId=data-v-abf3737e&aiot-vue-cli=script.js'，
+行数：86
+},
+起立时间：481，
+帧：'84： }，\n' +
+'85：计算：{\n' +
+'86： gridRows（）： any[] {\n' +
+' ^\n' +
+'87： const 行 = [];\n' +
+'88： 对于（设i = 0;i < this.imageList.length;i += 3） {'，
+ID：“/home/runner/work/miniapp/miniapp/ui/src/pages/gallery/gallery.vue？scopeId=data-v-abf3737e&aiot-vue-cli=script.js'，
+钩子：“变形”，
+代码：“PLUGIN_ERROR”，
+插件：“commonjs”，
+watchFiles： [
+'/主页/runner/工作/小应用/小应用/ui/src/app.js'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/index/index.vue'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/ai/ai.vue'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/softKeyboard/softKeyboard.vue'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/aiSettings/aiSettings.vue'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/update/update.vue'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/shell/shell.vue'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/aiHistory/aiHistory.vue'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/about/about.vue'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/fileEditor/fileEditor.vue'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/fileManager/fileManager.vue'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/aiNav/aiNav.vue'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/misc/misc.vue'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/deviceinfo/deviceinfo.vue'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/imageViewer/imageViewer.vue'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/gallery/gallery.vue'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/qrcodeGenerator/qrcodeGenerator.vue'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/calculator/calculator.vue'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/unitConverter/unitConverter.vue'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/musicPlayer/musicPlayer.vue'，
+'/home/runner/work/miniapp/miniapp/ui/src/app.js？from=originapp.js'，
+“__http_image_loader.js__$./images/repo.png”
+“__http_image_loader.js__$./images/refresh.png”
+'/主页/runner/work/miniapp/miniapp/ui/src/base-page.js'，
+“__http_image_loader.js__$./images/license.png”
+'/home/runner/work/miniapp/miniapp/ui/src/pages/index/index.vue？scopeId=data-v-1badc801&aiot-vue-cli=styles.0.less'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/softKeyboard/softKeyboard.vue？scopeId=data-v-3857000a&aiot-vue-cli=script.js'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/index/index.vue？scopeId=data-v-1badc801&aiot-vue-cli=script.js'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/softKeyboard/softKeyboard.vue？scopeId=data-v-3857000a&aiot-vue-cli=styles.0.less'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/ai/ai.vue？scopeId=data-v-2f7d581b&aiot-vue-cli=styles.0.less'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/ai/ai.vue？scopeId=data-v-2f7d581b&aiot-vue-cli=script.js'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/shell/shell.vue？scopeId=data-v-1847b63d&aiot-vue-cli=script.js'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/aiSettings/aiSettings.vue？scopeId=data-v-1b75313b&aiot-vue-cli=script.js'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/shell/shell.vue？scopeId=data-v-1847b63d&aiot-vue-cli=styles.0.less'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/aiSettings/aiSettings.vue？scopeId=data-v-1b75313b&aiot-vue-cli=styles.0.less'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/update/update.vue？scopeId=data-v-03a5917b&aiot-vue-cli=styles.0.less'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/fileEditor/fileEditor.vue？scopeId=data-v-89c3fb0a&aiot-vue-cli=script.js'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/fileEditor/fileEditor.vue？scopeId=data-v-89c3fb0a&aiot-vue-cli=styles.0.less'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/about/about.vue？scopeId=data-v-04440b92&aiot-vue-cli=script.js'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/about/about.vue？scopeId=data-v-04440b92&aiot-vue-cli=styles.0.less'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/fileManager/fileManager.vue？scopeId=data-v-2a78f1bf&aiot-vue-cli=script.js'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/aiHistory/aiHistory.vue？scopeId=data-v-c96cb616&aiot-vue-cli=styles.0.less'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/fileManager/fileManager.vue？scopeId=data-v-2a78f1bf&aiot-vue-cli=styles.0.less'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/aiNav/aiNav.vue？scopeId=data-v-412e0b5a&aiot-vue-cli=script.js'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/misc/misc.vue？scopeId=data-v-28659a4a&aiot-vue-cli=styles.0.less'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/aiNav/aiNav.vue？scopeId=data-v-412e0b5a&aiot-vue-cli=styles.0.less'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/imageViewer/imageViewer.vue？scopeId=data-v-727fcd37&aiot-vue-cli=styles.0.less'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/imageViewer/imageViewer.vue？scopeId=data-v-727fcd37&aiot-vue-cli=script.js'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/misc/misc.vue？scopeId=data-v-28659a4a&aiot-vue-cli=script.js'，
+'/home/runner/work/miniapp/miniapp/ui/src/pages/gallery/gallery.vue？scopeId=data-v-abf3737e&aiot-vue-cli=script.js'
   ]
 }
- ELIFECYCLE  Command failed with exit code 255.
-[ERROR] UI packaging failed
-[ERROR] UI packaging failed
-Error: Process completed with exit code 1.
+ELIFECYCLE 命令失败，退出代码为 255。
+[错误]UI封装失败
+[错误]UI封装失败
+错误：

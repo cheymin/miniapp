@@ -35,7 +35,7 @@ const calculator = defineComponent({
     },
 
     async mounted() {
-        await this.loadHistory();
+        await this.loadAllHistory();
     },
 
     methods: {
@@ -186,7 +186,7 @@ const calculator = defineComponent({
             this.saveHistory();
         },
 
-        loadHistory(index: number) {
+        loadHistoryItem(index: number) {
             const item = this.history[index];
             if (item) {
                 this.expression = item.expression;
@@ -194,7 +194,7 @@ const calculator = defineComponent({
             }
         },
 
-        async saveHistory() {
+        async loadAllHistory() {
             try {
                 await $falcon.storage.set('calculator_history', JSON.stringify(this.history));
             } catch (error) {

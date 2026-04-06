@@ -42,6 +42,16 @@ const gallery = defineComponent({
         };
     },
 
+    computed: {
+        gridRows(): any[] {
+            const rows = [];
+            for (let i = 0; i < this.imageList.length; i += 3) {
+                rows.push(this.imageList.slice(i, i + 3));
+            }
+            return rows;
+        }
+    },
+
     async mounted() {
         this.$page.$npage.on("backpressed", this.handleBackPress);
         await this.initializeShell();
