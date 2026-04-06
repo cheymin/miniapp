@@ -17,7 +17,7 @@
 
 import { defineComponent } from 'vue';
 import { Shell } from 'langningchen';
-import { showError, showSuccess, showInfo } from '../../components/ToastMessage';
+import { showError, showSuccess } from '../../components/ToastMessage';
 import { hideLoading, showLoading } from '../../components/Loading';
 import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
 
@@ -43,6 +43,7 @@ const imageViewer = defineComponent({
             translateX: 0,
             translateY: 0,
             
+            showControls: true as boolean,
             showSettingsPanel: false as boolean,
             
             shellInitialized: false,
@@ -50,7 +51,13 @@ const imageViewer = defineComponent({
             lastTapTime: 0,
             touchStartX: 0,
             touchStartY: 0,
-            isSwiping: false
+            isSwiping: false,
+            
+            autoPlayEnabled: false as boolean,
+            autoPlayInterval: 3 as number,
+            autoPlayTimer: null as any,
+            
+            isZoomed: false as boolean
         };
     },
 
@@ -61,6 +68,11 @@ const imageViewer = defineComponent({
                 width: '100%',
                 height: '100%'
             };
+        },
+        
+        progressText(): string {
+            if (this.imageList.length === 0) return '';
+            return `${this.currentImageIndex + 1} / ${this.imageList.length}`;
         }
     },
 
@@ -77,10 +89,15 @@ const imageViewer = defineComponent({
             this.imageName = options.initialPath.split('/').pop() || '';
             await this.loadImage(options.initialPath);
         }
+        
+        setTimeout(() => {
+            this.showControls = false;
+        }, 3000);
     },
     
     beforeDestroy() {
         this.$page.$npage.off("backpressed", this.handleBackPress);
+        this.stopAutoPlay();
     },
 
     methods: {
@@ -92,8 +109,21 @@ const imageViewer = defineComponent({
             }
         },
         
+        toggleControls() {
+            this.showControls = !this.showControls;
+            
+            if (this.showControls) {
+                setTimeout(() => {
+                    this.showControls = false;
+                }, 3000);
+            }
+        },
+        
         toggleSettings() {
             this.showSettingsPanel = !this.showSettingsPanel;
+            if (this.showSettingsPanel) {
+                this.stopAutoPlay();
+            }
         },
         
         handleImageClick(event: any) {
@@ -103,7 +133,7 @@ const imageViewer = defineComponent({
             if (tapInterval < 300 && tapInterval > 0) {
                 this.handleDoubleTap();
             } else {
-                this.handleSingleClick(event);
+                this.toggleControls();
             }
             
             this.lastTapTime = currentTime;
@@ -112,19 +142,10 @@ const imageViewer = defineComponent({
         handleDoubleTap() {
             if (this.scale > 1.0) {
                 this.resetZoom();
+                this.isZoomed = false;
             } else {
-                this.scale = 2.0;
-            }
-        },
-        
-        handleSingleClick(event: any) {
-            const imageWidth = 172;
-            const clickX = event.offsetX || event.clientX || 86;
-            
-            if (clickX < imageWidth / 3) {
-                this.prevImage();
-            } else if (clickX > imageWidth * 2 / 3) {
-                this.nextImage();
+                this.scale = 2.5;
+                this.isZoomed = true;
             }
         },
         
@@ -135,6 +156,8 @@ const imageViewer = defineComponent({
         },
         
         handleTouchEnd(event: any) {
+            if (this.isZoomed) return;
+            
             const touchEndX = event.changedTouches ? event.changedTouches[0].clientX : event.clientX;
             const touchEndY = event.changedTouches ? event.changedTouches[0].clientY : event.clientY;
             
@@ -172,42 +195,26 @@ const imageViewer = defineComponent({
             }
             
             try {
-                showLoading('正在加载图片...');
+                showLoading('加载中...');
                 
                 const ext = imagePath.split('.').pop()?.toLowerCase() || 'jpg';
                 const mimeType = this.getMimeType(ext);
                 
-                let result = '';
-                
-                const encodingMethods = [
-                    `perl -MMIME::Base64 -0777 -ne 'print encode_base64(\$_)' "${imagePath}"`,
-                    `perl -e 'use MIME::Base64; open(F, "<", $ARGV[0]); binmode(F); local $/; print encode_base64(<F>);' "${imagePath}"`,
-                    `xxd -p "${imagePath}" | tr -d '\\n' | perl -e 'use MIME::Base64; my $hex = <STDIN>; $hex =~ s/\\s//g; my $bin = pack("H*", $hex); print encode_base64($bin);'`,
-                    `hexdump -ve '1/1 "%.2x"' "${imagePath}" | perl -e 'use MIME::Base64; my $hex = <STDIN>; $hex =~ s/\\s//g; my $bin = pack("H*", $hex); print encode_base64($bin);'`
-                ];
-                
-                for (const cmd of encodingMethods) {
-                    try {
-                        result = await Shell.exec(cmd);
-                        if (result && result.trim()) {
-                            break;
-                        }
-                    } catch (e) {
-                        continue;
-                    }
-                }
+                const cmd = `perl -MMIME::Base64 -0777 -ne 'print encode_base64(\$_)' "${imagePath}"`;
+                const result = await Shell.exec(cmd);
                 
                 if (result && result.trim()) {
                     const base64Data = result.trim().replace(/\s/g, '');
                     this.currentImageData = `data:${mimeType};base64,${base64Data}`;
                     this.currentImage = imagePath;
                     this.imageName = imagePath.split('/').pop() || '';
+                    this.resetZoom();
                 } else {
-                    showError('图片加载失败：无法读取文件');
+                    showError('图片加载失败');
                 }
             } catch (error: any) {
                 console.error('加载图片失败:', error);
-                showError('加载图片失败: ' + (error.message || error));
+                showError('加载图片失败');
             } finally {
                 hideLoading();
             }
@@ -232,10 +239,9 @@ const imageViewer = defineComponent({
             }
             
             try {
-                showLoading('正在扫描目录...');
+                showLoading('扫描中...');
                 
                 const cmd = `find "${this.currentDirectory}" -type f \\( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.bmp" -o -iname "*.webp" \\) 2>/dev/null | sort`;
-                
                 const result = await Shell.exec(cmd);
                 
                 if (result && result.trim()) {
@@ -246,14 +252,14 @@ const imageViewer = defineComponent({
                         await this.loadImage(this.imageList[0]);
                         showSuccess(`找到 ${this.imageList.length} 张图片`);
                     } else {
-                        showError('未找到图片文件');
+                        showError('未找到图片');
                     }
                 } else {
-                    showError('未找到图片文件');
+                    showError('未找到图片');
                 }
             } catch (error: any) {
                 console.error('扫描图片失败:', error);
-                showError('扫描图片失败: ' + error.message);
+                showError('扫描图片失败');
             } finally {
                 hideLoading();
             }
@@ -275,7 +281,6 @@ const imageViewer = defineComponent({
             
             this.currentImageIndex = (this.currentImageIndex + 1) % this.imageList.length;
             await this.loadImage(this.imageList[this.currentImageIndex]);
-            this.resetZoom();
         },
         
         async prevImage() {
@@ -283,15 +288,16 @@ const imageViewer = defineComponent({
             
             this.currentImageIndex = (this.currentImageIndex - 1 + this.imageList.length) % this.imageList.length;
             await this.loadImage(this.imageList[this.currentImageIndex]);
-            this.resetZoom();
         },
 
         zoomIn() {
-            this.scale = Math.min(this.scale + 0.2, 5.0);
+            this.scale = Math.min(this.scale * 1.3, 5.0);
+            this.isZoomed = this.scale > 1.0;
         },
 
         zoomOut() {
-            this.scale = Math.max(this.scale - 0.2, 0.1);
+            this.scale = Math.max(this.scale / 1.3, 0.5);
+            this.isZoomed = this.scale > 1.0;
         },
 
         resetZoom() {
@@ -299,6 +305,7 @@ const imageViewer = defineComponent({
             this.rotation = 0;
             this.translateX = 0;
             this.translateY = 0;
+            this.isZoomed = false;
         },
 
         rotateLeft() {
@@ -308,21 +315,44 @@ const imageViewer = defineComponent({
         rotateRight() {
             this.rotation += 90;
         },
-
-        moveUp() {
-            this.translateY -= 20;
+        
+        toggleAutoPlay() {
+            if (this.autoPlayEnabled) {
+                this.stopAutoPlay();
+            } else {
+                this.startAutoPlay();
+            }
         },
-
-        moveDown() {
-            this.translateY += 20;
+        
+        startAutoPlay() {
+            if (this.imageList.length === 0) return;
+            
+            this.autoPlayEnabled = true;
+            this.showControls = true;
+            
+            this.autoPlayTimer = setInterval(() => {
+                this.nextImage();
+            }, this.autoPlayInterval * 1000);
+            
+            showSuccess(`自动播放已开启 (${this.autoPlayInterval}秒)`);
         },
-
-        moveLeft() {
-            this.translateX -= 20;
+        
+        stopAutoPlay() {
+            this.autoPlayEnabled = false;
+            
+            if (this.autoPlayTimer) {
+                clearInterval(this.autoPlayTimer);
+                this.autoPlayTimer = null;
+            }
         },
-
-        moveRight() {
-            this.translateX += 20;
+        
+        setAutoPlayInterval(seconds: number) {
+            this.autoPlayInterval = seconds;
+            
+            if (this.autoPlayEnabled) {
+                this.stopAutoPlay();
+                this.startAutoPlay();
+            }
         }
     }
 });

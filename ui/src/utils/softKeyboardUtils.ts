@@ -78,50 +78,86 @@ export async function openKeyboard(
     if (keyboardType === 'system') {
         try {
             const NativeSDK = (globalThis as any).NativeSDK;
-            if (NativeSDK && typeof NativeSDK.startTextEdit === 'function') {
-                const currentValue = get();
-                const uuid = NativeSDK.startTextEdit({
-                    text: currentValue,
-                    maxlength: 1000,
-                    enterButtonText: '确定',
-                    inputType: 'text'
-                });
+            
+            if (!NativeSDK) {
+                console.error('NativeSDK 不存在');
+                openSoftKeyboard(get, set, validate);
+                return;
+            }
+            
+            if (typeof NativeSDK.startTextEdit !== 'function') {
+                console.error('startTextEdit 方法不存在');
+                openSoftKeyboard(get, set, validate);
+                return;
+            }
+            
+            const currentValue = get();
+            console.log('调用系统键盘，当前值:', currentValue);
+            
+            const uuid = NativeSDK.startTextEdit({
+                text: currentValue,
+                maxlength: 1000,
+                enterButtonText: '确定',
+                inputType: 'text'
+            });
+            
+            console.log('系统键盘 UUID:', uuid);
+            
+            if (!NativeSDK.globalModule) {
+                console.error('globalModule 方法不存在');
+                openSoftKeyboard(get, set, validate);
+                return;
+            }
+            
+            const globalModule = NativeSDK.globalModule();
+            console.log('globalModule:', globalModule);
+            
+            if (!globalModule || !globalModule.textEditFinished) {
+                console.error('textEditFinished 不存在');
+                openSoftKeyboard(get, set, validate);
+                return;
+            }
+            
+            const handler = (editUuid: string, jsonData: string) => {
+                console.log('键盘事件触发:', editUuid, jsonData);
                 
-                const globalModule = NativeSDK.globalModule();
-                if (globalModule && globalModule.textEditFinished) {
-                    const handler = (editUuid: string, jsonData: string) => {
-                        if (editUuid !== uuid) return;
-                        
-                        try {
-                            const result = JSON.parse(jsonData);
-                            if (result.editConfirmed) {
-                                const newValue = (result.text || '').replace(/\n/g, '');
-                                
-                                if (validate) {
-                                    const validationError = validate(newValue);
-                                    if (validationError) {
-                                        showWarning(validationError);
-                                        return;
-                                    }
-                                }
-                                
-                                set(newValue);
-                            }
-                            
-                            if (globalModule.closeTextEdit) {
-                                globalModule.closeTextEdit(uuid);
-                            }
-                        } catch (e) {
-                            console.error('解析键盘返回数据失败:', e);
-                        }
-                    };
-                    
-                    globalModule.textEditFinished.on(handler);
+                if (editUuid !== uuid) {
+                    console.log('UUID 不匹配，忽略');
                     return;
                 }
-            }
+                
+                try {
+                    const result = JSON.parse(jsonData);
+                    console.log('解析结果:', result);
+                    
+                    if (result.editConfirmed) {
+                        const newValue = (result.text || '').replace(/\n/g, '');
+                        console.log('用户输入:', newValue);
+                        
+                        if (validate) {
+                            const validationError = validate(newValue);
+                            if (validationError) {
+                                showWarning(validationError);
+                                return;
+                            }
+                        }
+                        
+                        set(newValue);
+                    }
+                    
+                    if (globalModule.closeTextEdit) {
+                        globalModule.closeTextEdit(uuid);
+                    }
+                } catch (e) {
+                    console.error('解析键盘返回数据失败:', e);
+                }
+            };
+            
+            globalModule.textEditFinished.on(handler);
+            console.log('系统键盘监听已注册');
+            return;
         } catch (error) {
-            console.error('系统键盘调用失败，使用软键盘:', error);
+            console.error('系统键盘调用失败:', error);
         }
     }
     
