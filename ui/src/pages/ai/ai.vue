@@ -24,7 +24,7 @@
                 <scroller ref="messageScroller" class="messages-scroller" scroll-direction="vertical"
                     :show-scrollbar="true">
                     <div v-for="message in displayMessages" :key="message.id">
-                        <text :class="'message message-' + message.role">{{ message.content }}</text>
+                        <text :class="'message message-' + message.role">{{ formatMessageContent(message.content) }}</text>
                         <text v-if="![0, 1, 6].includes(message.stopReason)" class="stop-reason-warning">{{
                             getStopReasonText(message.stopReason) }}</text>
                         <div v-if="message.role === 0 || message.role === 1"

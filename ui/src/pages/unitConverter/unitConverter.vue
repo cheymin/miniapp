@@ -78,7 +78,7 @@
         
         <div class="result-box">
           <text class="result-value">{{ result }}</text>
-          <text class="result-unit">{{ currentUnits[toUnit]?.name || '' }}</text>
+          <text class="result-unit">{{ currentUnits[toUnit] ? currentUnits[toUnit].name : '' }}</text>
         </div>
       </div>
     </scroller>
