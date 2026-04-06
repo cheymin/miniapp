@@ -31,61 +31,33 @@
       </div>
       
       <div class="section">
-        <text class="section-title">日历</text>
-        
-        <div class="calendar-display">
-          <text class="year-text">{{ currentYear }}年</text>
-          <text class="month-text">{{ getMonthName(currentMonth) }}</text>
-          <text class="day-text">{{ currentDay }}</text>
-          <text class="weekday-small">{{ currentWeekday }}</text>
-        </div>
-      </div>
-      
-      <div class="section">
-        <text class="section-title">闹钟 ({{ alarms.length }})</text>
-        
-        <div class="operations-row">
-          <text class="btn btn-primary" @click="showAddAlarmModal">添加闹钟</text>
+        <div class="calendar-header">
+          <text class="btn btn-small" @click="prevMonth">&lt;</text>
+          <text class="calendar-title">{{ calendarYear }}年 {{ getMonthName(calendarMonth) }}</text>
+          <text class="btn btn-small" @click="nextMonth">&gt;</text>
         </div>
         
-        <div v-if="alarms.length === 0" class="empty-state">
-          <text class="empty-text">暂无闹钟</text>
+        <div class="calendar-weekdays">
+          <text v-for="i in 7" :key="i" class="weekday-label">{{ getWeekdayName(i - 1) }}</text>
         </div>
         
-        <div v-for="alarm in alarms" :key="alarm.id" class="alarm-item">
-          <text class="alarm-time">{{ formatTime(alarm.hour, alarm.minute) }}</text>
-          <text class="alarm-label">{{ alarm.label }}</text>
+        <div class="calendar-grid">
           <text 
-            :class="['btn', 'btn-small', alarm.enabled ? 'btn-success' : '']"
-            @click="toggleAlarm(alarm)">
-            {{ alarm.enabled ? '开' : '关' }}
+            v-for="(day, index) in calendarDays" 
+            :key="index"
+            :class="['calendar-day', 
+                     day.isCurrentMonth ? '' : 'calendar-day-other',
+                     day.isToday ? 'calendar-day-today' : '',
+                     day.weekday === 0 || day.weekday === 6 ? 'calendar-day-weekend' : '']">
+            {{ day.day }}
           </text>
-          <text class="btn btn-danger btn-small" @click="deleteAlarm(alarm)">删除</text>
+        </div>
+        
+        <div class="calendar-actions">
+          <text class="btn btn-primary" @click="goToToday">回到今天</text>
         </div>
       </div>
     </scroller>
-    
-    <div v-if="showAlarmModal" class="modal-overlay">
-      <div class="modal-content">
-        <text class="modal-title">添加闹钟</text>
-        
-        <div class="time-picker">
-          <text class="time-input" @click="editHour">{{ newAlarmHour.toString().padStart(2, '0') }}</text>
-          <text class="time-separator">:</text>
-          <text class="time-input" @click="editMinute">{{ newAlarmMinute.toString().padStart(2, '0') }}</text>
-        </div>
-        
-        <div class="item">
-          <text class="item-text">标签:</text>
-          <text class="item-input" @click="editLabel">{{ newAlarmLabel || '点击输入标签...' }}</text>
-        </div>
-        
-        <div class="modal-buttons">
-          <text class="btn btn-success" @click="addAlarm">确定</text>
-          <text class="btn" @click="hideAlarmModal">取消</text>
-        </div>
-      </div>
-    </div>
     
     <ToastMessage />
   </div>

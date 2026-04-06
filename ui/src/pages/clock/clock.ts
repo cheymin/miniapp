@@ -16,18 +16,8 @@
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
 import { defineComponent } from 'vue';
-import { showSuccess, showError, showInfo } from '../../components/ToastMessage';
-import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
 
 export type ClockOptions = {};
-
-interface Alarm {
-    id: string;
-    hour: number;
-    minute: number;
-    enabled: boolean;
-    label: string;
-}
 
 const clock = defineComponent({
     data() {
@@ -37,16 +27,13 @@ const clock = defineComponent({
             currentTime: '',
             currentDate: '',
             currentWeekday: '',
-            currentYear: '',
-            currentMonth: '',
-            currentDay: '',
+            currentYear: 0,
+            currentMonth: 0,
+            currentDay: 0,
             
-            alarms: [] as Alarm[],
-            showAlarmModal: false,
-            editingAlarm: null as Alarm | null,
-            newAlarmHour: 8,
-            newAlarmMinute: 0,
-            newAlarmLabel: '',
+            calendarDays: [] as { day: number; isCurrentMonth: boolean; isToday: boolean; weekday: number }[],
+            calendarMonth: 0,
+            calendarYear: 0,
             
             timer: null as any
         };
@@ -56,8 +43,8 @@ const clock = defineComponent({
         this.$page.$npage.setSupportBack(true);
         this.$page.$npage.on("backpressed", this.handleBackPress);
         this.updateTime();
+        this.generateCalendar();
         this.timer = setInterval(this.updateTime, 1000);
-        this.loadAlarms();
     },
 
     beforeDestroy() {
@@ -81,133 +68,102 @@ const clock = defineComponent({
             this.currentTime = `${hours}:${minutes}:${seconds}`;
             
             const year = now.getFullYear();
-            const month = (now.getMonth() + 1).toString().padStart(2, '0');
-            const day = now.getDate().toString().padStart(2, '0');
-            this.currentDate = `${year}年${month}月${day}日`;
-            this.currentYear = year.toString();
+            const month = now.getMonth() + 1;
+            const day = now.getDate();
+            this.currentDate = `${year}年${month.toString().padStart(2, '0')}月${day.toString().padStart(2, '0')}日`;
+            this.currentYear = year;
             this.currentMonth = month;
             this.currentDay = day;
             
             const weekdays = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
             this.currentWeekday = weekdays[now.getDay()];
             
-            this.checkAlarms(now);
-        },
-
-        async loadAlarms() {
-            try {
-                const data = await $falcon.storage.get('alarms');
-                if (data) {
-                    this.alarms = JSON.parse(data);
-                }
-            } catch (error) {
-                console.error('加载闹钟失败:', error);
+            if (this.calendarYear === 0) {
+                this.calendarYear = year;
+                this.calendarMonth = month;
+                this.generateCalendar();
             }
         },
 
-        async saveAlarms() {
-            try {
-                await $falcon.storage.set('alarms', JSON.stringify(this.alarms));
-            } catch (error) {
-                console.error('保存闹钟失败:', error);
-            }
-        },
-
-        checkAlarms(now: Date) {
-            const currentHour = now.getHours();
-            const currentMinute = now.getMinutes();
+        generateCalendar() {
+            const year = this.calendarYear;
+            const month = this.calendarMonth;
             
-            this.alarms.forEach(alarm => {
-                if (alarm.enabled && alarm.hour === currentHour && alarm.minute === currentMinute) {
-                    showInfo(`闹钟: ${alarm.label || '时间到了！'}`);
-                }
-            });
-        },
-
-        showAddAlarmModal() {
-            this.newAlarmHour = 8;
-            this.newAlarmMinute = 0;
-            this.newAlarmLabel = '';
-            this.showAlarmModal = true;
-        },
-
-        hideAlarmModal() {
-            this.showAlarmModal = false;
-        },
-
-        async addAlarm() {
-            const alarm: Alarm = {
-                id: `alarm_${Date.now()}`,
-                hour: this.newAlarmHour,
-                minute: this.newAlarmMinute,
-                enabled: true,
-                label: this.newAlarmLabel || '闹钟'
-            };
+            const firstDay = new Date(year, month - 1, 1);
+            const lastDay = new Date(year, month, 0);
+            const daysInMonth = lastDay.getDate();
+            const startWeekday = firstDay.getDay();
             
-            this.alarms.push(alarm);
-            await this.saveAlarms();
-            showSuccess('闹钟已添加');
-            this.hideAlarmModal();
-        },
-
-        async toggleAlarm(alarm: Alarm) {
-            alarm.enabled = !alarm.enabled;
-            await this.saveAlarms();
-        },
-
-        async deleteAlarm(alarm: Alarm) {
-            const index = this.alarms.findIndex(a => a.id === alarm.id);
-            if (index >= 0) {
-                this.alarms.splice(index, 1);
-                await this.saveAlarms();
-                showSuccess('闹钟已删除');
+            const prevMonth = new Date(year, month - 1, 0);
+            const daysInPrevMonth = prevMonth.getDate();
+            
+            this.calendarDays = [];
+            
+            for (let i = startWeekday - 1; i >= 0; i--) {
+                this.calendarDays.push({
+                    day: daysInPrevMonth - i,
+                    isCurrentMonth: false,
+                    isToday: false,
+                    weekday: (startWeekday - i - 1 + 7) % 7
+                });
+            }
+            
+            for (let day = 1; day <= daysInMonth; day++) {
+                const date = new Date(year, month - 1, day);
+                this.calendarDays.push({
+                    day: day,
+                    isCurrentMonth: true,
+                    isToday: year === this.currentYear && month === this.currentMonth && day === this.currentDay,
+                    weekday: date.getDay()
+                });
+            }
+            
+            const remainingDays = 42 - this.calendarDays.length;
+            for (let day = 1; day <= remainingDays; day++) {
+                this.calendarDays.push({
+                    day: day,
+                    isCurrentMonth: false,
+                    isToday: false,
+                    weekday: (this.calendarDays[this.calendarDays.length - 1].weekday + day) % 7
+                });
             }
         },
 
-        editHour() {
-            openSoftKeyboard(
-                () => this.newAlarmHour.toString(),
-                (value) => {
-                    const num = parseInt(value);
-                    if (num >= 0 && num <= 23) {
-                        this.newAlarmHour = num;
-                        this.$forceUpdate();
-                    }
-                }
-            );
+        prevMonth() {
+            if (this.calendarMonth === 1) {
+                this.calendarMonth = 12;
+                this.calendarYear--;
+            } else {
+                this.calendarMonth--;
+            }
+            this.generateCalendar();
         },
 
-        editMinute() {
-            openSoftKeyboard(
-                () => this.newAlarmMinute.toString(),
-                (value) => {
-                    const num = parseInt(value);
-                    if (num >= 0 && num <= 59) {
-                        this.newAlarmMinute = num;
-                        this.$forceUpdate();
-                    }
-                }
-            );
+        nextMonth() {
+            if (this.calendarMonth === 12) {
+                this.calendarMonth = 1;
+                this.calendarYear++;
+            } else {
+                this.calendarMonth++;
+            }
+            this.generateCalendar();
         },
 
-        editLabel() {
-            openSoftKeyboard(
-                () => this.newAlarmLabel,
-                (value) => {
-                    this.newAlarmLabel = value;
-                    this.$forceUpdate();
-                }
-            );
+        goToToday() {
+            this.calendarYear = this.currentYear;
+            this.calendarMonth = this.currentMonth;
+            this.generateCalendar();
         },
 
-        formatTime(hour: number, minute: number): string {
-            return `${hour.toString().padStart(2, '0')}:${minute.toString().padStart(2, '0')}`;
-        },
-
-        getMonthName(month: string): string {
+        getMonthName(month: number): string {
             const months = ['一月', '二月', '三月', '四月', '五月', '六月', 
                            '七月', '八月', '九月', '十月', '十一月', '十二月'];
-            return months[parseInt(month) - 1] || month;
+            return months[month - 1] || '';
+        },
+
+        getWeekdayName(weekday: number): string {
+            const weekdays = ['日', '一', '二', '三', '四', '五', '六'];
+            return weekdays[weekday] || '';
         }
     }
 });

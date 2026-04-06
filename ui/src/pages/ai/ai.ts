@@ -20,7 +20,6 @@ import { AI } from 'langningchen';
 import { ROLE, ConversationNode, STOP_REASON } from '../../@types/langningchen';
 import { showError } from '../../components/ToastMessage';
 import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
-import { formatMessage } from '../../utils/markdownUtils';
 
 export type aiOptions = {};
 
@@ -99,10 +98,6 @@ const ai = defineComponent({
     },
 
     methods: {
-        formatMessageContent(content: string): string {
-            return formatMessage(content);
-        },
-        
         onPageShow() {
             this.refreshMessages();
         },

@@ -57,11 +57,11 @@ const index = defineComponent({
         Clock() {
             $falcon.navTo("clock", {});
         },
-        Memo() {
-            $falcon.navTo("memo", {});
-        },
         UnitConverter() {
             $falcon.navTo("unitConverter", {});
+        },
+        Gallery() {
+            $falcon.navTo("gallery", {});
         }
     }
 });

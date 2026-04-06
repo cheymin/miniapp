@@ -4,46 +4,54 @@
     top: 0px;
     width: 560px;
     height: 170px;
-    font-size: 14px;
+    font-size: 16px;
     z-index: 5;
-    background-color: rgb(0, 0, 0);
+    background-color: #1a1a1a;
+    border-bottom-width: 2px;
+    border-bottom-color: #333333;
 }
 
 .editor-char {
     position: absolute;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 16px;
+    line-height: 18px;
     text-align: center;
-    color: white;
+    color: #ffffff;
 }
 
 .cursor-overwrite {
-    background-color: rgba(255, 255, 255, 0.5);
-    color: black;
+    background-color: #007acc;
+    color: #ffffff;
 }
 
 .selected {
-    background-color: #0078d4;
-    color: white;
+    background-color: #00d4ff;
+    color: #000000;
+    border-radius: 2px;
 }
 
 .key {
     position: absolute;
-    color: rgba(255, 255, 255, 0.4);
+    color: #ffffff;
     border-width: 1px;
     border-style: solid;
     text-align: center;
     z-index: 9;
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: #404040;
+    background-color: #2d2d2d;
+    border-radius: 6px;
 }
 
 .key-popup {
     position: absolute;
-    color: white;
-    background-color: rgb(0, 0, 0);
-    border-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    background-color: #007acc;
+    border-color: #0099ff;
     text-align: center;
     z-index: 10;
+    border-radius: 8px;
+    border-width: 2px;
+    border-style: solid;
 }
 
 .pinyin-display {
@@ -51,23 +59,33 @@
     left: 0px;
     top: 130px;
     width: 560px;
-    height: 20px;
+    height: 24px;
     align-items: center;
-    color: #00ff00;
-    font-size: 16px;
+    color: #00d4ff;
+    font-size: 18px;
+    font-weight: bold;
     z-index: 6;
+    background-color: #1a1a1a;
+    padding-left: 10px;
 }
 
 .candidate-item {
     position: absolute;
-    top: 150px;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 14px;
-    height: 20px;
+    top: 154px;
+    color: #ffffff;
+    font-size: 16px;
+    height: 24px;
     z-index: 6;
+    background-color: #2d2d2d;
+    border-radius: 4px;
+    padding: 0 8px;
+    margin: 0 4px;
 }
 
 .candidate-selected {
-    background-color: #0078d4;
-    color: white;
+    background-color: #007acc;
+    color: #ffffff;
+    border-width: 1px;
+    border-color: #0099ff;
+    border-style: solid;
 }

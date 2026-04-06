@@ -173,24 +173,34 @@ const videoPlayer = defineComponent({
                 showLoading('正在打开视频...');
                 
                 let success = false;
+                let errorMsg = '';
                 
                 const commands = [
-                    `nohup ffmpeg -i "${this.currentVideo}" -f fbdev /dev/fb0 -nostats -loglevel 0 > /dev/null 2>&1 &`,
-                    `nohup ffmpeg -i "${this.currentVideo}" -f sdl "Video" -nostats -loglevel 0 > /dev/null 2>&1 &`,
-                    `nohup ffplay -autoexit -nodisp "${this.currentVideo}" > /dev/null 2>&1 &`,
-                    `nohup mplayer -vo fbdev2 -ao alsa "${this.currentVideo}" > /dev/null 2>&1 &`,
-                    `nohup mpv "${this.currentVideo}" > /dev/null 2>&1 &`,
-                    `am start -a android.intent.action.VIEW -d file://${this.currentVideo} -t video/* 2>/dev/null`,
-                    `xdg-open "${this.currentVideo}" 2>/dev/null`,
-                    `open "${this.currentVideo}" 2>/dev/null`
+                    {
+                        cmd: `ffmpeg -i "${this.currentVideo}" -pix_fmt bgra -f fbdev /dev/fb0 -loglevel error`,
+                        desc: 'ffmpeg fbdev'
+                    },
+                    {
+                        cmd: `ffmpeg -i "${this.currentVideo}" -f fbdev /dev/fb0 -loglevel error`,
+                        desc: 'ffmpeg fbdev simple'
+                    },
+                    {
+                        cmd: `nohup ffmpeg -re -i "${this.currentVideo}" -f fbdev /dev/fb0 > /dev/null 2>&1 &`,
+                        desc: 'ffmpeg nohup'
+                    }
                 ];
                 
-                for (const cmd of commands) {
+                for (const { cmd, desc } of commands) {
                     try {
-                        await Shell.exec(cmd);
+                        const result = await Shell.exec(cmd + ' 2>&1');
+                        if (result && result.includes('error')) {
+                            errorMsg = result;
+                            continue;
+                        }
                         success = true;
                         break;
-                    } catch (e) {
+                    } catch (e: any) {
+                        errorMsg = e.message || e;
                         continue;
                     }
                 }
@@ -202,7 +212,7 @@ const videoPlayer = defineComponent({
                     showSuccess('视频已打开');
                     this.startProgressUpdate();
                 } else {
-                    showError('无法打开视频，请检查系统是否安装了视频播放器');
+                    showError('无法播放视频: ' + (errorMsg || '未知错误'));
                 }
             } catch (error: any) {
                 hideLoading();

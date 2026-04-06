@@ -25,13 +25,14 @@ const about = defineComponent({
             $page: {} as FalconPage<aboutOptions>,
             
             // 项目信息
-            projectName: '词典笔工具箱',
-            description: '这是一个简单易用的词典笔工具箱，专为词典笔设备设计。应用集成了AI智能助手、文件管理器、文本编辑器、终端命令执行、系统信息查看等多项实用功能。界面简洁直观，操作流畅便捷，支持离线使用，为词典笔用户提供全方位的工具支持，大幅提升使用效率和体验。',
+            projectName: 'min的工具箱',
+            description: '这是我min和朋友们一起开发的软件 欢迎使用！',
             
             // 鸣谢信息
             credits: [
                 { name: '@wyxdlz54188', role: '核心开发' },
-                { name: '@langningchen', role: '核心开发' }
+                { name: '@langningchen', role: '核心开发' },
+                { name: '@min', role: '核心开发' }
             ],
             
             // GitHub 信息

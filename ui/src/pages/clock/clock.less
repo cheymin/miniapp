@@ -1,18 +1,54 @@
-@import url('../../styles/section.less');
+// Copyright (C) 2025 Langning Chen
+// 
+// This file is part of miniapp.
+// 
+// miniapp is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// miniapp is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+// 
+// You should have received a copy of the GNU General Public License
+// along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
+
+.container {
+    flex: 1;
+    background-color: #1a1a1a;
+}
+
+.scroll-area {
+    flex: 1;
+    padding: 10px;
+}
+
+.section {
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
 
 .clock-display {
-    padding: 30px 20px;
-    background-color: #1a1a2e;
-    border-radius: 15px;
     align-items: center;
-    border: 1px solid #2a2a3e;
+    justify-content: center;
+    padding: 20px 0;
 }
 
 .time-text {
     font-size: 48px;
-    color: #00d4ff;
     font-weight: bold;
-    font-family: 'Monaco', 'Consolas', monospace;
+    color: #00d4ff;
     margin-bottom: 10px;
 }
 
@@ -24,147 +60,89 @@
 
 .weekday-text {
     font-size: 18px;
-    color: #8888aa;
+    color: #cccccc;
 }
 
-.calendar-display {
-    padding: 30px 20px;
-    background-color: #1a2a1a;
-    border-radius: 15px;
+.calendar-header {
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    border: 1px solid #28a745;
+    margin-bottom: 15px;
 }
 
-.year-text {
-    font-size: 16px;
-    color: #8888aa;
-    margin-bottom: 5px;
-}
-
-.month-text {
-    font-size: 24px;
-    color: #00ff88;
+.calendar-title {
+    font-size: 20px;
     font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.day-text {
-    font-size: 64px;
     color: #ffffff;
-    font-weight: bold;
-    margin-bottom: 5px;
 }
 
-.weekday-small {
+.btn {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 6px;
     font-size: 16px;
-    color: #8888aa;
-}
-
-.operations-row {
-    flex-direction: row;
-    justify-content: center;
-    padding: 10px 0;
-}
-
-.alarm-item {
-    flex-direction: row;
-    align-items: center;
-    padding: 12px;
-    background-color: #1a1a2e;
-    border-radius: 8px;
-    margin-bottom: 8px;
-    border: 1px solid #2a2a3e;
-}
-
-.alarm-time {
-    font-size: 24px;
-    color: #00d4ff;
-    font-weight: bold;
-    font-family: 'Monaco', 'Consolas', monospace;
-    min-width: 80px;
-}
-
-.alarm-label {
-    flex: 1;
-    font-size: 14px;
-    color: #8888aa;
-    margin-left: 10px;
+    text-align: center;
 }
 
 .btn-small {
-    min-width: 50px;
-    height: 28px;
-    font-size: 12px;
-    line-height: 28px;
-    padding: 0 10px;
-    margin-left: 5px;
-}
-
-.empty-state {
-    padding: 20px 0;
-    align-items: center;
-}
-
-.empty-text {
-    font-size: 14px;
-    color: #666688;
-}
-
-.modal-overlay {
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.modal-content {
-    width: 300px;
-    background-color: #1a1a2e;
-    border-radius: 15px;
-    padding: 20px;
-    border: 1px solid #2a2a3e;
-}
-
-.modal-title {
+    padding: 6px 12px;
     font-size: 18px;
-    color: #00d4ff;
-    text-align: center;
-    margin-bottom: 20px;
     font-weight: bold;
 }
 
-.time-picker {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
+.btn-primary {
+    background-color: #007acc;
 }
 
-.time-input {
-    font-size: 48px;
+.calendar-weekdays {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom-width: 1px;
+    border-bottom-color: #404040;
+}
+
+.weekday-label {
+    font-size: 14px;
+    color: #999999;
+    width: 22px;
+    text-align: center;
+}
+
+.calendar-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.calendar-day {
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 22px;
+    margin: 1px;
+}
+
+.calendar-day-other {
+    color: #666666;
+}
+
+.calendar-day-today {
+    background-color: #007acc;
+    border-radius: 11px;
     color: #ffffff;
     font-weight: bold;
-    font-family: 'Monaco', 'Consolas', monospace;
-    padding: 10px 20px;
-    background-color: #0a0a1e;
-    border-radius: 10px;
-    border: 1px solid #2a2a3e;
 }
 
-.time-separator {
-    font-size: 48px;
-    color: #8888aa;
-    margin: 0 10px;
+.calendar-day-weekend {
+    color: #ff6b6b;
 }
 
-.modal-buttons {
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+.calendar-actions {
+    margin-top: 15px;
+    align-items: center;
 }
