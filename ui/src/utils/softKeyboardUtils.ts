@@ -17,10 +17,6 @@
 
 import { showWarning } from '../components/ToastMessage';
 
-/**
- * 【新增】将软键盘返回的数据安全地转换为 string
- * 只为修复 [object Object]，不改变任何原有流程
- */
 function normalizeKeyboardData(data: any): string {
     if (typeof data === 'string') {
         return data;
@@ -32,11 +28,78 @@ function normalizeKeyboardData(data: any): string {
         if (typeof data.key === 'string') return data.key;
     }
 
-    // 保底，避免 String(object)
     return '';
 }
 
+async function getKeyboardType(): Promise<'soft' | 'system'> {
+    try {
+        const data = await $falcon.storage.get('keyboard_type');
+        return (data as 'soft' | 'system') || 'soft';
+    } catch (error) {
+        return 'soft';
+    }
+}
+
 export function openSoftKeyboard(
+    get: () => string,
+    set: (value: string) => void,
+    validate?: (value: string) => string | undefined
+) {
+    getKeyboardType().then(keyboardType => {
+        if (keyboardType === 'system') {
+            openSystemKeyboard(get, set, validate);
+        } else {
+            openCustomKeyboard(get, set, validate);
+        }
+    });
+}
+
+function openSystemKeyboard(
+    get: () => string,
+    set: (value: string) => void,
+    validate?: (value: string) => string | undefined
+) {
+    const currentValue = get();
+    
+    try {
+        const uuid = ($falcon as any).startTextEdit({
+            placeholder: '请输入内容',
+            text: currentValue,
+            maxLength: 500
+        });
+
+        const handler = (data: any) => {
+            const result = typeof data === 'string' ? JSON.parse(data) : data;
+            
+            if (result.editConfirmed) {
+                const newValue = result.text || '';
+                
+                if (validate) {
+                    const validationError = validate(newValue);
+                    if (validationError) {
+                        showWarning(validationError);
+                        return;
+                    }
+                }
+                
+                set(newValue);
+            }
+            
+            try {
+                ($falcon as any).closeTextEdit(uuid);
+            } catch (e) {
+                console.error('关闭系统键盘失败:', e);
+            }
+        };
+
+        ($falcon as any).textEditFinished?.on(handler);
+    } catch (error) {
+        console.error('系统键盘不可用，回退到软键盘:', error);
+        openCustomKeyboard(get, set, validate);
+    }
+}
+
+function openCustomKeyboard(
     get: () => string,
     set: (value: string) => void,
     validate?: (value: string) => string | undefined
@@ -45,7 +108,6 @@ export function openSoftKeyboard(
     $falcon.navTo('softKeyboard', { data: currentValue });
 
     const handler = (e: { data: any }) => {
-        // ⭐【唯一修复点】
         const newValue = normalizeKeyboardData(e.data);
 
         if (validate) {

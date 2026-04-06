@@ -19,7 +19,9 @@
     "qrcodeGenerator": "pages/qrcodeGenerator/qrcodeGenerator.vue",
     "unitConverter": "pages/unitConverter/unitConverter.vue",
     "clock": "pages/clock/clock.vue",
-    "gallery": "pages/gallery/gallery.vue"
+    "gallery": "pages/gallery/gallery.vue",
+    "settings": "pages/settings/settings.vue",
+    "playlist": "pages/playlist/playlist.vue"
   },
   "options": {
     "style": {

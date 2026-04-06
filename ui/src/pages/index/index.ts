@@ -59,6 +59,12 @@ const index = defineComponent({
         },
         Gallery() {
             $falcon.navTo("gallery", {});
+        },
+        Settings() {
+            $falcon.navTo("settings", {});
+        },
+        Playlist() {
+            $falcon.navTo("playlist", {});
         }
     }
 });
