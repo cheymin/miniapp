@@ -31,7 +31,6 @@
       
       <image 
         :src="currentImageData" 
-        :style="imageStyle"
         class="preview-image"
         resize="contain"
       />
@@ -43,30 +42,12 @@
     
     <div v-else class="empty-container">
       <text class="empty-text">未选择图片</text>
-      <text class="empty-hint">点击下方按钮选择图片</text>
+      <text class="empty-hint">请从图库中选择图片</text>
     </div>
     
-    <div class="controls">
-      <div class="control-row" v-if="imageList.length > 0">
-        <text class="btn btn-nav" @click="prevImage">◀ 上一张</text>
-        <text class="btn btn-nav" @click="nextImage">下一张 ▶</text>
-      </div>
-      
-      <div class="control-row" v-if="currentImage">
-        <text class="btn" @click="zoomOut">➖</text>
-        <text class="btn btn-primary" @click="resetZoom">{{ (scale * 100).toFixed(0) }}%</text>
-        <text class="btn" @click="zoomIn">➕</text>
-      </div>
-      
-      <div class="control-row" v-if="currentImage">
-        <text class="btn" @click="rotateLeft">↺ 左转</text>
-        <text class="btn" @click="rotateRight">↻ 右转</text>
-      </div>
-      
-      <div class="control-row">
-        <text class="btn btn-primary" @click="selectImage">选择图片</text>
-        <text class="btn" @click="selectDirectory">选择目录</text>
-      </div>
+    <div v-if="imageList.length > 1" class="controls">
+      <text class="btn btn-nav" @click="prevImage">◀ 上一张</text>
+      <text class="btn btn-nav" @click="nextImage">下一张 ▶</text>
     </div>
     
     <Loading />

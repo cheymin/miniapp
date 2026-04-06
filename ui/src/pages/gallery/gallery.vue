@@ -19,36 +19,65 @@
 
 <template>
   <div class="container">
-    <div class="header">
-      <text class="title">图库</text>
-      <text class="path-text" @click="selectDirectory">{{ currentPath }}</text>
-    </div>
-    
-    <div class="actions">
-      <text class="btn" @click="goToParent">上一级</text>
-      <text class="btn btn-primary" @click="loadImages">刷新</text>
-    </div>
-    
-    <scroller class="scroll-area" scroll-direction="vertical" :show-scrollbar="true">
-      <div class="gallery-grid">
-        <div 
-          v-for="(image, index) in images" 
-          :key="index"
-          class="gallery-item"
-          @click="openImage(image)">
-          <image 
-            :src="image.base64" 
-            class="gallery-image"
-            mode="aspectFill" />
-          <text class="image-name">{{ image.name }}</text>
-        </div>
+    <div v-if="!showDirectoryList">
+      <div class="header">
+        <text class="title">图库</text>
+        <text class="path-text" @click="selectDirectory">{{ currentPath }}</text>
       </div>
       
-      <div v-if="images.length === 0" class="empty-state">
-        <text class="empty-text">暂无图片</text>
-        <text class="empty-hint">点击上方路径选择其他目录</text>
+      <div class="actions">
+        <text class="btn" @click="goToParent">上一级</text>
+        <text class="btn btn-primary" @click="loadImages">刷新</text>
       </div>
-    </scroller>
+      
+      <scroller class="scroll-area" scroll-direction="vertical" :show-scrollbar="true">
+        <div class="gallery-grid">
+          <div 
+            v-for="(image, index) in images" 
+            :key="index"
+            class="gallery-item"
+            @click="openImage(image)">
+            <image 
+              :src="image.base64" 
+              class="gallery-image"
+              mode="aspectFill" />
+            <text class="image-name">{{ image.name }}</text>
+          </div>
+        </div>
+        
+        <div v-if="images.length === 0" class="empty-state">
+          <text class="empty-text">暂无图片</text>
+          <text class="empty-hint">点击上方路径选择其他目录</text>
+        </div>
+      </scroller>
+    </div>
+    
+    <div v-if="showDirectoryList" class="directory-list">
+      <div class="header">
+        <text class="title">选择目录</text>
+        <text class="path-text">{{ currentPath }}</text>
+      </div>
+      
+      <scroller class="scroll-area" scroll-direction="vertical" :show-scrollbar="true">
+        <div 
+          v-for="(dir, index) in directories" 
+          :key="index"
+          class="directory-item"
+          @click="changeDirectory(dir)">
+          <text class="directory-icon">📁</text>
+          <text class="directory-name">{{ dir.name }}</text>
+        </div>
+        
+        <div v-if="directories.length === 0" class="empty-state">
+          <text class="empty-text">没有子目录</text>
+        </div>
+      </scroller>
+      
+      <div class="actions">
+        <text class="btn" @click="goToParent">上一级</text>
+        <text class="btn btn-primary" @click="showDirectoryList = false">取消</text>
+      </div>
+    </div>
     
     <ToastMessage />
   </div>

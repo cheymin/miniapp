@@ -18,7 +18,6 @@
 import { defineComponent } from 'vue';
 import { showSuccess, showError } from '../../components/ToastMessage';
 import { showLoading, hideLoading } from '../../components/Loading';
-import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
 import { Shell } from 'langningchen';
 
 export type GalleryOptions = {};
@@ -29,6 +28,11 @@ interface ImageItem {
     base64: string;
 }
 
+interface DirectoryItem {
+    name: string;
+    path: string;
+}
+
 const gallery = defineComponent({
     data() {
         return {
@@ -36,7 +40,9 @@ const gallery = defineComponent({
             
             currentPath: '/mnt',
             images: [] as ImageItem[],
-            shellInitialized: false
+            directories: [] as DirectoryItem[],
+            shellInitialized: false,
+            showDirectoryList: false
         };
     },
 
@@ -52,11 +58,46 @@ const gallery = defineComponent({
 
     methods: {
         handleBackPress() {
-            this.$page.finish();
+            if (this.showDirectoryList) {
+                this.showDirectoryList = false;
+            } else {
+                this.$page.finish();
+            }
         },
 
         async initShell() {
             this.shellInitialized = true;
+            this.loadImages();
+        },
+
+        async loadDirectories() {
+            try {
+                showLoading('加载目录...');
+                const result = await Shell.exec(`ls -d "${this.currentPath}"/*/ 2>/dev/null | head -20`);
+                const dirs = result.split('\n').filter(d => d.trim());
+                
+                this.directories = dirs.map(dir => {
+                    const path = dir.replace(/\/$/, '');
+                    const name = path.split('/').pop();
+                    return { name, path };
+                });
+                
+                hideLoading();
+            } catch (error) {
+                hideLoading();
+                console.error('加载目录失败:', error);
+                this.directories = [];
+            }
+        },
+
+        selectDirectory() {
+            this.loadDirectories();
+            this.showDirectoryList = true;
+        },
+
+        changeDirectory(dir: DirectoryItem) {
+            this.currentPath = dir.path;
+            this.showDirectoryList = false;
             this.loadImages();
         },
 
@@ -111,17 +152,6 @@ const gallery = defineComponent({
                 console.error('加载图片失败:', error);
                 showError('加载图片失败: ' + error.message);
             }
-        },
-
-        selectDirectory() {
-            openSoftKeyboard(
-                () => this.currentPath,
-                (value) => {
-                    this.currentPath = value;
-                    this.loadImages();
-                    this.$forceUpdate();
-                }
-            );
         },
 
         openImage(image: ImageItem) {
