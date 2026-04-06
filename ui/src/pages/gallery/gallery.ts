@@ -40,15 +40,18 @@ const gallery = defineComponent({
             showSettingsPanel: false as boolean,
             
             shellInitialized: false,
-            loadingThumbnails: false
+            loadingThumbnails: false,
+            loadedCount: 0,
+            batchSize: 12
         };
     },
 
     computed: {
         gridRows(): any[] {
             const rows = [];
-            for (let i = 0; i < this.imageList.length; i += 3) {
-                rows.push(this.imageList.slice(i, i + 3));
+            const displayList = this.imageList.slice(0, this.loadedCount);
+            for (let i = 0; i < displayList.length; i += 3) {
+                rows.push(displayList.slice(i, i + 3));
             }
             return rows;
         }
@@ -57,6 +60,7 @@ const gallery = defineComponent({
     async mounted() {
         this.$page.$npage.on("backpressed", this.handleBackPress);
         await this.initializeShell();
+        await this.scanImages();
     },
     
     beforeDestroy() {
@@ -118,6 +122,7 @@ const gallery = defineComponent({
                     const paths = result.trim().split('\n').filter((path: string) => path);
                     
                     this.imageList = [];
+                    this.loadedCount = 0;
                     
                     for (const path of paths) {
                         const name = path.split('/').pop() || '';
@@ -132,10 +137,10 @@ const gallery = defineComponent({
                     hideLoading();
                     showSuccess(`找到 ${this.imageList.length} 张图片`);
                     
-                    // 只加载前6张缩略图
-                    this.loadThumbnails(0, 6);
+                    this.loadNextBatch();
                 } else {
                     this.imageList = [];
+                    this.loadedCount = 0;
                     hideLoading();
                     showError('未找到图片文件');
                 }
@@ -146,12 +151,14 @@ const gallery = defineComponent({
             }
         },
 
-        async loadThumbnails(startIndex: number, count: number) {
+        async loadNextBatch() {
             if (!this.shellInitialized || this.loadingThumbnails) return;
+            if (this.loadedCount >= this.imageList.length) return;
             
             this.loadingThumbnails = true;
             
-            const endIndex = Math.min(startIndex + count, this.imageList.length);
+            const startIndex = this.loadedCount;
+            const endIndex = Math.min(startIndex + this.batchSize, this.imageList.length);
             
             for (let i = startIndex; i < endIndex; i++) {
                 const item = this.imageList[i];
@@ -168,6 +175,7 @@ const gallery = defineComponent({
                 }
             }
             
+            this.loadedCount = endIndex;
             this.loadingThumbnails = false;
         },
 
@@ -178,7 +186,6 @@ const gallery = defineComponent({
                 const ext = imagePath.split('.').pop()?.toLowerCase() || 'jpg';
                 const mimeType = this.getMimeType(ext);
                 
-                // 使用更快的编码方法
                 const cmd = `perl -MMIME::Base64 -0777 -ne 'print encode_base64(\$_)' "${imagePath}"`;
                 
                 const result = await Shell.exec(cmd);
@@ -213,6 +220,16 @@ const gallery = defineComponent({
                     initialPath: item.path,
                     directory: this.currentDirectory
                 });
+            }
+        },
+        
+        handleScroll(event: any) {
+            const scrollTop = event.scrollTop || 0;
+            const scrollHeight = event.scrollHeight || 0;
+            const clientHeight = event.clientHeight || 0;
+            
+            if (scrollTop + clientHeight >= scrollHeight - 200) {
+                this.loadNextBatch();
             }
         }
     }

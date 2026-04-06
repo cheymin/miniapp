@@ -43,21 +43,10 @@ const imageViewer = defineComponent({
             translateX: 0,
             translateY: 0,
             
-            showControls: true as boolean,
             showSettingsPanel: false as boolean,
+            isFullscreen: false as boolean,
             
-            shellInitialized: false,
-            
-            lastTapTime: 0,
-            touchStartX: 0,
-            touchStartY: 0,
-            isSwiping: false,
-            
-            autoPlayEnabled: false as boolean,
-            autoPlayInterval: 3 as number,
-            autoPlayTimer: null as any,
-            
-            isZoomed: false as boolean
+            shellInitialized: false
         };
     },
 
@@ -68,11 +57,6 @@ const imageViewer = defineComponent({
                 width: '100%',
                 height: '100%'
             };
-        },
-        
-        progressText(): string {
-            if (this.imageList.length === 0) return '';
-            return `${this.currentImageIndex + 1} / ${this.imageList.length}`;
         }
     },
 
@@ -89,88 +73,47 @@ const imageViewer = defineComponent({
             this.imageName = options.initialPath.split('/').pop() || '';
             await this.loadImage(options.initialPath);
         }
-        
-        setTimeout(() => {
-            this.showControls = false;
-        }, 3000);
     },
     
     beforeDestroy() {
         this.$page.$npage.off("backpressed", this.handleBackPress);
-        this.stopAutoPlay();
     },
 
     methods: {
         handleBackPress() {
             if (this.showSettingsPanel) {
                 this.showSettingsPanel = false;
+            } else if (this.isFullscreen) {
+                this.isFullscreen = false;
             } else {
                 $falcon.navBack();
             }
         },
         
-        toggleControls() {
-            this.showControls = !this.showControls;
-            
-            if (this.showControls) {
-                setTimeout(() => {
-                    this.showControls = false;
-                }, 3000);
-            }
-        },
-        
         toggleSettings() {
             this.showSettingsPanel = !this.showSettingsPanel;
-            if (this.showSettingsPanel) {
-                this.stopAutoPlay();
+        },
+        
+        toggleFullscreen() {
+            this.isFullscreen = !this.isFullscreen;
+            if (this.isFullscreen) {
+                this.showSettingsPanel = false;
             }
         },
         
         handleImageClick(event: any) {
-            const currentTime = new Date().getTime();
-            const tapInterval = currentTime - this.lastTapTime;
-            
-            if (tapInterval < 300 && tapInterval > 0) {
-                this.handleDoubleTap();
-            } else {
-                this.toggleControls();
+            if (this.isFullscreen) {
+                this.isFullscreen = false;
+                return;
             }
             
-            this.lastTapTime = currentTime;
-        },
-        
-        handleDoubleTap() {
-            if (this.scale > 1.0) {
-                this.resetZoom();
-                this.isZoomed = false;
-            } else {
-                this.scale = 2.5;
-                this.isZoomed = true;
-            }
-        },
-        
-        handleTouchStart(event: any) {
-            this.touchStartX = event.touches ? event.touches[0].clientX : event.clientX;
-            this.touchStartY = event.touches ? event.touches[0].clientY : event.clientY;
-            this.isSwiping = false;
-        },
-        
-        handleTouchEnd(event: any) {
-            if (this.isZoomed) return;
+            const imageWidth = 172;
+            const clickX = event.offsetX || event.clientX || 86;
             
-            const touchEndX = event.changedTouches ? event.changedTouches[0].clientX : event.clientX;
-            const touchEndY = event.changedTouches ? event.changedTouches[0].clientY : event.clientY;
-            
-            const deltaX = touchEndX - this.touchStartX;
-            const deltaY = touchEndY - this.touchStartY;
-            
-            if (Math.abs(deltaX) > 50 && Math.abs(deltaX) > Math.abs(deltaY)) {
-                this.isSwiping = true;
-                if (deltaX > 0) {
-                    this.prevImage();
-                } else {
-                    this.nextImage();
-                }
+            if (clickX < imageWidth / 3) {
+                this.prevImage();
+            } else if (clickX > imageWidth * 2 / 3) {
+                this.nextImage();
             }
         },
 
@@ -281,6 +224,7 @@ const imageViewer = defineComponent({
             
             this.currentImageIndex = (this.currentImageIndex + 1) % this.imageList.length;
             await this.loadImage(this.imageList[this.currentImageIndex]);
+            this.resetZoom();
         },
         
         async prevImage() {
@@ -288,16 +232,15 @@ const imageViewer = defineComponent({
             
             this.currentImageIndex = (this.currentImageIndex - 1 + this.imageList.length) % this.imageList.length;
             await this.loadImage(this.imageList[this.currentImageIndex]);
+            this.resetZoom();
         },
 
         zoomIn() {
             this.scale = Math.min(this.scale * 1.3, 5.0);
-            this.isZoomed = this.scale > 1.0;
         },
 
         zoomOut() {
             this.scale = Math.max(this.scale / 1.3, 0.5);
-            this.isZoomed = this.scale > 1.0;
         },
 
         resetZoom() {
@@ -305,7 +248,6 @@ const imageViewer = defineComponent({
             this.rotation = 0;
             this.translateX = 0;
             this.translateY = 0;
-            this.isZoomed = false;
         },
 
         rotateLeft() {
@@ -315,44 +257,21 @@ const imageViewer = defineComponent({
         rotateRight() {
             this.rotation += 90;
         },
-        
-        toggleAutoPlay() {
-            if (this.autoPlayEnabled) {
-                this.stopAutoPlay();
-            } else {
-                this.startAutoPlay();
-            }
+
+        moveUp() {
+            this.translateY -= 20;
         },
-        
-        startAutoPlay() {
-            if (this.imageList.length === 0) return;
-            
-            this.autoPlayEnabled = true;
-            this.showControls = true;
-            
-            this.autoPlayTimer = setInterval(() => {
-                this.nextImage();
-            }, this.autoPlayInterval * 1000);
-            
-            showSuccess(`自动播放已开启 (${this.autoPlayInterval}秒)`);
+
+        moveDown() {
+            this.translateY += 20;
         },
-        
-        stopAutoPlay() {
-            this.autoPlayEnabled = false;
-            
-            if (this.autoPlayTimer) {
-                clearInterval(this.autoPlayTimer);
-                this.autoPlayTimer = null;
-            }
+
+        moveLeft() {
+            this.translateX -= 20;
         },
-        
-        setAutoPlayInterval(seconds: number) {
-            this.autoPlayInterval = seconds;
-            
-            if (this.autoPlayEnabled) {
-                this.stopAutoPlay();
-                this.startAutoPlay();
-            }
+
+        moveRight() {
+            this.translateX += 20;
         }
     }
 });

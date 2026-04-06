@@ -1,26 +1,22 @@
 .container {
     flex: 1;
     background-color: #000;
-    position: relative;
 }
 
 .header {
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.8);
+    height: 40px;
+    background-color: #1a1a1a;
     flex-direction: row;
     align-items: center;
-    padding: 0 15px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
+    padding: 0 10px;
+    border-bottom-width: 1px;
+    border-bottom-color: #333;
 }
 
-.back-btn {
+.settings-btn {
     font-size: 16px;
     color: #fff;
-    padding: 10px;
+    padding: 5px 10px;
 }
 
 .title {
@@ -29,96 +25,117 @@
     color: #fff;
     text-align: center;
     lines: 1;
-    margin: 0 10px;
 }
 
-.settings-btn {
-    font-size: 16px;
-    color: #fff;
-    padding: 10px;
+.counter {
+    font-size: 14px;
+    color: #999;
+    padding: 5px 10px;
 }
 
 .settings-panel {
-    background-color: rgba(0, 0, 0, 0.95);
-    padding: 20px;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    max-height: 400px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 15px;
+    border-bottom-width: 1px;
+    border-bottom-color: #333;
 }
 
-.settings-title {
-    font-size: 18px;
+.settings-item {
+    margin-bottom: 10px;
+}
+
+.settings-label {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+.settings-path {
+    font-size: 12px;
     color: #fff;
-    font-weight: bold;
-    margin-bottom: 20px;
+    background-color: #333;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.settings-actions {
+    margin-top: 10px;
+}
+
+.settings-btn-action {
+    font-size: 14px;
+    color: #fff;
+    background-color: #007AFF;
+    padding: 10px 15px;
+    border-radius: 5px;
     text-align: center;
 }
 
 .settings-section {
-    margin-bottom: 20px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top-width: 1px;
+    border-top-color: #333;
 }
 
-.section-label {
+.settings-section-title {
     font-size: 14px;
     color: #999;
     margin-bottom: 10px;
 }
 
-.path-text {
-    font-size: 12px;
-    color: #ccc;
-    background-color: #222;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.action-btn {
-    font-size: 14px;
-    color: #fff;
-    background-color: #007AFF;
-    padding: 12px;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.action-btn.active {
-    background-color: #FF3B30;
-}
-
-.btn-row {
+.control-row {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 10px;
 }
 
-.control-btn {
-    flex: 1;
-    font-size: 14px;
+.btn-small {
+    font-size: 12px;
     color: #fff;
-    background-color: #333;
-    padding: 10px;
-    border-radius: 5px;
+    background-color: #444;
+    padding: 6px 12px;
+    border-radius: 4px;
     text-align: center;
-    margin: 0 5px;
 }
 
-.control-btn.active {
+.full-btn {
     background-color: #007AFF;
 }
 
 .image-container {
     flex: 1;
+    flex-direction: row;
+    position: relative;
+}
+
+.nav-left,
+.nav-right {
+    width: 40px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
+}
+
+.nav-left {
+    left: 0;
+}
+
+.nav-right {
+    right: 0;
+}
+
+.nav-arrow {
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .preview-image {
-    width: 100%;
-    height: 100%;
+    flex: 1;
+    background-color: #000;
 }
 
 .empty-state {
@@ -131,7 +148,7 @@
 .empty-icon {
     font-size: 48px;
     color: #666;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .empty-text {
@@ -144,44 +161,4 @@
     font-size: 14px;
     color: #999;
     text-align: center;
-}
-
-.footer {
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.8);
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-}
-
-.nav-btn {
-    font-size: 16px;
-    color: #007AFF;
-    padding: 10px 20px;
-}
-
-.progress-text {
-    font-size: 14px;
-    color: #fff;
-}
-
-.auto-play-indicator {
-    position: absolute;
-    top: 60px;
-    right: 10px;
-    background-color: rgba(255, 59, 48, 0.9);
-    padding: 8px 15px;
-    border-radius: 15px;
-    z-index: 101;
-}
-
-.indicator-text {
-    font-size: 12px;
-    color: #fff;
 }

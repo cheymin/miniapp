@@ -36,7 +36,7 @@
       </div>
     </div>
     
-    <scroller v-if="imageList.length > 0" class="gallery-grid" scroll-direction="vertical" :show-scrollbar="true">
+    <scroller v-if="imageList.length > 0" class="gallery-grid" scroll-direction="vertical" :show-scrollbar="true" @scroll="handleScroll">
       <div class="grid-row" v-for="(row, rowIndex) in gridRows" :key="rowIndex">
         <div 
           v-for="(item, colIndex) in row" 
@@ -54,6 +54,10 @@
           </div>
           <text class="image-name" :lines="1">{{ item.name }}</text>
         </div>
+      </div>
+      
+      <div v-if="loadedCount < imageList.length" class="loading-more">
+        <text class="loading-text">加载更多...</text>
       </div>
     </scroller>
     
