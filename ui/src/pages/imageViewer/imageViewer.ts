@@ -46,6 +46,10 @@ const imageViewer = defineComponent({
             showSettingsPanel: false as boolean,
             isFullscreen: false as boolean,
             
+            isSlideshow: false as boolean,
+            slideshowInterval: 3 as number,
+            slideshowTimer: null as any,
+            
             shellInitialized: false
         };
     },
@@ -77,12 +81,16 @@ const imageViewer = defineComponent({
     
     beforeDestroy() {
         this.$page.$npage.off("backpressed", this.handleBackPress);
+        this.stopSlideshow();
     },
 
     methods: {
         handleBackPress() {
             if (this.showSettingsPanel) {
                 this.showSettingsPanel = false;
+            } else if (this.isSlideshow) {
+                this.stopSlideshow();
+                this.isFullscreen = false;
             } else if (this.isFullscreen) {
                 this.isFullscreen = false;
             } else {
@@ -102,6 +110,12 @@ const imageViewer = defineComponent({
         },
         
         handleImageClick(event: any) {
+            if (this.isSlideshow) {
+                this.stopSlideshow();
+                this.isFullscreen = false;
+                return;
+            }
+            
             if (this.isFullscreen) {
                 this.isFullscreen = false;
                 return;
@@ -272,6 +286,51 @@ const imageViewer = defineComponent({
 
         moveRight() {
             this.translateX += 20;
+        },
+        
+        toggleSlideshow() {
+            if (this.isSlideshow) {
+                this.stopSlideshow();
+            } else {
+                this.startSlideshow();
+            }
+        },
+        
+        startSlideshow() {
+            if (this.imageList.length === 0) {
+                showError('没有图片可播放');
+                return;
+            }
+            
+            this.isSlideshow = true;
+            this.showSettingsPanel = false;
+            this.isFullscreen = true;
+            
+            this.slideshowTimer = setInterval(() => {
+                this.nextImage();
+            }, this.slideshowInterval * 1000);
+            
+            showSuccess('幻灯片播放已开始');
+        },
+        
+        stopSlideshow() {
+            this.isSlideshow = false;
+            
+            if (this.slideshowTimer) {
+                clearInterval(this.slideshowTimer);
+                this.slideshowTimer = null;
+            }
+            
+            showSuccess('幻灯片播放已停止');
+        },
+        
+        setSlideshowInterval(seconds: number) {
+            this.slideshowInterval = seconds;
+            
+            if (this.isSlideshow) {
+                this.stopSlideshow();
+                this.startSlideshow();
+            }
         }
     }
 });

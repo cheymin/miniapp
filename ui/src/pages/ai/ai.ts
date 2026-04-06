@@ -35,6 +35,9 @@ const ai = defineComponent({
             jumpToMessageId: '',
 
             currentConversationId: '',
+            
+            maxDisplayMessages: 50,
+            displayStartIndex: 0
         };
     },
 
@@ -50,9 +53,17 @@ const ai = defineComponent({
             AI.initialize();
             this.aiInitialized = true;
             this.refreshMessages();
+            
+            let lastUpdateTime = 0;
+            const updateThrottle = 100;
+            
             AI.on('ai_stream', (data: string) => {
                 this.streamingContent += data;
-                this.$forceUpdate();
+                
+                const now = Date.now();
+                if (now - lastUpdateTime > updateThrottle) {
+                    lastUpdateTime = now;
+                }
             });
             $falcon.on<string>('jump', this.jumpHandler);
         } catch (e) {
@@ -68,6 +79,11 @@ const ai = defineComponent({
                 if (jumpIndex !== -1) {
                     messages = messages.slice(jumpIndex);
                 }
+            }
+
+            if (messages.length > this.maxDisplayMessages) {
+                const startIndex = Math.max(0, messages.length - this.maxDisplayMessages);
+                messages = messages.slice(startIndex);
             }
 
             if (this.isStreaming && this.streamingContent) {
@@ -94,6 +110,9 @@ const ai = defineComponent({
         },
         canSendMessage(): boolean {
             return this.aiInitialized && !this.isStreaming && this.currentInput.trim().length > 0;
+        },
+        hasMoreMessages(): boolean {
+            return this.messages.length > this.maxDisplayMessages && this.displayStartIndex > 0;
         }
     },
 
@@ -104,14 +123,21 @@ const ai = defineComponent({
 
         jumpHandler(e: { data: string; }) {
             this.jumpToMessageId = e.data;
-            this.$forceUpdate();
         },
 
         refreshMessages() {
             try {
-                this.messages = AI.getCurrentPath().map((node: ConversationNode) => ({ ...node, childIds: [...node.childIds] }));
+                const allMessages = AI.getCurrentPath().map((node: ConversationNode) => ({ ...node, childIds: [...node.childIds] }));
+                this.messages = allMessages;
+                this.displayStartIndex = Math.max(0, allMessages.length - this.maxDisplayMessages);
             } catch (e) {
                 showError(e as string || '获取消息失败');
+            }
+        },
+        
+        loadMoreMessages() {
+            if (this.displayStartIndex > 0) {
+                this.displayStartIndex = Math.max(0, this.displayStartIndex - this.maxDisplayMessages);
             }
         },
         getMessage(messageId: string): ConversationNode | undefined { return this.displayMessages.find(m => m.id === messageId); },
@@ -124,7 +150,6 @@ const ai = defineComponent({
 
             AI.addUserMessage(userMessage).then(() => {
                 this.refreshMessages();
-                this.$forceUpdate();
                 this.generateResponse();
             }).catch((e) => {
                 showError(e as string || '添加用户消息失败');
@@ -136,7 +161,6 @@ const ai = defineComponent({
             this.isStreaming = true;
             AI.generateResponse().then(() => {
                 this.refreshMessages();
-                this.$forceUpdate();
             }).catch((e) => {
                 showError(e as string || '生成响应失败');
             }).finally(() => {
@@ -152,7 +176,6 @@ const ai = defineComponent({
                     this.isStreaming = false;
                     this.streamingContent = '';
                     this.refreshMessages();
-                    this.$forceUpdate();
                 }, 100);
             }
         },
@@ -161,7 +184,7 @@ const ai = defineComponent({
             if (this.isStreaming) return;
             openSoftKeyboard(
                 () => this.currentInput,
-                (value) => { this.currentInput = value; this.$forceUpdate(); }
+                (value) => { this.currentInput = value; }
             );
         },
 
@@ -205,7 +228,6 @@ const ai = defineComponent({
                     }
                     AI.switchToNode(newId);
                     this.refreshMessages();
-                    this.$forceUpdate();
                 } catch (e) {
                     showError(e as string || '切换消息失败');
                 }

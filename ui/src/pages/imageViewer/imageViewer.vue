@@ -59,6 +59,17 @@
         <div class="control-row">
           <text class="btn-small full-btn" @click="toggleFullscreen">全屏</text>
         </div>
+        
+        <div class="control-row">
+          <text :class="['btn-small', isSlideshow ? 'stop-btn' : 'slideshow-btn']" @click="toggleSlideshow">{{ isSlideshow ? '停止' : '幻灯片' }}</text>
+        </div>
+        
+        <div v-if="!isSlideshow" class="control-row">
+          <text class="interval-label">间隔:</text>
+          <text :class="['btn-small', 'interval-btn', slideshowInterval === 2 ? 'active' : '']" @click="setSlideshowInterval(2)">2秒</text>
+          <text :class="['btn-small', 'interval-btn', slideshowInterval === 3 ? 'active' : '']" @click="setSlideshowInterval(3)">3秒</text>
+          <text :class="['btn-small', 'interval-btn', slideshowInterval === 5 ? 'active' : '']" @click="setSlideshowInterval(5)">5秒</text>
+        </div>
       </div>
     </div>
     
