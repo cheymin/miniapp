@@ -35,7 +35,7 @@ const calculator = defineComponent({
     },
 
     async mounted() {
-        await this.loadAllHistory();
+        await this.loadHistory();
     },
 
     methods: {
@@ -194,9 +194,12 @@ const calculator = defineComponent({
             }
         },
 
-        async loadAllHistory() {
+        async saveHistory() {
             try {
-                await $falcon.storage.set('calculator_history', JSON.stringify(this.history));
+                await $falcon.jsapi.storage.setStorage({ 
+                    key: 'calculator_history', 
+                    data: JSON.stringify(this.history) 
+                });
             } catch (error) {
                 console.error('保存历史失败:', error);
             }
@@ -204,9 +207,9 @@ const calculator = defineComponent({
 
         async loadHistory() {
             try {
-                const data = await $falcon.storage.get('calculator_history');
-                if (data) {
-                    this.history = JSON.parse(data);
+                const result = await $falcon.jsapi.storage.getStorage({ key: 'calculator_history' });
+                if (result && result.data) {
+                    this.history = JSON.parse(result.data);
                 }
             } catch (error) {
                 console.error('加载历史失败:', error);

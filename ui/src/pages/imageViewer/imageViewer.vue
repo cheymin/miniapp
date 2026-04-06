@@ -20,7 +20,7 @@
 <template>
   <div class="container">
     <div class="header">
-      <text class="settings-btn" @click="toggleSettings">⚙</text>
+      <text class="settings-btn" @click="toggleSettings">设置</text>
       <text class="title">{{ imageName || '图片查看器' }}</text>
       <text v-if="imageList.length > 0" class="counter">{{ currentImageIndex + 1 }}/{{ imageList.length }}</text>
     </div>
@@ -69,6 +69,8 @@
         class="preview-image"
         resize="contain"
         @click="handleImageClick"
+        @touchstart="handleTouchStart"
+        @touchend="handleTouchEnd"
       />
       
       <div class="nav-right" @click="nextImage">
@@ -77,7 +79,7 @@
     </div>
     
     <div v-else class="empty-state">
-      <text class="empty-icon">📁</text>
+      <text class="empty-icon">[空]</text>
       <text class="empty-text">请选择目录</text>
       <text class="empty-hint">点击左上角设置按钮选择图片目录</text>
     </div>

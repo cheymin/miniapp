@@ -381,7 +381,7 @@ export default defineComponent({
             
             if (isDirectory) {
               type = 'directory';
-              icon = '📁';
+              icon = '[D]';
             } else {
               type = 'file';
               if (name.match(/\.(txt|json|js|ts|vue|less|css|md|xml|html|htm|sh|bash)$/i)) {

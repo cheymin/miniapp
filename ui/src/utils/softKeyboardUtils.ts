@@ -33,8 +33,8 @@ function normalizeKeyboardData(data: any): string {
 
 export async function getKeyboardType(): Promise<string> {
     try {
-        const data = await $falcon.storage.get('keyboard_type');
-        return data || 'soft';
+        const result = await $falcon.jsapi.storage.getStorage({ key: 'keyboard_type' });
+        return (result && result.data) || 'soft';
     } catch (error) {
         console.error('获取键盘类型失败:', error);
         return 'soft';
@@ -78,7 +78,7 @@ export async function openKeyboard(
     if (keyboardType === 'system') {
         try {
             const NativeSDK = (globalThis as any).NativeSDK;
-            if (NativeSDK && NativeSDK.startTextEdit) {
+            if (NativeSDK && typeof NativeSDK.startTextEdit === 'function') {
                 const currentValue = get();
                 const uuid = NativeSDK.startTextEdit({
                     text: currentValue,
@@ -87,34 +87,38 @@ export async function openKeyboard(
                     inputType: 'text'
                 });
                 
-                const handler = (editUuid: string, jsonData: string) => {
-                    if (editUuid !== uuid) return;
-                    
-                    const result = JSON.parse(jsonData);
-                    if (result.editConfirmed) {
-                        const newValue = (result.text || '').replace(/\n/g, '');
+                const globalModule = NativeSDK.globalModule();
+                if (globalModule && globalModule.textEditFinished) {
+                    const handler = (editUuid: string, jsonData: string) => {
+                        if (editUuid !== uuid) return;
                         
-                        if (validate) {
-                            const validationError = validate(newValue);
-                            if (validationError) {
-                                showWarning(validationError);
-                                return;
+                        try {
+                            const result = JSON.parse(jsonData);
+                            if (result.editConfirmed) {
+                                const newValue = (result.text || '').replace(/\n/g, '');
+                                
+                                if (validate) {
+                                    const validationError = validate(newValue);
+                                    if (validationError) {
+                                        showWarning(validationError);
+                                        return;
+                                    }
+                                }
+                                
+                                set(newValue);
                             }
+                            
+                            if (globalModule.closeTextEdit) {
+                                globalModule.closeTextEdit(uuid);
+                            }
+                        } catch (e) {
+                            console.error('解析键盘返回数据失败:', e);
                         }
-                        
-                        set(newValue);
-                    }
+                    };
                     
-                    if (NativeSDK.globalModule && NativeSDK.globalModule().closeTextEdit) {
-                        NativeSDK.globalModule().closeTextEdit(uuid);
-                    }
-                };
-                
-                if (NativeSDK.globalModule && NativeSDK.globalModule().textEditFinished) {
-                    NativeSDK.globalModule().textEditFinished.on(handler);
+                    globalModule.textEditFinished.on(handler);
+                    return;
                 }
-                
-                return;
             }
         } catch (error) {
             console.error('系统键盘调用失败，使用软键盘:', error);

@@ -27,6 +27,7 @@ interface ImageItem {
     path: string;
     name: string;
     thumbnail: string;
+    loaded: boolean;
 }
 
 const gallery = defineComponent({
@@ -38,7 +39,8 @@ const gallery = defineComponent({
             imageList: [] as ImageItem[],
             showSettingsPanel: false as boolean,
             
-            shellInitialized: false
+            shellInitialized: false,
+            loadingThumbnails: false
         };
     },
 
@@ -122,39 +124,51 @@ const gallery = defineComponent({
                         this.imageList.push({
                             path: path,
                             name: name,
-                            thumbnail: ''
+                            thumbnail: '',
+                            loaded: false
                         });
                     }
                     
+                    hideLoading();
                     showSuccess(`找到 ${this.imageList.length} 张图片`);
                     
-                    this.loadThumbnails();
+                    // 只加载前6张缩略图
+                    this.loadThumbnails(0, 6);
                 } else {
                     this.imageList = [];
+                    hideLoading();
                     showError('未找到图片文件');
                 }
             } catch (error: any) {
                 console.error('扫描图片失败:', error);
-                showError('扫描图片失败: ' + error.message);
-            } finally {
                 hideLoading();
+                showError('扫描图片失败: ' + error.message);
             }
         },
 
-        async loadThumbnails() {
-            if (!this.shellInitialized) return;
+        async loadThumbnails(startIndex: number, count: number) {
+            if (!this.shellInitialized || this.loadingThumbnails) return;
             
-            for (let i = 0; i < Math.min(this.imageList.length, 20); i++) {
+            this.loadingThumbnails = true;
+            
+            const endIndex = Math.min(startIndex + count, this.imageList.length);
+            
+            for (let i = startIndex; i < endIndex; i++) {
                 const item = this.imageList[i];
-                try {
-                    const thumbnail = await this.generateThumbnail(item.path);
-                    if (thumbnail) {
-                        this.imageList[i].thumbnail = thumbnail;
+                if (!item.loaded) {
+                    try {
+                        const thumbnail = await this.generateThumbnail(item.path);
+                        if (thumbnail) {
+                            this.imageList[i].thumbnail = thumbnail;
+                            this.imageList[i].loaded = true;
+                        }
+                    } catch (e) {
+                        console.error('生成缩略图失败:', e);
                     }
-                } catch (e) {
-                    console.error('生成缩略图失败:', e);
                 }
             }
+            
+            this.loadingThumbnails = false;
         },
 
         async generateThumbnail(imagePath: string): Promise<string> {
@@ -164,23 +178,10 @@ const gallery = defineComponent({
                 const ext = imagePath.split('.').pop()?.toLowerCase() || 'jpg';
                 const mimeType = this.getMimeType(ext);
                 
-                let result = '';
+                // 使用更快的编码方法
+                const cmd = `perl -MMIME::Base64 -0777 -ne 'print encode_base64(\$_)' "${imagePath}"`;
                 
-                const encodingMethods = [
-                    `perl -MMIME::Base64 -0777 -ne 'print encode_base64(\$_)' "${imagePath}"`,
-                    `perl -e 'use MIME::Base64; open(F, "<", $ARGV[0]); binmode(F); local $/; print encode_base64(<F>);' "${imagePath}"`
-                ];
-                
-                for (const cmd of encodingMethods) {
-                    try {
-                        result = await Shell.exec(cmd);
-                        if (result && result.trim()) {
-                            break;
-                        }
-                    } catch (e) {
-                        continue;
-                    }
-                }
+                const result = await Shell.exec(cmd);
                 
                 if (result && result.trim()) {
                     const base64Data = result.trim().replace(/\s/g, '');

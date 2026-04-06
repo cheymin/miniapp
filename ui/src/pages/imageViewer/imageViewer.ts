@@ -45,7 +45,12 @@ const imageViewer = defineComponent({
             
             showSettingsPanel: false as boolean,
             
-            shellInitialized: false
+            shellInitialized: false,
+            
+            lastTapTime: 0,
+            touchStartX: 0,
+            touchStartY: 0,
+            isSwiping: false
         };
     },
 
@@ -92,13 +97,57 @@ const imageViewer = defineComponent({
         },
         
         handleImageClick(event: any) {
-            const imageWidth = event.target.width || 172;
-            const clickX = event.offsetX || event.clientX;
+            const currentTime = new Date().getTime();
+            const tapInterval = currentTime - this.lastTapTime;
+            
+            if (tapInterval < 300 && tapInterval > 0) {
+                this.handleDoubleTap();
+            } else {
+                this.handleSingleClick(event);
+            }
+            
+            this.lastTapTime = currentTime;
+        },
+        
+        handleDoubleTap() {
+            if (this.scale > 1.0) {
+                this.resetZoom();
+            } else {
+                this.scale = 2.0;
+            }
+        },
+        
+        handleSingleClick(event: any) {
+            const imageWidth = 172;
+            const clickX = event.offsetX || event.clientX || 86;
             
             if (clickX < imageWidth / 3) {
                 this.prevImage();
             } else if (clickX > imageWidth * 2 / 3) {
                 this.nextImage();
+            }
+        },
+        
+        handleTouchStart(event: any) {
+            this.touchStartX = event.touches ? event.touches[0].clientX : event.clientX;
+            this.touchStartY = event.touches ? event.touches[0].clientY : event.clientY;
+            this.isSwiping = false;
+        },
+        
+        handleTouchEnd(event: any) {
+            const touchEndX = event.changedTouches ? event.changedTouches[0].clientX : event.clientX;
+            const touchEndY = event.changedTouches ? event.changedTouches[0].clientY : event.clientY;
+            
+            const deltaX = touchEndX - this.touchStartX;
+            const deltaY = touchEndY - this.touchStartY;
+            
+            if (Math.abs(deltaX) > 50 && Math.abs(deltaX) > Math.abs(deltaY)) {
+                this.isSwiping = true;
+                if (deltaX > 0) {
+                    this.prevImage();
+                } else {
+                    this.nextImage();
+                }
             }
         },
 

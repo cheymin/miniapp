@@ -120,9 +120,9 @@ const browser = defineComponent({
         
         async loadHistory() {
             try {
-                const data = await $falcon.storage.get('browser_history');
-                if (data) {
-                    this.history = JSON.parse(data);
+                const result = await $falcon.jsapi.storage.getStorage({ key: 'browser_history' });
+                if (result && result.data) {
+                    this.history = JSON.parse(result.data);
                 }
             } catch (error) {
                 console.error('加载浏览历史失败:', error);
@@ -131,7 +131,10 @@ const browser = defineComponent({
         
         async saveHistory() {
             try {
-                await $falcon.storage.set('browser_history', JSON.stringify(this.history));
+                await $falcon.jsapi.storage.setStorage({ 
+                    key: 'browser_history', 
+                    data: JSON.stringify(this.history) 
+                });
             } catch (error) {
                 console.error('保存浏览历史失败:', error);
             }
