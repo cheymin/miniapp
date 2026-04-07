@@ -32,17 +32,42 @@ const browser = defineComponent({
     },
 
     async mounted() {
+        this.$page.$npage.setSupportBack(true);
+        this.$page.$npage.on("backpressed", this.handleBackPress);
         await this.loadHistory();
+    },
+    
+    beforeDestroy() {
+        this.$page.$npage.off("backpressed", this.handleBackPress);
     },
 
     methods: {
+        handleBackPress() {
+            $falcon.navBack();
+        },
+        
         inputUrl() {
             openSoftKeyboard(
                 () => this.currentUrl,
                 (value: string) => {
                     this.currentUrl = value;
+                },
+                (value) => {
+                    if (value && !this.isValidUrl(value)) {
+                        return '请输入有效的网址';
+                    }
+                    return undefined;
                 }
             );
+        },
+        
+        isValidUrl(url: string): boolean {
+            try {
+                const urlObj = new URL(this.normalizeUrl(url));
+                return true;
+            } catch {
+                return false;
+            }
         },
         
         normalizeUrl(url: string): string {
@@ -57,34 +82,45 @@ const browser = defineComponent({
             return url;
         },
         
-        async goToUrl(url?: string) {
-            const targetUrl = url || this.currentUrl;
-            
-            if (!targetUrl) {
+        async copyUrl() {
+            if (!this.currentUrl) {
                 showError('请输入网址');
                 return;
             }
             
-            const normalizedUrl = this.normalizeUrl(targetUrl);
+            const normalizedUrl = this.normalizeUrl(this.currentUrl);
+            
+            if (!this.isValidUrl(normalizedUrl)) {
+                showError('请输入有效的网址');
+                return;
+            }
             
             try {
-                showInfo(`正在打开: ${normalizedUrl}`);
-                
-                $falcon.trigger('open_url', normalizedUrl);
-                
                 this.addToHistory(normalizedUrl);
-                
-                this.currentUrl = normalizedUrl;
-                
+                showSuccess(`已复制: ${normalizedUrl}`);
             } catch (error: any) {
-                console.error('打开网页失败:', error);
-                showError('打开网页失败: ' + error.message);
+                console.error('复制失败:', error);
+                showError('复制失败: ' + error.message);
             }
         },
         
-        goToQuickLink(url: string) {
+        copyQuickLink(url: string) {
             this.currentUrl = url;
-            this.goToUrl(url);
+            this.addToHistory(url);
+            showSuccess(`已复制: ${url}`);
+        },
+        
+        copyHistoryUrl(url: string) {
+            this.currentUrl = url;
+            showSuccess(`已复制: ${url}`);
+        },
+        
+        deleteHistory(index: number) {
+            if (index >= 0 && index < this.history.length) {
+                this.history.splice(index, 1);
+                this.saveHistory();
+                showSuccess('已删除');
+            }
         },
         
         addToHistory(url: string) {
@@ -120,9 +156,9 @@ const browser = defineComponent({
         
         async loadHistory() {
             try {
-                const result = await $falcon.jsapi.storage.getStorage({ key: 'browser_history' });
-                if (result && result.data) {
-                    this.history = JSON.parse(result.data);
+                const data = await $falcon.storage.get('browser_history');
+                if (data) {
+                    this.history = JSON.parse(data);
                 }
             } catch (error) {
                 console.error('加载浏览历史失败:', error);
@@ -131,10 +167,7 @@ const browser = defineComponent({
         
         async saveHistory() {
             try {
-                await $falcon.jsapi.storage.setStorage({ 
-                    key: 'browser_history', 
-                    data: JSON.stringify(this.history) 
-                });
+                await $falcon.storage.set('browser_history', JSON.stringify(this.history));
             } catch (error) {
                 console.error('保存浏览历史失败:', error);
             }

@@ -20,12 +20,13 @@
 <template>
   <scroller class="container" scroll-direction="vertical" :show-scrollbar="true">
     <div class="section">
-      <text class="section-title">简易浏览器</text>
+      <text class="section-title">网址收藏夹</text>
+      <text class="section-desc">管理常用网址和浏览历史</text>
       
       <div class="item">
         <text class="item-text">输入网址:</text>
         <text class="item-input" @click="inputUrl">{{ currentUrl || '点击输入网址...' }}</text>
-        <text class="btn btn-primary" @click="goToUrl">访问</text>
+        <text class="btn btn-primary" @click="copyUrl">复制</text>
       </div>
       
       <div class="item">
@@ -33,10 +34,12 @@
       </div>
       
       <div class="quick-links">
-        <text class="quick-link" @click="goToQuickLink('https://www.baidu.com')">百度</text>
-        <text class="quick-link" @click="goToQuickLink('https://www.bing.com')">必应</text>
-        <text class="quick-link" @click="goToQuickLink('https://www.google.com')">谷歌</text>
-        <text class="quick-link" @click="goToQuickLink('https://github.com')">GitHub</text>
+        <text class="quick-link" @click="copyQuickLink('https://www.baidu.com')">百度</text>
+        <text class="quick-link" @click="copyQuickLink('https://www.bing.com')">必应</text>
+        <text class="quick-link" @click="copyQuickLink('https://www.google.com')">谷歌</text>
+        <text class="quick-link" @click="copyQuickLink('https://github.com')">GitHub</text>
+        <text class="quick-link" @click="copyQuickLink('https://www.bilibili.com')">B站</text>
+        <text class="quick-link" @click="copyQuickLink('https://www.zhihu.com')">知乎</text>
       </div>
     </div>
     
@@ -44,10 +47,12 @@
       <text class="section-title">浏览历史</text>
       
       <div v-if="history.length > 0">
-        <div v-for="(item, index) in history" :key="index" class="history-item" @click="goToUrl(item.url)">
+        <div v-for="(item, index) in history" :key="index" class="history-item">
           <text class="history-title">{{ item.title || item.url }}</text>
           <text class="history-url">{{ item.url }}</text>
           <text class="history-time">{{ item.time }}</text>
+          <text class="btn-small" @click="copyHistoryUrl(item.url)">复制</text>
+          <text class="btn-small btn-danger" @click="deleteHistory(index)">删除</text>
         </div>
       </div>
       <div v-else class="empty-state">
@@ -57,13 +62,12 @@
     
     <div class="section">
       <text class="section-title">使用说明</text>
-      <text class="instruction-text">1. 输入网址或点击快捷链接</text>
-      <text class="instruction-text">2. 点击"访问"按钮打开网页</text>
-      <text class="instruction-text">3. 浏览历史会自动保存</text>
-      <text class="instruction-text">4. 点击历史记录可快速访问</text>
+      <text class="instruction-text">• 点击快捷链接或输入网址</text>
+      <text class="instruction-text">• 点击"复制"按钮复制网址</text>
+      <text class="instruction-text">• 在其他设备上粘贴访问</text>
+      <text class="instruction-text">• 浏览历史会自动保存</text>
     </div>
     
-    <Loading />
     <ToastMessage />
   </scroller>
 </template>

@@ -30,15 +30,12 @@ const calculator = defineComponent({
             
             lastOperator: '' as string,
             lastNumber: '' as string,
-            shouldResetExpression: false,
-            
-            isScientificMode: false as boolean,
-            angleMode: 'deg' as 'deg' | 'rad'
+            shouldResetExpression: false
         };
     },
 
     async mounted() {
-        await this.loadHistory();
+        await this.loadAllHistory();
     },
 
     methods: {
@@ -161,6 +158,16 @@ const calculator = defineComponent({
             }
         },
 
+        evaluateExpression(expr: string): number {
+            const sanitized = expr.replace(/[^0-9+\-*/%().]/g, '');
+            
+            try {
+                return eval(sanitized);
+            } catch (error) {
+                throw new Error('Invalid expression');
+            }
+        },
+
         formatNumber(num: number): string {
             if (Number.isInteger(num)) {
                 return num.toString();
@@ -187,12 +194,9 @@ const calculator = defineComponent({
             }
         },
 
-        async saveHistory() {
+        async loadAllHistory() {
             try {
-                await $falcon.jsapi.storage.setStorage({ 
-                    key: 'calculator_history', 
-                    data: JSON.stringify(this.history) 
-                });
+                await $falcon.storage.set('calculator_history', JSON.stringify(this.history));
             } catch (error) {
                 console.error('保存历史失败:', error);
             }
@@ -200,110 +204,13 @@ const calculator = defineComponent({
 
         async loadHistory() {
             try {
-                const result = await $falcon.jsapi.storage.getStorage({ key: 'calculator_history' });
-                if (result && result.data) {
-                    this.history = JSON.parse(result.data);
+                const data = await $falcon.storage.get('calculator_history');
+                if (data) {
+                    this.history = JSON.parse(data);
                 }
             } catch (error) {
                 console.error('加载历史失败:', error);
             }
-        },
-        
-        toggleScientificMode() {
-            this.isScientificMode = !this.isScientificMode;
-        },
-        
-        inputFunction(func: string) {
-            if (this.shouldResetExpression) {
-                this.expression = '';
-                this.shouldResetExpression = false;
-            }
-            
-            let funcExpr = '';
-            switch (func) {
-                case 'sin':
-                    funcExpr = 'sin(';
-                    break;
-                case 'cos':
-                    funcExpr = 'cos(';
-                    break;
-                case 'tan':
-                    funcExpr = 'tan(';
-                    break;
-                case 'log':
-                    funcExpr = 'log(';
-                    break;
-                case 'ln':
-                    funcExpr = 'ln(';
-                    break;
-                case 'sqrt':
-                    funcExpr = 'sqrt(';
-                    break;
-                case 'pow':
-                    funcExpr = '^(';
-                    break;
-                case 'pi':
-                    funcExpr = 'π';
-                    break;
-                case 'e':
-                    funcExpr = 'e';
-                    break;
-                case 'factorial':
-                    funcExpr = 'factorial(';
-                    break;
-                default:
-                    funcExpr = func + '(';
-            }
-            
-            this.expression += funcExpr;
-        },
-        
-        factorial(n: number): number {
-            if (n < 0) return NaN;
-            if (n === 0 || n === 1) return 1;
-            if (n > 170) return Infinity;
-            let result = 1;
-            for (let i = 2; i <= n; i++) {
-                result *= i;
-            }
-            return result;
-        },
-        
-        evaluateExpression(expr: string): number {
-            let sanitized = expr
-                .replace(/π/g, Math.PI.toString())
-                .replace(/e(?![x])/g, Math.E.toString())
-                .replace(/sin\(/g, `Math.sin(${this.angleMode === 'deg' ? 'Math.PI/180*' : ''}`)
-                .replace(/cos\(/g, `Math.cos(${this.angleMode === 'deg' ? 'Math.PI/180*' : ''}`)
-                .replace(/tan\(/g, `Math.tan(${this.angleMode === 'deg' ? 'Math.PI/180*' : ''}`)
-                .replace(/log\(/g, 'Math.log10(')
-                .replace(/ln\(/g, 'Math.log(')
-                .replace(/sqrt\(/g, 'Math.sqrt(')
-                .replace(/\^\(/g, 'Math.pow(')
-                .replace(/factorial\(/g, 'this.factorial(');
-            
-            try {
-                const result = eval(sanitized);
-                return typeof result === 'number' ? result : NaN;
-            } catch (error) {
-                throw new Error('Invalid expression');
-            }
-        },
-        
-        inputPi() {
-            if (this.shouldResetExpression) {
-                this.expression = '';
-                this.shouldResetExpression = false;
-            }
-            this.expression += 'π';
-        },
-        
-        inputE() {
-            if (this.shouldResetExpression) {
-                this.expression = '';
-                this.shouldResetExpression = false;
-            }
-            this.expression += 'e';
         }
     }
 });

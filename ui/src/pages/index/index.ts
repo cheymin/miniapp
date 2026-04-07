@@ -56,9 +56,6 @@ const index = defineComponent({
         },
         UnitConverter() {
             $falcon.navTo("unitConverter", {});
-        },
-        Recorder() {
-            $falcon.navTo("recorder", {});
         }
     }
 });

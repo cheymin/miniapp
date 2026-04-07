@@ -20,7 +20,7 @@
 <template>
   <div class="container">
     <div class="header">
-      <text class="settings-btn" @click="toggleSettings">设置</text>
+      <text class="settings-btn" @click="toggleSettings">⚙</text>
       <text class="title">图库</text>
       <text v-if="imageList.length > 0" class="counter">{{ imageList.length }}张</text>
     </div>
@@ -36,7 +36,12 @@
       </div>
     </div>
     
-    <scroller v-if="imageList.length > 0" class="gallery-grid" scroll-direction="vertical" :show-scrollbar="true" @scroll="handleScroll">
+    <scroller 
+      v-if="imageList.length > 0" 
+      class="gallery-grid" 
+      scroll-direction="vertical" 
+      :show-scrollbar="true"
+      @scroll="handleScroll">
       <div class="grid-row" v-for="(row, rowIndex) in gridRows" :key="rowIndex">
         <div 
           v-for="(item, colIndex) in row" 
@@ -50,19 +55,19 @@
             resize="cover"
           />
           <div v-else class="thumbnail-placeholder">
-            <text class="placeholder-icon">[图]</text>
+            <text class="placeholder-icon">🖼</text>
           </div>
           <text class="image-name" :lines="1">{{ item.name }}</text>
         </div>
       </div>
       
-      <div v-if="loadedCount < imageList.length" class="loading-more">
-        <text class="loading-text">加载更多...</text>
+      <div v-if="loadedCount < imageList.length" class="load-more">
+        <text class="load-more-text">加载更多...</text>
       </div>
     </scroller>
     
     <div v-else class="empty-state">
-      <text class="empty-icon">[空]</text>
+      <text class="empty-icon">📁</text>
       <text class="empty-text">暂无图片</text>
       <text class="empty-hint">点击左上角设置按钮选择图片目录</text>
     </div>

@@ -156,9 +156,9 @@ const qrcodeGenerator = defineComponent({
 
         async loadHistory() {
             try {
-                const result = await $falcon.jsapi.storage.getStorage({ key: 'qrcode_history' });
-                if (result && result.data) {
-                    this.history = JSON.parse(result.data);
+                const data = await $falcon.storage.get('qrcode_history');
+                if (data) {
+                    this.history = JSON.parse(data);
                 }
             } catch (error) {
                 console.error('加载历史失败:', error);
@@ -167,10 +167,7 @@ const qrcodeGenerator = defineComponent({
 
         async saveHistory() {
             try {
-                await $falcon.jsapi.storage.setStorage({ 
-                    key: 'qrcode_history', 
-                    data: JSON.stringify(this.history) 
-                });
+                await $falcon.storage.set('qrcode_history', JSON.stringify(this.history));
             } catch (error) {
                 console.error('保存历史失败:', error);
             }

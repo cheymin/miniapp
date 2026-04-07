@@ -19,8 +19,8 @@
 
 <template>
   <div class="container">
-    <div v-if="!isFullscreen" class="header">
-      <text class="settings-btn" @click="toggleSettings">设置</text>
+    <div class="header">
+      <text class="settings-btn" @click="toggleSettings">⚙</text>
       <text class="title">{{ imageName || '图片查看器' }}</text>
       <text v-if="imageList.length > 0" class="counter">{{ currentImageIndex + 1 }}/{{ imageList.length }}</text>
     </div>
@@ -57,25 +57,29 @@
         </div>
         
         <div class="control-row">
-          <text class="btn-small full-btn" @click="toggleFullscreen">全屏</text>
+          <text class="btn-small" @click="toggleSlideshow">{{ isSlideshow ? '停止' : '幻灯片' }}</text>
+          <text class="btn-small" @click="toggleImageInfo">信息</text>
         </div>
         
         <div class="control-row">
-          <text :class="['btn-small', isSlideshow ? 'stop-btn' : 'slideshow-btn']" @click="toggleSlideshow">{{ isSlideshow ? '停止' : '幻灯片' }}</text>
-        </div>
-        
-        <div v-if="!isSlideshow" class="control-row">
-          <text class="interval-label">间隔:</text>
-          <text :class="['btn-small', 'interval-btn', slideshowInterval === 2 ? 'active' : '']" @click="setSlideshowInterval(2)">2秒</text>
-          <text :class="['btn-small', 'interval-btn', slideshowInterval === 3 ? 'active' : '']" @click="setSlideshowInterval(3)">3秒</text>
-          <text :class="['btn-small', 'interval-btn', slideshowInterval === 5 ? 'active' : '']" @click="setSlideshowInterval(5)">5秒</text>
+          <text class="btn-small" @click="renameImage">重命名</text>
+          <text class="btn-small btn-danger" @click="deleteImage">删除</text>
         </div>
       </div>
     </div>
     
+    <div v-if="showImageInfo && currentImage" class="image-info-panel">
+      <text class="info-title">图片信息</text>
+      <text class="info-item">文件名: {{ imageName }}</text>
+      <text class="info-item">大小: {{ formatFileSize(imageSize) }}</text>
+      <text class="info-item">路径: {{ currentImage }}</text>
+      <text class="info-item">索引: {{ currentImageIndex + 1 }} / {{ imageList.length }}</text>
+      <text class="btn-small" @click="toggleImageInfo">关闭</text>
+    </div>
+    
     <div v-if="currentImageData" class="image-container">
       <div class="nav-left" @click="prevImage">
-        <text class="nav-arrow">&lt;</text>
+        <text class="nav-arrow">‹</text>
       </div>
       
       <image 
@@ -87,12 +91,12 @@
       />
       
       <div class="nav-right" @click="nextImage">
-        <text class="nav-arrow">&gt;</text>
+        <text class="nav-arrow">›</text>
       </div>
     </div>
     
     <div v-else class="empty-state">
-      <text class="empty-icon">[空]</text>
+      <text class="empty-icon">📁</text>
       <text class="empty-text">请选择目录</text>
       <text class="empty-hint">点击左上角设置按钮选择图片目录</text>
     </div>

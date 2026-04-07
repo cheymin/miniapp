@@ -17,7 +17,7 @@
 
 import { defineComponent } from 'vue';
 import { Shell } from 'langningchen';
-import { showError, showSuccess } from '../../components/ToastMessage';
+import { showError, showSuccess, showInfo } from '../../components/ToastMessage';
 import { hideLoading, showLoading } from '../../components/Loading';
 import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
 
@@ -34,6 +34,7 @@ const imageViewer = defineComponent({
             currentImage: '' as string,
             currentImageData: '' as string,
             imageName: '' as string,
+            imageSize: 0 as number,
             currentDirectory: '/userdisk' as string,
             imageList: [] as string[],
             currentImageIndex: -1 as number,
@@ -44,10 +45,8 @@ const imageViewer = defineComponent({
             translateY: 0,
             
             showSettingsPanel: false as boolean,
-            isFullscreen: false as boolean,
-            
+            showImageInfo: false as boolean,
             isSlideshow: false as boolean,
-            slideshowInterval: 3 as number,
             slideshowTimer: null as any,
             
             shellInitialized: false
@@ -88,11 +87,6 @@ const imageViewer = defineComponent({
         handleBackPress() {
             if (this.showSettingsPanel) {
                 this.showSettingsPanel = false;
-            } else if (this.isSlideshow) {
-                this.stopSlideshow();
-                this.isFullscreen = false;
-            } else if (this.isFullscreen) {
-                this.isFullscreen = false;
             } else {
                 $falcon.navBack();
             }
@@ -102,27 +96,9 @@ const imageViewer = defineComponent({
             this.showSettingsPanel = !this.showSettingsPanel;
         },
         
-        toggleFullscreen() {
-            this.isFullscreen = !this.isFullscreen;
-            if (this.isFullscreen) {
-                this.showSettingsPanel = false;
-            }
-        },
-        
         handleImageClick(event: any) {
-            if (this.isSlideshow) {
-                this.stopSlideshow();
-                this.isFullscreen = false;
-                return;
-            }
-            
-            if (this.isFullscreen) {
-                this.isFullscreen = false;
-                return;
-            }
-            
-            const imageWidth = 172;
-            const clickX = event.offsetX || event.clientX || 86;
+            const imageWidth = event.target.width || 172;
+            const clickX = event.offsetX || event.clientX;
             
             if (clickX < imageWidth / 3) {
                 this.prevImage();
@@ -152,26 +128,43 @@ const imageViewer = defineComponent({
             }
             
             try {
-                showLoading('加载中...');
+                showLoading('正在加载图片...');
                 
                 const ext = imagePath.split('.').pop()?.toLowerCase() || 'jpg';
                 const mimeType = this.getMimeType(ext);
                 
-                const cmd = `perl -MMIME::Base64 -0777 -ne 'print encode_base64(\$_)' "${imagePath}"`;
-                const result = await Shell.exec(cmd);
+                let result = '';
+                
+                const encodingMethods = [
+                    `perl -MMIME::Base64 -0777 -ne 'print encode_base64(\$_)' "${imagePath}"`,
+                    `perl -e 'use MIME::Base64; open(F, "<", $ARGV[0]); binmode(F); local $/; print encode_base64(<F>);' "${imagePath}"`,
+                    `xxd -p "${imagePath}" | tr -d '\\n' | perl -e 'use MIME::Base64; my $hex = <STDIN>; $hex =~ s/\\s//g; my $bin = pack("H*", $hex); print encode_base64($bin);'`,
+                    `hexdump -ve '1/1 "%.2x"' "${imagePath}" | perl -e 'use MIME::Base64; my $hex = <STDIN>; $hex =~ s/\\s//g; my $bin = pack("H*", $hex); print encode_base64($bin);'`
+                ];
+                
+                for (const cmd of encodingMethods) {
+                    try {
+                        result = await Shell.exec(cmd);
+                        if (result && result.trim()) {
+                            break;
+                        }
+                    } catch (e) {
+                        continue;
+                    }
+                }
                 
                 if (result && result.trim()) {
                     const base64Data = result.trim().replace(/\s/g, '');
                     this.currentImageData = `data:${mimeType};base64,${base64Data}`;
                     this.currentImage = imagePath;
                     this.imageName = imagePath.split('/').pop() || '';
-                    this.resetZoom();
+                    await this.getImageInfo();
                 } else {
-                    showError('图片加载失败');
+                    showError('图片加载失败：无法读取文件');
                 }
             } catch (error: any) {
                 console.error('加载图片失败:', error);
-                showError('加载图片失败');
+                showError('加载图片失败: ' + (error.message || error));
             } finally {
                 hideLoading();
             }
@@ -196,9 +189,10 @@ const imageViewer = defineComponent({
             }
             
             try {
-                showLoading('扫描中...');
+                showLoading('正在扫描目录...');
                 
                 const cmd = `find "${this.currentDirectory}" -type f \\( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.bmp" -o -iname "*.webp" \\) 2>/dev/null | sort`;
+                
                 const result = await Shell.exec(cmd);
                 
                 if (result && result.trim()) {
@@ -207,16 +201,15 @@ const imageViewer = defineComponent({
                     if (this.imageList.length > 0) {
                         this.currentImageIndex = 0;
                         await this.loadImage(this.imageList[0]);
-                        showSuccess(`找到 ${this.imageList.length} 张图片`);
                     } else {
-                        showError('未找到图片');
+                        showError('未找到图片文件');
                     }
                 } else {
-                    showError('未找到图片');
+                    showError('未找到图片文件');
                 }
             } catch (error: any) {
                 console.error('扫描图片失败:', error);
-                showError('扫描图片失败');
+                showError('扫描图片失败: ' + error.message);
             } finally {
                 hideLoading();
             }
@@ -250,11 +243,11 @@ const imageViewer = defineComponent({
         },
 
         zoomIn() {
-            this.scale = Math.min(this.scale * 1.3, 5.0);
+            this.scale = Math.min(this.scale + 0.2, 5.0);
         },
 
         zoomOut() {
-            this.scale = Math.max(this.scale / 1.3, 0.5);
+            this.scale = Math.max(this.scale - 0.2, 0.1);
         },
 
         resetZoom() {
@@ -288,48 +281,111 @@ const imageViewer = defineComponent({
             this.translateX += 20;
         },
         
+        toggleImageInfo() {
+            this.showImageInfo = !this.showImageInfo;
+        },
+        
+        async getImageInfo() {
+            if (!this.currentImage || !this.shellInitialized) return;
+            
+            try {
+                const cmd = `stat -c '%s' "${this.currentImage}"`;
+                const result = await Shell.exec(cmd);
+                if (result && result.trim()) {
+                    this.imageSize = parseInt(result.trim(), 10);
+                }
+            } catch (error) {
+                console.error('获取图片信息失败:', error);
+            }
+        },
+        
+        formatFileSize(bytes: number): string {
+            if (bytes === 0) return '0 B';
+            
+            const k = 1024;
+            const sizes = ['B', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        },
+        
+        async deleteImage() {
+            if (!this.currentImage || !this.shellInitialized) return;
+            
+            try {
+                const cmd = `rm "${this.currentImage}"`;
+                await Shell.exec(cmd);
+                
+                this.imageList.splice(this.currentImageIndex, 1);
+                
+                if (this.imageList.length > 0) {
+                    this.currentImageIndex = Math.min(this.currentImageIndex, this.imageList.length - 1);
+                    await this.loadImage(this.imageList[this.currentImageIndex]);
+                } else {
+                    this.currentImage = '';
+                    this.currentImageData = '';
+                    this.imageName = '';
+                }
+                
+                showSuccess('图片已删除');
+            } catch (error: any) {
+                console.error('删除图片失败:', error);
+                showError('删除失败: ' + error.message);
+            }
+        },
+        
+        async renameImage() {
+            if (!this.currentImage || !this.shellInitialized) return;
+            
+            openSoftKeyboard(
+                () => this.imageName,
+                async (newName: string) => {
+                    if (!newName || newName === this.imageName) return;
+                    
+                    const dir = this.currentImage.substring(0, this.currentImage.lastIndexOf('/'));
+                    const newPath = `${dir}/${newName}`;
+                    
+                    try {
+                        const cmd = `mv "${this.currentImage}" "${newPath}"`;
+                        await Shell.exec(cmd);
+                        
+                        this.imageList[this.currentImageIndex] = newPath;
+                        this.currentImage = newPath;
+                        this.imageName = newName;
+                        
+                        showSuccess('重命名成功');
+                    } catch (error: any) {
+                        console.error('重命名失败:', error);
+                        showError('重命名失败: ' + error.message);
+                    }
+                }
+            );
+        },
+        
         toggleSlideshow() {
+            this.isSlideshow = !this.isSlideshow;
+            
             if (this.isSlideshow) {
-                this.stopSlideshow();
-            } else {
                 this.startSlideshow();
+            } else {
+                this.stopSlideshow();
             }
         },
         
         startSlideshow() {
-            if (this.imageList.length === 0) {
-                showError('没有图片可播放');
-                return;
+            if (this.slideshowTimer) {
+                clearInterval(this.slideshowTimer);
             }
-            
-            this.isSlideshow = true;
-            this.showSettingsPanel = false;
-            this.isFullscreen = true;
             
             this.slideshowTimer = setInterval(() => {
                 this.nextImage();
-            }, this.slideshowInterval * 1000);
-            
-            showSuccess('幻灯片播放已开始');
+            }, 3000);
         },
         
         stopSlideshow() {
-            this.isSlideshow = false;
-            
             if (this.slideshowTimer) {
                 clearInterval(this.slideshowTimer);
                 this.slideshowTimer = null;
-            }
-            
-            showSuccess('幻灯片播放已停止');
-        },
-        
-        setSlideshowInterval(seconds: number) {
-            this.slideshowInterval = seconds;
-            
-            if (this.isSlideshow) {
-                this.stopSlideshow();
-                this.startSlideshow();
             }
         }
     }

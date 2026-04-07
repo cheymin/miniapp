@@ -30,6 +30,9 @@ interface ImageItem {
     loaded: boolean;
 }
 
+const THUMBNAIL_CACHE = new Map<string, string>();
+const MAX_CACHE_SIZE = 50;
+
 const gallery = defineComponent({
     data() {
         return {
@@ -39,19 +42,20 @@ const gallery = defineComponent({
             imageList: [] as ImageItem[],
             showSettingsPanel: false as boolean,
             
-            shellInitialized: false,
-            loadingThumbnails: false,
             loadedCount: 0,
-            batchSize: 12
+            isLoading: false,
+            scrollOffset: 0,
+            
+            shellInitialized: false
         };
     },
 
     computed: {
         gridRows(): any[] {
             const rows = [];
-            const displayList = this.imageList.slice(0, this.loadedCount);
-            for (let i = 0; i < displayList.length; i += 3) {
-                rows.push(displayList.slice(i, i + 3));
+            const visibleItems = this.imageList.slice(0, this.loadedCount + 6);
+            for (let i = 0; i < visibleItems.length; i += 3) {
+                rows.push(visibleItems.slice(i, i + 3));
             }
             return rows;
         }
@@ -60,7 +64,6 @@ const gallery = defineComponent({
     async mounted() {
         this.$page.$npage.on("backpressed", this.handleBackPress);
         await this.initializeShell();
-        await this.scanImages();
     },
     
     beforeDestroy() {
@@ -134,49 +137,82 @@ const gallery = defineComponent({
                         });
                     }
                     
-                    hideLoading();
-                    showSuccess(`找到 ${this.imageList.length} 张图片`);
-                    
-                    this.loadNextBatch();
+                    await this.loadInitialThumbnails();
                 } else {
                     this.imageList = [];
-                    this.loadedCount = 0;
-                    hideLoading();
                     showError('未找到图片文件');
                 }
             } catch (error: any) {
                 console.error('扫描图片失败:', error);
-                hideLoading();
                 showError('扫描图片失败: ' + error.message);
+            } finally {
+                hideLoading();
             }
         },
 
-        async loadNextBatch() {
-            if (!this.shellInitialized || this.loadingThumbnails) return;
-            if (this.loadedCount >= this.imageList.length) return;
+        async loadInitialThumbnails() {
+            const initialCount = Math.min(3, this.imageList.length);
             
-            this.loadingThumbnails = true;
-            
-            const startIndex = this.loadedCount;
-            const endIndex = Math.min(startIndex + this.batchSize, this.imageList.length);
-            
-            for (let i = startIndex; i < endIndex; i++) {
-                const item = this.imageList[i];
-                if (!item.loaded) {
-                    try {
-                        const thumbnail = await this.generateThumbnail(item.path);
-                        if (thumbnail) {
-                            this.imageList[i].thumbnail = thumbnail;
-                            this.imageList[i].loaded = true;
-                        }
-                    } catch (e) {
-                        console.error('生成缩略图失败:', e);
-                    }
+            for (let i = 0; i < initialCount; i++) {
+                if (this.imageList[i] && !this.imageList[i].loaded) {
+                    await this.loadThumbnail(i);
                 }
             }
             
-            this.loadedCount = endIndex;
-            this.loadingThumbnails = false;
+            this.loadedCount = initialCount;
+        },
+
+        async loadThumbnail(index: number) {
+            if (index < 0 || index >= this.imageList.length) return;
+            
+            const item = this.imageList[index];
+            if (item.loaded || this.isLoading) return;
+            
+            this.isLoading = true;
+            
+            try {
+                if (THUMBNAIL_CACHE.has(item.path)) {
+                    this.imageList[index].thumbnail = THUMBNAIL_CACHE.get(item.path) || '';
+                    this.imageList[index].loaded = true;
+                    return;
+                }
+                
+                const thumbnail = await this.generateThumbnail(item.path);
+                if (thumbnail) {
+                    this.imageList[index].thumbnail = thumbnail;
+                    this.imageList[index].loaded = true;
+                    
+                    this.manageCache(item.path, thumbnail);
+                }
+            } catch (e) {
+                console.error('加载缩略图失败:', e);
+            } finally {
+                this.isLoading = false;
+            }
+        },
+
+        manageCache(path: string, thumbnail: string) {
+            if (THUMBNAIL_CACHE.size >= MAX_CACHE_SIZE) {
+                const firstKey = THUMBNAIL_CACHE.keys().next().value;
+                if (firstKey) {
+                    THUMBNAIL_CACHE.delete(firstKey);
+                }
+            }
+            
+            THUMBNAIL_CACHE.set(path, thumbnail);
+        },
+
+        async loadMoreThumbnails() {
+            if (this.isLoading || this.loadedCount >= this.imageList.length) return;
+            
+            const start = this.loadedCount;
+            const end = Math.min(start + 3, this.imageList.length);
+            
+            for (let i = start; i < end; i++) {
+                await this.loadThumbnail(i);
+            }
+            
+            this.loadedCount = end;
         },
 
         async generateThumbnail(imagePath: string): Promise<string> {
@@ -186,9 +222,23 @@ const gallery = defineComponent({
                 const ext = imagePath.split('.').pop()?.toLowerCase() || 'jpg';
                 const mimeType = this.getMimeType(ext);
                 
-                const cmd = `perl -MMIME::Base64 -0777 -ne 'print encode_base64(\$_)' "${imagePath}"`;
+                let result = '';
                 
-                const result = await Shell.exec(cmd);
+                const encodingMethods = [
+                    `perl -MMIME::Base64 -0777 -ne 'print encode_base64(\$_)' "${imagePath}"`,
+                    `perl -e 'use MIME::Base64; open(F, "<", $ARGV[0]); binmode(F); local $/; print encode_base64(<F>);' "${imagePath}"`
+                ];
+                
+                for (const cmd of encodingMethods) {
+                    try {
+                        result = await Shell.exec(cmd);
+                        if (result && result.trim()) {
+                            break;
+                        }
+                    } catch (e) {
+                        continue;
+                    }
+                }
                 
                 if (result && result.trim()) {
                     const base64Data = result.trim().replace(/\s/g, '');
@@ -222,14 +272,14 @@ const gallery = defineComponent({
                 });
             }
         },
-        
+
         handleScroll(event: any) {
-            const scrollTop = event.scrollTop || 0;
-            const scrollHeight = event.scrollHeight || 0;
-            const clientHeight = event.clientHeight || 0;
+            const scrollTop = event.contentOffset ? event.contentOffset.y : 0;
+            const scrollHeight = event.contentSize ? event.contentSize.height : 0;
+            const viewHeight = event.contentSize ? event.contentSize.height : 0;
             
-            if (scrollTop + clientHeight >= scrollHeight - 200) {
-                this.loadNextBatch();
+            if (scrollTop + viewHeight > scrollHeight - 200) {
+                this.loadMoreThumbnails();
             }
         }
     }

@@ -24,34 +24,6 @@
       <text class="result">{{ result }}</text>
     </div>
     
-    <div class="mode-toggle">
-      <text :class="['mode-btn', !isScientificMode ? 'active' : '']" @click="isScientificMode = false">标准</text>
-      <text :class="['mode-btn', isScientificMode ? 'active' : '']" @click="isScientificMode = true">科学</text>
-    </div>
-    
-    <div v-if="isScientificMode" class="scientific-keypad">
-      <div class="key-row">
-        <text class="key key-scientific" @click="inputFunction('sin')">sin</text>
-        <text class="key key-scientific" @click="inputFunction('cos')">cos</text>
-        <text class="key key-scientific" @click="inputFunction('tan')">tan</text>
-        <text class="key key-scientific" @click="inputFunction('log')">log</text>
-      </div>
-      
-      <div class="key-row">
-        <text class="key key-scientific" @click="inputFunction('ln')">ln</text>
-        <text class="key key-scientific" @click="inputFunction('sqrt')">√</text>
-        <text class="key key-scientific" @click="inputFunction('pow')">x^y</text>
-        <text class="key key-scientific" @click="inputFunction('factorial')">n!</text>
-      </div>
-      
-      <div class="key-row">
-        <text class="key key-scientific" @click="inputPi">π</text>
-        <text class="key key-scientific" @click="inputE">e</text>
-        <text class="key key-scientific" @click="inputNumber('(')">(</text>
-        <text class="key key-scientific" @click="inputNumber(')')">)</text>
-      </div>
-    </div>
-    
     <div class="keypad">
       <div class="key-row">
         <text class="key key-function" @click="clear">C</text>

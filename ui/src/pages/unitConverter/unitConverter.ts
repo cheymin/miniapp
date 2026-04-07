@@ -26,6 +26,8 @@ interface UnitType {
     units: { name: string; factor: number }[];
 }
 
+let debounceTimer: any = null;
+
 const unitConverter = defineComponent({
     data() {
         return {
@@ -36,6 +38,7 @@ const unitConverter = defineComponent({
             fromUnit: 0,
             toUnit: 0,
             result: '',
+            isCalculating: false,
             
             unitTypes: [
                 {
@@ -119,6 +122,18 @@ const unitConverter = defineComponent({
         }
     },
 
+    watch: {
+        inputValue() {
+            this.debouncedConvert();
+        },
+        fromUnit() {
+            this.debouncedConvert();
+        },
+        toUnit() {
+            this.debouncedConvert();
+        }
+    },
+
     mounted() {
         this.$page.$npage.setSupportBack(true);
         this.$page.$npage.on("backpressed", this.handleBackPress);
@@ -141,6 +156,16 @@ const unitConverter = defineComponent({
             this.toUnit = 1;
             this.result = '';
         },
+        
+        debouncedConvert() {
+            if (debounceTimer) {
+                clearTimeout(debounceTimer);
+            }
+            
+            debounceTimer = setTimeout(() => {
+                this.convert();
+            }, 300);
+        },
 
         inputValueChanged() {
             openSoftKeyboard(
@@ -148,7 +173,6 @@ const unitConverter = defineComponent({
                 (value) => {
                     this.inputValue = value;
                     this.$forceUpdate();
-                    this.convert();
                 },
                 (value) => {
                     if (value && isNaN(parseFloat(value))) {
@@ -160,7 +184,7 @@ const unitConverter = defineComponent({
         },
 
         convert() {
-            if (!this.inputValue) {
+            if (!this.inputValue || this.inputValue.trim() === '') {
                 this.result = '';
                 return;
             }
@@ -171,14 +195,46 @@ const unitConverter = defineComponent({
                 return;
             }
 
+            if (!isFinite(value)) {
+                this.result = '数值超出范围';
+                return;
+            }
+
             const units = this.currentUnits;
-            if (this.currentType === 2) {
-                this.result = this.convertTemperature(value, this.fromUnit, this.toUnit);
-            } else {
-                const fromFactor = units[this.fromUnit]?.factor || 1;
-                const toFactor = units[this.toUnit]?.factor || 1;
-                const result = (value * fromFactor) / toFactor;
-                this.result = this.formatNumber(result);
+            if (!units || units.length === 0) {
+                this.result = '单位数据错误';
+                return;
+            }
+
+            try {
+                if (this.currentType === 2) {
+                    this.result = this.convertTemperature(value, this.fromUnit, this.toUnit);
+                } else {
+                    const fromFactor = units[this.fromUnit]?.factor;
+                    const toFactor = units[this.toUnit]?.factor;
+                    
+                    if (fromFactor === undefined || toFactor === undefined) {
+                        this.result = '单位选择错误';
+                        return;
+                    }
+                    
+                    if (toFactor === 0) {
+                        this.result = '除零错误';
+                        return;
+                    }
+                    
+                    const result = (value * fromFactor) / toFactor;
+                    
+                    if (!isFinite(result)) {
+                        this.result = '计算结果超出范围';
+                        return;
+                    }
+                    
+                    this.result = this.formatNumber(result);
+                }
+            } catch (error) {
+                console.error('转换错误:', error);
+                this.result = '计算错误';
             }
         },
 
@@ -202,10 +258,27 @@ const unitConverter = defineComponent({
         },
 
         formatNumber(num: number): string {
-            if (Math.abs(num) < 0.000001 || Math.abs(num) > 999999999) {
+            if (!isFinite(num)) {
+                return '无效结果';
+            }
+            
+            if (num === 0) {
+                return '0';
+            }
+            
+            const absNum = Math.abs(num);
+            
+            if (absNum < 0.000001 || absNum > 999999999) {
                 return num.toExponential(6);
             }
-            return num.toFixed(6).replace(/\.?0+$/, '');
+            
+            if (absNum >= 1) {
+                const fixed = num.toFixed(6);
+                return parseFloat(fixed).toString();
+            } else {
+                const fixed = num.toFixed(8);
+                return parseFloat(fixed).toString();
+            }
         },
 
         swapUnits() {

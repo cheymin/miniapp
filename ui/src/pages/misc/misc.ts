@@ -87,9 +87,9 @@ export default defineComponent({
     /* ========== 键盘设置 ========== */
     async loadKeyboardType() {
       try {
-        const result = await $falcon.jsapi.storage.getStorage({ key: 'keyboard_type' });
-        if (result && result.data) {
-          this.keyboardType = result.data;
+        const data = await $falcon.storage.get('keyboard_type');
+        if (data) {
+          this.keyboardType = data;
         }
       } catch (error) {
         console.error('加载键盘设置失败:', error);
@@ -99,7 +99,7 @@ export default defineComponent({
     async setKeyboardType(type: string) {
       this.keyboardType = type;
       try {
-        await $falcon.jsapi.storage.setStorage({ key: 'keyboard_type', data: type });
+        await $falcon.storage.set('keyboard_type', type);
         showSuccess(`已切换到${type === 'soft' ? '软键盘' : '系统键盘'}`);
       } catch (error) {
         showError('保存键盘设置失败');
