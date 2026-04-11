@@ -274,11 +274,13 @@ const gallery = defineComponent({
         },
 
         handleScroll(event: any) {
-            const scrollTop = event.contentOffset ? event.contentOffset.y : 0;
+            if (!event || !event.contentOffset) return;
+            
+            const scrollTop = event.contentOffset.y || 0;
             const scrollHeight = event.contentSize ? event.contentSize.height : 0;
             const viewHeight = event.contentSize ? event.contentSize.height : 0;
             
-            if (scrollTop + viewHeight > scrollHeight - 200) {
+            if (scrollHeight > 0 && scrollTop + viewHeight >= scrollHeight - 200) {
                 this.loadMoreThumbnails();
             }
         }
