@@ -18,7 +18,8 @@
     "musicPlayer": "pages/musicPlayer/musicPlayer.vue",
     "calculator": "pages/calculator/calculator.vue",
     "qrcodeGenerator": "pages/qrcodeGenerator/qrcodeGenerator.vue",
-    "unitConverter": "pages/unitConverter/unitConverter.vue"
+    "unitConverter": "pages/unitConverter/unitConverter.vue",
+    "browser": "pages/browser/browser.vue"
   },
   "options": {
     "style": {
