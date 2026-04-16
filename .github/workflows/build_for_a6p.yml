@@ -52,9 +52,9 @@ jobs:
       - name: Get version
         id: version
         run: |
-          VERSION=$(grep '"version"' ./ui/package.json | sed 's/.*"version": *"\([^"]*\)".*/\1/')
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
-          echo "Version: $VERSION"
+          VERSION=$(grep '"version"' ./ui/package.json | head -1 | sed 's/.*"version": *"\([^"]*\)".*/\1/')
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+          echo "Version: ${VERSION}"
 
       - name: Collect AMR files
         run: |
@@ -63,6 +63,7 @@ jobs:
           cat amr_files.txt
           mkdir -p release_files
           cp ./ui/*.amr release_files/ 2>/dev/null || true
+          ls -la release_files/
 
       - name: Upload AMR artifacts
         uses: actions/upload-artifact@v4
@@ -74,7 +75,7 @@ jobs:
 
       - name: Create Release
         if: github.event_name == 'push'
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ steps.version.outputs.version }}
           name: Release v${{ steps.version.outputs.version }}
@@ -89,8 +90,7 @@ jobs:
             ### 下载
             下载下方的 `.amr` 文件安装
             
-          files: |
-            ./release_files/*.amr
+          files: ./release_files/*.amr
           draft: false
           prerelease: false
         env:
