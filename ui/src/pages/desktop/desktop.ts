@@ -16,8 +16,6 @@
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
 import { defineComponent } from 'vue';
-import { getIcon, getIconColor } from '../../utils/icons';
-import { database, NotificationItem } from '../../utils/database';
 
 export type DesktopOptions = {};
 
@@ -27,6 +25,24 @@ interface AppItem {
     icon: string;
     iconColor: string;
 }
+
+const APP_ICONS: { [key: string]: { icon: string; color: string } } = {
+    ai: { icon: '🤖', color: '#6366f1' },
+    fileManager: { icon: '📁', color: '#f59e0b' },
+    gallery: { icon: '🖼️', color: '#10b981' },
+    imageViewer: { icon: '👁️', color: '#3b82f6' },
+    musicPlayer: { icon: '🎵', color: '#ec4899' },
+    calculator: { icon: '🔢', color: '#8b5cf6' },
+    qrcodeGenerator: { icon: '📱', color: '#06b6d4' },
+    unitConverter: { icon: '🔄', color: '#f97316' },
+    browser: { icon: '🌐', color: '#3b82f6' },
+    qqchat: { icon: '💬', color: '#22c55e' },
+    shell: { icon: '⌨️', color: '#1e293b' },
+    update: { icon: '⬇️', color: '#0ea5e9' },
+    deviceinfo: { icon: '📱', color: '#64748b' },
+    misc: { icon: '⚙️', color: '#6b7280' },
+    about: { icon: 'ℹ️', color: '#0ea5e9' }
+};
 
 const desktop = defineComponent({
     data() {
@@ -50,44 +66,39 @@ const desktop = defineComponent({
             isSwiping: false,
             
             dockApps: [
-                { id: 'ai', name: 'AI助手', icon: getIcon('ai'), iconColor: getIconColor('ai') },
-                { id: 'fileManager', name: '文件', icon: getIcon('folder'), iconColor: getIconColor('folder') },
-                { id: 'gallery', name: '图库', icon: getIcon('image'), iconColor: getIconColor('image') },
-                { id: 'qqchat', name: 'QQ', icon: getIcon('message'), iconColor: getIconColor('message') }
+                { id: 'ai', name: 'AI助手', ...APP_ICONS.ai },
+                { id: 'fileManager', name: '文件', ...APP_ICONS.fileManager },
+                { id: 'gallery', name: '图库', ...APP_ICONS.gallery },
+                { id: 'qqchat', name: 'QQ', ...APP_ICONS.qqchat }
             ] as AppItem[],
             
             allApps: [
-                { id: 'ai', name: 'AI助手', icon: getIcon('ai'), iconColor: getIconColor('ai') },
-                { id: 'fileManager', name: '文件管理', icon: getIcon('folder'), iconColor: getIconColor('folder') },
-                { id: 'gallery', name: '图库', icon: getIcon('image'), iconColor: getIconColor('image') },
-                { id: 'imageViewer', name: '图片查看', icon: getIcon('eye'), iconColor: getIconColor('eye') },
-                { id: 'musicPlayer', name: '音乐', icon: getIcon('music'), iconColor: getIconColor('music') },
-                { id: 'calculator', name: '计算器', icon: getIcon('calculator'), iconColor: getIconColor('calculator') },
-                { id: 'qrcodeGenerator', name: '二维码', icon: getIcon('qr-code'), iconColor: getIconColor('qr-code') },
-                { id: 'unitConverter', name: '单位转换', icon: getIcon('repeat'), iconColor: getIconColor('repeat') },
-                { id: 'browser', name: '浏览器', icon: getIcon('globe'), iconColor: getIconColor('globe') },
-                { id: 'qqchat', name: 'QQ聊天', icon: getIcon('message'), iconColor: getIconColor('message') },
-                { id: 'shell', name: '终端', icon: getIcon('terminal'), iconColor: getIconColor('terminal') },
-                { id: 'update', name: '更新', icon: getIcon('download'), iconColor: getIconColor('download') },
-                { id: 'deviceinfo', name: '设备信息', icon: getIcon('smartphone'), iconColor: getIconColor('smartphone') },
-                { id: 'misc', name: '设置', icon: getIcon('settings'), iconColor: getIconColor('settings') },
-                { id: 'about', name: '关于', icon: getIcon('info'), iconColor: getIconColor('info') }
+                { id: 'ai', name: 'AI助手', ...APP_ICONS.ai },
+                { id: 'fileManager', name: '文件管理', ...APP_ICONS.fileManager },
+                { id: 'gallery', name: '图库', ...APP_ICONS.gallery },
+                { id: 'imageViewer', name: '图片查看', ...APP_ICONS.imageViewer },
+                { id: 'musicPlayer', name: '音乐', ...APP_ICONS.musicPlayer },
+                { id: 'calculator', name: '计算器', ...APP_ICONS.calculator },
+                { id: 'qrcodeGenerator', name: '二维码', ...APP_ICONS.qrcodeGenerator },
+                { id: 'unitConverter', name: '单位转换', ...APP_ICONS.unitConverter },
+                { id: 'browser', name: '浏览器', ...APP_ICONS.browser },
+                { id: 'qqchat', name: 'QQ聊天', ...APP_ICONS.qqchat },
+                { id: 'shell', name: '终端', ...APP_ICONS.shell },
+                { id: 'update', name: '更新', ...APP_ICONS.update },
+                { id: 'deviceinfo', name: '设备信息', ...APP_ICONS.deviceinfo },
+                { id: 'misc', name: '设置', ...APP_ICONS.misc },
+                { id: 'about', name: '关于', ...APP_ICONS.about }
             ] as AppItem[],
             
-            notifications: [] as NotificationItem[]
+            notifications: [] as { id: string; text: string; time: string }[]
         };
     },
 
-    async mounted() {
-        await database.initialize();
-        
+    mounted() {
         this.updateTime();
         setInterval(() => {
             this.updateTime();
         }, 1000);
-        
-        await this.loadNotifications();
-        this.updateUnreadCount();
     },
 
     methods: {
@@ -146,7 +157,7 @@ const desktop = defineComponent({
             }
         },
         
-        handleTouchEnd(event: any) {
+        handleTouchEnd() {
             this.isSwiping = false;
         },
         
@@ -164,22 +175,8 @@ const desktop = defineComponent({
             this.showNotificationCenter = false;
         },
         
-        async loadNotifications() {
-            this.notifications = database.getNotifications();
-        },
-        
-        updateUnreadCount() {
-            this.unreadMessages = database.getTotalUnreadCount();
-        },
-        
-        async clearNotifications() {
-            await database.clearNotifications();
+        clearNotifications() {
             this.notifications = [];
-        },
-        
-        async markNotificationRead(id: string) {
-            await database.markNotificationRead(id);
-            this.notifications = database.getNotifications();
         }
     }
 });

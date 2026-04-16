@@ -5,7 +5,7 @@ on:
     branches: [main]
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'  # 每天0点自动触发
+    - cron: '0 0 * * *'
 
 env:
   TOOLCHAIN_URL: https://github.com/penosext/Cloudpan/releases/download/toolchains/armv7-eabihf--uclibc--bleeding-edge-2018.11-1.tar.bz2
@@ -49,11 +49,20 @@ jobs:
           chmod +x ./tools/build.sh
           ./tools/build.sh -a
 
+      - name: Get version
+        id: version
+        run: |
+          VERSION=$(grep '"version"' ./ui/package.json | sed 's/.*"version": *"\([^"]*\)".*/\1/')
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Version: $VERSION"
+
       - name: Collect AMR files
         run: |
           find . -type f -iname '*.amr' > amr_files.txt || true
           echo "Found $(wc -l < amr_files.txt) .amr files"
           cat amr_files.txt
+          mkdir -p release_files
+          cp ./ui/*.amr release_files/ 2>/dev/null || true
 
       - name: Upload AMR artifacts
         uses: actions/upload-artifact@v4
@@ -62,3 +71,27 @@ jobs:
           path: './ui/*.amr'
           if-no-files-found: ignore
           retention-days: 30
+
+      - name: Create Release
+        if: github.event_name == 'push'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ steps.version.outputs.version }}
+          name: Release v${{ steps.version.outputs.version }}
+          body: |
+            ## min的工具箱 v${{ steps.version.outputs.version }}
+            
+            ### 更新内容
+            - 新增桌面界面：时钟、日历、快捷消息、应用抽屉、通知中心
+            - 新增QQ聊天功能：基础聊天、表情转换
+            - 更新源改为 cheymin/miniapp
+            
+            ### 下载
+            下载下方的 `.amr` 文件安装
+            
+          files: |
+            ./release_files/*.amr
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
