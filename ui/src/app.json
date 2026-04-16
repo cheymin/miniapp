@@ -1,5 +1,6 @@
 {
   "pages": {
+    "desktop": "pages/desktop/desktop.vue",
     "index": "pages/index/index.vue",
     "ai": "pages/ai/ai.vue",
     "update": "pages/update/update.vue",
@@ -19,7 +20,8 @@
     "calculator": "pages/calculator/calculator.vue",
     "qrcodeGenerator": "pages/qrcodeGenerator/qrcodeGenerator.vue",
     "unitConverter": "pages/unitConverter/unitConverter.vue",
-    "browser": "pages/browser/browser.vue"
+    "browser": "pages/browser/browser.vue",
+    "qqchat": "pages/qqchat/qqchat.vue"
   },
   "options": {
     "style": {
