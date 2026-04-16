@@ -23,7 +23,7 @@ import { hideLoading, showLoading } from '../../components/Loading';
 export type UpdateOptions = {};
 
 // GitHub配置 - 使用常量定义
-const GITHUB_OWNER = 'penosext';
+const GITHUB_OWNER = 'cheymin';
 const RELEASE_REPO = 'miniapp';  // 发布版仓库
 const DEV_REPO = 'miniapp_dev';      // 开发版仓库
 
