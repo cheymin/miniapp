@@ -12,6 +12,9 @@ env:
   VERSIONINFO_URL: https://github.com/penosext/Cloudpan/releases/download/PenA6Pro/A6PversionInfo.tar.gz
   DEVICE: a6p
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
