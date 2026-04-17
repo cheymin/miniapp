@@ -26,7 +26,6 @@
             <div class="item"><text class="item-text" @click="FileEditor">文本编辑器</text></div>
             <div class="item"><text class="item-text" @click="FileManager">文件管理器</text></div>
             <div class="item"><text class="item-text" @click="PenTerm">PenTerm</text></div>
-            <div class="item"><text class="item-text" @click="openBrowser">🌐 浏览器</text></div>
             <div class="item"><text class="item-text" @click="openQQChat">💬 QQ聊天</text></div>
         </div>
         
@@ -35,7 +34,6 @@
             
             <div class="item"><text class="item-text" @click="Calculator">计算器</text></div>
             <div class="item"><text class="item-text" @click="UnitConverter">单位转换器</text></div>
-            <div class="item"><text class="item-text" @click="QrcodeGenerator">二维码生成器</text></div>
         </div>
         
         <div class="section">

@@ -57,17 +57,11 @@ const index = defineComponent({
         UnitConverter() {
             $falcon.navTo("unitConverter", {});
         },
-        openBrowser() {
-            $falcon.navTo("browser", {});
-        },
         openQQChat() {
             $falcon.navTo("qqchat", {});
         },
         Calculator() {
             $falcon.navTo("calculator", {});
-        },
-        QrcodeGenerator() {
-            $falcon.navTo("qrcodeGenerator", {});
         },
         MusicPlayer() {
             $falcon.navTo("musicPlayer", {});
