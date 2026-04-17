@@ -61,11 +61,16 @@ jobs:
 
       - name: Collect AMR files
         run: |
+          VERSION=$(grep '"version"' ./ui/package.json | head -1 | sed 's/.*"version": *"\([^"]*\)".*/\1/')
           find . -type f -iname '*.amr' > amr_files.txt || true
           echo "Found $(wc -l < amr_files.txt) .amr files"
           cat amr_files.txt
           mkdir -p release_files
-          cp ./ui/*.amr release_files/ 2>/dev/null || true
+          for f in ./ui/*.amr; do
+            if [ -f "$f" ]; then
+              cp "$f" "release_files/miniapp_a6p_v${VERSION}.amr"
+            fi
+          done
           ls -la release_files/
 
       - name: Upload AMR artifacts
