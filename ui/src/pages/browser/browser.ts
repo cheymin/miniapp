@@ -27,7 +27,8 @@ const browser = defineComponent({
             $page: {} as FalconPage<BrowserOptions>,
             
             currentUrl: '' as string,
-            history: [] as Array<{ url: string; title: string; time: string }>
+            history: [] as Array<{ url: string; title: string; time: string }>,
+            bookmarks: [] as Array<{ url: string; title: string; time: string }>
         };
     },
 
@@ -35,6 +36,7 @@ const browser = defineComponent({
         this.$page.$npage.setSupportBack(true);
         this.$page.$npage.on("backpressed", this.handleBackPress);
         await this.loadHistory();
+        await this.loadBookmarks();
     },
     
     beforeDestroy() {
@@ -104,6 +106,38 @@ const browser = defineComponent({
             }
         },
         
+        async saveToBookmarks() {
+            if (!this.currentUrl) {
+                showError('请输入网址');
+                return;
+            }
+            
+            const normalizedUrl = this.normalizeUrl(this.currentUrl);
+            
+            if (!this.isValidUrl(normalizedUrl)) {
+                showError('请输入有效的网址');
+                return;
+            }
+            
+            const existingIndex = this.bookmarks.findIndex(item => item.url === normalizedUrl);
+            if (existingIndex !== -1) {
+                showInfo('该网址已在收藏中');
+                return;
+            }
+            
+            const now = new Date();
+            const time = now.toLocaleString();
+            
+            this.bookmarks.unshift({
+                url: normalizedUrl,
+                title: this.extractTitle(normalizedUrl),
+                time
+            });
+            
+            await this.saveBookmarks();
+            showSuccess('已收藏: ' + normalizedUrl);
+        },
+        
         copyQuickLink(url: string) {
             this.currentUrl = url;
             this.addToHistory(url);
@@ -121,6 +155,20 @@ const browser = defineComponent({
                 this.saveHistory();
                 showSuccess('已删除');
             }
+        },
+        
+        deleteBookmark(index: number) {
+            if (index >= 0 && index < this.bookmarks.length) {
+                this.bookmarks.splice(index, 1);
+                this.saveBookmarks();
+                showSuccess('已删除收藏');
+            }
+        },
+        
+        async clearBookmarks() {
+            this.bookmarks = [];
+            await this.saveBookmarks();
+            showSuccess('已清空收藏');
         },
         
         addToHistory(url: string) {
@@ -170,6 +218,25 @@ const browser = defineComponent({
                 await $falcon.storage.set('browser_history', JSON.stringify(this.history));
             } catch (error) {
                 console.error('保存浏览历史失败:', error);
+            }
+        },
+        
+        async loadBookmarks() {
+            try {
+                const data = await $falcon.storage.get('browser_bookmarks');
+                if (data) {
+                    this.bookmarks = JSON.parse(data);
+                }
+            } catch (error) {
+                console.error('加载收藏失败:', error);
+            }
+        },
+        
+        async saveBookmarks() {
+            try {
+                await $falcon.storage.set('browser_bookmarks', JSON.stringify(this.bookmarks));
+            } catch (error) {
+                console.error('保存收藏失败:', error);
             }
         }
     }

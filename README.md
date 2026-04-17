@@ -19,8 +19,58 @@
 
 # Miniapp
 
+**Version: 1.2.13.1**
+
 > [!WARNING]  
 > This miniapp is still under development, and may have breaking changes without any notice.
+
+## AI Development Notice
+
+This project is developed with AI assistance. The main development aspects include:
+- **Code Writing**: AI-assisted programming and implementation
+- **UI Design**: AI-assisted interface design and styling
+- **Feature Implementation**: AI-assisted functionality development
+- **Bug Fixing**: AI-assisted debugging and problem resolution
+
+## Main Features
+
+### 1. Desktop System
+- Modern desktop interface with real-time clock and calendar
+- Lunar calendar support
+- App drawer (swipe up to open)
+- Notification center (swipe down to open)
+- Quick access dock bar
+
+### 2. AI Assistant
+- Intelligent conversation functionality
+- Multiple AI model support
+- Conversation history
+- Customizable AI settings
+
+### 3. Browser (Bookmark Manager)
+- URL input and copy functionality
+- Quick links (Baidu, Bing, Google, GitHub, Bilibili, Zhihu, Taobao, JD)
+- Bookmark management
+- Browsing history
+- Auto-save functionality
+
+### 4. File Management
+- File browser and manager
+- Text editor
+- Image viewer
+- Gallery management
+
+### 5. Utilities
+- Calculator
+- Unit converter
+- QR code generator
+- Music player
+
+### 6. System Features
+- Device information
+- System update
+- Terminal commands
+- Miscellaneous settings
 
 ## Requirements
 
