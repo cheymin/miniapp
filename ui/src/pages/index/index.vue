@@ -26,12 +26,16 @@
             <div class="item"><text class="item-text" @click="FileEditor">文本编辑器</text></div>
             <div class="item"><text class="item-text" @click="FileManager">文件管理器</text></div>
             <div class="item"><text class="item-text" @click="PenTerm">PenTerm</text></div>
+            <div class="item"><text class="item-text" @click="openBrowser">🌐 浏览器</text></div>
+            <div class="item"><text class="item-text" @click="openQQChat">💬 QQ聊天</text></div>
         </div>
         
         <div class="section">
             <text class="section-title">实用工具</text>
             
+            <div class="item"><text class="item-text" @click="Calculator">计算器</text></div>
             <div class="item"><text class="item-text" @click="UnitConverter">单位转换器</text></div>
+            <div class="item"><text class="item-text" @click="QrcodeGenerator">二维码生成器</text></div>
         </div>
         
         <div class="section">
@@ -39,12 +43,14 @@
             
             <div class="item"><text class="item-text" @click="ImageViewer">图片查看器</text></div>
             <div class="item"><text class="item-text" @click="Gallery">图库</text></div>
+            <div class="item"><text class="item-text" @click="MusicPlayer">音乐播放器</text></div>
         </div>
         
         <div class="section">
             <text class="section-title">系统设置</text>
             
             <div class="item"><text class="item-text" @click="Deviceinfo">设备信息</text></div>
+            <div class="item"><text class="item-text" @click="Update">系统更新</text></div>
             <div class="item"><text class="item-text" @click="Misc">杂项设置</text></div>
             <div class="item"><text class="item-text" @click="About">关于我们</text></div>       
         </div>

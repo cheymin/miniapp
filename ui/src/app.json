@@ -1,7 +1,7 @@
 {
   "pages": {
-    "desktop": "pages/desktop/desktop.vue",
     "index": "pages/index/index.vue",
+    "desktop": "pages/desktop/desktop.vue",
     "ai": "pages/ai/ai.vue",
     "update": "pages/update/update.vue",
     "about": "pages/about/about.vue",
