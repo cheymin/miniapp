@@ -17,6 +17,7 @@
     "imageViewer": "pages/imageViewer/imageViewer.vue",
     "gallery": "pages/gallery/gallery.vue",
     "musicPlayer": "pages/musicPlayer/musicPlayer.vue",
+    "videoPlayer": "pages/videoPlayer/videoPlayer.vue",
     "calculator": "pages/calculator/calculator.vue",
     "qrcodeGenerator": "pages/qrcodeGenerator/qrcodeGenerator.vue",
     "unitConverter": "pages/unitConverter/unitConverter.vue",

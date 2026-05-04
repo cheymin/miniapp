@@ -54,17 +54,11 @@ const index = defineComponent({
         Gallery() {
             $falcon.navTo("gallery", {});
         },
-        UnitConverter() {
-            $falcon.navTo("unitConverter", {});
-        },
-        openQQChat() {
-            $falcon.navTo("qqchat", {});
-        },
-        Calculator() {
-            $falcon.navTo("calculator", {});
-        },
         MusicPlayer() {
             $falcon.navTo("musicPlayer", {});
+        },
+        VideoPlayer() {
+            $falcon.navTo("videoPlayer", {});
         },
         Update() {
             $falcon.navTo("update", {});
