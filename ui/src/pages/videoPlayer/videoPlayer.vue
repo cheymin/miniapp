@@ -28,24 +28,24 @@
                 <text class="section-title">播放方式</text>
                 
                 <div class="mode-buttons">
-                    <div 
+                    <text 
                         class="mode-btn" 
                         :class="{ active: playMode === 'ffplay' }"
                         @click="selectPlayMode('ffplay')">
-                        <text>FFplay</text>
-                    </div>
-                    <div 
+                        FFplay
+                    </text>
+                    <text 
                         class="mode-btn" 
                         :class="{ active: playMode === 'mpv' }"
                         @click="selectPlayMode('mpv')">
-                        <text>MPV</text>
-                    </div>
-                    <div 
+                        MPV
+                    </text>
+                    <text 
                         class="mode-btn" 
                         :class="{ active: playMode === 'vlc' }"
                         @click="selectPlayMode('vlc')">
-                        <text>VLC</text>
-                    </div>
+                        VLC
+                    </text>
                 </div>
             </div>
 
@@ -62,12 +62,8 @@
                 </div>
 
                 <div class="action-buttons">
-                    <div class="action-btn" @click="selectVideoFile">
-                        <text>选择视频</text>
-                    </div>
-                    <div class="action-btn" @click="scanVideos">
-                        <text>扫描视频</text>
-                    </div>
+                    <text class="action-btn" @click="selectVideoFile">选择视频</text>
+                    <text class="action-btn" @click="scanVideos">扫描视频</text>
                 </div>
             </div>
 
@@ -88,12 +84,8 @@
 
             <div class="control-section">
                 <div class="control-buttons">
-                    <div class="control-btn" @click="playVideo">
-                        <text>▶ 播放</text>
-                    </div>
-                    <div class="control-btn" @click="stopVideo">
-                        <text>⏹ 停止</text>
-                    </div>
+                    <text class="control-btn" @click="playVideo">▶ 播放</text>
+                    <text class="control-btn" @click="stopVideo">⏹ 停止</text>
                 </div>
             </div>
 
