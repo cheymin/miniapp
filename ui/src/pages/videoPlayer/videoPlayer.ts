@@ -183,16 +183,16 @@ const videoPlayer = defineComponent({
                 
                 switch (this.playMode) {
                     case 'ffplay':
-                        playCommand = `ffplay -fs -autoexit "${this.currentVideo}" &`;
+                        playCommand = `ffplay -noborder -autoexit -vf "scale=320:240:force_original_aspect_ratio=decrease,pad=320:240:(ow-iw)/2:(oh-ih)/2" "${this.currentVideo}" &`;
                         break;
                     case 'mpv':
-                        playCommand = `mpv --fullscreen "${this.currentVideo}" &`;
+                        playCommand = `mpv --no-border --autofit=320x240 --hwdec=auto "${this.currentVideo}" &`;
                         break;
                     case 'vlc':
-                        playCommand = `vlc --fullscreen "${this.currentVideo}" &`;
+                        playCommand = `vlc --no-border --video-x=0 --video-y=0 --width=320 --height=240 "${this.currentVideo}" &`;
                         break;
                     default:
-                        playCommand = `ffplay -fs -autoexit "${this.currentVideo}" &`;
+                        playCommand = `ffplay -noborder -autoexit -vf "scale=320:240:force_original_aspect_ratio=decrease,pad=320:240:(ow-iw)/2:(oh-ih)/2" "${this.currentVideo}" &`;
                 }
                 
                 await Shell.exec(playCommand);
