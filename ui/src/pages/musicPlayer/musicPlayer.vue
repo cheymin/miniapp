@@ -35,19 +35,31 @@
           </div>
           
           <div class="player-controls">
-            <text class="control-btn" @click="previousSong">上一首</text>
-            <text class="control-btn control-btn-large" @click="togglePlay">{{ isPlaying ? '暂停' : '播放' }}</text>
-            <text class="control-btn" @click="nextSong">下一首</text>
+            <div class="control-btn" @click="previousSong">
+              <text>上一首</text>
+            </div>
+            <div class="control-btn control-btn-large" @click="togglePlay">
+              <text>{{ isPlaying ? '暂停' : '播放' }}</text>
+            </div>
+            <div class="control-btn" @click="nextSong">
+              <text>下一首</text>
+            </div>
           </div>
           
           <div class="player-controls">
-            <text class="control-btn" @click="decreaseVolume">音量-</text>
+            <div class="control-btn" @click="decreaseVolume">
+              <text>音量-</text>
+            </div>
             <text class="volume-text">{{ volume }}%</text>
-            <text class="control-btn" @click="increaseVolume">音量+</text>
+            <div class="control-btn" @click="increaseVolume">
+              <text>音量+</text>
+            </div>
           </div>
           
           <div class="player-controls">
-            <text class="control-btn" @click="toggleMode">{{ playModeText }}</text>
+            <div class="control-btn" @click="toggleMode">
+              <text>{{ playModeText }}</text>
+            </div>
           </div>
         </div>
         
@@ -62,12 +74,16 @@
         <div class="item">
           <text class="item-text">当前目录:</text>
           <text class="item-path">{{ currentDirectory }}</text>
-          <text class="btn btn-primary" @click="selectDirectory">选择目录</text>
+          <div class="btn btn-primary" @click="selectDirectory">
+            <text>选择目录</text>
+          </div>
         </div>
         
         <div class="item">
           <text class="item-text">扫描音乐</text>
-          <text class="btn" @click="scanMusic">扫描当前目录</text>
+          <div class="btn" @click="scanMusic">
+            <text>扫描当前目录</text>
+          </div>
         </div>
         
         <div v-if="playlist.length > 0">
