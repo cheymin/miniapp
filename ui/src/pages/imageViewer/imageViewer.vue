@@ -18,33 +18,45 @@
 -->
 
 <template>
-  <div class="container">
+  <div class="container" @touchstart="onTouchStart" @touchmove="onTouchMove" @touchend="onTouchEnd">
     <div class="header">
-      <text class="header-btn" @click="toggleSettings">菜单</text>
+      <text class="header-btn" @click="toggleMenu">菜单</text>
       <text class="title">{{ imageName || '图片查看器' }}</text>
       <text v-if="imageList.length > 0" class="counter">{{ currentImageIndex + 1 }}/{{ imageList.length }}</text>
     </div>
 
-    <div v-if="showSettingsPanel" class="settings-panel">
-      <div class="settings-row">
-        <text class="settings-label">目录:</text>
-        <text class="settings-path">{{ currentDirectory }}</text>
-      </div>
-      <div class="settings-actions">
-        <text class="settings-btn-action" @click="selectDirectory">选择目录</text>
-        <text class="settings-btn-action" @click="scanImages">扫描图片</text>
-      </div>
-      <div v-if="currentImage" class="settings-section">
-        <div class="settings-row">
-          <text class="btn-small" @click="rotateLeft">左转</text>
-          <text class="btn-small" @click="rotateRight">右转</text>
-          <text class="btn-small" @click="resetView">重置</text>
+    <div v-if="showMenuPanel" class="menu-panel">
+      <div class="menu-section">
+        <text class="menu-section-title">目录</text>
+        <div class="menu-row">
+          <text class="menu-path">{{ currentDirectory }}</text>
         </div>
-        <div class="settings-row">
-          <text class="btn-small" @click="toggleSlideshow">{{ isSlideshow ? '停止幻灯片' : '幻灯片' }}</text>
-          <text class="btn-small" @click="toggleImageInfo">信息</text>
-          <text class="btn-small" @click="renameImage">重命名</text>
-          <text class="btn-small btn-danger" @click="deleteImage">删除</text>
+        <div class="menu-row">
+          <text class="menu-btn" @click="selectDirectory">选择目录</text>
+          <text class="menu-btn" @click="scanImages">扫描图片</text>
+        </div>
+      </div>
+      <div v-if="currentImage" class="menu-section">
+        <text class="menu-section-title">缩放 {{ Math.round(scale * 100) }}%</text>
+        <div class="menu-row">
+          <text class="menu-btn" @click="zoomOut">缩小</text>
+          <text class="menu-btn" @click="resetView">重置</text>
+          <text class="menu-btn" @click="zoomIn">放大</text>
+        </div>
+      </div>
+      <div v-if="currentImage" class="menu-section">
+        <text class="menu-section-title">操作</text>
+        <div class="menu-row">
+          <text class="menu-btn" @click="rotateLeft">左转</text>
+          <text class="menu-btn" @click="rotateRight">右转</text>
+        </div>
+        <div class="menu-row">
+          <text class="menu-btn" @click="toggleSlideshow">{{ isSlideshow ? '停止幻灯片' : '幻灯片' }}</text>
+          <text class="menu-btn" @click="toggleImageInfo">信息</text>
+        </div>
+        <div class="menu-row">
+          <text class="menu-btn" @click="renameImage">重命名</text>
+          <text class="menu-btn btn-danger" @click="deleteImage">删除</text>
         </div>
       </div>
     </div>
@@ -54,11 +66,15 @@
       <text class="info-item">大小: {{ formatFileSize(imageSize) }}</text>
       <text class="info-item">路径: {{ currentImage }}</text>
       <text class="info-item">缩放: {{ Math.round(scale * 100) }}%</text>
-      <text class="btn-small" @click="toggleImageInfo">关闭</text>
+      <text class="menu-btn" @click="toggleImageInfo">关闭</text>
     </div>
 
     <div v-if="currentImageData" class="image-area">
-      <scroller class="image-scroller" scroll-direction="vertical" :show-scrollbar="false">
+      <div class="nav-btn nav-left" @click="prevImage">
+        <text class="nav-arrow">&lt;</text>
+      </div>
+
+      <scroller class="image-scroller-v" scroll-direction="vertical" :show-scrollbar="false">
         <scroller class="image-scroller-h" scroll-direction="horizontal" :show-scrollbar="false">
           <image
             :src="currentImageData"
@@ -69,27 +85,15 @@
         </scroller>
       </scroller>
 
-      <div class="swipe-hint" v-if="imageList.length > 1">
-        <text class="swipe-arrow" @click="prevImage">&lt;</text>
-        <text class="swipe-text">滑动切换</text>
-        <text class="swipe-arrow" @click="nextImage">&gt;</text>
+      <div class="nav-btn nav-right" @click="nextImage">
+        <text class="nav-arrow">&gt;</text>
       </div>
     </div>
 
     <div v-else class="empty-state">
-      <text class="empty-icon">📁</text>
+      <text class="empty-icon">IMG</text>
       <text class="empty-text">请选择图片目录</text>
       <text class="empty-hint">点击菜单 → 选择目录</text>
-    </div>
-
-    <div v-if="currentImageData" class="zoom-bar">
-      <text class="zoom-label" @click="zoomOut">-</text>
-      <div class="zoom-track">
-        <div class="zoom-fill" :style="{ width: zoomPercent + '%' }"></div>
-        <div class="zoom-thumb" :style="{ left: zoomPercent + '%' }" @touchstart="onThumbTouchStart" @touchmove="onThumbTouchMove" @touchend="onThumbTouchEnd"></div>
-      </div>
-      <text class="zoom-label" @click="zoomIn">+</text>
-      <text class="zoom-value">{{ Math.round(scale * 100) }}%</text>
     </div>
 
     <Loading />

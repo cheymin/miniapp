@@ -23,9 +23,7 @@
     "unitConverter": "pages/unitConverter/unitConverter.vue",
     "browser": "pages/browser/browser.vue",
     "qqchat": "pages/qqchat/qqchat.vue",
-    "minAi": "pages/minAi/minAi.vue",
-    "cloudreve": "pages/cloudreve/cloudreve.vue",
-    "pvz": "pages/pvz/pvz.vue"
+    "cloudreve": "pages/cloudreve/cloudreve.vue"
   },
   "options": {
     "style": {

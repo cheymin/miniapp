@@ -45,15 +45,18 @@ const imageViewer = defineComponent({
             scale: 1.0,
             rotation: 0,
             
-            showSettingsPanel: false as boolean,
+            showMenuPanel: false as boolean,
             showImageInfo: false as boolean,
             isSlideshow: false as boolean,
             slideshowTimer: null as any,
             
             shellInitialized: false,
-            isDraggingThumb: false,
-            thumbStartX: 0,
-            thumbStartPercent: 0
+
+            // Touch gesture state
+            touchStartX: 0,
+            touchStartY: 0,
+            touchStartTime: 0,
+            isTouching: false
         };
     },
 
@@ -66,12 +69,6 @@ const imageViewer = defineComponent({
                 height: height + 'px',
                 transform: `rotate(${this.rotation}deg)`
             };
-        },
-        zoomPercent(): number {
-            const logMin = Math.log(MIN_SCALE);
-            const logMax = Math.log(MAX_SCALE);
-            const logVal = Math.log(Math.max(MIN_SCALE, Math.min(MAX_SCALE, this.scale)));
-            return ((logVal - logMin) / (logMax - logMin)) * 100;
         }
     },
 
@@ -97,8 +94,8 @@ const imageViewer = defineComponent({
 
     methods: {
         handleBackPress() {
-            if (this.showSettingsPanel) {
-                this.showSettingsPanel = false;
+            if (this.showMenuPanel) {
+                this.showMenuPanel = false;
             } else if (this.showImageInfo) {
                 this.showImageInfo = false;
             } else {
@@ -106,10 +103,55 @@ const imageViewer = defineComponent({
             }
         },
         
-        toggleSettings() {
-            this.showSettingsPanel = !this.showSettingsPanel;
-            if (this.showSettingsPanel) {
+        toggleMenu() {
+            this.showMenuPanel = !this.showMenuPanel;
+            if (this.showMenuPanel) {
                 this.showImageInfo = false;
+            }
+        },
+
+        // Touch gesture: swipe up/down to zoom, tap to toggle menu
+        onTouchStart(e: any) {
+            if (this.showMenuPanel || this.showImageInfo) return;
+            const touch = (e.touches && e.touches[0]) || (e.touch);
+            if (touch) {
+                this.touchStartX = touch.clientX;
+                this.touchStartY = touch.clientY;
+                this.touchStartTime = Date.now();
+                this.isTouching = true;
+            }
+        },
+
+        onTouchMove(e: any) {
+            if (!this.isTouching || this.showMenuPanel || this.showImageInfo) return;
+            const touch = (e.touches && e.touches[0]) || (e.touch);
+            if (!touch) return;
+
+            const deltaY = touch.clientY - this.touchStartY;
+            const deltaX = Math.abs(touch.clientX - this.touchStartX);
+
+            // Vertical swipe to zoom (only when mostly vertical)
+            if (deltaX < 30 && Math.abs(deltaY) > 20) {
+                const zoomDelta = deltaY > 0 ? -0.02 : 0.02;
+                this.scale = Math.max(MIN_SCALE, Math.min(MAX_SCALE, this.scale + zoomDelta));
+                this.touchStartY = touch.clientY;
+            }
+        },
+
+        onTouchEnd(e: any) {
+            if (!this.isTouching) return;
+            this.isTouching = false;
+
+            const touch = (e.changedTouches && e.changedTouches[0]) || (e.touch);
+            if (!touch) return;
+
+            const deltaX = Math.abs(touch.clientX - this.touchStartX);
+            const deltaY = Math.abs(touch.clientY - this.touchStartY);
+            const elapsed = Date.now() - this.touchStartTime;
+
+            // Quick tap: toggle menu
+            if (deltaX < 10 && deltaY < 10 && elapsed < 300) {
+                // Don't toggle menu on tap - let scroller handle it
             }
         },
 
@@ -205,7 +247,7 @@ const imageViewer = defineComponent({
                 () => this.currentDirectory,
                 async (value: string) => {
                     this.currentDirectory = value;
-                    this.showSettingsPanel = false;
+                    this.showMenuPanel = false;
                     await this.scanImages();
                 }
             );
@@ -317,28 +359,6 @@ const imageViewer = defineComponent({
                 clearInterval(this.slideshowTimer);
                 this.slideshowTimer = null;
             }
-        },
-
-        onThumbTouchStart(e: any) {
-            this.isDraggingThumb = true;
-            this.thumbStartX = (e.touch && e.touch.clientX) || (e.changedTouches && e.changedTouches[0] && e.changedTouches[0].clientX) || 0;
-            this.thumbStartPercent = this.zoomPercent;
-        },
-
-        onThumbTouchMove(e: any) {
-            if (!this.isDraggingThumb) return;
-            const clientX = (e.touch && e.touch.clientX) || (e.changedTouches && e.changedTouches[0] && e.changedTouches[0].clientX) || 0;
-            const trackWidth = 200;
-            const deltaX = clientX - this.thumbStartX;
-            let newPercent = this.thumbStartPercent + (deltaX / trackWidth) * 100;
-            newPercent = Math.max(0, Math.min(100, newPercent));
-            const logMin = Math.log(MIN_SCALE);
-            const logMax = Math.log(MAX_SCALE);
-            this.scale = Math.exp(logMin + (newPercent / 100) * (logMax - logMin));
-        },
-
-        onThumbTouchEnd() {
-            this.isDraggingThumb = false;
         }
     }
 });

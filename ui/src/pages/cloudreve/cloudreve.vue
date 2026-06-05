@@ -22,46 +22,81 @@
     <div class="header">
       <text class="header-btn" @click="goBack">&lt;</text>
       <text class="header-title">Cloudreve</text>
-      <text class="header-btn" @click="toggleSettings">设置</text>
+      <text v-if="isLoggedIn" class="header-btn" @click="showMenu = !showMenu">菜单</text>
     </div>
 
-    <div v-if="showSettings" class="settings-panel">
-      <div class="settings-row">
-        <text class="settings-label">服务器:</text>
-        <text class="settings-value" @click="inputServerUrl">{{ serverUrl || '点击设置' }}</text>
+    <div v-if="showMenu" class="menu-panel">
+      <text class="menu-item" @click="showMenu = false; showLoginPanel = true">账号设置</text>
+      <text class="menu-item" @click="doLogout">退出登录</text>
+      <text class="menu-item" @click="showMenu = false">关闭</text>
+    </div>
+
+    <!-- 登录界面 -->
+    <div v-if="!isLoggedIn" class="login-panel">
+      <text class="login-title">Cloudreve 登录</text>
+      <text class="login-desc">请配置您的 Cloudreve 服务器信息</text>
+
+      <div class="form-group">
+        <text class="form-label">服务器地址</text>
+        <text class="form-input" @click="inputServerUrl">{{ serverUrl || '例如: https://cloud.example.com' }}</text>
       </div>
-      <div class="settings-row">
-        <text class="settings-label">用户名:</text>
-        <text class="settings-value" @click="inputUsername">{{ username || '点击设置' }}</text>
+
+      <div class="form-group">
+        <text class="form-label">用户名</text>
+        <text class="form-input" @click="inputUsername">{{ username || '输入用户名' }}</text>
       </div>
-      <div class="settings-row">
-        <text class="settings-label">密码:</text>
-        <text class="settings-value" @click="inputPassword">{{ password ? '******' : '点击设置' }}</text>
+
+      <div class="form-group">
+        <text class="form-label">密码</text>
+        <text class="form-input" @click="inputPassword">{{ password ? '******' : '输入密码' }}</text>
       </div>
-      <div class="settings-actions">
-        <text class="action-btn" @click="login">登录</text>
-        <text class="action-btn action-btn-secondary" @click="toggleSettings">关闭</text>
+
+      <div class="form-actions">
+        <text class="btn btn-primary" @click="doLogin">登录</text>
+      </div>
+
+      <div v-if="loginError" class="error-msg">
+        <text class="error-text">{{ loginError }}</text>
       </div>
     </div>
 
-    <div class="path-bar">
-      <text class="path-text">{{ currentPath || '/' }}</text>
-      <text class="refresh-btn" @click="refreshFiles">刷新</text>
+    <!-- 确认连接界面 -->
+    <div v-else-if="showLoginPanel" class="login-panel">
+      <text class="login-title">账号信息</text>
+
+      <div class="form-group">
+        <text class="form-label">服务器</text>
+        <text class="form-value">{{ serverUrl }}</text>
+      </div>
+
+      <div class="form-group">
+        <text class="form-label">用户名</text>
+        <text class="form-value">{{ username }}</text>
+      </div>
+
+      <div class="form-group">
+        <text class="form-label">状态</text>
+        <text class="form-value connected">已连接</text>
+      </div>
+
+      <div class="form-actions">
+        <text class="btn btn-primary" @click="showLoginPanel = false">返回文件</text>
+        <text class="btn btn-danger" @click="doLogout">退出登录</text>
+      </div>
     </div>
 
-    <scroller class="file-list" scroll-direction="vertical" :show-scrollbar="true">
-      <div v-if="!isLoggedIn" class="empty-state">
-        <text class="empty-icon">Cloud</text>
-        <text class="empty-text">Cloudreve 文件管理</text>
-        <text class="empty-hint">请先在设置中配置服务器并登录</text>
+    <!-- 文件浏览界面 -->
+    <div v-else>
+      <div class="path-bar">
+        <text class="path-text">{{ currentPath || '/' }}</text>
+        <text class="refresh-btn" @click="refreshFiles">刷新</text>
       </div>
 
-      <div v-else-if="files.length === 0" class="empty-state">
-        <text class="empty-icon">Empty</text>
-        <text class="empty-text">目录为空</text>
-      </div>
+      <scroller class="file-list" scroll-direction="vertical" :show-scrollbar="true">
+        <div v-if="files.length === 0" class="empty-state">
+          <text class="empty-text">目录为空</text>
+        </div>
 
-      <div v-else>
         <div v-for="(file, index) in files" :key="index" class="file-item" @click="handleFileClick(file)">
           <text :class="['file-icon', file.type === 'dir' ? 'file-icon-dir' : 'file-icon-file']">{{ file.type === 'dir' ? 'D' : 'F' }}</text>
           <div class="file-info">
@@ -69,12 +104,12 @@
             <text class="file-meta">{{ file.size }} · {{ file.date }}</text>
           </div>
         </div>
-      </div>
-    </scroller>
+      </scroller>
 
-    <div v-if="isLoggedIn" class="bottom-bar">
-      <text class="bottom-btn" @click="uploadFile">上传</text>
-      <text class="bottom-btn" @click="createFolder">新建</text>
+      <div class="bottom-bar">
+        <text class="bottom-btn" @click="uploadFile">上传</text>
+        <text class="bottom-btn" @click="createFolder">新建文件夹</text>
+      </div>
     </div>
 
     <Loading />

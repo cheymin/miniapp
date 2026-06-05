@@ -32,6 +32,8 @@ interface CloudreveFile {
     path: string;
 }
 
+const DB_PATH = '/userdisk/database/cloudreve.json';
+
 const cloudreve = defineComponent({
     data() {
         return {
@@ -41,7 +43,9 @@ const cloudreve = defineComponent({
             password: '' as string,
             token: '' as string,
             isLoggedIn: false as boolean,
-            showSettings: false as boolean,
+            showMenu: false as boolean,
+            showLoginPanel: false as boolean,
+            loginError: '' as string,
             currentPath: '/' as string,
             files: [] as CloudreveFile[],
             pathHistory: [] as string[],
@@ -53,7 +57,7 @@ const cloudreve = defineComponent({
         this.$page.$npage.setSupportBack(true);
         this.$page.$npage.on("backpressed", this.handleBackPress);
         await this.initializeShell();
-        await this.loadConfig();
+        await this.loadFromDB();
     },
 
     beforeDestroy() {
@@ -62,12 +66,21 @@ const cloudreve = defineComponent({
 
     methods: {
         handleBackPress() {
-            if (this.showSettings) {
-                this.showSettings = false;
+            if (this.showMenu) {
+                this.showMenu = false;
+            } else if (this.showLoginPanel) {
+                this.showLoginPanel = false;
             } else if (this.pathHistory.length > 0) {
                 this.goBack();
             } else {
                 $falcon.navBack();
+            }
+        },
+
+        goBack() {
+            if (this.pathHistory.length > 0) {
+                this.currentPath = this.pathHistory.pop() || '/';
+                this.refreshFiles();
             }
         },
 
@@ -82,43 +95,27 @@ const cloudreve = defineComponent({
             }
         },
 
-        toggleSettings() {
-            this.showSettings = !this.showSettings;
-        },
-
-        inputServerUrl() {
-            openSoftKeyboard(
-                () => this.serverUrl,
-                (value: string) => { this.serverUrl = value.trim().replace(/\/+$/, ''); }
-            );
-        },
-
-        inputUsername() {
-            openSoftKeyboard(
-                () => this.username,
-                (value: string) => { this.username = value; }
-            );
-        },
-
-        inputPassword() {
-            openSoftKeyboard(
-                () => this.password,
-                (value: string) => { this.password = value; }
-            );
-        },
-
-        async loadConfig() {
+        async loadFromDB() {
             try {
-                const data = await $falcon.storage.get('cloudreve_config');
+                const data = await $falcon.storage.get(DB_PATH);
                 if (data) {
                     const config = JSON.parse(data);
                     this.serverUrl = config.serverUrl || '';
                     this.username = config.username || '';
                     this.password = config.password || '';
                     this.token = config.token || '';
-                    if (this.token) {
-                        this.isLoggedIn = true;
-                        await this.refreshFiles();
+                    if (this.token && this.serverUrl) {
+                        // 验证 token 是否仍然有效
+                        const valid = await this.verifyToken();
+                        if (valid) {
+                            this.isLoggedIn = true;
+                            await this.refreshFiles();
+                        } else {
+                            // token 过期，尝试重新登录
+                            if (this.username && this.password) {
+                                await this.silentLogin();
+                            }
+                        }
                     }
                 }
             } catch (e) {
@@ -126,9 +123,9 @@ const cloudreve = defineComponent({
             }
         },
 
-        async saveConfig() {
+        async saveToDB() {
             try {
-                await $falcon.storage.set('cloudreve_config', JSON.stringify({
+                await $falcon.storage.set(DB_PATH, JSON.stringify({
                     serverUrl: this.serverUrl,
                     username: this.username,
                     password: this.password,
@@ -139,32 +136,105 @@ const cloudreve = defineComponent({
             }
         },
 
-        async login() {
-            if (!this.serverUrl) { showError('请设置服务器地址'); return; }
-            if (!this.username) { showError('请设置用户名'); return; }
-            if (!this.password) { showError('请设置密码'); return; }
-            if (!this.shellInitialized) { showError('Shell未初始化'); return; }
-
+        async verifyToken(): Promise<boolean> {
+            if (!this.shellInitialized || !this.serverUrl || !this.token) return false;
             try {
-                showLoading('正在登录...');
-                const cmd = `curl -s -X POST "${this.serverUrl}/api/v3/user/session" -H "Content-Type: application/json" -d '{"userName":"${this.username}","Password":"${this.password}"}'`;
+                const cmd = `curl -s -m 5 "${this.serverUrl}/api/v3/user/me" -H "Authorization: Bearer ${this.token}"`;
+                const result = await Shell.exec(cmd);
+                const data = JSON.parse(result.trim());
+                return data.code === 0;
+            } catch (e) {
+                return false;
+            }
+        },
+
+        async silentLogin(): Promise<boolean> {
+            if (!this.shellInitialized) return false;
+            try {
+                const cmd = `curl -s -m 5 -X POST "${this.serverUrl}/api/v3/user/session" -H "Content-Type: application/json" -d '{"userName":"${this.username}","Password":"${this.password}"}'`;
                 const result = await Shell.exec(cmd);
                 const data = JSON.parse(result.trim());
                 if (data.code === 0) {
                     this.token = data.data;
                     this.isLoggedIn = true;
-                    this.showSettings = false;
-                    await this.saveConfig();
+                    await this.saveToDB();
+                    await this.refreshFiles();
+                    return true;
+                }
+                return false;
+            } catch (e) {
+                return false;
+            }
+        },
+
+        inputServerUrl() {
+            openSoftKeyboard(
+                () => this.serverUrl,
+                (value: string) => {
+                    this.serverUrl = value.trim().replace(/\/+$/, '');
+                    this.loginError = '';
+                }
+            );
+        },
+
+        inputUsername() {
+            openSoftKeyboard(
+                () => this.username,
+                (value: string) => {
+                    this.username = value;
+                    this.loginError = '';
+                }
+            );
+        },
+
+        inputPassword() {
+            openSoftKeyboard(
+                () => this.password,
+                (value: string) => {
+                    this.password = value;
+                    this.loginError = '';
+                }
+            );
+        },
+
+        async doLogin() {
+            if (!this.serverUrl) { this.loginError = '请输入服务器地址'; return; }
+            if (!this.username) { this.loginError = '请输入用户名'; return; }
+            if (!this.password) { this.loginError = '请输入密码'; return; }
+            if (!this.shellInitialized) { this.loginError = 'Shell未初始化，无法连接'; return; }
+
+            this.loginError = '';
+            try {
+                showLoading('正在连接...');
+                const cmd = `curl -s -m 10 -X POST "${this.serverUrl}/api/v3/user/session" -H "Content-Type: application/json" -d '{"userName":"${this.username}","Password":"${this.password}"}'`;
+                const result = await Shell.exec(cmd);
+                const data = JSON.parse(result.trim());
+                if (data.code === 0) {
+                    this.token = data.data;
+                    this.isLoggedIn = true;
+                    await this.saveToDB();
                     showSuccess('登录成功');
                     await this.refreshFiles();
                 } else {
-                    showError('登录失败: ' + (data.msg || '未知错误'));
+                    this.loginError = data.msg || '登录失败，请检查信息';
                 }
             } catch (e: any) {
-                showError('登录失败: ' + (e.message || e));
+                this.loginError = '连接失败: ' + (e.message || '请检查服务器地址');
             } finally {
                 hideLoading();
             }
+        },
+
+        async doLogout() {
+            this.token = '';
+            this.isLoggedIn = false;
+            this.showMenu = false;
+            this.showLoginPanel = false;
+            this.files = [];
+            this.pathHistory = [];
+            this.currentPath = '/';
+            await this.saveToDB();
+            showSuccess('已退出登录');
         },
 
         async refreshFiles() {
@@ -172,7 +242,7 @@ const cloudreve = defineComponent({
             try {
                 showLoading('加载中...');
                 const encodedPath = encodeURIComponent(this.currentPath);
-                const cmd = `curl -s "${this.serverUrl}/api/v3/directory${encodedPath}" -H "Authorization: Bearer ${this.token}"`;
+                const cmd = `curl -s -m 10 "${this.serverUrl}/api/v3/directory${encodedPath}" -H "Authorization: Bearer ${this.token}"`;
                 const result = await Shell.exec(cmd);
                 const data = JSON.parse(result.trim());
                 if (data.code === 0) {
@@ -184,11 +254,17 @@ const cloudreve = defineComponent({
                         date: obj.create_date ? obj.create_date.substring(0, 10) : '',
                         path: this.currentPath === '/' ? '/' + obj.name : this.currentPath + '/' + obj.name
                     }));
+                } else if (data.code === 401) {
+                    // token 过期
+                    this.isLoggedIn = false;
+                    this.token = '';
+                    await this.saveToDB();
+                    showError('登录已过期，请重新登录');
                 } else {
                     showError('加载失败: ' + (data.msg || ''));
                 }
             } catch (e: any) {
-                showError('加载失败');
+                showError('加载失败: ' + (e.message || '网络错误'));
             } finally {
                 hideLoading();
             }
@@ -204,13 +280,6 @@ const cloudreve = defineComponent({
             }
         },
 
-        goBack() {
-            if (this.pathHistory.length > 0) {
-                this.currentPath = this.pathHistory.pop() || '/';
-                this.refreshFiles();
-            }
-        },
-
         async uploadFile() {
             if (!this.shellInitialized) { showError('Shell未初始化'); return; }
             openSoftKeyboard(
@@ -218,14 +287,14 @@ const cloudreve = defineComponent({
                 async (value: string) => {
                     try {
                         showLoading('正在上传...');
-                        const cmd = `curl -s -X POST "${this.serverUrl}/api/v3/file/upload" -H "Authorization: Bearer ${this.token}" -F "file=@${value}" -F "path=${this.currentPath}"`;
+                        const cmd = `curl -s -m 60 -X POST "${this.serverUrl}/api/v3/file/upload" -H "Authorization: Bearer ${this.token}" -F "file=@${value}" -F "path=${this.currentPath}"`;
                         const result = await Shell.exec(cmd);
                         const data = JSON.parse(result.trim());
                         if (data.code === 0) {
                             showSuccess('上传成功');
                             await this.refreshFiles();
                         } else {
-                            showError('上传失败');
+                            showError('上传失败: ' + (data.msg || ''));
                         }
                     } catch (e: any) {
                         showError('上传失败');
@@ -244,14 +313,14 @@ const cloudreve = defineComponent({
                     try {
                         showLoading('正在创建...');
                         const encodedPath = encodeURIComponent(this.currentPath);
-                        const cmd = `curl -s -X PUT "${this.serverUrl}/api/v3/directory${encodedPath}" -H "Authorization: Bearer ${this.token}" -H "Content-Type: application/json" -d '{"dir_name":"${value.trim()}"}'`;
+                        const cmd = `curl -s -m 10 -X PUT "${this.serverUrl}/api/v3/directory${encodedPath}" -H "Authorization: Bearer ${this.token}" -H "Content-Type: application/json" -d '{"dir_name":"${value.trim()}"}'`;
                         const result = await Shell.exec(cmd);
                         const data = JSON.parse(result.trim());
                         if (data.code === 0) {
                             showSuccess('创建成功');
                             await this.refreshFiles();
                         } else {
-                            showError('创建失败');
+                            showError('创建失败: ' + (data.msg || ''));
                         }
                     } catch (e: any) {
                         showError('创建失败');
