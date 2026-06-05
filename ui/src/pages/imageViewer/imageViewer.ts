@@ -26,6 +26,9 @@ export type ImageViewerOptions = {
     directory?: string;
 };
 
+const MIN_SCALE = 0.1;
+const MAX_SCALE = 5.0;
+
 const imageViewer = defineComponent({
     data() {
         return {
@@ -41,25 +44,34 @@ const imageViewer = defineComponent({
             
             scale: 1.0,
             rotation: 0,
-            translateX: 0,
-            translateY: 0,
             
             showSettingsPanel: false as boolean,
             showImageInfo: false as boolean,
             isSlideshow: false as boolean,
             slideshowTimer: null as any,
             
-            shellInitialized: false
+            shellInitialized: false,
+            isDraggingThumb: false,
+            thumbStartX: 0,
+            thumbStartPercent: 0
         };
     },
 
     computed: {
         imageStyle(): any {
+            const width = Math.round(320 * this.scale);
+            const height = Math.round(240 * this.scale);
             return {
-                transform: `scale(${this.scale}) rotate(${this.rotation}deg) translate(${this.translateX}px, ${this.translateY}px)`,
-                width: '100%',
-                height: '100%'
+                width: width + 'px',
+                height: height + 'px',
+                transform: `rotate(${this.rotation}deg)`
             };
+        },
+        zoomPercent(): number {
+            const logMin = Math.log(MIN_SCALE);
+            const logMax = Math.log(MAX_SCALE);
+            const logVal = Math.log(Math.max(MIN_SCALE, Math.min(MAX_SCALE, this.scale)));
+            return ((logVal - logMin) / (logMax - logMin)) * 100;
         }
     },
 
@@ -87,6 +99,8 @@ const imageViewer = defineComponent({
         handleBackPress() {
             if (this.showSettingsPanel) {
                 this.showSettingsPanel = false;
+            } else if (this.showImageInfo) {
+                this.showImageInfo = false;
             } else {
                 $falcon.navBack();
             }
@@ -94,16 +108,8 @@ const imageViewer = defineComponent({
         
         toggleSettings() {
             this.showSettingsPanel = !this.showSettingsPanel;
-        },
-        
-        handleImageClick(event: any) {
-            const imageWidth = event.target.width || 172;
-            const clickX = event.offsetX || event.clientX;
-            
-            if (clickX < imageWidth / 3) {
-                this.prevImage();
-            } else if (clickX > imageWidth * 2 / 3) {
-                this.nextImage();
+            if (this.showSettingsPanel) {
+                this.showImageInfo = false;
             }
         },
 
@@ -112,7 +118,6 @@ const imageViewer = defineComponent({
                 if (!Shell || typeof Shell.initialize !== 'function') {
                     throw new Error('Shell模块不可用');
                 }
-                
                 await Shell.initialize();
                 this.shellInitialized = true;
             } catch (error: any) {
@@ -126,15 +131,12 @@ const imageViewer = defineComponent({
                 showError('Shell未初始化');
                 return;
             }
-            
             try {
                 showLoading('正在加载图片...');
-                
                 const ext = imagePath.split('.').pop()?.toLowerCase() || 'jpg';
                 const mimeType = this.getMimeType(ext);
                 
                 let result = '';
-                
                 const encodingMethods = [
                     `perl -MMIME::Base64 -0777 -ne 'print encode_base64(\$_)' "${imagePath}"`,
                     `perl -e 'use MIME::Base64; open(F, "<", $ARGV[0]); binmode(F); local $/; print encode_base64(<F>);' "${imagePath}"`,
@@ -145,12 +147,8 @@ const imageViewer = defineComponent({
                 for (const cmd of encodingMethods) {
                     try {
                         result = await Shell.exec(cmd);
-                        if (result && result.trim()) {
-                            break;
-                        }
-                    } catch (e) {
-                        continue;
-                    }
+                        if (result && result.trim()) break;
+                    } catch (e) { continue; }
                 }
                 
                 if (result && result.trim()) {
@@ -160,7 +158,7 @@ const imageViewer = defineComponent({
                     this.imageName = imagePath.split('/').pop() || '';
                     await this.getImageInfo();
                 } else {
-                    showError('图片加载失败：无法读取文件');
+                    showError('图片加载失败');
                 }
             } catch (error: any) {
                 console.error('加载图片失败:', error);
@@ -172,32 +170,20 @@ const imageViewer = defineComponent({
         
         getMimeType(ext: string): string {
             const mimeTypes: { [key: string]: string } = {
-                'jpg': 'image/jpeg',
-                'jpeg': 'image/jpeg',
-                'png': 'image/png',
-                'gif': 'image/gif',
-                'bmp': 'image/bmp',
-                'webp': 'image/webp'
+                'jpg': 'image/jpeg', 'jpeg': 'image/jpeg', 'png': 'image/png',
+                'gif': 'image/gif', 'bmp': 'image/bmp', 'webp': 'image/webp'
             };
             return mimeTypes[ext] || 'image/jpeg';
         },
 
         async scanImages() {
-            if (!this.shellInitialized) {
-                showError('Shell未初始化');
-                return;
-            }
-            
+            if (!this.shellInitialized) { showError('Shell未初始化'); return; }
             try {
                 showLoading('正在扫描目录...');
-                
                 const cmd = `find "${this.currentDirectory}" -type f \\( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.bmp" -o -iname "*.webp" \\) 2>/dev/null | sort`;
-                
                 const result = await Shell.exec(cmd);
-                
                 if (result && result.trim()) {
                     this.imageList = result.trim().split('\n').filter((path: string) => path);
-                    
                     if (this.imageList.length > 0) {
                         this.currentImageIndex = 0;
                         await this.loadImage(this.imageList[0]);
@@ -208,7 +194,6 @@ const imageViewer = defineComponent({
                     showError('未找到图片文件');
                 }
             } catch (error: any) {
-                console.error('扫描图片失败:', error);
                 showError('扫描图片失败: ' + error.message);
             } finally {
                 hideLoading();
@@ -228,96 +213,60 @@ const imageViewer = defineComponent({
         
         async nextImage() {
             if (this.imageList.length === 0) return;
-            
             this.currentImageIndex = (this.currentImageIndex + 1) % this.imageList.length;
             await this.loadImage(this.imageList[this.currentImageIndex]);
-            this.resetZoom();
+            this.resetView();
         },
         
         async prevImage() {
             if (this.imageList.length === 0) return;
-            
             this.currentImageIndex = (this.currentImageIndex - 1 + this.imageList.length) % this.imageList.length;
             await this.loadImage(this.imageList[this.currentImageIndex]);
-            this.resetZoom();
+            this.resetView();
         },
 
         zoomIn() {
-            this.scale = Math.min(this.scale + 0.2, 5.0);
+            this.scale = Math.min(this.scale * 1.3, MAX_SCALE);
         },
 
         zoomOut() {
-            this.scale = Math.max(this.scale - 0.2, 0.1);
+            this.scale = Math.max(this.scale / 1.3, MIN_SCALE);
         },
 
-        resetZoom() {
+        resetView() {
             this.scale = 1.0;
             this.rotation = 0;
-            this.translateX = 0;
-            this.translateY = 0;
         },
 
-        rotateLeft() {
-            this.rotation -= 90;
-        },
-
-        rotateRight() {
-            this.rotation += 90;
-        },
-
-        moveUp() {
-            this.translateY -= 20;
-        },
-
-        moveDown() {
-            this.translateY += 20;
-        },
-
-        moveLeft() {
-            this.translateX -= 20;
-        },
-
-        moveRight() {
-            this.translateX += 20;
-        },
+        rotateLeft() { this.rotation -= 90; },
+        rotateRight() { this.rotation += 90; },
         
-        toggleImageInfo() {
-            this.showImageInfo = !this.showImageInfo;
-        },
+        toggleImageInfo() { this.showImageInfo = !this.showImageInfo; },
         
         async getImageInfo() {
             if (!this.currentImage || !this.shellInitialized) return;
-            
             try {
                 const cmd = `stat -c '%s' "${this.currentImage}"`;
                 const result = await Shell.exec(cmd);
                 if (result && result.trim()) {
                     this.imageSize = parseInt(result.trim(), 10);
                 }
-            } catch (error) {
-                console.error('获取图片信息失败:', error);
-            }
+            } catch (error) { console.error('获取图片信息失败:', error); }
         },
         
         formatFileSize(bytes: number): string {
             if (bytes === 0) return '0 B';
-            
             const k = 1024;
             const sizes = ['B', 'KB', 'MB', 'GB'];
             const i = Math.floor(Math.log(bytes) / Math.log(k));
-            
             return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
         },
         
         async deleteImage() {
             if (!this.currentImage || !this.shellInitialized) return;
-            
             try {
-                const cmd = `rm "${this.currentImage}"`;
-                await Shell.exec(cmd);
-                
+                await Shell.exec(`rm "${this.currentImage}"`);
                 this.imageList.splice(this.currentImageIndex, 1);
-                
                 if (this.imageList.length > 0) {
                     this.currentImageIndex = Math.min(this.currentImageIndex, this.imageList.length - 1);
                     await this.loadImage(this.imageList[this.currentImageIndex]);
@@ -326,36 +275,27 @@ const imageViewer = defineComponent({
                     this.currentImageData = '';
                     this.imageName = '';
                 }
-                
                 showSuccess('图片已删除');
             } catch (error: any) {
-                console.error('删除图片失败:', error);
                 showError('删除失败: ' + error.message);
             }
         },
         
         async renameImage() {
             if (!this.currentImage || !this.shellInitialized) return;
-            
             openSoftKeyboard(
                 () => this.imageName,
                 async (newName: string) => {
                     if (!newName || newName === this.imageName) return;
-                    
                     const dir = this.currentImage.substring(0, this.currentImage.lastIndexOf('/'));
                     const newPath = `${dir}/${newName}`;
-                    
                     try {
-                        const cmd = `mv "${this.currentImage}" "${newPath}"`;
-                        await Shell.exec(cmd);
-                        
+                        await Shell.exec(`mv "${this.currentImage}" "${newPath}"`);
                         this.imageList[this.currentImageIndex] = newPath;
                         this.currentImage = newPath;
                         this.imageName = newName;
-                        
                         showSuccess('重命名成功');
                     } catch (error: any) {
-                        console.error('重命名失败:', error);
                         showError('重命名失败: ' + error.message);
                     }
                 }
@@ -364,22 +304,12 @@ const imageViewer = defineComponent({
         
         toggleSlideshow() {
             this.isSlideshow = !this.isSlideshow;
-            
-            if (this.isSlideshow) {
-                this.startSlideshow();
-            } else {
-                this.stopSlideshow();
-            }
+            if (this.isSlideshow) { this.startSlideshow(); } else { this.stopSlideshow(); }
         },
         
         startSlideshow() {
-            if (this.slideshowTimer) {
-                clearInterval(this.slideshowTimer);
-            }
-            
-            this.slideshowTimer = setInterval(() => {
-                this.nextImage();
-            }, 3000);
+            if (this.slideshowTimer) clearInterval(this.slideshowTimer);
+            this.slideshowTimer = setInterval(() => { this.nextImage(); }, 3000);
         },
         
         stopSlideshow() {
@@ -387,6 +317,28 @@ const imageViewer = defineComponent({
                 clearInterval(this.slideshowTimer);
                 this.slideshowTimer = null;
             }
+        },
+
+        onThumbTouchStart(e: any) {
+            this.isDraggingThumb = true;
+            this.thumbStartX = (e.touch && e.touch.clientX) || (e.changedTouches && e.changedTouches[0] && e.changedTouches[0].clientX) || 0;
+            this.thumbStartPercent = this.zoomPercent;
+        },
+
+        onThumbTouchMove(e: any) {
+            if (!this.isDraggingThumb) return;
+            const clientX = (e.touch && e.touch.clientX) || (e.changedTouches && e.changedTouches[0] && e.changedTouches[0].clientX) || 0;
+            const trackWidth = 200;
+            const deltaX = clientX - this.thumbStartX;
+            let newPercent = this.thumbStartPercent + (deltaX / trackWidth) * 100;
+            newPercent = Math.max(0, Math.min(100, newPercent));
+            const logMin = Math.log(MIN_SCALE);
+            const logMax = Math.log(MAX_SCALE);
+            this.scale = Math.exp(logMin + (newPercent / 100) * (logMax - logMin));
+        },
+
+        onThumbTouchEnd() {
+            this.isDraggingThumb = false;
         }
     }
 });

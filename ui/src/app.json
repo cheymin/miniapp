@@ -22,7 +22,10 @@
     "qrcodeGenerator": "pages/qrcodeGenerator/qrcodeGenerator.vue",
     "unitConverter": "pages/unitConverter/unitConverter.vue",
     "browser": "pages/browser/browser.vue",
-    "qqchat": "pages/qqchat/qqchat.vue"
+    "qqchat": "pages/qqchat/qqchat.vue",
+    "minAi": "pages/minAi/minAi.vue",
+    "cloudreve": "pages/cloudreve/cloudreve.vue",
+    "pvz": "pages/pvz/pvz.vue"
   },
   "options": {
     "style": {
