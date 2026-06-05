@@ -23,8 +23,10 @@
             <text class="section-title">核心功能</text>
             
             <div class="item"><text class="item-text" @click="openAi">AI 助手</text></div>
+            <div class="item"><text class="item-text" @click="MinAi">min-AI 助手</text></div>
             <div class="item"><text class="item-text" @click="FileEditor">文本编辑器</text></div>
             <div class="item"><text class="item-text" @click="FileManager">文件管理器</text></div>
+            <div class="item"><text class="item-text" @click="Cloudreve">Cloudreve</text></div>
             <div class="item"><text class="item-text" @click="PenTerm">PenTerm</text></div>
         </div>
         
@@ -35,6 +37,12 @@
             <div class="item"><text class="item-text" @click="Gallery">图库</text></div>
             <div class="item"><text class="item-text" @click="MusicPlayer">音乐播放器</text></div>
             <div class="item"><text class="item-text" @click="VideoPlayer">视频播放器</text></div>
+        </div>
+        
+        <div class="section">
+            <text class="section-title">游戏</text>
+            
+            <div class="item"><text class="item-text" @click="Pvz">植物大战僵尸</text></div>
         </div>
         
         <div class="section">
