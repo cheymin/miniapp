@@ -1,5 +1,4 @@
 <script>
-import fs from 'fs'
 export default {
   name: 'HtmlView',
   props: {
@@ -68,15 +67,8 @@ export default {
 
         let html = '';
         if (this._startsWith(reqUrl, 'file://') || !this._startsWith(reqUrl, 'http')) {
-          let filePath = reqUrl;
-          if (this._startsWith(filePath, 'file://')) {
-            filePath = filePath.substring(7);
-          }
-          try {
-            html = await fs.readFile(filePath);
-          } catch (e) {
-            throw new Error('Local file read failed: ' + e.message);
-          }
+          // 本地文件暂不支持
+          throw new Error('Local files not supported');
         } else {
           let resp = await this._doRequest(http, reqUrl, headers);
           html = this._extractHtml(resp);
