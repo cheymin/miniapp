@@ -26,6 +26,7 @@
             <div class="item"><text class="item-text" @click="FileEditor">文本编辑器</text></div>
             <div class="item"><text class="item-text" @click="FileManager">文件管理器</text></div>
             <div class="item"><text class="item-text" @click="Cloudreve">Cloudreve</text></div>
+            <div class="item"><text class="item-text" @click="Browser">浏览器</text></div>
             <div class="item"><text class="item-text" @click="PenTerm">PenTerm</text></div>
         </div>
         

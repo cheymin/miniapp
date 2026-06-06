@@ -65,6 +65,9 @@ const index = defineComponent({
         },
         Cloudreve() {
             $falcon.navTo("cloudreve", {});
+        },
+        Browser() {
+            $falcon.navTo("browser", {});
         }
     }
 });
