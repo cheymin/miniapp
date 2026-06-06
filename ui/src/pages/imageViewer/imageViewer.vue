@@ -18,48 +18,51 @@
 -->
 
 <template>
-  <div class="container" @touchstart="onTouchStart" @touchmove="onTouchMove" @touchend="onTouchEnd">
+  <div class="container">
     <div class="header">
       <text class="header-btn" @click="toggleMenu">菜单</text>
       <text class="title">{{ imageName || '图片查看器' }}</text>
       <text v-if="imageList.length > 0" class="counter">{{ currentImageIndex + 1 }}/{{ imageList.length }}</text>
     </div>
 
-    <div v-if="showMenuPanel" class="menu-panel">
-      <div class="menu-section">
-        <text class="menu-section-title">目录</text>
-        <div class="menu-row">
-          <text class="menu-path">{{ currentDirectory }}</text>
+    <!-- 菜单面板 - 用scroller包裹防止内容溢出 -->
+    <scroller v-if="showMenuPanel" class="menu-scroll" scroll-direction="vertical" :show-scrollbar="true">
+      <div class="menu-panel">
+        <div class="menu-section">
+          <text class="menu-section-title">目录</text>
+          <div class="menu-row">
+            <text class="menu-path">{{ currentDirectory }}</text>
+          </div>
+          <div class="menu-row">
+            <text class="menu-btn" @click="selectDirectory">选择目录</text>
+            <text class="menu-btn" @click="scanImages">扫描图片</text>
+          </div>
         </div>
-        <div class="menu-row">
-          <text class="menu-btn" @click="selectDirectory">选择目录</text>
-          <text class="menu-btn" @click="scanImages">扫描图片</text>
+        <div v-if="currentImage" class="menu-section">
+          <text class="menu-section-title">缩放 {{ Math.round(scale * 100) }}%</text>
+          <div class="menu-row">
+            <text class="menu-btn" @click="zoomOut">缩小</text>
+            <text class="menu-btn" @click="resetView">重置</text>
+            <text class="menu-btn" @click="zoomIn">放大</text>
+          </div>
+        </div>
+        <div v-if="currentImage" class="menu-section">
+          <text class="menu-section-title">操作</text>
+          <div class="menu-row">
+            <text class="menu-btn" @click="rotateLeft">左转</text>
+            <text class="menu-btn" @click="rotateRight">右转</text>
+          </div>
+          <div class="menu-row">
+            <text class="menu-btn" @click="toggleSlideshow">{{ isSlideshow ? '停止幻灯片' : '幻灯片' }}</text>
+            <text class="menu-btn" @click="toggleImageInfo">信息</text>
+          </div>
+          <div class="menu-row">
+            <text class="menu-btn" @click="renameImage">重命名</text>
+            <text class="menu-btn btn-danger" @click="deleteImage">删除</text>
+          </div>
         </div>
       </div>
-      <div v-if="currentImage" class="menu-section">
-        <text class="menu-section-title">缩放 {{ Math.round(scale * 100) }}%</text>
-        <div class="menu-row">
-          <text class="menu-btn" @click="zoomOut">缩小</text>
-          <text class="menu-btn" @click="resetView">重置</text>
-          <text class="menu-btn" @click="zoomIn">放大</text>
-        </div>
-      </div>
-      <div v-if="currentImage" class="menu-section">
-        <text class="menu-section-title">操作</text>
-        <div class="menu-row">
-          <text class="menu-btn" @click="rotateLeft">左转</text>
-          <text class="menu-btn" @click="rotateRight">右转</text>
-        </div>
-        <div class="menu-row">
-          <text class="menu-btn" @click="toggleSlideshow">{{ isSlideshow ? '停止幻灯片' : '幻灯片' }}</text>
-          <text class="menu-btn" @click="toggleImageInfo">信息</text>
-        </div>
-        <div class="menu-row">
-          <text class="menu-btn" @click="renameImage">重命名</text>
-          <text class="menu-btn btn-danger" @click="deleteImage">删除</text>
-        </div>
-      </div>
-    </div>
+    </scroller>
 
     <div v-if="showImageInfo && currentImage" class="info-panel">
       <text class="info-item">文件: {{ imageName }}</text>
@@ -69,6 +72,7 @@
       <text class="menu-btn" @click="toggleImageInfo">关闭</text>
     </div>
 
+    <!-- 图片区域 - 双向scroller实现滑动查看 -->
     <div v-if="currentImageData" class="image-area">
       <div class="nav-btn nav-left" @click="prevImage">
         <text class="nav-arrow">&lt;</text>

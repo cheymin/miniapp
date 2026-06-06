@@ -50,13 +50,7 @@ const imageViewer = defineComponent({
             isSlideshow: false as boolean,
             slideshowTimer: null as any,
             
-            shellInitialized: false,
-
-            // Touch gesture state
-            touchStartX: 0,
-            touchStartY: 0,
-            touchStartTime: 0,
-            isTouching: false
+            shellInitialized: false
         };
     },
 
@@ -107,51 +101,6 @@ const imageViewer = defineComponent({
             this.showMenuPanel = !this.showMenuPanel;
             if (this.showMenuPanel) {
                 this.showImageInfo = false;
-            }
-        },
-
-        // Touch gesture: swipe up/down to zoom, tap to toggle menu
-        onTouchStart(e: any) {
-            if (this.showMenuPanel || this.showImageInfo) return;
-            const touch = (e.touches && e.touches[0]) || (e.touch);
-            if (touch) {
-                this.touchStartX = touch.clientX;
-                this.touchStartY = touch.clientY;
-                this.touchStartTime = Date.now();
-                this.isTouching = true;
-            }
-        },
-
-        onTouchMove(e: any) {
-            if (!this.isTouching || this.showMenuPanel || this.showImageInfo) return;
-            const touch = (e.touches && e.touches[0]) || (e.touch);
-            if (!touch) return;
-
-            const deltaY = touch.clientY - this.touchStartY;
-            const deltaX = Math.abs(touch.clientX - this.touchStartX);
-
-            // Vertical swipe to zoom (only when mostly vertical)
-            if (deltaX < 30 && Math.abs(deltaY) > 20) {
-                const zoomDelta = deltaY > 0 ? -0.02 : 0.02;
-                this.scale = Math.max(MIN_SCALE, Math.min(MAX_SCALE, this.scale + zoomDelta));
-                this.touchStartY = touch.clientY;
-            }
-        },
-
-        onTouchEnd(e: any) {
-            if (!this.isTouching) return;
-            this.isTouching = false;
-
-            const touch = (e.changedTouches && e.changedTouches[0]) || (e.touch);
-            if (!touch) return;
-
-            const deltaX = Math.abs(touch.clientX - this.touchStartX);
-            const deltaY = Math.abs(touch.clientY - this.touchStartY);
-            const elapsed = Date.now() - this.touchStartTime;
-
-            // Quick tap: toggle menu
-            if (deltaX < 10 && deltaY < 10 && elapsed < 300) {
-                // Don't toggle menu on tap - let scroller handle it
             }
         },
 

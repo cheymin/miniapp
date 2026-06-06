@@ -31,62 +31,66 @@
       <text class="menu-item" @click="showMenu = false">关闭</text>
     </div>
 
-    <!-- 登录界面 -->
-    <div v-if="!isLoggedIn" class="login-panel">
-      <text class="login-title">Cloudreve 登录</text>
-      <text class="login-desc">请配置您的 Cloudreve 服务器信息</text>
+    <!-- 登录界面 - 用scroller包裹 -->
+    <scroller v-if="!isLoggedIn" class="main-scroll" scroll-direction="vertical" :show-scrollbar="true">
+      <div class="login-panel">
+        <text class="login-title">Cloudreve 登录</text>
+        <text class="login-desc">请配置您的 Cloudreve 服务器信息</text>
 
-      <div class="form-group">
-        <text class="form-label">服务器地址</text>
-        <text class="form-input" @click="inputServerUrl">{{ serverUrl || '例如: https://cloud.example.com' }}</text>
+        <div class="form-group">
+          <text class="form-label">服务器地址</text>
+          <text class="form-input" @click="inputServerUrl">{{ serverUrl || '例如: https://cloud.example.com' }}</text>
+        </div>
+
+        <div class="form-group">
+          <text class="form-label">用户名</text>
+          <text class="form-input" @click="inputUsername">{{ username || '输入用户名' }}</text>
+        </div>
+
+        <div class="form-group">
+          <text class="form-label">密码</text>
+          <text class="form-input" @click="inputPassword">{{ password ? '******' : '输入密码' }}</text>
+        </div>
+
+        <div class="form-actions">
+          <text class="btn btn-primary" @click="doLogin">登录</text>
+        </div>
+
+        <div v-if="loginError" class="error-msg">
+          <text class="error-text">{{ loginError }}</text>
+        </div>
       </div>
+    </scroller>
 
-      <div class="form-group">
-        <text class="form-label">用户名</text>
-        <text class="form-input" @click="inputUsername">{{ username || '输入用户名' }}</text>
+    <!-- 确认连接界面 - 用scroller包裹 -->
+    <scroller v-else-if="showLoginPanel" class="main-scroll" scroll-direction="vertical" :show-scrollbar="true">
+      <div class="login-panel">
+        <text class="login-title">账号信息</text>
+
+        <div class="form-group">
+          <text class="form-label">服务器</text>
+          <text class="form-value">{{ serverUrl }}</text>
+        </div>
+
+        <div class="form-group">
+          <text class="form-label">用户名</text>
+          <text class="form-value">{{ username }}</text>
+        </div>
+
+        <div class="form-group">
+          <text class="form-label">状态</text>
+          <text class="form-value connected">已连接</text>
+        </div>
+
+        <div class="form-actions">
+          <text class="btn btn-primary" @click="showLoginPanel = false">返回文件</text>
+          <text class="btn btn-danger" @click="doLogout">退出登录</text>
+        </div>
       </div>
-
-      <div class="form-group">
-        <text class="form-label">密码</text>
-        <text class="form-input" @click="inputPassword">{{ password ? '******' : '输入密码' }}</text>
-      </div>
-
-      <div class="form-actions">
-        <text class="btn btn-primary" @click="doLogin">登录</text>
-      </div>
-
-      <div v-if="loginError" class="error-msg">
-        <text class="error-text">{{ loginError }}</text>
-      </div>
-    </div>
-
-    <!-- 确认连接界面 -->
-    <div v-else-if="showLoginPanel" class="login-panel">
-      <text class="login-title">账号信息</text>
-
-      <div class="form-group">
-        <text class="form-label">服务器</text>
-        <text class="form-value">{{ serverUrl }}</text>
-      </div>
-
-      <div class="form-group">
-        <text class="form-label">用户名</text>
-        <text class="form-value">{{ username }}</text>
-      </div>
-
-      <div class="form-group">
-        <text class="form-label">状态</text>
-        <text class="form-value connected">已连接</text>
-      </div>
-
-      <div class="form-actions">
-        <text class="btn btn-primary" @click="showLoginPanel = false">返回文件</text>
-        <text class="btn btn-danger" @click="doLogout">退出登录</text>
-      </div>
-    </div>
+    </scroller>
 
     <!-- 文件浏览界面 -->
-    <div v-else>
+    <div v-else class="file-area">
       <div class="path-bar">
         <text class="path-text">{{ currentPath || '/' }}</text>
         <text class="refresh-btn" @click="refreshFiles">刷新</text>
