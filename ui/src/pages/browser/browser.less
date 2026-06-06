@@ -6,132 +6,132 @@
 }
 
 .header {
-    height: 36px;
+    height: 32px;
     background-color: #1677ff;
     flex-direction: row;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 6px;
 }
 
 .header-btn {
     font-size: 14px;
     color: #fff;
-    padding: 4px 8px;
+    padding: 4px 6px;
 }
 
-.header-title {
+.header-url {
     flex: 1;
-    font-size: 16px;
+    font-size: 11px;
     color: #fff;
-    font-weight: bold;
     text-align: center;
+    lines: 1;
+    padding: 4px 6px;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 4px;
+    margin: 0 4px;
 }
 
 .menu-panel {
     position: absolute;
     left: 0;
-    top: 36px;
+    top: 32px;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 8px;
     z-index: 100;
-}
-
-.menu-section {
-    margin-bottom: 10px;
-    padding-bottom: 8px;
-    border-bottom-width: 1px;
-    border-bottom-color: #333;
-}
-
-.menu-section-title {
-    font-size: 12px;
-    color: #999;
-    margin-bottom: 6px;
 }
 
 .menu-row {
     flex-direction: row;
-    gap: 8px;
+    gap: 6px;
+    margin-bottom: 6px;
 }
 
 .menu-btn {
-    font-size: 13px;
+    font-size: 12px;
     color: #fff;
     background-color: #333;
-    padding: 6px 12px;
-    border-radius: 4px;
-}
-
-.menu-url {
-    font-size: 11px;
-    color: #aaa;
-    margin-bottom: 6px;
-    lines: 1;
-}
-
-.quick-links {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 6px;
-}
-
-.quick-link {
-    font-size: 12px;
-    color: #1677ff;
-    background-color: #1a1a1a;
     padding: 5px 10px;
     border-radius: 4px;
 }
 
-.bookmark-item {
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 4px;
-    gap: 8px;
-}
-
-.bookmark-url {
-    flex: 1;
-    font-size: 12px;
-    color: #fff;
-    lines: 1;
-}
-
-.bookmark-del {
+.quick-btn {
     font-size: 11px;
-    color: #ff4d4f;
-    padding: 2px 6px;
+    color: #1677ff;
+    background-color: #1a1a1a;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.bookmarks {
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top-width: 1px;
+    border-top-color: #333;
+}
+
+.bookmarks-title {
+    font-size: 11px;
+    color: #999;
+    margin-bottom: 4px;
 }
 
 .menu-close {
-    font-size: 14px;
+    font-size: 12px;
     color: #999;
     text-align: center;
-    padding: 10px 0;
-    margin-top: 10px;
+    padding: 8px 0;
+    margin-top: 8px;
 }
 
 .empty-state {
     flex: 1;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 15px;
 }
 
-.empty-icon {
-    font-size: 48px;
-    margin-bottom: 15px;
-}
-
-.empty-text {
-    font-size: 18px;
+.empty-title {
+    font-size: 20px;
     color: #333;
-    margin-bottom: 8px;
+    font-weight: bold;
+    margin-bottom: 6px;
 }
 
 .empty-hint {
-    font-size: 13px;
+    font-size: 12px;
     color: #999;
+    margin-bottom: 15px;
+}
+
+.quick-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.quick-item {
+    font-size: 12px;
+    color: #fff;
+    background-color: #1677ff;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+.bottom-bar {
+    height: 32px;
+    background-color: #f5f5f5;
+    flex-direction: row;
+    border-top-width: 1px;
+    border-top-color: #ddd;
+}
+
+.bottom-btn {
+    flex: 1;
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+    line-height: 32px;
 }

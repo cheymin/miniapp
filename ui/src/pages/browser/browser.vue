@@ -21,51 +21,48 @@
   <div class="container">
     <div class="header">
       <text class="header-btn" @click="goBack">&lt;</text>
-      <text class="header-title">浏览器</text>
-      <text class="header-btn" @click="toggleMenu">菜单</text>
+      <text class="header-url" @click="inputUrl">{{ currentUrl ? shortenUrl(currentUrl) : '输入网址' }}</text>
+      <text class="header-btn" @click="toggleMenu">...</text>
     </div>
 
     <div v-if="showMenuPanel" class="menu-panel">
-      <div class="menu-section">
-        <text class="menu-section-title">导航</text>
+      <div class="menu-row">
+        <text class="menu-btn" @click="goHome">首页</text>
+        <text class="menu-btn" @click="refresh">刷新</text>
+        <text class="menu-btn" @click="inputUrl">输入</text>
+      </div>
+      <div class="menu-row">
+        <text class="quick-btn" @click="loadUrl('https://m.baidu.com')">百度</text>
+        <text class="quick-btn" @click="loadUrl('https://m.bing.com')">必应</text>
+        <text class="quick-btn" @click="loadUrl('https://m.github.com')">GitHub</text>
+      </div>
+      <div v-if="bookmarks.length > 0" class="bookmarks">
+        <text class="bookmarks-title">收藏:</text>
         <div class="menu-row">
-          <text class="menu-btn" @click="goHome">首页</text>
-          <text class="menu-btn" @click="refresh">刷新</text>
+          <text v-for="(item, idx) in bookmarks.slice(0, 4)" :key="idx" class="quick-btn" @click="loadUrl(item.url)">{{ item.title }}</text>
         </div>
       </div>
-      <div class="menu-section">
-        <text class="menu-section-title">当前网址</text>
-        <text class="menu-url">{{ currentUrl || '未加载' }}</text>
-        <div class="menu-row">
-          <text class="menu-btn" @click="inputUrl">输入网址</text>
-          <text class="menu-btn" @click="addToBookmarks">收藏</text>
-        </div>
-      </div>
-      <div class="menu-section">
-        <text class="menu-section-title">快捷链接</text>
-        <div class="quick-links">
-          <text class="quick-link" @click="loadUrl('https://www.baidu.com')">百度</text>
-          <text class="quick-link" @click="loadUrl('https://www.bing.com')">必应</text>
-          <text class="quick-link" @click="loadUrl('https://github.com')">GitHub</text>
-        </div>
-      </div>
-      <div v-if="bookmarks.length > 0" class="menu-section">
-        <text class="menu-section-title">我的收藏</text>
-        <div v-for="(item, idx) in bookmarks" :key="idx" class="bookmark-item">
-          <text class="bookmark-url" @click="loadUrl(item.url)">{{ item.title || item.url }}</text>
-          <text class="bookmark-del" @click="deleteBookmark(idx)">删除</text>
-        </div>
-      </div>
-      <text class="menu-close" @click="showMenuPanel = false">关闭菜单</text>
+      <text class="menu-close" @click="showMenuPanel = false">关闭</text>
     </div>
 
     <div v-if="!currentUrl" class="empty-state">
-      <text class="empty-icon">🌐</text>
-      <text class="empty-text">欢迎使用浏览器</text>
-      <text class="empty-hint">点击菜单输入网址或选择快捷链接</text>
+      <text class="empty-title">浏览器</text>
+      <text class="empty-hint">点击上方输入网址</text>
+      <div class="quick-grid">
+        <text class="quick-item" @click="loadUrl('https://m.baidu.com')">百度</text>
+        <text class="quick-item" @click="loadUrl('https://m.bing.com')">必应</text>
+        <text class="quick-item" @click="loadUrl('https://m.github.com')">GitHub</text>
+        <text class="quick-item" @click="loadUrl('https://m.sohu.com')">搜狐</text>
+      </div>
     </div>
 
     <HtmlView v-else :url="currentUrl" @navigate="onNavigate" />
+
+    <div v-if="currentUrl" class="bottom-bar">
+      <text class="bottom-btn" @click="goBack">&lt; 返回</text>
+      <text class="bottom-btn" @click="addToBookmarks">收藏</text>
+      <text class="bottom-btn" @click="toggleMenu">菜单</text>
+    </div>
 
     <ToastMessage />
   </div>

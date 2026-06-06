@@ -72,7 +72,6 @@ const browser = defineComponent({
 
         refresh() {
             if (!this.currentUrl) return;
-            // Force reload by creating a new URL
             const url = this.currentUrl;
             this.currentUrl = '';
             this.$nextTick(() => {
@@ -105,6 +104,17 @@ const browser = defineComponent({
             console.log('导航到:', href);
         },
 
+        shortenUrl(url: string): string {
+            try {
+                const urlObj = new URL(url);
+                let path = urlObj.pathname;
+                if (path.length > 15) path = path.substring(0, 12) + '...';
+                return urlObj.hostname + path;
+            } catch {
+                return url.length > 20 ? url.substring(0, 17) + '...' : url;
+            }
+        },
+
         async addToBookmarks() {
             if (!this.currentUrl) {
                 showError('当前没有加载网页');
@@ -132,7 +142,7 @@ const browser = defineComponent({
         extractTitle(url: string): string {
             try {
                 const urlObj = new URL(url);
-                return urlObj.hostname;
+                return urlObj.hostname.replace('www.', '').replace('m.', '');
             } catch {
                 return url;
             }
