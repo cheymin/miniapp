@@ -54,23 +54,20 @@ const index = defineComponent({
         Gallery() {
             $falcon.navTo("gallery", {});
         },
-        MusicPlayer() {
-            $falcon.navTo("musicPlayer", {});
-        },
-        VideoPlayer() {
-            $falcon.navTo("videoPlayer", {});
-        },
         Update() {
             $falcon.navTo("update", {});
         },
-        MinAi() {
-            $falcon.navTo("minAi", {});
+        Browser() {
+            $falcon.navTo("browser", {});
         },
-        Cloudreve() {
-            $falcon.navTo("cloudreve", {});
+        Calculator() {
+            $falcon.navTo("calculator", {});
         },
-        Pvz() {
-            $falcon.navTo("pvz", {});
+        QRCodeGenerator() {
+            $falcon.navTo("qrcodeGenerator", {});
+        },
+        UnitConverter() {
+            $falcon.navTo("unitConverter", {});
         }
     }
 });
