@@ -1,0 +1,189 @@
+.container {
+    flex: 1;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 40px;
+    background-color: #7c3aed;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+}
+
+.header-title {
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.header-btn {
+    font-size: 14px;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.messages-area {
+    flex: 1;
+    padding: 10px;
+}
+
+.welcome {
+    padding: 30px 15px;
+    align-items: center;
+}
+
+.welcome-icon {
+    font-size: 36px;
+    color: #7c3aed;
+    margin-bottom: 10px;
+}
+
+.welcome-title {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.welcome-desc {
+    font-size: 12px;
+    color: #999;
+}
+
+.msg-row {
+    margin-bottom: 10px;
+}
+
+.msg-user {
+    align-items: flex-end;
+}
+
+.msg-ai {
+    align-items: flex-start;
+}
+
+.msg-bubble {
+    max-width: 260px;
+    padding: 10px 12px;
+    border-radius: 12px;
+}
+
+.msg-bubble.user {
+    background-color: #7c3aed;
+}
+
+.msg-bubble.ai {
+    background-color: #fff;
+}
+
+.msg-bubble.thinking {
+    background-color: #f0f0f0;
+}
+
+.msg-text {
+    font-size: 13px;
+    color: #333;
+    line-height: 18px;
+}
+
+.msg-bubble.user .msg-text {
+    color: #fff;
+}
+
+.input-area {
+    flex-direction: row;
+    padding: 10px;
+    background-color: #fff;
+    border-top-width: 1px;
+    border-top-color: #e5e5e5;
+}
+
+.input-box {
+    flex: 1;
+    font-size: 13px;
+    color: #333;
+    padding: 10px 12px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.send-btn {
+    font-size: 14px;
+    color: #fff;
+    background-color: #7c3aed;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.settings-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 100;
+}
+
+.settings-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom-width: 1px;
+    border-bottom-color: #e5e5e5;
+}
+
+.settings-title {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.settings-close {
+    font-size: 16px;
+    color: #999;
+    padding: 5px;
+}
+
+.settings-content {
+    padding: 15px;
+}
+
+.setting-item {
+    margin-bottom: 15px;
+}
+
+.setting-label {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.setting-value {
+    font-size: 14px;
+    color: #333;
+    padding: 10px 12px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.setting-actions {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.setting-btn {
+    font-size: 14px;
+    color: #7c3aed;
+    padding: 10px 20px;
+    border-width: 1px;
+    border-color: #7c3aed;
+    border-radius: 8px;
+}

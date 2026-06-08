@@ -1,18 +1,18 @@
 <!--
  Copyright (C) 2025 Langning Chen
- 
+
  This file is part of miniapp.
- 
+
  miniapp is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation, either version 3 of the License, or
  (at your option) any later version.
- 
+
  miniapp is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  GNU General Public License for more details.
- 
+
  You should have received a copy of the GNU General Public License
  along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 -->
@@ -23,10 +23,10 @@
             <text class="section-title">核心功能</text>
             
             <div class="item"><text class="item-text" @click="openAi">AI 助手</text></div>
-            <div class="item"><text class="item-text" @click="MinAi">min-AI 助手</text></div>
+            <div class="item"><text class="item-text" @click="SmartAi">智能助手</text></div>
             <div class="item"><text class="item-text" @click="FileEditor">文本编辑器</text></div>
             <div class="item"><text class="item-text" @click="FileManager">文件管理器</text></div>
-            <div class="item"><text class="item-text" @click="Cloudreve">Cloudreve</text></div>
+            <div class="item"><text class="item-text" @click="Browser">浏览器</text></div>
             <div class="item"><text class="item-text" @click="PenTerm">PenTerm</text></div>
         </div>
         
@@ -35,14 +35,6 @@
             
             <div class="item"><text class="item-text" @click="ImageViewer">图片查看器</text></div>
             <div class="item"><text class="item-text" @click="Gallery">图库</text></div>
-            <div class="item"><text class="item-text" @click="MusicPlayer">音乐播放器</text></div>
-            <div class="item"><text class="item-text" @click="VideoPlayer">视频播放器</text></div>
-        </div>
-        
-        <div class="section">
-            <text class="section-title">游戏</text>
-            
-            <div class="item"><text class="item-text" @click="Pvz">植物大战僵尸</text></div>
         </div>
         
         <div class="section">
@@ -64,4 +56,3 @@
 import index from './index';
 export default index;
 </script>
-

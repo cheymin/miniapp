@@ -30,6 +30,9 @@ const index = defineComponent({
         openAi() {
             $falcon.navTo("ai", {});
         },
+        SmartAi() {
+            $falcon.navTo("smartAi", {});
+        },
         PenTerm() {
             $falcon.navTo("shell", {});
         },
@@ -54,23 +57,11 @@ const index = defineComponent({
         Gallery() {
             $falcon.navTo("gallery", {});
         },
-        MusicPlayer() {
-            $falcon.navTo("musicPlayer", {});
-        },
-        VideoPlayer() {
-            $falcon.navTo("videoPlayer", {});
-        },
         Update() {
             $falcon.navTo("update", {});
         },
-        MinAi() {
-            $falcon.navTo("minAi", {});
-        },
-        Cloudreve() {
-            $falcon.navTo("cloudreve", {});
-        },
-        Pvz() {
-            $falcon.navTo("pvz", {});
+        Browser() {
+            $falcon.navTo("browser", {});
         }
     }
 });
