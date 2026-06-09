@@ -1,136 +1,145 @@
 <!--
  Copyright (C) 2025 Langning Chen
- 
+
  This file is part of miniapp.
- 
+
  miniapp is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation, either version 3 of the License, or
  (at your option) any later version.
- 
+
  miniapp is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  GNU General Public License for more details.
- 
+
  You should have received a copy of the GNU General Public License
  along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 -->
 
 <template>
-  <scroller class="container" scroll-direction="vertical" :show-scrollbar="true">
-    <div class="section">
-      <text class="section-title">🌐 网址收藏夹</text>
-      <text class="section-desc">管理常用网址，快速复制访问</text>
+  <div class="container">
+    <!-- 顶部工具栏 -->
+    <div class="toolbar">
+      <text class="nav-btn" @click="goBack">&lt;</text>
+      <div class="url-bar" @click="showInputPanel = true">
+        <text class="url-text">{{ displayUrl }}</text>
+      </div>
+      <text class="nav-btn" @click="toggleMenu">≡</text>
+    </div>
+
+    <!-- 输入面板 -->
+    <div v-if="showInputPanel" class="input-panel">
+      <div class="input-row">
+        <text class="input-label">网址:</text>
+        <text class="input-field" @click="inputUrl">{{ currentUrl || '输入网址...' }}</text>
+      </div>
+      <div class="input-actions">
+        <text class="input-btn go-btn" @click="goToUrl">访问</text>
+        <text class="input-btn cancel-btn" @click="showInputPanel = false">取消</text>
+      </div>
+    </div>
+
+    <!-- 菜单面板 -->
+    <div v-if="showMenu" class="menu-panel">
+      <div class="menu-header">
+        <text class="menu-title">浏览器菜单</text>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-item" @click="goHome">
+          <text class="menu-icon">🏠</text>
+          <text class="menu-text">首页</text>
+        </div>
+        <div class="menu-item" @click="refresh">
+          <text class="menu-icon">🔄</text>
+          <text class="menu-text">刷新</text>
+        </div>
+        <div class="menu-item" @click="addBookmark">
+          <text class="menu-icon">⭐</text>
+          <text class="menu-text">收藏</text>
+        </div>
+        <div class="menu-item" @click="showBookmarksList">
+          <text class="menu-icon">📋</text>
+          <text class="menu-text">收藏夹</text>
+        </div>
+      </div>
+      <div class="quick-sites">
+        <text class="quick-title">快捷网站</text>
+        <div class="quick-row">
+          <text class="quick-site" @click="loadUrl('https://m.baidu.com')">百度</text>
+          <text class="quick-site" @click="loadUrl('https://m.bing.com')">必应</text>
+          <text class="quick-site" @click="loadUrl('https://m.github.com')">GitHub</text>
+        </div>
+      </div>
+      <text class="menu-close" @click="showMenu = false">关闭菜单</text>
+    </div>
+
+    <!-- 收藏夹列表 -->
+    <div v-if="showBookmarks" class="bookmarks-panel">
+      <div class="panel-header">
+        <text class="panel-title">我的收藏</text>
+        <text class="panel-close" @click="showBookmarks = false">✕</text>
+      </div>
+      <scroller class="bookmarks-list" scroll-direction="vertical" :show-scrollbar="true">
+        <div v-for="(item, idx) in bookmarks" :key="idx" class="bookmark-item">
+          <text class="bookmark-name" @click="loadUrl(item.url)">{{ item.title }}</text>
+          <text class="bookmark-del" @click="deleteBookmark(idx)">删除</text>
+        </div>
+        <div v-if="bookmarks.length === 0" class="empty-tip">
+          <text class="empty-text">暂无收藏</text>
+        </div>
+      </scroller>
+    </div>
+
+    <!-- 主内容区 -->
+    <div v-if="!currentUrl" class="home-content">
+      <text class="home-title">🌐 迷你浏览器</text>
+      <text class="home-subtitle">专为小屏幕设计</text>
       
-      <div class="url-input-section">
-        <text class="input-label">网址输入</text>
-        <div class="input-row">
-          <text class="url-display" @click="inputUrl">{{ currentUrl || '点击输入网址...' }}</text>
+      <div class="search-box" @click="showInputPanel = true">
+        <text class="search-placeholder">点击输入网址搜索...</text>
+      </div>
+
+      <div class="site-grid">
+        <div class="site-item" @click="loadUrl('https://m.baidu.com')">
+          <text class="site-icon">🔍</text>
+          <text class="site-name">百度</text>
         </div>
-        <div class="button-row">
-          <text class="action-btn copy-btn" @click="copyUrl">📋 复制网址</text>
-          <text class="action-btn save-btn" @click="saveToBookmarks">⭐ 收藏</text>
+        <div class="site-item" @click="loadUrl('https://m.bing.com')">
+          <text class="site-icon">🔎</text>
+          <text class="site-name">必应</text>
+        </div>
+        <div class="site-item" @click="loadUrl('https://m.github.com')">
+          <text class="site-icon">💻</text>
+          <text class="site-name">GitHub</text>
+        </div>
+        <div class="site-item" @click="loadUrl('https://m.bilibili.com')">
+          <text class="site-icon">📺</text>
+          <text class="site-name">B站</text>
+        </div>
+        <div class="site-item" @click="loadUrl('https://m.zhihu.com')">
+          <text class="site-icon">💬</text>
+          <text class="site-name">知乎</text>
+        </div>
+        <div class="site-item" @click="loadUrl('https://m.sohu.com')">
+          <text class="site-icon">📰</text>
+          <text class="site-name">搜狐</text>
         </div>
       </div>
     </div>
-    
-    <div class="section">
-      <text class="section-title">⚡ 快捷链接</text>
-      <div class="quick-links">
-        <div class="quick-link-item" @click="copyQuickLink('https://www.baidu.com')">
-          <text class="quick-link-icon">🔍</text>
-          <text class="quick-link-name">百度</text>
-        </div>
-        <div class="quick-link-item" @click="copyQuickLink('https://www.bing.com')">
-          <text class="quick-link-icon">🔎</text>
-          <text class="quick-link-name">必应</text>
-        </div>
-        <div class="quick-link-item" @click="copyQuickLink('https://www.google.com')">
-          <text class="quick-link-icon">🌐</text>
-          <text class="quick-link-name">谷歌</text>
-        </div>
-        <div class="quick-link-item" @click="copyQuickLink('https://github.com')">
-          <text class="quick-link-icon">💻</text>
-          <text class="quick-link-name">GitHub</text>
-        </div>
-        <div class="quick-link-item" @click="copyQuickLink('https://www.bilibili.com')">
-          <text class="quick-link-icon">📺</text>
-          <text class="quick-link-name">B站</text>
-        </div>
-        <div class="quick-link-item" @click="copyQuickLink('https://www.zhihu.com')">
-          <text class="quick-link-icon">💬</text>
-          <text class="quick-link-name">知乎</text>
-        </div>
-        <div class="quick-link-item" @click="copyQuickLink('https://www.taobao.com')">
-          <text class="quick-link-icon">🛒</text>
-          <text class="quick-link-name">淘宝</text>
-        </div>
-        <div class="quick-link-item" @click="copyQuickLink('https://www.jd.com')">
-          <text class="quick-link-icon">📦</text>
-          <text class="quick-link-name">京东</text>
-        </div>
-      </div>
+
+    <!-- 网页内容 -->
+    <HtmlView v-else :url="currentUrl" @navigate="onNavigate" />
+
+    <!-- 底部状态栏 -->
+    <div v-if="currentUrl" class="status-bar">
+      <text class="status-btn" @click="goBack">&lt; 返回</text>
+      <text class="status-btn" @click="addBookmark">⭐ 收藏</text>
+      <text class="status-btn" @click="toggleMenu">≡ 菜单</text>
     </div>
-    
-    <div class="section">
-      <div class="section-header">
-        <text class="section-title">⭐ 我的收藏</text>
-        <text v-if="bookmarks.length > 0" class="clear-all-btn" @click="clearBookmarks">清空</text>
-      </div>
-      
-      <div v-if="bookmarks.length > 0">
-        <div v-for="(item, index) in bookmarks" :key="'bm-' + index" class="history-item">
-          <div class="item-content">
-            <text class="history-title">{{ item.title || item.url }}</text>
-            <text class="history-url">{{ item.url }}</text>
-            <text class="history-time">{{ item.time }}</text>
-          </div>
-          <div class="item-actions">
-            <text class="btn-small" @click="copyHistoryUrl(item.url)">复制</text>
-            <text class="btn-small btn-danger" @click="deleteBookmark(index)">删除</text>
-          </div>
-        </div>
-      </div>
-      <div v-else class="empty-state">
-        <text class="empty-icon">📭</text>
-        <text class="empty-text">暂无收藏网址</text>
-        <text class="empty-hint">输入网址后点击"收藏"按钮添加</text>
-      </div>
-    </div>
-    
-    <div class="section">
-      <text class="section-title">📜 浏览历史</text>
-      
-      <div v-if="history.length > 0">
-        <div v-for="(item, index) in history" :key="'his-' + index" class="history-item">
-          <div class="item-content">
-            <text class="history-title">{{ item.title || item.url }}</text>
-            <text class="history-url">{{ item.url }}</text>
-            <text class="history-time">{{ item.time }}</text>
-          </div>
-          <div class="item-actions">
-            <text class="btn-small" @click="copyHistoryUrl(item.url)">复制</text>
-            <text class="btn-small btn-danger" @click="deleteHistory(index)">删除</text>
-          </div>
-        </div>
-      </div>
-      <div v-else class="empty-state">
-        <text class="empty-icon">📭</text>
-        <text class="empty-text">暂无浏览历史</text>
-      </div>
-    </div>
-    
-    <div class="section tips-section">
-      <text class="section-title">💡 使用提示</text>
-      <text class="tip-text">• 点击快捷链接快速复制网址</text>
-      <text class="tip-text">• 输入网址后可复制或收藏</text>
-      <text class="tip-text">• 在其他设备粘贴网址访问</text>
-      <text class="tip-text">• 收藏的网址会永久保存</text>
-    </div>
-    
+
     <ToastMessage />
-  </scroller>
+  </div>
 </template>
 
 <style lang="less" scoped>
@@ -139,13 +148,10 @@
 
 <script>
 import browser from './browser';
-import Loading from '../../components/Loading.vue';
+import HtmlView from '../../components/webview.vue';
 import ToastMessage from '../../components/ToastMessage.vue';
 export default {
   ...browser,
-  components: {
-    Loading,
-    ToastMessage
-  }
+  components: { HtmlView, ToastMessage }
 };
 </script>

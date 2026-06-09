@@ -19,224 +19,176 @@ import { defineComponent } from 'vue';
 import { showError, showSuccess, showInfo } from '../../components/ToastMessage';
 import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
 
-export type BrowserOptions = {};
+export type BrowserOptions = {
+    url?: string;
+};
 
 const browser = defineComponent({
     data() {
         return {
             $page: {} as FalconPage<BrowserOptions>,
-            
             currentUrl: '' as string,
-            history: [] as Array<{ url: string; title: string; time: string }>,
-            bookmarks: [] as Array<{ url: string; title: string; time: string }>
+            showMenu: false as boolean,
+            showInputPanel: false as boolean,
+            showBookmarks: false as boolean,
+            bookmarks: [] as Array<{ url: string; title: string }>
         };
+    },
+
+    computed: {
+        displayUrl(): string {
+            if (!this.currentUrl) return '输入网址';
+            try {
+                const urlObj = new URL(this.currentUrl);
+                let path = urlObj.pathname;
+                if (path.length > 12) path = path.substring(0, 10) + '...';
+                return urlObj.hostname + path;
+            } catch {
+                return this.currentUrl.length > 18 ? this.currentUrl.substring(0, 16) + '...' : this.currentUrl;
+            }
+        }
     },
 
     async mounted() {
         this.$page.$npage.setSupportBack(true);
         this.$page.$npage.on("backpressed", this.handleBackPress);
-        await this.loadHistory();
         await this.loadBookmarks();
+
+        const options = this.$page.loadOptions;
+        if (options.url) {
+            this.currentUrl = options.url;
+        }
     },
-    
+
     beforeDestroy() {
         this.$page.$npage.off("backpressed", this.handleBackPress);
     },
 
     methods: {
         handleBackPress() {
+            if (this.showMenu) {
+                this.showMenu = false;
+            } else if (this.showInputPanel) {
+                this.showInputPanel = false;
+            } else if (this.showBookmarks) {
+                this.showBookmarks = false;
+            } else {
+                $falcon.navBack();
+            }
+        },
+
+        goBack() {
             $falcon.navBack();
         },
-        
+
+        toggleMenu() {
+            this.showMenu = !this.showMenu;
+            this.showInputPanel = false;
+            this.showBookmarks = false;
+        },
+
+        goHome() {
+            this.currentUrl = '';
+            this.showMenu = false;
+        },
+
+        refresh() {
+            if (!this.currentUrl) return;
+            const url = this.currentUrl;
+            this.currentUrl = '';
+            this.$nextTick(() => {
+                this.currentUrl = url;
+            });
+            this.showMenu = false;
+        },
+
         inputUrl() {
             openSoftKeyboard(
-                () => this.currentUrl,
+                () => this.currentUrl || 'https://',
                 (value: string) => {
                     this.currentUrl = value;
-                },
-                (value) => {
-                    if (value && !this.isValidUrl(value)) {
-                        return '请输入有效的网址';
-                    }
-                    return undefined;
                 }
             );
         },
-        
-        isValidUrl(url: string): boolean {
-            try {
-                const urlObj = new URL(this.normalizeUrl(url));
-                return true;
-            } catch {
-                return false;
+
+        goToUrl() {
+            if (!this.currentUrl) {
+                showError('请输入网址');
+                return;
             }
-        },
-        
-        normalizeUrl(url: string): string {
-            if (!url) return '';
-            
-            url = url.trim();
-            
+            let url = this.currentUrl.trim();
             if (!url.startsWith('http://') && !url.startsWith('https://')) {
                 url = 'https://' + url;
             }
-            
-            return url;
+            this.currentUrl = url;
+            this.showInputPanel = false;
         },
-        
-        async copyUrl() {
-            if (!this.currentUrl) {
-                showError('请输入网址');
-                return;
-            }
-            
-            const normalizedUrl = this.normalizeUrl(this.currentUrl);
-            
-            if (!this.isValidUrl(normalizedUrl)) {
-                showError('请输入有效的网址');
-                return;
-            }
-            
-            try {
-                this.addToHistory(normalizedUrl);
-                showSuccess(`已复制: ${normalizedUrl}`);
-            } catch (error: any) {
-                console.error('复制失败:', error);
-                showError('复制失败: ' + error.message);
-            }
+
+        loadUrl(url: string) {
+            this.currentUrl = url;
+            this.showMenu = false;
+            this.showInputPanel = false;
+            this.showBookmarks = false;
         },
-        
-        async saveToBookmarks() {
+
+        onNavigate(href: string) {
+            console.log('导航到:', href);
+        },
+
+        showBookmarksList() {
+            this.showBookmarks = true;
+            this.showMenu = false;
+        },
+
+        async addBookmark() {
             if (!this.currentUrl) {
-                showError('请输入网址');
+                showError('当前没有加载网页');
                 return;
             }
-            
-            const normalizedUrl = this.normalizeUrl(this.currentUrl);
-            
-            if (!this.isValidUrl(normalizedUrl)) {
-                showError('请输入有效的网址');
-                return;
-            }
-            
-            const existingIndex = this.bookmarks.findIndex(item => item.url === normalizedUrl);
-            if (existingIndex !== -1) {
+
+            const exists = this.bookmarks.some(b => b.url === this.currentUrl);
+            if (exists) {
                 showInfo('该网址已在收藏中');
                 return;
             }
-            
-            const now = new Date();
-            const time = now.toLocaleString();
-            
-            this.bookmarks.unshift({
-                url: normalizedUrl,
-                title: this.extractTitle(normalizedUrl),
-                time
-            });
-            
+
+            const title = this.extractTitle(this.currentUrl);
+            this.bookmarks.push({ url: this.currentUrl, title });
             await this.saveBookmarks();
-            showSuccess('已收藏: ' + normalizedUrl);
+            showSuccess('已添加到收藏');
         },
-        
-        copyQuickLink(url: string) {
-            this.currentUrl = url;
-            this.addToHistory(url);
-            showSuccess(`已复制: ${url}`);
-        },
-        
-        copyHistoryUrl(url: string) {
-            this.currentUrl = url;
-            showSuccess(`已复制: ${url}`);
-        },
-        
-        deleteHistory(index: number) {
-            if (index >= 0 && index < this.history.length) {
-                this.history.splice(index, 1);
-                this.saveHistory();
-                showSuccess('已删除');
-            }
-        },
-        
-        deleteBookmark(index: number) {
-            if (index >= 0 && index < this.bookmarks.length) {
-                this.bookmarks.splice(index, 1);
-                this.saveBookmarks();
-                showSuccess('已删除收藏');
-            }
-        },
-        
-        async clearBookmarks() {
-            this.bookmarks = [];
+
+        async deleteBookmark(index: number) {
+            this.bookmarks.splice(index, 1);
             await this.saveBookmarks();
-            showSuccess('已清空收藏');
+            showSuccess('已删除');
         },
-        
-        addToHistory(url: string) {
-            const now = new Date();
-            const time = now.toLocaleString();
-            
-            const existingIndex = this.history.findIndex(item => item.url === url);
-            if (existingIndex !== -1) {
-                this.history.splice(existingIndex, 1);
-            }
-            
-            this.history.unshift({
-                url,
-                title: this.extractTitle(url),
-                time
-            });
-            
-            if (this.history.length > 20) {
-                this.history.pop();
-            }
-            
-            this.saveHistory();
-        },
-        
+
         extractTitle(url: string): string {
             try {
                 const urlObj = new URL(url);
-                return urlObj.hostname;
+                return urlObj.hostname.replace('www.', '').replace('m.', '');
             } catch {
                 return url;
             }
         },
-        
-        async loadHistory() {
-            try {
-                const data = await $falcon.storage.get('browser_history');
-                if (data) {
-                    this.history = JSON.parse(data);
-                }
-            } catch (error) {
-                console.error('加载浏览历史失败:', error);
-            }
-        },
-        
-        async saveHistory() {
-            try {
-                await $falcon.storage.set('browser_history', JSON.stringify(this.history));
-            } catch (error) {
-                console.error('保存浏览历史失败:', error);
-            }
-        },
-        
+
         async loadBookmarks() {
             try {
                 const data = await $falcon.storage.get('browser_bookmarks');
                 if (data) {
                     this.bookmarks = JSON.parse(data);
                 }
-            } catch (error) {
-                console.error('加载收藏失败:', error);
+            } catch (e) {
+                console.error('加载收藏失败:', e);
             }
         },
-        
+
         async saveBookmarks() {
             try {
                 await $falcon.storage.set('browser_bookmarks', JSON.stringify(this.bookmarks));
-            } catch (error) {
-                console.error('保存收藏失败:', error);
+            } catch (e) {
+                console.error('保存收藏失败:', e);
             }
         }
     }
