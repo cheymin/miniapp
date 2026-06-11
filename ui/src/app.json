@@ -25,7 +25,9 @@
     "qqchat": "pages/qqchat/qqchat.vue",
     "minAi": "pages/minAi/minAi.vue",
     "cloudreve": "pages/cloudreve/cloudreve.vue",
-    "pvz": "pages/pvz/pvz.vue"
+    "pvz": "pages/pvz/pvz.vue",
+    "webdavManager": "pages/webdavManager/webdavManager.vue",
+    "dbAi": "pages/dbAi/dbAi.vue"
   },
   "options": {
     "style": {

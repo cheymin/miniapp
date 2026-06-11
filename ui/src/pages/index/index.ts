@@ -71,6 +71,12 @@ const index = defineComponent({
         },
         Pvz() {
             $falcon.navTo("pvz", {});
+        },
+        WebdavManager() {
+            $falcon.navTo("webdavManager", {});
+        },
+        DbAi() {
+            $falcon.navTo("dbAi", {});
         }
     }
 });
