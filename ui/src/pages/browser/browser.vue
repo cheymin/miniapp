@@ -31,7 +31,6 @@
     <!-- 输入面板 -->
     <div v-if="showInputPanel" class="input-panel">
       <div class="input-row">
-        <text class="input-label">网址:</text>
         <text class="input-field" @click="inputUrl">{{ currentUrl || '输入网址...' }}</text>
       </div>
       <div class="input-actions">
@@ -42,34 +41,17 @@
 
     <!-- 菜单面板 -->
     <div v-if="showMenu" class="menu-panel">
-      <div class="menu-header">
-        <text class="menu-title">浏览器菜单</text>
+      <div class="menu-item" @click="goHome">
+        <text class="menu-text">🏠 首页</text>
       </div>
-      <div class="menu-grid">
-        <div class="menu-item" @click="goHome">
-          <text class="menu-icon">🏠</text>
-          <text class="menu-text">首页</text>
-        </div>
-        <div class="menu-item" @click="refresh">
-          <text class="menu-icon">🔄</text>
-          <text class="menu-text">刷新</text>
-        </div>
-        <div class="menu-item" @click="addBookmark">
-          <text class="menu-icon">⭐</text>
-          <text class="menu-text">收藏</text>
-        </div>
-        <div class="menu-item" @click="showBookmarksList">
-          <text class="menu-icon">📋</text>
-          <text class="menu-text">收藏夹</text>
-        </div>
+      <div class="menu-item" @click="refresh">
+        <text class="menu-text">🔄 刷新</text>
       </div>
-      <div class="quick-sites">
-        <text class="quick-title">快捷网站</text>
-        <div class="quick-row">
-          <text class="quick-site" @click="loadUrl('http://m.baidu.com')">百度</text>
-          <text class="quick-site" @click="loadUrl('http://m.bing.com')">必应</text>
-          <text class="quick-site" @click="loadUrl('http://m.github.com')">GitHub</text>
-        </div>
+      <div class="menu-item" @click="addBookmark">
+        <text class="menu-text">⭐ 收藏</text>
+      </div>
+      <div class="menu-item" @click="showBookmarksList">
+        <text class="menu-text">📋 收藏夹</text>
       </div>
       <text class="menu-close" @click="showMenu = false">关闭菜单</text>
     </div>
@@ -83,7 +65,7 @@
       <scroller class="bookmarks-list" scroll-direction="vertical" :show-scrollbar="true">
         <div v-for="(item, idx) in bookmarks" :key="idx" class="bookmark-item">
           <text class="bookmark-name" @click="loadUrl(item.url)">{{ item.title }}</text>
-          <text class="bookmark-del" @click="deleteBookmark(idx)">删除</text>
+          <text class="bookmark-del" @click="deleteBookmark(idx)">✕</text>
         </div>
         <div v-if="bookmarks.length === 0" class="empty-tip">
           <text class="empty-text">暂无收藏</text>
@@ -94,10 +76,9 @@
     <!-- 主内容区 -->
     <div v-if="!currentUrl" class="home-content">
       <text class="home-title">🌐 迷你浏览器</text>
-      <text class="home-subtitle">专为小屏幕设计</text>
       
       <div class="search-box" @click="showInputPanel = true">
-        <text class="search-placeholder">点击输入网址搜索...</text>
+        <text class="search-placeholder">点击输入网址...</text>
       </div>
 
       <div class="site-grid">
@@ -117,14 +98,6 @@
           <text class="site-icon">📺</text>
           <text class="site-name">B站</text>
         </div>
-        <div class="site-item" @click="loadUrl('http://m.zhihu.com')">
-          <text class="site-icon">💬</text>
-          <text class="site-name">知乎</text>
-        </div>
-        <div class="site-item" @click="loadUrl('http://m.sohu.com')">
-          <text class="site-icon">📰</text>
-          <text class="site-name">搜狐</text>
-        </div>
       </div>
     </div>
 
@@ -134,8 +107,8 @@
     <!-- 底部状态栏 -->
     <div v-if="currentUrl" class="status-bar">
       <text class="status-btn" @click="goBack">&lt; 返回</text>
-      <text class="status-btn" @click="addBookmark">⭐ 收藏</text>
-      <text class="status-btn" @click="toggleMenu">≡ 菜单</text>
+      <text class="status-btn" @click="addBookmark">⭐</text>
+      <text class="status-btn" @click="toggleMenu">≡</text>
     </div>
 
     <ToastMessage />
@@ -144,52 +117,52 @@
 
 <style lang="less" scoped>
 .container {
-  width: 320px;
-  height: 240px;
+  width: 172px;
+  height: 560px;
   display: flex;
   flex-direction: column;
   background-color: #f5f5f5;
 }
 
 .toolbar {
-  height: 28px;
+  height: 32px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0 6px;
+  padding: 0 4px;
   background-color: #4a90d9;
 }
 
 .nav-btn {
   font-size: 14px;
   color: #ffffff;
-  padding: 4px 8px;
+  padding: 4px 6px;
 }
 
 .url-bar {
   flex: 1;
   height: 22px;
-  margin: 0 6px;
-  padding: 0 8px;
+  margin: 0 4px;
+  padding: 0 6px;
   background-color: rgba(255,255,255,0.2);
-  border-radius: 11px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
 }
 
 .url-text {
-  font-size: 10px;
+  font-size: 9px;
   color: #ffffff;
   lines: 1;
 }
 
 .input-panel {
   position: absolute;
-  top: 28px;
+  top: 32px;
   left: 0;
   right: 0;
   background-color: #ffffff;
-  padding: 8px;
+  padding: 6px;
   border-bottom-width: 1px;
   border-bottom-color: #e0e0e0;
   border-bottom-style: solid;
@@ -197,23 +170,13 @@
 }
 
 .input-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
-.input-label {
-  font-size: 11px;
-  color: #666666;
-  width: 40px;
+  margin-bottom: 6px;
 }
 
 .input-field {
-  flex: 1;
-  font-size: 11px;
+  font-size: 10px;
   color: #333333;
-  padding: 6px 8px;
+  padding: 5px 6px;
   background-color: #f5f5f5;
   border-radius: 4px;
 }
@@ -225,11 +188,11 @@
 }
 
 .input-btn {
-  font-size: 11px;
+  font-size: 10px;
   color: #ffffff;
-  padding: 4px 12px;
+  padding: 4px 10px;
   border-radius: 4px;
-  margin-left: 8px;
+  margin-left: 6px;
 }
 
 .go-btn {
@@ -242,124 +205,68 @@
 
 .menu-panel {
   position: absolute;
-  top: 28px;
+  top: 32px;
   right: 0;
-  width: 200px;
+  width: 120px;
   background-color: #ffffff;
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   z-index: 100;
 }
 
-.menu-header {
-  padding: 8px;
+.menu-item {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
   border-bottom-width: 1px;
-  border-bottom-color: #e0e0e0;
+  border-bottom-color: #f0f0f0;
   border-bottom-style: solid;
 }
 
-.menu-title {
-  font-size: 12px;
-  color: #333333;
-  font-weight: bold;
-}
-
-.menu-grid {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 8px;
-}
-
-.menu-item {
-  width: 80px;
-  height: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.menu-icon {
-  font-size: 18px;
-  margin-bottom: 2px;
-}
-
 .menu-text {
-  font-size: 10px;
-  color: #666666;
-}
-
-.quick-sites {
-  padding: 8px;
-  border-top-width: 1px;
-  border-top-color: #e0e0e0;
-  border-top-style: solid;
-}
-
-.quick-title {
-  font-size: 10px;
-  color: #999999;
-  margin-bottom: 4px;
-}
-
-.quick-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.quick-site {
-  font-size: 10px;
-  color: #4a90d9;
-  padding: 4px 8px;
-  margin-right: 4px;
-  margin-bottom: 4px;
-  background-color: #f0f7ff;
-  border-radius: 4px;
+  font-size: 11px;
+  color: #333333;
 }
 
 .menu-close {
   display: block;
-  font-size: 11px;
+  font-size: 10px;
   color: #999999;
   text-align: center;
   padding: 8px;
-  border-top-width: 1px;
-  border-top-color: #e0e0e0;
-  border-top-style: solid;
 }
 
 .bookmarks-panel {
   position: absolute;
-  top: 28px;
+  top: 32px;
   left: 0;
   right: 0;
-  bottom: 28px;
+  bottom: 32px;
   background-color: #ffffff;
   z-index: 100;
 }
 
 .panel-header {
-  height: 32px;
+  height: 28px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 8px;
   border-bottom-width: 1px;
   border-bottom-color: #e0e0e0;
   border-bottom-style: solid;
 }
 
 .panel-title {
-  font-size: 12px;
+  font-size: 11px;
   color: #333333;
   font-weight: bold;
 }
 
 .panel-close {
-  font-size: 14px;
+  font-size: 12px;
   color: #999999;
 }
 
@@ -368,19 +275,19 @@
 }
 
 .bookmark-item {
-  height: 32px;
+  height: 28px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 8px;
   border-bottom-width: 1px;
   border-bottom-color: #f0f0f0;
   border-bottom-style: solid;
 }
 
 .bookmark-name {
-  font-size: 11px;
+  font-size: 10px;
   color: #333333;
   flex: 1;
   lines: 1;
@@ -389,7 +296,7 @@
 .bookmark-del {
   font-size: 10px;
   color: #e74c3c;
-  padding: 4px 8px;
+  padding: 4px 6px;
 }
 
 .empty-tip {
@@ -398,7 +305,7 @@
 }
 
 .empty-text {
-  font-size: 11px;
+  font-size: 10px;
   color: #999999;
 }
 
@@ -412,32 +319,26 @@
 }
 
 .home-title {
-  font-size: 16px;
+  font-size: 14px;
   color: #333333;
   font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 4px;
-}
-
-.home-subtitle {
-  font-size: 10px;
-  color: #999999;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
 .search-box {
-  width: 280px;
-  height: 32px;
+  width: 150px;
+  height: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f5f5f5;
-  border-radius: 16px;
-  margin-bottom: 12px;
+  border-radius: 14px;
+  margin-bottom: 15px;
 }
 
 .search-placeholder {
-  font-size: 11px;
+  font-size: 10px;
   color: #999999;
 }
 
@@ -449,29 +350,29 @@
 }
 
 .site-item {
-  width: 80px;
-  height: 60px;
+  width: 70px;
+  height: 55px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 4px;
   background-color: #f9f9f9;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 
 .site-icon {
-  font-size: 20px;
-  margin-bottom: 4px;
+  font-size: 18px;
+  margin-bottom: 3px;
 }
 
 .site-name {
-  font-size: 10px;
+  font-size: 9px;
   color: #666666;
 }
 
 .status-bar {
-  height: 28px;
+  height: 32px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -485,7 +386,7 @@
 .status-btn {
   font-size: 10px;
   color: #4a90d9;
-  padding: 4px 8px;
+  padding: 4px 6px;
 }
 </style>
 

@@ -27,17 +27,15 @@
 
     <!-- 路径导航 -->
     <div class="path-bar">
-      <text class="path-label">路径:</text>
+      <text class="nav-btn" @click="goBack">&lt;</text>
       <scroller class="path-scroller" scroll-direction="horizontal" :show-scrollbar="false">
         <text class="path-text">{{ currentPath || '/' }}</text>
       </scroller>
-      <text class="nav-btn" @click="goBack">&lt;</text>
     </div>
 
     <!-- 文件列表 -->
     <scroller class="file-list" scroll-direction="vertical" :show-scrollbar="true">
       <div v-if="!isConnected" class="empty-state">
-        <text class="empty-icon">🔌</text>
         <text class="empty-text">未连接WebDAV服务器</text>
         <text class="empty-hint">点击右上角"设置"配置连接</text>
       </div>
@@ -47,16 +45,15 @@
       </div>
 
       <div v-else-if="files.length === 0" class="empty-state">
-        <text class="empty-icon">📂</text>
         <text class="empty-text">目录为空</text>
       </div>
 
       <div v-else>
-        <div v-for="file in files" :key="file.href" class="file-item" @click="openItem(file)">
-          <text :class="['file-icon', file.isDirectory ? 'icon-folder' : 'icon-file']">{{ file.isDirectory ? '📁' : '📄' }}</text>
+        <div v-for="(file, idx) in files" :key="idx" class="file-item" @click="openItem(file)">
+          <text class="file-icon">{{ file.isDirectory ? '📁' : '📄' }}</text>
           <div class="file-info">
             <text class="file-name">{{ file.name }}</text>
-            <text class="file-meta">{{ file.size }} | {{ file.modified }}</text>
+            <text class="file-meta">{{ file.size }}</text>
           </div>
         </div>
       </div>
@@ -65,13 +62,12 @@
     <!-- 操作栏 -->
     <div class="action-bar">
       <text class="action-btn" @click="refreshList">刷新</text>
-      <text class="action-btn" @click="createFolder">新建目录</text>
-      <text class="action-btn" @click="uploadFile">上传</text>
+      <text class="action-btn" @click="createFolder">新建</text>
     </div>
 
     <!-- 设置面板 -->
-    <div v-if="showSettings" class="modal-overlay">
-      <div class="modal-content">
+    <div v-if="showSettings" class="modal-overlay" @click="showSettings = false">
+      <div class="modal-content" @click.stop="">
         <text class="modal-title">WebDAV设置</text>
         
         <div class="form-item">
@@ -91,7 +87,7 @@
 
         <div class="modal-buttons">
           <text class="modal-btn btn-primary" @click="saveSettings">保存</text>
-          <text class="modal-btn" @click="testConnection">测试连接</text>
+          <text class="modal-btn" @click="testConnection">测试</text>
           <text class="modal-btn btn-danger" @click="showSettings = false">取消</text>
         </div>
       </div>
@@ -103,15 +99,15 @@
 
 <style lang="less" scoped>
 .container {
-  width: 320px;
-  height: 240px;
+  width: 172px;
+  height: 560px;
   display: flex;
   flex-direction: column;
   background-color: #f5f5f5;
 }
 
 .header {
-  height: 28px;
+  height: 36px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -135,21 +131,21 @@
 }
 
 .path-bar {
-  height: 24px;
+  height: 28px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0 8px;
+  padding: 0 4px;
   background-color: #ffffff;
   border-bottom-width: 1px;
   border-bottom-color: #e0e0e0;
   border-bottom-style: solid;
 }
 
-.path-label {
-  font-size: 10px;
-  color: #666666;
-  margin-right: 4px;
+.nav-btn {
+  font-size: 14px;
+  color: #4a90d9;
+  padding: 2px 6px;
 }
 
 .path-scroller {
@@ -161,12 +157,6 @@
   font-size: 10px;
   color: #333333;
   lines: 1;
-}
-
-.nav-btn {
-  font-size: 14px;
-  color: #4a90d9;
-  padding: 2px 8px;
 }
 
 .file-list {
@@ -181,11 +171,6 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-}
-
-.empty-icon {
-  font-size: 32px;
-  margin-bottom: 8px;
 }
 
 .empty-text {
@@ -205,11 +190,11 @@
 }
 
 .file-item {
-  height: 36px;
+  height: 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0 8px;
+  padding: 0 6px;
   border-bottom-width: 1px;
   border-bottom-color: #f0f0f0;
   border-bottom-style: solid;
@@ -217,15 +202,7 @@
 
 .file-icon {
   font-size: 16px;
-  margin-right: 8px;
-}
-
-.icon-folder {
-  color: #f5a623;
-}
-
-.icon-file {
-  color: #4a90d9;
+  margin-right: 6px;
 }
 
 .file-info {
@@ -248,7 +225,7 @@
 }
 
 .action-bar {
-  height: 28px;
+  height: 32px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -278,34 +255,34 @@
 }
 
 .modal-content {
-  width: 280px;
+  width: 160px;
   background-color: #ffffff;
   border-radius: 8px;
-  padding: 12px;
+  padding: 10px;
 }
 
 .modal-title {
-  font-size: 14px;
+  font-size: 13px;
   color: #333333;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 12px;
-}
-
-.form-item {
   margin-bottom: 10px;
 }
 
+.form-item {
+  margin-bottom: 8px;
+}
+
 .form-label {
-  font-size: 11px;
+  font-size: 10px;
   color: #666666;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .form-input {
-  font-size: 11px;
+  font-size: 10px;
   color: #333333;
-  padding: 6px 8px;
+  padding: 5px 6px;
   background-color: #f5f5f5;
   border-radius: 4px;
   border-width: 1px;
@@ -317,15 +294,17 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 12px;
+  margin-top: 10px;
+  flex-wrap: wrap;
 }
 
 .modal-btn {
-  font-size: 11px;
+  font-size: 10px;
   color: #666666;
-  padding: 6px 12px;
+  padding: 5px 10px;
   background-color: #f5f5f5;
   border-radius: 4px;
+  margin: 2px;
 }
 
 .btn-primary {

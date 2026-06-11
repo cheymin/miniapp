@@ -65,20 +65,20 @@
 
 <style lang="less" scoped>
 .container {
-  width: 320px;
-  height: 240px;
+  width: 172px;
+  height: 560px;
   display: flex;
   flex-direction: column;
   background-color: #f0f0f0;
 }
 
 .header {
-  height: 28px;
+  height: 36px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
+  padding: 0 8px;
   background-color: #6c5ce7;
 }
 
@@ -111,12 +111,12 @@
 }
 
 .welcome-icon {
-  font-size: 36px;
+  font-size: 32px;
   margin-bottom: 8px;
 }
 
 .welcome-title {
-  font-size: 16px;
+  font-size: 14px;
   color: #333333;
   font-weight: bold;
   margin-bottom: 4px;
@@ -137,7 +137,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 6px 8px;
+  padding: 6px 6px;
 }
 
 .msg-left {
@@ -149,30 +149,30 @@
 }
 
 .avatar {
-  width: 24px;
-  height: 24px;
-  border-radius: 12px;
+  width: 22px;
+  height: 22px;
+  border-radius: 11px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 9px;
+  font-size: 8px;
   color: #ffffff;
 }
 
 .avatar-ai {
   background-color: #6c5ce7;
-  margin-right: 6px;
+  margin-right: 4px;
 }
 
 .avatar-user {
   background-color: #00b894;
-  margin-left: 6px;
+  margin-left: 4px;
 }
 
 .bubble {
-  max-width: 220px;
-  padding: 6px 10px;
-  border-radius: 8px;
+  max-width: 120px;
+  padding: 5px 8px;
+  border-radius: 6px;
 }
 
 .bubble-ai {
@@ -184,7 +184,7 @@
 }
 
 .bubble-text {
-  font-size: 11px;
+  font-size: 10px;
   color: #333333;
   lines: 0;
 }
@@ -194,11 +194,11 @@
 }
 
 .input-area {
-  height: 32px;
+  height: 36px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0 8px;
+  padding: 0 6px;
   background-color: #ffffff;
   border-top-width: 1px;
   border-top-color: #e0e0e0;
@@ -208,20 +208,20 @@
 .input-box {
   flex: 1;
   height: 24px;
-  font-size: 11px;
+  font-size: 10px;
   color: #333333;
-  padding: 0 8px;
+  padding: 0 6px;
   background-color: #f5f5f5;
-  border-radius: 12px;
+  border-radius: 10px;
   lines: 1;
 }
 
 .send-btn {
-  font-size: 11px;
+  font-size: 10px;
   color: #ffffff;
-  padding: 4px 12px;
-  border-radius: 12px;
-  margin-left: 8px;
+  padding: 4px 10px;
+  border-radius: 10px;
+  margin-left: 6px;
 }
 
 .send-active {

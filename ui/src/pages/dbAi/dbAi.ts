@@ -17,7 +17,7 @@
 
 import { defineComponent } from 'vue';
 import { AI } from 'langningchen';
-import { showError, showSuccess, showInfo } from '../../components/ToastMessage';
+import { showError, showSuccess } from '../../components/ToastMessage';
 import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
 
 export type DbAiOptions = {};
@@ -28,24 +28,7 @@ interface Message {
     timestamp: number;
 }
 
-interface DbData {
-    messages: Message[];
-    settings: {
-        model: string;
-        temperature: number;
-    };
-}
-
-const DB_PATH = '/userdisk/min/db';
-const DB_FILE = DB_PATH + '/dbai.db';
-
-const DEFAULT_DATA: DbData = {
-    messages: [],
-    settings: {
-        model: 'default',
-        temperature: 0.7
-    }
-};
+const DB_KEY = 'dbai_messages';
 
 export default defineComponent({
     data() {
@@ -55,17 +38,16 @@ export default defineComponent({
             inputText: '' as string,
             isGenerating: false as boolean,
             streamingText: '' as string,
-            aiInitialized: false as boolean,
-            dbData: null as DbData | null
+            aiInitialized: false as boolean
         };
     },
 
-    async mounted() {
+    mounted() {
         this.$page.$npage.setSupportBack(true);
         this.$page.$npage.on("backpressed", () => { $falcon.navBack(); });
 
-        // 加载DB数据
-        await this.loadFromDB();
+        // 加载历史消息
+        this.loadMessages();
 
         // 初始化AI
         try {
@@ -76,66 +58,29 @@ export default defineComponent({
                 this.streamingText += data;
             });
         } catch (e) {
-            showError('AI初始化失败');
             console.error('AI初始化错误:', e);
         }
     },
 
     methods: {
-        // 从DB文件加载数据
-        async loadFromDB() {
+        // 加载消息
+        async loadMessages() {
             try {
-                const data = await this.readDB();
+                const data = await $falcon.storage.get(DB_KEY);
                 if (data) {
-                    this.dbData = JSON.parse(data);
-                    this.messages = this.dbData?.messages || [];
-                } else {
-                    this.dbData = { ...DEFAULT_DATA };
-                    this.messages = [];
+                    this.messages = JSON.parse(data);
                 }
             } catch (e) {
-                console.error('加载DB失败:', e);
-                this.dbData = { ...DEFAULT_DATA };
-                this.messages = [];
+                console.error('加载消息失败:', e);
             }
         },
 
-        // 保存数据到DB文件
-        async saveToDB() {
+        // 保存消息
+        async saveMessages() {
             try {
-                if (!this.dbData) {
-                    this.dbData = { ...DEFAULT_DATA };
-                }
-                this.dbData.messages = this.messages;
-                await this.writeDB(JSON.stringify(this.dbData));
+                await $falcon.storage.set(DB_KEY, JSON.stringify(this.messages));
             } catch (e) {
-                console.error('保存DB失败:', e);
-            }
-        },
-
-        // 读取DB文件
-        async readDB(): Promise<string> {
-            try {
-                const result = await $falcon.storage.read(DB_FILE);
-                return result || '';
-            } catch (e) {
-                return '';
-            }
-        },
-
-        // 写入DB文件
-        async writeDB(data: string) {
-            try {
-                // 确保目录存在
-                try {
-                    await $falcon.storage.mkdir(DB_PATH);
-                } catch (e) {
-                    // 目录可能已存在
-                }
-                await $falcon.storage.write(DB_FILE, data);
-            } catch (e) {
-                console.error('写入DB失败:', e);
-                throw e;
+                console.error('保存消息失败:', e);
             }
         },
 
@@ -174,8 +119,8 @@ export default defineComponent({
             this.streamingText = '';
             this.isGenerating = true;
 
-            // 保存到DB
-            await this.saveToDB();
+            // 保存消息
+            await this.saveMessages();
 
             try {
                 // 调用AI
@@ -190,8 +135,8 @@ export default defineComponent({
                 };
                 this.messages.push(aiMsg);
                 
-                // 保存到DB
-                await this.saveToDB();
+                // 保存消息
+                await this.saveMessages();
                 
             } catch (e) {
                 showError('生成响应失败');
@@ -219,7 +164,7 @@ export default defineComponent({
                         timestamp: Date.now()
                     };
                     this.messages.push(aiMsg);
-                    await this.saveToDB();
+                    await this.saveMessages();
                 }
                 
                 this.streamingText = '';
@@ -232,9 +177,7 @@ export default defineComponent({
             this.streamingText = '';
             this.isGenerating = false;
             
-            // 清空DB
-            this.dbData = { ...DEFAULT_DATA };
-            await this.saveToDB();
+            await $falcon.storage.remove(DB_KEY);
             
             showSuccess('历史已清空');
         }

@@ -54,20 +54,11 @@ const index = defineComponent({
         Gallery() {
             $falcon.navTo("gallery", {});
         },
-        MusicPlayer() {
-            $falcon.navTo("musicPlayer", {});
-        },
-        VideoPlayer() {
-            $falcon.navTo("videoPlayer", {});
-        },
         Update() {
             $falcon.navTo("update", {});
         },
         MinAi() {
             $falcon.navTo("minAi", {});
-        },
-        Cloudreve() {
-            $falcon.navTo("cloudreve", {});
         },
         Pvz() {
             $falcon.navTo("pvz", {});
@@ -77,6 +68,9 @@ const index = defineComponent({
         },
         DbAi() {
             $falcon.navTo("dbAi", {});
+        },
+        Browser() {
+            $falcon.navTo("browser", {});
         }
     }
 });

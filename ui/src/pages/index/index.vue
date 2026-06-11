@@ -28,7 +28,7 @@
             <div class="item"><text class="item-text" @click="FileEditor">文本编辑器</text></div>
             <div class="item"><text class="item-text" @click="FileManager">文件管理器</text></div>
             <div class="item"><text class="item-text" @click="WebdavManager">WebDAV文件管理</text></div>
-            <div class="item"><text class="item-text" @click="Cloudreve">Cloudreve</text></div>
+            <div class="item"><text class="item-text" @click="Browser">浏览器</text></div>
             <div class="item"><text class="item-text" @click="PenTerm">PenTerm</text></div>
         </div>
         
@@ -37,8 +37,6 @@
             
             <div class="item"><text class="item-text" @click="ImageViewer">图片查看器</text></div>
             <div class="item"><text class="item-text" @click="Gallery">图库</text></div>
-            <div class="item"><text class="item-text" @click="MusicPlayer">音乐播放器</text></div>
-            <div class="item"><text class="item-text" @click="VideoPlayer">视频播放器</text></div>
         </div>
         
         <div class="section">
@@ -66,4 +64,3 @@
 import index from './index';
 export default index;
 </script>
-
