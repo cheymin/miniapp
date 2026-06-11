@@ -24,7 +24,6 @@
             
             <div class="item"><text class="item-text" @click="openAi">AI 助手</text></div>
             <div class="item"><text class="item-text" @click="MinAi">min-AI 助手</text></div>
-            <div class="item"><text class="item-text" @click="DbAi">DB-AI 助手</text></div>
             <div class="item"><text class="item-text" @click="FileEditor">文本编辑器</text></div>
             <div class="item"><text class="item-text" @click="FileManager">文件管理器</text></div>
             <div class="item"><text class="item-text" @click="WebdavManager">WebDAV文件管理</text></div>

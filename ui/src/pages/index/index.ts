@@ -66,9 +66,6 @@ const index = defineComponent({
         WebdavManager() {
             $falcon.navTo("webdavManager", {});
         },
-        DbAi() {
-            $falcon.navTo("dbAi", {});
-        },
         Browser() {
             $falcon.navTo("browser", {});
         }
