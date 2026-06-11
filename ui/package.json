@@ -1,7 +1,7 @@
 {
   "name": "min的工具箱",
   "appid": "8001749644971194",
-  "version": "1.2.13.21",
+  "version": "1.2.13.22",
   "description": "一个简单易用的工具箱（新版）",
   "icon": "app_icon.png",
   "quickjs": {
@@ -22,9 +22,14 @@
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^12.1.3",
-    "@vue/compiler-sfc": "^3.5.17",
+    "@vue/compiler-sfc": "^2.6.12",
     "aiot-vue-cli": "^1.0.32",
-    "vue": "^3.5.17"
+    "vue": "2.6.12"
+  },
+  "pnpm": {
+    "overrides": {
+      "vue": "2.6.12"
+    }
   },
   "packageManager": "pnpm@10.12.4"
 }
