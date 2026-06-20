@@ -1,6 +1,7 @@
 #include "Penshell.hpp"
 #include <iostream>
 #include <algorithm>
+#include <sys/select.h>
 
 Penshell::Penshell() = default;
 
@@ -69,7 +70,11 @@ std::string Penshell::exec(const std::string& cmd) {
 
     // 写入命令 + 结束标记
     std::string fullCmd = cmd + "\necho " + DONE_MARKER + "\n";
-    write(stdinFd, fullCmd.c_str(), fullCmd.size());
+    // 使用 POSIX write 写入 stdin 管道
+    if (::write(stdinFd, fullCmd.c_str(), fullCmd.size()) < 0) {
+        resultCV.notify_one();
+        throw std::runtime_error("写入 stdin 失败");
+    }
 
     // 等待结束标记出现
     resultCV.wait(lock, [this]() {
