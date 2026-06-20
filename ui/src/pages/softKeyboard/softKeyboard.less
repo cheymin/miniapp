@@ -1,73 +1,307 @@
-.editor-content {
+.keyboard-container {
     position: absolute;
     left: 0px;
     top: 0px;
-    width: 560px;
-    height: 170px;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a2e;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* ─── 显示区 ─── */
+
+.display-area {
+    background-color: #16213e;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #2a2a4a;
+    padding: 8px 10px;
+    min-height: 44px;
+    display: flex;
+    flex-direction: column;
+}
+
+.display-scroller {
+    width: 100%;
+    height: 28px;
+}
+
+.display-text {
+    font-size: 20px;
+    color: #e0e0e0;
+    line-height: 28px;
+    font-family: 'Courier New', monospace;
+    white-space: nowrap;
+    letter-spacing: 1px;
+}
+
+.display-info {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2px;
+}
+
+.char-count {
+    font-size: 11px;
+    color: #666;
+}
+
+.mode-indicator {
+    font-size: 11px;
+    color: #007acc;
+    font-weight: bold;
+}
+
+/* ─── 剪贴板栏 ─── */
+
+.clipboard-bar {
+    background-color: #1e2a4a;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #2a2a4a;
+    padding: 4px 0;
+    height: 32px;
+}
+
+.clipboard-scroller {
+    width: 100%;
+    height: 100%;
+}
+
+.clipboard-items {
+    flex-direction: row;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.clipboard-item {
+    background-color: #2d2d44;
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin-right: 6px;
+    flex-direction: row;
+    align-items: center;
+    height: 24px;
+}
+
+.clipboard-text {
+    font-size: 12px;
+    color: #ccc;
+    max-width: 120px;
+}
+
+.clipboard-del {
     font-size: 14px;
-    z-index: 5;
-    background-color: rgb(0, 0, 0);
+    color: #ff6b6b;
+    margin-left: 4px;
+    font-weight: bold;
 }
 
-.editor-char {
-    position: absolute;
-    font-size: 14px;
-    line-height: 16px;
+/* ─── 键盘主体 ─── */
+
+.keyboard-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4px 4px 2px 4px;
+    background-color: #1a1a2e;
+}
+
+.key-row {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+/* ─── 按键 ─── */
+
+.key-btn {
+    background-color: #2d2d44;
+    border-radius: 6px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2px;
+    margin-right: 2px;
+    transition-property: background-color, transform;
+    transition-duration: 0.1s;
+    transition-timing-function: ease;
+    transform: scale(1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.key-btn:active {
+    transform: scale(0.92);
+    background-color: #3d3d5c;
+}
+
+.key-pressed {
+    transform: scale(0.92) !important;
+    background-color: #3d3d5c !important;
+}
+
+.key-active {
+    background-color: #007acc !important;
+    box-shadow: 0 0 8px rgba(0, 122, 204, 0.4);
+}
+
+.key-function {
+    background-color: #252540;
+}
+
+.key-toggle {
+    background-color: #252540;
+}
+
+.key-action {
+    background-color: #007acc;
+    box-shadow: 0 1px 4px rgba(0, 122, 204, 0.3);
+}
+
+.key-wide {
+    /* flex handles the width */
+}
+
+.key-label {
+    font-size: 16px;
+    color: #e8e8e8;
     text-align: center;
-    color: white;
+    font-weight: 500;
+    user-select: none;
 }
 
-.cursor-overwrite {
-    background-color: rgba(255, 255, 255, 0.5);
-    color: black;
+.key-action .key-label {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 17px;
 }
 
-.selected {
-    background-color: #0078d4;
-    color: white;
+.key-active .key-label {
+    color: #ffffff;
 }
 
-.key {
-    position: absolute;
-    color: rgba(255, 255, 255, 0.4);
-    border-width: 1px;
-    border-style: solid;
-    text-align: center;
-    z-index: 9;
-    border-color: rgba(255, 255, 255, 0.2);
+.key-function .key-label {
+    font-size: 18px;
 }
 
-.key-popup {
-    position: absolute;
-    color: white;
-    background-color: rgb(0, 0, 0);
-    border-color: rgba(255, 255, 255, 0.3);
-    text-align: center;
-    z-index: 10;
+.key-toggle .key-label {
+    font-size: 13px;
 }
 
-.pinyin-display {
+/* ─── Emoji 选择器 ─── */
+
+.emoji-picker-overlay {
     position: absolute;
     left: 0px;
-    top: 130px;
-    width: 560px;
-    height: 20px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    display: flex;
     align-items: center;
-    color: #00ff00;
-    font-size: 16px;
-    z-index: 6;
+    justify-content: center;
 }
 
-.candidate-item {
-    position: absolute;
-    top: 150px;
-    color: rgba(255, 255, 255, 0.8);
+.emoji-picker {
+    background-color: #222244;
+    border-radius: 12px;
+    padding: 12px;
+    width: 90%;
+    max-width: 320px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    border-width: 1px;
+    border-style: solid;
+    border-color: #3a3a5a;
+}
+
+.emoji-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.emoji-item {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    margin: 2px;
+}
+
+.emoji-item:active {
+    background-color: #3a3a5a;
+}
+
+.emoji-char {
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.emoji-close-area {
+    margin-top: 8px;
+    padding: 8px;
+    align-items: center;
+    background-color: #2d2d44;
+    border-radius: 6px;
+}
+
+.emoji-close-text {
     font-size: 14px;
-    height: 20px;
-    z-index: 6;
+    color: #aaa;
 }
 
-.candidate-selected {
-    background-color: #0078d4;
-    color: white;
+/* ─── 底部操作栏 ─── */
+
+.action-bar {
+    flex-direction: row;
+    background-color: #0f1a30;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #2a2a4a;
+    padding: 4px 2px;
+    height: 40px;
+    align-items: center;
+}
+
+.action-item {
+    flex: 1;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color: #1e2a3e;
+}
+
+.action-item:active {
+    background-color: #2a3a5a;
+}
+
+.action-label {
+    font-size: 13px;
+    color: #8ab4f8;
+    text-align: center;
+    font-weight: 500;
+}
+
+.action-confirm {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #007acc;
+    border-radius: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
 }

@@ -190,44 +190,49 @@ const ai = defineComponent({
 
         async attachFile() {
             if (this.isStreaming) return;
+            // 监听文件选择结果
+            const handler = (filePath: string) => {
+                $falcon.off('file_selected', handler);
+                this.readAndAttachFile(filePath);
+            };
+            $falcon.on('file_selected', handler);
+            // 导航到文件管理器（选择模式）
+            $falcon.navTo('fileManager', { pickerMode: true, returnTo: 'ai' });
+        },
+
+        async readAndAttachFile(filePath: string) {
+            if (!filePath) return;
             await this.initializeShell();
             if (!this.shellInitialized) {
                 showError('Shell未初始化，无法读取文件');
                 return;
             }
-            openSoftKeyboard(
-                () => this.attachedFilePath || '/userdisk/',
-                async (filePath) => {
-                    if (!filePath.trim()) return;
-                    try {
-                        const checkCmd = `test -f "${filePath}" && echo "exists" || echo "not_exists"`;
-                        const checkResult = await Shell.exec(checkCmd);
-                        if (checkResult.trim() !== 'exists') {
-                            showError('文件不存在: ' + filePath);
-                            return;
-                        }
-                        const sizeCmd = `stat -c "%s" "${filePath}" 2>/dev/null || wc -c "${filePath}" | awk '{print $1}'`;
-                        const sizeResult = await Shell.exec(sizeCmd);
-                        const fileSize = parseInt(sizeResult.trim(), 10) || 0;
-
-                        if (fileSize > 100000) {
-                            showError('文件过大，请选择小于 100KB 的文件');
-                            return;
-                        }
-                        const content = await Shell.exec(`cat "${filePath}"`);
-                        if (!content || content.trim().length === 0) {
-                            showError('文件内容为空或无法读取');
-                            return;
-                        }
-                        this.attachedFilePath = filePath;
-                        this.attachedFileContent = content;
-                        showSuccess('文件已附加: ' + filePath.split('/').pop());
-                        this.$forceUpdate();
-                    } catch (e: any) {
-                        showError('读取文件失败: ' + (e.message || e));
-                    }
+            try {
+                const checkCmd = `test -f "${filePath}" && echo "exists" || echo "not_exists"`;
+                const checkResult = await Shell.exec(checkCmd);
+                if (checkResult.trim() !== 'exists') {
+                    showError('文件不存在: ' + filePath);
+                    return;
                 }
-            );
+                const sizeCmd = `stat -c "%s" "${filePath}" 2>/dev/null || wc -c "${filePath}" | awk '{print $1}'`;
+                const sizeResult = await Shell.exec(sizeCmd);
+                const fileSize = parseInt(sizeResult.trim(), 10) || 0;
+                if (fileSize > 500000) {
+                    showError('文件过大，请选择小于 500KB 的文件');
+                    return;
+                }
+                const content = await Shell.exec(`cat "${filePath}"`);
+                if (!content || content.trim().length === 0) {
+                    showError('文件内容为空或无法读取');
+                    return;
+                }
+                this.attachedFilePath = filePath;
+                this.attachedFileContent = content;
+                showSuccess('文件已附加: ' + filePath.split('/').pop());
+                this.$forceUpdate();
+            } catch (e: any) {
+                showError('读取文件失败: ' + (e.message || e));
+            }
         },
 
         clearAttachment() {

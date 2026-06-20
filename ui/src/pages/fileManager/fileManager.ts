@@ -25,6 +25,8 @@ import { formatTime } from '../../utils/timeUtils';
 export type FileManagerOptions = {
   path?: string;
   refresh?: boolean;
+  pickerMode?: boolean;
+  returnTo?: string;
 };
 
 export interface FileItem {
@@ -70,6 +72,10 @@ export default defineComponent({
       totalFiles: 0,
       totalSize: 0,
       selectedCount: 0,
+
+      // 选择模式
+      pickerMode: false,
+      returnTo: '',
     };
   },
 
@@ -79,7 +85,9 @@ export default defineComponent({
     // 获取初始路径
     const options = this.$page.loadOptions;
     this.currentPath = options.path || '/';
-    console.log('初始路径:', this.currentPath);
+    this.pickerMode = options.pickerMode || false;
+    this.returnTo = options.returnTo || '';
+    console.log('初始路径:', this.currentPath, '选择模式:', this.pickerMode);
     
     // 设置页面返回键处理
     this.$page.$npage.setSupportBack(true);
@@ -458,6 +466,11 @@ export default defineComponent({
         this.currentPath = item.fullPath;
         console.log('切换到目录:', this.currentPath);
         await this.loadDirectory();
+      } else if (this.pickerMode) {
+        // 选择模式：直接返回文件路径
+        console.log('选择文件:', item.fullPath);
+        $falcon.trigger('file_selected', item.fullPath);
+        this.$page.finish();
       } else {
         // 打开文件
         await this.openFile(item);

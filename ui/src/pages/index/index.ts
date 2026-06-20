@@ -67,7 +67,7 @@ const index = defineComponent({
             $falcon.navTo("webdavManager", {});
         },
         Browser() {
-            $falcon.navTo("browser", {});
+            $falcon.navTo("webBrowser", {});
         }
     }
 });

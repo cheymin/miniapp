@@ -81,7 +81,7 @@ const desktop = defineComponent({
                 { id: 'calculator', name: '计算器', ...APP_ICONS.calculator },
                 { id: 'qrcodeGenerator', name: '二维码', ...APP_ICONS.qrcodeGenerator },
                 { id: 'unitConverter', name: '单位转换', ...APP_ICONS.unitConverter },
-                { id: 'browser', name: '浏览器', ...APP_ICONS.browser },
+                { id: 'webBrowser', name: '浏览器', ...APP_ICONS.browser },
                 { id: 'qqchat', name: 'QQ聊天', ...APP_ICONS.qqchat },
                 { id: 'shell', name: '终端', ...APP_ICONS.shell },
                 { id: 'update', name: '更新', ...APP_ICONS.update },

@@ -16,11 +16,11 @@
     "deviceinfo": "pages/deviceinfo/deviceinfo.vue",
     "imageViewer": "pages/imageViewer/imageViewer.vue",
     "gallery": "pages/gallery/gallery.vue",
-    "browser": "pages/browser/browser.vue",
     "qqchat": "pages/qqchat/qqchat.vue",
     "minAi": "pages/minAi/minAi.vue",
     "pvz": "pages/pvz/pvz.vue",
-    "webdavManager": "pages/webdavManager/webdavManager.vue"
+    "webdavManager": "pages/webdavManager/webdavManager.vue",
+    "webBrowser": "pages/webBrowser/webBrowser.vue"
   },
   "options": {
     "style": {
