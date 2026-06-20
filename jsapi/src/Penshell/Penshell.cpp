@@ -17,14 +17,14 @@ void Penshell::initialize() {
     int stderrPipe[2];
 
     if (pipe(stdinPipe) != 0) throw std::runtime_error("Pipe stdin failed");
-    if (pipe(stdoutPipe) != 0) { close(stdinPipe[0]); close(stdinPipe[1]); throw std::runtime_error("Pipe stdout failed"); }
-    if (pipe(stderrPipe) != 0) { close(stdinPipe[0]); close(stdinPipe[1]); close(stdoutPipe[0]); close(stdoutPipe[1]); throw std::runtime_error("Pipe stderr failed"); }
+    if (pipe(stdoutPipe) != 0) { ::close(stdinPipe[0]); ::close(stdinPipe[1]); throw std::runtime_error("Pipe stdout failed"); }
+    if (pipe(stderrPipe) != 0) { ::close(stdinPipe[0]); ::close(stdinPipe[1]); ::close(stdoutPipe[0]); ::close(stdoutPipe[1]); throw std::runtime_error("Pipe stderr failed"); }
 
     childPid = fork();
     if (childPid == -1) {
-        close(stdinPipe[0]); close(stdinPipe[1]);
-        close(stdoutPipe[0]); close(stdoutPipe[1]);
-        close(stderrPipe[0]); close(stderrPipe[1]);
+        ::close(stdinPipe[0]); ::close(stdinPipe[1]);
+        ::close(stdoutPipe[0]); ::close(stdoutPipe[1]);
+        ::close(stderrPipe[0]); ::close(stderrPipe[1]);
         throw std::runtime_error("Fork failed");
     }
 
@@ -35,21 +35,19 @@ void Penshell::initialize() {
         dup2(stderrPipe[1], STDERR_FILENO);
 
         // 关闭父进程端的管道
-        close(stdinPipe[0]); close(stdinPipe[1]);
-        close(stdoutPipe[0]); close(stdoutPipe[1]);
-        close(stderrPipe[0]); close(stderrPipe[1]);
+        ::close(stdinPipe[0]); ::close(stdinPipe[1]);
+        ::close(stdoutPipe[0]); ::close(stdoutPipe[1]);
+        ::close(stderrPipe[0]); ::close(stderrPipe[1]);
 
-        // 设置 shell 为交互模式
-        execl("/bin/sh", "sh", "-c", "stty raw -echo 2>/dev/null; exec /bin/sh", (char*)nullptr);
-        // 如果上面的 stty 失败，退回到普通 sh
+        // 运行 shell
         execl("/bin/sh", "sh", (char*)nullptr);
         _exit(127);
     }
 
     // 父进程：关闭子进程端的管道
-    close(stdinPipe[0]);   // 关闭读端
-    close(stdoutPipe[1]);  // 关闭写端
-    close(stderrPipe[1]);
+    ::close(stdinPipe[0]);   // 关闭读端
+    ::close(stdoutPipe[1]);  // 关闭写端
+    ::close(stderrPipe[1]);
 
     stdinFd = stdinPipe[1];   // 写端
     stdoutFd = stdoutPipe[0]; // 读端
@@ -106,6 +104,13 @@ void Penshell::write(const std::string& input) {
 void Penshell::close() {
     if (!running) return;
     running = false;
+
+    // 通知任何等待中的 exec()
+    {
+        std::lock_guard<std::mutex> lock(resultMutex);
+        resultBuffer += DONE_MARKER;
+        resultCV.notify_all();
+    }
 
     // 发送 exit 命令
     if (stdinFd >= 0) {
