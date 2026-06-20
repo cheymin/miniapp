@@ -20,7 +20,8 @@
     "minAi": "pages/minAi/minAi.vue",
     "pvz": "pages/pvz/pvz.vue",
     "webdavManager": "pages/webdavManager/webdavManager.vue",
-    "webBrowser": "pages/webBrowser/webBrowser.vue"
+    "webBrowser": "pages/webBrowser/webBrowser.vue",
+    "penshell": "pages/penshell/penshell.vue"
   },
   "options": {
     "style": {

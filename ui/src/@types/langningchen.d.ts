@@ -61,3 +61,14 @@ export declare class Shell {
     static initialize(): Promise<void>;
     static exec(command: string): Promise<string>;
 }
+
+export declare class Penshell {
+    static initialize(): Promise<void>;
+    static exec(command: string): Promise<string>;
+    static write(input: string): void;
+    static getWorkingDirectory(): string;
+    static close(): void;
+    static isRunning(): boolean;
+
+    static on(event: 'penshell_output', callback: (data: string) => void): void;
+}

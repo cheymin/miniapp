@@ -30,8 +30,8 @@ const index = defineComponent({
         openAi() {
             $falcon.navTo("ai", {});
         },
-        PenTerm() {
-            $falcon.navTo("shell", {});
+        Penshell() {
+            $falcon.navTo("penshell", {});
         },
         Misc() {
             $falcon.navTo("misc", {});
@@ -68,7 +68,7 @@ const index = defineComponent({
         },
         Browser() {
             $falcon.navTo("webBrowser", {});
-        }
+        },
     }
 });
 

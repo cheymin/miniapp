@@ -82,6 +82,7 @@ const desktop = defineComponent({
                 { id: 'qrcodeGenerator', name: '二维码', ...APP_ICONS.qrcodeGenerator },
                 { id: 'unitConverter', name: '单位转换', ...APP_ICONS.unitConverter },
                 { id: 'webBrowser', name: '浏览器', ...APP_ICONS.browser },
+    { id: 'penshell', name: '终端', ...APP_ICONS.shell },
                 { id: 'qqchat', name: 'QQ聊天', ...APP_ICONS.qqchat },
                 { id: 'shell', name: '终端', ...APP_ICONS.shell },
                 { id: 'update', name: '更新', ...APP_ICONS.update },
