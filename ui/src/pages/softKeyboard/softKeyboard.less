@@ -1,307 +1,126 @@
-.keyboard-container {
+.kb {
     position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
+    left: 0; top: 0; width: 100%; height: 100%;
+    display: flex; flex-direction: column;
     background-color: #1a1a2e;
-    display: flex;
-    flex-direction: column;
     overflow: hidden;
 }
 
-/* ─── 显示区 ─── */
-
-.display-area {
+/* 显示区 */
+.display {
     background-color: #16213e;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: #2a2a4a;
-    padding: 8px 10px;
-    min-height: 44px;
-    display: flex;
-    flex-direction: column;
+    border-bottom: 1px solid #2a2a4a;
+    padding: 4px 6px;
+    min-height: 30px;
 }
-
-.display-scroller {
-    width: 100%;
-    height: 28px;
-}
-
+.display-scroll { width: 100%; height: 22px; }
 .display-text {
-    font-size: 20px;
-    color: #e0e0e0;
-    line-height: 28px;
-    font-family: 'Courier New', monospace;
-    white-space: nowrap;
-    letter-spacing: 1px;
+    font-size: 16px; color: #e0e0e0; line-height: 22px;
+    white-space: nowrap; letter-spacing: 0.5px;
 }
 
-.display-info {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 2px;
+/* 候选栏 */
+.cand-bar {
+    background-color: #1e2a3e;
+    flex-direction: row; align-items: center;
+    height: 28px; padding: 0 2px;
+    border-bottom: 1px solid #2a2a4a;
+}
+.cand-scroll { flex: 1; height: 28px; }
+.cand-row { flex-direction: row; align-items: center; padding: 0 2px; }
+.cand-item {
+    background-color: #2d2d44; border-radius: 3px;
+    padding: 2px 6px; margin-right: 3px; height: 22px;
+}
+.cand-text { font-size: 14px; color: #e0e0e0; line-height: 22px; }
+.cand-nav {
+    width: 18px; text-align: center; font-size: 16px;
+    color: #007acc; line-height: 28px; font-weight: bold;
 }
 
-.char-count {
-    font-size: 11px;
-    color: #666;
+/* 剪贴板 */
+.clipbar {
+    background-color: #1e2a3e; height: 26px;
+    border-bottom: 1px solid #2a2a4a; padding: 0 2px;
 }
-
-.mode-indicator {
-    font-size: 11px;
-    color: #007acc;
-    font-weight: bold;
+.clip-scroll { width: 100%; height: 26px; }
+.clip-row { flex-direction: row; align-items: center; padding: 0 2px; }
+.clip-item {
+    background-color: #2d2d44; border-radius: 3px;
+    padding: 2px 5px; margin-right: 3px; height: 20px;
+    flex-direction: row; align-items: center;
 }
+.clip-text { font-size: 11px; color: #ccc; max-width: 80px; }
+.clip-del { font-size: 12px; color: #ff6b6b; margin-left: 3px; }
 
-/* ─── 剪贴板栏 ─── */
-
-.clipboard-bar {
-    background-color: #1e2a4a;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: #2a2a4a;
-    padding: 4px 0;
-    height: 32px;
-}
-
-.clipboard-scroller {
-    width: 100%;
-    height: 100%;
-}
-
-.clipboard-items {
-    flex-direction: row;
-    padding-left: 6px;
-    padding-right: 6px;
-}
-
-.clipboard-item {
-    background-color: #2d2d44;
-    border-radius: 4px;
-    padding: 4px 8px;
-    margin-right: 6px;
-    flex-direction: row;
-    align-items: center;
-    height: 24px;
-}
-
-.clipboard-text {
-    font-size: 12px;
-    color: #ccc;
-    max-width: 120px;
-}
-
-.clipboard-del {
-    font-size: 14px;
-    color: #ff6b6b;
-    margin-left: 4px;
-    font-weight: bold;
-}
-
-/* ─── 键盘主体 ─── */
-
-.keyboard-area {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 4px 4px 2px 4px;
+/* 键盘区域 */
+.keys-area {
+    flex: 1; display: flex; flex-direction: column;
+    justify-content: center; padding: 2px;
     background-color: #1a1a2e;
 }
+.key-row { flex-direction: row; margin-bottom: 2px; }
 
-.key-row {
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 4px;
-    padding-left: 2px;
-    padding-right: 2px;
-}
-
-/* ─── 按键 ─── */
-
-.key-btn {
+/* 按键通用 */
+.key {
+    height: 30px; margin: 0 1px; border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
     background-color: #2d2d44;
-    border-radius: 6px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 2px;
-    margin-right: 2px;
-    transition-property: background-color, transform;
-    transition-duration: 0.1s;
-    transition-timing-function: ease;
-    transform: scale(1);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
+.key:active { background-color: #3d3d5c; }
+.key-lbl { font-size: 14px; color: #e8e8e8; text-align: center; }
 
-.key-btn:active {
-    transform: scale(0.92);
-    background-color: #3d3d5c;
-}
+/* 功能键 */
+.key-func { background-color: #252540; }
+.key-func .key-lbl { font-size: 13px; }
+.key-func:active { background-color: #353550; }
 
-.key-pressed {
-    transform: scale(0.92) !important;
-    background-color: #3d3d5c !important;
-}
+/* 激活键 */
+.key-active { background-color: #007acc !important; }
+.key-active .key-lbl { color: #fff; }
 
-.key-active {
-    background-color: #007acc !important;
-    box-shadow: 0 0 8px rgba(0, 122, 204, 0.4);
-}
+/* 确认键 */
+.key-confirm { background-color: #007acc; }
+.key-confirm .key-lbl { color: #fff; font-size: 15px; font-weight: bold; }
+.key-confirm:active { background-color: #0090e0; }
 
-.key-function {
-    background-color: #252540;
-}
-
-.key-toggle {
-    background-color: #252540;
-}
-
-.key-action {
-    background-color: #007acc;
-    box-shadow: 0 1px 4px rgba(0, 122, 204, 0.3);
-}
-
-.key-wide {
-    /* flex handles the width */
-}
-
-.key-label {
-    font-size: 16px;
-    color: #e8e8e8;
-    text-align: center;
-    font-weight: 500;
-    user-select: none;
-}
-
-.key-action .key-label {
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 17px;
-}
-
-.key-active .key-label {
-    color: #ffffff;
-}
-
-.key-function .key-label {
-    font-size: 18px;
-}
-
-.key-toggle .key-label {
-    font-size: 13px;
-}
-
-/* ─── Emoji 选择器 ─── */
-
-.emoji-picker-overlay {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 20;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.emoji-picker {
-    background-color: #222244;
-    border-radius: 12px;
-    padding: 12px;
-    width: 90%;
-    max-width: 320px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    border-width: 1px;
-    border-style: solid;
-    border-color: #3a3a5a;
-}
-
-.emoji-grid {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.emoji-item {
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-    margin: 2px;
-}
-
-.emoji-item:active {
-    background-color: #3a3a5a;
-}
-
-.emoji-char {
-    font-size: 22px;
-    color: #ffffff;
-}
-
-.emoji-close-area {
-    margin-top: 8px;
-    padding: 8px;
-    align-items: center;
-    background-color: #2d2d44;
-    border-radius: 6px;
-}
-
-.emoji-close-text {
-    font-size: 14px;
-    color: #aaa;
-}
-
-/* ─── 底部操作栏 ─── */
-
+/* 操作栏 */
 .action-bar {
-    flex-direction: row;
-    background-color: #0f1a30;
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-top-color: #2a2a4a;
-    padding: 4px 2px;
-    height: 40px;
-    align-items: center;
+    flex-direction: row; background-color: #0f1a30;
+    border-top: 1px solid #2a2a4a; height: 34px;
+    align-items: center; padding: 0 2px;
 }
+.action-btn {
+    flex: 1; height: 28px; border-radius: 3px;
+    display: flex; align-items: center; justify-content: center;
+    background-color: #1e2a3e; margin: 0 1px;
+}
+.action-btn:active { background-color: #2a3a4e; }
+.act-lbl { font-size: 11px; color: #8ab4f8; text-align: center; }
+.action-ok { background-color: #007acc; }
+.act-lbl-ok { color: #fff; font-weight: bold; font-size: 12px; }
+.action-ok:active { background-color: #0090e0; }
 
-.action-item {
-    flex: 1;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    margin-left: 2px;
-    margin-right: 2px;
-    background-color: #1e2a3e;
+/* Emoji */
+.emoji-overlay {
+    position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5); z-index: 20;
+    display: flex; align-items: center; justify-content: center;
 }
-
-.action-item:active {
-    background-color: #2a3a5a;
+.emoji-panel {
+    background-color: #222244; border-radius: 8px;
+    padding: 8px; width: 85%;
+    border: 1px solid #3a3a5a;
 }
-
-.action-label {
-    font-size: 13px;
-    color: #8ab4f8;
-    text-align: center;
-    font-weight: 500;
+.emoji-grid { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+.emoji-cell {
+    width: 30px; height: 30px; border-radius: 4px;
+    display: flex; align-items: center; justify-content: center; margin: 1px;
 }
-
-.action-confirm {
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 14px;
-    background-color: #007acc;
-    border-radius: 4px;
-    padding-left: 4px;
-    padding-right: 4px;
+.emoji-cell:active { background-color: #3a3a5a; }
+.emoji-c { font-size: 18px; }
+.emoji-close {
+    margin-top: 6px; padding: 6px; align-items: center;
+    background-color: #2d2d44; border-radius: 4px;
 }
+.emoji-close-text { font-size: 12px; color: #aaa; }

@@ -18,77 +18,74 @@
 -->
 
 <template>
-    <div class="keyboard-container">
-        <!-- 顶部显示区 -->
-        <div class="display-area">
-            <scroller class="display-scroller" scroll-direction="horizontal" :show-scrollbar="false">
+    <div class="kb">
+        <!-- 显示区 -->
+        <div class="display">
+            <scroller class="display-scroll" scroll-direction="horizontal" :show-scrollbar="false">
                 <text class="display-text">{{ displayText }}</text>
             </scroller>
-            <div class="display-info">
-                <text class="char-count">{{ textBuffer.length }}</text>
-                <text class="mode-indicator">{{ keyboardMode === 'letters' ? (capsLock ? '大写' : '小写') : keyboardMode === 'numbers' ? '数字' : '符号' }}</text>
-            </div>
+        </div>
+
+        <!-- 候选栏（中文拼音候选） -->
+        <div v-if="hasCandidates" class="cand-bar">
+            <text v-if="hasPrevPage" class="cand-nav" @click="prevCandidates">‹</text>
+            <scroller class="cand-scroll" scroll-direction="horizontal" :show-scrollbar="false">
+                <div class="cand-row">
+                    <div v-for="(c, i) in candidateList" :key="'c'+i" class="cand-item" @click="selectCandidate(c.hanZi)">
+                        <text class="cand-text">{{ c.hanZi }}</text>
+                    </div>
+                </div>
+            </scroller>
+            <text v-if="hasNextPage" class="cand-nav" @click="nextCandidates">›</text>
         </div>
 
         <!-- 剪贴板栏 -->
-        <div v-if="hasClipboardItems" class="clipboard-bar">
-            <scroller class="clipboard-scroller" scroll-direction="horizontal" :show-scrollbar="false">
-                <div class="clipboard-items">
-                    <div v-for="(item, index) in clipboard" :key="'clip-' + index" class="clipboard-item" @click="pasteClipboardItem(item)">
-                        <text class="clipboard-text">{{ item.length > 20 ? item.slice(0, 20) + '…' : item }}</text>
-                        <text class="clipboard-del" @click.stop="deleteClipboardItem(index)">×</text>
+        <div v-if="hasClipboard" class="clipbar">
+            <scroller class="clip-scroll" scroll-direction="horizontal" :show-scrollbar="false">
+                <div class="clip-row">
+                    <div v-for="(item, idx) in clipboard" :key="'cl'+idx" class="clip-item" @click="pasteClip(idx)">
+                        <text class="clip-text">{{ item.length > 12 ? item.slice(0, 12) + '…' : item }}</text>
+                        <text class="clip-del" @click.stop="deleteClip(idx)">×</text>
                     </div>
                 </div>
             </scroller>
         </div>
 
-        <!-- 键盘主体 -->
-        <div class="keyboard-area">
-            <div v-for="(row, rowIndex) in currentLayout" :key="'row-' + rowIndex" class="key-row">
+        <!-- 键盘 -->
+        <div class="keys-area">
+            <div v-for="(row, ri) in currentKeys" :key="'r'+ri" class="key-row">
                 <div
-                    v-for="(key, keyIndex) in row.keys"
-                    :key="'key-' + rowIndex + '-' + keyIndex"
-                    :class="getActiveClass(key)"
-                    :style="{ flex: key.width || 1 }"
-                    @touchstart="onKeyDown(key)"
-                    @touchend="onKeyUp(key)"
-                    @touchcancel="onKeyUp(key)"
+                    v-for="(key, ki) in row"
+                    :key="'k'+ri+'-'+ki"
+                    :class="keyClass(key)"
+                    :style="{ flex: keyWidth(key) }"
+                    @click="onKey(key)"
                 >
-                    <text class="key-label">{{ getKeyDisplay(key) }}</text>
+                    <text class="key-lbl">{{ key === 'space' ? '空格' : key }}</text>
                 </div>
             </div>
         </div>
 
-        <!-- Emoji 选择器 -->
-        <div v-if="showEmojiPicker" class="emoji-picker-overlay" @click="showEmojiPicker = false">
-            <div class="emoji-picker" @click.stop>
+        <!-- 操作栏 -->
+        <div class="action-bar">
+            <div class="action-btn" @click="copyText"><text class="act-lbl">复制</text></div>
+            <div class="action-btn" @click="cutText"><text class="act-lbl">剪切</text></div>
+            <div class="action-btn" @click="toggleEmoji"><text class="act-lbl">😊</text></div>
+            <div class="action-btn" @click="pasteSysClipboard"><text class="act-lbl">粘贴</text></div>
+            <div class="action-btn action-ok" @click="confirm"><text class="act-lbl act-lbl-ok">确定</text></div>
+        </div>
+
+        <!-- Emoji -->
+        <div v-if="showEmoji" class="emoji-overlay" @click="showEmoji = false">
+            <div class="emoji-panel" @click.stop>
                 <div class="emoji-grid">
-                    <div v-for="(emoji, emojiIndex) in emojiList" :key="'emoji-' + emojiIndex" class="emoji-item" @click="insertEmoji(emoji)">
-                        <text class="emoji-char">{{ emoji }}</text>
+                    <div v-for="(e, ei) in EMOJI_LIST" :key="'e'+ei" class="emoji-cell" @click="insertEmoji(e)">
+                        <text class="emoji-c">{{ e }}</text>
                     </div>
                 </div>
-                <div class="emoji-close-area" @click="showEmojiPicker = false">
+                <div class="emoji-close" @click="showEmoji = false">
                     <text class="emoji-close-text">关闭</text>
                 </div>
-            </div>
-        </div>
-
-        <!-- 底部操作栏 -->
-        <div class="action-bar">
-            <div class="action-item" @click="copyToClipboard">
-                <text class="action-label">复制</text>
-            </div>
-            <div class="action-item" @click="cutToClipboard">
-                <text class="action-label">剪切</text>
-            </div>
-            <div class="action-item" @click="pasteFromClipboard">
-                <text class="action-label">粘贴</text>
-            </div>
-            <div class="action-item" @click="selectAll">
-                <text class="action-label">全选</text>
-            </div>
-            <div class="action-item" @click="close">
-                <text class="action-label action-confirm">确定</text>
             </div>
         </div>
     </div>
