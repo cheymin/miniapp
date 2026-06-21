@@ -271,8 +271,13 @@ function build_native() {
     fi
     
     log_verbose "Running make build..."
-    if ! make -C jsapi/build -j $(nproc); then
+    MAKE_LOG_FILE="jsapi/build/make_output.log"
+    if ! make -C jsapi/build -j $(nproc) VERBOSE=1 > "${MAKE_LOG_FILE}" 2>&1; then
         log_error "Make build failed"
+        log_error "=== Last 50 lines of build log ==="
+        tail -50 "${MAKE_LOG_FILE}"
+        log_error "=================================="
+        log_error "Full build log saved to: ${MAKE_LOG_FILE}"
         return 1
     fi
     

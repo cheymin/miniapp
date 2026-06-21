@@ -10,7 +10,6 @@ void JSPenshell::initialize(JQAsyncInfo& info) {
         std::lock_guard<std::mutex> lock(mutex);
         penshell = std::make_unique<Penshell>();
 
-        // 设置输出回调，通过 publish 流式发送到 JS
         penshell->setOutputCallback([this](const std::string& chunk) {
             publish("penshell_output", chunk);
         });
@@ -40,9 +39,21 @@ void JSPenshell::write(JQFunctionInfo& info) {
     try {
         ASSERT(penshell != nullptr);
         ASSERT(info.Length() == 1);
-        ASSERT(info[0].is_string());
 
-        std::string input = info[0].string_value();
+        JSContext* ctx = info.GetContext();
+        JSValueConst arg = info[0];
+        if (!JS_IsString(arg)) {
+            info.GetReturnValue().ThrowTypeError("参数必须是字符串");
+            return;
+        }
+        const char* str = JS_ToCString(ctx, arg);
+        if (!str) {
+            info.GetReturnValue().ThrowInternalError("字符串转换失败");
+            return;
+        }
+        std::string input(str);
+        JS_FreeCString(ctx, str);
+
         penshell->write(input);
         info.GetReturnValue().Set(true);
     } catch (const std::exception& e) {
