@@ -15,7 +15,7 @@
               class="refresh-btn" 
               @click="refreshInfo"
             >
-              <image class="refresh-icon" :src="require('./images/refresh.png')" />
+              <image class="refresh-icon" :src="require('../../../images/refresh.png')" />
             </div>
           </div>
         </div>
