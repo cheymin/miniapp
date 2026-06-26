@@ -47,7 +47,7 @@ jobs:
           sed -i "s/compiler.parseComponent(content, { pad: true })/compiler.parse(content, { pad: true }).descriptor/g" ./node_modules/aiot-vue-cli/src/libs/parser.js
           sed -i "s/compiler.compile/compiler.compileTemplate/g" ./node_modules/aiot-vue-cli/web-loaders/falcon-vue-loader/lib/template-compiler/index.js
           sed -i "s/const replaceValues = {}/const replaceValues = { 'defineComponent': '' }/g" ./node_modules/aiot-vue-cli/src/libs/rollup.config.js
-          # Fix: resolve relative image paths in image plugin (use importer as base)
+          # Fix 7: resolve relative image paths in image plugin (use importer as base)
           sed -i "s/resolveId(id, importer) {/resolveId(id, importer) {\n      if (id.startsWith('.') \&\& importer) { id = require('path').resolve(require('path').dirname(importer), id); }/g" ./node_modules/aiot-vue-cli/src/rollup-plugins/image.js
           cd ..
           sed -i '/project(/a\set(CMAKE_DEPEND_INFO_SKIP 1)\nset(CMAKE_LINK_DEPENDS_USE_LINKER 0)' ./jsapi/CMakeLists.txt
