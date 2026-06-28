@@ -15,351 +15,517 @@
 // You should have received a copy of the GNU General Public License
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
-import { IME, Shell } from 'langningchen';
+import { IME, ScanInput } from 'langningchen';
+import Editor from '../../editor/editor';
 import { defineComponent } from 'vue';
-import { showInfo, showSuccess, showError } from '../../components/ToastMessage';
+import { Candidate, Pinyin } from '../../@types/langningchen';
+import { getCharWidth, getPositionWidth } from '../../utils/charUtils';
+import { hideLoading, showLoading } from '../../components/Loading';
 
 export type SoftKeyboardOption = {
     data: string;
 };
 
-const CLIPBOARD_STORAGE_KEY = 'softKeyboard_clipboard';
-const MAX_CLIPBOARD_HISTORY = 10;
-
-// 172px 宽屏幕的紧凑 QWERTY 布局（每行最多10键）
-const LETTER_KEYS = [
-    ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
-    ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'],
-    ['⇧', 'z', 'x', 'c', 'v', 'b', 'n', 'm', '⌫'],
-    ['中', '123', 'space', '.', '↵'],
-];
-
-const NUMBER_KEYS = [
-    ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'],
-    ['-', '/', ':', ';', '(', ')', '$', '&', '@', '"'],
-    ['#+=', '.', ',', '?', '!', '\'', '%', '*', '⌫'],
-    ['ABC', 'space', '.', '↵'],
-];
-
-const SYMBOL_KEYS = [
-    ['[', ']', '{', '}', '#', '%', '^', '*', '+', '='],
-    ['_', '\\', '|', '~', '<', '>', '€', '£', '¥', '·'],
-    ['123', '.', ',', '?', '!', '\'', '"', '`', '⌫'],
-    ['ABC', 'space', '.', '↵'],
-];
-
-const EMOJI_LIST = [
-    '😀', '😁', '😂', '🤣', '😃', '😄', '😅', '😆',
-    '😉', '😊', '😋', '😎', '😍', '😘', '🥰', '😜',
-    '👍', '👎', '👊', '✊', '🤚', '🖐', '✋', '👌',
-    '❤️', '💔', '💖', '💙', '💚', '💛', '💜', '🖤',
-    '⭐', '🌟', '✨', '🔥', '💯', '✅', '❌', '❓',
-    '🎉', '🎊', '🎈', '🏆', '🚀', '💪', '🙏', '👏',
-];
+const maxColumns = 70;
+const maxLines = 10;
 
 const softKeyboard = defineComponent({
     data() {
         return {
             $page: {} as FalconPage<SoftKeyboardOption>,
-            textBuffer: '',
-            cursorPos: 0,
-            isChinese: false,
-            pinyin: '',
-            candidates: [] as { hanZi: string; freq: number }[],
-            candidatePage: 0,
-            selectedCandidate: 0,
-            imeReady: false,
-            shiftOn: false,
-            capsLock: false,
-            mode: 'letters' as 'letters' | 'numbers' | 'symbols',
-            showEmoji: false,
-            clipboard: [] as string[],
-            hasClipboard: false,
+            editor: null as Editor | null,
+            isChineseMode: false,
+            currentPinyin: '',
+            candidates: [] as Candidate[],
+            visibleCandidates: [] as Candidate[],
+            candidatePageIndex: 0,
+            selectedCandidateIndex: 0,
+            keyPopup: {
+                visible: false,
+                displayText: '',
+                style: {} as Record<string, any>
+            },
+            popupTimer: null as ReturnType<typeof setTimeout> | null,
+            pinyinHistory: [] as Pinyin,
+            hanZiHistory: '' as string,
         };
     },
-
-    computed: {
-        displayText(): string {
-            if (this.cursorPos >= this.textBuffer.length) {
-                return this.textBuffer + '|';
-            }
-            return this.textBuffer.slice(0, this.cursorPos) + '|' + this.textBuffer.slice(this.cursorPos);
-        },
-        currentKeys(): string[][] {
-            if (this.mode === 'numbers') return this.shiftOn ? SYMBOL_KEYS : NUMBER_KEYS;
-            return LETTER_KEYS;
-        },
-        candidateList(): { hanZi: string; freq: number }[] {
-            const start = this.candidatePage * 5;
-            return this.candidates.slice(start, start + 5);
-        },
-        hasCandidates(): boolean {
-            return this.isChinese && this.candidates.length > 0;
-        },
-        hasPrevPage(): boolean {
-            return this.candidatePage > 0;
-        },
-        hasNextPage(): boolean {
-            return (this.candidatePage + 1) * 5 < this.candidates.length;
-        },
-    },
-
     mounted() {
-        this.$page.$npage.setSupportBack(true);
-        this.$page.$npage.on('backpressed', this.close);
+        this.editor = new Editor(maxColumns, maxLines);
+        this.editor.handleInput(this.$page.loadOptions.data);
+        this.$page.$npage.setSupportBack(false);
+        this.$page.$npage.on("backpressed", () => { this.close(); });
+    },
+    unmount() {
+        ScanInput.deinitialize();
+    },
+    computed: {
+        allChars() {
+            if (!this.editor) return [];
 
-        const options = this.$page.loadOptions;
-        if (options.data) {
-            this.textBuffer = options.data;
-            this.cursorPos = this.textBuffer.length;
-        }
+            const chars: any[] = [];
+            const { row, col } = this.editor.cursor.pos;
+            const baseCharWidth = 8;
+            const lineHeight = 16;
 
-        this.loadClipboard();
-        this.initIme();
+            const selectionRange = this.editor.selection.getNormalizedRange();
+            const visibleLines = this.editor.getVisibleLines();
+
+            visibleLines.forEach(lineInfo => {
+                const { logicalRow, startCharIndex, displayRow, line } = lineInfo;
+                const scrollOffsetWidth = getPositionWidth(line, startCharIndex, baseCharWidth);
+
+                const maxVisibleWidth = this.editor!.maxColumns * baseCharWidth;
+
+                let currentWidth = 0;
+                let charIndex = startCharIndex;
+
+                while (charIndex < line.length && currentWidth < maxVisibleWidth) {
+                    const char = line[charIndex];
+                    const charWidth = getCharWidth(char, baseCharWidth);
+
+                    if (currentWidth + charWidth > maxVisibleWidth) {
+                        break;
+                    }
+
+                    const isCursor = (logicalRow === row && charIndex === col);
+                    let isSelected = false;
+
+                    if (selectionRange) {
+                        const { start, end } = selectionRange;
+                        if (logicalRow > start.row && logicalRow < end.row) {
+                            isSelected = true;
+                        } else if (logicalRow === start.row && logicalRow === end.row) {
+                            isSelected = charIndex >= start.col && charIndex < end.col;
+                        } else if (logicalRow === start.row) {
+                            isSelected = charIndex >= start.col;
+                        } else if (logicalRow === end.row) {
+                            isSelected = charIndex < end.col;
+                        }
+                    }
+
+                    chars.push({
+                        id: `char-${logicalRow}-${charIndex}`,
+                        text: char,
+                        isCursor,
+                        isSelected,
+                        style: {
+                            position: 'absolute',
+                            left: `${currentWidth}px`,
+                            top: `${displayRow * lineHeight}px`,
+                            width: `${charWidth}px`,
+                            height: `${lineHeight}px`
+                        }
+                    });
+
+                    if (isCursor && this.editor && this.editor.insertMode) {
+                        chars.push({
+                            id: `cursor-line-${logicalRow}-${charIndex}`,
+                            text: '',
+                            isCursor: false,
+                            isSelected: false,
+                            style: {
+                                position: 'absolute',
+                                left: `${currentWidth}px`,
+                                top: `${displayRow * lineHeight}px`,
+                                width: '1px',
+                                height: `${lineHeight}px`,
+                                backgroundColor: 'white',
+                                zIndex: 7
+                            }
+                        });
+                    }
+
+                    currentWidth += charWidth;
+                    charIndex++;
+                }
+
+                if (logicalRow === row && col >= startCharIndex && col >= line.length) {
+                    const cursorWidth = getPositionWidth(line, col, baseCharWidth) - scrollOffsetWidth;
+
+                    if (cursorWidth >= 0 && cursorWidth < maxVisibleWidth) {
+                        chars.push({
+                            id: `char-${logicalRow}-${col}`,
+                            text: ' ',
+                            isCursor: true,
+                            isSelected: false,
+                            style: {
+                                position: 'absolute',
+                                left: `${cursorWidth}px`,
+                                top: `${displayRow * lineHeight}px`,
+                                width: `${baseCharWidth}px`,
+                                height: `${lineHeight}px`
+                            }
+                        });
+
+                        if (this.editor && this.editor.insertMode) {
+                            chars.push({
+                                id: `cursor-line-${logicalRow}-${col}`,
+                                text: '',
+                                isCursor: false,
+                                isSelected: false,
+                                style: {
+                                    position: 'absolute',
+                                    left: `${cursorWidth}px`,
+                                    top: `${displayRow * lineHeight}px`,
+                                    width: '1px',
+                                    height: `${lineHeight}px`,
+                                    backgroundColor: 'white',
+                                    zIndex: 7
+                                }
+                            });
+                        }
+                    }
+                }
+            });
+
+            return chars;
+        },
+
+        keyboardKeys(this: any) {
+            const keyHeight = 34;
+            const standardKeyWidth = 31;
+            const fontSize = 20;
+
+            const keyboardLayout = [
+                [
+                    { value: '`', displayText: '`' },
+                    { value: '1', displayText: '1' },
+                    { value: '2', displayText: '2' },
+                    { value: '3', displayText: '3' },
+                    { value: '4', displayText: '4' },
+                    { value: '5', displayText: '5' },
+                    { value: '6', displayText: '6' },
+                    { value: '7', displayText: '7' },
+                    { value: '8', displayText: '8' },
+                    { value: '9', displayText: '9' },
+                    { value: '0', displayText: '0' },
+                    { value: '-', displayText: '-' },
+                    { value: '=', displayText: '=' },
+                    { value: 'Backspace', displayText: 'back', width: 2 },
+                    { value: 'Insert', displayText: 'ins' },
+                    { value: 'Home', displayText: 'hm' },
+                    { value: 'PageUp', displayText: 'pu' },
+                ],
+                [
+                    { value: 'Tab', displayText: 'Tab', width: 1.5 },
+                    { value: 'q', displayText: 'Q' },
+                    { value: 'w', displayText: 'W' },
+                    { value: 'e', displayText: 'E' },
+                    { value: 'r', displayText: 'R' },
+                    { value: 't', displayText: 'T' },
+                    { value: 'y', displayText: 'Y' },
+                    { value: 'u', displayText: 'U' },
+                    { value: 'i', displayText: 'I' },
+                    { value: 'o', displayText: 'O' },
+                    { value: 'p', displayText: 'P' },
+                    { value: '[', displayText: '[' },
+                    { value: ']', displayText: ']' },
+                    { value: '\\', displayText: '\\', width: 1.5 },
+                    { value: 'Delete', displayText: 'del' },
+                    { value: 'End', displayText: 'ed' },
+                    { value: 'PageDown', displayText: 'pd' },
+                ],
+                [
+                    { value: 'CapsLock', displayText: 'Caps', width: 2 },
+                    { value: 'a', displayText: 'A' },
+                    { value: 's', displayText: 'S' },
+                    { value: 'd', displayText: 'D' },
+                    { value: 'f', displayText: 'F' },
+                    { value: 'g', displayText: 'G' },
+                    { value: 'h', displayText: 'H' },
+                    { value: 'j', displayText: 'J' },
+                    { value: 'k', displayText: 'K' },
+                    { value: 'l', displayText: 'L' },
+                    { value: ';', displayText: ';' },
+                    { value: "'", displayText: "'" },
+                    { value: 'Enter', displayText: 'Enter', width: 2 },
+                ],
+                [
+                    { value: 'Shift', displayText: 'Shift', width: 2.5 },
+                    { value: 'z', displayText: 'Z' },
+                    { value: 'x', displayText: 'X' },
+                    { value: 'c', displayText: 'C' },
+                    { value: 'v', displayText: 'V' },
+                    { value: 'b', displayText: 'B' },
+                    { value: 'n', displayText: 'N' },
+                    { value: 'm', displayText: 'M' },
+                    { value: ',', displayText: ',' },
+                    { value: '.', displayText: '.' },
+                    { value: '/', displayText: '/' },
+                    { value: 'Shift', displayText: 'Shift', width: 2.5 },
+                    { value: 'ArrowUp', displayText: '↑', leftOffset: 1 },
+                ],
+                [
+                    { value: 'Control', displayText: 'Ctrl', width: 1.5 },
+                    { value: 'Zh', displayText: this.isChineseMode ? '中' : 'En', width: 1.5 },
+                    { value: ' ', displayText: '', width: 8.5 },
+                    { value: 'Scan', displayText: 'Sc' },
+                    { value: 'Close', displayText: 'cl' },
+                    { value: 'Control', displayText: 'Ctrl', width: 1.5 },
+                    { value: 'ArrowLeft', displayText: '←' },
+                    { value: 'ArrowDown', displayText: '↓' },
+                    { value: 'ArrowRight', displayText: '→' },
+                ],
+            ];
+
+            const generatedKeys: any[] = [];
+            let keyId = 0;
+
+            keyboardLayout.forEach((row, rowIndex) => {
+                let currentX = 0;
+                const currentY = rowIndex * keyHeight;
+                row.forEach((keyConfig) => {
+                    const keyWidth = Math.round((keyConfig.width || 1) * standardKeyWidth);
+                    const isActive = this.isKeyActive(keyConfig.value);
+                    if (keyConfig.leftOffset) { currentX += keyConfig.leftOffset * standardKeyWidth; }
+                    let displayText = keyConfig.displayText;
+                    if (this.editor && this.editor.shiftPressed &&
+                        keyConfig.value.trim().length == 1 &&
+                        !/[a-zA-Z]/.test(keyConfig.value)) {
+                        displayText = this.editor.getShiftedChar(keyConfig.value);
+                    }
+                    generatedKeys.push({
+                        id: `key-${keyId++}`,
+                        value: keyConfig.value,
+                        displayText,
+                        isActive,
+                        style: {
+                            left: `${currentX}px`,
+                            top: `${currentY}px`,
+                            width: `${keyWidth}px`,
+                            height: `${keyHeight}px`,
+                            backgroundColor: isActive ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 255, 255, 0.1)',
+                            lineHeight: `${keyHeight}px`,
+                            fontSize: `${fontSize}px`,
+                        },
+                    });
+                    currentX += keyWidth;
+                });
+            });
+            return generatedKeys;
+        },
+
+        candidateItems(this: any) {
+            const startIndex = this.candidatePageIndex * 9;
+            const endIndex = Math.min(startIndex + 9, this.candidates.length);
+            this.visibleCandidates = this.candidates.slice(startIndex, endIndex);
+            const elements = [];
+            let leftOffset = 0;
+            for (const index in this.visibleCandidates) {
+                const candidate = this.visibleCandidates[index];
+                elements.push({
+                    id: `candidate-${index}`,
+                    display: `${Number(index) + 1}. ${candidate.hanZi}`,
+                    style: {
+                        left: `${leftOffset}px`,
+                        width: `${candidate.hanZi.length * 16 + 16}px`,
+                    },
+                    selected: index == this.selectedCandidateIndex,
+                });
+                leftOffset += candidate.hanZi.length * 16 + 16 + 5;
+            }
+            return elements;
+        },
     },
 
     methods: {
-        // ---- IME 初始化 ----
-        async initIme() {
-            try {
-                await IME.initialize();
-                this.imeReady = true;
-            } catch (e) {
-                console.error('IME初始化失败:', e);
-            }
-        },
-
-        // ---- 按键处理 ----
-        onKey(key: string) {
-            if (key === '↵') {
-                this.confirm();
-                return;
-            }
-            if (key === '⌫') {
-                this.backspace();
-                return;
-            }
-            if (key === 'space') {
-                this.insertChar(' ');
-                return;
-            }
-            if (key === '⇧') {
-                this.toggleShift();
-                return;
-            }
-            if (key === 'ABC' || key === '123') {
-                this.switchMode(key);
-                return;
-            }
-            if (key === '中') {
-                this.toggleChinese();
-                return;
-            }
-            if (key === '#+=') {
-                this.shiftOn = !this.shiftOn;
-                return;
-            }
-
-            if (this.isChinese && /^[a-z]$/i.test(key)) {
-                this.inputPinyin(key.toLowerCase());
-                return;
-            }
-
-            this.insertChar(key);
-        },
-
-        toggleShift() {
-            if (this.capsLock) {
-                this.capsLock = false;
-                this.shiftOn = false;
-            } else if (this.shiftOn) {
-                this.capsLock = true;
-            } else {
-                this.shiftOn = true;
-            }
-        },
-
-        switchMode(key: string) {
-            if (key === 'ABC') {
-                this.mode = 'letters';
-                this.shiftOn = false;
-            } else if (key === '123') {
-                this.mode = this.mode === 'numbers' ? 'symbols' : 'numbers';
-                this.shiftOn = false;
-            }
-        },
-
-        async toggleChinese() {
-            if (!this.imeReady) {
-                try {
-                    await this.initIme();
-                } catch (e) {
-                    showError('输入法加载失败');
-                    return;
-                }
-            }
-            this.isChinese = !this.isChinese;
-            if (!this.isChinese) {
-                this.pinyin = '';
-                this.candidates = [];
-                this.candidatePage = 0;
-            }
-        },
-
-        // ---- 中文输入 ----
-        async inputPinyin(ch: string) {
-            this.pinyin += ch;
-            try {
-                const result = await IME.getCandidates(this.pinyin);
-                this.candidates = result || [];
-                this.candidatePage = 0;
-                this.selectedCandidate = 0;
-            } catch (e) {
-                this.candidates = [];
-            }
-        },
-
-        selectCandidate(hanZi: string) {
-            this.insertChar(hanZi);
-            this.pinyin = '';
-            this.candidates = [];
-            this.candidatePage = 0;
-        },
-
-        prevCandidates() {
-            if (this.candidatePage > 0) this.candidatePage--;
-        },
-
-        nextCandidates() {
-            if ((this.candidatePage + 1) * 5 < this.candidates.length) this.candidatePage++;
-        },
-
-        // ---- 文本操作 ----
-        insertChar(ch: string) {
-            const before = this.textBuffer.slice(0, this.cursorPos);
-            const after = this.textBuffer.slice(this.cursorPos);
-            this.textBuffer = before + ch + after;
-            this.cursorPos += ch.length;
-        },
-
-        backspace() {
-            if (this.isChinese && this.pinyin.length > 0) {
-                this.pinyin = this.pinyin.slice(0, -1);
-                if (this.pinyin.length > 0) {
-                    IME.getCandidates(this.pinyin).then(r => {
-                        this.candidates = r || [];
-                        this.candidatePage = 0;
-                    });
-                } else {
-                    this.candidates = [];
-                }
-                return;
-            }
-            if (this.cursorPos > 0) {
-                const before = this.textBuffer.slice(0, this.cursorPos - 1);
-                const after = this.textBuffer.slice(this.cursorPos);
-                this.textBuffer = before + after;
-                this.cursorPos--;
-            }
-        },
-
-        confirm() {
-            $falcon.trigger('softKeyboard', this.textBuffer);
-            this.$page.finish();
-        },
-
         close() {
-            $falcon.trigger('softKeyboard', this.textBuffer);
+            $falcon.trigger<string>('softKeyboard', this.editor?.textBuffer.data.join('\n') || '');
             this.$page.finish();
         },
-
-        // ---- 剪贴板 ----
-        async loadClipboard() {
-            try {
-                const data = await $falcon.storage.get(CLIPBOARD_STORAGE_KEY);
-                if (data) {
-                    this.clipboard = JSON.parse(data);
-                    this.hasClipboard = this.clipboard.length > 0;
+        clicked(key: string) {
+            if (key === 'Close') { this.close(); }
+            if (this.editor) {
+                if (key === 'Zh') {
+                    showLoading();
+                    IME.initialize().then(() => {
+                        hideLoading();
+                        this.isChineseMode = !this.isChineseMode;
+                        this.updatePinyin('');
+                    });
+                } else if (this.isChineseMode) {
+                    this.handleChineseInput(key);
+                } else {
+                    this.editor.pressKey(key);
                 }
-            } catch (e) {}
+                this.showKeyPopup(key);
+                this.$forceUpdate();
+            }
+        },
+        handlePunctuationInput(key: string) {
+            const fullWidthPunctuationMap = new Map<string, string>([
+                [',', '，'],
+                ['.', '。'],
+                [';', '；'],
+                [':', '：'],
+                ['?', '？'],
+                ['!', '！'],
+                ['(', '（'],
+                [')', '）'],
+                ['[', '【'],
+                [']', '】'],
+                ['"', '“”'],
+                ["'", "‘’"],
+                ['<', '《'],
+                ['>', '》'],
+                ['\\', '、'],
+                ['/', '、'],
+                ['_', '——'],
+                ['$', '￥'],
+                ['^', '……'],
+                ['`', '·'],
+            ]);
+
+            let convertedKey = key;
+            if (this.editor!.shiftPressed && fullWidthPunctuationMap.has(key)) {
+                const shiftedChar = this.editor!.getShiftedChar(key);
+                convertedKey = fullWidthPunctuationMap.get(shiftedChar) || fullWidthPunctuationMap.get(key) || key;
+            } else if (fullWidthPunctuationMap.has(key)) {
+                convertedKey = fullWidthPunctuationMap.get(key) || key;
+            }
+            if (convertedKey !== key) {
+                this.editor!.handleInput(convertedKey);
+            } else {
+                this.editor!.pressKey(convertedKey);
+            }
+        },
+        handleChineseInput(key: string) {
+            if (!this.editor!.controlPressed && !this.editor!.shiftPressed && /^[a-zA-Z]$/.test(key)) {
+                this.updatePinyin(this.currentPinyin + key.toLowerCase());
+            } else if (key === 'Backspace' && this.currentPinyin.length > 0) {
+                this.updatePinyin(this.currentPinyin.slice(0, -1));
+            } else if (key === 'Enter') {
+                this.editor!.handleInput(this.currentPinyin);
+                this.updatePinyin('');
+            } else if (this.candidates.length > 0) {
+                if (/^[1-9]$/.test(key)) {
+                    const index = parseInt(key) - 1;
+                    if (index < this.visibleCandidates.length) {
+                        this.selectCandidate(index);
+                    }
+                } else if (key === ' ') {
+                    this.selectCandidate(this.selectedCandidateIndex);
+                } else if (key === '=') {
+                    this.nextCandidatePage();
+                } else if (key === '-') {
+                    this.prevCandidatePage();
+                } else if (key === 'ArrowLeft') {
+                    if (this.selectedCandidateIndex > 0) {
+                        this.selectedCandidateIndex--;
+                    } else {
+                        this.prevCandidatePage();
+                        this.selectedCandidateIndex = Math.min(9, this.visibleCandidates.length) - 1;
+                    }
+                } else if (key === 'ArrowRight') {
+                    if (this.selectedCandidateIndex < this.visibleCandidates.length - 1) {
+                        this.selectedCandidateIndex++;
+                    } else {
+                        this.nextCandidatePage();
+                    }
+                } else {
+                    this.handlePunctuationInput(key);
+                }
+            } else {
+                this.handlePunctuationInput(key);
+            }
         },
 
-        async saveClipboard() {
-            try {
-                await $falcon.storage.set(CLIPBOARD_STORAGE_KEY, JSON.stringify(this.clipboard));
-                this.hasClipboard = this.clipboard.length > 0;
-            } catch (e) {}
+        updatePinyin(newPinyin: string) {
+            this.currentPinyin = newPinyin;
+            this.candidates = IME.getCandidates(this.currentPinyin);
+            this.candidatePageIndex = 0;
+            this.selectedCandidateIndex = 0;
         },
 
-        async copyText() {
-            if (!this.textBuffer) return;
-            this.clipboard.unshift(this.textBuffer);
-            if (this.clipboard.length > MAX_CLIPBOARD_HISTORY) this.clipboard.pop();
-            await this.saveClipboard();
-            try { await Shell.exec(`echo "${this.textBuffer}" | clip`); } catch (e) {}
-            showSuccess('已复制');
+        async selectCandidate(index: number) {
+            if (index >= 0 && index < this.visibleCandidates.length) {
+                const candidate = this.visibleCandidates[index];
+                this.editor!.handleInput(candidate.hanZi);
+                IME.updateWordFrequency(candidate.pinyin, candidate.hanZi);
+                this.pinyinHistory.push(...candidate.pinyin);
+                this.hanZiHistory += candidate.hanZi;
+                const newPinyin = this.currentPinyin.slice(candidate.pinyin.join('').length);
+                if (newPinyin.length === 0) {
+                    IME.updateWordFrequency(this.pinyinHistory, this.hanZiHistory);
+                    this.pinyinHistory = [];
+                    this.hanZiHistory = '';
+                }
+                this.updatePinyin(newPinyin);
+            }
         },
 
-        async cutText() {
-            if (!this.textBuffer) return;
-            await this.copyText();
-            this.textBuffer = '';
-            this.cursorPos = 0;
-            showSuccess('已剪切');
+        nextCandidatePage() {
+            if (this.candidatePageIndex < Math.ceil(this.candidates.length / 9) - 1) {
+                this.candidatePageIndex++;
+                this.selectedCandidateIndex = 0;
+            }
         },
 
-        pasteClip(idx: number) {
-            const text = this.clipboard[idx];
-            if (!text) return;
-            // 移到最前
-            this.clipboard.splice(idx, 1);
-            this.clipboard.unshift(text);
-            this.saveClipboard();
-            this.insertChar(text);
+        prevCandidatePage() {
+            if (this.candidatePageIndex > 0) {
+                this.candidatePageIndex--;
+                this.selectedCandidateIndex = 0;
+            }
         },
 
-        deleteClip(idx: number) {
-            this.clipboard.splice(idx, 1);
-            this.saveClipboard();
+        showKeyPopup(keyValue: string) {
+            if (keyValue.trim().length !== 1) { return; }
+
+            const keyElement = this.keyboardKeys.find(k => k.value === keyValue);
+            if (!keyElement) return;
+
+            let displayText = keyElement.displayText;
+            if (this.editor && this.editor.shiftPressed) {
+                displayText = this.editor.getShiftedChar(keyValue);
+            }
+
+            const keyLeft = parseInt(keyElement.style.left);
+            const keyTop = parseInt(keyElement.style.top);
+            const keyWidth = parseInt(keyElement.style.width);
+            const popupWidth = 40;
+            const popupHeight = 40;
+            const popupTop = keyTop - popupHeight;
+            this.keyPopup = {
+                visible: true,
+                displayText: displayText,
+                style: {
+                    left: `${keyLeft + keyWidth / 2 - popupWidth / 2}px`,
+                    top: `${popupTop}px`,
+                    width: `${popupWidth}px`,
+                    height: `${popupHeight}px`,
+                    lineHeight: `${popupHeight}px`,
+                    fontSize: `${popupHeight * 0.8}px`,
+                }
+            };
+            if (this.popupTimer) { clearTimeout(this.popupTimer); }
+            this.popupTimer = setTimeout(() => {
+                this.keyPopup.visible = false;
+                this.popupTimer = null;
+            }, 1000);
         },
 
-        pasteSysClipboard() {
-            // 无法从系统剪贴板读回，提示用户
-            showInfo('请从剪贴板历史中选择');
-        },
-
-        // ---- Emoji ----
-        toggleEmoji() {
-            this.showEmoji = !this.showEmoji;
-        },
-
-        insertEmoji(e: string) {
-            this.insertChar(e);
-            this.showEmoji = false;
-        },
-
-        // ---- 辅助 ----
-        isActive(key: string): boolean {
-            if (key === '⇧') return this.shiftOn || this.capsLock;
-            if (key === '中') return this.isChinese;
-            return false;
-        },
-
-        keyClass(key: string): string {
-            const base = 'key';
-            if (key === '↵') return base + ' key-confirm';
-            if (key === '⌫' || key === '⇧' || key === '123' || key === 'ABC' || key === '#+=' || key === '中')
-                return base + ' key-func';
-            if (this.isActive(key)) return base + ' key-active';
-            return base;
-        },
-
-        keyWidth(key: string): number {
-            if (key === 'space') return 4;
-            if (key === '↵' || key === '⇧' || key === '⌫') return 1.5;
-            return 1;
-        },
+        isKeyActive(key: any) {
+            if (!this.editor) return false;
+            switch (key) {
+                case 'CapsLock':
+                    return this.editor.capsLock;
+                case 'Shift':
+                    return this.editor.shiftPressed;
+                case 'Control':
+                    return this.editor.controlPressed;
+                case 'Insert':
+                    return this.editor.insertMode;
+                case 'Scan':
+                    return this.editor.scanEnabled;
+                default:
+                    return false;
+            }
+        }
     },
+    beforeDestroy() {
+        if (this.popupTimer) { clearTimeout(this.popupTimer); }
+    }
 });
 
 export default softKeyboard;

@@ -57,17 +57,8 @@ const index = defineComponent({
         Update() {
             $falcon.navTo("update", {});
         },
-        MinAi() {
-            $falcon.navTo("minAi", {});
-        },
         Pvz() {
             $falcon.navTo("pvz", {});
-        },
-        WebdavManager() {
-            $falcon.navTo("webdavManager", {});
-        },
-        Browser() {
-            $falcon.navTo("webBrowser", {});
         },
     }
 });

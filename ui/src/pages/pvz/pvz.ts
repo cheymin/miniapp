@@ -49,7 +49,7 @@ const pvz = defineComponent({
         return {
             $page: {} as FalconPage<PvzOptions>,
             grid: [] as Cell[][],
-            sun: 150,
+            sun: 99999,
             wave: 0,
             maxWave: 10,
             selectedPlant: -1,
@@ -91,7 +91,7 @@ const pvz = defineComponent({
         },
 
         startGame() {
-            this.sun = 150;
+            this.sun = 99999;
             this.wave = 0;
             this.gameOver = false;
             this.gameWon = false;
@@ -148,9 +148,7 @@ const pvz = defineComponent({
             if (cell.plant) return;
 
             const plant = PLANT_TYPES[this.selectedPlant];
-            if (this.sun < plant.cost) return;
 
-            this.sun -= plant.cost;
             cell.plant = plant.icon;
             cell.plantTimer = 0;
         },

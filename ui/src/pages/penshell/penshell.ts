@@ -47,7 +47,7 @@ const penshellPage = defineComponent({
                 this.shellRunning = true;
 
                 // 监听流式输出
-                $falcon.on('penshell_output', (chunk: string) => {
+                Penshell.on('penshell_output', (chunk: string) => {
                     this.handleOutput(chunk);
                 });
 
@@ -186,7 +186,6 @@ const penshellPage = defineComponent({
         async close() {
             if (this.shellRunning) {
                 try {
-                    $falcon.off('penshell_output');
                     await Penshell.close();
                 } catch (e) {}
             }
