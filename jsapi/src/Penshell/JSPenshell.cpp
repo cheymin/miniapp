@@ -71,6 +71,17 @@ void JSPenshell::getWorkingDirectory(JQFunctionInfo& info) {
     }
 }
 
+void JSPenshell::sendCtrlC(JQFunctionInfo& info) {
+    try {
+        ASSERT(penshell != nullptr);
+        ASSERT(info.Length() == 0);
+        penshell->sendCtrlC();
+        info.GetReturnValue().Set(true);
+    } catch (const std::exception& e) {
+        info.GetReturnValue().ThrowInternalError(e.what());
+    }
+}
+
 void JSPenshell::close(JQFunctionInfo& info) {
     try {
         ASSERT(penshell != nullptr);
@@ -101,6 +112,7 @@ JSValue createPenshell(JQModuleEnv* env) {
     tpl->SetProtoMethodPromise("initialize", &JSPenshell::initialize);
     tpl->SetProtoMethodPromise("exec", &JSPenshell::exec);
     tpl->SetProtoMethod("write", &JSPenshell::write);
+    tpl->SetProtoMethod("sendCtrlC", &JSPenshell::sendCtrlC);
     tpl->SetProtoMethod("getWorkingDirectory", &JSPenshell::getWorkingDirectory);
     tpl->SetProtoMethod("close", &JSPenshell::close);
     tpl->SetProtoMethod("isRunning", &JSPenshell::isRunning);

@@ -66,6 +66,7 @@ export declare class Penshell {
     static initialize(): Promise<void>;
     static exec(command: string): Promise<string>;
     static write(input: string): void;
+    static sendCtrlC(): void;
     static getWorkingDirectory(): string;
     static close(): void;
     static isRunning(): boolean;

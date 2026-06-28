@@ -27,7 +27,7 @@
     white-space: pre;
 }
 
-/* 当前输入行：提示符+输入横排 */
+/* 当前输入行 */
 .input-line {
     flex-direction: row;
     align-items: center;
@@ -47,6 +47,13 @@
     color: #3fb950;
     font-family: monospace;
     white-space: pre;
+}
+
+.line-running {
+    font-size: 12px;
+    line-height: 16px;
+    color: #d29922;
+    font-family: monospace;
 }
 
 .line-system { color: #58a6ff; font-style: italic; font-size: 11px; }
@@ -82,3 +89,9 @@
     margin-left: auto;
 }
 .quick-go:active { background-color: #2ea043; }
+.quick-cancel {
+    background-color: #da3633;
+    color: #fff;
+    margin-left: auto;
+}
+.quick-cancel:active { background-color: #f85149; }

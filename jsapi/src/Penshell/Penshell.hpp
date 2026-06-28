@@ -11,6 +11,7 @@
 #include <cstring>
 #include <cstdio>
 #include <vector>
+#include <chrono>
 
 class Penshell {
 public:
@@ -18,8 +19,9 @@ public:
     ~Penshell();
 
     void initialize();
-    std::string exec(const std::string& cmd);
+    std::string exec(const std::string& cmd, int timeoutMs = 10000);
     void write(const std::string& input);
+    void sendCtrlC();
     void close();
     bool isRunning() const { return running; }
     std::string getWorkingDirectory();

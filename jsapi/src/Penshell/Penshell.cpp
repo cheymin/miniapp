@@ -34,102 +34,102 @@ void Penshell::initialize() {
         dup2(stdoutPipe[1], STDOUT_FILENO);
         dup2(stderrPipe[1], STDERR_FILENO);
 
-        // 关闭父进程端的管道
         ::close(stdinPipe[0]); ::close(stdinPipe[1]);
         ::close(stdoutPipe[0]); ::close(stdoutPipe[1]);
         ::close(stderrPipe[0]); ::close(stderrPipe[1]);
 
-        // 运行 shell
         execl("/bin/sh", "sh", (char*)nullptr);
         _exit(127);
     }
 
-    // 父进程：关闭子进程端的管道
-    ::close(stdinPipe[0]);   // 关闭读端
-    ::close(stdoutPipe[1]);  // 关闭写端
+    // 父进程
+    ::close(stdinPipe[0]);
+    ::close(stdoutPipe[1]);
     ::close(stderrPipe[1]);
 
-    stdinFd = stdinPipe[1];   // 写端
-    stdoutFd = stdoutPipe[0]; // 读端
+    stdinFd = stdinPipe[1];
+    stdoutFd = stdoutPipe[0];
     stderrFd = stderrPipe[0];
 
     running = true;
-
-    // 启动读线程
     readerThread = std::thread(&Penshell::readerLoop, this);
 }
 
-std::string Penshell::exec(const std::string& cmd) {
+std::string Penshell::exec(const std::string& cmd, int timeoutMs) {
     if (!running) throw std::runtime_error("Penshell not initialized");
 
-    // 锁定结果缓冲区
     std::unique_lock<std::mutex> lock(resultMutex);
     resultBuffer.clear();
 
-    // 写入命令 + 结束标记
     std::string fullCmd = cmd + "\necho " + DONE_MARKER + "\n";
-    // 使用 POSIX write 写入 stdin 管道
     if (::write(stdinFd, fullCmd.c_str(), fullCmd.size()) < 0) {
-        resultCV.notify_one();
         throw std::runtime_error("写入 stdin 失败");
     }
 
-    // 等待结束标记出现
-    resultCV.wait(lock, [this]() {
+    // 带超时等待，防止交互式命令永久阻塞
+    bool completed = resultCV.wait_for(lock, std::chrono::milliseconds(timeoutMs), [this]() {
         return resultBuffer.find(DONE_MARKER) != std::string::npos;
     });
 
-    // 去掉标记行
     std::string result = resultBuffer;
-    size_t markerPos = result.find(DONE_MARKER);
-    if (markerPos != std::string::npos) {
-        // 去掉标记及其之前的换行
-        size_t lineStart = result.rfind('\n', markerPos);
-        if (lineStart != std::string::npos && lineStart > 0) {
-            result = result.substr(0, lineStart);
-        } else {
-            result = result.substr(0, markerPos);
+    if (completed) {
+        // 正常完成，去掉标记行
+        size_t markerPos = result.find(DONE_MARKER);
+        if (markerPos != std::string::npos) {
+            size_t lineStart = result.rfind('\n', markerPos);
+            if (lineStart != std::string::npos && lineStart > 0) {
+                result = result.substr(0, lineStart);
+            } else {
+                result = result.substr(0, markerPos);
+            }
         }
     }
+    // 超时也返回已有内容（交互式命令的输出）
 
     return result;
 }
 
 void Penshell::write(const std::string& input) {
     if (!running || stdinFd < 0) return;
+    // 直接写入，不加换行（前端控制换行）
     ::write(stdinFd, input.c_str(), input.size());
-    ::write(stdinFd, "\n", 1);
+}
+
+void Penshell::sendCtrlC() {
+    if (!running || stdinFd < 0) return;
+    ::write(stdinFd, "\x03", 1);
+    // 通知等待中的 exec 解除阻塞
+    {
+        std::lock_guard<std::mutex> lock(resultMutex);
+        resultBuffer += DONE_MARKER;
+        resultCV.notify_one();
+    }
 }
 
 void Penshell::close() {
     if (!running) return;
     running = false;
 
-    // 通知任何等待中的 exec()
     {
         std::lock_guard<std::mutex> lock(resultMutex);
         resultBuffer += DONE_MARKER;
         resultCV.notify_all();
     }
 
-    // 发送 exit 命令
     if (stdinFd >= 0) {
         ::write(stdinFd, "exit\n", 5);
     }
 
-    // 关闭管道
     if (stdinFd >= 0) { ::close(stdinFd); stdinFd = -1; }
     if (stdoutFd >= 0) { ::close(stdoutFd); stdoutFd = -1; }
     if (stderrFd >= 0) { ::close(stderrFd); stderrFd = -1; }
 
-    // 等待子进程
     if (childPid > 0) {
         int status;
         waitpid(childPid, &status, WNOHANG);
         childPid = -1;
     }
 
-    // 等待读线程结束
     readerDone = true;
     if (readerThread.joinable()) {
         readerThread.join();
@@ -139,7 +139,7 @@ void Penshell::close() {
 std::string Penshell::getWorkingDirectory() {
     if (!running) return "/";
     try {
-        return exec("pwd");
+        return exec("pwd", 3000);
     } catch (...) {
         return "/";
     }
@@ -172,7 +172,7 @@ void Penshell::readerLoop() {
                 onOutput(chunk);
                 hasData = true;
             } else if (n == 0) {
-                break; // EOF
+                break;
             }
         }
 
@@ -193,12 +193,10 @@ void Penshell::readerLoop() {
 }
 
 void Penshell::onOutput(const std::string& chunk) {
-    // 通知回调（JS 流式输出）
     if (outputCallback) {
         outputCallback(chunk);
     }
 
-    // 追加到结果缓冲区并通知等待者
     std::lock_guard<std::mutex> lock(resultMutex);
     resultBuffer += chunk;
     if (resultBuffer.find(DONE_MARKER) != std::string::npos) {

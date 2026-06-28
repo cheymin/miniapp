@@ -19,6 +19,7 @@ public:
     void initialize(JQAsyncInfo& info);
     void exec(JQAsyncInfo& info);
     void write(JQFunctionInfo& info);
+    void sendCtrlC(JQFunctionInfo& info);
     void getWorkingDirectory(JQFunctionInfo& info);
     void close(JQFunctionInfo& info);
     void isRunning(JQFunctionInfo& info);

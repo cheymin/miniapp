@@ -9,7 +9,7 @@ const penshellPage = defineComponent({
             $page: {} as FalconPage<{}>,
             initialized: false,
             currentInput: '',
-            lines: [] as { type: 'prompt' | 'output' | 'error' | 'system' | 'cmd'; text: string; _ended?: boolean }[],
+            lines: [] as { type: 'prompt' | 'output' | 'error' | 'system' | 'cmd'; text: string }[],
             cwd: '~',
             homeDir: '~',
             history: [] as string[],
@@ -17,7 +17,7 @@ const penshellPage = defineComponent({
             shellRunning: false,
             username: 'user',
             hostname: 'pen',
-            quickCmds: ['ls', 'pwd', 'cd ..', 'ls -la', 'cat', 'clear'],
+            cmdRunning: false,
         };
     },
 
@@ -39,7 +39,7 @@ const penshellPage = defineComponent({
 
     methods: {
         async initPenshell() {
-            this.addLine('system', 'Penshell v1.1  -  输入 help 查看命令');
+            this.addLine('system', 'Penshell v1.2  -  输入 help 查看命令');
             try {
                 await Penshell.initialize();
                 this.initialized = true;
@@ -64,17 +64,9 @@ const penshellPage = defineComponent({
         },
 
         addLine(type: 'prompt' | 'output' | 'error' | 'system' | 'cmd', text: string) {
-            const lines = text.split('\n');
-            for (let i = 0; i < lines.length; i++) {
-                if (i === 0 && lines.length > 1) {
-                    this.lines.push({ type, text: lines[i] });
-                } else if (i > 0 && lines[i] === '') {
-                    this.lines.push({ type: 'output', text: '' });
-                } else if (i > 0) {
-                    this.lines.push({ type, text: lines[i] });
-                } else {
-                    this.lines.push({ type, text: lines[i] });
-                }
+            const parts = text.split('\n');
+            for (let i = 0; i < parts.length; i++) {
+                this.lines.push({ type, text: parts[i] });
             }
             if (this.lines.length > 300) {
                 this.lines.splice(0, this.lines.length - 200);
@@ -84,7 +76,7 @@ const penshellPage = defineComponent({
         handleOutput(chunk: string) {
             if (chunk.includes('__PENSHELL_DONE__')) return;
             const lastLine = this.lines[this.lines.length - 1];
-            if (lastLine && lastLine.type === 'output' && !lastLine._ended) {
+            if (lastLine && lastLine.type === 'output') {
                 lastLine.text += chunk;
             } else {
                 this.lines.push({ type: 'output', text: chunk });
@@ -93,10 +85,9 @@ const penshellPage = defineComponent({
         },
 
         async executeCommand() {
-            if (!this.currentInput.trim()) return;
+            if (!this.currentInput.trim() || this.cmdRunning) return;
             const cmd = this.currentInput.trim();
             this.currentInput = '';
-
             this.history.push(cmd);
             this.historyIndex = this.history.length;
 
@@ -109,10 +100,8 @@ const penshellPage = defineComponent({
                 return;
             }
 
-            if (cmd === 'exit' || cmd === 'quit') {
-                this.close();
-                return;
-            }
+            // 内置命令
+            if (cmd === 'exit' || cmd === 'quit') { this.close(); return; }
             if (cmd === 'clear' || cmd === 'cls') {
                 this.lines = [];
                 this.$forceUpdate();
@@ -126,10 +115,8 @@ const penshellPage = defineComponent({
                     '  exit       退出\n' +
                     '  pwd        当前目录\n' +
                     '  history    命令历史\n' +
-                    '  ls [path]  列出文件\n' +
-                    '  cd <path>  切换目录\n' +
-                    '  cat <file> 查看文件\n' +
-                    '\n支持所有 sh 命令');
+                    '\n支持所有 sh 命令\n' +
+                    '交互式命令可用 Ctrl+C 中断');
                 this.$forceUpdate();
                 return;
             }
@@ -139,32 +126,50 @@ const penshellPage = defineComponent({
                 return;
             }
 
-            try {
-                const result = await Penshell.exec(cmd);
-                if (result) {
-                    const trimmed = result.replace(/__PENSHELL_DONE__/g, '').trimEnd();
-                    if (trimmed) {
-                        if (trimmed.toLowerCase().includes('error') ||
-                            trimmed.toLowerCase().includes('not found') ||
-                            trimmed.toLowerCase().includes('no such')) {
-                            this.addLine('error', trimmed);
-                        } else {
-                            this.addLine('output', trimmed);
-                        }
-                    }
-                }
+            // 异步执行：用 write 发送命令，通过事件回调实时接收输出
+            this.cmdRunning = true;
+            this.$forceUpdate();
 
-                if (cmd.startsWith('cd ') || cmd === 'cd') {
-                    try {
-                        const pwd = await Penshell.exec('pwd');
-                        this.cwd = pwd.trim() || '/';
-                    } catch (e) {}
+            try {
+                // 用 write 发送命令（实时输出通过事件回调）
+                Penshell.write(cmd + '\n');
+
+                // 对于 cd 命令，发送 pwd 来更新目录
+                if (cmd.startsWith('cd') || cmd === 'cd') {
+                    setTimeout(async () => {
+                        try {
+                            const pwd = await Penshell.exec('pwd');
+                            this.cwd = pwd.trim() || '/';
+                        } catch (e) {}
+                        this.cmdRunning = false;
+                        this.$forceUpdate();
+                    }, 500);
+                } else {
+                    // 普通命令：等待一段时间后恢复输入
+                    // 输出会通过事件回调实时显示
+                    // exec 会等到 __PENSHELL_DONE__ 或超时
+                    setTimeout(async () => {
+                        try {
+                            await Penshell.exec('true');
+                        } catch (e) {}
+                        this.cmdRunning = false;
+                        this.$forceUpdate();
+                    }, 300);
                 }
             } catch (e: any) {
                 this.addLine('error', e.message || String(e));
+                this.cmdRunning = false;
+                this.$forceUpdate();
             }
+        },
 
-            this.$forceUpdate();
+        sendCtrlC() {
+            try {
+                Penshell.sendCtrlC();
+                this.addLine('system', '^C');
+                this.cmdRunning = false;
+                this.$forceUpdate();
+            } catch (e) {}
         },
 
         showInput() {
@@ -179,6 +184,7 @@ const penshellPage = defineComponent({
         },
 
         quickCommand(cmd: string) {
+            if (this.cmdRunning) return;
             this.currentInput = cmd;
             this.$forceUpdate();
             if (cmd === 'clear' || cmd === 'ls' || cmd === 'pwd') {
