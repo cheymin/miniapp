@@ -35,6 +35,13 @@
 
 using StreamCallback = std::function<void(const std::string &chunk)>;
 
+// 流式解析上下文：跨 curl 回调保留不完整的 SSE 行，避免分块切断导致丢内容
+struct StreamContext
+{
+    const FetchOptions *options;
+    std::string buffer;
+};
+
 class Response
 {
 public:

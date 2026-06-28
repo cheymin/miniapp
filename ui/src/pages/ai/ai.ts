@@ -16,9 +16,9 @@
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
 import { defineComponent } from 'vue';
-import { AI, Shell } from 'langningchen';
+import { AI } from 'langningchen';
 import { ROLE, ConversationNode, STOP_REASON } from '../../@types/langningchen';
-import { showError, showSuccess } from '../../components/ToastMessage';
+import { showError } from '../../components/ToastMessage';
 import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
 
 export type aiOptions = {};
@@ -35,10 +35,6 @@ const ai = defineComponent({
             jumpToMessageId: '',
 
             currentConversationId: '',
-
-            attachedFilePath: '',
-            attachedFileContent: '',
-            shellInitialized: false,
         };
     },
 
@@ -126,14 +122,7 @@ const ai = defineComponent({
 
             this.streamingContent = '';
 
-            let messageToSend = userMessage;
-            if (this.attachedFilePath && this.attachedFileContent) {
-                const fileName = this.getFileName(this.attachedFilePath);
-                messageToSend = `[文件: ${fileName}]\n\`\`\`\n${this.attachedFileContent}\n\`\`\`\n\n${userMessage}`;
-                this.clearAttachment();
-            }
-
-            AI.addUserMessage(messageToSend).then(() => {
+            AI.addUserMessage(userMessage).then(() => {
                 this.refreshMessages();
                 this.$forceUpdate();
                 this.generateResponse();
@@ -174,82 +163,6 @@ const ai = defineComponent({
                 () => this.currentInput,
                 (value) => { this.currentInput = value; this.$forceUpdate(); }
             );
-        },
-
-        async initializeShell() {
-            if (this.shellInitialized) return;
-            try {
-                if (Shell && typeof Shell.initialize === 'function') {
-                    await Shell.initialize();
-                    this.shellInitialized = true;
-                }
-            } catch (e) {
-                console.error('Shell初始化失败:', e);
-            }
-        },
-
-        async attachFile() {
-            if (this.isStreaming) return;
-            // 监听文件选择结果
-            const handler = (filePath: string) => {
-                $falcon.off('file_selected', handler);
-                this.readAndAttachFile(filePath);
-            };
-            $falcon.on('file_selected', handler);
-            // 导航到文件管理器（选择模式）
-            $falcon.navTo('fileManager', { pickerMode: true, returnTo: 'ai' });
-        },
-
-        async readAndAttachFile(filePath: string) {
-            if (!filePath) return;
-            await this.initializeShell();
-            if (!this.shellInitialized) {
-                showError('Shell未初始化，无法读取文件');
-                return;
-            }
-            try {
-                const checkCmd = `test -f "${filePath}" && echo "exists" || echo "not_exists"`;
-                const checkResult = await Shell.exec(checkCmd);
-                if (checkResult.trim() !== 'exists') {
-                    showError('文件不存在: ' + filePath);
-                    return;
-                }
-                const sizeCmd = `stat -c "%s" "${filePath}" 2>/dev/null || wc -c "${filePath}" | awk '{print $1}'`;
-                const sizeResult = await Shell.exec(sizeCmd);
-                const fileSize = parseInt(sizeResult.trim(), 10) || 0;
-                if (fileSize > 500000) {
-                    showError('文件过大，请选择小于 500KB 的文件');
-                    return;
-                }
-                const content = await Shell.exec(`cat "${filePath}"`);
-                if (!content || content.trim().length === 0) {
-                    showError('文件内容为空或无法读取');
-                    return;
-                }
-                this.attachedFilePath = filePath;
-                this.attachedFileContent = content;
-                showSuccess('文件已附加: ' + filePath.split('/').pop());
-                this.$forceUpdate();
-            } catch (e: any) {
-                showError('读取文件失败: ' + (e.message || e));
-            }
-        },
-
-        clearAttachment() {
-            this.attachedFilePath = '';
-            this.attachedFileContent = '';
-            this.$forceUpdate();
-        },
-
-        getFileName(filePath: string): string {
-            const parts = filePath.split('/');
-            return parts[parts.length - 1] || filePath;
-        },
-
-        formatFileSize(bytes: number): string {
-            if (bytes < 1024) return bytes + ' B';
-            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
-            return (bytes / (1024 * 1024)).toFixed(1) + ' MB';
         },
 
         openSettings() {

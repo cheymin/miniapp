@@ -1,4 +1,6 @@
 <script>
+import { openSoftKeyboard } from '../utils/softKeyboardUtils';
+
 export default {
   name: 'HtmlView',
   props: {
@@ -305,6 +307,16 @@ export default {
       this.currentUrl = href;
       this.loadHtml();
     },
+    onInputClick(node) {
+      const attrs = node.attrs || (node.attrs = {});
+      openSoftKeyboard(
+        () => attrs.value || '',
+        (value) => {
+          attrs.value = value;
+          this.$forceUpdate();
+        }
+      );
+    },
     onFormSubmit(formNode) {
       const action = (formNode.attrs && formNode.attrs.action) ? formNode.attrs.action : '';
       const method = (formNode.attrs && formNode.attrs.method) ? formNode.attrs.method.toLowerCase() : 'get';
@@ -383,15 +395,39 @@ export default {
             on: { click: () => { if (parentForm) this.onFormSubmit(parentForm); } }
           }, [h('text', { style: { color: '#000' } }, text)]);
         }
-        return h('input', {
-          attrs: { type: type, value: attrs.value || '', placeholder: attrs.placeholder || '' },
-          style: this.inlineStyle(style)
-        });
+        // 非按钮 input：渲染为可点击区域，点击拉起软键盘输入
+        const displayText = attrs.value || attrs.placeholder || '';
+        return h('div', {
+          style: {
+            ...this.inlineStyle(style),
+            borderWidth: '1px',
+            borderColor: '#888',
+            borderRadius: '3px',
+            padding: '4px 8px',
+            margin: '4px 0',
+            minHeight: '20px',
+            color: attrs.value ? '#000' : '#999'
+          },
+          on: { click: () => this.onInputClick(node) }
+        }, [h('text', { style: { fontSize: '14px' } }, displayText)]);
       }
       if (node.tag === 'textarea') {
         const attrs = node.attrs || {};
         const style = this.getCombinedStyle(node);
-        return h('textarea', { attrs: { value: attrs.value || '' }, style: this.inlineStyle(style) });
+        const displayText = attrs.value || attrs.placeholder || '';
+        return h('div', {
+          style: {
+            ...this.inlineStyle(style),
+            borderWidth: '1px',
+            borderColor: '#888',
+            borderRadius: '3px',
+            padding: '4px 8px',
+            margin: '4px 0',
+            minHeight: '40px',
+            color: attrs.value ? '#000' : '#999'
+          },
+          on: { click: () => this.onInputClick(node) }
+        }, [h('text', { style: { fontSize: '14px' } }, displayText)]);
       }
       if (node.tag === 'button') {
         const style = this.getCombinedStyle(node);

@@ -99,18 +99,13 @@ const imageViewer = defineComponent({
         handleBackPress() {
             if (this.showSettingsPanel) {
                 this.showSettingsPanel = false;
-            } else if (this.showImageInfo) {
-                this.showImageInfo = false;
             } else {
                 $falcon.navBack();
             }
         },
-        
+
         toggleSettings() {
             this.showSettingsPanel = !this.showSettingsPanel;
-            if (this.showSettingsPanel) {
-                this.showImageInfo = false;
-            }
         },
 
         async initializeShell() {

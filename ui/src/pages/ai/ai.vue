@@ -53,18 +53,11 @@
             </div>
 
             <div class="item">
-                <text @click="attachFile"
-                    :class="'square-btn' + (isStreaming ? ' square-btn-disabled' : '')">文</text>
                 <text :class="'item-input' + (isStreaming ? ' item-input-disabled' : '')" @click="loadSoftKeyboard">{{
                     currentInput || '点击输入...' }}</text>
                 <text v-if="!isStreaming" @click="sendMessage(this.currentInput)"
                     :class="'square-btn square-btn-' + (this.canSendMessage ? 'primary' : 'disabled')">发</text>
                 <text v-else @click="stopGeneration" class="square-btn square-btn-danger">停</text>
-            </div>
-            <div v-if="attachedFilePath" class="attached-file">
-                <text class="attached-file-icon">📎</text>
-                <text class="attached-file-name">{{ getFileName(attachedFilePath) }}</text>
-                <text class="attached-file-clear" @click="clearAttachment">✕</text>
             </div>
         </div>
         <ToastMessage />

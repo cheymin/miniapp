@@ -25,36 +25,47 @@
       <text v-if="imageList.length > 0" class="counter">{{ currentImageIndex + 1 }}/{{ imageList.length }}</text>
     </div>
 
-    <div v-if="showSettingsPanel" class="settings-panel">
-      <div class="settings-row">
-        <text class="settings-label">目录:</text>
-        <text class="settings-path">{{ currentDirectory }}</text>
+    <!-- 全屏覆盖式菜单弹窗：用 scroller 包裹，所有内容都可滚动 -->
+    <div v-if="showSettingsPanel" class="menu-overlay">
+      <div class="menu-header">
+        <text class="menu-title">菜单</text>
+        <text class="menu-close" @click="toggleSettings">✕</text>
       </div>
-      <div class="settings-actions">
-        <text class="settings-btn-action" @click="selectDirectory">选择目录</text>
-        <text class="settings-btn-action" @click="scanImages">扫描图片</text>
-      </div>
-      <div v-if="currentImage" class="settings-section">
-        <div class="settings-row">
-          <text class="btn-small" @click="rotateLeft">左转</text>
-          <text class="btn-small" @click="rotateRight">右转</text>
-          <text class="btn-small" @click="resetView">重置</text>
-        </div>
-        <div class="settings-row">
-          <text class="btn-small" @click="toggleSlideshow">{{ isSlideshow ? '停止幻灯片' : '幻灯片' }}</text>
-          <text class="btn-small" @click="toggleImageInfo">信息</text>
-          <text class="btn-small" @click="renameImage">重命名</text>
-          <text class="btn-small btn-danger" @click="deleteImage">删除</text>
-        </div>
-      </div>
-    </div>
+      <scroller class="menu-scroller" scroll-direction="vertical" :show-scrollbar="true">
+        <div class="menu-content">
+          <text class="menu-section-title">目录</text>
+          <text class="menu-path">{{ currentDirectory }}</text>
+          <div class="menu-row">
+            <text class="menu-btn" @click="selectDirectory">选择目录</text>
+            <text class="menu-btn" @click="scanImages">扫描图片</text>
+          </div>
 
-    <div v-if="showImageInfo && currentImage" class="info-panel">
-      <text class="info-item">文件: {{ imageName }}</text>
-      <text class="info-item">大小: {{ formatFileSize(imageSize) }}</text>
-      <text class="info-item">路径: {{ currentImage }}</text>
-      <text class="info-item">缩放: {{ Math.round(scale * 100) }}%</text>
-      <text class="btn-small" @click="toggleImageInfo">关闭</text>
+          <template v-if="currentImage">
+            <text class="menu-section-title">图片操作</text>
+            <div class="menu-row">
+              <text class="menu-btn" @click="rotateLeft">左转</text>
+              <text class="menu-btn" @click="rotateRight">右转</text>
+              <text class="menu-btn" @click="resetView">重置</text>
+            </div>
+            <div class="menu-row">
+              <text class="menu-btn" @click="toggleSlideshow">{{ isSlideshow ? '停止幻灯片' : '幻灯片' }}</text>
+              <text class="menu-btn" @click="toggleImageInfo">信息</text>
+            </div>
+            <div class="menu-row">
+              <text class="menu-btn" @click="renameImage">重命名</text>
+              <text class="menu-btn menu-btn-danger" @click="deleteImage">删除</text>
+            </div>
+          </template>
+
+          <template v-if="showImageInfo && currentImage">
+            <text class="menu-section-title">图片信息</text>
+            <text class="menu-info">文件: {{ imageName }}</text>
+            <text class="menu-info">大小: {{ formatFileSize(imageSize) }}</text>
+            <text class="menu-info">路径: {{ currentImage }}</text>
+            <text class="menu-info">缩放: {{ Math.round(scale * 100) }}%</text>
+          </template>
+        </div>
+      </scroller>
     </div>
 
     <div v-if="currentImageData" class="image-area">

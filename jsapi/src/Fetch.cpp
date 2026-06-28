@@ -54,20 +54,30 @@ size_t Fetch::StreamWriteCallback(void *contents, size_t size, size_t nmemb, voi
     size_t totalSize = size * nmemb;
     try
     {
-        const FetchOptions *options = static_cast<const FetchOptions *>(userdata);
-        if (options && options->cancelled && options->cancelled->load())
+        StreamContext *ctx = static_cast<StreamContext *>(userdata);
+        if (!ctx || !ctx->options) return totalSize;
+        if (ctx->options->cancelled && ctx->options->cancelled->load())
             return 0;
-        if (options && options->streamCallback)
+        if (ctx->options->streamCallback)
         {
-            std::string chunk((char *)contents, totalSize);
-            std::istringstream stream(chunk);
-            std::string line;
-            while (std::getline(stream, line))
+            // 本次 chunk 追加到跨回调缓冲区，按 \n 分割出完整行，
+            // 不完整的尾部保留到下次回调拼接。这样 SSE 消息即使被
+            // curl 的网络分块切断也不会丢内容。
+            ctx->buffer.append((char *)contents, totalSize);
+            std::string::size_type pos = 0;
+            while (true)
             {
+                std::string::size_type nl = ctx->buffer.find('\n', pos);
+                if (nl == std::string::npos) break;
+                std::string line = ctx->buffer.substr(pos, nl - pos);
+                pos = nl + 1;
                 line = strUtils::trimEnd(line);
-                if (line.substr(0, 6) == "data: ")
-                    options->streamCallback(line.substr(6));
+                if (line.size() >= 6 && line.substr(0, 6) == "data: ")
+                    ctx->options->streamCallback(line.substr(6));
             }
+            // 保留剩余不完整部分
+            if (pos > 0)
+                ctx->buffer.erase(0, pos);
         }
     }
     catch (const std::exception &e)
@@ -117,10 +127,11 @@ Response Fetch::fetch(const std::string &url, const FetchOptions &options)
         ASSERT_CURL_OK(curl_easy_setopt(curl, CURLOPT_NOPROGRESS, 0L));
     }
 
+    StreamContext streamCtx{&options, ""};
     if (options.stream && options.streamCallback)
     {
         ASSERT_CURL_OK(curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, StreamWriteCallback));
-        ASSERT_CURL_OK(curl_easy_setopt(curl, CURLOPT_WRITEDATA, &options));
+        ASSERT_CURL_OK(curl_easy_setopt(curl, CURLOPT_WRITEDATA, &streamCtx));
     }
     else
     {
@@ -150,6 +161,15 @@ Response Fetch::fetch(const std::string &url, const FetchOptions &options)
         ASSERT_CURL_OK(curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers));
 
     ASSERT_CURL_OK(curl_easy_perform(curl));
+
+    // 流结束后处理缓冲区里残留的最后一行（结尾可能没有 \n）
+    if (options.stream && options.streamCallback && !streamCtx.buffer.empty())
+    {
+        std::string line = strUtils::trimEnd(streamCtx.buffer);
+        streamCtx.buffer.clear();
+        if (line.size() >= 6 && line.substr(0, 6) == "data: ")
+            options.streamCallback(line.substr(6));
+    }
 
     ASSERT_CURL_OK(curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &responseCode));
 
