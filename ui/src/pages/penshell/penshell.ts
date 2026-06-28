@@ -17,7 +17,6 @@ const penshellPage = defineComponent({
             shellRunning: false,
             username: 'user',
             hostname: 'pen',
-            cmdRunning: false,
         };
     },
 
@@ -39,7 +38,8 @@ const penshellPage = defineComponent({
 
     methods: {
         async initPenshell() {
-            this.addLine('system', 'Penshell v1.2  -  输入 help 查看命令');
+            this.addLine('system', 'Penshell v1.3  -  输入 help 查看命令');
+            this.$forceUpdate();
             try {
                 await Penshell.initialize();
                 this.initialized = true;
@@ -60,6 +60,7 @@ const penshellPage = defineComponent({
                 this.$forceUpdate();
             } catch (e: any) {
                 this.addLine('error', '初始化失败: ' + (e.message || e));
+                this.$forceUpdate();
             }
         },
 
@@ -84,8 +85,8 @@ const penshellPage = defineComponent({
             this.$forceUpdate();
         },
 
-        async executeCommand() {
-            if (!this.currentInput.trim() || this.cmdRunning) return;
+        executeCommand() {
+            if (!this.currentInput.trim()) return;
             const cmd = this.currentInput.trim();
             this.currentInput = '';
             this.history.push(cmd);
@@ -116,7 +117,7 @@ const penshellPage = defineComponent({
                     '  pwd        当前目录\n' +
                     '  history    命令历史\n' +
                     '\n支持所有 sh 命令\n' +
-                    '交互式命令可用 Ctrl+C 中断');
+                    '交互式命令可用 ^C 中断');
                 this.$forceUpdate();
                 return;
             }
@@ -126,48 +127,32 @@ const penshellPage = defineComponent({
                 return;
             }
 
-            // 异步执行：用 write 发送命令，通过事件回调实时接收输出
-            this.cmdRunning = true;
-            this.$forceUpdate();
-
+            // 纯异步：write 发送命令，输出通过事件回调实时显示
+            // 不阻塞，随时可以输入新命令或 Ctrl+C
             try {
-                // 用 write 发送命令（实时输出通过事件回调）
                 Penshell.write(cmd + '\n');
-
-                // 对于 cd 命令，发送 pwd 来更新目录
-                if (cmd.startsWith('cd') || cmd === 'cd') {
-                    setTimeout(async () => {
-                        try {
-                            const pwd = await Penshell.exec('pwd');
-                            this.cwd = pwd.trim() || '/';
-                        } catch (e) {}
-                        this.cmdRunning = false;
-                        this.$forceUpdate();
-                    }, 500);
-                } else {
-                    // 普通命令：等待一段时间后恢复输入
-                    // 输出会通过事件回调实时显示
-                    // exec 会等到 __PENSHELL_DONE__ 或超时
-                    setTimeout(async () => {
-                        try {
-                            await Penshell.exec('true');
-                        } catch (e) {}
-                        this.cmdRunning = false;
-                        this.$forceUpdate();
-                    }, 300);
-                }
             } catch (e: any) {
                 this.addLine('error', e.message || String(e));
-                this.cmdRunning = false;
-                this.$forceUpdate();
             }
+
+            // cd 后异步更新目录（exec 有超时保护，不会卡死）
+            if (cmd.startsWith('cd') || cmd === 'cd') {
+                setTimeout(async () => {
+                    try {
+                        const pwd = await Penshell.exec('pwd');
+                        this.cwd = pwd.trim() || '/';
+                        this.$forceUpdate();
+                    } catch (e) {}
+                }, 500);
+            }
+
+            this.$forceUpdate();
         },
 
         sendCtrlC() {
             try {
                 Penshell.sendCtrlC();
                 this.addLine('system', '^C');
-                this.cmdRunning = false;
                 this.$forceUpdate();
             } catch (e) {}
         },
@@ -184,7 +169,6 @@ const penshellPage = defineComponent({
         },
 
         quickCommand(cmd: string) {
-            if (this.cmdRunning) return;
             this.currentInput = cmd;
             this.$forceUpdate();
             if (cmd === 'clear' || cmd === 'ls' || cmd === 'pwd') {
