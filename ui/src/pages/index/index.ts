@@ -60,6 +60,9 @@ const index = defineComponent({
         Pvz() {
             $falcon.navTo("pvz", {});
         },
+        Browser() {
+            $falcon.navTo("browser", {});
+        },
     }
 });
 

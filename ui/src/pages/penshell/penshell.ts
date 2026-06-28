@@ -3,32 +3,31 @@ import { Penshell } from 'langningchen';
 import { showError, showSuccess } from '../../components/ToastMessage';
 import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
 
-interface CommandHistory {
-    cmd: string;
-    output: string;
-    timestamp: number;
-    isError?: boolean;
-}
-
 const penshellPage = defineComponent({
     data() {
         return {
             $page: {} as FalconPage<{}>,
             initialized: false,
             currentInput: '',
-            lines: [] as { type: 'prompt' | 'output' | 'error' | 'system' | 'cmd'; text: string }[],
+            lines: [] as { type: 'prompt' | 'output' | 'error' | 'system' | 'cmd'; text: string; _ended?: boolean }[],
             cwd: '~',
+            homeDir: '~',
             history: [] as string[],
             historyIndex: -1,
             shellRunning: false,
             username: 'user',
             hostname: 'pen',
+            quickCmds: ['ls', 'pwd', 'cd ..', 'ls -la', 'cat', 'clear'],
         };
     },
 
     computed: {
         prompt(): string {
-            return `${this.username}@${this.hostname}:${this.cwd}$ `;
+            let displayCwd = this.cwd;
+            if (this.homeDir && this.homeDir !== '~' && this.cwd.startsWith(this.homeDir)) {
+                displayCwd = '~' + this.cwd.substring(this.homeDir.length);
+            }
+            return `${this.username}@${this.hostname}:${displayCwd}$ `;
         },
     },
 
@@ -40,54 +39,55 @@ const penshellPage = defineComponent({
 
     methods: {
         async initPenshell() {
-            this.addLine('system', 'Penshell 初始化中...');
+            this.addLine('system', 'Penshell v1.1  -  输入 help 查看命令');
             try {
                 await Penshell.initialize();
                 this.initialized = true;
                 this.shellRunning = true;
 
-                // 监听流式输出
                 Penshell.on('penshell_output', (chunk: string) => {
                     this.handleOutput(chunk);
                 });
 
-                // 获取当前目录
                 try {
                     const pwd = await Penshell.exec('pwd');
-                    this.cwd = pwd.trim() || '~';
+                    this.cwd = pwd.trim() || '/';
+                    this.homeDir = this.cwd;
                 } catch (e) {
-                    this.cwd = '~';
+                    this.cwd = '/';
                 }
 
-                this.addLine('system', `Penshell ${this.shellVersion()} 就绪`);
-                this.addLine('output', '输入 help 查看可用命令');
                 this.$forceUpdate();
             } catch (e: any) {
                 this.addLine('error', '初始化失败: ' + (e.message || e));
             }
         },
 
-        shellVersion(): string {
-            return 'v1.0';
-        },
-
         addLine(type: 'prompt' | 'output' | 'error' | 'system' | 'cmd', text: string) {
-            this.lines.push({ type, text });
-            // 限制行数防止内存溢出
-            if (this.lines.length > 500) {
-                this.lines.splice(0, this.lines.length - 300);
+            const lines = text.split('\n');
+            for (let i = 0; i < lines.length; i++) {
+                if (i === 0 && lines.length > 1) {
+                    this.lines.push({ type, text: lines[i] });
+                } else if (i > 0 && lines[i] === '') {
+                    this.lines.push({ type: 'output', text: '' });
+                } else if (i > 0) {
+                    this.lines.push({ type, text: lines[i] });
+                } else {
+                    this.lines.push({ type, text: lines[i] });
+                }
+            }
+            if (this.lines.length > 300) {
+                this.lines.splice(0, this.lines.length - 200);
             }
         },
 
         handleOutput(chunk: string) {
-            // 过滤掉标记行
             if (chunk.includes('__PENSHELL_DONE__')) return;
-            // 显示流式输出的每一段
             const lastLine = this.lines[this.lines.length - 1];
-            if (lastLine && lastLine.type === 'output' && !lastLine.text.endsWith('\n')) {
+            if (lastLine && lastLine.type === 'output' && !lastLine._ended) {
                 lastLine.text += chunk;
             } else {
-                this.addLine('output', chunk);
+                this.lines.push({ type: 'output', text: chunk });
             }
             this.$forceUpdate();
         },
@@ -97,11 +97,9 @@ const penshellPage = defineComponent({
             const cmd = this.currentInput.trim();
             this.currentInput = '';
 
-            // 添加到历史
             this.history.push(cmd);
             this.historyIndex = this.history.length;
 
-            // 显示命令
             this.addLine('prompt', this.prompt);
             this.addLine('cmd', cmd);
 
@@ -111,7 +109,6 @@ const penshellPage = defineComponent({
                 return;
             }
 
-            // 处理内置命令
             if (cmd === 'exit' || cmd === 'quit') {
                 this.close();
                 return;
@@ -123,13 +120,16 @@ const penshellPage = defineComponent({
             }
             if (cmd === 'help') {
                 this.addLine('output',
-                    'Penshell 内置命令:\n' +
-                    '  help    - 显示此帮助\n' +
-                    '  clear   - 清屏\n' +
-                    '  exit    - 退出\n' +
-                    '  pwd     - 显示当前目录\n' +
-                    '  history - 显示命令历史\n' +
-                    '\n其他命令将直接传递给系统 sh');
+                    '内置命令:\n' +
+                    '  help       显示帮助\n' +
+                    '  clear      清屏\n' +
+                    '  exit       退出\n' +
+                    '  pwd        当前目录\n' +
+                    '  history    命令历史\n' +
+                    '  ls [path]  列出文件\n' +
+                    '  cd <path>  切换目录\n' +
+                    '  cat <file> 查看文件\n' +
+                    '\n支持所有 sh 命令');
                 this.$forceUpdate();
                 return;
             }
@@ -141,26 +141,27 @@ const penshellPage = defineComponent({
 
             try {
                 const result = await Penshell.exec(cmd);
-                if (result && result.trim()) {
-                    // 判断是否包含错误信息
-                    if (result.toLowerCase().includes('error') ||
-                        result.toLowerCase().includes('not found') ||
-                        result.toLowerCase().includes('no such')) {
-                        this.addLine('error', result.trimEnd());
-                    } else {
-                        this.addLine('output', result.trimEnd());
+                if (result) {
+                    const trimmed = result.replace(/__PENSHELL_DONE__/g, '').trimEnd();
+                    if (trimmed) {
+                        if (trimmed.toLowerCase().includes('error') ||
+                            trimmed.toLowerCase().includes('not found') ||
+                            trimmed.toLowerCase().includes('no such')) {
+                            this.addLine('error', trimmed);
+                        } else {
+                            this.addLine('output', trimmed);
+                        }
                     }
                 }
 
-                // 更新工作目录
-                if (cmd.startsWith('cd ')) {
+                if (cmd.startsWith('cd ') || cmd === 'cd') {
                     try {
                         const pwd = await Penshell.exec('pwd');
-                        this.cwd = pwd.trim() || '~';
+                        this.cwd = pwd.trim() || '/';
                     } catch (e) {}
                 }
             } catch (e: any) {
-                this.addLine('error', '命令执行失败: ' + (e.message || e));
+                this.addLine('error', e.message || String(e));
             }
 
             this.$forceUpdate();
@@ -170,8 +171,21 @@ const penshellPage = defineComponent({
             if (!this.initialized) return;
             openSoftKeyboard(
                 () => this.currentInput,
-                (value) => { this.currentInput = value; this.$forceUpdate(); },
+                (value) => {
+                    this.currentInput = value;
+                    this.$forceUpdate();
+                },
             );
+        },
+
+        quickCommand(cmd: string) {
+            this.currentInput = cmd;
+            this.$forceUpdate();
+            if (cmd === 'clear' || cmd === 'ls' || cmd === 'pwd') {
+                this.executeCommand();
+            } else {
+                this.showInput();
+            }
         },
 
         showHistory(direction: number) {
@@ -179,6 +193,10 @@ const penshellPage = defineComponent({
             if (newIdx >= 0 && newIdx < this.history.length) {
                 this.historyIndex = newIdx;
                 this.currentInput = this.history[this.historyIndex];
+                this.$forceUpdate();
+            } else if (newIdx >= this.history.length) {
+                this.historyIndex = this.history.length;
+                this.currentInput = '';
                 this.$forceUpdate();
             }
         },
@@ -190,12 +208,6 @@ const penshellPage = defineComponent({
                 } catch (e) {}
             }
             this.$page.finish();
-        },
-
-        scrollToBottom(scroller: any) {
-            if (scroller && scroller.scrollTo) {
-                setTimeout(() => scroller.scrollTo(0, 99999), 50);
-            }
         },
     },
 });

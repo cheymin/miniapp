@@ -17,6 +17,7 @@
     "imageViewer": "pages/imageViewer/imageViewer.vue",
     "gallery": "pages/gallery/gallery.vue",
     "qqchat": "pages/qqchat/qqchat.vue",
+    "browser": "pages/browser/browser.vue",
     "pvz": "pages/pvz/pvz.vue",
     "penshell": "pages/penshell/penshell.vue"
   },
