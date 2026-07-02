@@ -215,7 +215,12 @@ void JSAI::getUserBalance(JQAsyncInfo &info)
     {
         ASSERT(AIObject != nullptr);
         ASSERT(info.Length() == 0);
-        info.post(AIObject->getUserBalance());
+        BalanceInfo b = AIObject->getUserBalance();
+        info.post(Bson::object{
+            {"balance", b.balance},
+            {"used", b.used},
+            {"total", b.total},
+            {"unlimited", b.unlimited}});
     }
     catch (const std::exception &e)
     {

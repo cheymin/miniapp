@@ -30,7 +30,7 @@ export declare class AI {
     static generateResponse(): Promise<string>;
     static stopGeneration(): void;
     static getModels(): Promise<string[]>;
-    static getUserBalance(): Promise<number>;
+    static getUserBalance(): Promise<langningchen.BalanceInfo>;
 
     static getConversationList(): Promise<langningchen.ConversationNode[]>;
     static createConversation(title?: string): Promise<void>;

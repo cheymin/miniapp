@@ -33,6 +33,14 @@
                     <text class="item-text">基础 URL</text>
                     <text class="item-input" @click="editBaseUrl">{{ baseUrl || '点击输入基础URL' }}</text>
                 </div>
+
+                <div class="item">
+                    <text class="item-text">账户余额</text>
+                    <text v-if="balanceLoading" class="item-input item-input-disabled">查询中...</text>
+                    <text v-else-if="balanceError" class="item-input" @click="refreshBalance">{{ balanceError }}（点击重试）</text>
+                    <text v-else-if="balanceInfo" class="item-input" @click="refreshBalance">{{ formatBalance(balanceInfo) }}</text>
+                    <text v-else class="item-input" @click="refreshBalance">点击查询</text>
+                </div>
             </div>
 
             <div class="section">

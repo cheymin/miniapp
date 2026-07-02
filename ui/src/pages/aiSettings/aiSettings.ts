@@ -17,6 +17,7 @@
 
 import { defineComponent } from 'vue';
 import { AI } from 'langningchen';
+import { BalanceInfo } from '../../@types/langningchen';
 import { showError, showSuccess } from '../../components/ToastMessage';
 import { hideLoading, showLoading } from '../../components/Loading';
 import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
@@ -37,6 +38,10 @@ const aiSettings = defineComponent({
             systemPrompt: '',
 
             availableModels: [] as string[],
+
+            balanceInfo: null as BalanceInfo | null,
+            balanceLoading: false,
+            balanceError: '',
         };
     },
 
@@ -45,6 +50,7 @@ const aiSettings = defineComponent({
             AI.initialize();
             this.loadSettings();
             this.refreshModels();
+            this.refreshBalance();
         } catch (e) {
             showError(e as string || 'AI 初始化失败');
         }
@@ -76,6 +82,25 @@ const aiSettings = defineComponent({
             }).finally(() => {
                 hideLoading();
             });
+        },
+
+        refreshBalance() {
+            if (this.balanceLoading) return;
+            this.balanceLoading = true;
+            this.balanceError = '';
+            this.balanceInfo = null;
+            AI.getUserBalance().then((info: BalanceInfo) => {
+                this.balanceInfo = info;
+            }).catch((e) => {
+                this.balanceError = `查询失败: ${e}`;
+            }).finally(() => {
+                this.balanceLoading = false;
+            });
+        },
+
+        formatBalance(info: BalanceInfo): string {
+            if (info.unlimited) return '无限额度';
+            return `$${info.balance.toFixed(4)} (已用 $${info.used.toFixed(4)} / $${info.total.toFixed(4)})`;
         },
 
         selectModel(model: string) {

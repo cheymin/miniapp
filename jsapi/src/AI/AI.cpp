@@ -452,7 +452,7 @@ std::vector<std::string> AI::getModels()
     return modelIds;
 }
 
-float AI::getUserBalance()
+BalanceInfo AI::getUserBalance()
 {
     std::string currentApiKey, currentBaseUrl;
     {
@@ -461,14 +461,39 @@ float AI::getUserBalance()
         currentBaseUrl = baseUrl;
     }
 
-    Response response = Fetch::fetch(currentBaseUrl + "user/balance",
-                                     FetchOptions("GET",
-                                                  {{"Authorization", "Bearer " + currentApiKey}}));
-    if (!response.isOk())
-        THROW_NETWORK_ERROR(response.status);
-    nlohmann::json responseJson = response.json();
-    for (const auto &balanceInfo : responseJson.at("balance_infos"))
-        if (balanceInfo.at("currency") == "CNY")
-            return std::atof(std::string(balanceInfo.at("total_balance")).c_str());
-    return 0.0f;
+    std::string authHeader = "Bearer " + currentApiKey;
+
+    // 1. 查总额度上限（OpenAI 兼容 billing 接口，适用于 New API / One API 系网关）
+    Response subResp = Fetch::fetch(currentBaseUrl + "dashboard/billing/subscription",
+                                    FetchOptions("GET", {{"Authorization", authHeader}}));
+    if (!subResp.isOk())
+        THROW_NETWORK_ERROR(subResp.status);
+    nlohmann::json subJson = subResp.json();
+    if (subJson.contains("error"))
+        THROW_NETWORK_ERROR(502);
+    double hardLimit = 0.0;
+    if (subJson["hard_limit_usd"].is_number())
+        hardLimit = subJson["hard_limit_usd"].get<double>();
+
+    // New API 无限额度哨兵值
+    if (hardLimit >= 100000000.0)
+        return BalanceInfo{0.0, 0.0, 0.0, true};
+
+    // 2. 查已使用（单位美分，需 /100 转美元）
+    Response usageResp = Fetch::fetch(currentBaseUrl + "dashboard/billing/usage",
+                                      FetchOptions("GET", {{"Authorization", authHeader}}));
+    if (!usageResp.isOk())
+        THROW_NETWORK_ERROR(usageResp.status);
+    nlohmann::json usageJson = usageResp.json();
+    if (usageJson.contains("error"))
+        THROW_NETWORK_ERROR(502);
+    double totalUsage = 0.0;
+    if (usageJson["total_usage"].is_number())
+        totalUsage = usageJson["total_usage"].get<double>();
+
+    double usedUsd = totalUsage / 100.0;
+    double balanceUsd = hardLimit - usedUsd;
+    if (balanceUsd < 0)
+        balanceUsd = 0.0;
+    return BalanceInfo{balanceUsd, usedUsd, hardLimit, false};
 }

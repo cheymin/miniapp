@@ -18,7 +18,7 @@
 import { defineComponent } from 'vue';
 import { AI } from 'langningchen';
 import { ROLE, ConversationNode, STOP_REASON } from '../../@types/langningchen';
-import { showError, showSuccess } from '../../components/ToastMessage';
+import { showError } from '../../components/ToastMessage';
 import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
 
 export type aiOptions = {};
@@ -36,7 +36,6 @@ const ai = defineComponent({
             jumpToMessageId: '',
 
             currentConversationId: '',
-            balanceLoading: false,
         };
     },
 
@@ -195,18 +194,6 @@ const ai = defineComponent({
         openMessageNavigation() {
             if (this.isStreaming) return;
             $falcon.navTo('aiNav', {});
-        },
-
-        queryBalance() {
-            if (this.isStreaming || this.balanceLoading) return;
-            this.balanceLoading = true;
-            AI.getUserBalance().then((balance: number) => {
-                showSuccess(`账户余额: ¥${balance.toFixed(2)}`, 5000);
-            }).catch((e) => {
-                showError(`查询余额失败: ${e}`);
-            }).finally(() => {
-                this.balanceLoading = false;
-            });
         },
 
         async regenerateMessage(messageId: string) {

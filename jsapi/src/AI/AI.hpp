@@ -32,6 +32,14 @@
 #include "ConversationManager.hpp"
 #include "SettingsResponse.hpp"
 
+struct BalanceInfo
+{
+    double balance;   // 剩余余额（美元）
+    double used;      // 已使用（美元）
+    double total;     // 总额度上限（美元）
+    bool unlimited;   // 是否无限额度
+};
+
 class AI
 {
 private:
@@ -86,5 +94,5 @@ public:
     std::string generateResponse(AIStreamCallback streamCallback);
     void stopGeneration();
     std::vector<std::string> getModels();
-    float getUserBalance();
+    BalanceInfo getUserBalance();
 };
