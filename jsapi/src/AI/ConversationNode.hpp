@@ -43,6 +43,7 @@ struct ConversationNode
     } stopReason;
 
     std::string content;
+    std::string reasoningContent;
     std::string parentId;
     std::vector<std::string> childIds;
     int64_t timestamp;

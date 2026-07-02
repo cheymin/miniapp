@@ -52,6 +52,7 @@ void JSAI::getCurrentPath(JQFunctionInfo &info)
                 {"role", msg.role},
                 {"stopReason", msg.stopReason},
                 {"content", msg.content},
+                {"reasoningContent", msg.reasoningContent},
                 {"parentId", msg.parentId},
                 {"timestamp", std::to_string(msg.timestamp)}};
             Bson::array childIds;

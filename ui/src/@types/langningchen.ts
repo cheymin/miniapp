@@ -35,6 +35,7 @@ export interface ConversationNode {
     id: string;
     role: ROLE;
     content: string;
+    reasoningContent?: string;
     parentId: string;
     childIds: string[];
     timestamp: string;

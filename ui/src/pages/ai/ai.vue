@@ -24,6 +24,7 @@
                 <scroller ref="messageScroller" class="messages-scroller" scroll-direction="vertical"
                     :show-scrollbar="true">
                     <div v-for="message in displayMessages" :key="message.id">
+                        <text v-if="message.reasoningContent" class="message-reasoning">{{ message.reasoningContent }}</text>
                         <text :class="'message message-' + message.role">{{ message.content }}</text>
                         <text v-if="![0, 1, 6].includes(message.stopReason)" class="stop-reason-warning">{{
                             getStopReasonText(message.stopReason) }}</text>
@@ -47,6 +48,8 @@
                         :class="'square-btn' + (isStreaming ? ' square-btn-disabled' : '')">历</text>
                     <text @click="openMessageNavigation"
                         :class="'square-btn' + (isStreaming ? ' square-btn-disabled' : '')">导</text>
+                    <text @click="queryBalance"
+                        :class="'square-btn' + ((isStreaming || balanceLoading) ? ' square-btn-disabled' : '')">额</text>
                     <text @click="openSettings"
                         :class="'square-btn' + (isStreaming ? ' square-btn-disabled' : '')">设</text>
                 </div>

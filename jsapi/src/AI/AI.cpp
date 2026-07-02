@@ -267,7 +267,8 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
 
     requestJson["messages"] = messagesArray;
 
-    std::string fullAssistantResponse;
+    std::string fullContent;
+    std::string fullReasoning;
     std::mutex responseMutex;
     bool wasCancelled = false;
     bool responseStarted = false;
@@ -281,7 +282,7 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
         cancellationToken = currentRequestCancelled;
     }
 
-    StreamCallback packedStreamCallback = [&fullAssistantResponse, &responseMutex, &wasCancelled, &responseStarted, &assistantNodeId, &finalStopReason, cancellationToken, streamCallback, this](const std::string &chunk)
+    StreamCallback packedStreamCallback = [&fullContent, &fullReasoning, &responseMutex, &wasCancelled, &responseStarted, &assistantNodeId, &finalStopReason, cancellationToken, streamCallback, this](const std::string &chunk)
     {
         if (cancellationToken->load())
         {
@@ -309,18 +310,18 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
                 finalStopReason = ConversationNode::STOP_REASON_ERROR;
         }
 
-        std::string content = "";
+        std::string reasoningDelta = "";
+        std::string contentDelta = "";
         if (choice["delta"]["reasoning_content"].is_string())
-            content += choice["delta"]["reasoning_content"];
+            reasoningDelta = choice["delta"]["reasoning_content"];
         if (choice["delta"]["content"].is_string())
-            content += choice["delta"]["content"];
-        if (content != "")
+            contentDelta = choice["delta"]["content"];
+        if (!reasoningDelta.empty() || !contentDelta.empty())
         {
             {
                 std::lock_guard<std::mutex> lock(responseMutex);
-                fullAssistantResponse += content;
 
-                if (!responseStarted && !content.empty())
+                if (!responseStarted)
                 {
                     responseStarted = true;
                     std::unique_lock<std::shared_mutex> stateLock(stateMutex);
@@ -328,22 +329,37 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
                     ConversationNode *parent = findNode(currentNodeId);
                     if (parent)
                         parent->childIds.push_back(assistantNodeId);
-                    nodeMap[assistantNodeId] = std::make_unique<ConversationNode>(assistantNodeId, ConversationNode::ROLE_ASSISTANT, fullAssistantResponse, currentNodeId);
+                    nodeMap[assistantNodeId] = std::make_unique<ConversationNode>(assistantNodeId, ConversationNode::ROLE_ASSISTANT, fullContent, currentNodeId);
                     currentNodeId = assistantNodeId;
                     stateLock.unlock();
                     saveConversation();
                 }
-                else if (responseStarted && !assistantNodeId.empty())
+
+                if (!reasoningDelta.empty() || !contentDelta.empty())
                 {
                     std::unique_lock<std::shared_mutex> stateLock(stateMutex);
                     ConversationNode *assistantNode = findNode(assistantNodeId);
                     if (assistantNode)
-                        assistantNode->content = fullAssistantResponse;
+                    {
+                        if (!reasoningDelta.empty())
+                        {
+                            fullReasoning += reasoningDelta;
+                            assistantNode->reasoningContent = fullReasoning;
+                        }
+                        if (!contentDelta.empty())
+                        {
+                            fullContent += contentDelta;
+                            assistantNode->content = fullContent;
+                        }
+                    }
                     stateLock.unlock();
                     saveConversation();
                 }
             }
-            streamCallback(content);
+            if (!reasoningDelta.empty())
+                streamCallback(std::string("\x01") + reasoningDelta);
+            if (!contentDelta.empty())
+                streamCallback(std::string("\x02") + contentDelta);
         }
     };
 
@@ -382,16 +398,16 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
             stateLock.unlock();
             saveConversation();
         }
-        return fullAssistantResponse;
+        return fullContent;
     }
     if (!response.isOk())
         THROW_NETWORK_ERROR(response.status);
 
     {
         std::lock_guard<std::mutex> lock(responseMutex);
-        if (!responseStarted && !fullAssistantResponse.empty())
+        if (!responseStarted && !fullContent.empty())
         {
-            addNode(ConversationNode::ROLE_ASSISTANT, fullAssistantResponse);
+            addNode(ConversationNode::ROLE_ASSISTANT, fullContent);
         }
         else if (responseStarted && !assistantNodeId.empty() && finalStopReason != ConversationNode::STOP_REASON_NONE)
         {
@@ -404,7 +420,7 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
             stateLock.unlock();
             saveConversation();
         }
-        return fullAssistantResponse;
+        return fullContent;
     }
 }
 
