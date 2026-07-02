@@ -460,40 +460,67 @@ BalanceInfo AI::getUserBalance()
         currentApiKey = apiKey;
         currentBaseUrl = baseUrl;
     }
-
     std::string authHeader = "Bearer " + currentApiKey;
 
-    // 1. 查总额度上限（OpenAI 兼容 billing 接口，适用于 New API / One API 系网关）
-    Response subResp = Fetch::fetch(currentBaseUrl + "dashboard/billing/subscription",
-                                    FetchOptions("GET", {{"Authorization", authHeader}}));
-    if (!subResp.isOk())
-        THROW_NETWORK_ERROR(subResp.status);
-    nlohmann::json subJson = subResp.json();
-    if (subJson.contains("error"))
-        THROW_NETWORK_ERROR(502);
-    double hardLimit = 0.0;
-    if (subJson["hard_limit_usd"].is_number())
-        hardLimit = subJson["hard_limit_usd"].get<double>();
+    // 候选1：标准 New API / One API 的 OpenAI 兼容 billing 接口
+    //   GET /v1/dashboard/billing/subscription -> hard_limit_usd(美元)
+    //   GET /v1/dashboard/billing/usage        -> total_usage(美分)
+    try
+    {
+        Response subResp = Fetch::fetch(currentBaseUrl + "dashboard/billing/subscription",
+                                        FetchOptions("GET", {{"Authorization", authHeader}}));
+        if (subResp.isOk())
+        {
+            nlohmann::json subJson = subResp.json();
+            if (!subJson.contains("error") && subJson["hard_limit_usd"].is_number())
+            {
+                double hardLimit = subJson["hard_limit_usd"].get<double>();
+                if (hardLimit >= 100000000.0)
+                    return BalanceInfo{0.0, 0.0, 0.0, true};
 
-    // New API 无限额度哨兵值
-    if (hardLimit >= 100000000.0)
-        return BalanceInfo{0.0, 0.0, 0.0, true};
+                Response usageResp = Fetch::fetch(currentBaseUrl + "dashboard/billing/usage",
+                                                  FetchOptions("GET", {{"Authorization", authHeader}}));
+                if (usageResp.isOk())
+                {
+                    nlohmann::json usageJson = usageResp.json();
+                    if (!usageJson.contains("error") && usageJson["total_usage"].is_number())
+                    {
+                        double usedUsd = usageJson["total_usage"].get<double>() / 100.0;
+                        double balanceUsd = hardLimit - usedUsd;
+                        if (balanceUsd < 0)
+                            balanceUsd = 0.0;
+                        return BalanceInfo{balanceUsd, usedUsd, hardLimit, false};
+                    }
+                }
+            }
+        }
+    }
+    catch (const std::exception &)
+    {
+    }
 
-    // 2. 查已使用（单位美分，需 /100 转美元）
-    Response usageResp = Fetch::fetch(currentBaseUrl + "dashboard/billing/usage",
-                                      FetchOptions("GET", {{"Authorization", authHeader}}));
-    if (!usageResp.isOk())
-        THROW_NETWORK_ERROR(usageResp.status);
-    nlohmann::json usageJson = usageResp.json();
-    if (usageJson.contains("error"))
-        THROW_NETWORK_ERROR(502);
-    double totalUsage = 0.0;
-    if (usageJson["total_usage"].is_number())
-        totalUsage = usageJson["total_usage"].get<double>();
+    // 候选2：部分 fork(如 toapis) 的 /v1/user/balance 接口
+    try
+    {
+        Response resp = Fetch::fetch(currentBaseUrl + "user/balance",
+                                     FetchOptions("GET", {{"Authorization", authHeader}}));
+        if (resp.isOk())
+        {
+            nlohmann::json j = resp.json();
+            if (j.contains("remain_balance"))
+            {
+                double remain = j["remain_balance"].is_number() ? j["remain_balance"].get<double>() : 0.0;
+                double used = j["used_balance"].is_number() ? j["used_balance"].get<double>() : 0.0;
+                bool unlimited = j["unlimited_quota"].is_boolean() && j["unlimited_quota"].get<bool>();
+                if (unlimited)
+                    return BalanceInfo{0.0, 0.0, 0.0, true};
+                return BalanceInfo{remain, used, remain + used, false};
+            }
+        }
+    }
+    catch (const std::exception &)
+    {
+    }
 
-    double usedUsd = totalUsage / 100.0;
-    double balanceUsd = hardLimit - usedUsd;
-    if (balanceUsd < 0)
-        balanceUsd = 0.0;
-    return BalanceInfo{balanceUsd, usedUsd, hardLimit, false};
+    THROW_NETWORK_ERROR(404);
 }

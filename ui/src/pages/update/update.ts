@@ -28,7 +28,7 @@ const RELEASE_REPO = 'miniapp';  // 发布版仓库
 const DEV_REPO = 'miniapp_dev';      // 开发版仓库
 
 // 当前版本号（每次发布需要更新）
-const CURRENT_VERSION = '1.2.23';
+const CURRENT_VERSION = '1.2.24';
 // 设备型号（根据设备设置）
 const DEVICE_MODEL = 'a6p'; // 例如: a6p, a6x, a5, c7 等
 
