@@ -462,6 +462,10 @@ BalanceInfo AI::getUserBalance()
     }
     std::string authHeader = "Bearer " + currentApiKey;
 
+    // 确保 baseUrl 末尾带斜杠，避免拼接成 /v1dashboard/... 导致 404
+    if (!currentBaseUrl.empty() && currentBaseUrl.back() != '/')
+        currentBaseUrl += '/';
+
     // 候选1：标准 New API / One API 的 OpenAI 兼容 billing 接口
     //   GET /v1/dashboard/billing/subscription -> hard_limit_usd(美元)
     //   GET /v1/dashboard/billing/usage        -> total_usage(美分)
