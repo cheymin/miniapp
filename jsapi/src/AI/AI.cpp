@@ -28,7 +28,7 @@ AI::AI()
     std::lock_guard<std::mutex> settingsLock(settingsMutex);
     std::lock_guard<std::mutex> conversationLock(conversationMutex);
 
-    conversationManager.loadApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt);
+    conversationManager.loadApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt, accessToken, userId);
 
     auto conversationsResponse = conversationManager.getConversationList();
     if (conversationsResponse.empty())
@@ -226,20 +226,23 @@ void AI::updateConversationTitle(const std::string &conversationId, const std::s
 
 void AI::setSettings(const std::string &apiKey, const std::string &baseUrl,
                      const std::string &model, int maxTokens,
-                     double temperature, double topP, std::string systemPrompt)
+                     double temperature, double topP, std::string systemPrompt,
+                     const std::string &accessToken, const std::string &userId)
 {
     std::lock_guard<std::mutex> settingsLock(settingsMutex);
     this->apiKey = apiKey, this->baseUrl = baseUrl;
     this->model = model, this->maxTokens = maxTokens;
     this->temperature = temperature, this->topP = topP, this->systemPrompt = systemPrompt;
-    conversationManager.saveApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt);
+    this->accessToken = accessToken, this->userId = userId;
+    conversationManager.saveApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt, accessToken, userId);
 }
 SettingsResponse AI::getSettings() const
 {
     std::lock_guard<std::mutex> settingsLock(settingsMutex);
     return SettingsResponse(apiKey, baseUrl,
                             model, maxTokens,
-                            temperature, topP, systemPrompt);
+                            temperature, topP, systemPrompt,
+                            accessToken, userId);
 }
 
 std::string AI::generateResponse(AIStreamCallback streamCallback)
@@ -454,77 +457,53 @@ std::vector<std::string> AI::getModels()
 
 BalanceInfo AI::getUserBalance()
 {
-    std::string currentApiKey, currentBaseUrl;
+    std::string currentAccessToken, currentUserId, currentBaseUrl;
     {
         std::lock_guard<std::mutex> settingsLock(settingsMutex);
-        currentApiKey = apiKey;
+        currentAccessToken = accessToken;
+        currentUserId = userId;
         currentBaseUrl = baseUrl;
     }
-    std::string authHeader = "Bearer " + currentApiKey;
 
-    // 确保 baseUrl 末尾带斜杠，避免拼接成 /v1dashboard/... 导致 404
-    if (!currentBaseUrl.empty() && currentBaseUrl.back() != '/')
-        currentBaseUrl += '/';
+    if (currentAccessToken.empty() || currentUserId.empty())
+        throw std::runtime_error("未配置账户访问令牌或用户ID");
 
-    // 候选1：标准 New API / One API 的 OpenAI 兼容 billing 接口
-    //   GET /v1/dashboard/billing/subscription -> hard_limit_usd(美元)
-    //   GET /v1/dashboard/billing/usage        -> total_usage(美分)
-    try
+    // 从 baseUrl 提取站点根 URL（去掉末尾的 /v1/ 或 /v1）
+    std::string rootUrl = currentBaseUrl;
+    size_t v1Pos = rootUrl.find("/v1");
+    if (v1Pos != std::string::npos)
+        rootUrl = rootUrl.substr(0, v1Pos);
+    if (!rootUrl.empty() && rootUrl.back() != '/')
+        rootUrl += '/';
+
+    // New API / One API 账户余额接口：GET /api/user/self
+    // 需要两个头：Authorization: Bearer <access_token>  和  New-Api-User: <用户ID>
+    Response resp = Fetch::fetch(rootUrl + "api/user/self",
+                                 FetchOptions("GET",
+                                              {{"Authorization", "Bearer " + currentAccessToken},
+                                               {"New-Api-User", currentUserId}}));
+    if (!resp.isOk())
+        THROW_NETWORK_ERROR(resp.status);
+    nlohmann::json j = resp.json();
+
+    // 鉴权失败时 HTTP 仍可能是 200，需检查 success 字段
+    if (j.contains("success") && !j["success"].get<bool>())
     {
-        Response subResp = Fetch::fetch(currentBaseUrl + "dashboard/billing/subscription",
-                                        FetchOptions("GET", {{"Authorization", authHeader}}));
-        if (subResp.isOk())
-        {
-            nlohmann::json subJson = subResp.json();
-            if (!subJson.contains("error") && subJson["hard_limit_usd"].is_number())
-            {
-                double hardLimit = subJson["hard_limit_usd"].get<double>();
-                if (hardLimit >= 100000000.0)
-                    return BalanceInfo{0.0, 0.0, 0.0, true};
-
-                Response usageResp = Fetch::fetch(currentBaseUrl + "dashboard/billing/usage",
-                                                  FetchOptions("GET", {{"Authorization", authHeader}}));
-                if (usageResp.isOk())
-                {
-                    nlohmann::json usageJson = usageResp.json();
-                    if (!usageJson.contains("error") && usageJson["total_usage"].is_number())
-                    {
-                        double usedUsd = usageJson["total_usage"].get<double>() / 100.0;
-                        double balanceUsd = hardLimit - usedUsd;
-                        if (balanceUsd < 0)
-                            balanceUsd = 0.0;
-                        return BalanceInfo{balanceUsd, usedUsd, hardLimit, false};
-                    }
-                }
-            }
-        }
-    }
-    catch (const std::exception &)
-    {
+        std::string msg = j.contains("message") ? j["message"].get<std::string>() : "鉴权失败";
+        throw std::runtime_error(msg);
     }
 
-    // 候选2：部分 fork(如 toapis) 的 /v1/user/balance 接口
-    try
-    {
-        Response resp = Fetch::fetch(currentBaseUrl + "user/balance",
-                                     FetchOptions("GET", {{"Authorization", authHeader}}));
-        if (resp.isOk())
-        {
-            nlohmann::json j = resp.json();
-            if (j.contains("remain_balance"))
-            {
-                double remain = j["remain_balance"].is_number() ? j["remain_balance"].get<double>() : 0.0;
-                double used = j["used_balance"].is_number() ? j["used_balance"].get<double>() : 0.0;
-                bool unlimited = j["unlimited_quota"].is_boolean() && j["unlimited_quota"].get<bool>();
-                if (unlimited)
-                    return BalanceInfo{0.0, 0.0, 0.0, true};
-                return BalanceInfo{remain, used, remain + used, false};
-            }
-        }
-    }
-    catch (const std::exception &)
-    {
-    }
+    if (!j.contains("data"))
+        throw std::runtime_error("响应格式异常");
+    nlohmann::json data = j["data"];
 
-    THROW_NETWORK_ERROR(404);
+    // quota / used_quota 单位是积分，默认 500000 quota = $1
+    const double QUOTA_PER_UNIT = 500000.0;
+    double quota = data["quota"].is_number() ? data["quota"].get<double>() : 0.0;
+    double usedQuota = data["used_quota"].is_number() ? data["used_quota"].get<double>() : 0.0;
+
+    double balanceUsd = quota / QUOTA_PER_UNIT;
+    double usedUsd = usedQuota / QUOTA_PER_UNIT;
+    double totalUsd = balanceUsd + usedUsd;
+    return BalanceInfo{balanceUsd, usedUsd, totalUsd, false};
 }

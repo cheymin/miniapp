@@ -39,6 +39,8 @@ const aiSettings = defineComponent({
 
             availableModels: [] as string[],
 
+            accessToken: '',
+            userId: '',
             balanceInfo: null as BalanceInfo | null,
             balanceLoading: false,
             balanceError: '',
@@ -67,6 +69,8 @@ const aiSettings = defineComponent({
                 this.topP = settings.topP;
                 this.maxTokens = settings.maxTokens;
                 this.systemPrompt = settings.systemPrompt;
+                this.accessToken = settings.accessToken;
+                this.userId = settings.userId;
             } catch (e) {
                 showError(e as string || '加载设置失败');
             }
@@ -86,6 +90,11 @@ const aiSettings = defineComponent({
 
         refreshBalance() {
             if (this.balanceLoading) return;
+            if (!this.accessToken || !this.userId) {
+                this.balanceError = '请先填写账户访问令牌和用户ID';
+                this.balanceInfo = null;
+                return;
+            }
             this.balanceLoading = true;
             this.balanceError = '';
             this.balanceInfo = null;
@@ -112,8 +121,10 @@ const aiSettings = defineComponent({
             try {
                 AI.setSettings(this.apiKey, this.baseUrl,
                     this.modelName, this.maxTokens,
-                    this.temperature, this.topP, this.systemPrompt,);
+                    this.temperature, this.topP, this.systemPrompt,
+                    this.accessToken, this.userId);
                 showSuccess('设置已保存');
+                this.refreshBalance();
             } catch (e) {
                 showError(e as string || '保存设置失败');
             }
@@ -135,6 +146,23 @@ const aiSettings = defineComponent({
                 },
                 (value) => {
                     if (!value.startsWith("http")) { return '基础 URL 需要以 http 或 https 开头'; }
+                }
+            );
+        },
+
+        editAccessToken() {
+            openSoftKeyboard(
+                () => this.accessToken,
+                (value) => { this.accessToken = value; this.$forceUpdate(); }
+            );
+        },
+
+        editUserId() {
+            openSoftKeyboard(
+                () => this.userId,
+                (value) => { this.userId = value; this.$forceUpdate(); },
+                (value) => {
+                    if (value && !/^\d+$/.test(value)) { return '用户ID必须是数字'; }
                 }
             );
         },

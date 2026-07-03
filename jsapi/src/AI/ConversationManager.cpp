@@ -47,6 +47,8 @@ ConversationManager::ConversationManager() : database("/userdisk/database/langni
         .column("temperature", TABLE::REAL, TABLE::NOT_NULL)
         .column("top_p", TABLE::REAL, TABLE::NOT_NULL)
         .column("system_prompt", TABLE::TEXT, TABLE::NOT_NULL)
+        .column("access_token", TABLE::TEXT)
+        .column("user_id", TABLE::TEXT)
         .execute();
 }
 
@@ -179,7 +181,8 @@ void ConversationManager::loadConversation(const std::string &conversationId,
 
 void ConversationManager::saveApiSettings(const std::string &apiKey, const std::string &baseUrl,
                                           const std::string &model, int maxTokens,
-                                          double temperature, double topP, const std::string &systemPrompt)
+                                          double temperature, double topP, const std::string &systemPrompt,
+                                          const std::string &accessToken, const std::string &userId)
 {
     std::lock_guard<std::mutex> lock(dbMutex);
     database.remove("api_settings").execute();
@@ -192,12 +195,15 @@ void ConversationManager::saveApiSettings(const std::string &apiKey, const std::
         .value("temperature", temperature)
         .value("top_p", topP)
         .value("system_prompt", systemPrompt)
+        .value("access_token", accessToken)
+        .value("user_id", userId)
         .execute();
 }
 
 void ConversationManager::loadApiSettings(std::string &apiKey, std::string &baseUrl,
                                           std::string &model, int &maxTokens,
-                                          double &temperature, double &topP, std::string &systemPrompt)
+                                          double &temperature, double &topP, std::string &systemPrompt,
+                                          std::string &accessToken, std::string &userId)
 {
     std::lock_guard<std::mutex> lock(dbMutex);
     auto results = database.select("api_settings")
@@ -214,5 +220,7 @@ void ConversationManager::loadApiSettings(std::string &apiKey, std::string &base
         temperature = std::stod(row.at("temperature"));
         topP = std::stod(row.at("top_p"));
         systemPrompt = row.at("system_prompt");
+        accessToken = row.count("access_token") ? row.at("access_token") : "";
+        userId = row.count("user_id") ? row.at("user_id") : "";
     }
 }

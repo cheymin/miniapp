@@ -33,6 +33,20 @@
                     <text class="item-text">基础 URL</text>
                     <text class="item-input" @click="editBaseUrl">{{ baseUrl || '点击输入基础URL' }}</text>
                 </div>
+            </div>
+
+            <div class="section">
+                <text class="section-title">账户余额（New API）</text>
+
+                <div class="item">
+                    <text class="item-text">访问令牌</text>
+                    <text class="item-input" @click="editAccessToken">{{ (accessToken ? accessToken.split('').map(_ => '*').join('') : '点击输入访问令牌') }}</text>
+                </div>
+
+                <div class="item">
+                    <text class="item-text">用户 ID</text>
+                    <text class="item-input" @click="editUserId">{{ userId || '点击输入用户ID' }}</text>
+                </div>
 
                 <div class="item">
                     <text class="item-text">账户余额</text>
