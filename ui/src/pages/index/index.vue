@@ -38,8 +38,14 @@
         </div>
         
         <div class="section">
+            <text class="section-title">实用工具</text>
+
+            <div class="item"><text class="item-text" @click="Memos">备忘录</text></div>
+        </div>
+
+        <div class="section">
             <text class="section-title">游戏</text>
-            
+
             <div class="item"><text class="item-text" @click="Pvz">植物大战僵尸</text></div>
         </div>
         

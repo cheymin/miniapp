@@ -20,7 +20,8 @@
     "qqchat": "pages/qqchat/qqchat.vue",
     "browser": "pages/browser/browser.vue",
     "pvz": "pages/pvz/pvz.vue",
-    "penshell": "pages/penshell/penshell.vue"
+    "penshell": "pages/penshell/penshell.vue",
+    "memos": "pages/memos/memos.vue"
   },
   "options": {
     "style": {

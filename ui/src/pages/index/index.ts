@@ -66,6 +66,9 @@ const index = defineComponent({
         Browser() {
             $falcon.navTo("browser", {});
         },
+        Memos() {
+            $falcon.navTo("memos", {});
+        },
     }
 });
 
