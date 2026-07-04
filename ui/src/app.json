@@ -16,6 +16,7 @@
     "deviceinfo": "pages/deviceinfo/deviceinfo.vue",
     "imageViewer": "pages/imageViewer/imageViewer.vue",
     "gallery": "pages/gallery/gallery.vue",
+    "imageGen": "pages/imageGen/imageGen.vue",
     "qqchat": "pages/qqchat/qqchat.vue",
     "browser": "pages/browser/browser.vue",
     "pvz": "pages/pvz/pvz.vue",

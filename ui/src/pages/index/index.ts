@@ -54,6 +54,9 @@ const index = defineComponent({
         Gallery() {
             $falcon.navTo("gallery", {});
         },
+        ImageGen() {
+            $falcon.navTo("imageGen", {});
+        },
         Update() {
             $falcon.navTo("update", {});
         },

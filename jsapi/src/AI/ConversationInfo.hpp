@@ -32,3 +32,15 @@ struct ConversationInfo
     ConversationInfo(std::string id, std::string title, long long createdAt, long long updatedAt)
         : id(id), title(title), createdAt(createdAt), updatedAt(updatedAt) {}
 };
+
+// AI 配置信息（多配置支持）
+struct ConfigInfo
+{
+    std::string id;
+    std::string name;
+    long long createdAt;
+
+    ConfigInfo() : createdAt(0) {}
+    ConfigInfo(std::string id, std::string name, long long createdAt)
+        : id(id), name(name), createdAt(createdAt) {}
+};

@@ -245,6 +245,97 @@ SettingsResponse AI::getSettings() const
                             accessToken, userId);
 }
 
+// ===== 多配置管理 =====
+
+std::vector<ConfigInfo> AI::getConfigList()
+{
+    return conversationManager.getConfigList();
+}
+
+std::string AI::createConfig(const std::string &name)
+{
+    return conversationManager.createConfig(name);
+}
+
+void AI::deleteConfig(const std::string &configId)
+{
+    if (configId.empty())
+        return;
+    // 如果删除的是当前激活配置，先切换到其他配置
+    std::string currentActive = conversationManager.getActiveConfigId();
+    if (currentActive == configId)
+    {
+        auto configs = conversationManager.getConfigList();
+        std::string newActive;
+        for (const auto &c : configs)
+        {
+            if (c.id != configId)
+            {
+                newActive = c.id;
+                break;
+            }
+        }
+        conversationManager.deleteConfig(configId);
+        if (!newActive.empty())
+        {
+            conversationManager.setActiveConfigId(newActive);
+            // 重新加载新激活配置到内存
+            std::string newApiKey, newBaseUrl, newModel, newSystemPrompt, newAccessToken, newUserId;
+            int newMaxTokens;
+            double newTemperature, newTopP;
+            conversationManager.loadApiSettings(newApiKey, newBaseUrl, newModel,
+                                                newMaxTokens, newTemperature, newTopP,
+                                                newSystemPrompt, newAccessToken, newUserId);
+            std::lock_guard<std::mutex> settingsLock(settingsMutex);
+            apiKey = newApiKey;
+            baseUrl = newBaseUrl;
+            model = newModel;
+            maxTokens = newMaxTokens;
+            temperature = newTemperature;
+            topP = newTopP;
+            systemPrompt = newSystemPrompt;
+            accessToken = newAccessToken;
+            userId = newUserId;
+        }
+    }
+    else
+    {
+        conversationManager.deleteConfig(configId);
+    }
+}
+
+std::string AI::getActiveConfigId()
+{
+    return conversationManager.getActiveConfigId();
+}
+
+void AI::setActiveConfigId(const std::string &configId)
+{
+    conversationManager.setActiveConfigId(configId);
+    // 重新加载新激活配置到内存
+    std::string newApiKey, newBaseUrl, newModel, newSystemPrompt, newAccessToken, newUserId;
+    int newMaxTokens;
+    double newTemperature, newTopP;
+    conversationManager.loadApiSettings(newApiKey, newBaseUrl, newModel,
+                                        newMaxTokens, newTemperature, newTopP,
+                                        newSystemPrompt, newAccessToken, newUserId);
+    std::lock_guard<std::mutex> settingsLock(settingsMutex);
+    apiKey = newApiKey;
+    baseUrl = newBaseUrl;
+    model = newModel;
+    maxTokens = newMaxTokens;
+    temperature = newTemperature;
+    topP = newTopP;
+    systemPrompt = newSystemPrompt;
+    accessToken = newAccessToken;
+    userId = newUserId;
+}
+
+void AI::updateConfigName(const std::string &configId, const std::string &name)
+{
+    conversationManager.updateConfigName(configId, name);
+}
+
 std::string AI::generateResponse(AIStreamCallback streamCallback)
 {
     nlohmann::json requestJson;
@@ -506,4 +597,66 @@ BalanceInfo AI::getUserBalance()
     double usedUsd = usedQuota / QUOTA_PER_UNIT;
     double totalUsd = balanceUsd + usedUsd;
     return BalanceInfo{balanceUsd, usedUsd, totalUsd, false};
+}
+
+std::string AI::generateImage(const std::string &prompt, const std::string &size, const std::string &model)
+{
+    if (prompt.empty())
+        throw std::runtime_error("提示词不能为空");
+
+    std::string currentApiKey, currentBaseUrl, currentModel;
+    {
+        std::lock_guard<std::mutex> settingsLock(settingsMutex);
+        currentApiKey = apiKey;
+        currentBaseUrl = baseUrl;
+        currentModel = model.empty() ? this->model : model;
+    }
+
+    if (currentApiKey.empty() || currentBaseUrl.empty())
+        throw std::runtime_error("未配置 API 密钥或基础 URL");
+
+    nlohmann::json requestJson;
+    requestJson["prompt"] = prompt;
+    requestJson["n"] = 1;
+    // 优先使用 b64_json，避免设备 HTTPS 降级问题（图片 URL 通常为 HTTPS）
+    requestJson["response_format"] = "b64_json";
+    if (!size.empty())
+        requestJson["size"] = size;
+    if (!currentModel.empty())
+        requestJson["model"] = currentModel;
+
+    Response response = Fetch::fetch(currentBaseUrl + "images/generations",
+                                     FetchOptions("POST",
+                                                  {{"Content-Type", "application/json"},
+                                                   {"Authorization", "Bearer " + currentApiKey},
+                                                   {"Accept", "application/json"}},
+                                                  requestJson.dump(),
+                                                  false,
+                                                  nullptr,
+                                                  60));
+
+    if (!response.isOk())
+        THROW_NETWORK_ERROR(response.status);
+
+    nlohmann::json respJson = response.json();
+    if (!respJson.contains("data") || respJson["data"].empty())
+    {
+        std::string errMsg = "响应格式异常";
+        if (respJson.contains("error") && respJson["error"].contains("message"))
+            errMsg = respJson["error"]["message"].get<std::string>();
+        throw std::runtime_error(errMsg);
+    }
+
+    auto firstItem = respJson["data"][0];
+    if (firstItem.contains("b64_json") && firstItem["b64_json"].is_string())
+    {
+        std::string b64 = firstItem["b64_json"].get<std::string>();
+        return "data:image/png;base64," + b64;
+    }
+    if (firstItem.contains("url") && firstItem["url"].is_string())
+    {
+        // 兼容不支持 b64_json 的服务端，回退到 URL（前端再做 HTTP 降级拉取）
+        return firstItem["url"].get<std::string>();
+    }
+    throw std::runtime_error("响应中未找到图片数据");
 }

@@ -69,6 +69,13 @@ export interface BalanceInfo {
     unlimited: boolean;  // 是否无限额度
 }
 
+// AI 多配置信息
+export interface ConfigInfo {
+    id: string;
+    name: string;
+    createdAt: number;
+}
+
 
 export type Pinyin = string[]
 export interface Candidate {

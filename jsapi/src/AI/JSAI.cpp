@@ -228,6 +228,29 @@ void JSAI::getUserBalance(JQAsyncInfo &info)
     }
 }
 
+void JSAI::generateImage(JQAsyncInfo &info)
+{
+    try
+    {
+        ASSERT(AIObject != nullptr);
+        ASSERT(info.Length() >= 1);
+        JSContext *ctx = info.GetContext();
+        std::string prompt = JQString(ctx, info[0]).getString();
+        std::string size = "";
+        std::string model = "";
+        if (info.Length() >= 2 && info[1].is_string())
+            size = JQString(ctx, info[1]).getString();
+        if (info.Length() >= 3 && info[2].is_string())
+            model = JQString(ctx, info[2]).getString();
+        std::string result = AIObject->generateImage(prompt, size, model);
+        info.post(result);
+    }
+    catch (const std::exception &e)
+    {
+        info.postError(e.what());
+    }
+}
+
 void JSAI::getConversationList(JQAsyncInfo &info)
 {
     try
@@ -373,6 +396,115 @@ void JSAI::getSettings(JQFunctionInfo &info)
     }
 }
 
+// ===== 多配置管理 =====
+
+void JSAI::getConfigList(JQAsyncInfo &info)
+{
+    try
+    {
+        ASSERT(AIObject != nullptr);
+        ASSERT(info.Length() == 0);
+        Bson::array configsArray;
+        for (const auto &c : AIObject->getConfigList())
+        {
+            configsArray.push_back(Bson::object{
+                {"id", c.id},
+                {"name", c.name},
+                {"createdAt", std::to_string(c.createdAt)}});
+        }
+        info.post(configsArray);
+    }
+    catch (const std::exception &e)
+    {
+        info.postError(e.what());
+    }
+}
+
+void JSAI::createConfig(JQAsyncInfo &info)
+{
+    try
+    {
+        ASSERT(AIObject != nullptr);
+        ASSERT(info.Length() <= 1);
+        std::string name = "新配置";
+        if (info.Length() == 1 && !info[0].string_value().empty())
+            name = info[0].string_value();
+        std::string newId = AIObject->createConfig(name);
+        info.post(newId);
+    }
+    catch (const std::exception &e)
+    {
+        info.postError(e.what());
+    }
+}
+
+void JSAI::deleteConfig(JQAsyncInfo &info)
+{
+    try
+    {
+        ASSERT(AIObject != nullptr);
+        ASSERT(info.Length() == 1);
+        ASSERT(info[0].is_string());
+        std::string configId = info[0].string_value();
+        AIObject->deleteConfig(configId);
+        info.post(true);
+    }
+    catch (const std::exception &e)
+    {
+        info.postError(e.what());
+    }
+}
+
+void JSAI::updateConfigName(JQAsyncInfo &info)
+{
+    try
+    {
+        ASSERT(AIObject != nullptr);
+        ASSERT(info.Length() == 2);
+        ASSERT(info[0].is_string());
+        ASSERT(info[1].is_string());
+        std::string configId = info[0].string_value();
+        std::string name = info[1].string_value();
+        AIObject->updateConfigName(configId, name);
+        info.post(true);
+    }
+    catch (const std::exception &e)
+    {
+        info.postError(e.what());
+    }
+}
+
+void JSAI::getActiveConfigId(JQFunctionInfo &info)
+{
+    try
+    {
+        ASSERT(AIObject != nullptr);
+        ASSERT(info.Length() == 0);
+        info.GetReturnValue().Set(AIObject->getActiveConfigId());
+    }
+    catch (const std::exception &e)
+    {
+        info.GetReturnValue().ThrowInternalError(e.what());
+    }
+}
+
+void JSAI::setActiveConfigId(JQAsyncInfo &info)
+{
+    try
+    {
+        ASSERT(AIObject != nullptr);
+        ASSERT(info.Length() == 1);
+        ASSERT(info[0].is_string());
+        std::string configId = info[0].string_value();
+        AIObject->setActiveConfigId(configId);
+        info.post(true);
+    }
+    catch (const std::exception &e)
+    {
+        info.postError(e.what());
+    }
+}
+
 extern JSValue createAI(JQModuleEnv *env)
 {
     JQFunctionTemplateRef tpl = JQFunctionTemplate::New(env, "AI");
@@ -392,6 +524,7 @@ extern JSValue createAI(JQModuleEnv *env)
     tpl->SetProtoMethod("stopGeneration", &JSAI::stopGeneration);
     tpl->SetProtoMethodPromise("getModels", &JSAI::getModels);
     tpl->SetProtoMethodPromise("getUserBalance", &JSAI::getUserBalance);
+    tpl->SetProtoMethodPromise("generateImage", &JSAI::generateImage);
 
     tpl->SetProtoMethodPromise("getConversationList", &JSAI::getConversationList);
     tpl->SetProtoMethodPromise("createConversation", &JSAI::createConversation);
@@ -401,6 +534,14 @@ extern JSValue createAI(JQModuleEnv *env)
 
     tpl->SetProtoMethod("setSettings", &JSAI::setSettings);
     tpl->SetProtoMethod("getSettings", &JSAI::getSettings);
+
+    // 多配置管理
+    tpl->SetProtoMethodPromise("getConfigList", &JSAI::getConfigList);
+    tpl->SetProtoMethodPromise("createConfig", &JSAI::createConfig);
+    tpl->SetProtoMethodPromise("deleteConfig", &JSAI::deleteConfig);
+    tpl->SetProtoMethodPromise("updateConfigName", &JSAI::updateConfigName);
+    tpl->SetProtoMethod("getActiveConfigId", &JSAI::getActiveConfigId);
+    tpl->SetProtoMethodPromise("setActiveConfigId", &JSAI::setActiveConfigId);
 
     JSAI::InitTpl(tpl);
     return tpl->CallConstructor();

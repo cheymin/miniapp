@@ -86,8 +86,20 @@ public:
                      const std::string &accessToken = "", const std::string &userId = "");
     SettingsResponse getSettings() const;
 
+    // 多配置管理
+    std::vector<ConfigInfo> getConfigList();
+    std::string createConfig(const std::string &name);
+    void deleteConfig(const std::string &configId);
+    std::string getActiveConfigId();
+    void setActiveConfigId(const std::string &configId);
+    void updateConfigName(const std::string &configId, const std::string &name);
+
     std::string generateResponse(AIStreamCallback streamCallback);
     void stopGeneration();
     std::vector<std::string> getModels();
-    float getUserBalance();
+    BalanceInfo getUserBalance();
+
+    // 图片生成（OpenAI 兼容 /images/generations 接口）
+    // 返回可直接显示的 data URI（data:image/png;base64,...）
+    std::string generateImage(const std::string &prompt, const std::string &size, const std::string &model);
 };

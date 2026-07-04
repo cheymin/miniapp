@@ -31,6 +31,7 @@ export declare class AI {
     static stopGeneration(): void;
     static getModels(): Promise<string[]>;
     static getUserBalance(): Promise<langningchen.BalanceInfo>;
+    static generateImage(prompt: string, size?: string, model?: string): Promise<string>;
 
     static getConversationList(): Promise<langningchen.ConversationNode[]>;
     static createConversation(title?: string): Promise<void>;
@@ -40,6 +41,14 @@ export declare class AI {
 
     static setSettings(apiKey: string, baseUrl: string, modelName: string, maxTokens: number, temperature: number, topP: number, systemPrompt: string, accessToken: string, userId: string): void;
     static getSettings(): langningchen.SettingsResponse;
+
+    // 多配置管理
+    static getConfigList(): Promise<langningchen.ConfigInfo[]>;
+    static createConfig(name?: string): Promise<string>;
+    static deleteConfig(configId: string): Promise<boolean>;
+    static updateConfigName(configId: string, name: string): Promise<boolean>;
+    static getActiveConfigId(): string;
+    static setActiveConfigId(configId: string): Promise<boolean>;
 
     static on(event: 'ai_stream', callback: (data: string) => void): void;
 }

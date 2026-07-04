@@ -53,6 +53,7 @@ public:
     void stopGeneration(JQFunctionInfo &info);
     void getModels(JQAsyncInfo &info);
     void getUserBalance(JQAsyncInfo &info);
+    void generateImage(JQAsyncInfo &info);
 
     void getConversationList(JQAsyncInfo &info);
     void createConversation(JQAsyncInfo &info);
@@ -62,6 +63,14 @@ public:
 
     void setSettings(JQFunctionInfo &info);
     void getSettings(JQFunctionInfo &info);
+
+    // 多配置管理
+    void getConfigList(JQAsyncInfo &info);
+    void createConfig(JQAsyncInfo &info);
+    void deleteConfig(JQAsyncInfo &info);
+    void updateConfigName(JQAsyncInfo &info);
+    void getActiveConfigId(JQFunctionInfo &info);
+    void setActiveConfigId(JQAsyncInfo &info);
 };
 
 extern JSValue createAI(JQModuleEnv *env);

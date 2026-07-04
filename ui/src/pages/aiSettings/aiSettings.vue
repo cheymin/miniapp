@@ -20,6 +20,20 @@
 <template>
     <div>
         <scroller class="container" scroll-direction="vertical" :show-scrollbar="true">
+            <div class="section config-bar">
+                <text class="section-title">当前配置</text>
+                <div class="item" @click="toggleConfigMenu">
+                    <text class="item-text">配置名称</text>
+                    <text class="item-input">{{ activeConfigName || '无配置' }}</text>
+                    <text class="config-chevron">{{ showConfigMenu ? '▲' : '▼' }}</text>
+                </div>
+                <div class="btn-area config-actions">
+                    <text class="btn btn-success" @click="createConfig">新建配置</text>
+                    <text class="btn btn-warning" @click="renameConfig(activeConfigId, activeConfigName)">重命名</text>
+                    <text class="btn btn-danger" @click="removeConfig(activeConfigId)">删除</text>
+                </div>
+            </div>
+
             <div class="section">
                 <text class="section-title">API 配置</text>
 
@@ -100,6 +114,27 @@
                 <text @click="saveSettings" class="btn btn-primary">保存</text>
             </div>
         </scroller>
+
+        <div v-if="showConfigMenu" class="config-menu-overlay">
+            <div class="config-menu-panel">
+                <text class="config-menu-title">选择配置</text>
+                <scroller class="config-menu-scroller" scroll-direction="vertical" :show-scrollbar="true">
+                    <div>
+                        <div v-for="cfg in configs" :key="cfg.id" class="config-menu-item">
+                            <text class="config-menu-item-name" @click="switchConfig(cfg.id)">{{ cfg.name }}</text>
+                            <text v-if="cfg.id === activeConfigId" class="config-menu-active-tag">当前</text>
+                            <text class="btn btn-warning config-mini-btn" @click="renameConfig(cfg.id, cfg.name)">改名</text>
+                            <text class="btn btn-danger config-mini-btn" @click="removeConfig(cfg.id)">删</text>
+                        </div>
+                    </div>
+                </scroller>
+                <div class="config-menu-actions">
+                    <text class="btn btn-success" @click="createConfig">新建配置</text>
+                    <text class="btn btn-info" @click="toggleConfigMenu">关闭</text>
+                </div>
+            </div>
+        </div>
+
         <Loading />
         <ToastMessage />
     </div>
