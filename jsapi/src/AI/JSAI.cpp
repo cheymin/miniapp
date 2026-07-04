@@ -234,14 +234,14 @@ void JSAI::generateImage(JQAsyncInfo &info)
     {
         ASSERT(AIObject != nullptr);
         ASSERT(info.Length() >= 1);
-        JSContext *ctx = info.GetContext();
-        std::string prompt = JQString(ctx, info[0]).getString();
+        ASSERT(info[0].is_string());
+        std::string prompt = info[0].string_value();
         std::string size = "";
         std::string model = "";
         if (info.Length() >= 2 && info[1].is_string())
-            size = JQString(ctx, info[1]).getString();
+            size = info[1].string_value();
         if (info.Length() >= 3 && info[2].is_string())
-            model = JQString(ctx, info[2]).getString();
+            model = info[2].string_value();
         std::string result = AIObject->generateImage(prompt, size, model);
         info.post(result);
     }
