@@ -63,14 +63,6 @@ public:
 
     void setSettings(JQFunctionInfo &info);
     void getSettings(JQFunctionInfo &info);
-
-    // 多配置管理
-    void getConfigList(JQAsyncInfo &info);
-    void createConfig(JQAsyncInfo &info);
-    void deleteConfig(JQAsyncInfo &info);
-    void updateConfigName(JQAsyncInfo &info);
-    void getActiveConfigId(JQFunctionInfo &info);
-    void setActiveConfigId(JQAsyncInfo &info);
 };
 
 extern JSValue createAI(JQModuleEnv *env);

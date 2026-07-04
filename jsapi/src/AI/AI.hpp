@@ -26,7 +26,6 @@
 #include <shared_mutex>
 #include <nlohmann/json.hpp>
 #include "Fetch.hpp"
-#include "ConversationInfo.hpp"
 #include "AICallback.hpp"
 #include "ConversationInfo.hpp"
 #include "ConversationManager.hpp"
@@ -85,14 +84,6 @@ public:
                      double temperature, double topP, std::string systemPrompt,
                      const std::string &accessToken = "", const std::string &userId = "");
     SettingsResponse getSettings() const;
-
-    // 多配置管理
-    std::vector<ConfigInfo> getConfigList();
-    std::string createConfig(const std::string &name);
-    void deleteConfig(const std::string &configId);
-    std::string getActiveConfigId();
-    void setActiveConfigId(const std::string &configId);
-    void updateConfigName(const std::string &configId, const std::string &name);
 
     std::string generateResponse(AIStreamCallback streamCallback);
     void stopGeneration();

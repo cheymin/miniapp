@@ -17,7 +17,7 @@
 
 import { defineComponent } from 'vue';
 import { AI, Shell } from 'langningchen';
-import { showError, showSuccess, showInfo } from '../../components/ToastMessage';
+import { showError, showSuccess } from '../../components/ToastMessage';
 import { hideLoading, showLoading } from '../../components/Loading';
 import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
 
@@ -65,9 +65,6 @@ const imageGen = defineComponent({
     computed: {
         canGenerate(): boolean {
             return !this.isGenerating && this.prompt.trim().length > 0;
-        },
-        sizeLabel(): string {
-            return this.size;
         }
     },
 
@@ -154,22 +151,20 @@ const imageGen = defineComponent({
                 }
 
                 // 确保保存目录存在
-                Shell.exec(`mkdir -p ${SAVE_DIR}`);
+                await Shell.exec(`mkdir -p ${SAVE_DIR}`);
 
-                // 生成文件名：img-时间戳.png
+                // 生成文件名：aigen-时间戳.png
                 const timestamp = Math.floor(Date.now() / 1000);
                 const fileName = `aigen-${timestamp}.png`;
                 const fullPath = `${SAVE_DIR}/${fileName}`;
 
-                // 用 base64 -d 写入文件（避免 echo 长度限制，使用 here-string + base64 解码）
-                // 注意：Shell.exec 会用 system() 执行命令，base64 数据较长时可能超过 ARG_MAX
-                // 采用更可靠的方式：写入临时 base64 文件后再解码
+                // 写入临时 base64 文件后用 base64 -d 解码为 PNG（避免 ARG_MAX 限制）
                 const tmpB64 = `/tmp/aigen_${timestamp}.b64`;
-                Shell.exec(`echo -n '${base64Data}' > ${tmpB64}`);
-                Shell.exec(`base64 -d ${tmpB64} > ${fullPath}`);
-                Shell.exec(`rm -f ${tmpB64}`);
+                await Shell.exec(`echo -n '${base64Data}' > ${tmpB64}`);
+                await Shell.exec(`base64 -d ${tmpB64} > ${fullPath}`);
+                await Shell.exec(`rm -f ${tmpB64}`);
 
-                const verifySize = Shell.exec(`stat -c %s ${fullPath} 2>/dev/null || echo 0`).trim();
+                const verifySize = (await Shell.exec(`stat -c %s ${fullPath} 2>/dev/null || echo 0`)).trim();
                 if (verifySize === '0' || verifySize === '') {
                     showError('保存失败：文件写入异常');
                     return;

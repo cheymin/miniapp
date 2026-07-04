@@ -31,9 +31,6 @@ class ConversationManager
 private:
     DATABASE database;
     mutable std::mutex dbMutex;
-    std::string activeConfigId;
-
-    void migrateToMultiConfig();
 
 public:
     ConversationManager();
@@ -50,7 +47,6 @@ public:
                           std::unordered_map<std::string, std::unique_ptr<ConversationNode>> &nodeMap,
                           std::string &rootNodeId, std::string &leafNodeId);
 
-    // 多配置 API 设置：基于当前 active 配置读写
     void saveApiSettings(const std::string &apiKey, const std::string &baseUrl,
                          const std::string &model, int maxTokens,
                          double temperature, double topP, const std::string &systemPrompt,
@@ -59,12 +55,4 @@ public:
                          std::string &model, int &maxTokens,
                          double &temperature, double &topP, std::string &systemPrompt,
                          std::string &accessToken, std::string &userId);
-
-    // 多配置管理
-    std::vector<ConfigInfo> getConfigList();
-    std::string createConfig(const std::string &name);
-    void deleteConfig(const std::string &configId);
-    std::string getActiveConfigId();
-    void setActiveConfigId(const std::string &configId);
-    void updateConfigName(const std::string &configId, const std::string &name);
 };
