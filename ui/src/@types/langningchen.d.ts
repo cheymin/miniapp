@@ -31,7 +31,6 @@ export declare class AI {
     static stopGeneration(): void;
     static getModels(): Promise<string[]>;
     static getUserBalance(): Promise<langningchen.BalanceInfo>;
-    static generateImage(prompt: string, size?: string, model?: string): Promise<string>;
 
     static getConversationList(): Promise<langningchen.ConversationNode[]>;
     static createConversation(title?: string): Promise<void>;

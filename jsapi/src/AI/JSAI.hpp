@@ -53,7 +53,6 @@ public:
     void stopGeneration(JQFunctionInfo &info);
     void getModels(JQAsyncInfo &info);
     void getUserBalance(JQAsyncInfo &info);
-    void generateImage(JQAsyncInfo &info);
 
     void getConversationList(JQAsyncInfo &info);
     void createConversation(JQAsyncInfo &info);

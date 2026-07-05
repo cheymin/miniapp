@@ -89,8 +89,4 @@ public:
     void stopGeneration();
     std::vector<std::string> getModels();
     BalanceInfo getUserBalance();
-
-    // 图片生成（OpenAI 兼容 /images/generations 接口）
-    // 返回可直接显示的 data URI（data:image/png;base64,...）
-    std::string generateImage(const std::string &prompt, const std::string &size, const std::string &model);
 };

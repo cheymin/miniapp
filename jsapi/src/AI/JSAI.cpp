@@ -228,29 +228,6 @@ void JSAI::getUserBalance(JQAsyncInfo &info)
     }
 }
 
-void JSAI::generateImage(JQAsyncInfo &info)
-{
-    try
-    {
-        ASSERT(AIObject != nullptr);
-        ASSERT(info.Length() >= 1);
-        ASSERT(info[0].is_string());
-        std::string prompt = info[0].string_value();
-        std::string size = "";
-        std::string model = "";
-        if (info.Length() >= 2 && info[1].is_string())
-            size = info[1].string_value();
-        if (info.Length() >= 3 && info[2].is_string())
-            model = info[2].string_value();
-        std::string result = AIObject->generateImage(prompt, size, model);
-        info.post(result);
-    }
-    catch (const std::exception &e)
-    {
-        info.postError(e.what());
-    }
-}
-
 void JSAI::getConversationList(JQAsyncInfo &info)
 {
     try
@@ -415,7 +392,6 @@ extern JSValue createAI(JQModuleEnv *env)
     tpl->SetProtoMethod("stopGeneration", &JSAI::stopGeneration);
     tpl->SetProtoMethodPromise("getModels", &JSAI::getModels);
     tpl->SetProtoMethodPromise("getUserBalance", &JSAI::getUserBalance);
-    tpl->SetProtoMethodPromise("generateImage", &JSAI::generateImage);
 
     tpl->SetProtoMethodPromise("getConversationList", &JSAI::getConversationList);
     tpl->SetProtoMethodPromise("createConversation", &JSAI::createConversation);
