@@ -37,7 +37,7 @@ export declare class AI {
     static deleteConversation(conversationId: string): Promise<void>;
     static updateConversationTitle(conversationId: string, title: string): Promise<void>;
 
-    static setSettings(apiKey: string, baseUrl: string, modelName: string, maxTokens: number, temperature: number, topP: number, systemPrompt: string, accessToken: string, userId: string): void;
+    static setSettings(apiKey: string, baseUrl: string, modelName: string, maxTokens: number, temperature: number, topP: number, systemPrompt: string): void;
     static getSettings(): langningchen.SettingsResponse;
 
     static on(event: 'ai_stream', callback: (data: string) => void): void;

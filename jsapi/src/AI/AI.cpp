@@ -28,7 +28,7 @@ AI::AI()
     std::lock_guard<std::mutex> settingsLock(settingsMutex);
     std::lock_guard<std::mutex> conversationLock(conversationMutex);
 
-    conversationManager.loadApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt, accessToken, userId);
+    conversationManager.loadApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt);
 
     auto conversationsResponse = conversationManager.getConversationList();
     if (conversationsResponse.empty())
@@ -226,23 +226,20 @@ void AI::updateConversationTitle(const std::string &conversationId, const std::s
 
 void AI::setSettings(const std::string &apiKey, const std::string &baseUrl,
                      const std::string &model, int maxTokens,
-                     double temperature, double topP, std::string systemPrompt,
-                     const std::string &accessToken, const std::string &userId)
+                     double temperature, double topP, std::string systemPrompt)
 {
     std::lock_guard<std::mutex> settingsLock(settingsMutex);
     this->apiKey = apiKey, this->baseUrl = baseUrl;
     this->model = model, this->maxTokens = maxTokens;
     this->temperature = temperature, this->topP = topP, this->systemPrompt = systemPrompt;
-    this->accessToken = accessToken, this->userId = userId;
-    conversationManager.saveApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt, accessToken, userId);
+    conversationManager.saveApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt);
 }
 SettingsResponse AI::getSettings() const
 {
     std::lock_guard<std::mutex> settingsLock(settingsMutex);
     return SettingsResponse(apiKey, baseUrl,
                             model, maxTokens,
-                            temperature, topP, systemPrompt,
-                            accessToken, userId);
+                            temperature, topP, systemPrompt);
 }
 
 std::string AI::generateResponse(AIStreamCallback streamCallback)

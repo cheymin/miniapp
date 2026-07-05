@@ -310,7 +310,7 @@ void JSAI::setSettings(JQFunctionInfo &info)
     try
     {
         ASSERT(AIObject != nullptr);
-        ASSERT(info.Length() == 9);
+        ASSERT(info.Length() == 7);
         JSContext *ctx = info.GetContext();
         std::string apiKey = JQString(ctx, info[0]).getString();
         std::string baseUrl = JQString(ctx, info[1]).getString();
@@ -319,10 +319,8 @@ void JSAI::setSettings(JQFunctionInfo &info)
         double temperature = JQNumber(ctx, info[4]).getDouble();
         double topP = JQNumber(ctx, info[5]).getDouble();
         std::string systemPrompt = JQString(ctx, info[6]).getString();
-        std::string accessToken = JQString(ctx, info[7]).getString();
-        std::string userId = JQString(ctx, info[8]).getString();
 
-        AIObject->setSettings(apiKey, baseUrl, modelName, maxTokens, temperature, topP, systemPrompt, accessToken, userId);
+        AIObject->setSettings(apiKey, baseUrl, modelName, maxTokens, temperature, topP, systemPrompt);
         info.GetReturnValue().Set(true);
     }
     catch (const std::exception &e)
@@ -344,9 +342,7 @@ void JSAI::getSettings(JQFunctionInfo &info)
             {"maxTokens", settings.maxTokens},
             {"temperature", settings.temperature},
             {"topP", settings.topP},
-            {"systemPrompt", settings.systemPrompt},
-            {"accessToken", settings.accessToken},
-            {"userId", settings.userId}});
+            {"systemPrompt", settings.systemPrompt}});
     }
     catch (const std::exception &e)
     {

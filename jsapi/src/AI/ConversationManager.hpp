@@ -49,10 +49,8 @@ public:
 
     void saveApiSettings(const std::string &apiKey, const std::string &baseUrl,
                          const std::string &model, int maxTokens,
-                         double temperature, double topP, const std::string &systemPrompt,
-                         const std::string &accessToken = "", const std::string &userId = "");
+                         double temperature, double topP, const std::string &systemPrompt);
     void loadApiSettings(std::string &apiKey, std::string &baseUrl,
                          std::string &model, int &maxTokens,
-                         double &temperature, double &topP, std::string &systemPrompt,
-                         std::string &accessToken, std::string &userId);
+                         double &temperature, double &topP, std::string &systemPrompt);
 };

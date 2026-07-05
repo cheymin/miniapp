@@ -58,8 +58,6 @@ export interface SettingsResponse {
     temperature: number;
     topP: number;
     systemPrompt: string;
-    accessToken: string;
-    userId: string;
 }
 
 export type Pinyin = string[]
