@@ -1,17 +1,17 @@
 // Copyright (C) 2025 Langning Chen
-// 
+//
 // This file is part of miniapp.
-// 
+//
 // miniapp is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
-// 
+//
 // miniapp is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
-// 
+//
 // You should have received a copy of the GNU General Public License
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
@@ -37,20 +37,14 @@ const aiSettings = defineComponent({
             systemPrompt: '',
 
             availableModels: [] as string[],
-            showAllModels: false,
+
+            accessToken: '',
+            userId: '',
         };
     },
 
-    computed: {
-        displayModels(): string[] {
-            if (this.showAllModels || this.availableModels.length <= 5) {
-                return this.availableModels;
-            }
-            return this.availableModels.slice(0, 5);
-        }
-    },
-
     mounted() {
+        this.$page.$npage.setSupportBack(true);
         try {
             AI.initialize();
             this.loadSettings();
@@ -71,6 +65,8 @@ const aiSettings = defineComponent({
                 this.topP = settings.topP;
                 this.maxTokens = settings.maxTokens;
                 this.systemPrompt = settings.systemPrompt;
+                this.accessToken = settings.accessToken;
+                this.userId = settings.userId;
             } catch (e) {
                 showError(e as string || '加载设置失败');
             }
@@ -92,17 +88,13 @@ const aiSettings = defineComponent({
             this.modelName = model;
             this.$forceUpdate();
         },
-        
-        toggleShowAllModels() {
-            this.showAllModels = !this.showAllModels;
-            this.$forceUpdate();
-        },
 
         saveSettings() {
             try {
                 AI.setSettings(this.apiKey, this.baseUrl,
                     this.modelName, this.maxTokens,
-                    this.temperature, this.topP, this.systemPrompt,);
+                    this.temperature, this.topP, this.systemPrompt,
+                    this.accessToken, this.userId);
                 showSuccess('设置已保存');
             } catch (e) {
                 showError(e as string || '保存设置失败');
@@ -125,6 +117,23 @@ const aiSettings = defineComponent({
                 },
                 (value) => {
                     if (!value.startsWith("http")) { return '基础 URL 需要以 http 或 https 开头'; }
+                }
+            );
+        },
+
+        editAccessToken() {
+            openSoftKeyboard(
+                () => this.accessToken,
+                (value) => { this.accessToken = value; this.$forceUpdate(); }
+            );
+        },
+
+        editUserId() {
+            openSoftKeyboard(
+                () => this.userId,
+                (value) => { this.userId = value; this.$forceUpdate(); },
+                (value) => {
+                    if (value && !/^\d+$/.test(value)) { return '用户ID必须是数字'; }
                 }
             );
         },

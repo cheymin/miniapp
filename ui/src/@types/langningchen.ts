@@ -35,6 +35,7 @@ export interface ConversationNode {
     id: string;
     role: ROLE;
     content: string;
+    reasoningContent?: string;
     parentId: string;
     childIds: string[];
     timestamp: string;
@@ -57,8 +58,9 @@ export interface SettingsResponse {
     temperature: number;
     topP: number;
     systemPrompt: string;
+    accessToken: string;
+    userId: string;
 }
-
 
 export type Pinyin = string[]
 export interface Candidate {

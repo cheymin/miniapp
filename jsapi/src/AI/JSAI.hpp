@@ -52,7 +52,6 @@ public:
     void generateResponse(JQAsyncInfo &info);
     void stopGeneration(JQFunctionInfo &info);
     void getModels(JQAsyncInfo &info);
-    void getUserBalance(JQAsyncInfo &info);
 
     void getConversationList(JQAsyncInfo &info);
     void createConversation(JQAsyncInfo &info);

@@ -26,7 +26,6 @@
 #include <shared_mutex>
 #include <nlohmann/json.hpp>
 #include "Fetch.hpp"
-#include "ConversationInfo.hpp"
 #include "AICallback.hpp"
 #include "ConversationInfo.hpp"
 #include "ConversationManager.hpp"
@@ -37,6 +36,8 @@ class AI
 private:
     ConversationManager conversationManager;
     std::string apiKey, baseUrl;
+    std::string accessToken;   // New API 账户访问令牌
+    std::string userId;        // New API 用户数字ID
     std::string model = "deepseek-chat";
     int maxTokens = 1000;
     double temperature = 0.7;
@@ -80,11 +81,11 @@ public:
 
     void setSettings(const std::string &apiKey, const std::string &baseUrl,
                      const std::string &model, int maxTokens,
-                     double temperature, double topP, std::string systemPrompt);
+                     double temperature, double topP, std::string systemPrompt,
+                     const std::string &accessToken = "", const std::string &userId = "");
     SettingsResponse getSettings() const;
 
     std::string generateResponse(AIStreamCallback streamCallback);
     void stopGeneration();
     std::vector<std::string> getModels();
-    float getUserBalance();
 };
