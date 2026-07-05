@@ -19,6 +19,7 @@
 
 #include <string>
 #include <vector>
+#include <functional>
 
 // B 站视频信息
 struct BiliVideoInfo
