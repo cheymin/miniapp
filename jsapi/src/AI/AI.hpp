@@ -88,5 +88,4 @@ public:
     std::string generateResponse(AIStreamCallback streamCallback);
     void stopGeneration();
     std::vector<std::string> getModels();
-    BalanceInfo getUserBalance();
 };

@@ -62,13 +62,6 @@ export interface SettingsResponse {
     userId: string;
 }
 
-export interface BalanceInfo {
-    balance: number;     // 剩余余额（美元）
-    used: number;        // 已使用（美元）
-    total: number;       // 总额度（美元）
-    unlimited: boolean;  // 是否无限额度
-}
-
 export type Pinyin = string[]
 export interface Candidate {
     pinyin: Pinyin;

@@ -17,7 +17,6 @@
 
 import { defineComponent } from 'vue';
 import { AI } from 'langningchen';
-import { BalanceInfo } from '../../@types/langningchen';
 import { showError, showSuccess } from '../../components/ToastMessage';
 import { hideLoading, showLoading } from '../../components/Loading';
 import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
@@ -41,9 +40,6 @@ const aiSettings = defineComponent({
 
             accessToken: '',
             userId: '',
-            balanceInfo: null as BalanceInfo | null,
-            balanceLoading: false,
-            balanceError: '',
         };
     },
 
@@ -53,7 +49,6 @@ const aiSettings = defineComponent({
             AI.initialize();
             this.loadSettings();
             this.refreshModels();
-            this.refreshBalance();
         } catch (e) {
             showError(e as string || 'AI 初始化失败');
         }
@@ -89,30 +84,6 @@ const aiSettings = defineComponent({
             });
         },
 
-        refreshBalance() {
-            if (this.balanceLoading) return;
-            if (!this.accessToken || !this.userId) {
-                this.balanceError = '请先填写账户访问令牌和用户ID';
-                this.balanceInfo = null;
-                return;
-            }
-            this.balanceLoading = true;
-            this.balanceError = '';
-            this.balanceInfo = null;
-            AI.getUserBalance().then((info: BalanceInfo) => {
-                this.balanceInfo = info;
-            }).catch((e) => {
-                this.balanceError = `查询失败: ${e}`;
-            }).finally(() => {
-                this.balanceLoading = false;
-            });
-        },
-
-        formatBalance(info: BalanceInfo): string {
-            if (info.unlimited) return '无限额度';
-            return `$${info.balance.toFixed(4)} (已用 $${info.used.toFixed(4)} / $${info.total.toFixed(4)})`;
-        },
-
         selectModel(model: string) {
             this.modelName = model;
             this.$forceUpdate();
@@ -125,7 +96,6 @@ const aiSettings = defineComponent({
                     this.temperature, this.topP, this.systemPrompt,
                     this.accessToken, this.userId);
                 showSuccess('设置已保存');
-                this.refreshBalance();
             } catch (e) {
                 showError(e as string || '保存设置失败');
             }

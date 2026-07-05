@@ -21,16 +21,3 @@
 #include <functional>
 
 using AIStreamCallback = std::function<void(const std::string &messageDelta)>;
-
-// 账户余额信息（New API / One API 兼容）
-struct BalanceInfo
-{
-    double balance;    // 剩余余额（美元）
-    double used;       // 已使用（美元）
-    double total;      // 总额度（美元）
-    bool unlimited;    // 是否无限额度
-
-    BalanceInfo() : balance(0.0), used(0.0), total(0.0), unlimited(false) {}
-    BalanceInfo(double balance, double used, double total, bool unlimited)
-        : balance(balance), used(used), total(total), unlimited(unlimited) {}
-};
