@@ -40,7 +40,7 @@ const biliDetail = defineComponent({
 
     mounted() {
         this.$page.$npage.setSupportBack(true);
-        this.bvid = this.$page.params.bvid;
+        this.bvid = this.$page.loadOptions.bvid;
         if (!this.bvid) {
             showError('缺少 bvid 参数');
             return;

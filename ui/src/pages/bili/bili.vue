@@ -24,7 +24,7 @@
             <text class="tab" :class="{ 'tab-active': activeTab === 'rank' }" @click="switchTab('rank')">热门</text>
             <text class="tab" :class="{ 'tab-active': activeTab === 'search' }" @click="switchTab('search')">搜索</text>
             <text class="tab" :class="{ 'tab-active': activeTab === 'fav' }" @click="switchTab('fav')">收藏</text>
-            <text class="tab" :class="{ 'tab-active': activeTab === 'downloads' }" @click="switchTab('downloads')">已下载</text>
+            <text class="tab" :class="{ 'tab-active': activeTab === 'downloads' }" @click="switchTab('downloads')">已下</text>
             <text class="tab tab-settings" @click="openBiliSettings">⚙</text>
         </div>
 
@@ -44,11 +44,10 @@
                 <div v-for="(item, idx) in rankItems" :key="item.bvid" class="video-card">
                     <text class="rank-num">{{ idx + 1 }}</text>
                     <div class="video-info" @click="openDetail(item.bvid)">
-                        <text class="video-title" :lines="2">{{ item.title }}</text>
-                        <text class="video-meta">{{ item.author }} · {{ formatDuration(item.duration) }}</text>
-                        <text class="video-stats">▶ {{ formatPlayCount(item.playCount) }} 💬 {{ formatPlayCount(item.danmakuCount) }}</text>
+                        <text class="video-title" :lines="1">{{ item.title }}</text>
+                        <text class="video-meta">{{ item.author }} · {{ formatDuration(item.duration) }} · ▶{{ formatPlayCount(item.playCount) }}</text>
                     </div>
-                    <text class="btn btn-download"
+                    <text class="btn-download"
                         :class="{ 'btn-disabled': downloadingBvid === item.bvid }"
                         @click="downloadVideo(item.bvid, item.title)">下</text>
                 </div>
@@ -61,16 +60,15 @@
             <div v-if="activeTab === 'search'">
                 <div class="search-bar">
                     <text class="search-input" @click="editSearchKeyword">{{ searchKeyword || '点击输入关键词...' }}</text>
-                    <text v-if="searchKeyword" class="btn btn-danger" @click="clearSearch">清除</text>
+                    <text v-if="searchKeyword" class="btn-download btn-danger" @click="clearSearch">清</text>
                 </div>
 
                 <div v-for="item in searchResults" :key="item.bvid" class="video-card">
                     <div class="video-info" @click="openDetail(item.bvid)">
-                        <text class="video-title" :lines="2">{{ item.title }}</text>
-                        <text class="video-meta">{{ item.author }} · {{ formatDuration(item.duration) }}</text>
-                        <text class="video-stats">▶ {{ formatPlayCount(item.playCount) }}</text>
+                        <text class="video-title" :lines="1">{{ item.title }}</text>
+                        <text class="video-meta">{{ item.author }} · {{ formatDuration(item.duration) }} · ▶{{ formatPlayCount(item.playCount) }}</text>
                     </div>
-                    <text class="btn btn-download"
+                    <text class="btn-download"
                         :class="{ 'btn-disabled': downloadingBvid === item.bvid }"
                         @click="downloadVideo(item.bvid, item.title)">下</text>
                 </div>
@@ -99,10 +97,10 @@
 
                     <div v-for="item in favItems" :key="item.bvid" class="video-card">
                         <div class="video-info" @click="openDetail(item.bvid)">
-                            <text class="video-title" :lines="2">{{ item.title }}</text>
+                            <text class="video-title" :lines="1">{{ item.title }}</text>
                             <text class="video-meta">{{ item.upperName }} · {{ formatDuration(item.duration) }}</text>
                         </div>
-                        <text class="btn btn-download"
+                        <text class="btn-download"
                             :class="{ 'btn-disabled': downloadingBvid === item.bvid }"
                             @click="downloadVideo(item.bvid, item.title)">下</text>
                     </div>
@@ -114,9 +112,9 @@
 
             <!-- 已下载 -->
             <div v-if="activeTab === 'downloads'">
-                <div v-for="(file, idx) in downloads" :key="file.name" class="download-item">
+                <div v-for="file in downloads" :key="file.name" class="download-item">
                     <text class="download-name" :lines="2">{{ file.name }}</text>
-                    <text class="btn btn-danger" @click="deleteDownload(file.name)">删</text>
+                    <text class="btn-download btn-danger" @click="deleteDownload(file.name)">删</text>
                 </div>
                 <div v-if="downloads.length === 0" class="empty">
                     <text class="empty-text">暂无下载</text>
@@ -153,7 +151,7 @@ export default {
     ...bili,
     components: {
         Loading,
-        ToastMessage,
+        ToastMessage
     }
 };
 </script>
