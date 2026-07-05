@@ -66,3 +66,47 @@ export interface Candidate {
     hanZi: string;
     freq: number;
 }
+
+export interface BiliSearchItem {
+    bvid: string;
+    aid: string;
+    title: string;
+    desc: string;
+    pic: string;
+    author: string;
+    duration: number;
+    playCount: number;
+    danmakuCount: number;
+    pubdate: number;
+}
+
+export interface BiliRankItem extends BiliSearchItem {}
+
+export interface BiliVideoInfo {
+    bvid: string;
+    aid: string;
+    title: string;
+    desc: string;
+    pic: string;
+    ownerName: string;
+    ownerMid: string;
+    duration: number;
+    pubdate: number;
+    playCount: number;
+    danmakuCount: number;
+    likeCount: number;
+    coinCount: number;
+    favouriteCount: number;
+    replyCount: number;
+    shareCount: number;
+}
+
+export interface BiliFavItem {
+    bvid: string;
+    aid: string;
+    title: string;
+    cover: string;
+    upperName: string;
+    duration: number;
+    favTime: number;
+}

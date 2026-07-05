@@ -72,3 +72,22 @@ export declare class Penshell {
 
     static on(event: 'penshell_output', callback: (data: string) => void): void;
 }
+
+export declare class Bilibili {
+    static setCredential(sessdata: string, biliJct: string, buvid3: string, dedeuserid: string): Promise<boolean>;
+    static clearCredential(): boolean;
+    static isLoggedIn(): boolean;
+
+    static search(keyword: string, page?: number, pageSize?: number): Promise<langningchen.BiliSearchItem[]>;
+    static getRanking(rid?: number, pageSize?: number): Promise<langningchen.BiliRankItem[]>;
+    static getVideoInfo(bvid: string): Promise<langningchen.BiliVideoInfo>;
+
+    static getFavoriteFolders(): Promise<{ id: string; title: string }[]>;
+    static getFavoriteItems(mediaId: string, page?: number, pageSize?: number): Promise<langningchen.BiliFavItem[]>;
+
+    static downloadAudio(bvid: string, title: string): Promise<string>;
+    static listDownloads(): { name: string; path: string }[];
+    static deleteDownload(filename: string): Promise<boolean>;
+
+    static on(event: 'bili_download_progress', callback: (data: { progress: number; status: string }) => void): void;
+}

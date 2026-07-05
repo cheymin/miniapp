@@ -19,7 +19,10 @@
     "qqchat": "pages/qqchat/qqchat.vue",
     "browser": "pages/browser/browser.vue",
     "pvz": "pages/pvz/pvz.vue",
-    "penshell": "pages/penshell/penshell.vue"
+    "penshell": "pages/penshell/penshell.vue",
+    "bili": "pages/bili/bili.vue",
+    "biliDetail": "pages/biliDetail/biliDetail.vue",
+    "biliSettings": "pages/biliSettings/biliSettings.vue"
   },
   "options": {
     "style": {
