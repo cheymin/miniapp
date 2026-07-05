@@ -36,38 +36,19 @@
             </div>
 
             <div class="section">
-                <text class="section-title">账户余额（New API）</text>
-
-                <div class="item">
-                    <text class="item-text">访问令牌</text>
-                    <text class="item-input" @click="editAccessToken">{{ (accessToken ? accessToken.split('').map(_ => '*').join('') : '点击输入访问令牌') }}</text>
-                </div>
-
-                <div class="item">
-                    <text class="item-text">用户 ID</text>
-                    <text class="item-input" @click="editUserId">{{ userId || '点击输入用户ID' }}</text>
-                </div>
-
-                <div class="item">
-                    <text class="item-text">账户余额</text>
-                    <text v-if="balanceLoading" class="item-input item-input-disabled">查询中...</text>
-                    <text v-else-if="balanceError" class="item-input" @click="refreshBalance">{{ balanceError }}（点击重试）</text>
-                    <text v-else-if="balanceInfo" class="item-input" @click="refreshBalance">{{ formatBalance(balanceInfo) }}</text>
-                    <text v-else class="item-input" @click="refreshBalance">点击查询</text>
-                </div>
-            </div>
-
-            <div class="section">
                 <text class="section-title">模型参数</text>
 
                 <div class="item">
                     <text class="item-text">可用模型</text>
                     <div class="models-grid">
-                        <text v-for="model in availableModels" :key="model" @click="selectModel(model)"
+                        <text v-for="model in displayModels" :key="model" @click="selectModel(model)"
                             :class="'item-text model model-item ' + (modelName === model ? 'model-selected' : '')">{{
                                 model
                             }}</text>
                     </div>
+                    <text v-if="availableModels.length > 5" @click="toggleShowAllModels" class="btn btn-info">
+                        {{ showAllModels ? '显示更少' : '显示更多' }}
+                    </text>
                     <text @click="refreshModels" class="btn btn-info">刷新模型</text>
                 </div>
 

@@ -37,8 +37,6 @@ class AI
 private:
     ConversationManager conversationManager;
     std::string apiKey, baseUrl;
-    std::string accessToken;   // New API 账户访问令牌
-    std::string userId;        // New API 用户数字ID
     std::string model = "deepseek-chat";
     int maxTokens = 1000;
     double temperature = 0.7;
@@ -82,8 +80,7 @@ public:
 
     void setSettings(const std::string &apiKey, const std::string &baseUrl,
                      const std::string &model, int maxTokens,
-                     double temperature, double topP, std::string systemPrompt,
-                     const std::string &accessToken = "", const std::string &userId = "");
+                     double temperature, double topP, std::string systemPrompt);
     SettingsResponse getSettings() const;
 
     std::string generateResponse(AIStreamCallback streamCallback);

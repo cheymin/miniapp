@@ -30,7 +30,6 @@ const ai = defineComponent({
             aiInitialized: false,
             currentInput: '',
             streamingContent: '',
-            streamingReasoning: '',
             isStreaming: false,
             messages: [] as ConversationNode[],
             jumpToMessageId: '',
@@ -52,17 +51,7 @@ const ai = defineComponent({
             this.aiInitialized = true;
             this.refreshMessages();
             AI.on('ai_stream', (data: string) => {
-                if (data && data.length > 0) {
-                    const marker = data.charCodeAt(0);
-                    const text = data.substring(1);
-                    if (marker === 1) {
-                        this.streamingReasoning += text;
-                    } else if (marker === 2) {
-                        this.streamingContent += text;
-                    } else {
-                        this.streamingContent += data;
-                    }
-                }
+                this.streamingContent += data;
                 this.$forceUpdate();
             });
             $falcon.on<string>('jump', this.jumpHandler);
@@ -81,11 +70,10 @@ const ai = defineComponent({
                 }
             }
 
-            if (this.isStreaming && (this.streamingContent || this.streamingReasoning)) {
+            if (this.isStreaming && this.streamingContent) {
                 const lastMessage = messages[messages.length - 1];
                 if (lastMessage && lastMessage.role === ROLE.ROLE_ASSISTANT) {
                     lastMessage.content = this.streamingContent;
-                    lastMessage.reasoningContent = this.streamingReasoning;
                 }
                 else if (lastMessage) {
                     const tempId = `streaming_${Date.now()}`;
@@ -93,7 +81,6 @@ const ai = defineComponent({
                     const streamingMessage: ConversationNode = {
                         role: ROLE.ROLE_ASSISTANT,
                         content: '',
-                        reasoningContent: '',
                         timestamp: new Date().toISOString(),
                         id: '',
                         parentId: '',
@@ -134,7 +121,6 @@ const ai = defineComponent({
             userMessage = userMessage.trim();
 
             this.streamingContent = '';
-            this.streamingReasoning = '';
 
             AI.addUserMessage(userMessage).then(() => {
                 this.refreshMessages();
@@ -156,7 +142,6 @@ const ai = defineComponent({
             }).finally(() => {
                 this.isStreaming = false;
                 this.streamingContent = '';
-                this.streamingReasoning = '';
             });
         },
 
@@ -166,7 +151,6 @@ const ai = defineComponent({
                 setTimeout(() => {
                     this.isStreaming = false;
                     this.streamingContent = '';
-                    this.streamingReasoning = '';
                     this.refreshMessages();
                     this.$forceUpdate();
                 }, 100);

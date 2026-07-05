@@ -17,7 +17,6 @@
 
 import { defineComponent } from 'vue';
 import { AI } from 'langningchen';
-import { BalanceInfo } from '../../@types/langningchen';
 import { showError, showSuccess } from '../../components/ToastMessage';
 import { hideLoading, showLoading } from '../../components/Loading';
 import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
@@ -38,13 +37,17 @@ const aiSettings = defineComponent({
             systemPrompt: '',
 
             availableModels: [] as string[],
-
-            accessToken: '',
-            userId: '',
-            balanceInfo: null as BalanceInfo | null,
-            balanceLoading: false,
-            balanceError: '',
+            showAllModels: false,
         };
+    },
+
+    computed: {
+        displayModels(): string[] {
+            if (this.showAllModels || this.availableModels.length <= 5) {
+                return this.availableModels;
+            }
+            return this.availableModels.slice(0, 5);
+        }
     },
 
     mounted() {
@@ -52,7 +55,6 @@ const aiSettings = defineComponent({
             AI.initialize();
             this.loadSettings();
             this.refreshModels();
-            this.refreshBalance();
         } catch (e) {
             showError(e as string || 'AI 初始化失败');
         }
@@ -69,8 +71,6 @@ const aiSettings = defineComponent({
                 this.topP = settings.topP;
                 this.maxTokens = settings.maxTokens;
                 this.systemPrompt = settings.systemPrompt;
-                this.accessToken = settings.accessToken;
-                this.userId = settings.userId;
             } catch (e) {
                 showError(e as string || '加载设置失败');
             }
@@ -88,32 +88,13 @@ const aiSettings = defineComponent({
             });
         },
 
-        refreshBalance() {
-            if (this.balanceLoading) return;
-            if (!this.accessToken || !this.userId) {
-                this.balanceError = '请先填写账户访问令牌和用户ID';
-                this.balanceInfo = null;
-                return;
-            }
-            this.balanceLoading = true;
-            this.balanceError = '';
-            this.balanceInfo = null;
-            AI.getUserBalance().then((info: BalanceInfo) => {
-                this.balanceInfo = info;
-            }).catch((e) => {
-                this.balanceError = `查询失败: ${e}`;
-            }).finally(() => {
-                this.balanceLoading = false;
-            });
-        },
-
-        formatBalance(info: BalanceInfo): string {
-            if (info.unlimited) return '无限额度';
-            return `$${info.balance.toFixed(4)} (已用 $${info.used.toFixed(4)} / $${info.total.toFixed(4)})`;
-        },
-
         selectModel(model: string) {
             this.modelName = model;
+            this.$forceUpdate();
+        },
+        
+        toggleShowAllModels() {
+            this.showAllModels = !this.showAllModels;
             this.$forceUpdate();
         },
 
@@ -121,10 +102,8 @@ const aiSettings = defineComponent({
             try {
                 AI.setSettings(this.apiKey, this.baseUrl,
                     this.modelName, this.maxTokens,
-                    this.temperature, this.topP, this.systemPrompt,
-                    this.accessToken, this.userId);
+                    this.temperature, this.topP, this.systemPrompt,);
                 showSuccess('设置已保存');
-                this.refreshBalance();
             } catch (e) {
                 showError(e as string || '保存设置失败');
             }
@@ -146,23 +125,6 @@ const aiSettings = defineComponent({
                 },
                 (value) => {
                     if (!value.startsWith("http")) { return '基础 URL 需要以 http 或 https 开头'; }
-                }
-            );
-        },
-
-        editAccessToken() {
-            openSoftKeyboard(
-                () => this.accessToken,
-                (value) => { this.accessToken = value; this.$forceUpdate(); }
-            );
-        },
-
-        editUserId() {
-            openSoftKeyboard(
-                () => this.userId,
-                (value) => { this.userId = value; this.$forceUpdate(); },
-                (value) => {
-                    if (value && !/^\d+$/.test(value)) { return '用户ID必须是数字'; }
                 }
             );
         },

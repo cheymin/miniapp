@@ -26,14 +26,11 @@ struct SettingsResponse
     double temperature;
     double topP;
     std::string systemPrompt;
-    std::string accessToken;   // New API 账户访问令牌（用于查账户余额）
-    std::string userId;        // New API 用户数字ID
 
     SettingsResponse(std::string apiKey, std::string baseUrl,
                      std::string modelName, int maxTokens,
-                     double temperature, double topP, std::string systemPrompt,
-                     std::string accessToken = "", std::string userId = "")
+                     double temperature, double topP, std::string systemPrompt)
         : apiKey(apiKey), baseUrl(baseUrl), modelName(modelName),
           maxTokens(maxTokens), temperature(temperature), topP(topP),
-          systemPrompt(systemPrompt), accessToken(accessToken), userId(userId) {}
+          systemPrompt(systemPrompt) {}
 };

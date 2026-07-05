@@ -35,7 +35,6 @@ export interface ConversationNode {
     id: string;
     role: ROLE;
     content: string;
-    reasoningContent?: string;
     parentId: string;
     childIds: string[];
     timestamp: string;
@@ -58,15 +57,6 @@ export interface SettingsResponse {
     temperature: number;
     topP: number;
     systemPrompt: string;
-    accessToken: string;
-    userId: string;
-}
-
-export interface BalanceInfo {
-    balance: number;     // 剩余余额（美元）
-    used: number;        // 已使用（美元）
-    total: number;       // 总额度（美元）
-    unlimited: boolean;  // 是否无限额度
 }
 
 

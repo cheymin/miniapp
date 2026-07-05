@@ -28,7 +28,7 @@ AI::AI()
     std::lock_guard<std::mutex> settingsLock(settingsMutex);
     std::lock_guard<std::mutex> conversationLock(conversationMutex);
 
-    conversationManager.loadApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt, accessToken, userId);
+    conversationManager.loadApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt);
 
     auto conversationsResponse = conversationManager.getConversationList();
     if (conversationsResponse.empty())
@@ -226,23 +226,20 @@ void AI::updateConversationTitle(const std::string &conversationId, const std::s
 
 void AI::setSettings(const std::string &apiKey, const std::string &baseUrl,
                      const std::string &model, int maxTokens,
-                     double temperature, double topP, std::string systemPrompt,
-                     const std::string &accessToken, const std::string &userId)
+                     double temperature, double topP, std::string systemPrompt)
 {
     std::lock_guard<std::mutex> settingsLock(settingsMutex);
     this->apiKey = apiKey, this->baseUrl = baseUrl;
     this->model = model, this->maxTokens = maxTokens;
     this->temperature = temperature, this->topP = topP, this->systemPrompt = systemPrompt;
-    this->accessToken = accessToken, this->userId = userId;
-    conversationManager.saveApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt, accessToken, userId);
+    conversationManager.saveApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt);
 }
 SettingsResponse AI::getSettings() const
 {
     std::lock_guard<std::mutex> settingsLock(settingsMutex);
     return SettingsResponse(apiKey, baseUrl,
                             model, maxTokens,
-                            temperature, topP, systemPrompt,
-                            accessToken, userId);
+                            temperature, topP, systemPrompt);
 }
 
 std::string AI::generateResponse(AIStreamCallback streamCallback)
@@ -270,8 +267,7 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
 
     requestJson["messages"] = messagesArray;
 
-    std::string fullContent;
-    std::string fullReasoning;
+    std::string fullAssistantResponse;
     std::mutex responseMutex;
     bool wasCancelled = false;
     bool responseStarted = false;
@@ -285,7 +281,7 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
         cancellationToken = currentRequestCancelled;
     }
 
-    StreamCallback packedStreamCallback = [&fullContent, &fullReasoning, &responseMutex, &wasCancelled, &responseStarted, &assistantNodeId, &finalStopReason, cancellationToken, streamCallback, this](const std::string &chunk)
+    StreamCallback packedStreamCallback = [&fullAssistantResponse, &responseMutex, &wasCancelled, &responseStarted, &assistantNodeId, &finalStopReason, cancellationToken, streamCallback, this](const std::string &chunk)
     {
         if (cancellationToken->load())
         {
@@ -313,18 +309,18 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
                 finalStopReason = ConversationNode::STOP_REASON_ERROR;
         }
 
-        std::string reasoningDelta = "";
-        std::string contentDelta = "";
+        std::string content = "";
         if (choice["delta"]["reasoning_content"].is_string())
-            reasoningDelta = choice["delta"]["reasoning_content"];
+            content += choice["delta"]["reasoning_content"];
         if (choice["delta"]["content"].is_string())
-            contentDelta = choice["delta"]["content"];
-        if (!reasoningDelta.empty() || !contentDelta.empty())
+            content += choice["delta"]["content"];
+        if (content != "")
         {
             {
                 std::lock_guard<std::mutex> lock(responseMutex);
+                fullAssistantResponse += content;
 
-                if (!responseStarted)
+                if (!responseStarted && !content.empty())
                 {
                     responseStarted = true;
                     std::unique_lock<std::shared_mutex> stateLock(stateMutex);
@@ -332,37 +328,22 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
                     ConversationNode *parent = findNode(currentNodeId);
                     if (parent)
                         parent->childIds.push_back(assistantNodeId);
-                    nodeMap[assistantNodeId] = std::make_unique<ConversationNode>(assistantNodeId, ConversationNode::ROLE_ASSISTANT, fullContent, currentNodeId);
+                    nodeMap[assistantNodeId] = std::make_unique<ConversationNode>(assistantNodeId, ConversationNode::ROLE_ASSISTANT, fullAssistantResponse, currentNodeId);
                     currentNodeId = assistantNodeId;
                     stateLock.unlock();
                     saveConversation();
                 }
-
-                if (!reasoningDelta.empty() || !contentDelta.empty())
+                else if (responseStarted && !assistantNodeId.empty())
                 {
                     std::unique_lock<std::shared_mutex> stateLock(stateMutex);
                     ConversationNode *assistantNode = findNode(assistantNodeId);
                     if (assistantNode)
-                    {
-                        if (!reasoningDelta.empty())
-                        {
-                            fullReasoning += reasoningDelta;
-                            assistantNode->reasoningContent = fullReasoning;
-                        }
-                        if (!contentDelta.empty())
-                        {
-                            fullContent += contentDelta;
-                            assistantNode->content = fullContent;
-                        }
-                    }
+                        assistantNode->content = fullAssistantResponse;
                     stateLock.unlock();
                     saveConversation();
                 }
             }
-            if (!reasoningDelta.empty())
-                streamCallback(std::string("\x01") + reasoningDelta);
-            if (!contentDelta.empty())
-                streamCallback(std::string("\x02") + contentDelta);
+            streamCallback(content);
         }
     };
 
@@ -401,16 +382,16 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
             stateLock.unlock();
             saveConversation();
         }
-        return fullContent;
+        return fullAssistantResponse;
     }
     if (!response.isOk())
         THROW_NETWORK_ERROR(response.status);
 
     {
         std::lock_guard<std::mutex> lock(responseMutex);
-        if (!responseStarted && !fullContent.empty())
+        if (!responseStarted && !fullAssistantResponse.empty())
         {
-            addNode(ConversationNode::ROLE_ASSISTANT, fullContent);
+            addNode(ConversationNode::ROLE_ASSISTANT, fullAssistantResponse);
         }
         else if (responseStarted && !assistantNodeId.empty() && finalStopReason != ConversationNode::STOP_REASON_NONE)
         {
@@ -423,7 +404,7 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
             stateLock.unlock();
             saveConversation();
         }
-        return fullContent;
+        return fullAssistantResponse;
     }
 }
 
@@ -455,55 +436,23 @@ std::vector<std::string> AI::getModels()
     return modelIds;
 }
 
-BalanceInfo AI::getUserBalance()
+float AI::getUserBalance()
 {
-    std::string currentAccessToken, currentUserId, currentBaseUrl;
+    std::string currentApiKey, currentBaseUrl;
     {
         std::lock_guard<std::mutex> settingsLock(settingsMutex);
-        currentAccessToken = accessToken;
-        currentUserId = userId;
+        currentApiKey = apiKey;
         currentBaseUrl = baseUrl;
     }
 
-    if (currentAccessToken.empty() || currentUserId.empty())
-        throw std::runtime_error("未配置账户访问令牌或用户ID");
-
-    // 从 baseUrl 提取站点根 URL（去掉末尾的 /v1/ 或 /v1）
-    std::string rootUrl = currentBaseUrl;
-    size_t v1Pos = rootUrl.find("/v1");
-    if (v1Pos != std::string::npos)
-        rootUrl = rootUrl.substr(0, v1Pos);
-    if (!rootUrl.empty() && rootUrl.back() != '/')
-        rootUrl += '/';
-
-    // New API / One API 账户余额接口：GET /api/user/self
-    // 需要两个头：Authorization: Bearer <access_token>  和  New-Api-User: <用户ID>
-    Response resp = Fetch::fetch(rootUrl + "api/user/self",
-                                 FetchOptions("GET",
-                                              {{"Authorization", "Bearer " + currentAccessToken},
-                                               {"New-Api-User", currentUserId}}));
-    if (!resp.isOk())
-        THROW_NETWORK_ERROR(resp.status);
-    nlohmann::json j = resp.json();
-
-    // 鉴权失败时 HTTP 仍可能是 200，需检查 success 字段
-    if (j.contains("success") && !j["success"].get<bool>())
-    {
-        std::string msg = j.contains("message") ? j["message"].get<std::string>() : "鉴权失败";
-        throw std::runtime_error(msg);
-    }
-
-    if (!j.contains("data"))
-        throw std::runtime_error("响应格式异常");
-    nlohmann::json data = j["data"];
-
-    // quota / used_quota 单位是积分，默认 500000 quota = $1
-    const double QUOTA_PER_UNIT = 500000.0;
-    double quota = data["quota"].is_number() ? data["quota"].get<double>() : 0.0;
-    double usedQuota = data["used_quota"].is_number() ? data["used_quota"].get<double>() : 0.0;
-
-    double balanceUsd = quota / QUOTA_PER_UNIT;
-    double usedUsd = usedQuota / QUOTA_PER_UNIT;
-    double totalUsd = balanceUsd + usedUsd;
-    return BalanceInfo{balanceUsd, usedUsd, totalUsd, false};
+    Response response = Fetch::fetch(currentBaseUrl + "user/balance",
+                                     FetchOptions("GET",
+                                                  {{"Authorization", "Bearer " + currentApiKey}}));
+    if (!response.isOk())
+        THROW_NETWORK_ERROR(response.status);
+    nlohmann::json responseJson = response.json();
+    for (const auto &balanceInfo : responseJson.at("balance_infos"))
+        if (balanceInfo.at("currency") == "CNY")
+            return std::atof(std::string(balanceInfo.at("total_balance")).c_str());
+    return 0.0f;
 }
