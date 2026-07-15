@@ -23,15 +23,19 @@
 #include <regex>
 #include <chrono>
 
+// ============================================================
+// 构造 / 析构
+// ============================================================
 AI::AI()
 {
     std::lock_guard<std::mutex> settingsLock(settingsMutex);
     std::lock_guard<std::mutex> conversationLock(conversationMutex);
 
-    conversationManager.loadApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt);
+    conversationManager.loadApiSettings(apiKey, baseUrl, model,
+                                        maxTokens, temperature, topP, systemPrompt);
 
-    auto conversationsResponse = conversationManager.getConversationList();
-    if (conversationsResponse.empty())
+    auto conversations = conversationManager.getConversationList();
+    if (conversations.empty())
     {
         conversationManager.createConversation("默认对话", conversationId);
 
@@ -44,34 +48,47 @@ AI::AI()
     }
     else
     {
-        conversationId = conversationsResponse[0].id;
+        conversationId = conversations[0].id;
         std::unique_lock<std::shared_mutex> stateLock(stateMutex);
         conversationManager.loadConversation(conversationId, nodeMap, rootNodeId, currentNodeId);
     }
 }
 
+// ============================================================
+// 对话树内部工具
+// ============================================================
 ConversationNode *AI::findNode(const std::string &nodeId)
 {
     auto it = nodeMap.find(nodeId);
     return (it != nodeMap.end()) ? it->second.get() : nullptr;
 }
 
-std::vector<ConversationNode> AI::getPathFromRoot(const std::string &nodeId)
+std::vector<ConversationNode> AI::getPathFromRoot(const std::string &nodeId) const
 {
     std::vector<ConversationNode> path;
     std::string currentId = nodeId;
     while (!currentId.empty())
     {
-        ConversationNode *node = findNode(currentId);
-        if (!node)
+        auto it = nodeMap.find(currentId);
+        if (it == nodeMap.end())
             break;
-        path.push_back(*node);
-        currentId = node->parentId;
+        path.push_back(*(it->second));
+        currentId = it->second->parentId;
     }
     std::reverse(path.begin(), path.end());
     return path;
 }
 
+void AI::saveConversation()
+{
+    std::shared_lock<std::shared_mutex> stateLock(stateMutex);
+    if (!conversationId.empty())
+        conversationManager.saveConversation(conversationId, nodeMap);
+}
+
+// ============================================================
+// 节点操作（公共）
+// ============================================================
 void AI::addNode(ConversationNode::ROLE role, std::string content)
 {
     std::unique_lock<std::shared_mutex> stateLock(stateMutex);
@@ -79,7 +96,7 @@ void AI::addNode(ConversationNode::ROLE role, std::string content)
     ConversationNode *parent = findNode(currentNodeId);
     if (parent)
         parent->childIds.push_back(nodeId);
-    nodeMap[nodeId] = std::make_unique<ConversationNode>(nodeId, role, content, currentNodeId);
+    nodeMap[nodeId] = std::make_unique<ConversationNode>(nodeId, role, std::move(content), currentNodeId);
     currentNodeId = nodeId;
     stateLock.unlock();
     saveConversation();
@@ -109,8 +126,7 @@ bool AI::deleteNode(const std::string &nodeId)
 bool AI::switchNode(const std::string &nodeId)
 {
     std::unique_lock<std::shared_mutex> stateLock(stateMutex);
-    ConversationNode *node = findNode(nodeId);
-    if (node)
+    if (findNode(nodeId))
     {
         currentNodeId = nodeId;
         return true;
@@ -132,31 +148,28 @@ std::vector<ConversationNode> AI::getCurrentPath()
     std::shared_lock<std::shared_mutex> stateLock(stateMutex);
     return getPathFromRoot(currentNodeId);
 }
+
 std::string AI::getCurrentNodeId() const
 {
     std::shared_lock<std::shared_mutex> stateLock(stateMutex);
     return currentNodeId;
 }
+
 std::string AI::getRootNodeId() const
 {
     std::shared_lock<std::shared_mutex> stateLock(stateMutex);
     return rootNodeId;
 }
+
 std::string AI::getConversationId() const
 {
     std::shared_lock<std::shared_mutex> stateLock(stateMutex);
     return conversationId;
 }
 
-void AI::saveConversation()
-{
-    std::shared_lock<std::shared_mutex> stateLock(stateMutex);
-    if (!conversationId.empty())
-    {
-        conversationManager.saveConversation(conversationId, nodeMap);
-    }
-}
-
+// ============================================================
+// 对话生命周期
+// ============================================================
 std::vector<ConversationInfo> AI::getConversationList()
 {
     std::lock_guard<std::mutex> conversationLock(conversationMutex);
@@ -224,25 +237,34 @@ void AI::updateConversationTitle(const std::string &conversationId, const std::s
     conversationManager.updateConversationTitle(conversationId, title);
 }
 
+// ============================================================
+// 设置
+// ============================================================
 void AI::setSettings(const std::string &apiKey, const std::string &baseUrl,
                      const std::string &model, int maxTokens,
                      double temperature, double topP, std::string systemPrompt)
 {
     std::lock_guard<std::mutex> settingsLock(settingsMutex);
-    this->apiKey = apiKey, this->baseUrl = baseUrl;
-    this->model = model, this->maxTokens = maxTokens;
-    this->temperature = temperature, this->topP = topP, this->systemPrompt = systemPrompt;
-    conversationManager.saveApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt);
+    this->apiKey = apiKey;
+    this->baseUrl = baseUrl;
+    this->model = model;
+    this->maxTokens = maxTokens;
+    this->temperature = temperature;
+    this->topP = topP;
+    this->systemPrompt = std::move(systemPrompt);
+    conversationManager.saveApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, this->systemPrompt);
 }
+
 SettingsResponse AI::getSettings() const
 {
     std::lock_guard<std::mutex> settingsLock(settingsMutex);
-    return SettingsResponse(apiKey, baseUrl,
-                            model, maxTokens,
-                            temperature, topP, systemPrompt);
+    return SettingsResponse(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt);
 }
 
-std::string AI::generateResponse(AIStreamCallback streamCallback)
+// ============================================================
+// OpenAI 适配：请求构造
+// ============================================================
+nlohmann::json AI::buildChatRequestJson() const
 {
     nlohmann::json requestJson;
     {
@@ -252,21 +274,109 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
         requestJson["temperature"] = temperature;
         requestJson["top_p"] = topP;
     }
-
     requestJson["stream"] = true;
 
-    const std::string_view roleString[3] = {"user", "assistant", "system"};
+    static const std::string_view roleString[3] = {"user", "assistant", "system"};
     nlohmann::json messagesArray = nlohmann::json::array();
 
     {
         std::shared_lock<std::shared_mutex> stateLock(stateMutex);
         for (const auto &msg : getPathFromRoot(currentNodeId))
-            messagesArray.push_back({{"role", roleString[msg.role]},
-                                     {"content", msg.content}});
+        {
+            nlohmann::json msgJson;
+            msgJson["role"] = roleString[msg.role];
+            msgJson["content"] = msg.content;
+            messagesArray.push_back(std::move(msgJson));
+        }
     }
 
-    requestJson["messages"] = messagesArray;
+    requestJson["messages"] = std::move(messagesArray);
+    return requestJson;
+}
 
+// ============================================================
+// OpenAI 适配：SSE Chunk 解析
+// ============================================================
+AI::StreamDelta AI::parseStreamDelta(const std::string &sseData) const
+{
+    StreamDelta delta;
+    if (sseData.empty() || sseData == "[DONE]")
+        return delta;
+
+    try
+    {
+        nlohmann::json chunkJson = nlohmann::json::parse(sseData);
+
+        // 某些提供商在错误时返回非 choices 结构，直接忽略
+        if (!chunkJson.contains("choices") || !chunkJson["choices"].is_array() || chunkJson["choices"].empty())
+            return delta;
+
+        const auto &choice = chunkJson["choices"][0];
+
+        if (choice.contains("finish_reason") && choice["finish_reason"].is_string())
+            delta.finishReason = choice["finish_reason"].get<std::string>();
+
+        if (!choice.contains("delta") || !choice["delta"].is_object())
+            return delta;
+
+        const auto &deltaObj = choice["delta"];
+
+        if (deltaObj.contains("content") && deltaObj["content"].is_string())
+            delta.content = deltaObj["content"].get<std::string>();
+
+        if (deltaObj.contains("reasoning_content") && deltaObj["reasoning_content"].is_string())
+            delta.reasoningContent = deltaObj["reasoning_content"].get<std::string>();
+
+        delta.isValid = true;
+    }
+    catch (const nlohmann::json::exception &e)
+    {
+        // SSE 行解析失败时不中断流，仅静默丢弃
+        std::cerr << "[AI] SSE JSON parse error: " << e.what() << " | raw: " << sseData << std::endl;
+    }
+    return delta;
+}
+
+// ============================================================
+// OpenAI 适配：网络请求封装
+// ============================================================
+Response AI::performChatCompletion(const nlohmann::json &requestJson,
+                                   StreamCallback streamCallback,
+                                   std::shared_ptr<std::atomic<bool>> cancellationToken) const
+{
+    std::string currentApiKey, currentBaseUrl;
+    {
+        std::lock_guard<std::mutex> settingsLock(settingsMutex);
+        currentApiKey = apiKey;
+        currentBaseUrl = baseUrl;
+    }
+
+    // 确保 baseUrl 以斜杠结尾，便于拼接 endpoint
+    std::string url = currentBaseUrl;
+    if (!url.empty() && url.back() != '/')
+        url.push_back('/');
+    url += "chat/completions";
+
+    return Fetch::fetch(url,
+                        FetchOptions("POST",
+                                     {{"Content-Type", "application/json"},
+                                      {"Authorization", "Bearer " + currentApiKey},
+                                      {"Accept", "text/event-stream"}},
+                                     requestJson.dump(),
+                                     true,
+                                     streamCallback,
+                                     0,
+                                     cancellationToken));
+}
+
+// ============================================================
+// OpenAI 适配：流式生成核心
+// ============================================================
+std::string AI::generateResponse(AIStreamCallback streamCallback)
+{
+    nlohmann::json requestJson = buildChatRequestJson();
+
+    // 生成状态
     std::string fullContent;
     std::string fullReasoning;
     std::mutex responseMutex;
@@ -282,7 +392,8 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
         cancellationToken = currentRequestCancelled;
     }
 
-    StreamCallback packedStreamCallback = [&fullContent, &fullReasoning, &responseMutex, &wasCancelled, &responseStarted, &assistantNodeId, &finalStopReason, cancellationToken, streamCallback, this](const std::string &chunk)
+    // 包装用户回调，负责解析 SSE、维护节点树、转发文本片段
+    StreamCallback packedStreamCallback = [&](const std::string &sseData)
     {
         if (cancellationToken->load())
         {
@@ -291,99 +402,84 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
             return;
         }
 
-        if (chunk.empty() || chunk == "[DONE]")
+        StreamDelta delta = parseStreamDelta(sseData);
+        if (!delta.isValid && delta.finishReason.empty())
             return;
 
-        nlohmann::json chunkJson = nlohmann::json::parse(chunk);
-        auto choice = chunkJson["choices"][0];
-
-        if (choice["finish_reason"].is_string())
+        // 映射 finish_reason -> STOP_REASON
+        if (!delta.finishReason.empty())
         {
-            std::string finishReason = choice["finish_reason"];
-            if (finishReason == "stop")
+            if (delta.finishReason == "stop")
                 finalStopReason = ConversationNode::STOP_REASON_STOP;
-            else if (finishReason == "length")
+            else if (delta.finishReason == "length")
                 finalStopReason = ConversationNode::STOP_REASON_LENGTH;
-            else if (finishReason == "content_filter")
+            else if (delta.finishReason == "content_filter")
                 finalStopReason = ConversationNode::STOP_REASON_CONTENT_FILTER;
             else
                 finalStopReason = ConversationNode::STOP_REASON_ERROR;
         }
 
-        std::string reasoningDelta = "";
-        std::string contentDelta = "";
-        if (choice["delta"]["reasoning_content"].is_string())
-            reasoningDelta = choice["delta"]["reasoning_content"];
-        if (choice["delta"]["content"].is_string())
-            contentDelta = choice["delta"]["content"];
-        if (!reasoningDelta.empty() || !contentDelta.empty())
+        // 若无内容增量且未结束，则无需处理
+        if (delta.content.empty() && delta.reasoningContent.empty() && delta.finishReason.empty())
+            return;
+
+        std::lock_guard<std::mutex> lock(responseMutex);
+
+        // 首次收到有效内容时创建 assistant 节点
+        if (!responseStarted && (!delta.content.empty() || !delta.reasoningContent.empty()))
         {
+            responseStarted = true;
+            std::unique_lock<std::shared_mutex> stateLock(stateMutex);
+            assistantNodeId = strUtils::randomId();
+            ConversationNode *parent = findNode(currentNodeId);
+            if (parent)
+                parent->childIds.push_back(assistantNodeId);
+            nodeMap[assistantNodeId] = std::make_unique<ConversationNode>(
+                assistantNodeId, ConversationNode::ROLE_ASSISTANT, "", currentNodeId);
+            currentNodeId = assistantNodeId;
+            stateLock.unlock();
+            saveConversation();
+        }
+
+        // 追加内容到节点
+        if (!delta.content.empty() || !delta.reasoningContent.empty())
+        {
+            std::unique_lock<std::shared_mutex> stateLock(stateMutex);
+            ConversationNode *assistantNode = findNode(assistantNodeId);
+            if (assistantNode)
             {
-                std::lock_guard<std::mutex> lock(responseMutex);
-
-                if (!responseStarted)
+                if (!delta.reasoningContent.empty())
                 {
-                    responseStarted = true;
-                    std::unique_lock<std::shared_mutex> stateLock(stateMutex);
-                    assistantNodeId = strUtils::randomId();
-                    ConversationNode *parent = findNode(currentNodeId);
-                    if (parent)
-                        parent->childIds.push_back(assistantNodeId);
-                    nodeMap[assistantNodeId] = std::make_unique<ConversationNode>(assistantNodeId, ConversationNode::ROLE_ASSISTANT, fullContent, currentNodeId);
-                    currentNodeId = assistantNodeId;
-                    stateLock.unlock();
-                    saveConversation();
+                    fullReasoning += delta.reasoningContent;
+                    assistantNode->reasoningContent = fullReasoning;
                 }
-
-                if (!reasoningDelta.empty() || !contentDelta.empty())
+                if (!delta.content.empty())
                 {
-                    std::unique_lock<std::shared_mutex> stateLock(stateMutex);
-                    ConversationNode *assistantNode = findNode(assistantNodeId);
-                    if (assistantNode)
-                    {
-                        if (!reasoningDelta.empty())
-                        {
-                            fullReasoning += reasoningDelta;
-                            assistantNode->reasoningContent = fullReasoning;
-                        }
-                        if (!contentDelta.empty())
-                        {
-                            fullContent += contentDelta;
-                            assistantNode->content = fullContent;
-                        }
-                    }
-                    stateLock.unlock();
-                    saveConversation();
+                    fullContent += delta.content;
+                    assistantNode->content = fullContent;
                 }
             }
-            if (!reasoningDelta.empty())
-                streamCallback(std::string("\x01") + reasoningDelta);
-            if (!contentDelta.empty())
-                streamCallback(std::string("\x02") + contentDelta);
+            stateLock.unlock();
+            saveConversation();
         }
+
+        // 向 UI 层推送片段（带类型前缀）
+        if (!delta.reasoningContent.empty())
+            streamCallback(std::string("\x01") + delta.reasoningContent);
+        if (!delta.content.empty())
+            streamCallback(std::string("\x02") + delta.content);
     };
 
-    std::string currentApiKey, currentBaseUrl;
-    {
-        std::lock_guard<std::mutex> settingsLock(settingsMutex);
-        currentApiKey = apiKey;
-        currentBaseUrl = baseUrl;
-    }
+    Response response = performChatCompletion(requestJson, packedStreamCallback, cancellationToken);
 
-    Response response = Fetch::fetch(currentBaseUrl + "chat/completions",
-                                     FetchOptions("POST",
-                                                  {{"Content-Type", "application/json"},
-                                                   {"Authorization", "Bearer " + currentApiKey},
-                                                   {"Accept", "text/event-stream"}},
-                                                  requestJson.dump(),
-                                                  true,
-                                                  packedStreamCallback,
-                                                  0,
-                                                  cancellationToken));
     {
         std::lock_guard<std::mutex> cancelLock(requestCancelMutex);
         currentRequestCancelled = nullptr;
     }
+
+    // ---------- 后处理 ----------
+
+    // 用户主动取消
     if (wasCancelled || cancellationToken->load())
     {
         std::lock_guard<std::mutex> lock(responseMutex);
@@ -392,36 +488,50 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
             std::unique_lock<std::shared_mutex> stateLock(stateMutex);
             ConversationNode *assistantNode = findNode(assistantNodeId);
             if (assistantNode)
-            {
                 assistantNode->stopReason = ConversationNode::STOP_REASON_USER_STOPPED;
-            }
             stateLock.unlock();
             saveConversation();
         }
         return fullContent;
     }
-    if (!response.isOk())
-        THROW_NETWORK_ERROR(response.status);
 
+    // HTTP 错误（非 2xx）
+    if (!response.isOk())
     {
-        std::lock_guard<std::mutex> lock(responseMutex);
-        if (!responseStarted && !fullContent.empty())
+        // 若流未开始，尝试从 response.body 读取提供商返回的错误信息
+        if (!responseStarted)
         {
-            addNode(ConversationNode::ROLE_ASSISTANT, fullContent);
-        }
-        else if (responseStarted && !assistantNodeId.empty() && finalStopReason != ConversationNode::STOP_REASON_NONE)
-        {
-            std::unique_lock<std::shared_mutex> stateLock(stateMutex);
-            ConversationNode *assistantNode = findNode(assistantNodeId);
-            if (assistantNode)
+            try
             {
-                assistantNode->stopReason = finalStopReason;
+                nlohmann::json errJson = response.json();
+                if (errJson.contains("error") && errJson["error"].contains("message"))
+                {
+                    std::string errMsg = errJson["error"]["message"].get<std::string>();
+                    THROW_NETWORK_ERROR(response.status, errMsg);
+                }
             }
-            stateLock.unlock();
-            saveConversation();
+            catch (...) {}
         }
-        return fullContent;
+        THROW_NETWORK_ERROR(response.status);
     }
+
+    // 正常结束：补充 stopReason 或兜底创建节点
+    std::lock_guard<std::mutex> lock(responseMutex);
+    if (!responseStarted && !fullContent.empty())
+    {
+        // 非流式回退（理论上不会走到这里，因为 stream=true）
+        addNode(ConversationNode::ROLE_ASSISTANT, fullContent);
+    }
+    else if (responseStarted && !assistantNodeId.empty() && finalStopReason != ConversationNode::STOP_REASON_NONE)
+    {
+        std::unique_lock<std::shared_mutex> stateLock(stateMutex);
+        ConversationNode *assistantNode = findNode(assistantNodeId);
+        if (assistantNode)
+            assistantNode->stopReason = finalStopReason;
+        stateLock.unlock();
+        saveConversation();
+    }
+    return fullContent;
 }
 
 void AI::stopGeneration()
@@ -431,6 +541,9 @@ void AI::stopGeneration()
         currentRequestCancelled->store(true);
 }
 
+// ============================================================
+// 模型列表
+// ============================================================
 std::vector<std::string> AI::getModels()
 {
     std::string currentApiKey, currentBaseUrl;
@@ -440,14 +553,26 @@ std::vector<std::string> AI::getModels()
         currentBaseUrl = baseUrl;
     }
 
-    std::vector<std::string> modelIds;
-    Response response = Fetch::fetch(currentBaseUrl + "models",
+    std::string url = currentBaseUrl;
+    if (!url.empty() && url.back() != '/')
+        url.push_back('/');
+    url += "models";
+
+    Response response = Fetch::fetch(url,
                                      FetchOptions("GET",
                                                   {{"Authorization", "Bearer " + currentApiKey}}));
     if (!response.isOk())
         THROW_NETWORK_ERROR(response.status);
+
     nlohmann::json responseJson = response.json();
-    for (const auto &model : responseJson.at("data"))
-        modelIds.push_back(model.at("id"));
+    std::vector<std::string> modelIds;
+    if (responseJson.contains("data") && responseJson["data"].is_array())
+    {
+        for (const auto &model : responseJson.at("data"))
+        {
+            if (model.contains("id") && model["id"].is_string())
+                modelIds.push_back(model.at("id").get<std::string>());
+        }
+    }
     return modelIds;
 }

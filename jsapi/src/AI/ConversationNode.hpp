@@ -44,12 +44,13 @@ struct ConversationNode
 
     std::string content;
     std::string reasoningContent;
+    std::string toolCalls; // JSON 字符串，存储 OpenAI tool_calls
     std::string parentId;
     std::vector<std::string> childIds;
     int64_t timestamp;
 
     ConversationNode(std::string id, ROLE role, std::string content, std::string parentId, STOP_REASON stopReason = STOP_REASON_NONE)
-        : id(id), role(role), stopReason(stopReason), content(content), parentId(parentId),
+        : id(id), role(role), stopReason(stopReason), content(std::move(content)), parentId(parentId),
           timestamp(std::chrono::duration_cast<std::chrono::milliseconds>(
                         std::chrono::system_clock::now().time_since_epoch())
                         .count())

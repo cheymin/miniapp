@@ -19,13 +19,16 @@
 
 #include "Exception.hpp"
 
-#define THROW_NETWORK_ERROR(statusCode) throw NetworkError(__FILE__, __LINE__, statusCode)
+#define THROW_NETWORK_ERROR(statusCode, ...) throw NetworkError(__FILE__, __LINE__, statusCode, ##__VA_ARGS__)
 
 class NetworkError : public Exception
 {
 public:
     NetworkError(const char *file, int line,
-                 int statusCode)
+                 int statusCode,
+                 const std::string &message = "")
         : Exception(file, line,
-                    "Network error " + std::to_string(statusCode)) {}
+                    message.empty()
+                        ? "Network error " + std::to_string(statusCode)
+                        : "Network error " + std::to_string(statusCode) + ": " + message) {}
 };
