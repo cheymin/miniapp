@@ -32,10 +32,9 @@
         
         <div class="section">
             <text class="section-title">媒体功能</text>
-            
+
             <div class="item"><text class="item-text" @click="ImageViewer">图片查看器</text></div>
             <div class="item"><text class="item-text" @click="Gallery">图库</text></div>
-            <div class="item"><text class="item-text" @click="ImageGen">AI 图片生成</text></div>
         </div>
         
         <div class="section">
