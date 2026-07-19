@@ -55,8 +55,8 @@
             <div class="input-bar">
                 <text class="input-preview" @click="openChatKeyboard">{{
                     currentInput || '点击输入消息...' }}</text>
-                <text v-if="!isStreaming" @click="sendMessage(this.currentInput)"
-                    :class="'send-btn ' + (this.canSendMessage ? 'send-btn-active' : 'send-btn-disabled')">发</text>
+                <text v-if="!isStreaming" @click="sendMessage(currentInput)"
+                    :class="'send-btn ' + (canSendMessage ? 'send-btn-active' : 'send-btn-disabled')">发</text>
                 <text v-else @click="stopGeneration" class="send-btn send-btn-stop">停</text>
             </div>
         </div>

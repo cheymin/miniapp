@@ -131,6 +131,7 @@ const chat = defineComponent({
         },
 
         onPageShow() {
+            if (!this.chatInitialized) return;
             this.refreshMessages();
             this.refreshConversationInfo();
             this.handleKeyboardResult();

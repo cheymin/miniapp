@@ -56,7 +56,8 @@ void JSChat::getCurrentPath(JQFunctionInfo &info)
                 {"stopReason", (int)msg.stopReason},
                 {"content", msg.content},
                 {"reasoningContent", msg.reasoningContent},
-                {"parentId", msg.parentId}};
+                {"parentId", msg.parentId},
+                {"timestamp", std::to_string(msg.timestamp)}};
             Bson::array childIds;
             for (const auto &childId : msg.childIds)
                 childIds.push_back(childId);
