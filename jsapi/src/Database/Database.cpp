@@ -16,6 +16,7 @@
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
 #include "Database.hpp"
+#include <stdexcept>
 
 DATABASE::DATABASE(const std::string &filePath)
 {
@@ -38,12 +39,12 @@ SIZE DATABASE::size(const std::string &tableName) { return SIZE(conn, tableName)
 void DATABASE::exec(const std::string &sql)
 {
     char *errMsg = nullptr;
-    int rc = sqlite3_exec(conn, sql.c_str(), nullptr, nullptr, &errMsg);
-    if (rc != SQLITE_OK)
+    if (sqlite3_exec(conn, sql.c_str(), nullptr, nullptr, &errMsg) != SQLITE_OK)
     {
         std::string error = errMsg ? errMsg : "Unknown error";
-        sqlite3_free(errMsg);
-        throw std::runtime_error(error);
+        if (errMsg)
+            sqlite3_free(errMsg);
+        throw std::runtime_error("SQL exec failed: " + error);
     }
     if (errMsg)
         sqlite3_free(errMsg);

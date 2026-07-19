@@ -26,7 +26,6 @@
 #include <shared_mutex>
 #include <nlohmann/json.hpp>
 #include "Fetch.hpp"
-#include "ConversationInfo.hpp"
 #include "AICallback.hpp"
 #include "ConversationInfo.hpp"
 #include "ConversationManager.hpp"
@@ -37,8 +36,6 @@ class AI
 private:
     ConversationManager conversationManager;
     std::string apiKey, baseUrl;
-    std::string accessToken;   // New API 账户访问令牌
-    std::string userId;        // New API 用户数字ID
     std::string model = "deepseek-chat";
     int maxTokens = 1000;
     double temperature = 0.7;
@@ -63,8 +60,7 @@ private:
 
 public:
     AI();
-
-    void setDatabasePath(const std::string &path);
+    explicit AI(const std::string &dbPath);
 
     void addNode(ConversationNode::ROLE role, std::string content);
     bool deleteNode(const std::string &nodeId);
@@ -85,25 +81,11 @@ public:
 
     void setSettings(const std::string &apiKey, const std::string &baseUrl,
                      const std::string &model, int maxTokens,
-                     double temperature, double topP, std::string systemPrompt,
-                     const std::string &accessToken = "", const std::string &userId = "");
+                     double temperature, double topP, std::string systemPrompt);
     SettingsResponse getSettings() const;
-
-    // 多配置管理
-    std::vector<ConfigInfo> getConfigList();
-    std::string createConfig(const std::string &name);
-    void deleteConfig(const std::string &configId);
-    std::string getActiveConfigId();
-    void setActiveConfigId(const std::string &configId);
-    void updateConfigName(const std::string &configId, const std::string &name);
 
     std::string generateResponse(AIStreamCallback streamCallback);
     std::string generateResponseIncremental(AIStreamCallback streamCallback);
     void stopGeneration();
     std::vector<std::string> getModels();
-    BalanceInfo getUserBalance();
-
-    // 图片生成（OpenAI 兼容 /images/generations 接口）
-    // 返回可直接显示的 data URI（data:image/png;base64,...）
-    std::string generateImage(const std::string &prompt, const std::string &size, const std::string &model);
 };

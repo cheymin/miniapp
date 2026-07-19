@@ -30,8 +30,7 @@ void JSChat::initialize(JQFunctionInfo &info)
         JSContext *ctx = info.GetContext();
         std::string dbPath = JQString(ctx, info[0]).getString();
         std::lock_guard<std::mutex> lock(aiObjectMutex);
-        AIObject = std::make_unique<AI>();
-        AIObject->setDatabasePath(dbPath);
+        AIObject = std::make_unique<AI>(dbPath);
         info.GetReturnValue().Set(true);
     }
     catch (const std::exception &e)
@@ -57,8 +56,7 @@ void JSChat::getCurrentPath(JQFunctionInfo &info)
                 {"stopReason", (int)msg.stopReason},
                 {"content", msg.content},
                 {"reasoningContent", msg.reasoningContent},
-                {"parentId", msg.parentId},
-                {"timestamp", std::to_string(msg.timestamp)}};
+                {"parentId", msg.parentId}};
             Bson::array childIds;
             for (const auto &childId : msg.childIds)
                 childIds.push_back(childId);
@@ -152,26 +150,6 @@ void JSChat::getModels(JQAsyncInfo &info)
         for (const auto &model : ai->getModels())
             modelsArray.push_back(model);
         info.post(modelsArray);
-    }
-    catch (const std::exception &e)
-    {
-        info.postError(e.what());
-    }
-}
-
-void JSChat::getUserBalance(JQAsyncInfo &info)
-{
-    try
-    {
-        AI *ai = getAIObject();
-        ASSERT(ai != nullptr);
-        ASSERT(info.Length() == 0);
-        BalanceInfo b = ai->getUserBalance();
-        info.post(Bson::object{
-            {"balance", b.balance},
-            {"used", b.used},
-            {"total", b.total},
-            {"unlimited", b.unlimited}});
     }
     catch (const std::exception &e)
     {
@@ -286,7 +264,7 @@ void JSChat::setSettings(JQFunctionInfo &info)
     {
         AI *ai = getAIObject();
         ASSERT(ai != nullptr);
-        ASSERT(info.Length() == 9);
+        ASSERT(info.Length() >= 7);
         JSContext *ctx = info.GetContext();
         std::string apiKey = JQString(ctx, info[0]).getString();
         std::string baseUrl = JQString(ctx, info[1]).getString();
@@ -295,10 +273,8 @@ void JSChat::setSettings(JQFunctionInfo &info)
         double temperature = JQNumber(ctx, info[4]).getDouble();
         double topP = JQNumber(ctx, info[5]).getDouble();
         std::string systemPrompt = JQString(ctx, info[6]).getString();
-        std::string accessToken = JQString(ctx, info[7]).getString();
-        std::string userId = JQString(ctx, info[8]).getString();
 
-        ai->setSettings(apiKey, baseUrl, modelName, maxTokens, temperature, topP, systemPrompt, accessToken, userId);
+        ai->setSettings(apiKey, baseUrl, modelName, maxTokens, temperature, topP, systemPrompt);
         info.GetReturnValue().Set(true);
     }
     catch (const std::exception &e)
@@ -322,126 +298,11 @@ void JSChat::getSettings(JQFunctionInfo &info)
             {"maxTokens", settings.maxTokens},
             {"temperature", settings.temperature},
             {"topP", settings.topP},
-            {"systemPrompt", settings.systemPrompt},
-            {"accessToken", settings.accessToken},
-            {"userId", settings.userId}});
+            {"systemPrompt", settings.systemPrompt}});
     }
     catch (const std::exception &e)
     {
         info.GetReturnValue().ThrowInternalError(e.what());
-    }
-}
-
-void JSChat::getConfigList(JQAsyncInfo &info)
-{
-    try
-    {
-        AI *ai = getAIObject();
-        ASSERT(ai != nullptr);
-        ASSERT(info.Length() == 0);
-        Bson::array configsArray;
-        for (const auto &c : ai->getConfigList())
-        {
-            configsArray.push_back(Bson::object{
-                {"id", c.id},
-                {"name", c.name},
-                {"createdAt", std::to_string(c.createdAt)}});
-        }
-        info.post(configsArray);
-    }
-    catch (const std::exception &e)
-    {
-        info.postError(e.what());
-    }
-}
-
-void JSChat::createConfig(JQAsyncInfo &info)
-{
-    try
-    {
-        AI *ai = getAIObject();
-        ASSERT(ai != nullptr);
-        ASSERT(info.Length() <= 1);
-        std::string name = "新配置";
-        if (info.Length() == 1 && !info[0].string_value().empty())
-            name = info[0].string_value();
-        std::string newId = ai->createConfig(name);
-        info.post(newId);
-    }
-    catch (const std::exception &e)
-    {
-        info.postError(e.what());
-    }
-}
-
-void JSChat::deleteConfig(JQAsyncInfo &info)
-{
-    try
-    {
-        AI *ai = getAIObject();
-        ASSERT(ai != nullptr);
-        ASSERT(info.Length() == 1);
-        ASSERT(info[0].is_string());
-        std::string configId = info[0].string_value();
-        ai->deleteConfig(configId);
-        info.post(true);
-    }
-    catch (const std::exception &e)
-    {
-        info.postError(e.what());
-    }
-}
-
-void JSChat::updateConfigName(JQAsyncInfo &info)
-{
-    try
-    {
-        AI *ai = getAIObject();
-        ASSERT(ai != nullptr);
-        ASSERT(info.Length() == 2);
-        ASSERT(info[0].is_string());
-        ASSERT(info[1].is_string());
-        std::string configId = info[0].string_value();
-        std::string name = info[1].string_value();
-        ai->updateConfigName(configId, name);
-        info.post(true);
-    }
-    catch (const std::exception &e)
-    {
-        info.postError(e.what());
-    }
-}
-
-void JSChat::getActiveConfigId(JQFunctionInfo &info)
-{
-    try
-    {
-        AI *ai = getAIObject();
-        ASSERT(ai != nullptr);
-        ASSERT(info.Length() == 0);
-        info.GetReturnValue().Set(ai->getActiveConfigId());
-    }
-    catch (const std::exception &e)
-    {
-        info.GetReturnValue().ThrowInternalError(e.what());
-    }
-}
-
-void JSChat::setActiveConfigId(JQAsyncInfo &info)
-{
-    try
-    {
-        AI *ai = getAIObject();
-        ASSERT(ai != nullptr);
-        ASSERT(info.Length() == 1);
-        ASSERT(info[0].is_string());
-        std::string configId = info[0].string_value();
-        ai->setActiveConfigId(configId);
-        info.post(true);
-    }
-    catch (const std::exception &e)
-    {
-        info.postError(e.what());
     }
 }
 
@@ -494,7 +355,6 @@ extern JSValue createChat(JQModuleEnv *env)
     tpl->SetProtoMethodPromise("generateResponse", &JSChat::generateResponse);
     tpl->SetProtoMethod("stopGeneration", &JSChat::stopGeneration);
     tpl->SetProtoMethodPromise("getModels", &JSChat::getModels);
-    tpl->SetProtoMethodPromise("getUserBalance", &JSChat::getUserBalance);
 
     tpl->SetProtoMethodPromise("getConversationList", &JSChat::getConversationList);
     tpl->SetProtoMethodPromise("createConversation", &JSChat::createConversation);
@@ -504,13 +364,6 @@ extern JSValue createChat(JQModuleEnv *env)
 
     tpl->SetProtoMethod("setSettings", &JSChat::setSettings);
     tpl->SetProtoMethod("getSettings", &JSChat::getSettings);
-
-    tpl->SetProtoMethodPromise("getConfigList", &JSChat::getConfigList);
-    tpl->SetProtoMethodPromise("createConfig", &JSChat::createConfig);
-    tpl->SetProtoMethodPromise("deleteConfig", &JSChat::deleteConfig);
-    tpl->SetProtoMethodPromise("updateConfigName", &JSChat::updateConfigName);
-    tpl->SetProtoMethod("getActiveConfigId", &JSChat::getActiveConfigId);
-    tpl->SetProtoMethodPromise("setActiveConfigId", &JSChat::setActiveConfigId);
 
     tpl->SetProtoMethodPromise("regenerateLastMessage", &JSChat::regenerateLastMessage);
     tpl->SetProtoMethod("deleteLastMessage", &JSChat::deleteLastMessage);
