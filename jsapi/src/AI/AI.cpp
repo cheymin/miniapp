@@ -28,7 +28,7 @@ AI::AI()
     std::lock_guard<std::mutex> settingsLock(settingsMutex);
     std::lock_guard<std::mutex> conversationLock(conversationMutex);
 
-    conversationManager.loadApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt);
+    conversationManager.loadApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt, accessToken, userId);
 
     auto conversationsResponse = conversationManager.getConversationList();
     if (conversationsResponse.empty())
@@ -46,6 +46,34 @@ AI::AI()
     {
         conversationId = conversationsResponse[0].id;
         std::unique_lock<std::shared_mutex> stateLock(stateMutex);
+        conversationManager.loadConversation(conversationId, nodeMap, rootNodeId, currentNodeId);
+    }
+}
+
+void AI::setDatabasePath(const std::string &path)
+{
+    std::lock_guard<std::mutex> settingsLock(settingsMutex);
+    std::lock_guard<std::mutex> conversationLock(conversationMutex);
+    std::unique_lock<std::shared_mutex> stateLock(stateMutex);
+
+    conversationManager.setDatabasePath(path);
+    conversationManager.loadApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt, accessToken, userId);
+
+    auto conversationsResponse = conversationManager.getConversationList();
+    if (conversationsResponse.empty())
+    {
+        conversationManager.createConversation("默认对话", conversationId);
+        nodeMap.clear();
+        currentNodeId = rootNodeId = strUtils::randomId();
+        nodeMap[currentNodeId] = std::make_unique<ConversationNode>(
+            currentNodeId, ConversationNode::ROLE_SYSTEM, systemPrompt, "");
+        stateLock.unlock();
+        saveConversation();
+    }
+    else
+    {
+        conversationId = conversationsResponse[0].id;
+        nodeMap.clear();
         conversationManager.loadConversation(conversationId, nodeMap, rootNodeId, currentNodeId);
     }
 }
@@ -101,6 +129,29 @@ bool AI::deleteNode(const std::string &nodeId)
     nodeMap.erase(nodeId);
     if (currentNodeId == nodeId)
         currentNodeId = node->parentId;
+    stateLock.unlock();
+    saveConversation();
+    return true;
+}
+
+bool AI::deleteLastMessage()
+{
+    std::unique_lock<std::shared_mutex> stateLock(stateMutex);
+    if (currentNodeId.empty() || currentNodeId == rootNodeId)
+        return false;
+    ConversationNode *currentNode = findNode(currentNodeId);
+    if (!currentNode)
+        return false;
+    std::string parentId = currentNode->parentId;
+    ConversationNode *parent = findNode(parentId);
+    if (parent)
+    {
+        auto it = std::find(parent->childIds.begin(), parent->childIds.end(), currentNodeId);
+        if (it != parent->childIds.end())
+            parent->childIds.erase(it);
+    }
+    nodeMap.erase(currentNodeId);
+    currentNodeId = parentId;
     stateLock.unlock();
     saveConversation();
     return true;
@@ -226,20 +277,111 @@ void AI::updateConversationTitle(const std::string &conversationId, const std::s
 
 void AI::setSettings(const std::string &apiKey, const std::string &baseUrl,
                      const std::string &model, int maxTokens,
-                     double temperature, double topP, std::string systemPrompt)
+                     double temperature, double topP, std::string systemPrompt,
+                     const std::string &accessToken, const std::string &userId)
 {
     std::lock_guard<std::mutex> settingsLock(settingsMutex);
     this->apiKey = apiKey, this->baseUrl = baseUrl;
     this->model = model, this->maxTokens = maxTokens;
     this->temperature = temperature, this->topP = topP, this->systemPrompt = systemPrompt;
-    conversationManager.saveApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt);
+    this->accessToken = accessToken, this->userId = userId;
+    conversationManager.saveApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt, accessToken, userId);
 }
 SettingsResponse AI::getSettings() const
 {
     std::lock_guard<std::mutex> settingsLock(settingsMutex);
     return SettingsResponse(apiKey, baseUrl,
                             model, maxTokens,
-                            temperature, topP, systemPrompt);
+                            temperature, topP, systemPrompt,
+                            accessToken, userId);
+}
+
+// ===== 多配置管理 =====
+
+std::vector<ConfigInfo> AI::getConfigList()
+{
+    return conversationManager.getConfigList();
+}
+
+std::string AI::createConfig(const std::string &name)
+{
+    return conversationManager.createConfig(name);
+}
+
+void AI::deleteConfig(const std::string &configId)
+{
+    if (configId.empty())
+        return;
+    std::string currentActive = conversationManager.getActiveConfigId();
+    if (currentActive == configId)
+    {
+        auto configs = conversationManager.getConfigList();
+        std::string newActive;
+        for (const auto &c : configs)
+        {
+            if (c.id != configId)
+            {
+                newActive = c.id;
+                break;
+            }
+        }
+        conversationManager.deleteConfig(configId);
+        if (!newActive.empty())
+        {
+            conversationManager.setActiveConfigId(newActive);
+            std::string newApiKey, newBaseUrl, newModel, newSystemPrompt, newAccessToken, newUserId;
+            int newMaxTokens;
+            double newTemperature, newTopP;
+            conversationManager.loadApiSettings(newApiKey, newBaseUrl, newModel,
+                                                newMaxTokens, newTemperature, newTopP,
+                                                newSystemPrompt, newAccessToken, newUserId);
+            std::lock_guard<std::mutex> settingsLock(settingsMutex);
+            apiKey = newApiKey;
+            baseUrl = newBaseUrl;
+            model = newModel;
+            maxTokens = newMaxTokens;
+            temperature = newTemperature;
+            topP = newTopP;
+            systemPrompt = newSystemPrompt;
+            accessToken = newAccessToken;
+            userId = newUserId;
+        }
+    }
+    else
+    {
+        conversationManager.deleteConfig(configId);
+    }
+}
+
+std::string AI::getActiveConfigId()
+{
+    return conversationManager.getActiveConfigId();
+}
+
+void AI::setActiveConfigId(const std::string &configId)
+{
+    conversationManager.setActiveConfigId(configId);
+    std::string newApiKey, newBaseUrl, newModel, newSystemPrompt, newAccessToken, newUserId;
+    int newMaxTokens;
+    double newTemperature, newTopP;
+    conversationManager.loadApiSettings(newApiKey, newBaseUrl, newModel,
+                                        newMaxTokens, newTemperature, newTopP,
+                                        newSystemPrompt, newAccessToken, newUserId);
+    std::lock_guard<std::mutex> settingsLock(settingsMutex);
+    apiKey = newApiKey;
+    baseUrl = newBaseUrl;
+    model = newModel;
+    maxTokens = newMaxTokens;
+    temperature = newTemperature;
+    topP = newTopP;
+    systemPrompt = newSystemPrompt;
+    accessToken = newAccessToken;
+    userId = newUserId;
+}
+
+void AI::updateConfigName(const std::string &configId, const std::string &name)
+{
+    conversationManager.updateConfigName(configId, name);
 }
 
 std::string AI::generateResponse(AIStreamCallback streamCallback)
@@ -424,6 +566,193 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
     }
 }
 
+std::string AI::generateResponseIncremental(AIStreamCallback streamCallback)
+{
+    nlohmann::json requestJson;
+    {
+        std::lock_guard<std::mutex> settingsLock(settingsMutex);
+        requestJson["model"] = model;
+        requestJson["max_tokens"] = maxTokens;
+        requestJson["temperature"] = temperature;
+        requestJson["top_p"] = topP;
+    }
+
+    requestJson["stream"] = true;
+
+    const std::string_view roleString[3] = {"user", "assistant", "system"};
+    nlohmann::json messagesArray = nlohmann::json::array();
+
+    std::string convId;
+    {
+        std::shared_lock<std::shared_mutex> stateLock(stateMutex);
+        convId = conversationId;
+        for (const auto &msg : getPathFromRoot(currentNodeId))
+            messagesArray.push_back({{"role", roleString[msg.role]},
+                                     {"content", msg.content}});
+    }
+
+    requestJson["messages"] = messagesArray;
+
+    std::string fullContent;
+    std::string fullReasoning;
+    std::mutex responseMutex;
+    bool wasCancelled = false;
+    bool responseStarted = false;
+    std::string assistantNodeId;
+    ConversationNode::STOP_REASON finalStopReason = ConversationNode::STOP_REASON_NONE;
+
+    std::shared_ptr<std::atomic<bool>> cancellationToken;
+    {
+        std::lock_guard<std::mutex> cancelLock(requestCancelMutex);
+        currentRequestCancelled = std::make_shared<std::atomic<bool>>(false);
+        cancellationToken = currentRequestCancelled;
+    }
+
+    StreamCallback packedStreamCallback = [&fullContent, &fullReasoning, &responseMutex, &wasCancelled, &responseStarted, &assistantNodeId, &finalStopReason, &convId, cancellationToken, streamCallback, this](const std::string &chunk)
+    {
+        if (cancellationToken->load())
+        {
+            wasCancelled = true;
+            finalStopReason = ConversationNode::STOP_REASON_USER_STOPPED;
+            return;
+        }
+
+        if (chunk.empty() || chunk == "[DONE]")
+            return;
+
+        nlohmann::json chunkJson = nlohmann::json::parse(chunk);
+        auto choice = chunkJson["choices"][0];
+
+        if (choice["finish_reason"].is_string())
+        {
+            std::string finishReason = choice["finish_reason"];
+            if (finishReason == "stop")
+                finalStopReason = ConversationNode::STOP_REASON_STOP;
+            else if (finishReason == "length")
+                finalStopReason = ConversationNode::STOP_REASON_LENGTH;
+            else if (finishReason == "content_filter")
+                finalStopReason = ConversationNode::STOP_REASON_CONTENT_FILTER;
+            else
+                finalStopReason = ConversationNode::STOP_REASON_ERROR;
+        }
+
+        std::string reasoningDelta = "";
+        std::string contentDelta = "";
+        if (choice["delta"]["reasoning_content"].is_string())
+            reasoningDelta = choice["delta"]["reasoning_content"];
+        if (choice["delta"]["content"].is_string())
+            contentDelta = choice["delta"]["content"];
+        if (!reasoningDelta.empty() || !contentDelta.empty())
+        {
+            {
+                std::lock_guard<std::mutex> lock(responseMutex);
+
+                if (!responseStarted)
+                {
+                    responseStarted = true;
+                    std::unique_lock<std::shared_mutex> stateLock(stateMutex);
+                    assistantNodeId = strUtils::randomId();
+                    ConversationNode *parent = findNode(currentNodeId);
+                    if (parent)
+                        parent->childIds.push_back(assistantNodeId);
+                    auto newNode = std::make_unique<ConversationNode>(assistantNodeId, ConversationNode::ROLE_ASSISTANT, fullContent, currentNodeId);
+                    nodeMap[assistantNodeId] = std::move(newNode);
+                    currentNodeId = assistantNodeId;
+                    stateLock.unlock();
+                    conversationManager.addNodeToConversation(convId, *nodeMap[assistantNodeId]);
+                }
+
+                if (!reasoningDelta.empty() || !contentDelta.empty())
+                {
+                    std::unique_lock<std::shared_mutex> stateLock(stateMutex);
+                    ConversationNode *assistantNode = findNode(assistantNodeId);
+                    if (assistantNode)
+                    {
+                        if (!reasoningDelta.empty())
+                        {
+                            fullReasoning += reasoningDelta;
+                            assistantNode->reasoningContent = fullReasoning;
+                        }
+                        if (!contentDelta.empty())
+                        {
+                            fullContent += contentDelta;
+                            assistantNode->content = fullContent;
+                        }
+                    }
+                    stateLock.unlock();
+                    conversationManager.updateNodeContent(convId, assistantNodeId, fullContent, fullReasoning);
+                }
+            }
+            if (!reasoningDelta.empty())
+                streamCallback(std::string("\x01") + reasoningDelta);
+            if (!contentDelta.empty())
+                streamCallback(std::string("\x02") + contentDelta);
+        }
+    };
+
+    std::string currentApiKey, currentBaseUrl;
+    {
+        std::lock_guard<std::mutex> settingsLock(settingsMutex);
+        currentApiKey = apiKey;
+        currentBaseUrl = baseUrl;
+    }
+
+    Response response = Fetch::fetch(currentBaseUrl + "chat/completions",
+                                     FetchOptions("POST",
+                                                  {{"Content-Type", "application/json"},
+                                                   {"Authorization", "Bearer " + currentApiKey},
+                                                   {"Accept", "text/event-stream"}},
+                                                  requestJson.dump(),
+                                                  true,
+                                                  packedStreamCallback,
+                                                  0,
+                                                  cancellationToken));
+    {
+        std::lock_guard<std::mutex> cancelLock(requestCancelMutex);
+        currentRequestCancelled = nullptr;
+    }
+    if (wasCancelled || cancellationToken->load())
+    {
+        std::lock_guard<std::mutex> lock(responseMutex);
+        if (responseStarted && !assistantNodeId.empty())
+        {
+            std::unique_lock<std::shared_mutex> stateLock(stateMutex);
+            ConversationNode *assistantNode = findNode(assistantNodeId);
+            if (assistantNode)
+            {
+                assistantNode->stopReason = ConversationNode::STOP_REASON_USER_STOPPED;
+            }
+            stateLock.unlock();
+            conversationManager.updateNodeStopReason(convId, assistantNodeId, (int)ConversationNode::STOP_REASON_USER_STOPPED);
+            conversationManager.updateConversationUpdatedAt(convId);
+        }
+        return fullContent;
+    }
+    if (!response.isOk())
+        THROW_NETWORK_ERROR(response.status);
+
+    {
+        std::lock_guard<std::mutex> lock(responseMutex);
+        if (!responseStarted && !fullContent.empty())
+        {
+            addNode(ConversationNode::ROLE_ASSISTANT, fullContent);
+        }
+        else if (responseStarted && !assistantNodeId.empty() && finalStopReason != ConversationNode::STOP_REASON_NONE)
+        {
+            std::unique_lock<std::shared_mutex> stateLock(stateMutex);
+            ConversationNode *assistantNode = findNode(assistantNodeId);
+            if (assistantNode)
+            {
+                assistantNode->stopReason = finalStopReason;
+            }
+            stateLock.unlock();
+            conversationManager.updateNodeStopReason(convId, assistantNodeId, (int)finalStopReason);
+            conversationManager.updateConversationUpdatedAt(convId);
+        }
+        return fullContent;
+    }
+}
+
 void AI::stopGeneration()
 {
     std::lock_guard<std::mutex> cancelLock(requestCancelMutex);
@@ -450,4 +779,112 @@ std::vector<std::string> AI::getModels()
     for (const auto &model : responseJson.at("data"))
         modelIds.push_back(model.at("id"));
     return modelIds;
+}
+
+BalanceInfo AI::getUserBalance()
+{
+    std::string currentAccessToken, currentUserId, currentBaseUrl;
+    {
+        std::lock_guard<std::mutex> settingsLock(settingsMutex);
+        currentAccessToken = accessToken;
+        currentUserId = userId;
+        currentBaseUrl = baseUrl;
+    }
+
+    if (currentAccessToken.empty() || currentUserId.empty())
+        throw std::runtime_error("未配置账户访问令牌或用户ID");
+
+    std::string rootUrl = currentBaseUrl;
+    size_t v1Pos = rootUrl.find("/v1");
+    if (v1Pos != std::string::npos)
+        rootUrl = rootUrl.substr(0, v1Pos);
+    if (!rootUrl.empty() && rootUrl.back() != '/')
+        rootUrl += '/';
+
+    Response resp = Fetch::fetch(rootUrl + "api/user/self",
+                                 FetchOptions("GET",
+                                              {{"Authorization", "Bearer " + currentAccessToken},
+                                               {"New-Api-User", currentUserId}}));
+    if (!resp.isOk())
+        THROW_NETWORK_ERROR(resp.status);
+    nlohmann::json j = resp.json();
+
+    if (j.contains("success") && !j["success"].get<bool>())
+    {
+        std::string msg = j.contains("message") ? j["message"].get<std::string>() : "鉴权失败";
+        throw std::runtime_error(msg);
+    }
+
+    if (!j.contains("data"))
+        throw std::runtime_error("响应格式异常");
+    nlohmann::json data = j["data"];
+
+    const double QUOTA_PER_UNIT = 500000.0;
+    double quota = data["quota"].is_number() ? data["quota"].get<double>() : 0.0;
+    double usedQuota = data["used_quota"].is_number() ? data["used_quota"].get<double>() : 0.0;
+
+    double balanceUsd = quota / QUOTA_PER_UNIT;
+    double usedUsd = usedQuota / QUOTA_PER_UNIT;
+    double totalUsd = balanceUsd + usedUsd;
+    return BalanceInfo{balanceUsd, usedUsd, totalUsd, false};
+}
+
+std::string AI::generateImage(const std::string &prompt, const std::string &size, const std::string &model)
+{
+    if (prompt.empty())
+        throw std::runtime_error("提示词不能为空");
+
+    std::string currentApiKey, currentBaseUrl, currentModel;
+    {
+        std::lock_guard<std::mutex> settingsLock(settingsMutex);
+        currentApiKey = apiKey;
+        currentBaseUrl = baseUrl;
+        currentModel = model.empty() ? this->model : model;
+    }
+
+    if (currentApiKey.empty() || currentBaseUrl.empty())
+        throw std::runtime_error("未配置 API 密钥或基础 URL");
+
+    nlohmann::json requestJson;
+    requestJson["prompt"] = prompt;
+    requestJson["n"] = 1;
+    requestJson["response_format"] = "b64_json";
+    if (!size.empty())
+        requestJson["size"] = size;
+    if (!currentModel.empty())
+        requestJson["model"] = currentModel;
+
+    Response response = Fetch::fetch(currentBaseUrl + "images/generations",
+                                     FetchOptions("POST",
+                                                  {{"Content-Type", "application/json"},
+                                                   {"Authorization", "Bearer " + currentApiKey},
+                                                   {"Accept", "application/json"}},
+                                                  requestJson.dump(),
+                                                  false,
+                                                  nullptr,
+                                                  60));
+
+    if (!response.isOk())
+        THROW_NETWORK_ERROR(response.status);
+
+    nlohmann::json respJson = response.json();
+    if (!respJson.contains("data") || respJson["data"].empty())
+    {
+        std::string errMsg = "响应格式异常";
+        if (respJson.contains("error") && respJson["error"].contains("message"))
+            errMsg = respJson["error"]["message"].get<std::string>();
+        throw std::runtime_error(errMsg);
+    }
+
+    auto firstItem = respJson["data"][0];
+    if (firstItem.contains("b64_json") && firstItem["b64_json"].is_string())
+    {
+        std::string b64 = firstItem["b64_json"].get<std::string>();
+        return "data:image/png;base64," + b64;
+    }
+    if (firstItem.contains("url") && firstItem["url"].is_string())
+    {
+        return firstItem["url"].get<std::string>();
+    }
+    throw std::runtime_error("响应中未找到图片数据");
 }

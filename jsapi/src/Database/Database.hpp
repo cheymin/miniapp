@@ -45,4 +45,5 @@ public:
     DELETE remove(const std::string &tableName);
     UPDATE update(const std::string &tableName);
     SIZE size(const std::string &tableName);
+    void exec(const std::string &sql);
 };

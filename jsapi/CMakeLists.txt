@@ -58,7 +58,7 @@ add_custom_command(
 )
 add_custom_target(generate_rawdict_data_hpp DEPENDS ${RAWDICT_HPP})
 
-file(GLOB_RECURSE SOURCES src/*.cpp src/AI/*.cpp src/Bilibili/*.cpp src/IME/*.cpp src/Database/*.cpp src/Penshell/*.cpp src/ScanInput/*.cpp src/Shell/*.cpp src/Update/*.cpp)
+file(GLOB_RECURSE SOURCES src/*.cpp src/AI/*.cpp src/IME/*.cpp src/Database/*.cpp src/Penshell/*.cpp src/ScanInput/*.cpp src/Shell/*.cpp src/Update/*.cpp)
 add_library(${LIB_NAME} SHARED ${SOURCES})
 add_dependencies(${LIB_NAME} generate_rawdict_data_hpp)
 target_link_libraries(${LIB_NAME} PRIVATE

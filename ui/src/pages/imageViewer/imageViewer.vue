@@ -80,10 +80,10 @@
         </scroller>
       </scroller>
 
-      <div class="swipe-hint" v-if="imageList.length > 1">
-        <text class="swipe-arrow" @click="prevImage">&lt;</text>
-        <text class="swipe-text">滑动切换</text>
-        <text class="swipe-arrow" @click="nextImage">&gt;</text>
+      <div class="nav-bar" v-if="imageList.length > 1">
+        <text class="nav-btn" :class="{ 'nav-btn-disabled': imageList.length <= 1 }" @click="prevImage">◀</text>
+        <text class="nav-counter">{{ currentImageIndex + 1 }} / {{ imageList.length }}</text>
+        <text class="nav-btn" :class="{ 'nav-btn-disabled': imageList.length <= 1 }" @click="nextImage">▶</text>
       </div>
     </div>
 

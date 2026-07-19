@@ -23,6 +23,7 @@
             <text class="section-title">核心功能</text>
             
             <div class="item"><text class="item-text" @click="openAi">AI 助手</text></div>
+            <div class="item"><text class="item-text" @click="Chat">新 AI 聊天</text></div>
             <div class="item"><text class="item-text" @click="FileEditor">文本编辑器</text></div>
             <div class="item"><text class="item-text" @click="FileManager">文件管理器</text></div>
             <div class="item"><text class="item-text" @click="Browser">网页浏览器</text></div>
@@ -31,10 +32,10 @@
         
         <div class="section">
             <text class="section-title">媒体功能</text>
-
+            
             <div class="item"><text class="item-text" @click="ImageViewer">图片查看器</text></div>
             <div class="item"><text class="item-text" @click="Gallery">图库</text></div>
-            <div class="item"><text class="item-text" @click="Bili">B 站音频下载</text></div>
+            <div class="item"><text class="item-text" @click="ImageGen">AI 图片生成</text></div>
         </div>
         
         <div class="section">

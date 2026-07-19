@@ -1,7 +1,7 @@
 #include <jsmodules/JSCModuleExtension.h>
 #include <jquick_config.h>
 #include "AI/JSAI.hpp"
-#include "Bilibili/JSBilibili.hpp"
+#include "AI/JSChat.hpp"
 #include "IME/JSIME.hpp"
 #include "Penshell/JSPenshell.hpp"
 #include "ScanInput/JSScanInput.hpp"
@@ -12,7 +12,7 @@ using namespace JQUTIL_NS;
 
 static std::vector<std::string> exportList = {
     "AI",
-    "Bilibili",
+    "Chat",
     "IME",
     "Penshell",
     "ScanInput",
@@ -25,7 +25,7 @@ static int module_init(JSContext *ctx, JSModuleDef *m)
     auto env = JQModuleEnv::CreateModule(ctx, m, "langningchen");
 
     env->setModuleExport("AI", createAI(env.get()));
-    env->setModuleExport("Bilibili", createBilibili(env.get()));
+    env->setModuleExport("Chat", createChat(env.get()));
     env->setModuleExport("IME", createIME(env.get()));
     env->setModuleExport("Penshell", createPenshell(env.get()));
     env->setModuleExport("ScanInput", createScanInput(env.get()));

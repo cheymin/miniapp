@@ -34,3 +34,17 @@ INSERT DATABASE::insert(const std::string &tableName) { return INSERT(conn, tabl
 DELETE DATABASE::remove(const std::string &tableName) { return DELETE(conn, tableName); }
 UPDATE DATABASE::update(const std::string &tableName) { return UPDATE(conn, tableName); }
 SIZE DATABASE::size(const std::string &tableName) { return SIZE(conn, tableName); }
+
+void DATABASE::exec(const std::string &sql)
+{
+    char *errMsg = nullptr;
+    int rc = sqlite3_exec(conn, sql.c_str(), nullptr, nullptr, &errMsg);
+    if (rc != SQLITE_OK)
+    {
+        std::string error = errMsg ? errMsg : "Unknown error";
+        sqlite3_free(errMsg);
+        throw std::runtime_error(error);
+    }
+    if (errMsg)
+        sqlite3_free(errMsg);
+}

@@ -30,6 +30,8 @@ export declare class AI {
     static generateResponse(): Promise<string>;
     static stopGeneration(): void;
     static getModels(): Promise<string[]>;
+    static getUserBalance(): Promise<langningchen.BalanceInfo>;
+    static generateImage(prompt: string, size?: string, model?: string): Promise<string>;
 
     static getConversationList(): Promise<langningchen.ConversationNode[]>;
     static createConversation(title?: string): Promise<void>;
@@ -37,10 +39,45 @@ export declare class AI {
     static deleteConversation(conversationId: string): Promise<void>;
     static updateConversationTitle(conversationId: string, title: string): Promise<void>;
 
-    static setSettings(apiKey: string, baseUrl: string, modelName: string, maxTokens: number, temperature: number, topP: number, systemPrompt: string): void;
+    static setSettings(apiKey: string, baseUrl: string, modelName: string, maxTokens: number, temperature: number, topP: number, systemPrompt: string, accessToken: string, userId: string): void;
     static getSettings(): langningchen.SettingsResponse;
 
+    // 多配置管理
+    static getConfigList(): Promise<langningchen.ConfigInfo[]>;
+    static createConfig(name?: string): Promise<string>;
+    static deleteConfig(configId: string): Promise<boolean>;
+    static updateConfigName(configId: string, name: string): Promise<boolean>;
+    static getActiveConfigId(): string;
+    static setActiveConfigId(configId: string): Promise<boolean>;
+
     static on(event: 'ai_stream', callback: (data: string) => void): void;
+}
+
+export declare class Chat {
+    static initialize(dbPath: string): void;
+    static getCurrentPath(): langningchen.ConversationNode[];
+    static getCurrentConversationId(): string;
+    static addUserMessage(message: string): Promise<void>;
+    static generateResponse(): Promise<string>;
+    static stopGeneration(): void;
+    static getModels(): Promise<string[]>;
+    static getUserBalance(): Promise<langningchen.BalanceInfo>;
+    static getConversationList(): Promise<langningchen.ConversationInfo[]>;
+    static createConversation(title?: string): Promise<void>;
+    static loadConversation(conversationId: string): Promise<void>;
+    static deleteConversation(conversationId: string): Promise<void>;
+    static updateConversationTitle(conversationId: string, title: string): Promise<void>;
+    static setSettings(apiKey: string, baseUrl: string, modelName: string, maxTokens: number, temperature: number, topP: number, systemPrompt: string, accessToken: string, userId: string): void;
+    static getSettings(): langningchen.SettingsResponse;
+    static getConfigList(): Promise<langningchen.ConfigInfo[]>;
+    static createConfig(name?: string): Promise<string>;
+    static deleteConfig(configId: string): Promise<boolean>;
+    static updateConfigName(configId: string, name: string): Promise<boolean>;
+    static getActiveConfigId(): string;
+    static setActiveConfigId(configId: string): Promise<boolean>;
+    static regenerateLastMessage(): Promise<string>;
+    static deleteLastMessage(): boolean;
+    static on(event: 'chat_stream', callback: (data: string) => void): void;
 }
 
 export declare class IME {
@@ -71,23 +108,4 @@ export declare class Penshell {
     static isRunning(): boolean;
 
     static on(event: 'penshell_output', callback: (data: string) => void): void;
-}
-
-export declare class Bilibili {
-    static setCredential(sessdata: string, biliJct: string, buvid3: string, dedeuserid: string): Promise<boolean>;
-    static clearCredential(): boolean;
-    static isLoggedIn(): boolean;
-
-    static search(keyword: string, page?: number, pageSize?: number): Promise<langningchen.BiliSearchItem[]>;
-    static getRanking(rid?: number, pageSize?: number): Promise<langningchen.BiliRankItem[]>;
-    static getVideoInfo(bvid: string): Promise<langningchen.BiliVideoInfo>;
-
-    static getFavoriteFolders(): Promise<{ id: string; title: string }[]>;
-    static getFavoriteItems(mediaId: string, page?: number, pageSize?: number): Promise<langningchen.BiliFavItem[]>;
-
-    static downloadAudio(bvid: string, title: string): Promise<string>;
-    static listDownloads(): { name: string; path: string }[];
-    static deleteDownload(filename: string): Promise<boolean>;
-
-    static on(event: 'bili_download_progress', callback: (data: { progress: number; status: string }) => void): void;
 }

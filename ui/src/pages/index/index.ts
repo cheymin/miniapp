@@ -30,6 +30,9 @@ const index = defineComponent({
         openAi() {
             $falcon.navTo("ai", {});
         },
+        Chat() {
+            $falcon.navTo("chat", {});
+        },
         Penshell() {
             $falcon.navTo("penshell", {});
         },
@@ -54,6 +57,9 @@ const index = defineComponent({
         Gallery() {
             $falcon.navTo("gallery", {});
         },
+        ImageGen() {
+            $falcon.navTo("imageGen", {});
+        },
         Update() {
             $falcon.navTo("update", {});
         },
@@ -62,9 +68,6 @@ const index = defineComponent({
         },
         Browser() {
             $falcon.navTo("browser", {});
-        },
-        Bili() {
-            $falcon.navTo("bili", {});
         },
     }
 });

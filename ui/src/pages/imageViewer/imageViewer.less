@@ -155,28 +155,40 @@
     background-color: #000;
 }
 
-.swipe-hint {
+.nav-bar {
     position: absolute;
-    bottom: 50px;
+    bottom: 0;
     left: 0;
     right: 0;
+    height: 36px;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
-    gap: 15px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 6px 0;
+    justify-content: space-between;
+    padding: 0 12px;
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
-.swipe-arrow {
-    font-size: 18px;
+.nav-btn {
+    font-size: 16px;
     color: #fff;
-    padding: 4px 12px;
+    padding: 6px 16px;
+    background-color: #333;
+    border-radius: 4px;
 }
 
-.swipe-text {
-    font-size: 11px;
+.nav-btn:active {
+    background-color: #555;
+}
+
+.nav-btn-disabled {
+    opacity: 0.4;
+}
+
+.nav-counter {
+    font-size: 12px;
     color: #ccc;
+    flex: 1;
+    text-align: center;
 }
 
 .empty-state {

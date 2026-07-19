@@ -16,13 +16,15 @@
     "deviceinfo": "pages/deviceinfo/deviceinfo.vue",
     "imageViewer": "pages/imageViewer/imageViewer.vue",
     "gallery": "pages/gallery/gallery.vue",
+    "imageGen": "pages/imageGen/imageGen.vue",
     "qqchat": "pages/qqchat/qqchat.vue",
     "browser": "pages/browser/browser.vue",
     "pvz": "pages/pvz/pvz.vue",
     "penshell": "pages/penshell/penshell.vue",
-    "bili": "pages/bili/bili.vue",
-    "biliDetail": "pages/biliDetail/biliDetail.vue",
-    "biliSettings": "pages/biliSettings/biliSettings.vue"
+    "chat": "pages/chat/chat.vue",
+    "chatList": "pages/chatList/chatList.vue",
+    "chatSettings": "pages/chatSettings/chatSettings.vue",
+    "chatKeyboard": "pages/chatKeyboard/chatKeyboard.vue"
   },
   "options": {
     "style": {
