@@ -209,12 +209,16 @@ void AI::deleteConversation(const std::string &conversationId)
         }
         else
         {
-            this->conversationId.clear();
+            conversationManager.createConversation("默认对话", this->conversationId);
             nodeMap.clear();
-            conversationLock.unlock();
-            stateLock.unlock();
-            createConversation("默认对话");
+            currentNodeId = rootNodeId = strUtils::randomId();
+
+            std::lock_guard<std::mutex> settingsLock(settingsMutex);
+            nodeMap[currentNodeId] = std::make_unique<ConversationNode>(
+                currentNodeId, ConversationNode::ROLE_SYSTEM, systemPrompt, "");
         }
+        stateLock.unlock();
+        saveConversation();
     }
 }
 
@@ -342,9 +346,12 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
     {
         std::lock_guard<std::mutex> settingsLock(settingsMutex);
         requestJson["model"] = model;
-        requestJson["max_tokens"] = maxTokens;
-        requestJson["temperature"] = temperature;
-        requestJson["top_p"] = topP;
+        if (maxTokens > 0)
+            requestJson["max_tokens"] = maxTokens;
+        if (temperature >= 0)
+            requestJson["temperature"] = temperature;
+        if (topP >= 0)
+            requestJson["top_p"] = topP;
     }
 
     requestJson["stream"] = true;
@@ -426,7 +433,6 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
                     nodeMap[assistantNodeId] = std::make_unique<ConversationNode>(assistantNodeId, ConversationNode::ROLE_ASSISTANT, fullContent, currentNodeId);
                     currentNodeId = assistantNodeId;
                     stateLock.unlock();
-                    saveConversation();
                 }
 
                 if (!reasoningDelta.empty() || !contentDelta.empty())
@@ -447,7 +453,6 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
                         }
                     }
                     stateLock.unlock();
-                    saveConversation();
                 }
             }
             if (!reasoningDelta.empty())
@@ -503,11 +508,11 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
         {
             addNode(ConversationNode::ROLE_ASSISTANT, fullContent);
         }
-        else if (responseStarted && !assistantNodeId.empty() && finalStopReason != ConversationNode::STOP_REASON_NONE)
+        else if (responseStarted && !assistantNodeId.empty())
         {
             std::unique_lock<std::shared_mutex> stateLock(stateMutex);
             ConversationNode *assistantNode = findNode(assistantNodeId);
-            if (assistantNode)
+            if (assistantNode && finalStopReason != ConversationNode::STOP_REASON_NONE)
             {
                 assistantNode->stopReason = finalStopReason;
             }

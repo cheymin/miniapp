@@ -88,8 +88,12 @@ const aiSettings = defineComponent({
 
         loadConfigs() {
             try {
-                this.configs = AI.getConfigList();
-                this.activeConfigId = AI.getActiveConfigId();
+                AI.getConfigList().then((configs) => {
+                    this.configs = configs;
+                    this.activeConfigId = AI.getActiveConfigId();
+                }).catch((e) => {
+                    showError(e as string || '加载配置列表失败');
+                });
             } catch (e) {
                 showError(e as string || '加载配置列表失败');
             }
