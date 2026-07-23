@@ -33,7 +33,7 @@
 class DATABASE
 {
 private:
-    sqlite3 *conn;
+    sqlite3 *conn = nullptr;
 
 public:
     DATABASE(const std::string &filePath);
@@ -47,4 +47,7 @@ public:
     SIZE size(const std::string &tableName);
 
     void exec(const std::string &sql);
+
+    // 关闭当前连接并以新路径重新打开（用于损坏恢复）
+    void reopen(const std::string &filePath);
 };

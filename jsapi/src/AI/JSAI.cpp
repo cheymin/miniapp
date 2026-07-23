@@ -49,8 +49,8 @@ void JSAI::getCurrentPath(JQFunctionInfo &info)
         {
             Bson::object msgObj = {
                 {"id", msg.id},
-                {"role", msg.role},
-                {"stopReason", msg.stopReason},
+                {"role", (int)msg.role},
+                {"stopReason", (int)msg.stopReason},
                 {"content", msg.content},
                 {"reasoningContent", msg.reasoningContent},
                 {"parentId", msg.parentId},

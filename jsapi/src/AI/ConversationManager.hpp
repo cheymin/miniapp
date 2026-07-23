@@ -30,7 +30,9 @@ class ConversationManager
 {
 private:
     DATABASE database;
+    std::string dbPath;
     mutable std::mutex dbMutex;
+    void createTables();
 
 public:
     explicit ConversationManager(const std::string &dbPath = "/userdisk/database/langningchen-ai.db");
@@ -57,4 +59,7 @@ public:
     void updateNodeContent(const std::string &conversationId, const std::string &nodeId,
                            const std::string &content, const std::string &reasoningContent);
     void updateNodeStopReason(const std::string &conversationId, const std::string &nodeId, int stopReason);
+
+    // 数据库损坏恢复：备份坏库 + 重建空表，避免永久卡死
+    void recover();
 };

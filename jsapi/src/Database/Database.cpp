@@ -20,8 +20,21 @@
 
 DATABASE::DATABASE(const std::string &filePath)
 {
-    if (sqlite3_open(filePath.c_str(), &conn) != SQLITE_OK && conn)
-        sqlite3_close(conn);
+    conn = nullptr;
+    if (sqlite3_open(filePath.c_str(), &conn) != SQLITE_OK)
+    {
+        std::string err = conn ? sqlite3_errmsg(conn) : "unknown open error";
+        if (conn)
+        {
+            sqlite3_close(conn);
+            conn = nullptr;
+        }
+        throw std::runtime_error("sqlite3_open failed for '" + filePath + "': " + err);
+    }
+    // 并发保护：WAL + 忙等待，避免流式写线程与 UI 读线程互相 SQLITE_BUSY
+    sqlite3_busy_timeout(conn, 5000);
+    sqlite3_exec(conn, "PRAGMA journal_mode=WAL;", nullptr, nullptr, nullptr);
+    sqlite3_exec(conn, "PRAGMA synchronous=NORMAL;", nullptr, nullptr, nullptr);
 }
 DATABASE::~DATABASE()
 {
@@ -35,6 +48,28 @@ INSERT DATABASE::insert(const std::string &tableName) { return INSERT(conn, tabl
 DELETE DATABASE::remove(const std::string &tableName) { return DELETE(conn, tableName); }
 UPDATE DATABASE::update(const std::string &tableName) { return UPDATE(conn, tableName); }
 SIZE DATABASE::size(const std::string &tableName) { return SIZE(conn, tableName); }
+
+void DATABASE::reopen(const std::string &filePath)
+{
+    if (conn)
+    {
+        sqlite3_close(conn);
+        conn = nullptr;
+    }
+    if (sqlite3_open(filePath.c_str(), &conn) != SQLITE_OK)
+    {
+        std::string err = conn ? sqlite3_errmsg(conn) : "unknown open error";
+        if (conn)
+        {
+            sqlite3_close(conn);
+            conn = nullptr;
+        }
+        throw std::runtime_error("sqlite3_open failed for '" + filePath + "': " + err);
+    }
+    sqlite3_busy_timeout(conn, 5000);
+    sqlite3_exec(conn, "PRAGMA journal_mode=WAL;", nullptr, nullptr, nullptr);
+    sqlite3_exec(conn, "PRAGMA synchronous=NORMAL;", nullptr, nullptr, nullptr);
+}
 
 void DATABASE::exec(const std::string &sql)
 {

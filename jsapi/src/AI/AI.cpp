@@ -33,25 +33,47 @@ AI::AI(const std::string &dbPath)
     std::lock_guard<std::mutex> settingsLock(settingsMutex);
     std::lock_guard<std::mutex> conversationLock(conversationMutex);
 
-    conversationManager.loadApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt);
-
-    auto conversationsResponse = conversationManager.getConversationList();
-    if (conversationsResponse.empty())
+    try
     {
-        conversationManager.createConversation("默认对话", conversationId);
+        conversationManager.loadApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt);
 
-        std::unique_lock<std::shared_mutex> stateLock(stateMutex);
-        currentNodeId = rootNodeId = strUtils::randomId();
-        nodeMap[currentNodeId] = std::make_unique<ConversationNode>(
-            currentNodeId, ConversationNode::ROLE_SYSTEM, systemPrompt, "");
-        stateLock.unlock();
-        saveConversation();
+        auto conversationsResponse = conversationManager.getConversationList();
+        if (conversationsResponse.empty())
+        {
+            conversationManager.createConversation("默认对话", conversationId);
+
+            std::unique_lock<std::shared_mutex> stateLock(stateMutex);
+            currentNodeId = rootNodeId = strUtils::randomId();
+            nodeMap[currentNodeId] = std::make_unique<ConversationNode>(
+                currentNodeId, ConversationNode::ROLE_SYSTEM, systemPrompt, "");
+            stateLock.unlock();
+            saveConversation();
+        }
+        else
+        {
+            conversationId = conversationsResponse[0].id;
+            std::unique_lock<std::shared_mutex> stateLock(stateMutex);
+            conversationManager.loadConversation(conversationId, nodeMap, rootNodeId, currentNodeId);
+        }
     }
-    else
+    catch (...)
     {
-        conversationId = conversationsResponse[0].id;
-        std::unique_lock<std::shared_mutex> stateLock(stateMutex);
-        conversationManager.loadConversation(conversationId, nodeMap, rootNodeId, currentNodeId);
+        // 运行期读库失败（库损坏）：备份坏库并重建后建一个默认对话，避免永久卡死进不去 AI 助手
+        conversationManager.recover();
+        try
+        {
+            conversationManager.createConversation("默认对话", conversationId);
+            std::unique_lock<std::shared_mutex> stateLock(stateMutex);
+            currentNodeId = rootNodeId = strUtils::randomId();
+            nodeMap[currentNodeId] = std::make_unique<ConversationNode>(
+                currentNodeId, ConversationNode::ROLE_SYSTEM, systemPrompt, "");
+            stateLock.unlock();
+            saveConversation();
+        }
+        catch (...)
+        {
+            // 重建也失败：保留空状态，至少不崩溃
+        }
     }
 }
 
@@ -360,7 +382,7 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
                     nodeMap[assistantNodeId] = std::make_unique<ConversationNode>(assistantNodeId, ConversationNode::ROLE_ASSISTANT, fullContent, currentNodeId);
                     currentNodeId = assistantNodeId;
                     stateLock.unlock();
-                    saveConversation();
+                    // 流式期间不写库，仅更新内存；结束统一落库（避免每 chunk 整表重写风暴）
                 }
 
                 if (!reasoningDelta.empty() || !contentDelta.empty())
@@ -381,7 +403,7 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
                         }
                     }
                     stateLock.unlock();
-                    saveConversation();
+                    // 流式期间不写库，仅更新内存；结束统一落库
                 }
             }
             if (!reasoningDelta.empty())
@@ -437,15 +459,17 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
         {
             addNode(ConversationNode::ROLE_ASSISTANT, fullContent);
         }
-        else if (responseStarted && !assistantNodeId.empty() && finalStopReason != ConversationNode::STOP_REASON_NONE)
+        else if (responseStarted && !assistantNodeId.empty())
         {
             std::unique_lock<std::shared_mutex> stateLock(stateMutex);
             ConversationNode *assistantNode = findNode(assistantNodeId);
             if (assistantNode)
             {
-                assistantNode->stopReason = finalStopReason;
+                if (finalStopReason != ConversationNode::STOP_REASON_NONE)
+                    assistantNode->stopReason = finalStopReason;
             }
             stateLock.unlock();
+            // 流结束后统一落库一次（取代流式期间的每 chunk 整表重写）
             saveConversation();
         }
         return fullContent;
@@ -485,6 +509,7 @@ std::string AI::generateResponseIncremental(AIStreamCallback streamCallback)
     std::string assistantNodeId;
     std::string currentConvId;
     ConversationNode::STOP_REASON finalStopReason = ConversationNode::STOP_REASON_NONE;
+    std::chrono::steady_clock::time_point lastSaveTime;
 
     std::shared_ptr<std::atomic<bool>> cancellationToken;
     {
@@ -493,7 +518,7 @@ std::string AI::generateResponseIncremental(AIStreamCallback streamCallback)
         cancellationToken = currentRequestCancelled;
     }
 
-    StreamCallback packedStreamCallback = [&fullContent, &fullReasoning, &responseMutex, &wasCancelled, &responseStarted, &assistantNodeId, &currentConvId, &finalStopReason, cancellationToken, streamCallback, this](const std::string &chunk)
+    StreamCallback packedStreamCallback = [&fullContent, &fullReasoning, &responseMutex, &wasCancelled, &responseStarted, &assistantNodeId, &currentConvId, &finalStopReason, &lastSaveTime, cancellationToken, streamCallback, this](const std::string &chunk)
     {
         if (cancellationToken->load())
         {
@@ -544,7 +569,9 @@ std::string AI::generateResponseIncremental(AIStreamCallback streamCallback)
                     nodeMap[assistantNodeId] = std::make_unique<ConversationNode>(assistantNodeId, ConversationNode::ROLE_ASSISTANT, fullContent, currentNodeId);
                     currentNodeId = assistantNodeId;
                     stateLock.unlock();
+                    // 响应开始时整表落库一次（持久化新建的 assistant 节点 + 父节点 childIds）
                     saveConversation();
+                    lastSaveTime = std::chrono::steady_clock::now();
                 }
                 else
                 {
@@ -564,7 +591,13 @@ std::string AI::generateResponseIncremental(AIStreamCallback streamCallback)
                         }
                     }
                     stateLock.unlock();
-                    conversationManager.updateNodeContent(currentConvId, assistantNodeId, fullContent, fullReasoning);
+                    // 节流：距上次写库 < 500ms 则只更新内存，流结束统一落库
+                    auto now = std::chrono::steady_clock::now();
+                    if (std::chrono::duration_cast<std::chrono::milliseconds>(now - lastSaveTime).count() >= 500)
+                    {
+                        conversationManager.updateNodeContent(currentConvId, assistantNodeId, fullContent, fullReasoning);
+                        lastSaveTime = now;
+                    }
                 }
             }
             if (!reasoningDelta.empty())
@@ -621,17 +654,23 @@ std::string AI::generateResponseIncremental(AIStreamCallback streamCallback)
         {
             addNode(ConversationNode::ROLE_ASSISTANT, fullContent);
         }
-        else if (responseStarted && !assistantNodeId.empty() && finalStopReason != ConversationNode::STOP_REASON_NONE)
+        else if (responseStarted && !assistantNodeId.empty())
         {
             std::unique_lock<std::shared_mutex> stateLock(stateMutex);
             ConversationNode *assistantNode = findNode(assistantNodeId);
             if (assistantNode)
             {
-                assistantNode->stopReason = finalStopReason;
+                if (finalStopReason != ConversationNode::STOP_REASON_NONE)
+                    assistantNode->stopReason = finalStopReason;
             }
             stateLock.unlock();
+            // 流结束统一落库最新内容 + stopReason（取代每 chunk 写库）
             if (!currentConvId.empty())
-                conversationManager.updateNodeStopReason(currentConvId, assistantNodeId, (int)finalStopReason);
+            {
+                conversationManager.updateNodeContent(currentConvId, assistantNodeId, fullContent, fullReasoning);
+                if (finalStopReason != ConversationNode::STOP_REASON_NONE)
+                    conversationManager.updateNodeStopReason(currentConvId, assistantNodeId, (int)finalStopReason);
+            }
         }
         return fullContent;
     }

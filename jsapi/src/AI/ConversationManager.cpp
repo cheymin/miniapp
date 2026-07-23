@@ -20,8 +20,22 @@
 #include <chrono>
 #include <algorithm>
 #include <stdexcept>
+#include <cstdio>
 
-ConversationManager::ConversationManager(const std::string &dbPath) : database(dbPath)
+ConversationManager::ConversationManager(const std::string &dbPath) : database(dbPath), dbPath(dbPath)
+{
+    try
+    {
+        createTables();
+    }
+    catch (...)
+    {
+        // 建表失败通常意味着库损坏：备份坏库 + 重开 + 重建表
+        recover();
+    }
+}
+
+void ConversationManager::createTables()
 {
     database.table("conversations")
         .column("id", TABLE::TEXT, TABLE::PRIMARY_KEY)
@@ -49,6 +63,21 @@ ConversationManager::ConversationManager(const std::string &dbPath) : database(d
         .column("top_p", TABLE::REAL, TABLE::NOT_NULL)
         .column("system_prompt", TABLE::TEXT, TABLE::NOT_NULL)
         .execute();
+}
+
+void ConversationManager::recover()
+{
+    std::lock_guard<std::mutex> lock(dbMutex);
+    // 备份坏库（含 -wal/-shm 旁路文件），保留现场同时让新库能正常打开
+    auto backupSuffix = std::to_string(std::chrono::duration_cast<std::chrono::seconds>(
+                                           std::chrono::system_clock::now().time_since_epoch())
+                                           .count());
+    std::rename((dbPath).c_str(), (dbPath + ".corrupt." + backupSuffix).c_str());
+    std::rename((dbPath + "-wal").c_str(), (dbPath + "-wal.corrupt." + backupSuffix).c_str());
+    std::rename((dbPath + "-shm").c_str(), (dbPath + "-shm.corrupt." + backupSuffix).c_str());
+    // 重新打开 + 重建空表
+    database.reopen(dbPath);
+    createTables();
 }
 
 std::vector<ConversationInfo> ConversationManager::getConversationList()
