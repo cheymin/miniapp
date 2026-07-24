@@ -63,6 +63,30 @@ void ConversationManager::createTables()
         .column("top_p", TABLE::REAL, TABLE::NOT_NULL)
         .column("system_prompt", TABLE::TEXT, TABLE::NOT_NULL)
         .execute();
+
+    // CREATE TABLE IF NOT EXISTS 不会给旧表补列，此处显式迁移旧库 schema
+    migrateSchema();
+}
+
+void ConversationManager::migrateSchema()
+{
+    // 用 try/catch 执行 ALTER TABLE ADD COLUMN，列已存在时 SQLite 报错被忽略
+    auto tryAddColumn = [&](const std::string &table, const std::string &column, const std::string &definition)
+    {
+        try
+        {
+            database.exec("ALTER TABLE " + table + " ADD COLUMN " + column + " " + definition);
+        }
+        catch (...)
+        {
+            // 列已存在或表不存在：忽略
+        }
+    };
+    // 旧版 conversation_nodes 缺少 reasoning_content（报错根因），stop_reason/parent_id 预防性补
+    tryAddColumn("conversation_nodes", "reasoning_content", "TEXT");
+    tryAddColumn("conversation_nodes", "stop_reason", "INTEGER DEFAULT 6");
+    tryAddColumn("conversation_nodes", "parent_id", "TEXT");
+    tryAddColumn("api_settings", "model", "TEXT");
 }
 
 void ConversationManager::recover()

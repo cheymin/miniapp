@@ -26,13 +26,14 @@ export type ImageViewerOptions = {
     directory?: string;
 };
 
+// 设备屏幕 320×240（见 PROJECT_GUIDE）
+const SCREEN_W = 320;
+const SCREEN_H = 240;
 const MIN_SCALE = 0.5;
 const MAX_SCALE = 6.0;
 const DOUBLE_TAP_SCALE = 2.5;
-const BASE_W = 560;
-const BASE_H = 720;
-const SWIPE_THRESHOLD = 80;
-const TAP_THRESHOLD = 14;
+const SWIPE_THRESHOLD = 60;
+const TAP_THRESHOLD = 10;
 const LONG_PRESS_MS = 550;
 
 const imageViewer = defineComponent({
@@ -60,7 +61,7 @@ const imageViewer = defineComponent({
 
             shellInitialized: false,
 
-            // 手势状态
+            // 手势状态(不阻止 scroller 滚动,仅做长按/滑动检测)
             touchStartX: 0,
             touchStartY: 0,
             touchLastX: 0,
@@ -68,8 +69,9 @@ const imageViewer = defineComponent({
             isTouching: false,
             hasMoved: false,
             longPressTimer: null as any,
-            singleTapTimer: null as any,
+            // 单击/双击(click 触发)
             lastTapTime: 0,
+            clickSuppress: false,
 
             // 缩放滑块拖动
             isDraggingThumb: false,
@@ -80,8 +82,8 @@ const imageViewer = defineComponent({
 
     computed: {
         imageStyle(): any {
-            const w = Math.round(BASE_W * this.scale);
-            const h = Math.round(BASE_H * this.scale);
+            const w = Math.round(SCREEN_W * this.scale);
+            const h = Math.round(SCREEN_H * this.scale);
             return {
                 width: w + 'px',
                 height: h + 'px',
@@ -112,7 +114,6 @@ const imageViewer = defineComponent({
         }
         if (options.initialPath) {
             await this.loadImage(options.initialPath);
-            // 若有目录,后台扫描列表以支持滑动切换
             if (options.directory) {
                 this.scanImages(true);
             }
@@ -140,7 +141,6 @@ const imageViewer = defineComponent({
         clearTimers() {
             if (this.autoHideTimer) { clearTimeout(this.autoHideTimer); this.autoHideTimer = null; }
             if (this.longPressTimer) { clearTimeout(this.longPressTimer); this.longPressTimer = null; }
-            if (this.singleTapTimer) { clearTimeout(this.singleTapTimer); this.singleTapTimer = null; }
         },
 
         scheduleAutoHide() {
@@ -157,10 +157,9 @@ const imageViewer = defineComponent({
             if (this.showControls) this.scheduleAutoHide();
         },
 
-        // 阻止冒泡到遮罩(点击卡片内部不关闭菜单)
         noop() {},
 
-        // ===== 手势 =====
+        // ===== 手势(不阻止 scroller,仅检测长按与水平滑动) =====
         onTouchStart(e: any) {
             const t = this._getTouch(e);
             if (!t) return;
@@ -190,16 +189,20 @@ const imageViewer = defineComponent({
             this.touchLastY = t.clientY;
         },
 
-        onTouchEnd(e: any) {
+        onTouchEnd() {
             if (this.longPressTimer) { clearTimeout(this.longPressTimer); this.longPressTimer = null; }
             if (!this.isTouching) return;
             this.isTouching = false;
-            if (this.hasMoved) {
-                this._handleSwipe();
-                return;
+            // 仅在未放大时,水平滑动显著>垂直位移 → 翻页(不阻止 scroller 平移)
+            if (this.hasMoved && this.scale <= 1.01) {
+                const dx = this.touchLastX - this.touchStartX;
+                const dy = this.touchLastY - this.touchStartY;
+                if (Math.abs(dx) > SWIPE_THRESHOLD && Math.abs(dx) > Math.abs(dy) * 1.5) {
+                    this.clickSuppress = true;
+                    if (dx < 0) this.nextImage();
+                    else this.prevImage();
+                }
             }
-            // 当作点击
-            this._handleTap();
         },
 
         _getTouch(e: any) {
@@ -210,29 +213,21 @@ const imageViewer = defineComponent({
             return null;
         },
 
-        _handleSwipe() {
-            const dx = this.touchLastX - this.touchStartX;
-            const dy = this.touchLastY - this.touchStartY;
-            if (Math.abs(dx) > SWIPE_THRESHOLD && Math.abs(dx) > Math.abs(dy)) {
-                if (dx < 0) this.nextImage();
-                else this.prevImage();
-            }
-        },
-
-        _handleTap() {
+        // click 触发单击/双击(滚动时浏览器不触发 click,不会误触)
+        onImageClick() {
+            if (this.clickSuppress) { this.clickSuppress = false; return; }
             const now = Date.now();
             if (now - this.lastTapTime < 300) {
-                // 双击:缩放切换
                 this.lastTapTime = 0;
-                if (this.singleTapTimer) { clearTimeout(this.singleTapTimer); this.singleTapTimer = null; }
                 this.toggleZoom();
             } else {
                 this.lastTapTime = now;
-                if (this.singleTapTimer) clearTimeout(this.singleTapTimer);
-                this.singleTapTimer = setTimeout(() => {
-                    this.toggleControls();
-                    this.scheduleAutoHide();
-                }, 280);
+                setTimeout(() => {
+                    if (this.lastTapTime && Date.now() - this.lastTapTime >= 280) {
+                        this.lastTapTime = 0;
+                        this.toggleControls();
+                    }
+                }, 290);
             }
         },
 
@@ -259,7 +254,7 @@ const imageViewer = defineComponent({
             if (!this.isDraggingThumb) return;
             const t = this._getTouch(e);
             if (!t) return;
-            const trackWidth = 180;
+            const trackWidth = 120;
             const deltaX = t.clientX - this.thumbStartX;
             let newPercent = this.thumbStartPercent + (deltaX / trackWidth) * 100;
             newPercent = Math.max(0, Math.min(100, newPercent));
@@ -337,7 +332,6 @@ const imageViewer = defineComponent({
                     this.imageName = imagePath.split('/').pop() || '';
                     this.resetView();
                     await this.getImageInfo();
-                    // 同步列表索引
                     const idx = this.imageList.indexOf(imagePath);
                     if (idx >= 0) this.currentImageIndex = idx;
                 } else {
@@ -444,7 +438,7 @@ const imageViewer = defineComponent({
                 }
                 this.showMenu = false;
                 if (this.imageList.length > 0) {
-                    this.currentImageIndex = Math.min(removedIdx, this.imageList.length - 1);
+                    this.currentImageIndex = Math.min(removedIdx < 0 ? 0 : removedIdx, this.imageList.length - 1);
                     await this.loadImage(this.imageList[this.currentImageIndex]);
                 } else {
                     this.currentImage = '';

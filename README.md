@@ -19,7 +19,7 @@
 
 # Miniapp
 
-**Version: 1.2.46**
+**Version: 1.2.47**
 
 > [!WARNING]  
 > This miniapp is still under development, and may have breaking changes without any notice.

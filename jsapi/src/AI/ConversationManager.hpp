@@ -33,6 +33,7 @@ private:
     std::string dbPath;
     mutable std::mutex dbMutex;
     void createTables();
+    void migrateSchema();
 
 public:
     explicit ConversationManager(const std::string &dbPath = "/userdisk/database/langningchen-ai.db");

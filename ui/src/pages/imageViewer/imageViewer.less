@@ -1,13 +1,12 @@
-// 现代沉浸式图片查看器主题
+// 沉浸式图片查看器(320×240 设备)
 @bg-deep: #000000;
-@bg-bar: rgba(20, 22, 28, 0.92);
+@bg-bar: rgba(18, 20, 26, 0.95);
 @bg-card: #1c2128;
 @bg-elevated: #2a2f3a;
 @border: #30363d;
 @text-primary: #e6edf3;
 @text-secondary: #8b949e;
 @accent: #2f81f7;
-@accent-soft: rgba(47, 129, 247, 0.18);
 @danger: #f85149;
 
 .viewer {
@@ -19,37 +18,37 @@
 
 // ===== 顶栏 =====
 .top-bar {
-    height: 44px;
+    height: 30px;
     background-color: @bg-bar;
     flex-direction: row;
     align-items: center;
-    padding: 0 8px;
+    padding: 0 6px;
 }
 
 .top-btn {
-    font-size: 24px;
+    font-size: 18px;
     color: @accent;
-    width: 40px;
-    height: 44px;
+    width: 30px;
+    height: 30px;
     text-align: center;
-    line-height: 44px;
+    line-height: 30px;
 }
 
 .top-title {
     flex: 1;
-    font-size: 15px;
+    font-size: 12px;
     color: @text-primary;
     text-align: center;
-    margin-left: 4px;
-    margin-right: 4px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .top-counter {
-    font-size: 13px;
+    font-size: 10px;
     color: @text-secondary;
     background-color: @bg-elevated;
-    padding: 3px 10px;
-    border-radius: 10px;
+    padding: 2px 7px;
+    border-radius: 8px;
     margin-right: 4px;
 }
 
@@ -72,29 +71,27 @@
     background-color: @bg-deep;
 }
 
-// 幻灯片角标
 .slideshow-badge {
     position: absolute;
-    top: 10px;
+    top: 6px;
     left: 0;
     right: 0;
     align-items: center;
 }
 
 .slideshow-text {
-    font-size: 12px;
+    font-size: 10px;
     color: #ffffff;
-    background-color: rgba(47, 129, 247, 0.85);
-    padding: 4px 12px;
-    border-radius: 12px;
+    background-color: rgba(47, 129, 247, 0.9);
+    padding: 2px 8px;
+    border-radius: 8px;
 }
 
-// 左右翻页箭头
 .nav-arrow {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 56px;
+    width: 36px;
     justify-content: center;
     align-items: center;
 }
@@ -108,9 +105,9 @@
 }
 
 .nav-arrow-icon {
-    font-size: 40px;
-    color: rgba(230, 237, 243, 0.55);
-    width: 40px;
+    font-size: 26px;
+    color: rgba(230, 237, 243, 0.6);
+    width: 26px;
     text-align: center;
 }
 
@@ -119,195 +116,200 @@
     flex: 1;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 16px;
 }
 
 .empty-icon {
-    font-size: 56px;
-    margin-bottom: 16px;
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
 .empty-title {
-    font-size: 20px;
+    font-size: 16px;
     color: @text-primary;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     font-weight: bold;
 }
 
 .empty-hint {
-    font-size: 13px;
+    font-size: 11px;
     color: @text-secondary;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
 .empty-btn {
-    font-size: 15px;
+    font-size: 12px;
     color: #ffffff;
     background-color: @accent;
-    padding: 10px 28px;
-    border-radius: 22px;
+    padding: 7px 20px;
+    border-radius: 14px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.empty-btn-ghost {
+    color: @text-secondary;
+    background-color: @bg-elevated;
 }
 
 // ===== 底部缩放栏 =====
 .bottom-bar {
-    height: 52px;
+    height: 34px;
     background-color: @bg-bar;
     flex-direction: row;
     align-items: center;
-    padding: 0 12px;
-    gap: 10px;
+    padding: 0 8px;
+    gap: 6px;
 }
 
 .zoom-icon {
-    font-size: 22px;
+    font-size: 16px;
     color: @text-primary;
-    width: 32px;
-    height: 32px;
+    width: 22px;
+    height: 22px;
     text-align: center;
-    line-height: 32px;
+    line-height: 22px;
 }
 
 .zoom-track {
     flex: 1;
-    height: 4px;
+    height: 3px;
     background-color: rgba(255, 255, 255, 0.15);
     border-radius: 2px;
     position: relative;
 }
 
 .zoom-fill {
-    height: 4px;
+    height: 3px;
     background-color: @accent;
     border-radius: 2px;
 }
 
 .zoom-thumb {
-    width: 18px;
-    height: 18px;
+    width: 14px;
+    height: 14px;
     background-color: #ffffff;
-    border-radius: 9px;
+    border-radius: 7px;
     position: absolute;
-    top: -7px;
-    margin-left: -9px;
+    top: -6px;
+    margin-left: -7px;
 }
 
 .zoom-value {
-    font-size: 12px;
+    font-size: 10px;
     color: @text-secondary;
-    width: 42px;
+    width: 32px;
     text-align: right;
 }
 
 .zoom-reset {
-    font-size: 18px;
+    font-size: 14px;
     color: @text-secondary;
-    width: 32px;
+    width: 22px;
     text-align: center;
 }
 
-// ===== 长按菜单 =====
-.menu-mask {
+// ===== 全屏覆盖式菜单 =====
+.menu-overlay {
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    justify-content: center;
-    align-items: center;
-    z-index: 200;
+    background-color: rgba(0, 0, 0, 0.97);
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
 }
 
-.menu-card {
-    width: 460px;
-    background-color: @bg-card;
-    border-radius: 14px;
-    border-width: 1px;
-    border-color: @border;
-    padding: 14px;
-}
-
-.menu-card-header {
+.menu-header {
+    height: 32px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 12px;
+    padding: 0 10px;
+    background-color: @bg-bar;
+    border-bottom-width: 1px;
+    border-bottom-color: @border;
 }
 
-.menu-card-title {
-    font-size: 17px;
+.menu-title {
+    font-size: 14px;
     color: @text-primary;
     font-weight: bold;
 }
 
-.menu-card-close {
-    font-size: 18px;
-    color: @text-secondary;
-    padding: 4px 8px;
-}
-
-// 宫格操作按钮
-.menu-grid {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.menu-grid-btn {
-    width: 142px;
-    font-size: 13px;
-    color: @text-primary;
-    background-color: @bg-elevated;
-    padding: 12px 4px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.menu-grid-danger {
+.menu-close {
+    font-size: 16px;
     color: @danger;
-    background-color: rgba(248, 81, 73, 0.12);
+    padding: 2px 8px;
 }
 
-.menu-divider {
-    height: 1px;
-    background-color: @border;
-    margin: 12px 0;
+.menu-scroller {
+    flex: 1;
 }
 
-.menu-section-label {
-    font-size: 12px;
+.menu-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-section-title {
+    font-size: 11px;
     color: @accent;
-    margin-bottom: 6px;
+    margin-top: 8px;
+    margin-bottom: 5px;
     font-weight: bold;
+}
+
+.menu-section-title:first-child {
+    margin-top: 0;
 }
 
 .menu-path {
-    font-size: 12px;
+    font-size: 10px;
     color: @text-secondary;
     background-color: @bg-elevated;
-    padding: 8px 10px;
-    border-radius: 6px;
-    margin-bottom: 8px;
+    padding: 5px 7px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    lines: 2;
 }
 
 .menu-row {
     flex-direction: row;
-    gap: 8px;
+    align-items: center;
+    margin-bottom: 5px;
+    gap: 5px;
 }
 
-.menu-row-btn {
+.menu-btn {
     flex: 1;
-    font-size: 13px;
+    font-size: 11px;
     color: @text-primary;
     background-color: @bg-elevated;
-    padding: 10px 4px;
-    border-radius: 8px;
+    padding: 7px 3px;
+    border-radius: 4px;
     text-align: center;
 }
 
+.menu-btn-danger {
+    color: @danger;
+    background-color: rgba(248, 81, 73, 0.15);
+}
+
 .menu-info {
-    font-size: 12px;
+    font-size: 10px;
     color: @text-secondary;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
     lines: 2;
+}
+
+.menu-tip {
+    font-size: 10px;
+    color: #555c66;
+    margin-top: 10px;
+    text-align: center;
+    lines: 3;
 }
