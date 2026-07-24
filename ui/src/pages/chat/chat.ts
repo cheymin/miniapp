@@ -19,6 +19,8 @@ import { defineComponent } from 'vue';
 import { Chat, Shell } from 'langningchen';
 import { ROLE, ConversationNode, STOP_REASON } from '../../@types/langningchen';
 import { showError, showSuccess, showInfo } from '../../components/ToastMessage';
+import { minConfig } from '../../utils/minConfig';
+import { getIcon } from '../../utils/icons';
 
 export type chatOptions = {};
 
@@ -44,6 +46,9 @@ const chat = defineComponent({
             streamDirty: false,
             errorMsg: '' as string,
             streamEnded: false,
+            bgEnabled: false,
+            bgImagePath: '',
+            bgOpacity: 60,
         };
     },
 
@@ -78,6 +83,7 @@ const chat = defineComponent({
         } catch (e) {
             showError(e as string || 'Chat 初始化失败');
         }
+        this.loadBackground();
         this.$page.$npage.setSupportBack(true);
         this.$page.$npage.on('backpressed', this.handleBackPress);
     },
@@ -141,11 +147,29 @@ const chat = defineComponent({
             this.$page.finish();
         },
 
+        async loadBackground() {
+            try {
+                await minConfig.loadAll();
+                const bg = minConfig.getBackground();
+                this.bgEnabled = bg.enabled && !!bg.imagePath;
+                this.bgImagePath = bg.imagePath;
+                this.bgOpacity = bg.opacity;
+                this.$forceUpdate();
+            } catch (e) {
+                // ignore
+            }
+        },
+
+        icon(name: string): string {
+            return getIcon(name);
+        },
+
         onPageShow() {
             if (!this.chatInitialized) return;
             this.refreshMessages();
             this.refreshConversationInfo();
             this.handleKeyboardResult();
+            this.loadBackground();
         },
 
         handleKeyboardResult() {

@@ -69,15 +69,6 @@
       </div>
       <scroller class="menu-scroller" scroll-direction="vertical" :show-scrollbar="true">
         <div class="menu-content">
-          <!-- 图片列表:可靠浏览(替代不可靠的手指滑动) -->
-          <text class="menu-section-title">图片列表 ({{ imageCount }})</text>
-          <text v-if="imageCount === 0" class="menu-empty-text">暂无图片，请选择目录扫描</text>
-          <div v-for="(img, idx) in imageList" :key="'img' + idx"
-            :class="'menu-list-item' + (idx === currentImageIndex ? ' menu-list-active' : '')"
-            @click="loadImageByIndex(idx)">
-            <text class="menu-list-text" :lines="1">{{ idx + 1 }}. {{ img.split('/').pop() }}</text>
-          </div>
-
           <template v-if="hasImage">
             <text class="menu-section-title">缩放</text>
             <div class="menu-row">

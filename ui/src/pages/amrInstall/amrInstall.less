@@ -1,0 +1,168 @@
+// AMR 安装页面 (320×240 设备, 深色主题)
+@bg-deep: #0d1117;
+@bg-surface: #161b22;
+@bg-elevated: #1c2128;
+@border: #30363d;
+@text-primary: #e6edf3;
+@text-secondary: #8b949e;
+@accent: #2f81f7;
+@success: #3fb950;
+@danger: #f85149;
+
+// ===== 顶栏 =====
+.top-bar {
+    height: 36px;
+    background-color: @bg-surface;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 8px;
+    border-bottom-width: 1px;
+    border-bottom-color: @border;
+    border-bottom-style: solid;
+}
+
+.top-btn {
+    font-size: 16px;
+    color: @accent;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+}
+
+.top-btn-placeholder {
+    width: 36px;
+    height: 36px;
+}
+
+.top-title {
+    flex: 1;
+    font-size: 14px;
+    color: @text-primary;
+    text-align: center;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+// ===== 主体容器 =====
+.install-container {
+    flex: 1;
+    background-color: @bg-deep;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 12px;
+}
+
+// ===== 大图标区 =====
+.install-icon-area {
+    margin-top: 4px;
+    margin-bottom: 6px;
+}
+
+.install-icon {
+    font-size: 60px;
+    text-align: center;
+}
+
+// ===== 文件名 =====
+.install-filename {
+    font-size: 16px;
+    color: @text-primary;
+    text-align: center;
+    margin-bottom: 8px;
+    lines: 2;
+}
+
+// ===== 信息区 =====
+.info-section {
+    width: 100%;
+    background-color: @bg-surface;
+    border-radius: 8px;
+    padding: 8px 10px;
+    border-width: 1px;
+    border-color: @border;
+    border-style: solid;
+    margin-bottom: 8px;
+}
+
+.info-row {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.info-label {
+    font-size: 12px;
+    color: @text-secondary;
+    width: 70px;
+}
+
+.info-value {
+    flex: 1;
+    font-size: 12px;
+    color: @text-primary;
+}
+
+// ===== 状态信息 =====
+.status-msg {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.status-installing {
+    color: @accent;
+}
+
+.status-success {
+    color: @success;
+}
+
+.status-error {
+    color: @danger;
+}
+
+.status-idle {
+    color: @text-secondary;
+}
+
+// ===== 按钮区 =====
+.btn-area {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.install-btn {
+    width: 100%;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    margin-bottom: 6px;
+}
+
+.btn-install-active {
+    background-color: @success;
+}
+
+.btn-install-disabled {
+    background-color: @text-secondary;
+    opacity: 0.6;
+}
+
+.cancel-btn {
+    width: 100%;
+    font-size: 14px;
+    color: @text-primary;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    background-color: @bg-elevated;
+    border-width: 1px;
+    border-color: @border;
+    border-style: solid;
+}

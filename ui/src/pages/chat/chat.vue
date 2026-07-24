@@ -19,19 +19,22 @@
 
 <template>
     <div>
-        <div class="chat-container">
+        <div class="chat-container" :class="bgEnabled ? 'has-bg' : ''">
+            <image v-if="bgEnabled && bgImagePath" class="bg-image" :src="bgImagePath" resize="cover" />
+            <div v-if="bgEnabled" class="bg-overlay" :style="{ opacity: bgOpacity / 100 }"></div>
+
             <div class="top-bar">
-                <text class="top-btn" @click="handleBackPress">‹</text>
+                <text class="top-btn" @click="handleBackPress">{{ icon('back') }}</text>
                 <text class="top-title" @click="editTitle">{{ currentConversationTitle || '新对话' }}</text>
-                <text class="top-btn" @click="openChatList">≡</text>
-                <text class="top-btn" @click="openChatSettings">⚙</text>
+                <text class="top-btn" @click="openChatList">{{ icon('list') }}</text>
+                <text class="top-btn" @click="openChatSettings">{{ icon('settings') }}</text>
             </div>
 
             <scroller ref="messageScroller" class="messages-scroller" scroll-direction="vertical"
                 :show-scrollbar="true">
                 <div class="messages-wrapper">
                     <div v-if="hasMore" class="load-more-btn" @click="loadMoreMessages">
-                        <text class="load-more-text">↑ 加载更多</text>
+                        <text class="load-more-text">{{ icon('arrow_up') }} 加载更多</text>
                     </div>
 
                     <div v-for="(message, index) in displayMessages" :key="message.id" class="message-row"
@@ -39,7 +42,7 @@
 
                         <div v-if="message.reasoningContent" class="reasoning-box"
                             @click="toggleReasoning(message.id)">
-                            <text class="reasoning-label">💭 {{ isReasoningExpanded(message.id) ? '收起' : '思考过程' }}</text>
+                            <text class="reasoning-label">{{ icon('thinking') }} {{ isReasoningExpanded(message.id) ? '收起' : '思考过程' }}</text>
                             <text v-if="isReasoningExpanded(message.id)" class="reasoning-text">{{ message.reasoningContent }}</text>
                         </div>
 
@@ -53,24 +56,27 @@
 
                         <div class="message-meta"
                             v-if="message.role === 1 && !isStreaming">
-                            <text class="meta-btn" @click="copyMessage(message)">复制</text>
+                            <text class="meta-btn" @click="copyMessage(message)">{{ icon('copy') }} 复制</text>
                             <text v-if="index === displayMessages.length - 1 && canRegenerate"
-                                class="meta-btn" @click="regenerateLast">重生成</text>
+                                class="meta-btn" @click="regenerateLast">{{ icon('regen') }} 重生成</text>
                             <text v-if="getStopReasonText(message.stopReason)"
                                 class="stop-tag">{{ getStopReasonText(message.stopReason) }}</text>
                         </div>
                     </div>
 
                     <div v-if="errorMsg" class="error-box">
-                        <text class="error-text">⚠ {{ errorMsg }}</text>
-                        <text class="retry-btn" @click="retryLastGenerate">重试</text>
+                        <text class="error-text">{{ icon('warn') }} {{ errorMsg }}</text>
+                        <text class="retry-btn" @click="retryLastGenerate">{{ icon('refresh') }} 重试</text>
                     </div>
 
                     <div v-if="!chatInitialized" class="empty-hint">
+                        <text class="empty-icon">{{ icon('ai') }}</text>
                         <text class="empty-text">初始化中...</text>
                     </div>
                     <div v-else-if="displayMessages.length === 0 && !isStreaming" class="empty-hint">
+                        <text class="empty-icon">{{ icon('chat') }}</text>
                         <text class="empty-text">开始新对话</text>
+                        <text class="empty-sub">点击下方输入框开始与AI对话</text>
                     </div>
                 </div>
             </scroller>
@@ -78,8 +84,8 @@
             <div class="input-bar">
                 <text class="input-preview" @click="openChatKeyboard">{{ currentInput || '点击输入消息...' }}</text>
                 <text v-if="!isStreaming" @click="sendMessage(currentInput)"
-                    :class="'send-btn ' + (canSendMessage ? 'send-btn-active' : 'send-btn-disabled')">发送</text>
-                <text v-else @click="stopGeneration" class="send-btn send-btn-stop">停止</text>
+                    :class="'send-btn ' + (canSendMessage ? 'send-btn-active' : 'send-btn-disabled')">{{ icon('send') }} 发送</text>
+                <text v-else @click="stopGeneration" class="send-btn send-btn-stop">{{ icon('stop') }} 停止</text>
             </div>
         </div>
         <ToastMessage />

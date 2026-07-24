@@ -517,7 +517,13 @@ export default defineComponent({
           await this.openWithApp(file, 'fileEditor');
           return;
         }
-        
+
+        // AMR安装包文件 - 进入安装界面
+        if (ext === 'amr') {
+          $falcon.navTo('amrInstall', { filePath: file.fullPath });
+          return;
+        }
+
         // 其他文件类型，显示选择对话框
         await this.showOpenWithDialog(file);
         
