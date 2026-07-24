@@ -102,3 +102,14 @@ export declare class Penshell {
 
     static on(event: 'penshell_output', callback: (data: string) => void): void;
 }
+
+// SQLite KV 型数据库（原生层 JSDatabase 绑定）
+// 替代散落的 JSON 配置文件，统一持久化到 /userdisk/database/*.db
+// 全部方法为同步调用：原生层使用 JQFunctionInfo + SetProtoMethod 实现
+export declare class Database {
+    static initialize(dbPath: string): boolean;
+    static get(key: string): string;
+    static set(key: string, value: string): boolean;
+    static remove(key: string): boolean;
+    static keys(): string[];
+}

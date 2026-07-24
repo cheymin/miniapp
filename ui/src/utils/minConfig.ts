@@ -15,9 +15,12 @@
 // You should have received a copy of the GNU General Public License
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
-// 统一配置存储：所有新模块数据持久化到 /userdisk/database/
-// 全部配置合并到单一 key (database/min-config)，减少散落 JSON 文件
-const CONFIG_KEY = 'database/min-config';
+import { Database } from 'langningchen';
+
+// 统一配置存储：所有模块配置持久化到 SQLite（/userdisk/database/langningchen-config.db）
+// 全部配置合并到单一 KV key，彻底弃用 $falcon.storage 的 JSON 文件存储
+const DB_PATH = '/userdisk/database/langningchen-config.db';
+const CONFIG_KEY = 'min-config';
 
 export interface MemosConfig {
     url: string;          // 如 http://memos.example.com
@@ -53,11 +56,20 @@ function defaultConfig(): AllConfig {
 class MinConfig {
     private data: AllConfig = defaultConfig();
     private loaded: boolean = false;
+    private dbReady: boolean = false;
+
+    // Database 为单一共享连接，初始化一次即可，避免反复 reopen
+    private ensureDb(): void {
+        if (this.dbReady) return;
+        Database.initialize(DB_PATH);
+        this.dbReady = true;
+    }
 
     async loadAll(): Promise<void> {
         if (this.loaded) return;
         try {
-            const raw = await $falcon.storage.get(CONFIG_KEY);
+            this.ensureDb();
+            const raw = Database.get(CONFIG_KEY);
             if (raw && typeof raw === 'string') {
                 const parsed = JSON.parse(raw);
                 this.data = Object.assign(defaultConfig(), parsed);
@@ -71,7 +83,8 @@ class MinConfig {
 
     private async save(): Promise<void> {
         try {
-            await $falcon.storage.set(CONFIG_KEY, JSON.stringify(this.data));
+            this.ensureDb();
+            Database.set(CONFIG_KEY, JSON.stringify(this.data));
         } catch (e) {
             console.error('MinConfig save failed:', e);
         }

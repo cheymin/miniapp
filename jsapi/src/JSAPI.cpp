@@ -2,6 +2,7 @@
 #include <jquick_config.h>
 #include "AI/JSAI.hpp"
 #include "AI/JSChat.hpp"
+#include "Database/JSDatabase.hpp"
 #include "IME/JSIME.hpp"
 #include "Penshell/JSPenshell.hpp"
 #include "ScanInput/JSScanInput.hpp"
@@ -13,6 +14,7 @@ using namespace JQUTIL_NS;
 static std::vector<std::string> exportList = {
     "AI",
     "Chat",
+    "Database",
     "IME",
     "Penshell",
     "ScanInput",
@@ -26,6 +28,7 @@ static int module_init(JSContext *ctx, JSModuleDef *m)
 
     env->setModuleExport("AI", createAI(env.get()));
     env->setModuleExport("Chat", createChat(env.get()));
+    env->setModuleExport("Database", createDatabase(env.get()));
     env->setModuleExport("IME", createIME(env.get()));
     env->setModuleExport("Penshell", createPenshell(env.get()));
     env->setModuleExport("ScanInput", createScanInput(env.get()));
