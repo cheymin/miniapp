@@ -24,7 +24,10 @@
     "chat": "pages/chat/chat.vue",
     "chatList": "pages/chatList/chatList.vue",
     "chatSettings": "pages/chatSettings/chatSettings.vue",
-    "chatKeyboard": "pages/chatKeyboard/chatKeyboard.vue"
+    "chatKeyboard": "pages/chatKeyboard/chatKeyboard.vue",
+    "webdavBackup": "pages/webdavBackup/webdavBackup.vue",
+    "webdavFiles": "pages/webdavFiles/webdavFiles.vue",
+    "memos": "pages/memos/memos.vue"
   },
   "options": {
     "style": {

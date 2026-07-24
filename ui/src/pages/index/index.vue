@@ -29,6 +29,13 @@
             <div class="item"><text class="item-text" @click="Browser">网页浏览器</text></div>
             <div class="item"><text class="item-text" @click="Penshell">Penshell 终端</text></div>
         </div>
+
+        <div class="section">
+            <text class="section-title">云服务与笔记</text>
+            <div class="item"><text class="item-text" @click="WebdavBackup">☁️ WebDAV备份</text></div>
+            <div class="item"><text class="item-text" @click="WebdavFiles">📂 WebDAV文件</text></div>
+            <div class="item"><text class="item-text" @click="Memos">📝 备忘录</text></div>
+        </div>
         
         <div class="section">
             <text class="section-title">媒体功能</text>

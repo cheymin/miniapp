@@ -66,6 +66,15 @@ const index = defineComponent({
         Chat() {
             $falcon.navTo("chat", {});
         },
+        WebdavBackup() {
+            $falcon.navTo("webdavBackup", {});
+        },
+        WebdavFiles() {
+            $falcon.navTo("webdavFiles", {});
+        },
+        Memos() {
+            $falcon.navTo("memos", {});
+        },
     }
 });
 

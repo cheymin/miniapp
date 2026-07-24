@@ -15,12 +15,15 @@
 // You should have received a copy of the GNU General Public License
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
-import { IME, ScanInput } from 'langningchen';
+import { IME, ScanInput, Shell } from 'langningchen';
 import Editor from '../../editor/editor';
 import { defineComponent } from 'vue';
 import { Candidate, Pinyin } from '../../@types/langningchen';
 import { getCharWidth, getPositionWidth } from '../../utils/charUtils';
 import { hideLoading, showLoading } from '../../components/Loading';
+import { showError, showInfo, showSuccess } from '../../components/ToastMessage';
+import { minConfig } from '../../utils/minConfig';
+import { getIcon } from '../../utils/icons';
 
 export type SoftKeyboardOption = {
     data: string;
@@ -48,6 +51,7 @@ const softKeyboard = defineComponent({
             popupTimer: null as ReturnType<typeof setTimeout> | null,
             pinyinHistory: [] as Pinyin,
             hanZiHistory: '' as string,
+            isRecording: false,
         };
     },
     mounted() {
@@ -259,7 +263,8 @@ const softKeyboard = defineComponent({
                 [
                     { value: 'Control', displayText: 'Ctrl', width: 1.5 },
                     { value: 'Zh', displayText: this.isChineseMode ? '中' : 'En', width: 1.5 },
-                    { value: ' ', displayText: '', width: 8.5 },
+                    { value: ' ', displayText: '', width: 7.5 },
+                    { value: 'Voice', displayText: '🎤' },
                     { value: 'Scan', displayText: 'Sc' },
                     { value: 'Close', displayText: 'cl' },
                     { value: 'Control', displayText: 'Ctrl', width: 1.5 },
@@ -336,6 +341,7 @@ const softKeyboard = defineComponent({
         },
         clicked(key: string) {
             if (key === 'Close') { this.close(); }
+            if (key === 'Voice') { this.startVoiceInput(); return; }
             if (this.editor) {
                 if (key === 'Zh') {
                     showLoading();
@@ -518,8 +524,69 @@ const softKeyboard = defineComponent({
                     return this.editor.insertMode;
                 case 'Scan':
                     return this.editor.scanEnabled;
+                case 'Voice':
+                    return this.isRecording;
                 default:
                     return false;
+            }
+        },
+
+        async startVoiceInput() {
+            if (this.isRecording) return;
+            await minConfig.loadAll();
+            const voiceCfg = minConfig.getVoice();
+            if (!voiceCfg.apiUrl || !voiceCfg.apiKey) {
+                showInfo('请先在设置中配置语音转文字API');
+                return;
+            }
+            this.isRecording = true;
+            this.$forceUpdate();
+            const audioFile = '/tmp/voice_input.wav';
+            showInfo('录音中... 再次点击停止');
+            // 录音3秒（设备可能不支持arecord，捕获错误）
+            try {
+                await Shell.exec(`arecord -d 3 -f cd -r 16000 -c 1 "${audioFile}" 2>/dev/null`);
+            } catch (e) {
+                // arecord 不可用时尝试简短录音
+                try {
+                    await Shell.exec(`arecord -d 3 "${audioFile}"`);
+                } catch (e2) {
+                    this.isRecording = false;
+                    this.$forceUpdate();
+                    showError('录音失败，设备不支持');
+                    return;
+                }
+            }
+            this.isRecording = false;
+            this.$forceUpdate();
+            showLoading();
+            try {
+                // 上传到云端STT API
+                const cmd = `curl -s -X POST -H "Authorization: Bearer ${voiceCfg.apiKey}" -F "audio=@${audioFile}" "${voiceCfg.apiUrl}"`;
+                const result = await Shell.exec(cmd);
+                const text = this.extractTextFromSTT(result);
+                if (text) {
+                    if (this.editor) {
+                        this.editor.handleInput(text);
+                        this.$forceUpdate();
+                    }
+                    showSuccess('已识别');
+                } else {
+                    showError('未识别到内容');
+                }
+            } catch (e: any) {
+                showError('语音识别失败: ' + (e.message || e));
+            } finally {
+                hideLoading();
+            }
+        },
+
+        extractTextFromSTT(result: string): string {
+            try {
+                const data = JSON.parse(result);
+                return data.text || data.result || data.transcript || (data.results && data.results[0] && data.results[0].transcript) || '';
+            } catch (e) {
+                return '';
             }
         }
     },
