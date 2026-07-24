@@ -32,7 +32,6 @@ const SCREEN_H = 240;
 const MIN_SCALE = 0.5;
 const MAX_SCALE = 6.0;
 const DOUBLE_TAP_SCALE = 2.5;
-const SWIPE_THRESHOLD = 60;
 const TAP_THRESHOLD = 10;
 const LONG_PRESS_MS = 550;
 
@@ -61,22 +60,15 @@ const imageViewer = defineComponent({
 
             shellInitialized: false,
 
-            // 手势状态(不阻止 scroller 滚动,仅做长按/滑动检测)
+            // 手势状态(仅做长按检测,翻页走菜单图片列表/箭头,不与scroller冲突)
             touchStartX: 0,
             touchStartY: 0,
-            touchLastX: 0,
-            touchLastY: 0,
             isTouching: false,
             hasMoved: false,
             longPressTimer: null as any,
-            // 单击/双击(click 触发)
+            // 单击/双击
             lastTapTime: 0,
-            clickSuppress: false,
-
-            // 缩放滑块拖动
-            isDraggingThumb: false,
-            thumbStartX: 0,
-            thumbStartPercent: 0
+            singleTapTimer: null as any
         };
     },
 
@@ -89,12 +81,6 @@ const imageViewer = defineComponent({
                 height: h + 'px',
                 transform: `rotate(${this.rotation}deg)`
             };
-        },
-        zoomPercent(): number {
-            const logMin = Math.log(MIN_SCALE);
-            const logMax = Math.log(MAX_SCALE);
-            const logVal = Math.log(Math.max(MIN_SCALE, Math.min(MAX_SCALE, this.scale)));
-            return ((logVal - logMin) / (logMax - logMin)) * 100;
         },
         hasImage(): boolean {
             return !!this.currentImageData;
@@ -141,6 +127,7 @@ const imageViewer = defineComponent({
         clearTimers() {
             if (this.autoHideTimer) { clearTimeout(this.autoHideTimer); this.autoHideTimer = null; }
             if (this.longPressTimer) { clearTimeout(this.longPressTimer); this.longPressTimer = null; }
+            if (this.singleTapTimer) { clearTimeout(this.singleTapTimer); this.singleTapTimer = null; }
         },
 
         scheduleAutoHide() {
@@ -152,19 +139,23 @@ const imageViewer = defineComponent({
             }, 3500);
         },
 
+        // 持久≡按钮：controls隐藏时也能恢复(解决"隐藏UI回不来")
+        restoreControls() {
+            this.showControls = true;
+            this.scheduleAutoHide();
+        },
+
         toggleControls() {
             this.showControls = !this.showControls;
             if (this.showControls) this.scheduleAutoHide();
         },
 
-        noop() {},
-
-        // ===== 手势(不阻止 scroller,仅检测长按与水平滑动) =====
+        // ===== 手势:仅长按→菜单,单击→显隐控件,双击→缩放(不与scroller平移冲突) =====
         onTouchStart(e: any) {
             const t = this._getTouch(e);
             if (!t) return;
-            this.touchStartX = this.touchLastX = t.clientX;
-            this.touchStartY = this.touchLastY = t.clientY;
+            this.touchStartX = t.clientX;
+            this.touchStartY = t.clientY;
             this.isTouching = true;
             this.hasMoved = false;
             if (this.longPressTimer) clearTimeout(this.longPressTimer);
@@ -185,24 +176,11 @@ const imageViewer = defineComponent({
                 this.hasMoved = true;
                 if (this.longPressTimer) { clearTimeout(this.longPressTimer); this.longPressTimer = null; }
             }
-            this.touchLastX = t.clientX;
-            this.touchLastY = t.clientY;
         },
 
         onTouchEnd() {
             if (this.longPressTimer) { clearTimeout(this.longPressTimer); this.longPressTimer = null; }
-            if (!this.isTouching) return;
             this.isTouching = false;
-            // 仅在未放大时,水平滑动显著>垂直位移 → 翻页(不阻止 scroller 平移)
-            if (this.hasMoved && this.scale <= 1.01) {
-                const dx = this.touchLastX - this.touchStartX;
-                const dy = this.touchLastY - this.touchStartY;
-                if (Math.abs(dx) > SWIPE_THRESHOLD && Math.abs(dx) > Math.abs(dy) * 1.5) {
-                    this.clickSuppress = true;
-                    if (dx < 0) this.nextImage();
-                    else this.prevImage();
-                }
-            }
         },
 
         _getTouch(e: any) {
@@ -213,20 +191,20 @@ const imageViewer = defineComponent({
             return null;
         },
 
-        // click 触发单击/双击(滚动时浏览器不触发 click,不会误触)
+        // click触发单击/双击(滚动时浏览器不触发click,平移不会误触)
         onImageClick() {
-            if (this.clickSuppress) { this.clickSuppress = false; return; }
             const now = Date.now();
             if (now - this.lastTapTime < 300) {
+                // 双击:缩放
                 this.lastTapTime = 0;
+                if (this.singleTapTimer) { clearTimeout(this.singleTapTimer); this.singleTapTimer = null; }
                 this.toggleZoom();
             } else {
                 this.lastTapTime = now;
-                setTimeout(() => {
-                    if (this.lastTapTime && Date.now() - this.lastTapTime >= 280) {
-                        this.lastTapTime = 0;
-                        this.toggleControls();
-                    }
+                if (this.singleTapTimer) clearTimeout(this.singleTapTimer);
+                this.singleTapTimer = setTimeout(() => {
+                    this.lastTapTime = 0;
+                    this.toggleControls();
                 }, 290);
             }
         },
@@ -240,52 +218,21 @@ const imageViewer = defineComponent({
             }
         },
 
-        // ===== 缩放滑块 =====
-        onThumbTouchStart(e: any) {
-            const t = this._getTouch(e);
-            if (!t) return;
-            this.isDraggingThumb = true;
-            this.thumbStartX = t.clientX;
-            this.thumbStartPercent = this.zoomPercent;
-            if (this.autoHideTimer) clearTimeout(this.autoHideTimer);
-        },
-
-        onThumbTouchMove(e: any) {
-            if (!this.isDraggingThumb) return;
-            const t = this._getTouch(e);
-            if (!t) return;
-            const trackWidth = 120;
-            const deltaX = t.clientX - this.thumbStartX;
-            let newPercent = this.thumbStartPercent + (deltaX / trackWidth) * 100;
-            newPercent = Math.max(0, Math.min(100, newPercent));
-            const logMin = Math.log(MIN_SCALE);
-            const logMax = Math.log(MAX_SCALE);
-            this.scale = Math.exp(logMin + (newPercent / 100) * (logMax - logMin));
-        },
-
-        onThumbTouchEnd() {
-            this.isDraggingThumb = false;
-            this.scheduleAutoHide();
-        },
-
         zoomIn() {
             this.scale = Math.min(this.scale * 1.3, MAX_SCALE);
-            this.scheduleAutoHide();
         },
 
         zoomOut() {
             this.scale = Math.max(this.scale / 1.3, MIN_SCALE);
-            this.scheduleAutoHide();
         },
 
         resetView() {
             this.scale = 1.0;
             this.rotation = 0;
-            this.scheduleAutoHide();
         },
 
-        rotateLeft() { this.rotation -= 90; this.scheduleAutoHide(); },
-        rotateRight() { this.rotation += 90; this.scheduleAutoHide(); },
+        rotateLeft() { this.rotation -= 90; },
+        rotateRight() { this.rotation += 90; },
 
         // ===== Shell / 加载 =====
         async initializeShell() {
@@ -387,6 +334,14 @@ const imageViewer = defineComponent({
                     }
                 }
             );
+        },
+
+        // 菜单图片列表点击:可靠浏览(替代不可靠的手指滑动)
+        async loadImageByIndex(idx: number) {
+            if (idx < 0 || idx >= this.imageList.length) return;
+            this.showMenu = false;
+            this.currentImageIndex = idx;
+            await this.loadImage(this.imageList[idx]);
         },
 
         async nextImage() {

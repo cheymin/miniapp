@@ -1,7 +1,6 @@
 // 沉浸式图片查看器(320×240 设备)
 @bg-deep: #000000;
 @bg-bar: rgba(18, 20, 26, 0.95);
-@bg-card: #1c2128;
 @bg-elevated: #2a2f3a;
 @border: #30363d;
 @text-primary: #e6edf3;
@@ -71,22 +70,6 @@
     background-color: @bg-deep;
 }
 
-.slideshow-badge {
-    position: absolute;
-    top: 6px;
-    left: 0;
-    right: 0;
-    align-items: center;
-}
-
-.slideshow-text {
-    font-size: 10px;
-    color: #ffffff;
-    background-color: rgba(47, 129, 247, 0.9);
-    padding: 2px 8px;
-    border-radius: 8px;
-}
-
 .nav-arrow {
     position: absolute;
     top: 0;
@@ -109,6 +92,38 @@
     color: rgba(230, 237, 243, 0.6);
     width: 26px;
     text-align: center;
+}
+
+.slideshow-badge {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    right: 0;
+    align-items: center;
+}
+
+.slideshow-text {
+    font-size: 10px;
+    color: #ffffff;
+    background-color: rgba(47, 129, 247, 0.9);
+    padding: 2px 8px;
+    border-radius: 8px;
+}
+
+// 持久≡按钮(controls隐藏时显示,保证能恢复UI)
+.float-menu-btn {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 26px;
+    height: 26px;
+    font-size: 16px;
+    color: @text-primary;
+    text-align: center;
+    line-height: 26px;
+    background-color: rgba(18, 20, 26, 0.7);
+    border-radius: 13px;
+    z-index: 50;
 }
 
 // ===== 空状态 =====
@@ -150,63 +165,6 @@
 .empty-btn-ghost {
     color: @text-secondary;
     background-color: @bg-elevated;
-}
-
-// ===== 底部缩放栏 =====
-.bottom-bar {
-    height: 34px;
-    background-color: @bg-bar;
-    flex-direction: row;
-    align-items: center;
-    padding: 0 8px;
-    gap: 6px;
-}
-
-.zoom-icon {
-    font-size: 16px;
-    color: @text-primary;
-    width: 22px;
-    height: 22px;
-    text-align: center;
-    line-height: 22px;
-}
-
-.zoom-track {
-    flex: 1;
-    height: 3px;
-    background-color: rgba(255, 255, 255, 0.15);
-    border-radius: 2px;
-    position: relative;
-}
-
-.zoom-fill {
-    height: 3px;
-    background-color: @accent;
-    border-radius: 2px;
-}
-
-.zoom-thumb {
-    width: 14px;
-    height: 14px;
-    background-color: #ffffff;
-    border-radius: 7px;
-    position: absolute;
-    top: -6px;
-    margin-left: -7px;
-}
-
-.zoom-value {
-    font-size: 10px;
-    color: @text-secondary;
-    width: 32px;
-    text-align: right;
-}
-
-.zoom-reset {
-    font-size: 14px;
-    color: @text-secondary;
-    width: 22px;
-    text-align: center;
 }
 
 // ===== 全屏覆盖式菜单 =====
@@ -258,7 +216,7 @@
 .menu-section-title {
     font-size: 11px;
     color: @accent;
-    margin-top: 8px;
+    margin-top: 10px;
     margin-bottom: 5px;
     font-weight: bold;
 }
@@ -267,14 +225,29 @@
     margin-top: 0;
 }
 
-.menu-path {
+.menu-empty-text {
     font-size: 10px;
     color: @text-secondary;
-    background-color: @bg-elevated;
-    padding: 5px 7px;
+    padding: 6px 4px;
+}
+
+// 图片列表项
+.menu-list-item {
+    padding: 7px 8px;
     border-radius: 4px;
-    margin-bottom: 6px;
-    lines: 2;
+    margin-bottom: 3px;
+    background-color: @bg-elevated;
+}
+
+.menu-list-active {
+    background-color: rgba(47, 129, 247, 0.25);
+    border-left-width: 3px;
+    border-left-color: @accent;
+}
+
+.menu-list-text {
+    font-size: 11px;
+    color: @text-primary;
 }
 
 .menu-row {
@@ -294,9 +267,24 @@
     text-align: center;
 }
 
+.menu-btn-info {
+    flex: 0.8;
+    color: @accent;
+}
+
 .menu-btn-danger {
     color: @danger;
     background-color: rgba(248, 81, 73, 0.15);
+}
+
+.menu-path {
+    font-size: 10px;
+    color: @text-secondary;
+    background-color: @bg-elevated;
+    padding: 5px 7px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    lines: 2;
 }
 
 .menu-info {
@@ -304,12 +292,4 @@
     color: @text-secondary;
     margin-bottom: 3px;
     lines: 2;
-}
-
-.menu-tip {
-    font-size: 10px;
-    color: #555c66;
-    margin-top: 10px;
-    text-align: center;
-    lines: 3;
 }

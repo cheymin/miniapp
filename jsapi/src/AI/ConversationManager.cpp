@@ -265,13 +265,21 @@ void ConversationManager::loadApiSettings(std::string &apiKey, std::string &base
     if (!results.empty())
     {
         const auto &row = results[0];
-        apiKey = row.at("api_key");
-        baseUrl = row.at("base_url");
-        model = row.at("model");
-        maxTokens = std::stoi(row.at("max_tokens"));
-        temperature = std::stod(row.at("temperature"));
-        topP = std::stod(row.at("top_p"));
-        systemPrompt = row.at("system_prompt");
+        // 防御性读取：旧库某列缺失/NULL 时用默认值，避免抛异常触发上层 recover() 丢数据
+        apiKey = row.count("api_key") ? row.at("api_key") : "";
+        baseUrl = row.count("base_url") ? row.at("base_url") : "";
+        model = row.count("model") ? row.at("model") : "";
+        try
+        {
+            maxTokens = row.count("max_tokens") ? std::stoi(row.at("max_tokens")) : 4096;
+            temperature = row.count("temperature") ? std::stod(row.at("temperature")) : 0.7;
+            topP = row.count("top_p") ? std::stod(row.at("top_p")) : 0.9;
+        }
+        catch (...)
+        {
+            // 数值列内容异常：保留默认值
+        }
+        systemPrompt = row.count("system_prompt") ? row.at("system_prompt") : "";
     }
 }
 

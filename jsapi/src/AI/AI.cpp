@@ -33,10 +33,18 @@ AI::AI(const std::string &dbPath)
     std::lock_guard<std::mutex> settingsLock(settingsMutex);
     std::lock_guard<std::mutex> conversationLock(conversationMutex);
 
+    // 设置加载失败不影响对话数据：用默认设置继续，绝不因设置异常触发 recover() 隐藏用户数据
     try
     {
         conversationManager.loadApiSettings(apiKey, baseUrl, model, maxTokens, temperature, topP, systemPrompt);
+    }
+    catch (...)
+    {
+        // 旧库 api_settings 结构异常：保留代码内默认设置，不动数据库
+    }
 
+    try
+    {
         auto conversationsResponse = conversationManager.getConversationList();
         if (conversationsResponse.empty())
         {
@@ -58,7 +66,7 @@ AI::AI(const std::string &dbPath)
     }
     catch (...)
     {
-        // 运行期读库失败（库损坏）：备份坏库并重建后建一个默认对话，避免永久卡死进不去 AI 助手
+        // 仅当连对话列表都读不出（真正的库损坏）才备份重建；旧库备份保留以便后续恢复
         conversationManager.recover();
         try
         {
