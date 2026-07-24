@@ -264,7 +264,7 @@ const softKeyboard = defineComponent({
                     { value: 'Control', displayText: 'Ctrl', width: 1.5 },
                     { value: 'Zh', displayText: this.isChineseMode ? '中' : 'En', width: 1.5 },
                     { value: ' ', displayText: '', width: 7.5 },
-                    { value: 'Voice', displayText: '🎤' },
+                    { value: 'Voice', displayText: '话' },
                     { value: 'Scan', displayText: 'Sc' },
                     { value: 'Close', displayText: 'cl' },
                     { value: 'Control', displayText: 'Ctrl', width: 1.5 },
@@ -533,35 +533,38 @@ const softKeyboard = defineComponent({
 
         async startVoiceInput() {
             if (this.isRecording) return;
-            await minConfig.loadAll();
-            const voiceCfg = minConfig.getVoice();
-            if (!voiceCfg.apiUrl || !voiceCfg.apiKey) {
-                showInfo('请先在设置中配置语音转文字API');
-                return;
-            }
             this.isRecording = true;
             this.$forceUpdate();
+            await minConfig.loadAll();
+            const voiceCfg = minConfig.getVoice();
             const audioFile = '/tmp/voice_input.wav';
-            showInfo('录音中... 再次点击停止');
-            // 录音3秒（设备可能不支持arecord，捕获错误）
+            showLoading('录音中(2秒)...');
+            let recorded = false;
             try {
-                await Shell.exec(`arecord -d 3 -f cd -r 16000 -c 1 "${audioFile}" 2>/dev/null`);
+                await Shell.exec(`arecord -d 2 -r 16000 -c 1 "${audioFile}" 2>/dev/null`);
+                recorded = true;
             } catch (e) {
-                // arecord 不可用时尝试简短录音
                 try {
-                    await Shell.exec(`arecord -d 3 "${audioFile}"`);
+                    await Shell.exec(`arecord -d 2 "${audioFile}"`);
+                    recorded = true;
                 } catch (e2) {
+                    hideLoading();
                     this.isRecording = false;
                     this.$forceUpdate();
-                    showError('录音失败，设备不支持');
+                    showError('录音失败: 设备无arecord');
                     return;
                 }
             }
             this.isRecording = false;
             this.$forceUpdate();
-            showLoading();
+            if (!recorded) { hideLoading(); return; }
+            if (!voiceCfg.apiUrl || !voiceCfg.apiKey) {
+                hideLoading();
+                showInfo('已录音,请配置语音API');
+                return;
+            }
+            showLoading('识别中...');
             try {
-                // 上传到云端STT API
                 const cmd = `curl -s -X POST -H "Authorization: Bearer ${voiceCfg.apiKey}" -F "audio=@${audioFile}" "${voiceCfg.apiUrl}"`;
                 const result = await Shell.exec(cmd);
                 const text = this.extractTextFromSTT(result);
@@ -575,7 +578,7 @@ const softKeyboard = defineComponent({
                     showError('未识别到内容');
                 }
             } catch (e: any) {
-                showError('语音识别失败: ' + (e.message || e));
+                showError('识别失败: ' + (e.message || e));
             } finally {
                 hideLoading();
             }

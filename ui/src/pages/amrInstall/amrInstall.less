@@ -70,7 +70,6 @@
     color: @text-primary;
     text-align: center;
     margin-bottom: 8px;
-    lines: 2;
 }
 
 // ===== 信息区 =====
@@ -131,18 +130,31 @@
 .btn-area {
     width: 100%;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     margin-top: 4px;
 }
 
 .install-btn {
     width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-text-white {
     font-size: 14px;
     color: #ffffff;
     text-align: center;
-    padding: 8px 0;
-    border-radius: 8px;
-    margin-bottom: 6px;
+    line-height: 20px;
+}
+
+.btn-text {
+    font-size: 14px;
+    color: @text-primary;
+    text-align: center;
+    line-height: 20px;
 }
 
 .btn-install-active {
@@ -156,13 +168,12 @@
 
 .cancel-btn {
     width: 100%;
-    font-size: 14px;
-    color: @text-primary;
-    text-align: center;
-    padding: 8px 0;
+    height: 40px;
     border-radius: 8px;
     background-color: @bg-elevated;
     border-width: 1px;
     border-color: @border;
     border-style: solid;
+    align-items: center;
+    justify-content: center;
 }

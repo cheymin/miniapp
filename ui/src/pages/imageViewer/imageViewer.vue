@@ -54,7 +54,7 @@
 
     <!-- 空状态 -->
     <div v-if="!hasImage" class="empty-state">
-      <text class="empty-icon">🖼</text>
+      <text class="empty-icon">◇</text>
       <text class="empty-title">图片查看器</text>
       <text class="empty-hint">点击菜单选择图片目录</text>
       <text class="empty-btn" @click="selectDirectory">选择目录</text>
@@ -80,6 +80,16 @@
               <text class="menu-btn" @click="resetView">⟳ 重置</text>
               <text class="menu-btn" @click="rotateLeft">↺ 左转</text>
               <text class="menu-btn" @click="rotateRight">↻ 右转</text>
+            </div>
+
+            <text class="menu-section-title">平移</text>
+            <div class="menu-row">
+              <text class="menu-btn" @click="panLeft">← 左移</text>
+              <text class="menu-btn" @click="panRight">→ 右移</text>
+            </div>
+            <div class="menu-row">
+              <text class="menu-btn" @click="panUp">↑ 上移</text>
+              <text class="menu-btn" @click="panDown">↓ 下移</text>
             </div>
 
             <text class="menu-section-title">操作</text>

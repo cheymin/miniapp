@@ -15,20 +15,14 @@
 // You should have received a copy of the GNU General Public License
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
-// 统一配置存储：所有新模块数据持久化到 /userdisk/min/database/
-// 用 $falcon.storage 的 key-value，key 带 min/database 前缀
-const DB_PREFIX = 'min/database';
-
-export interface WebDAVConfig {
-    url: string;          // 如 http://dav.example.com/dav
-    username: string;
-    password: string;
-    remotePath: string;   // 备份远程目录 如 /minapp-backup
-}
+// 统一配置存储：所有新模块数据持久化到 /userdisk/database/
+// 全部配置合并到单一 key (database/min-config)，减少散落 JSON 文件
+const CONFIG_KEY = 'database/min-config';
 
 export interface MemosConfig {
     url: string;          // 如 http://memos.example.com
-    token: string;        // Access Token
+    username: string;     // 账户名
+    password: string;     // 密码
 }
 
 export interface AppBackgroundConfig {
@@ -42,76 +36,69 @@ export interface VoiceSTTConfig {
     apiKey: string;
 }
 
+interface AllConfig {
+    memos: MemosConfig;
+    background: AppBackgroundConfig;
+    voice: VoiceSTTConfig;
+}
+
+function defaultConfig(): AllConfig {
+    return {
+        memos: { url: '', username: '', password: '' },
+        background: { enabled: false, imagePath: '', opacity: 60 },
+        voice: { apiUrl: '', apiKey: '' },
+    };
+}
+
 class MinConfig {
-    private webdav: WebDAVConfig | null = null;
-    private memos: MemosConfig | null = null;
-    private background: AppBackgroundConfig | null = null;
-    private voice: VoiceSTTConfig | null = null;
+    private data: AllConfig = defaultConfig();
     private loaded: boolean = false;
 
     async loadAll(): Promise<void> {
         if (this.loaded) return;
         try {
-            this.webdav = await this.read<WebDAVConfig>('webdav', { url: '', username: '', password: '', remotePath: '/minapp-backup' });
-            this.memos = await this.read<MemosConfig>('memos', { url: '', token: '' });
-            this.background = await this.read<AppBackgroundConfig>('background', { enabled: false, imagePath: '', opacity: 60 });
-            this.voice = await this.read<VoiceSTTConfig>('voice', { apiUrl: '', apiKey: '' });
+            const raw = await $falcon.storage.get(CONFIG_KEY);
+            if (raw && typeof raw === 'string') {
+                const parsed = JSON.parse(raw);
+                this.data = Object.assign(defaultConfig(), parsed);
+            }
             this.loaded = true;
         } catch (e) {
             console.error('MinConfig load failed:', e);
+            this.data = defaultConfig();
         }
     }
 
-    private async read<T>(key: string, fallback: T): Promise<T> {
+    private async save(): Promise<void> {
         try {
-            const raw = await $falcon.storage.get(`${DB_PREFIX}/${key}`);
-            if (raw && typeof raw === 'string') {
-                return Object.assign({}, fallback, JSON.parse(raw));
-            }
+            await $falcon.storage.set(CONFIG_KEY, JSON.stringify(this.data));
         } catch (e) {
-            // ignore
+            console.error('MinConfig save failed:', e);
         }
-        return fallback;
-    }
-
-    private async write<T>(key: string, value: T): Promise<void> {
-        try {
-            await $falcon.storage.set(`${DB_PREFIX}/${key}`, JSON.stringify(value));
-        } catch (e) {
-            console.error('MinConfig write failed:', e);
-        }
-    }
-
-    getWebDAV(): WebDAVConfig {
-        return this.webdav || { url: '', username: '', password: '', remotePath: '/minapp-backup' };
-    }
-    async setWebDAV(cfg: WebDAVConfig): Promise<void> {
-        this.webdav = cfg;
-        await this.write('webdav', cfg);
     }
 
     getMemos(): MemosConfig {
-        return this.memos || { url: '', token: '' };
+        return this.data.memos;
     }
     async setMemos(cfg: MemosConfig): Promise<void> {
-        this.memos = cfg;
-        await this.write('memos', cfg);
+        this.data.memos = cfg;
+        await this.save();
     }
 
     getBackground(): AppBackgroundConfig {
-        return this.background || { enabled: false, imagePath: '', opacity: 60 };
+        return this.data.background;
     }
     async setBackground(cfg: AppBackgroundConfig): Promise<void> {
-        this.background = cfg;
-        await this.write('background', cfg);
+        this.data.background = cfg;
+        await this.save();
     }
 
     getVoice(): VoiceSTTConfig {
-        return this.voice || { apiUrl: '', apiKey: '' };
+        return this.data.voice;
     }
     async setVoice(cfg: VoiceSTTConfig): Promise<void> {
-        this.voice = cfg;
-        await this.write('voice', cfg);
+        this.data.voice = cfg;
+        await this.save();
     }
 }
 

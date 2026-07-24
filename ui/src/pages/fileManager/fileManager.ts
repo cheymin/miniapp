@@ -524,6 +524,12 @@ export default defineComponent({
           return;
         }
 
+        // 压缩文件 - 解压
+        if (['zip', 'tar', 'gz', 'tgz', 'bz2', 'tar.gz'].includes(ext) || file.name.endsWith('.tar.gz')) {
+          await this.extractArchive(file);
+          return;
+        }
+
         // 其他文件类型，显示选择对话框
         await this.showOpenWithDialog(file);
         
@@ -534,6 +540,36 @@ export default defineComponent({
     },
     
     // 使用指定应用打开
+    async extractArchive(file: FileItem) {
+      const dir = file.fullPath.substring(0, file.fullPath.lastIndexOf('/'));
+      const baseName = file.name.replace(/\.(zip|tar|gz|tgz|bz2|tar\.gz)$/i, '');
+      const targetDir = dir + '/' + baseName;
+      showLoading('解压中...');
+      try {
+        await Shell.exec(`mkdir -p "${targetDir}"`);
+        const name = file.name.toLowerCase();
+        let cmd = '';
+        if (name.endsWith('.zip')) {
+          cmd = `unzip -o "${file.fullPath}" -d "${targetDir}"`;
+        } else if (name.endsWith('.tar.gz') || name.endsWith('.tgz')) {
+          cmd = `tar -xzf "${file.fullPath}" -C "${targetDir}"`;
+        } else if (name.endsWith('.tar') || name.endsWith('.tar.bz2') || name.endsWith('.bz2')) {
+          cmd = `tar -xf "${file.fullPath}" -C "${targetDir}"`;
+        } else if (name.endsWith('.gz')) {
+          cmd = `cd "${targetDir}" && gzip -dc "${file.fullPath}" > "${baseName}"`;
+        } else {
+          cmd = `unzip -o "${file.fullPath}" -d "${targetDir}" 2>/dev/null || tar -xf "${file.fullPath}" -C "${targetDir}"`;
+        }
+        await Shell.exec(cmd);
+        showSuccess('已解压到 ' + baseName + '/');
+        await this.loadDirectory();
+      } catch (e: any) {
+        showError('解压失败: ' + (e.message || e));
+      } finally {
+        hideLoading();
+      }
+    },
+
     async openWithApp(file: FileItem, appName: string) {
       console.log(`使用 ${appName} 打开文件:`, file.fullPath);
       

@@ -44,10 +44,12 @@
             <text v-if="statusMessage" :class="'status-msg status-' + installStatus">{{ statusMessage }}</text>
 
             <div class="btn-area">
-                <text v-if="installStatus !== 'success'" :class="'install-btn ' + (canInstall ? 'btn-install-active' : 'btn-install-disabled')" @click="doInstall">
-                    {{ icon('install') }} {{ isInstalling ? '安装中...' : '安装' }}
-                </text>
-                <text class="cancel-btn" @click="cancelInstall">{{ icon('close') }} {{ installStatus === 'success' ? '完成' : '取消' }}</text>
+                <div v-if="installStatus !== 'success'" :class="'install-btn ' + (canInstall ? 'btn-install-active' : 'btn-install-disabled')" @click="doInstall">
+                    <text class="btn-text-white">{{ icon('install') }} {{ isInstalling ? '安装中...' : '安装' }}</text>
+                </div>
+                <div class="cancel-btn" @click="cancelInstall">
+                    <text class="btn-text">{{ icon('close') }} {{ installStatus === 'success' ? '完成' : '取消' }}</text>
+                </div>
             </div>
         </div>
         <Loading />

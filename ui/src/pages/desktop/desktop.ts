@@ -27,25 +27,23 @@ interface AppItem {
 }
 
 const APP_ICONS: { [key: string]: { icon: string; color: string } } = {
-    ai: { icon: '🤖', color: '#6366f1' },
-    chat: { icon: '💬', color: '#22c55e' },
-    fileManager: { icon: '📁', color: '#f59e0b' },
-    gallery: { icon: '🖼️', color: '#10b981' },
-    imageViewer: { icon: '👁️', color: '#3b82f6' },
-    musicPlayer: { icon: '🎵', color: '#ec4899' },
-    calculator: { icon: '🔢', color: '#8b5cf6' },
-    qrcodeGenerator: { icon: '📱', color: '#06b6d4' },
-    unitConverter: { icon: '🔄', color: '#f97316' },
-    browser: { icon: '🌐', color: '#3b82f6' },
-    qqchat: { icon: '💬', color: '#22c55e' },
-    shell: { icon: '⌨️', color: '#1e293b' },
-    update: { icon: '⬇️', color: '#0ea5e9' },
-    deviceinfo: { icon: '📱', color: '#64748b' },
-    misc: { icon: '⚙️', color: '#6b7280' },
-    about: { icon: 'ℹ️', color: '#0ea5e9' },
-    webdavBackup: { icon: '☁️', color: '#0ea5e9' },
-    webdavFiles: { icon: '📂', color: '#0ea5e9' },
-    memos: { icon: '📝', color: '#eab308' }
+    ai: { icon: 'AI', color: '#6366f1' },
+    chat: { icon: '✉', color: '#22c55e' },
+    fileManager: { icon: '▣', color: '#f59e0b' },
+    gallery: { icon: '◇', color: '#10b981' },
+    imageViewer: { icon: '◉', color: '#3b82f6' },
+    musicPlayer: { icon: '♪', color: '#ec4899' },
+    calculator: { icon: '=', color: '#8b5cf6' },
+    qrcodeGenerator: { icon: '▦', color: '#06b6d4' },
+    unitConverter: { icon: '↻', color: '#f97316' },
+    browser: { icon: '○', color: '#3b82f6' },
+    qqchat: { icon: '✉', color: '#22c55e' },
+    shell: { icon: '>', color: '#1e293b' },
+    update: { icon: '↓', color: '#0ea5e9' },
+    deviceinfo: { icon: 'i', color: '#64748b' },
+    misc: { icon: '☰', color: '#6b7280' },
+    about: { icon: '?', color: '#0ea5e9' },
+    memos: { icon: '✎', color: '#eab308' }
 };
 
 const desktop = defineComponent({
@@ -91,8 +89,6 @@ const desktop = defineComponent({
                 { id: 'update', name: '更新', ...APP_ICONS.update },
                 { id: 'deviceinfo', name: '设备信息', ...APP_ICONS.deviceinfo },
                 { id: 'misc', name: '设置', ...APP_ICONS.misc },
-                { id: 'webdavBackup', name: 'WebDAV备份', ...APP_ICONS.webdavBackup },
-                { id: 'webdavFiles', name: 'WebDAV文件', ...APP_ICONS.webdavFiles },
                 { id: 'memos', name: '备忘录', ...APP_ICONS.memos },
                 { id: 'about', name: '关于', ...APP_ICONS.about }
             ] as AppItem[],

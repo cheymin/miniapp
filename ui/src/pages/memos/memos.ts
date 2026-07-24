@@ -38,13 +38,16 @@ const memos = defineComponent({
         return {
             $page: {} as FalconPage<MemosOptions>,
             memosUrl: '',
-            memosToken: '',
+            memosUsername: '',
+            memosPassword: '',
             memoList: [] as MemoItem[],
             isLoading: false,
             showConfig: false,
             showEditor: false,
             editingMemo: null as MemoItem | null,
             editorContent: '',
+            cookieFile: '/tmp/memos_cookie.txt',
+            loggedIn: false,
         };
     },
 
@@ -53,7 +56,7 @@ const memos = defineComponent({
         this.$page.$npage.on('backpressed', this.handleBackPress);
         try { await Shell.initialize(); } catch (e) { /* ignore */ }
         await this.loadConfig();
-        if (this.memosUrl && this.memosToken) {
+        if (this.memosUrl && this.memosUsername) {
             await this.loadMemos();
         } else {
             this.showConfig = true;
@@ -65,7 +68,7 @@ const memos = defineComponent({
     },
 
     computed: {
-        hasConfig(): boolean { return !!this.memosUrl && !!this.memosToken; },
+        hasConfig(): boolean { return !!this.memosUrl && !!this.memosUsername; },
     },
 
     methods: {
@@ -81,11 +84,13 @@ const memos = defineComponent({
             await minConfig.loadAll();
             const cfg = minConfig.getMemos();
             this.memosUrl = cfg.url;
-            this.memosToken = cfg.token;
+            this.memosUsername = cfg.username;
+            this.memosPassword = cfg.password;
         },
 
         async saveConfig() {
-            await minConfig.setMemos({ url: this.memosUrl, token: this.memosToken });
+            await minConfig.setMemos({ url: this.memosUrl, username: this.memosUsername, password: this.memosPassword });
+            this.loggedIn = false;
             showSuccess('配置已保存');
             this.showConfig = false;
             await this.loadMemos();
@@ -98,11 +103,37 @@ const memos = defineComponent({
             );
         },
 
-        editToken() {
+        editUsername() {
             openSoftKeyboard(
-                () => this.memosToken,
-                (v) => { this.memosToken = v; this.$forceUpdate(); }
+                () => this.memosUsername,
+                (v) => { this.memosUsername = v; this.$forceUpdate(); }
             );
+        },
+
+        editPassword() {
+            openSoftKeyboard(
+                () => this.memosPassword,
+                (v) => { this.memosPassword = v; this.$forceUpdate(); }
+            );
+        },
+
+        // 账户密码登录，保存 cookie
+        async ensureLogin(): Promise<boolean> {
+            if (this.loggedIn) return true;
+            const url = this.memosUrl.replace(/\/$/, '');
+            const payload = JSON.stringify({ username: this.memosUsername, password: this.memosPassword, neverExpire: true });
+            const safePayload = payload.replace(/'/g, "'\\''");
+            await Shell.exec(`echo -n '${safePayload}' > /tmp/memos_login.json`);
+            const cmd = `curl -s -c ${this.cookieFile} -X POST -H "Content-Type: application/json" -d @/tmp/memos_login.json "${url}/api/v1/auth/signin"`;
+            const result = await Shell.exec(cmd);
+            try {
+                const data = JSON.parse(result);
+                if (data && (data.id || data.name)) {
+                    this.loggedIn = true;
+                    return true;
+                }
+            } catch (e) { /* ignore */ }
+            return false;
         },
 
         async loadMemos() {
@@ -111,7 +142,13 @@ const memos = defineComponent({
             showLoading();
             try {
                 const url = this.memosUrl.replace(/\/$/, '');
-                const cmd = `curl -s -H "Authorization: Bearer ${this.memosToken}" "${url}/api/v1/memos?pageSize=100"`;
+                if (!await this.ensureLogin()) {
+                    showError('登录失败，请检查账户密码');
+                    this.memoList = [];
+                    this.showConfig = true;
+                    return;
+                }
+                const cmd = `curl -s -b ${this.cookieFile} "${url}/api/v1/memos?pageSize=100"`;
                 const result = await Shell.exec(cmd);
                 const data = JSON.parse(result);
                 const list = data.memos || [];
@@ -160,11 +197,11 @@ const memos = defineComponent({
                 const safePayload = payload.replace(/'/g, "'\\''");
                 await Shell.exec(`echo -n '${safePayload}' > /tmp/memos_payload.json`);
                 if (this.editingMemo) {
-                    const cmd = `curl -s -X PATCH -H "Authorization: Bearer ${this.memosToken}" -H "Content-Type: application/json" -d @/tmp/memos_payload.json "${url}/api/v1/memos/${this.editingMemo.name}"`;
+                    const cmd = `curl -s -b ${this.cookieFile} -X PATCH -H "Content-Type: application/json" -d @/tmp/memos_payload.json "${url}/api/v1/memos/${this.editingMemo.name}"`;
                     await Shell.exec(cmd);
                     showSuccess('已更新');
                 } else {
-                    const cmd = `curl -s -X POST -H "Authorization: Bearer ${this.memosToken}" -H "Content-Type: application/json" -d @/tmp/memos_payload.json "${url}/api/v1/memos"`;
+                    const cmd = `curl -s -b ${this.cookieFile} -X POST -H "Content-Type: application/json" -d @/tmp/memos_payload.json "${url}/api/v1/memos"`;
                     await Shell.exec(cmd);
                     showSuccess('已创建');
                 }
@@ -181,7 +218,7 @@ const memos = defineComponent({
             showLoading();
             try {
                 const url = this.memosUrl.replace(/\/$/, '');
-                const cmd = `curl -s -X DELETE -H "Authorization: Bearer ${this.memosToken}" "${url}/api/v1/memos/${memo.name}"`;
+                const cmd = `curl -s -b ${this.cookieFile} -X DELETE "${url}/api/v1/memos/${memo.name}"`;
                 await Shell.exec(cmd);
                 showSuccess('已删除');
                 await this.loadMemos();

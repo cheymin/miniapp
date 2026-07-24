@@ -116,7 +116,7 @@ void JSChat::generateResponse(JQAsyncInfo &info)
         {
             publish("chat_stream", messageDelta);
         };
-        info.post(ai->generateResponseIncremental(callback));
+        info.post(ai->generateResponse(callback));
     }
     catch (const std::exception &e)
     {
@@ -319,7 +319,7 @@ void JSChat::regenerateLastMessage(JQAsyncInfo &info)
         {
             publish("chat_stream", messageDelta);
         };
-        info.post(ai->generateResponseIncremental(callback));
+        info.post(ai->generateResponse(callback));
     }
     catch (const std::exception &e)
     {

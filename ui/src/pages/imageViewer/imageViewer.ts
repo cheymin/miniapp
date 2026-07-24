@@ -50,6 +50,8 @@ const imageViewer = defineComponent({
 
             scale: 1.0,
             rotation: 0,
+            panX: 0,
+            panY: 0,
 
             showControls: true as boolean,
             showMenu: false as boolean,
@@ -79,7 +81,7 @@ const imageViewer = defineComponent({
             return {
                 width: w + 'px',
                 height: h + 'px',
-                transform: `rotate(${this.rotation}deg)`
+                transform: `rotate(${this.rotation}deg) translate(${this.panX}px, ${this.panY}px)`
             };
         },
         hasImage(): boolean {
@@ -229,10 +231,17 @@ const imageViewer = defineComponent({
         resetView() {
             this.scale = 1.0;
             this.rotation = 0;
+            this.panX = 0;
+            this.panY = 0;
         },
 
         rotateLeft() { this.rotation -= 90; },
         rotateRight() { this.rotation += 90; },
+
+        panLeft() { this.panX -= 20; },
+        panRight() { this.panX += 20; },
+        panUp() { this.panY -= 20; },
+        panDown() { this.panY += 20; },
 
         // ===== Shell / 加载 =====
         async initializeShell() {

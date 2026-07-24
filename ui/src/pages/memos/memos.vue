@@ -54,8 +54,12 @@
                     <text class="config-input" @click="editUrl">{{ memosUrl || '点击输入' }}</text>
                 </div>
                 <div class="config-item">
-                    <text class="config-label">Token</text>
-                    <text class="config-input" @click="editToken">{{ memosToken ? memosToken.split('').map(_ => '*').join('') : '点击输入' }}</text>
+                    <text class="config-label">用户名</text>
+                    <text class="config-input" @click="editUsername">{{ memosUsername || '点击输入' }}</text>
+                </div>
+                <div class="config-item">
+                    <text class="config-label">密码</text>
+                    <text class="config-input" @click="editPassword">{{ memosPassword ? memosPassword.split('').map(_ => '*').join('') : '点击输入' }}</text>
                 </div>
                 <text class="btn btn-primary" @click="saveConfig">{{ icon('save') }} 保存并连接</text>
             </div>
