@@ -15,6 +15,29 @@
 // You should have received a copy of the GNU General Public License
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
+import { Database } from 'langningchen';
+
+// ===== 统一 SQLite KV 后端 =====
+// JSDatabase 为单一共享连接，整个应用只能开一个 .db 文件。
+// 所有模块（minConfig/qqchat/qrcode/calculator/browser/misc/softKeyboard）必须
+// 复用同一 DB_PATH 与同一连接，否则后 initialize 会 close 掉前者的连接。
+const DB_PATH = '/userdisk/database/langningchen-config.db';
+let dbReady = false;
+function ensureDb(): void {
+    if (dbReady) return;
+    Database.initialize(DB_PATH);
+    dbReady = true;
+}
+// 通用 KV（供其他模块复用，替代 $falcon.storage 的 JSON 文件）
+export function dbGet(key: string): string {
+    ensureDb();
+    return Database.get(key);
+}
+export function dbSet(key: string, value: string): boolean {
+    ensureDb();
+    return Database.set(key, value);
+}
+
 export interface DatabaseConfig {
     qq: {
         enabled: boolean;
@@ -59,9 +82,8 @@ export interface ChatSession {
     messages: ChatMessage[];
 }
 
-const DATABASE_PATH = '/userdisk/database';
-const CONFIG_FILE = 'config.json';
-const CHAT_FILE = 'chats.json';
+const CONFIG_KEY = 'qq-config';
+const CHAT_KEY = 'qq-chats';
 
 class DatabaseManager {
     private config: DatabaseConfig | null = null;
@@ -96,7 +118,7 @@ class DatabaseManager {
 
     async loadConfig(): Promise<DatabaseConfig> {
         try {
-            const data = await $falcon.storage.get(`${DATABASE_PATH}/${CONFIG_FILE}`);
+            const data = dbGet(CONFIG_KEY);
             if (data) {
                 this.config = JSON.parse(data);
             } else {
@@ -113,7 +135,7 @@ class DatabaseManager {
     async saveConfig(): Promise<void> {
         if (!this.config) return;
         try {
-            await $falcon.storage.set(`${DATABASE_PATH}/${CONFIG_FILE}`, JSON.stringify(this.config));
+            dbSet(CONFIG_KEY, JSON.stringify(this.config));
         } catch (error) {
             console.error('Failed to save config:', error);
         }
@@ -172,7 +194,7 @@ class DatabaseManager {
 
     async loadChats(): Promise<void> {
         try {
-            const data = await $falcon.storage.get(`${DATABASE_PATH}/${CHAT_FILE}`);
+            const data = dbGet(CHAT_KEY);
             if (data) {
                 const chatsArray: ChatSession[] = JSON.parse(data);
                 this.chats = new Map(chatsArray.map(chat => [chat.id, chat]));
@@ -185,7 +207,7 @@ class DatabaseManager {
     async saveChats(): Promise<void> {
         try {
             const chatsArray = Array.from(this.chats.values());
-            await $falcon.storage.set(`${DATABASE_PATH}/${CHAT_FILE}`, JSON.stringify(chatsArray));
+            dbSet(CHAT_KEY, JSON.stringify(chatsArray));
         } catch (error) {
             console.error('Failed to save chats:', error);
         }

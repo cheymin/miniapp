@@ -15,11 +15,10 @@
 // You should have received a copy of the GNU General Public License
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
-import { Database } from 'langningchen';
+import { dbGet, dbSet } from './database';
 
 // 统一配置存储：所有模块配置持久化到 SQLite（/userdisk/database/langningchen-config.db）
-// 全部配置合并到单一 KV key，彻底弃用 $falcon.storage 的 JSON 文件存储
-const DB_PATH = '/userdisk/database/langningchen-config.db';
+// 复用 database.ts 的单一 DB 连接（JSDatabase 单连接，禁止各自 initialize）
 const CONFIG_KEY = 'min-config';
 
 export interface MemosConfig {
@@ -56,20 +55,11 @@ function defaultConfig(): AllConfig {
 class MinConfig {
     private data: AllConfig = defaultConfig();
     private loaded: boolean = false;
-    private dbReady: boolean = false;
-
-    // Database 为单一共享连接，初始化一次即可，避免反复 reopen
-    private ensureDb(): void {
-        if (this.dbReady) return;
-        Database.initialize(DB_PATH);
-        this.dbReady = true;
-    }
 
     async loadAll(): Promise<void> {
         if (this.loaded) return;
         try {
-            this.ensureDb();
-            const raw = Database.get(CONFIG_KEY);
+            const raw = dbGet(CONFIG_KEY);
             if (raw && typeof raw === 'string') {
                 const parsed = JSON.parse(raw);
                 this.data = Object.assign(defaultConfig(), parsed);
@@ -83,8 +73,7 @@ class MinConfig {
 
     private async save(): Promise<void> {
         try {
-            this.ensureDb();
-            Database.set(CONFIG_KEY, JSON.stringify(this.data));
+            dbSet(CONFIG_KEY, JSON.stringify(this.data));
         } catch (e) {
             console.error('MinConfig save failed:', e);
         }

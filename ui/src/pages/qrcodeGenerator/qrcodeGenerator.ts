@@ -20,6 +20,7 @@ import { Shell } from 'langningchen';
 import { showError, showSuccess, showInfo } from '../../components/ToastMessage';
 import { hideLoading, showLoading } from '../../components/Loading';
 import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
+import { dbGet, dbSet } from '../../utils/database';
 
 export type QRCodeGeneratorOptions = {};
 
@@ -156,7 +157,7 @@ const qrcodeGenerator = defineComponent({
 
         async loadHistory() {
             try {
-                const data = await $falcon.storage.get('qrcode_history');
+                const data = dbGet('qrcode_history');
                 if (data) {
                     this.history = JSON.parse(data);
                 }
@@ -167,7 +168,7 @@ const qrcodeGenerator = defineComponent({
 
         async saveHistory() {
             try {
-                await $falcon.storage.set('qrcode_history', JSON.stringify(this.history));
+                dbSet('qrcode_history', JSON.stringify(this.history));
             } catch (error) {
                 console.error('保存历史失败:', error);
             }

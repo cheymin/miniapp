@@ -16,6 +16,7 @@
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
 import { defineComponent } from 'vue';
+import { dbGet, dbSet } from '../../utils/database';
 
 export type CalculatorOptions = {};
 
@@ -196,7 +197,7 @@ const calculator = defineComponent({
 
         async loadAllHistory() {
             try {
-                await $falcon.storage.set('calculator_history', JSON.stringify(this.history));
+                dbSet('calculator_history', JSON.stringify(this.history));
             } catch (error) {
                 console.error('保存历史失败:', error);
             }
@@ -204,7 +205,7 @@ const calculator = defineComponent({
 
         async loadHistory() {
             try {
-                const data = await $falcon.storage.get('calculator_history');
+                const data = dbGet('calculator_history');
                 if (data) {
                     this.history = JSON.parse(data);
                 }

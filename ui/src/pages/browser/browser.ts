@@ -1,6 +1,7 @@
 import { defineComponent } from 'vue';
 import { showError, showSuccess } from '../../components/ToastMessage';
 import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
+import { dbGet, dbSet } from '../../utils/database';
 
 export type BrowserOptions = {};
 
@@ -125,17 +126,16 @@ const browser = defineComponent({
 
         loadBookmarks() {
             try {
-                $falcon.storage.get(STORAGE_KEY).then((data: string) => {
-                    if (data) {
-                        this.bookmarks = JSON.parse(data);
-                    }
-                });
+                const data = dbGet(STORAGE_KEY);
+                if (data) {
+                    this.bookmarks = JSON.parse(data);
+                }
             } catch (e) {}
         },
 
         saveBookmarks() {
             try {
-                $falcon.storage.set(STORAGE_KEY, JSON.stringify(this.bookmarks));
+                dbSet(STORAGE_KEY, JSON.stringify(this.bookmarks));
             } catch (e) {}
         },
     },

@@ -16,6 +16,7 @@
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
 import { showWarning } from '../components/ToastMessage';
+import { dbGet, dbSet } from './database';
 
 function normalizeKeyboardData(data: any): string {
     if (typeof data === 'string') {
@@ -33,7 +34,7 @@ function normalizeKeyboardData(data: any): string {
 
 export async function getKeyboardType(): Promise<string> {
     try {
-        const data = await $falcon.storage.get('keyboard_type');
+        const data = dbGet('keyboard_type');
         return data || 'soft';
     } catch (error) {
         console.error('获取键盘类型失败:', error);

@@ -95,11 +95,11 @@
             <text class="menu-section-title">操作</text>
             <div class="menu-row">
               <text class="menu-btn" @click="toggleSlideshow">{{ isSlideshow ? '⏹ 停止' : '▶ 幻灯片' }}</text>
-              <text class="menu-btn" @click="toggleImageInfo">ℹ 信息</text>
+              <text class="menu-btn" @click="toggleImageInfo">i 信息</text>
             </div>
             <div class="menu-row">
               <text class="menu-btn" @click="renameImage">✎ 重命名</text>
-              <text class="menu-btn menu-btn-danger" @click="deleteImage">🗑 删除</text>
+              <text class="menu-btn menu-btn-danger" @click="deleteImage">✕ 删除</text>
             </div>
           </template>
 

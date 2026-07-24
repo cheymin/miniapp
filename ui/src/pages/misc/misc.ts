@@ -1,6 +1,7 @@
 import { defineComponent } from 'vue';
 import { Shell } from 'langningchen';
 import { showSuccess, showError } from '../../components/ToastMessage';
+import { dbGet, dbSet } from '../../utils/database';
 
 export default defineComponent({
   data() {
@@ -87,7 +88,7 @@ export default defineComponent({
     /* ========== 键盘设置 ========== */
     async loadKeyboardType() {
       try {
-        const data = await $falcon.storage.get('keyboard_type');
+        const data = dbGet('keyboard_type');
         if (data) {
           this.keyboardType = data;
         }
@@ -95,11 +96,11 @@ export default defineComponent({
         console.error('加载键盘设置失败:', error);
       }
     },
-    
+
     async setKeyboardType(type: string) {
       this.keyboardType = type;
       try {
-        await $falcon.storage.set('keyboard_type', type);
+        dbSet('keyboard_type', type);
         showSuccess(`已切换到${type === 'soft' ? '软键盘' : '系统键盘'}`);
       } catch (error) {
         showError('保存键盘设置失败');
