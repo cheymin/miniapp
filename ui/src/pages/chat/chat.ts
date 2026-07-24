@@ -1,28 +1,29 @@
 // Copyright (C) 2025 Langning Chen
-// 
+//
 // This file is part of miniapp.
-// 
+//
 // miniapp is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
-// 
+//
 // miniapp is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
-// 
+//
 // You should have received a copy of the GNU General Public License
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
 import { defineComponent } from 'vue';
-import { Chat } from 'langningchen';
+import { Chat, Shell } from 'langningchen';
 import { ROLE, ConversationNode, STOP_REASON } from '../../@types/langningchen';
-import { showError } from '../../components/ToastMessage';
+import { showError, showSuccess, showInfo } from '../../components/ToastMessage';
 
 export type chatOptions = {};
 
 const MAX_VISIBLE_MESSAGES = 30;
+const CLIPBOARD_FILE = '/userdisk/.chat_clipboard';
 
 const chat = defineComponent({
     data() {
@@ -41,6 +42,8 @@ const chat = defineComponent({
             hasMore: false,
             streamTimer: null as ReturnType<typeof setTimeout> | null,
             streamDirty: false,
+            errorMsg: '' as string,
+            streamEnded: false,
         };
     },
 
@@ -69,6 +72,7 @@ const chat = defineComponent({
                         this.streamingContent += data;
                     }
                 }
+                this.streamEnded = false;
                 this.scheduleStreamUpdate();
             });
         } catch (e) {
@@ -122,6 +126,13 @@ const chat = defineComponent({
         },
         canSendMessage(): boolean {
             return this.chatInitialized && !this.isStreaming && this.currentInput.trim().length > 0;
+        },
+        canRegenerate(): boolean {
+            if (!this.chatInitialized || this.isStreaming) return false;
+            const msgs = this.messages;
+            if (!msgs.length) return false;
+            const last = msgs[msgs.length - 1];
+            return !!last && last.role === ROLE.ROLE_ASSISTANT;
         }
     },
 
@@ -149,7 +160,7 @@ const chat = defineComponent({
                         this.streamDirty = false;
                         this.$forceUpdate();
                     }
-                }, 100);
+                }, 80);
             }
         },
 
@@ -159,6 +170,14 @@ const chat = defineComponent({
             } catch (e) {
                 showError(e as string || '获取会话信息失败');
             }
+            // 异步获取当前会话标题用于顶栏显示
+            Chat.getConversationList().then((list: any[]) => {
+                const cur = list.find((c: any) => c.id === this.currentConversationId);
+                if (cur && cur.title) {
+                    this.currentConversationTitle = cur.title;
+                    this.$forceUpdate();
+                }
+            }).catch(() => { /* 忽略标题获取失败 */ });
         },
 
         refreshMessages() {
@@ -200,6 +219,7 @@ const chat = defineComponent({
 
             this.streamingContent = '';
             this.streamingReasoning = '';
+            this.errorMsg = '';
 
             Chat.addUserMessage(userMessage).then(() => {
                 this.refreshMessages();
@@ -211,13 +231,15 @@ const chat = defineComponent({
             this.currentInput = '';
         },
 
-        async generateResponse() {
+        generateResponse() {
             this.isStreaming = true;
+            this.errorMsg = '';
             Chat.generateResponse().then(() => {
                 this.refreshMessages();
                 this.$forceUpdate();
             }).catch((e) => {
-                showError(e as string || '生成响应失败');
+                this.errorMsg = (e as string) || '生成响应失败';
+                showError(this.errorMsg);
             }).finally(() => {
                 this.isStreaming = false;
                 this.streamingContent = '';
@@ -227,6 +249,11 @@ const chat = defineComponent({
                     this.streamTimer = null;
                 }
             });
+        },
+
+        retryLastGenerate() {
+            if (this.isStreaming) return;
+            this.generateResponse();
         },
 
         stopGeneration() {
@@ -239,6 +266,32 @@ const chat = defineComponent({
                     this.refreshMessages();
                     this.$forceUpdate();
                 }, 100);
+            }
+        },
+
+        regenerateLast() {
+            if (this.isStreaming || !this.canRegenerate) return;
+            this.streamingContent = '';
+            this.streamingReasoning = '';
+            this.errorMsg = '';
+            try {
+                Chat.deleteLastMessage();
+                this.refreshMessages();
+                this.generateResponse();
+            } catch (e) {
+                showError(e as string || '重新生成失败');
+            }
+        },
+
+        async copyMessage(msg: ConversationNode) {
+            try {
+                const text = msg.content || '';
+                if (!text) { showInfo('内容为空'); return; }
+                const safe = text.replace(/'/g, "'\\''");
+                await Shell.exec(`echo -n '${safe}' > ${CLIPBOARD_FILE}`);
+                showSuccess('已复制');
+            } catch (e) {
+                showError('复制失败: ' + (e as string));
             }
         },
 
@@ -272,37 +325,50 @@ const chat = defineComponent({
             $falcon.navTo('chatSettings', {});
         },
 
-        regenerateLast() {
+        editTitle() {
             if (this.isStreaming) return;
-            try {
-                Chat.deleteLastMessage();
-                this.streamingContent = '';
-                this.streamingReasoning = '';
-                this.refreshMessages();
-                this.generateResponse();
-            } catch (e) {
-                showError(e as string || '重新生成失败');
-            }
+            $falcon.navTo('chatKeyboard', { initialText: this.currentConversationTitle || '' });
+            const handler = (e: { data: any }) => {
+                const result = e.data;
+                let newTitle = '';
+                if (result && typeof result === 'object' && typeof result.text === 'string') {
+                    newTitle = result.text;
+                } else if (typeof result === 'string') {
+                    newTitle = result;
+                }
+                if (newTitle && newTitle.trim() && newTitle.trim() !== this.currentConversationTitle) {
+                    const title = newTitle.trim();
+                    Chat.updateConversationTitle(this.currentConversationId, title).then(() => {
+                        this.currentConversationTitle = title;
+                        this.$forceUpdate();
+                        showSuccess('标题已更新');
+                    }).catch((err) => {
+                        showError('更新标题失败: ' + (err as string));
+                    });
+                }
+                $falcon.off('chatKeyboard', handler);
+            };
+            $falcon.on('chatKeyboard', handler);
         },
 
         getStopReasonText(stopReason: STOP_REASON): string {
             switch (stopReason) {
                 case STOP_REASON.STOP_REASON_LENGTH:
-                    return '超出最大长度限制';
+                    return '超出长度';
                 case STOP_REASON.STOP_REASON_ERROR:
-                    return '生成时出现错误';
+                    return '生成错误';
                 case STOP_REASON.STOP_REASON_CONTENT_FILTER:
-                    return '内容被过滤';
+                    return '内容过滤';
                 case STOP_REASON.STOP_REASON_USER_STOPPED:
-                    return '用户手动停止';
+                    return '已停止';
                 case STOP_REASON.STOP_REASON_STOP:
-                    return '模型主动停止';
+                    return '完成';
                 case STOP_REASON.STOP_REASON_DONE:
-                    return '生成完成';
+                    return '完成';
                 case STOP_REASON.STOP_REASON_NONE:
-                    return '无';
+                    return '';
                 default:
-                    return '未知';
+                    return '';
             }
         },
     }

@@ -1,5 +1,18 @@
 @import url('../../styles/section.less');
 
+// 现代暗色主题（GitHub Dark 风格）
+@bg-deep: #0d1117;
+@bg-surface: #161b22;
+@bg-elevated: #1c2128;
+@border: #30363d;
+@text-primary: #e6edf3;
+@text-secondary: #8b949e;
+@accent: #2f81f7;
+@accent-soft: #1f6feb;
+@danger: #f85149;
+@success: #3fb950;
+@warning: #d29922;
+
 .chat-container {
     position: absolute;
     left: 0;
@@ -8,72 +21,74 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #121212;
+    background-color: @bg-deep;
 }
 
 .top-bar {
-    height: 32px;
+    height: 36px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0 8px;
-    background-color: #1e1e1e;
+    padding: 0 6px;
+    background-color: @bg-surface;
     border-bottom-width: 1px;
-    border-bottom-color: #333333;
-    gap: 8px;
+    border-bottom-color: @border;
+    gap: 4px;
 }
 
 .top-btn {
-    width: 28px;
+    width: 30px;
     height: 28px;
     text-align: center;
     line-height: 28px;
     font-size: 18px;
-    color: #ffffff;
-    background-color: #3a3a3a;
-    border-radius: 4px;
+    color: @text-secondary;
+    background-color: transparent;
+    border-radius: 6px;
 }
 
 .top-title {
     flex: 1;
     text-align: center;
-    font-size: 16px;
-    color: #ffffff;
+    font-size: 15px;
+    color: @text-primary;
     height: 28px;
     line-height: 28px;
+    padding: 0 4px;
 }
 
 .messages-scroller {
     flex: 1;
-    padding: 8px 4px;
+    padding: 6px 4px;
 }
 
 .messages-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
 
 .load-more-btn {
-    width: 100%;
     display: flex;
     justify-content: center;
-    padding: 4px 0;
+    padding: 2px 0;
 }
 
 .load-more-text {
-    font-size: 14px;
-    color: #888888;
-    background-color: #2a2a2a;
-    padding: 4px 12px;
+    font-size: 13px;
+    color: @accent;
+    background-color: @bg-surface;
+    padding: 4px 14px;
     border-radius: 12px;
+    border-width: 1px;
+    border-color: @border;
 }
 
 .message-row {
     display: flex;
     flex-direction: column;
-    max-width: 75%;
-    gap: 4px;
+    max-width: 88%;
+    gap: 3px;
 }
 
 .message-row-right {
@@ -86,101 +101,176 @@
     align-items: flex-start;
 }
 
-.reasoning-bubble {
+.reasoning-box {
     max-width: 100%;
-    padding: 6px 10px;
-    background-color: #3a3a3a;
-    border-radius: 8px;
+    padding: 5px 9px;
+    background-color: @bg-surface;
+    border-radius: 6px;
+    border-left-width: 2px;
+    border-left-color: @text-secondary;
+    flex-direction: column;
+}
+
+.reasoning-label {
+    font-size: 13px;
+    color: @text-secondary;
+    font-style: italic;
 }
 
 .reasoning-text {
-    font-size: 14px;
-    color: #888888;
-    font-style: italic;
-    line-height: 20px;
+    font-size: 13px;
+    color: @text-secondary;
+    line-height: 18px;
+    margin-top: 3px;
     word-wrap: break-word;
 }
 
 .message-bubble {
     max-width: 100%;
-    padding: 8px 12px;
-    border-radius: 12px;
+    padding: 8px 11px;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .bubble-user {
-    background-color: #2d7cfc;
+    background-color: @accent-soft;
 }
 
 .bubble-assistant {
-    background-color: #2a2a2a;
+    background-color: @bg-elevated;
+    border-width: 1px;
+    border-color: @border;
 }
 
-.message-text {
-    font-size: 16px;
-    line-height: 22px;
+.bubble-text-user {
+    font-size: 15px;
+    line-height: 21px;
+    color: #ffffff;
     word-wrap: break-word;
 }
 
-.bubble-user .message-text {
-    color: #ffffff;
+.stream-cursor {
+    font-size: 14px;
+    color: @accent;
+    line-height: 21px;
 }
 
-.bubble-assistant .message-text {
-    color: #e0e0e0;
+.message-meta {
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    padding: 0 2px;
 }
 
-.stop-reason-text {
+.meta-btn {
     font-size: 12px;
-    color: #ffcc00;
+    color: @text-secondary;
+    background-color: @bg-surface;
+    padding: 2px 8px;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: @border;
+    height: 20px;
+    line-height: 16px;
+}
+
+.stop-tag {
+    font-size: 11px;
+    color: @warning;
+    background-color: rgba(210, 153, 34, 0.12);
     padding: 2px 6px;
-    background-color: rgba(255, 204, 0, 0.1);
-    border-radius: 4px;
+    border-radius: 8px;
+    height: 20px;
+    line-height: 16px;
+}
+
+.error-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    background-color: rgba(248, 81, 73, 0.1);
+    border-radius: 8px;
+    border-left-width: 2px;
+    border-left-color: @danger;
+    align-self: stretch;
+}
+
+.error-text {
+    flex: 1;
+    font-size: 13px;
+    color: @danger;
+    line-height: 18px;
+    word-wrap: break-word;
+}
+
+.retry-btn {
+    font-size: 12px;
+    color: #ffffff;
+    background-color: @danger;
+    padding: 3px 10px;
+    border-radius: 6px;
+    height: 22px;
+    line-height: 16px;
+}
+
+.empty-hint {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.empty-text {
+    font-size: 14px;
+    color: @text-secondary;
 }
 
 .input-bar {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 6px 8px;
-    background-color: #1e1e1e;
+    padding: 6px 6px;
+    background-color: @bg-surface;
     border-top-width: 1px;
-    border-top-color: #333333;
+    border-top-color: @border;
     gap: 6px;
 }
 
 .input-preview {
     flex: 1;
-    height: 28px;
-    line-height: 28px;
-    padding: 0 8px;
-    font-size: 16px;
-    color: #e0e0e0;
-    background-color: #2a2a2a;
-    border-radius: 6px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    font-size: 14px;
+    color: @text-primary;
+    background-color: @bg-deep;
+    border-radius: 8px;
     border-width: 1px;
-    border-color: #444444;
+    border-color: @border;
 }
 
 .send-btn {
-    width: 36px;
-    height: 28px;
+    height: 30px;
+    padding: 0 14px;
     text-align: center;
-    line-height: 28px;
-    font-size: 16px;
-    border-radius: 6px;
+    line-height: 30px;
+    font-size: 14px;
+    border-radius: 8px;
 }
 
 .send-btn-active {
-    background-color: #2d7cfc;
+    background-color: @accent;
     color: #ffffff;
 }
 
 .send-btn-disabled {
-    background-color: #3a3a3a;
-    color: #666666;
+    background-color: @bg-elevated;
+    color: @text-secondary;
 }
 
 .send-btn-stop {
-    background-color: #d73a49;
+    background-color: @danger;
     color: #ffffff;
 }
