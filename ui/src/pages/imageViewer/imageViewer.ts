@@ -26,9 +26,11 @@ export type ImageViewerOptions = {
     directory?: string;
 };
 
-// 设备屏幕 320×240（见 PROJECT_GUIDE）
-const SCREEN_W = 320;
-const SCREEN_H = 240;
+// 屏幕尺寸(有道词典笔 V10: 172x560 竖屏)
+const SCREEN_W = 172;
+const SCREEN_H = 560;
+
+// 默认以"适应屏幕"为基准，缩放基于 1.0
 const MIN_SCALE = 0.5;
 const MAX_SCALE = 6.0;
 const DOUBLE_TAP_SCALE = 2.5;

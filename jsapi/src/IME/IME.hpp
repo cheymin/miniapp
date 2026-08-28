@@ -46,7 +46,8 @@ private:
 
     std::unordered_map<std::string, std::vector<DictEntry>> pinyinDict;
     std::unordered_set<std::string> pinyinUnits;
-    const size_t MAX_PINYIN_UNIT_LENGTH = 5;
+    // 最长拼音音节为 6 个字母(zhuang/chuang/shuang),+1 保证贪婪匹配上限覆盖
+    const size_t MAX_PINYIN_UNIT_LENGTH = 7;
 
     void insert(const Pinyin &pinyin, const std::string &hanZi, double freq);
     double getFreq(const Pinyin &pinyin, const std::string &hanZi);

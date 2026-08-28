@@ -19,73 +19,46 @@
 
 <template>
     <div>
-        <div class="chat-container" :class="bgEnabled ? 'has-bg' : ''">
-            <image v-if="bgEnabled && bgImagePath" class="bg-image" :src="bgImagePath" resize="cover" />
-            <div v-if="bgEnabled" class="bg-overlay" :style="{ opacity: bgOpacity / 100 }"></div>
+        <div class="container" style="display: flex; flex-direction: column;">
+            <div style="flex: 1; display: flex; flex-direction: row;">
+                <scroller ref="messageScroller" class="messages-scroller" scroll-direction="vertical"
+                    :show-scrollbar="true">
+                    <div v-for="message in displayMessages" :key="message.id">
+                        <text v-if="message.reasoningContent" class="message-reasoning">{{ message.reasoningContent }}</text>
+                        <text :class="'message message-' + message.role">{{ message.content }}</text>
+                        <text v-if="![0, 1, 6].includes(message.stopReason)" class="stop-reason-warning">{{
+                            getStopReasonText(message.stopReason) }}</text>
+                        <div v-if="message.role === 0 || message.role === 1"
+                            :class="message.role === 0 ? 'message-actions-user' : 'message-actions'">
+                            <text v-if="message.role === 0" @click="editUserMessage(message.id)"
+                                :class="'square-btn' + (isStreaming ? ' square-btn-disabled' : '')">编</text>
+                            <text v-if="message.role === 1" @click="regenerateMessage(message.id)"
+                                :class="'square-btn' + (isStreaming ? ' square-btn-disabled' : '')">重</text>
+                            <text @click="switchVariant(message.id, -1, message.role === 1)"
+                                :class="'square-btn' + ((canGoVariant(message.id, -1) && !isStreaming) ? '' : ' square-btn-disabled')">左</text>
+                            <text class="action-text">{{ getVariantInfo(message.id) }}</text>
+                            <text @click="switchVariant(message.id, 1, message.role === 1)"
+                                :class="'square-btn' + ((canGoVariant(message.id, 1) && !isStreaming) ? '' : ' square-btn-disabled')">右</text>
+                        </div>
+                    </div>
+                </scroller>
 
-            <div class="top-bar">
-                <text class="top-btn" @click="handleBackPress">{{ icon('back') }}</text>
-                <text class="top-title" @click="editTitle">{{ currentConversationTitle || '新对话' }}</text>
-                <text class="top-btn" @click="openChatList">{{ icon('list') }}</text>
-                <text class="top-btn" @click="openChatSettings">{{ icon('settings') }}</text>
+                <div class="side-buttons">
+                    <text @click="openHistory"
+                        :class="'square-btn' + (isStreaming ? ' square-btn-disabled' : '')">历</text>
+                    <text @click="openMessageNavigation"
+                        :class="'square-btn' + (isStreaming ? ' square-btn-disabled' : '')">导</text>
+                    <text @click="openSettings"
+                        :class="'square-btn' + (isStreaming ? ' square-btn-disabled' : '')">设</text>
+                </div>
             </div>
 
-            <scroller ref="messageScroller" class="messages-scroller" scroll-direction="vertical"
-                :show-scrollbar="true">
-                <div class="messages-wrapper">
-                    <div v-if="hasMore" class="load-more-btn" @click="loadMoreMessages">
-                        <text class="load-more-text">{{ icon('arrow_up') }} 加载更多</text>
-                    </div>
-
-                    <div v-for="(message, index) in displayMessages" :key="message.id" class="message-row"
-                        :class="message.role === 0 ? 'message-row-right' : 'message-row-left'">
-
-                        <div v-if="message.reasoningContent" class="reasoning-box"
-                            @click="toggleReasoning(message.id)">
-                            <text class="reasoning-label">{{ icon('thinking') }} {{ isReasoningExpanded(message.id) ? '收起' : '思考过程' }}</text>
-                            <text v-if="isReasoningExpanded(message.id)" class="reasoning-text">{{ message.reasoningContent }}</text>
-                        </div>
-
-                        <div class="message-bubble"
-                            :class="message.role === 0 ? 'bubble-user' : 'bubble-assistant'">
-                            <MarkdownView v-if="message.role === 1" :content="message.content" />
-                            <text v-else class="bubble-text-user">{{ message.content }}</text>
-                            <text v-if="isStreaming && index === displayMessages.length - 1 && message.role === 1"
-                                class="stream-cursor">▍</text>
-                        </div>
-
-                        <div class="message-meta"
-                            v-if="message.role === 1 && !isStreaming">
-                            <text class="meta-btn" @click="copyMessage(message)">{{ icon('copy') }} 复制</text>
-                            <text v-if="index === displayMessages.length - 1 && canRegenerate"
-                                class="meta-btn" @click="regenerateLast">{{ icon('regen') }} 重生成</text>
-                            <text v-if="getStopReasonText(message.stopReason)"
-                                class="stop-tag">{{ getStopReasonText(message.stopReason) }}</text>
-                        </div>
-                    </div>
-
-                    <div v-if="errorMsg" class="error-box">
-                        <text class="error-text">{{ icon('warn') }} {{ errorMsg }}</text>
-                        <text class="retry-btn" @click="retryLastGenerate">{{ icon('refresh') }} 重试</text>
-                    </div>
-
-                    <div v-if="!chatInitialized" class="empty-hint">
-                        <text class="empty-icon">{{ icon('ai') }}</text>
-                        <text class="empty-text">初始化中...</text>
-                    </div>
-                    <div v-else-if="displayMessages.length === 0 && !isStreaming" class="empty-hint">
-                        <text class="empty-icon">{{ icon('chat') }}</text>
-                        <text class="empty-text">开始新对话</text>
-                        <text class="empty-sub">点击下方输入框开始与AI对话</text>
-                    </div>
-                </div>
-            </scroller>
-
-            <div class="input-bar">
-                <text class="input-preview" @click="openChatKeyboard">{{ currentInput || '点击输入消息...' }}</text>
-                <text v-if="!isStreaming" @click="sendMessage(currentInput)"
-                    :class="'send-btn ' + (canSendMessage ? 'send-btn-active' : 'send-btn-disabled')">{{ icon('send') }} 发送</text>
-                <text v-else @click="stopGeneration" class="send-btn send-btn-stop">{{ icon('stop') }} 停止</text>
+            <div class="item">
+                <text :class="'item-input' + (isStreaming ? ' item-input-disabled' : '')" @click="loadSoftKeyboard">{{
+                    currentInput || '点击输入...' }}</text>
+                <text v-if="!isStreaming" @click="sendMessage(this.currentInput)"
+                    :class="'square-btn square-btn-' + (this.canSendMessage ? 'primary' : 'disabled')">发</text>
+                <text v-else @click="stopGeneration" class="square-btn square-btn-danger">停</text>
             </div>
         </div>
         <ToastMessage />
@@ -98,13 +71,11 @@
 
 <script>
 import ToastMessage from '../../components/ToastMessage.vue';
-import MarkdownView from '../../components/MarkdownView.vue';
 import chat from './chat';
 export default {
     ...chat,
     components: {
-        ToastMessage,
-        MarkdownView
+        ToastMessage
     }
 }
 </script>

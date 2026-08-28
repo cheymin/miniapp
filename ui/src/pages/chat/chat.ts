@@ -1,54 +1,41 @@
 // Copyright (C) 2025 Langning Chen
-//
+// 
 // This file is part of miniapp.
-//
+// 
 // miniapp is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
-//
+// 
 // miniapp is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
-//
+// 
 // You should have received a copy of the GNU General Public License
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
 import { defineComponent } from 'vue';
-import { Chat, Shell } from 'langningchen';
+import { AI } from 'langningchen';
 import { ROLE, ConversationNode, STOP_REASON } from '../../@types/langningchen';
-import { showError, showSuccess, showInfo } from '../../components/ToastMessage';
-import { minConfig } from '../../utils/minConfig';
-import { getIcon } from '../../utils/icons';
+import { showError } from '../../components/ToastMessage';
+import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
 
 export type chatOptions = {};
-
-const MAX_VISIBLE_MESSAGES = 30;
-const CLIPBOARD_FILE = '/userdisk/.chat_clipboard';
 
 const chat = defineComponent({
     data() {
         return {
             $page: {} as FalconPage<chatOptions>,
-            chatInitialized: false,
+            aiInitialized: false,
             currentInput: '',
             streamingContent: '',
             streamingReasoning: '',
             isStreaming: false,
             messages: [] as ConversationNode[],
+            jumpToMessageId: '',
+
             currentConversationId: '',
-            currentConversationTitle: '',
-            expandedReasoning: {} as Record<string, boolean>,
-            offset: 0,
-            hasMore: false,
-            streamTimer: null as ReturnType<typeof setTimeout> | null,
-            streamDirty: false,
-            errorMsg: '' as string,
-            streamEnded: false,
-            bgEnabled: false,
-            bgImagePath: '',
-            bgOpacity: 60,
         };
     },
 
@@ -61,11 +48,10 @@ const chat = defineComponent({
 
     mounted() {
         try {
-            Chat.initialize("/userdisk/database/langningchen-chat.db");
-            this.chatInitialized = true;
+            AI.initialize();
+            this.aiInitialized = true;
             this.refreshMessages();
-            this.refreshConversationInfo();
-            Chat.on('chat_stream', (data: string) => {
+            AI.on('ai_stream', (data: string) => {
                 if (data && data.length > 0) {
                     const marker = data.charCodeAt(0);
                     const text = data.substring(1);
@@ -77,53 +63,42 @@ const chat = defineComponent({
                         this.streamingContent += data;
                     }
                 }
-                this.streamEnded = false;
-                this.scheduleStreamUpdate();
+                this.$forceUpdate();
             });
+            $falcon.on<string>('jump', this.jumpHandler);
         } catch (e) {
-            showError(e as string || 'Chat 初始化失败');
-        }
-        this.loadBackground();
-        this.$page.$npage.setSupportBack(true);
-        this.$page.$npage.on('backpressed', this.handleBackPress);
-    },
-
-    beforeDestroy() {
-        this.$page.$npage.off('backpressed', this.handleBackPress);
-        if (this.streamTimer) {
-            clearTimeout(this.streamTimer);
-            this.streamTimer = null;
+            showError(e as string || 'AI 初始化失败');
         }
     },
 
     computed: {
         displayMessages(): ConversationNode[] {
-            let messages = this.messages.slice();
-            if (this.offset > 0) {
-                messages = messages.slice(this.offset);
+            let messages = this.messages;
+            if (this.jumpToMessageId) {
+                const jumpIndex = messages.findIndex(msg => msg.id === this.jumpToMessageId);
+                if (jumpIndex !== -1) {
+                    messages = messages.slice(jumpIndex);
+                }
             }
 
             if (this.isStreaming && (this.streamingContent || this.streamingReasoning)) {
                 const lastMessage = messages[messages.length - 1];
                 if (lastMessage && lastMessage.role === ROLE.ROLE_ASSISTANT) {
-                    const msgs = messages.slice(0, -1);
-                    msgs.push({
-                        ...lastMessage,
-                        content: this.streamingContent,
-                        reasoningContent: this.streamingReasoning,
-                    });
-                    return msgs;
-                } else {
+                    lastMessage.content = this.streamingContent;
+                    lastMessage.reasoningContent = this.streamingReasoning;
+                }
+                else if (lastMessage) {
                     const tempId = `streaming_${Date.now()}`;
+                    lastMessage.childIds.push(tempId);
                     const streamingMessage: ConversationNode = {
                         role: ROLE.ROLE_ASSISTANT,
-                        content: this.streamingContent,
-                        reasoningContent: this.streamingReasoning,
+                        content: '',
+                        reasoningContent: '',
                         timestamp: new Date().toISOString(),
-                        id: tempId,
+                        id: '',
                         parentId: '',
                         childIds: [],
-                        stopReason: STOP_REASON.STOP_REASON_NONE,
+                        stopReason: STOP_REASON.STOP_REASON_NONE
                     };
                     messages.push(streamingMessage);
                 }
@@ -131,121 +106,37 @@ const chat = defineComponent({
             return messages;
         },
         canSendMessage(): boolean {
-            return this.chatInitialized && !this.isStreaming && this.currentInput.trim().length > 0;
-        },
-        canRegenerate(): boolean {
-            if (!this.chatInitialized || this.isStreaming) return false;
-            const msgs = this.messages;
-            if (!msgs.length) return false;
-            const last = msgs[msgs.length - 1];
-            return !!last && last.role === ROLE.ROLE_ASSISTANT;
+            return this.aiInitialized && !this.isStreaming && this.currentInput.trim().length > 0;
         }
     },
 
     methods: {
-        handleBackPress() {
-            this.$page.finish();
-        },
-
-        async loadBackground() {
-            try {
-                await minConfig.loadAll();
-                const bg = minConfig.getBackground();
-                this.bgEnabled = bg.enabled && !!bg.imagePath;
-                this.bgImagePath = bg.imagePath;
-                this.bgOpacity = bg.opacity;
-                this.$forceUpdate();
-            } catch (e) {
-                // ignore
-            }
-        },
-
-        icon(name: string): string {
-            return getIcon(name);
-        },
-
         onPageShow() {
-            if (!this.chatInitialized) return;
             this.refreshMessages();
-            this.refreshConversationInfo();
-            this.handleKeyboardResult();
-            this.loadBackground();
         },
 
-        handleKeyboardResult() {
-        },
-
-        scheduleStreamUpdate() {
-            this.streamDirty = true;
-            if (!this.streamTimer) {
-                this.streamTimer = setTimeout(() => {
-                    this.streamTimer = null;
-                    if (this.streamDirty) {
-                        this.streamDirty = false;
-                        this.$forceUpdate();
-                    }
-                }, 80);
-            }
-        },
-
-        refreshConversationInfo() {
-            try {
-                this.currentConversationId = Chat.getCurrentConversationId();
-            } catch (e) {
-                showError(e as string || '获取会话信息失败');
-            }
-            // 异步获取当前会话标题用于顶栏显示
-            Chat.getConversationList().then((list: any[]) => {
-                const cur = list.find((c: any) => c.id === this.currentConversationId);
-                if (cur && cur.title) {
-                    this.currentConversationTitle = cur.title;
-                    this.$forceUpdate();
-                }
-            }).catch(() => { /* 忽略标题获取失败 */ });
+        jumpHandler(e: { data: string; }) {
+            this.jumpToMessageId = e.data;
+            this.$forceUpdate();
         },
 
         refreshMessages() {
             try {
-                this.messages = Chat.getCurrentPath().map((node: ConversationNode) => ({ ...node, childIds: [...node.childIds] }));
-                const total = this.messages.length;
-                this.hasMore = total > MAX_VISIBLE_MESSAGES;
-                if (this.hasMore) {
-                    this.offset = total - MAX_VISIBLE_MESSAGES;
-                } else {
-                    this.offset = 0;
-                }
+                this.messages = AI.getCurrentPath().map((node: ConversationNode) => ({ ...node, childIds: [...node.childIds] }));
             } catch (e) {
                 showError(e as string || '获取消息失败');
             }
         },
-
-        loadMoreMessages() {
-            const newOffset = Math.max(0, this.offset - 30);
-            if (newOffset < this.offset) {
-                this.offset = newOffset;
-                this.hasMore = this.offset > 0;
-                this.$forceUpdate();
-            }
-        },
-
-        toggleReasoning(messageId: string) {
-            this.expandedReasoning[messageId] = !this.expandedReasoning[messageId];
-            this.$forceUpdate();
-        },
-
-        isReasoningExpanded(messageId: string): boolean {
-            return !!this.expandedReasoning[messageId];
-        },
+        getMessage(messageId: string): ConversationNode | undefined { return this.displayMessages.find(m => m.id === messageId); },
 
         async sendMessage(userMessage: string) {
-            if (!this.chatInitialized || this.isStreaming || !userMessage?.trim()) return;
+            if (!this.aiInitialized || this.isStreaming || !userMessage?.trim()) return;
             userMessage = userMessage.trim();
 
             this.streamingContent = '';
             this.streamingReasoning = '';
-            this.errorMsg = '';
 
-            Chat.addUserMessage(userMessage).then(() => {
+            AI.addUserMessage(userMessage).then(() => {
                 this.refreshMessages();
                 this.$forceUpdate();
                 this.generateResponse();
@@ -255,34 +146,23 @@ const chat = defineComponent({
             this.currentInput = '';
         },
 
-        generateResponse() {
+        async generateResponse() {
             this.isStreaming = true;
-            this.errorMsg = '';
-            Chat.generateResponse().then(() => {
+            AI.generateResponse().then(() => {
                 this.refreshMessages();
                 this.$forceUpdate();
             }).catch((e) => {
-                this.errorMsg = (e as string) || '生成响应失败';
-                showError(this.errorMsg);
+                showError(e as string || '生成响应失败');
             }).finally(() => {
                 this.isStreaming = false;
                 this.streamingContent = '';
                 this.streamingReasoning = '';
-                if (this.streamTimer) {
-                    clearTimeout(this.streamTimer);
-                    this.streamTimer = null;
-                }
             });
-        },
-
-        retryLastGenerate() {
-            if (this.isStreaming) return;
-            this.generateResponse();
         },
 
         stopGeneration() {
             if (this.isStreaming) {
-                Chat.stopGeneration();
+                AI.stopGeneration();
                 setTimeout(() => {
                     this.isStreaming = false;
                     this.streamingContent = '';
@@ -293,106 +173,124 @@ const chat = defineComponent({
             }
         },
 
-        regenerateLast() {
-            if (this.isStreaming || !this.canRegenerate) return;
-            this.streamingContent = '';
-            this.streamingReasoning = '';
-            this.errorMsg = '';
+        loadSoftKeyboard() {
+            if (this.isStreaming) return;
+            openSoftKeyboard(
+                () => this.currentInput,
+                (value) => { this.currentInput = value; this.$forceUpdate(); }
+            );
+        },
+
+        openSettings() {
+            if (this.isStreaming) return;
+            $falcon.navTo('aiSettings', {});
+        },
+
+        openHistory() {
+            if (this.isStreaming) return;
+            $falcon.navTo('aiHistory', {});
+        },
+
+        openMessageNavigation() {
+            if (this.isStreaming) return;
+            $falcon.navTo('aiNav', {});
+        },
+
+        async regenerateMessage(messageId: string) {
+            if (this.isStreaming) return;
             try {
-                Chat.deleteLastMessage();
-                this.refreshMessages();
+                AI.switchToNode(this.getMessage(messageId)!.parentId);
                 this.generateResponse();
             } catch (e) {
-                showError(e as string || '重新生成失败');
+                showError(e as string || '切换消息失败');
             }
         },
 
-        async copyMessage(msg: ConversationNode) {
-            try {
-                const text = msg.content || '';
-                if (!text) { showInfo('内容为空'); return; }
-                const safe = text.replace(/'/g, "'\\''");
-                await Shell.exec(`echo -n '${safe}' > ${CLIPBOARD_FILE}`);
-                showSuccess('已复制');
-            } catch (e) {
-                showError('复制失败: ' + (e as string));
-            }
-        },
-
-        openChatKeyboard() {
+        switchVariant(messageId: string, direction: number) {
             if (this.isStreaming) return;
-            $falcon.navTo('chatKeyboard', { initialText: this.currentInput });
-
-            const handler = (e: { data: any }) => {
-                const result = e.data;
-                if (result && typeof result === 'object' && typeof result.text === 'string') {
-                    this.currentInput = result.text;
-                    if (result.send) {
-                        this.sendMessage(this.currentInput);
+            const message = this.getMessage(messageId)!;
+            const parentMessage = this.getMessage(message.parentId);
+            if (!parentMessage) return;
+            const currentIndex = parentMessage.childIds.indexOf(messageId);
+            const newIndex = currentIndex + direction;
+            if (newIndex >= 0 && newIndex < parentMessage.childIds.length) {
+                try {
+                    let newId = parentMessage.childIds[newIndex];
+                    while (AI.getChildNodes(newId).length > 0) {
+                        newId = AI.getChildNodes(newId)[0];
                     }
-                } else if (typeof result === 'string') {
-                    this.currentInput = result;
+                    AI.switchToNode(newId);
+                    this.refreshMessages();
+                    this.$forceUpdate();
+                } catch (e) {
+                    showError(e as string || '切换消息失败');
                 }
-                this.$forceUpdate();
-                $falcon.off('chatKeyboard', handler);
-            };
-            $falcon.on('chatKeyboard', handler);
+            }
         },
 
-        openChatList() {
-            if (this.isStreaming) return;
-            $falcon.navTo('chatList', {});
+        getCurrentVariantInfo(messageId: string): string {
+            return this.getVariantInfo(messageId);
         },
 
-        openChatSettings() {
-            if (this.isStreaming) return;
-            $falcon.navTo('chatSettings', {});
+        canGoVariant(messageId: string, direction: number): boolean {
+            if (this.isStreaming) return false;
+            const message = this.getMessage(messageId)!;
+            const parentMessage = this.getMessage(message.parentId);
+            if (!parentMessage) return false;
+
+            const currentIndex = parentMessage.childIds.indexOf(messageId);
+            if (direction < 0) {
+                return currentIndex > 0;
+            } else {
+                return currentIndex < parentMessage.childIds.length - 1;
+            }
         },
 
-        editTitle() {
+        editUserMessage(messageId: string) {
             if (this.isStreaming) return;
-            $falcon.navTo('chatKeyboard', { initialText: this.currentConversationTitle || '' });
-            const handler = (e: { data: any }) => {
-                const result = e.data;
-                let newTitle = '';
-                if (result && typeof result === 'object' && typeof result.text === 'string') {
-                    newTitle = result.text;
-                } else if (typeof result === 'string') {
-                    newTitle = result;
+            const message = this.getMessage(messageId)!;
+            openSoftKeyboard(
+                () => message.content,
+                (newContent) => {
+                    if (newContent.trim() !== message.content.trim()) {
+                        try {
+                            AI.switchToNode(message.parentId);
+                            this.sendMessage(newContent);
+                        } catch (e) {
+                            showError(e as string || '编辑消息失败');
+                        }
+                    }
                 }
-                if (newTitle && newTitle.trim() && newTitle.trim() !== this.currentConversationTitle) {
-                    const title = newTitle.trim();
-                    Chat.updateConversationTitle(this.currentConversationId, title).then(() => {
-                        this.currentConversationTitle = title;
-                        this.$forceUpdate();
-                        showSuccess('标题已更新');
-                    }).catch((err) => {
-                        showError('更新标题失败: ' + (err as string));
-                    });
-                }
-                $falcon.off('chatKeyboard', handler);
-            };
-            $falcon.on('chatKeyboard', handler);
+            );
+        },
+
+        getVariantInfo(messageId: string): string {
+            const message = this.getMessage(messageId)!;
+            const parentMessage = this.getMessage(message.parentId);
+            if (!parentMessage) return "1/1";
+
+            const currentIndex = parentMessage.childIds.indexOf(messageId);
+            return `${currentIndex + 1}/${parentMessage.childIds.length}`;
         },
 
         getStopReasonText(stopReason: STOP_REASON): string {
             switch (stopReason) {
                 case STOP_REASON.STOP_REASON_LENGTH:
-                    return '超出长度';
+                    return '超出最大长度限制';
                 case STOP_REASON.STOP_REASON_ERROR:
-                    return '生成错误';
+                    return '生成时出现错误';
                 case STOP_REASON.STOP_REASON_CONTENT_FILTER:
-                    return '内容过滤';
+                    return '内容被过滤';
                 case STOP_REASON.STOP_REASON_USER_STOPPED:
-                    return '已停止';
+                    return '用户手动停止';
                 case STOP_REASON.STOP_REASON_STOP:
-                    return '完成';
+                    return '模型主动停止';
                 case STOP_REASON.STOP_REASON_DONE:
-                    return '完成';
+                    return '生成完成';
                 case STOP_REASON.STOP_REASON_NONE:
-                    return '';
+                    return '无';
                 default:
-                    return '';
+                    return '未知';
             }
         },
     }

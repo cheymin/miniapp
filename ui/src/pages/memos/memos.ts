@@ -47,6 +47,8 @@ const memos = defineComponent({
             editingMemo: null as MemoItem | null,
             editorContent: '',
             cookieFile: '/tmp/memos_cookie.txt',
+            tokenFile: '/tmp/memos_token.txt',
+            accessToken: '' as string,
             loggedIn: false,
         };
     },
@@ -91,6 +93,7 @@ const memos = defineComponent({
         async saveConfig() {
             await minConfig.setMemos({ url: this.memosUrl, username: this.memosUsername, password: this.memosPassword });
             this.loggedIn = false;
+            this.accessToken = '';
             showSuccess('配置已保存');
             this.showConfig = false;
             await this.loadMemos();
@@ -117,23 +120,77 @@ const memos = defineComponent({
             );
         },
 
-        // 账户密码登录，保存 cookie
+        // 账户密码登录：兼容 memos v26(会话cookie)与 v30(accessToken)两套 API
         async ensureLogin(): Promise<boolean> {
             if (this.loggedIn) return true;
             const url = this.memosUrl.replace(/\/$/, '');
-            const payload = JSON.stringify({ username: this.memosUsername, password: this.memosPassword, neverExpire: true });
-            const safePayload = payload.replace(/'/g, "'\\''");
-            await Shell.exec(`echo -n '${safePayload}' > /tmp/memos_login.json`);
-            const cmd = `curl -s -c ${this.cookieFile} -X POST -H "Content-Type: application/json" -d @/tmp/memos_login.json "${url}/api/v1/auth/signin"`;
-            const result = await Shell.exec(cmd);
+
+            // 先尝试 v26 风格 (username/password + 会话 cookie)
             try {
-                const data = JSON.parse(result);
-                if (data && (data.id || data.name)) {
+                const payload26 = JSON.stringify({ username: this.memosUsername, password: this.memosPassword, neverExpire: true });
+                const safe26 = payload26.replace(/'/g, "'\\''");
+                await Shell.exec(`echo -n '${safe26}' > /tmp/memos_login.json`);
+                let result = await Shell.exec(`curl -s -c ${this.cookieFile} -X POST -H "Content-Type: application/json" -d @/tmp/memos_login.json "${url}/api/v1/auth/signin"`);
+                const tok26 = this.extractAccessToken(result);
+                if (tok26) {
+                    this.accessToken = tok26;
+                    await Shell.exec(`echo -n '${tok26}' > ${this.tokenFile}`);
+                    this.loggedIn = true;
+                    return true;
+                }
+                if (this.isAccountResponse(result)) {
+                    this.loggedIn = true;
+                    return true;
+                }
+            } catch (e) { /* 继续尝试 v30 */ }
+
+            // 再尝试 v30 风格 (passwordCredentials -> accessToken)
+            try {
+                const payload30 = JSON.stringify({ passwordCredentials: { username: this.memosUsername, password: this.memosPassword } });
+                const safe30 = payload30.replace(/'/g, "'\\''");
+                await Shell.exec(`echo -n '${safe30}' > /tmp/memos_login30.json`);
+                const result = await Shell.exec(`curl -s -c ${this.cookieFile} -X POST -H "Content-Type: application/json" -d @/tmp/memos_login30.json "${url}/api/v1/auth/signin"`);
+                const tok30 = this.extractAccessToken(result);
+                if (tok30) {
+                    this.accessToken = tok30;
+                    await Shell.exec(`echo -n '${tok30}' > ${this.tokenFile}`);
+                    this.loggedIn = true;
+                    return true;
+                }
+                if (this.isAccountResponse(result)) {
                     this.loggedIn = true;
                     return true;
                 }
             } catch (e) { /* ignore */ }
+
             return false;
+        },
+
+        // 从 signin 响应中提取 accessToken (v30 返回 {user, accessToken})
+        extractAccessToken(result: string): string {
+            try {
+                const data = JSON.parse(result);
+                if (data && typeof data.accessToken === 'string' && data.accessToken) return data.accessToken;
+            } catch (e) { /* ignore */ }
+            return '';
+        },
+
+        // v26 返回 User 对象(json 内有 id/name/username 之一)
+        isAccountResponse(result: string): boolean {
+            try {
+                const data = JSON.parse(result);
+                if (data && (data.id || data.name || data.username)) return true;
+            } catch (e) { /* ignore */ }
+            return false;
+        },
+
+        // 构造鉴权正文：优先 Bearer token，其次会话 cookie
+        authFlags(): string {
+            let flags = `-b ${this.cookieFile}`;
+            if (this.accessToken) {
+                flags += ` -H "Authorization: Bearer ${this.accessToken}"`;
+            }
+            return flags;
         },
 
         async loadMemos() {
@@ -148,7 +205,7 @@ const memos = defineComponent({
                     this.showConfig = true;
                     return;
                 }
-                const cmd = `curl -s -b ${this.cookieFile} "${url}/api/v1/memos?pageSize=100"`;
+                const cmd = `curl -s ${this.authFlags()} "${url}/api/v1/memos?pageSize=100"`;
                 const result = await Shell.exec(cmd);
                 const data = JSON.parse(result);
                 const list = data.memos || [];
@@ -197,11 +254,11 @@ const memos = defineComponent({
                 const safePayload = payload.replace(/'/g, "'\\''");
                 await Shell.exec(`echo -n '${safePayload}' > /tmp/memos_payload.json`);
                 if (this.editingMemo) {
-                    const cmd = `curl -s -b ${this.cookieFile} -X PATCH -H "Content-Type: application/json" -d @/tmp/memos_payload.json "${url}/api/v1/memos/${this.editingMemo.name}"`;
+                    const cmd = `curl -s ${this.authFlags()} -X PATCH -H "Content-Type: application/json" -d @/tmp/memos_payload.json "${url}/api/v1/memos/${this.editingMemo.name}"`;
                     await Shell.exec(cmd);
                     showSuccess('已更新');
                 } else {
-                    const cmd = `curl -s -b ${this.cookieFile} -X POST -H "Content-Type: application/json" -d @/tmp/memos_payload.json "${url}/api/v1/memos"`;
+                    const cmd = `curl -s ${this.authFlags()} -X POST -H "Content-Type: application/json" -d @/tmp/memos_payload.json "${url}/api/v1/memos"`;
                     await Shell.exec(cmd);
                     showSuccess('已创建');
                 }
@@ -218,7 +275,7 @@ const memos = defineComponent({
             showLoading();
             try {
                 const url = this.memosUrl.replace(/\/$/, '');
-                const cmd = `curl -s -b ${this.cookieFile} -X DELETE "${url}/api/v1/memos/${memo.name}"`;
+                const cmd = `curl -s ${this.authFlags()} -X DELETE "${url}/api/v1/memos/${memo.name}"`;
                 await Shell.exec(cmd);
                 showSuccess('已删除');
                 await this.loadMemos();
