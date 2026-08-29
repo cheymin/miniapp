@@ -50,6 +50,7 @@ const memos = defineComponent({
             tokenFile: '/tmp/memos_token.txt',
             accessToken: '' as string,
             loggedIn: false,
+            lastAuthError: '' as string,
         };
     },
 
@@ -120,65 +121,93 @@ const memos = defineComponent({
             );
         },
 
-        // 账户密码登录：兼容 memos v26(会话cookie)与 v30(accessToken)两套 API
+        // 规范化 Memos 服务地址：去掉末尾 / 与可能误填的 /api/v1
+        apiBase(): string {
+            let url = this.memosUrl.replace(/\s+/g, '').replace(/\/+$/, '');
+            url = url.replace(/\/api\/v\d*$/, '').replace(/\/api$/, '').replace(/\/+$/, '');
+            return url;
+        },
+
+        // 账号密码登录：兼容 memos 经典版(v0.26/v0.30 返回 User + 会话cookie)与新版(v1 返回 {user, accessToken})
         async ensureLogin(): Promise<boolean> {
             if (this.loggedIn) return true;
-            const url = this.memosUrl.replace(/\/$/, '');
+            this.lastAuthError = '';
+            const url = this.apiBase();
 
-            // 先尝试 v26 风格 (username/password + 会话 cookie)
-            try {
-                const payload26 = JSON.stringify({ username: this.memosUsername, password: this.memosPassword, neverExpire: true });
-                const safe26 = payload26.replace(/'/g, "'\\''");
-                await Shell.exec(`echo -n '${safe26}' > /tmp/memos_login.json`);
-                let result = await Shell.exec(`curl -s -c ${this.cookieFile} -X POST -H "Content-Type: application/json" -d @/tmp/memos_login.json "${url}/api/v1/auth/signin"`);
-                const tok26 = this.extractAccessToken(result);
-                if (tok26) {
-                    this.accessToken = tok26;
-                    await Shell.exec(`echo -n '${tok26}' > ${this.tokenFile}`);
+            // 新版 memos (passwordCredentials -> accessToken)，先尝试
+            {
+                const payload = JSON.stringify({ passwordCredentials: { username: this.memosUsername, password: this.memosPassword } });
+                const safe = payload.replace(/'/g, "'\\''");
+                await Shell.exec(`echo -n '${safe}' > /tmp/memos_login30.json`);
+                const r = await this.fetchAuth('/tmp/memos_login30.json', url);
+                const tok = this.extractAccessToken(r.body);
+                if (tok) {
+                    this.accessToken = tok;
+                    await Shell.exec(`echo -n '${tok}' > ${this.tokenFile}`);
                     this.loggedIn = true;
                     return true;
                 }
-                if (this.isAccountResponse(result)) {
-                    this.loggedIn = true;
-                    return true;
-                }
-            } catch (e) { /* 继续尝试 v30 */ }
+                if (this.isAccountResponse(r.body)) { this.loggedIn = true; return true; }
+                if (r.http === '401') { this.lastAuthError = this.serverError(r.body) || '密码错误(HTTP 401) 或未启用密码登录'; return false; }
+                if (r.curlErr) { this.lastAuthError = '连接失败: ' + r.curlErr; return false; }
+                if (r.http && r.http !== '200') { this.lastAuthError = '服务返回 HTTP ' + r.http; return false; }
+                // 无法以此格式识别，继续尝试经典版
+            }
 
-            // 再尝试 v30 风格 (passwordCredentials -> accessToken)
-            try {
-                const payload30 = JSON.stringify({ passwordCredentials: { username: this.memosUsername, password: this.memosPassword } });
-                const safe30 = payload30.replace(/'/g, "'\\''");
-                await Shell.exec(`echo -n '${safe30}' > /tmp/memos_login30.json`);
-                const result = await Shell.exec(`curl -s -c ${this.cookieFile} -X POST -H "Content-Type: application/json" -d @/tmp/memos_login30.json "${url}/api/v1/auth/signin"`);
-                const tok30 = this.extractAccessToken(result);
-                if (tok30) {
-                    this.accessToken = tok30;
-                    await Shell.exec(`echo -n '${tok30}' > ${this.tokenFile}`);
+            // 经典版 memos (username/password + 会话 cookie)
+            {
+                const payload = JSON.stringify({ username: this.memosUsername, password: this.memosPassword, neverExpire: true });
+                const safe = payload.replace(/'/g, "'\\''");
+                await Shell.exec(`echo -n '${safe}' > /tmp/memos_login.json`);
+                const r = await this.fetchAuth('/tmp/memos_login.json', url);
+                const tok = this.extractAccessToken(r.body);
+                if (tok) {
+                    this.accessToken = tok;
+                    await Shell.exec(`echo -n '${tok}' > ${this.tokenFile}`);
                     this.loggedIn = true;
                     return true;
                 }
-                if (this.isAccountResponse(result)) {
-                    this.loggedIn = true;
-                    return true;
-                }
-            } catch (e) { /* ignore */ }
+                if (this.isAccountResponse(r.body)) { this.loggedIn = true; return true; }
+                if (r.http === '401') { this.lastAuthError = this.serverError(r.body) || '密码错误(HTTP 401) 或未启用密码登录'; return false; }
+                if (r.curlErr) { this.lastAuthError = '连接失败: ' + r.curlErr; return false; }
+                if (r.http && r.http !== '200') { this.lastAuthError = '服务返回 HTTP ' + r.http; return false; }
+                this.lastAuthError = '未知响应: ' + r.body.slice(0, 120);
+            }
 
             return false;
         },
 
-        // 从 signin 响应中提取 accessToken (v30 返回 {user, accessToken})
-        extractAccessToken(result: string): string {
+        // 发送一次登录请求，返回响应体/HTTP 状态码/curl 错误，便于区分“密码错误”和“网络失败”
+        async fetchAuth(payloadPath: string, url: string): Promise<{ body: string; http: string; curlErr: string }> {
+            const cmd = `curl -sS -o /tmp/memos_auth_resp -c ${this.cookieFile} -w '%{http_code}' -X POST -H "Content-Type: application/json" -d @${payloadPath} "${url}/api/v1/auth/signin" 2>/tmp/memos_auth_err`;
+            const http = (await Shell.exec(cmd)).trim();
+            const body = (await Shell.exec('cat /tmp/memos_auth_resp 2>/dev/null')).trim();
+            const curlErr = (await Shell.exec('cat /tmp/memos_auth_err 2>/dev/null')).trim();
+            return { body, http, curlErr };
+        },
+
+        // 从登录响应中解析服务器给出的可读错误信息
+        serverError(body: string): string {
             try {
-                const data = JSON.parse(result);
+                const d = JSON.parse(body);
+                if (d && typeof d.message === 'string' && d.message) return d.message;
+            } catch (e) { /* ignore */ }
+            return '';
+        },
+
+        // 从 signin 响应中提取 accessToken (新版返回 {user, accessToken})
+        extractAccessToken(body: string): string {
+            try {
+                const data = JSON.parse(body);
                 if (data && typeof data.accessToken === 'string' && data.accessToken) return data.accessToken;
             } catch (e) { /* ignore */ }
             return '';
         },
 
-        // v26 返回 User 对象(json 内有 id/name/username 之一)
-        isAccountResponse(result: string): boolean {
+        // 经典版返回 User 对象(json 内有 id/name/username 之一)
+        isAccountResponse(body: string): boolean {
             try {
-                const data = JSON.parse(result);
+                const data = JSON.parse(body);
                 if (data && (data.id || data.name || data.username)) return true;
             } catch (e) { /* ignore */ }
             return false;
@@ -198,9 +227,9 @@ const memos = defineComponent({
             this.isLoading = true;
             showLoading();
             try {
-                const url = this.memosUrl.replace(/\/$/, '');
+                const url = this.apiBase();
                 if (!await this.ensureLogin()) {
-                    showError('登录失败，请检查账户密码');
+                    showError('登录失败：' + (this.lastAuthError || '请检查账户密码'));
                     this.memoList = [];
                     this.showConfig = true;
                     return;
@@ -249,7 +278,7 @@ const memos = defineComponent({
             if (!this.editorContent.trim()) { showInfo('内容不能为空'); return; }
             showLoading();
             try {
-                const url = this.memosUrl.replace(/\/$/, '');
+                const url = this.apiBase();
                 const payload = JSON.stringify({ content: this.editorContent });
                 const safePayload = payload.replace(/'/g, "'\\''");
                 await Shell.exec(`echo -n '${safePayload}' > /tmp/memos_payload.json`);
@@ -274,7 +303,7 @@ const memos = defineComponent({
         async deleteMemo(memo: MemoItem) {
             showLoading();
             try {
-                const url = this.memosUrl.replace(/\/$/, '');
+                const url = this.apiBase();
                 const cmd = `curl -s ${this.authFlags()} -X DELETE "${url}/api/v1/memos/${memo.name}"`;
                 await Shell.exec(cmd);
                 showSuccess('已删除');
