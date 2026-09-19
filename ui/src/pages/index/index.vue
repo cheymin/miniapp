@@ -33,6 +33,7 @@
         <div class="section">
             <text class="section-title">笔记</text>
             <div class="item"><text class="item-text" @click="Memos">备忘录</text></div>
+            <div class="item"><text class="item-text" @click="WifiLogin">WiFi 认证</text></div>
         </div>
         
         <div class="section">

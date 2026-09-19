@@ -25,7 +25,8 @@
     "chatList": "pages/chatList/chatList.vue",
     "chatSettings": "pages/chatSettings/chatSettings.vue",
     "chatKeyboard": "pages/chatKeyboard/chatKeyboard.vue",
-    "memos": "pages/memos/memos.vue"
+    "memos": "pages/memos/memos.vue",
+    "wifiLogin": "pages/wifiLogin/wifiLogin.vue"
   },
   "options": {
     "style": {

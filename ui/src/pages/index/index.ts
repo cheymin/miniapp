@@ -69,6 +69,9 @@ const index = defineComponent({
         Memos() {
             $falcon.navTo("memos", {});
         },
+        WifiLogin() {
+            $falcon.navTo("wifiLogin", {});
+        },
     }
 });
 
