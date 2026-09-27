@@ -1,472 +1,326 @@
 // Copyright (C) 2025 Langning Chen
-//
+// 
 // This file is part of miniapp.
-//
+// 
 // miniapp is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
-//
+// 
 // miniapp is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
-//
+// 
 // You should have received a copy of the GNU General Public License
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
 import { defineComponent } from 'vue';
 import { Shell } from 'langningchen';
-import { showError, showSuccess } from '../../components/ToastMessage';
+import { showError, showInfo } from '../../components/ToastMessage';
 import { hideLoading, showLoading } from '../../components/Loading';
-import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
 
 export type ImageViewerOptions = {
     initialPath?: string;
     directory?: string;
+    allPaths?: string[];
 };
 
-// 屏幕尺寸(有道词典笔 V10: 172x560 竖屏)
-const SCREEN_W = 172;
-const SCREEN_H = 560;
+// 横屏 640×260，左 9/10 ≈ 576px，按钮条 64px
+const SCREEN_W = 640;
+const SCREEN_H = 260;
+const IMG_AREA_W = 576;   // 图片容器宽度
+const IMG_AREA_H = 260;   // 图片容器高度
 
-// 默认以"适应屏幕"为基准，缩放基于 1.0
 const MIN_SCALE = 0.5;
 const MAX_SCALE = 6.0;
 const DOUBLE_TAP_SCALE = 2.5;
-const TAP_THRESHOLD = 10;
-const LONG_PRESS_MS = 550;
+
+// 图片预处理：ffmpeg 缩到最大这个宽度（保证清晰度 + 不爆内存）
+const VIEW_MAX_W = 1280;
+const VIEW_MAX_H = 640;
+const VIEW_Q = 6;
+const VIEW_DIR = '/tmp/viewer_imgs';
 
 const imageViewer = defineComponent({
     data() {
         return {
             $page: {} as FalconPage<ImageViewerOptions>,
 
-            currentImage: '' as string,
-            currentImageData: '' as string,
-            imageName: '' as string,
-            imageSize: 0 as number,
-            currentDirectory: '/userdisk' as string,
-            imageList: [] as string[],
-            currentImageIndex: -1 as number,
+            currentPath: '' as string,       // 原始路径
+            currentDisplayPath: '' as string, // ffmpeg 缩过的文件路径
+            currentName: '' as string,
+            allPaths: [] as string[],
+            currentIndex: -1,
 
             scale: 1.0,
-            rotation: 0,
             panX: 0,
             panY: 0,
 
-            showControls: true as boolean,
-            showMenu: false as boolean,
-            showImageInfo: false as boolean,
-            isSlideshow: false as boolean,
-            slideshowTimer: null as any,
-            autoHideTimer: null as any,
-
             shellInitialized: false,
+            imageReady: false,
 
-            // 手势状态(仅做长按检测,翻页走菜单图片列表/箭头,不与scroller冲突)
+            // 手势状态
             touchStartX: 0,
             touchStartY: 0,
-            isTouching: false,
-            hasMoved: false,
-            longPressTimer: null as any,
-            // 单击/双击
+            panStartX: 0,
+            panStartY: 0,
+            startDist: 0,        // 双指距离
+            startScale: 1.0,
+            isTwoFinger: false,
             lastTapTime: 0,
-            singleTapTimer: null as any
         };
     },
 
     computed: {
         imageStyle(): any {
-            const w = Math.round(SCREEN_W * this.scale);
-            const h = Math.round(SCREEN_H * this.scale);
+            const w = Math.round(IMG_AREA_W * this.scale);
+            const h = Math.round(IMG_AREA_H * this.scale);
             return {
                 width: w + 'px',
                 height: h + 'px',
-                transform: `rotate(${this.rotation}deg) translate(${this.panX}px, ${this.panY}px)`
+                transform: `translate(${this.panX}px, ${this.panY}px)`
             };
         },
-        hasImage(): boolean {
-            return !!this.currentImageData;
-        },
         imageCount(): number {
-            return this.imageList.length;
-        }
+            return this.allPaths.length;
+        },
     },
 
     async mounted() {
-        this.$page.$npage.on("backpressed", this.handleBackPress);
-        await this.initializeShell();
+        this.$page.$npage.on('backpressed', () => this.close());
+        this.$page.$npage.setSupportBack(true);
+
+        try {
+            await Shell.initialize();
+            this.shellInitialized = true;
+        } catch (e) {
+            showError('Shell 初始化失败');
+            return;
+        }
+
+        // 创建临时目录
+        try { await Shell.exec(`mkdir -p ${VIEW_DIR}`); } catch (e) { /* ignore */ }
 
         const options = this.$page.loadOptions;
-        if (options.directory) {
-            this.currentDirectory = options.directory;
-        }
-        if (options.initialPath) {
-            await this.loadImage(options.initialPath);
-            if (options.directory) {
-                this.scanImages(true);
+        if (options && options.allPaths && options.allPaths.length > 0) {
+            this.allPaths = options.allPaths.slice();
+            if (options.initialPath) {
+                this.currentIndex = this.allPaths.indexOf(options.initialPath);
+                if (this.currentIndex < 0) this.currentIndex = 0;
+            } else {
+                this.currentIndex = 0;
             }
+        } else if (options && options.directory) {
+            await this.scanDirectory(options.directory, options.initialPath || '');
+        } else if (options && options.initialPath) {
+            this.allPaths = [options.initialPath];
+            this.currentIndex = 0;
         }
-        this.scheduleAutoHide();
+
+        if (this.allPaths.length > 0) {
+            await this.loadImageAt(this.currentIndex);
+        }
     },
 
     beforeDestroy() {
-        this.$page.$npage.off("backpressed", this.handleBackPress);
-        this.stopSlideshow();
-        this.clearTimers();
+        // try { Shell.exec(`rm -rf ${VIEW_DIR}`); } catch (e) { /* ignore */ }
     },
 
     methods: {
-        handleBackPress() {
-            if (this.showMenu) {
-                this.showMenu = false;
-            } else if (!this.showControls) {
-                this.showControls = true;
-            } else {
-                $falcon.navBack();
-            }
+        close() {
+            $falcon.navBack();
         },
 
-        clearTimers() {
-            if (this.autoHideTimer) { clearTimeout(this.autoHideTimer); this.autoHideTimer = null; }
-            if (this.longPressTimer) { clearTimeout(this.longPressTimer); this.longPressTimer = null; }
-            if (this.singleTapTimer) { clearTimeout(this.singleTapTimer); this.singleTapTimer = null; }
-        },
-
-        scheduleAutoHide() {
-            if (this.autoHideTimer) clearTimeout(this.autoHideTimer);
-            this.autoHideTimer = setTimeout(() => {
-                if (this.hasImage && !this.showMenu && !this.isSlideshow) {
-                    this.showControls = false;
+        async scanDirectory(dir: string, initial: string) {
+            try {
+                const cmd = `find "${dir}" -type f \\( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.bmp" -o -iname "*.webp" \\) 2>/dev/null | sort`;
+                const result = await Shell.exec(cmd);
+                if (result && result.trim()) {
+                    this.allPaths = result.trim().split('\n').filter((p: string) => p);
+                    if (initial) {
+                        this.currentIndex = this.allPaths.indexOf(initial);
+                    }
+                    if (this.currentIndex < 0) this.currentIndex = 0;
                 }
-            }, 3500);
+            } catch (e) { /* ignore */ }
         },
 
-        // 持久≡按钮：controls隐藏时也能恢复(解决"隐藏UI回不来")
-        restoreControls() {
-            this.showControls = true;
-            this.scheduleAutoHide();
-        },
+        async loadImageAt(index: number) {
+            if (index < 0 || index >= this.allPaths.length) return;
+            if (!this.shellInitialized) return;
 
-        toggleControls() {
-            this.showControls = !this.showControls;
-            if (this.showControls) this.scheduleAutoHide();
-        },
+            this.currentIndex = index;
+            this.currentPath = this.allPaths[index];
+            this.currentName = this.currentPath.split('/').pop() || '';
+            this.imageReady = false;
+            this.resetView();
 
-        // ===== 手势:仅长按→菜单,单击→显隐控件,双击→缩放(不与scroller平移冲突) =====
-        onTouchStart(e: any) {
-            const t = this._getTouch(e);
-            if (!t) return;
-            this.touchStartX = t.clientX;
-            this.touchStartY = t.clientY;
-            this.isTouching = true;
-            this.hasMoved = false;
-            if (this.longPressTimer) clearTimeout(this.longPressTimer);
-            this.longPressTimer = setTimeout(() => {
-                if (!this.hasMoved && this.isTouching && this.hasImage) {
-                    this.showMenu = true;
-                    this.isTouching = false;
+            showLoading('加载图片...');
+
+            // 先算预处理输出路径
+            const hash = this.simpleHash(this.currentPath);
+            const viewPath = `${VIEW_DIR}/v_${hash}_${VIEW_MAX_W}.jpg`;
+
+            try {
+                // 先看是不是已经预处理过（同一个文件、同一个尺寸）
+                let needProcess = true;
+                try {
+                    const mtimeCheck = await Shell.exec(`test -f "${viewPath}" && echo ok || echo no`);
+                    if (mtimeCheck && mtimeCheck.trim() === 'ok') {
+                        needProcess = false;
+                    }
+                } catch (e) { /* ignore */ }
+
+                if (needProcess) {
+                    // ffmpeg 预处理：等比缩到 max VIEW_MAX_W×VIEW_MAX_H
+                    // scale=1280:-2 保持宽高比且偶数（避免某些编码器报错）
+                    const ffmpegCmd = `ffmpeg -y -i "${this.currentPath}" -vf "scale=${VIEW_MAX_W}:-2:force_original_aspect_ratio=decrease,scale=trunc(iw/2)*2:trunc(ih/2)*2" -q:v ${VIEW_Q} "${viewPath}" 2>/dev/null`;
+                    await Shell.exec(ffmpegCmd);
                 }
-            }, LONG_PRESS_MS);
-        },
 
-        onTouchMove(e: any) {
-            const t = this._getTouch(e);
-            if (!t || !this.isTouching) return;
-            const dx = t.clientX - this.touchStartX;
-            const dy = t.clientY - this.touchStartY;
-            if (Math.abs(dx) > TAP_THRESHOLD || Math.abs(dy) > TAP_THRESHOLD) {
-                this.hasMoved = true;
-                if (this.longPressTimer) { clearTimeout(this.longPressTimer); this.longPressTimer = null; }
+                this.currentDisplayPath = viewPath;
+                this.imageReady = true;
+            } catch (e: any) {
+                // ffmpeg 失败，直接尝试用原路径（Falcon 可能也能处理）
+                this.currentDisplayPath = this.currentPath;
+                this.imageReady = true;
+                showInfo('图片加载较慢');
+            } finally {
+                hideLoading();
             }
+
+            this.$forceUpdate();
         },
 
-        onTouchEnd() {
-            if (this.longPressTimer) { clearTimeout(this.longPressTimer); this.longPressTimer = null; }
-            this.isTouching = false;
-        },
-
-        _getTouch(e: any) {
-            if (!e) return null;
-            if (e.touches && e.touches.length > 0) return e.touches[0];
-            if (e.changedTouches && e.changedTouches.length > 0) return e.changedTouches[0];
-            if (typeof e.clientX === 'number') return e;
-            return null;
-        },
-
-        // click触发单击/双击(滚动时浏览器不触发click,平移不会误触)
-        onImageClick() {
-            const now = Date.now();
-            if (now - this.lastTapTime < 300) {
-                // 双击:缩放
-                this.lastTapTime = 0;
-                if (this.singleTapTimer) { clearTimeout(this.singleTapTimer); this.singleTapTimer = null; }
-                this.toggleZoom();
-            } else {
-                this.lastTapTime = now;
-                if (this.singleTapTimer) clearTimeout(this.singleTapTimer);
-                this.singleTapTimer = setTimeout(() => {
-                    this.lastTapTime = 0;
-                    this.toggleControls();
-                }, 290);
+        simpleHash(s: string): string {
+            let h = 0;
+            for (let i = 0; i < s.length; i++) {
+                h = ((h << 5) - h + s.charCodeAt(i)) | 0;
             }
-        },
-
-        toggleZoom() {
-            if (this.scale < DOUBLE_TAP_SCALE - 0.1) {
-                this.scale = DOUBLE_TAP_SCALE;
-            } else {
-                this.scale = 1.0;
-                this.rotation = 0;
-            }
-        },
-
-        zoomIn() {
-            this.scale = Math.min(this.scale * 1.3, MAX_SCALE);
-        },
-
-        zoomOut() {
-            this.scale = Math.max(this.scale / 1.3, MIN_SCALE);
+            return Math.abs(h).toString(36);
         },
 
         resetView() {
             this.scale = 1.0;
-            this.rotation = 0;
             this.panX = 0;
             this.panY = 0;
         },
 
-        rotateLeft() { this.rotation -= 90; },
-        rotateRight() { this.rotation += 90; },
+        zoomIn() {
+            this.scale = Math.min(this.scale * 1.3, MAX_SCALE);
+            this.$forceUpdate();
+        },
 
-        panLeft() { this.panX -= 20; },
-        panRight() { this.panX += 20; },
-        panUp() { this.panY -= 20; },
-        panDown() { this.panY += 20; },
+        zoomOut() {
+            this.scale = Math.max(this.scale / 1.3, MIN_SCALE);
+            this.$forceUpdate();
+        },
 
-        // ===== Shell / 加载 =====
-        async initializeShell() {
-            try {
-                if (!Shell || typeof Shell.initialize !== 'function') {
-                    throw new Error('Shell模块不可用');
+        prevImage() {
+            if (this.allPaths.length === 0) return;
+            const idx = (this.currentIndex - 1 + this.allPaths.length) % this.allPaths.length;
+            this.loadImageAt(idx);
+        },
+
+        nextImage() {
+            if (this.allPaths.length === 0) return;
+            const idx = (this.currentIndex + 1) % this.allPaths.length;
+            this.loadImageAt(idx);
+        },
+
+        // ===== 手势处理 =====
+        onImageClick() {
+            const now = Date.now();
+            if (now - this.lastTapTime < 300) {
+                // 双击：在 1x 和 2.5x 之间切换
+                this.lastTapTime = 0;
+                if (this.scale < DOUBLE_TAP_SCALE - 0.1) {
+                    this.scale = DOUBLE_TAP_SCALE;
+                } else {
+                    this.scale = 1.0;
+                    this.panX = 0;
+                    this.panY = 0;
                 }
-                await Shell.initialize();
-                this.shellInitialized = true;
-            } catch (error: any) {
-                console.error('Shell初始化失败:', error);
-                showError('Shell初始化失败');
+                this.$forceUpdate();
+            } else {
+                this.lastTapTime = now;
             }
         },
 
-        async loadImage(imagePath: string) {
-            if (!this.shellInitialized) {
-                showError('Shell未初始化');
+        onTouchStart(e: any) {
+            if (!e) return;
+            const touches = e.touches;
+            if (!touches) return;
+
+            if (touches.length >= 2) {
+                // 双指：准备缩放
+                this.isTwoFinger = true;
+                this.startDist = this.getDist(touches[0], touches[1]);
+                this.startScale = this.scale;
+            } else if (touches.length === 1) {
+                // 单指：准备平移
+                this.isTwoFinger = false;
+                this.touchStartX = touches[0].clientX;
+                this.touchStartY = touches[0].clientY;
+                this.panStartX = this.panX;
+                this.panStartY = this.panY;
+            }
+        },
+
+        onTouchMove(e: any) {
+            if (!e) return;
+            const touches = e.touches;
+            if (!touches) return;
+
+            if (touches.length >= 2) {
+                // 双指缩放
+                const d = this.getDist(touches[0], touches[1]);
+                if (this.startDist > 0) {
+                    const ratio = d / this.startDist;
+                    this.scale = Math.max(MIN_SCALE, Math.min(MAX_SCALE, this.startScale * ratio));
+                    this.$forceUpdate();
+                }
+            } else if (touches.length === 1 && !this.isTwoFinger) {
+                // 单指平移（只有放大了才有意义）
+                if (this.scale > 1.05) {
+                    const dx = touches[0].clientX - this.touchStartX;
+                    const dy = touches[0].clientY - this.touchStartY;
+                    this.panX = this.panStartX + dx;
+                    this.panY = this.panStartY + dy;
+                    this.$forceUpdate();
+                }
+            }
+        },
+
+        onTouchEnd(e: any) {
+            this.isTwoFinger = false;
+            this.startDist = 0;
+            // 边界 clamp
+            this.clampPan();
+            this.$forceUpdate();
+        },
+
+        clampPan() {
+            // 只有缩放 > 1.0 时才需要 clamp（放大了才能看细节）
+            if (this.scale <= 1.0) {
+                this.panX = 0;
+                this.panY = 0;
                 return;
             }
-            try {
-                showLoading('正在加载图片...');
-                const ext = imagePath.split('.').pop()?.toLowerCase() || 'jpg';
-                const mimeType = this.getMimeType(ext);
-
-                let result = '';
-                const encodingMethods = [
-                    `perl -MMIME::Base64 -0777 -ne 'print encode_base64(\$_)' "${imagePath}"`,
-                    `perl -e 'use MIME::Base64; open(F, "<", $ARGV[0]); binmode(F); local $/; print encode_base64(<F>);' "${imagePath}"`,
-                    `xxd -p "${imagePath}" | tr -d '\\n' | perl -e 'use MIME::Base64; my $hex = <STDIN>; $hex =~ s/\\s//g; my $bin = pack("H*", $hex); print encode_base64($bin);'`
-                ];
-
-                for (const cmd of encodingMethods) {
-                    try {
-                        result = await Shell.exec(cmd);
-                        if (result && result.trim()) break;
-                    } catch (e) { continue; }
-                }
-
-                if (result && result.trim()) {
-                    const base64Data = result.trim().replace(/\s/g, '');
-                    this.currentImageData = `data:${mimeType};base64,${base64Data}`;
-                    this.currentImage = imagePath;
-                    this.imageName = imagePath.split('/').pop() || '';
-                    this.resetView();
-                    await this.getImageInfo();
-                    const idx = this.imageList.indexOf(imagePath);
-                    if (idx >= 0) this.currentImageIndex = idx;
-                } else {
-                    showError('图片加载失败');
-                }
-            } catch (error: any) {
-                console.error('加载图片失败:', error);
-                showError('加载图片失败: ' + (error.message || error));
-            } finally {
-                hideLoading();
-            }
+            // 简单 clamp：让放大的图片至少有一部分留在容器内
+            const extraW = (IMG_AREA_W * this.scale - IMG_AREA_W) / 2;
+            const extraH = (IMG_AREA_H * this.scale - IMG_AREA_H) / 2;
+            this.panX = Math.max(-extraW * 2, Math.min(extraW * 2, this.panX));
+            this.panY = Math.max(-extraH * 2, Math.min(extraH * 2, this.panY));
         },
 
-        getMimeType(ext: string): string {
-            const mimeTypes: { [key: string]: string } = {
-                'jpg': 'image/jpeg', 'jpeg': 'image/jpeg', 'png': 'image/png',
-                'gif': 'image/gif', 'bmp': 'image/bmp', 'webp': 'image/webp'
-            };
-            return mimeTypes[ext] || 'image/jpeg';
+        getDist(a: any, b: any): number {
+            const dx = a.clientX - b.clientX;
+            const dy = a.clientY - b.clientY;
+            return Math.sqrt(dx * dx + dy * dy);
         },
-
-        async scanImages(silent: boolean = false) {
-            if (!this.shellInitialized) { showError('Shell未初始化'); return; }
-            try {
-                if (!silent) showLoading('正在扫描目录...');
-                const cmd = `find "${this.currentDirectory}" -type f \\( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.bmp" -o -iname "*.webp" \\) 2>/dev/null | sort`;
-                const result = await Shell.exec(cmd);
-                if (result && result.trim()) {
-                    this.imageList = result.trim().split('\n').filter((path: string) => path);
-                    const idx = this.imageList.indexOf(this.currentImage);
-                    this.currentImageIndex = idx >= 0 ? idx : 0;
-                    if (!silent && this.imageList.length === 0) showError('未找到图片文件');
-                } else {
-                    this.imageList = [];
-                    if (!silent) showError('未找到图片文件');
-                }
-            } catch (error: any) {
-                showError('扫描图片失败: ' + error.message);
-            } finally {
-                if (!silent) hideLoading();
-            }
-        },
-
-        async selectDirectory() {
-            openSoftKeyboard(
-                () => this.currentDirectory,
-                async (value: string) => {
-                    this.currentDirectory = value;
-                    this.showMenu = false;
-                    await this.scanImages();
-                    if (this.imageList.length > 0) {
-                        await this.loadImage(this.imageList[0]);
-                    }
-                }
-            );
-        },
-
-        // 菜单图片列表点击:可靠浏览(替代不可靠的手指滑动)
-        async loadImageByIndex(idx: number) {
-            if (idx < 0 || idx >= this.imageList.length) return;
-            this.showMenu = false;
-            this.currentImageIndex = idx;
-            await this.loadImage(this.imageList[idx]);
-        },
-
-        async nextImage() {
-            if (this.imageList.length === 0) return;
-            const idx = this.currentImageIndex >= 0
-                ? (this.currentImageIndex + 1) % this.imageList.length
-                : 0;
-            this.currentImageIndex = idx;
-            await this.loadImage(this.imageList[idx]);
-        },
-
-        async prevImage() {
-            if (this.imageList.length === 0) return;
-            const idx = this.currentImageIndex >= 0
-                ? (this.currentImageIndex - 1 + this.imageList.length) % this.imageList.length
-                : 0;
-            this.currentImageIndex = idx;
-            await this.loadImage(this.imageList[idx]);
-        },
-
-        toggleImageInfo() { this.showImageInfo = !this.showImageInfo; },
-
-        async getImageInfo() {
-            if (!this.currentImage || !this.shellInitialized) return;
-            try {
-                const cmd = `stat -c '%s' "${this.currentImage}"`;
-                const result = await Shell.exec(cmd);
-                if (result && result.trim()) {
-                    this.imageSize = parseInt(result.trim(), 10);
-                }
-            } catch (error) { console.error('获取图片信息失败:', error); }
-        },
-
-        formatFileSize(bytes: number): string {
-            if (!bytes) return '0 B';
-            const k = 1024;
-            const sizes = ['B', 'KB', 'MB', 'GB'];
-            const i = Math.floor(Math.log(bytes) / Math.log(k));
-            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-        },
-
-        async deleteImage() {
-            if (!this.currentImage || !this.shellInitialized) return;
-            try {
-                await Shell.exec(`rm "${this.currentImage}"`);
-                const removedIdx = this.currentImageIndex;
-                if (removedIdx >= 0 && removedIdx < this.imageList.length) {
-                    this.imageList.splice(removedIdx, 1);
-                }
-                this.showMenu = false;
-                if (this.imageList.length > 0) {
-                    this.currentImageIndex = Math.min(removedIdx < 0 ? 0 : removedIdx, this.imageList.length - 1);
-                    await this.loadImage(this.imageList[this.currentImageIndex]);
-                } else {
-                    this.currentImage = '';
-                    this.currentImageData = '';
-                    this.imageName = '';
-                    this.imageSize = 0;
-                }
-                showSuccess('图片已删除');
-            } catch (error: any) {
-                showError('删除失败: ' + error.message);
-            }
-        },
-
-        async renameImage() {
-            if (!this.currentImage || !this.shellInitialized) return;
-            const oldName = this.imageName;
-            openSoftKeyboard(
-                () => this.imageName,
-                async (newName: string) => {
-                    if (!newName || newName === oldName) return;
-                    const dir = this.currentImage.substring(0, this.currentImage.lastIndexOf('/'));
-                    const newPath = `${dir}/${newName}`;
-                    try {
-                        await Shell.exec(`mv "${this.currentImage}" "${newPath}"`);
-                        const li = this.imageList.indexOf(this.currentImage);
-                        if (li >= 0) this.imageList[li] = newPath;
-                        this.currentImage = newPath;
-                        this.imageName = newName;
-                        this.showMenu = false;
-                        showSuccess('重命名成功');
-                    } catch (error: any) {
-                        showError('重命名失败: ' + error.message);
-                    }
-                }
-            );
-        },
-
-        toggleSlideshow() {
-            this.isSlideshow = !this.isSlideshow;
-            if (this.isSlideshow) {
-                this.showMenu = false;
-                this.showControls = false;
-                this.startSlideshow();
-            } else {
-                this.stopSlideshow();
-                this.showControls = true;
-            }
-        },
-
-        startSlideshow() {
-            if (this.slideshowTimer) clearInterval(this.slideshowTimer);
-            this.slideshowTimer = setInterval(() => { this.nextImage(); }, 3500);
-        },
-
-        stopSlideshow() {
-            this.isSlideshow = false;
-            if (this.slideshowTimer) {
-                clearInterval(this.slideshowTimer);
-                this.slideshowTimer = null;
-            }
-        }
-    }
+    },
 });
 
 export default imageViewer;

@@ -23,7 +23,6 @@
             <text class="section-title">核心功能</text>
             
             <div class="item"><text class="item-text" @click="openAi">AI 助手</text></div>
-            <div class="item"><text class="item-text" @click="Chat">新 AI 聊天</text></div>
             <div class="item"><text class="item-text" @click="FileEditor">文本编辑器</text></div>
             <div class="item"><text class="item-text" @click="FileManager">文件管理器</text></div>
             <div class="item"><text class="item-text" @click="Browser">网页浏览器</text></div>
@@ -31,8 +30,7 @@
         </div>
 
         <div class="section">
-            <text class="section-title">笔记</text>
-            <div class="item"><text class="item-text" @click="Memos">备忘录</text></div>
+            <text class="section-title">网络</text>
             <div class="item"><text class="item-text" @click="WifiLogin">WiFi 认证</text></div>
         </div>
         
@@ -41,12 +39,6 @@
 
             <div class="item"><text class="item-text" @click="ImageViewer">图片查看器</text></div>
             <div class="item"><text class="item-text" @click="Gallery">图库</text></div>
-        </div>
-        
-        <div class="section">
-            <text class="section-title">游戏</text>
-            
-            <div class="item"><text class="item-text" @click="Pvz">植物大战僵尸</text></div>
         </div>
         
         <div class="section">

@@ -17,84 +17,207 @@
 
 import { defineComponent } from 'vue';
 import { Shell } from 'langningchen';
-import { showError, showSuccess } from '../../components/ToastMessage';
+import { showError, showSuccess, showInfo } from '../../components/ToastMessage';
 import { hideLoading, showLoading } from '../../components/Loading';
 import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
 
-export type GalleryOptions = {};
+export type GalleryOptions = {
+    directory?: string;
+};
 
 interface ImageItem {
     path: string;
     name: string;
-    thumbnail: string;
+    thumbPath: string;   // ffmpeg 生成的缩略图 jpg 路径（文件路径，不走 base64）
     loaded: boolean;
 }
 
-const THUMBNAIL_CACHE = new Map<string, string>();
-const MAX_CACHE_SIZE = 50;
+// 缩略图输出目录
+const THUMB_DIR = '/tmp/gallery_thumbs';
+// 缩略图宽度（横屏 640，3 列约 200px，稍大一点保证清晰）
+const THUMB_W = 240;
+// 缩略图质量（1-31，越小越好）
+const THUMB_Q = 5;
+// 同时预加载的数量
+const BATCH_SIZE = 6;
 
 const gallery = defineComponent({
     data() {
         return {
             $page: {} as FalconPage<GalleryOptions>,
-            
-            currentDirectory: '/userdisk' as string,
+
+            currentDirectory: '/userdisk/Pictures' as string,
             imageList: [] as ImageItem[],
-            showSettingsPanel: false as boolean,
-            
-            loadedCount: 0,
+            showSettings: false as boolean,
             isLoading: false,
-            scrollOffset: 0,
-            
-            shellInitialized: false
+            scanProgress: '',
+            shellInitialized: false,
         };
     },
 
     computed: {
-        gridRows(): any[] {
-            const rows = [];
-            const visibleItems = this.imageList.slice(0, this.loadedCount + 6);
-            for (let i = 0; i < visibleItems.length; i += 3) {
-                rows.push(visibleItems.slice(i, i + 3));
+        gridRows(): ImageItem[][] {
+            const rows: ImageItem[][] = [];
+            for (let i = 0; i < this.imageList.length; i += 3) {
+                rows.push(this.imageList.slice(i, i + 3));
             }
             return rows;
-        }
+        },
     },
 
     async mounted() {
-        this.$page.$npage.on("backpressed", this.handleBackPress);
-        await this.initializeShell();
-    },
-    
-    beforeDestroy() {
-        this.$page.$npage.off("backpressed", this.handleBackPress);
-    },
-
-    methods: {
-        handleBackPress() {
-            if (this.showSettingsPanel) {
-                this.showSettingsPanel = false;
+        this.$page.$npage.on('backpressed', () => {
+            if (this.showSettings) {
+                this.showSettings = false;
             } else {
                 $falcon.navBack();
             }
-        },
-        
-        toggleSettings() {
-            this.showSettingsPanel = !this.showSettingsPanel;
+        });
+
+        try {
+            await Shell.initialize();
+            this.shellInitialized = true;
+        } catch (e) {
+            showError('Shell 初始化失败');
+            return;
+        }
+
+        const options = this.$page.loadOptions;
+        if (options.directory) {
+            this.currentDirectory = options.directory;
+        }
+
+        // 初始化缩略图目录
+        try { await Shell.exec(`mkdir -p ${THUMB_DIR}`); } catch (e) { /* ignore */ }
+
+        await this.scanImages();
+    },
+
+    beforeDestroy() {
+        // 清理临时缩略图（可选，保留也行占不了多少空间）
+        // try { Shell.exec(`rm -rf ${THUMB_DIR}`); } catch (e) { /* ignore */ }
+    },
+
+    methods: {
+        async scanImages() {
+            if (!this.shellInitialized) return;
+
+            showLoading('扫描目录...');
+            this.scanProgress = '扫描文件';
+
+            try {
+                // 找到所有图片
+                const cmd = `find "${this.currentDirectory}" -type f \\( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.bmp" -o -iname "*.webp" \\) 2>/dev/null | sort`;
+                const result = await Shell.exec(cmd);
+
+                if (!result || !result.trim()) {
+                    this.imageList = [];
+                    hideLoading();
+                    showInfo('目录下没有图片');
+                    return;
+                }
+
+                const paths = result.trim().split('\n').filter((p: string) => p);
+                this.imageList = [];
+
+                // 先构造列表（thumbPath 先用空，loaded=false）
+                for (const p of paths) {
+                    const ext = p.split('.').pop()?.toLowerCase() || 'jpg';
+                    const name = p.split('/').pop() || p;
+                    // 用文件路径 hash 做文件名（防止特殊字符）
+                    const hash = this.simpleHash(p);
+                    const thumbPath = `${THUMB_DIR}/t_${hash}_${THUMB_W}.jpg`;
+                    this.imageList.push({
+                        path: p,
+                        name,
+                        thumbPath,
+                        loaded: false,
+                    });
+                }
+
+                hideLoading();
+                showSuccess(`发现 ${this.imageList.length} 张图片`);
+
+                // 后台生成缩略图（异步不阻塞 UI）
+                this.generateThumbs();
+            } catch (e: any) {
+                hideLoading();
+                showError('扫描失败: ' + (e.message || e));
+            }
         },
 
-        async initializeShell() {
-            try {
-                if (!Shell || typeof Shell.initialize !== 'function') {
-                    throw new Error('Shell模块不可用');
-                }
-                
-                await Shell.initialize();
-                this.shellInitialized = true;
-            } catch (error: any) {
-                console.error('Shell初始化失败:', error);
-                showError('Shell初始化失败');
+        simpleHash(s: string): string {
+            let h = 0;
+            for (let i = 0; i < s.length; i++) {
+                h = ((h << 5) - h + s.charCodeAt(i)) | 0;
             }
+            return Math.abs(h).toString(36);
+        },
+
+        async generateThumbs() {
+            if (!this.shellInitialized) return;
+            // 只生成前 12 张（一屏 + 一屏），滚动时再按需生成
+            const maxOnScreen = 12;
+            const targets = this.imageList.slice(0, maxOnScreen);
+
+            for (let i = 0; i < targets.length; i++) {
+                const item = targets[i];
+                if (item.loaded) continue;
+
+                // 先检查文件是否已经生成过
+                try {
+                    const check = await Shell.exec(`test -f "${item.thumbPath}" && echo ok || echo no`);
+                    if (check && check.trim() === 'ok') {
+                        item.loaded = true;
+                        continue;
+                    }
+                } catch (e) { /* ignore */ }
+
+                try {
+                    // ffmpeg 生成缩略图（自动缩到 THUMB_W 宽，高度等比）
+                    const ffmpegCmd = `ffmpeg -y -i "${item.path}" -vf "scale=${THUMB_W}:-1" -q:v ${THUMB_Q} "${item.thumbPath}" 2>/dev/null`;
+                    await Shell.exec(ffmpegCmd);
+                    item.loaded = true;
+                } catch (e) {
+                    // ffmpeg 失败（可能 gif/webp 不支持），用 perl 兜底生成小图
+                    try {
+                        const fallback = this.getFallbackCmd(item.path, item.thumbPath);
+                        await Shell.exec(fallback);
+                        item.loaded = true;
+                    } catch (e2) {
+                        // 彻底失败
+                    }
+                }
+
+                // 每 3 张更新一下 UI（让缩略图显现）
+                if ((i + 1) % 3 === 0) {
+                    this.$forceUpdate();
+                }
+            }
+            this.$forceUpdate();
+        },
+
+        getFallbackCmd(src: string, dst: string): string {
+            // Perl 用 GD 或 ImageMagick？没有的话直接 cp 原文件，Falcon 自己会缩
+            // 这里用最简单的：直接 perl 拷贝
+            return `cp "${src}" "${dst}" 2>/dev/null || perl -e 'open(F,"<","${src}");open(G,">","${dst}");binmode F;binmode G;while(read(F,$b,4096)){print G $b}'`;
+        },
+
+        async generateMoreThumbs(fromIndex: number, count: number) {
+            const targets = this.imageList.slice(fromIndex, fromIndex + count);
+            for (const item of targets) {
+                if (item.loaded) continue;
+                try {
+                    const ffmpegCmd = `ffmpeg -y -i "${item.path}" -vf "scale=${THUMB_W}:-1" -q:v ${THUMB_Q} "${item.thumbPath}" 2>/dev/null`;
+                    await Shell.exec(ffmpegCmd);
+                    item.loaded = true;
+                } catch (e) { /* ignore */ }
+            }
+            this.$forceUpdate();
+        },
+
+        toggleSettings() {
+            this.showSettings = !this.showSettings;
         },
 
         async selectDirectory() {
@@ -102,189 +225,46 @@ const gallery = defineComponent({
                 () => this.currentDirectory,
                 async (value: string) => {
                     this.currentDirectory = value;
-                    this.showSettingsPanel = false;
+                    this.showSettings = false;
+                    // 清理旧缩略图
+                    try { await Shell.exec(`rm -rf ${THUMB_DIR} && mkdir -p ${THUMB_DIR}`); } catch (e) { /* ignore */ }
                     await this.scanImages();
                 }
             );
         },
 
-        async scanImages() {
-            if (!this.shellInitialized) {
-                showError('Shell未初始化');
-                return;
-            }
-            
-            try {
-                showLoading('正在扫描图片...');
-                
-                const cmd = `find "${this.currentDirectory}" -type f \\( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.bmp" -o -iname "*.webp" \\) 2>/dev/null | sort`;
-                
-                const result = await Shell.exec(cmd);
-                
-                if (result && result.trim()) {
-                    const paths = result.trim().split('\n').filter((path: string) => path);
-                    
-                    this.imageList = [];
-                    this.loadedCount = 0;
-                    
-                    for (const path of paths) {
-                        const name = path.split('/').pop() || '';
-                        this.imageList.push({
-                            path: path,
-                            name: name,
-                            thumbnail: '',
-                            loaded: false
-                        });
-                    }
-                    
-                    await this.loadInitialThumbnails();
-                } else {
-                    this.imageList = [];
-                    showError('未找到图片文件');
-                }
-            } catch (error: any) {
-                console.error('扫描图片失败:', error);
-                showError('扫描图片失败: ' + error.message);
-            } finally {
-                hideLoading();
-            }
-        },
-
-        async loadInitialThumbnails() {
-            const initialCount = Math.min(3, this.imageList.length);
-            
-            for (let i = 0; i < initialCount; i++) {
-                if (this.imageList[i] && !this.imageList[i].loaded) {
-                    await this.loadThumbnail(i);
-                }
-            }
-            
-            this.loadedCount = initialCount;
-        },
-
-        async loadThumbnail(index: number) {
-            if (index < 0 || index >= this.imageList.length) return;
-            
-            const item = this.imageList[index];
-            if (item.loaded || this.isLoading) return;
-            
-            this.isLoading = true;
-            
-            try {
-                if (THUMBNAIL_CACHE.has(item.path)) {
-                    this.imageList[index].thumbnail = THUMBNAIL_CACHE.get(item.path) || '';
-                    this.imageList[index].loaded = true;
-                    return;
-                }
-                
-                const thumbnail = await this.generateThumbnail(item.path);
-                if (thumbnail) {
-                    this.imageList[index].thumbnail = thumbnail;
-                    this.imageList[index].loaded = true;
-                    
-                    this.manageCache(item.path, thumbnail);
-                }
-            } catch (e) {
-                console.error('加载缩略图失败:', e);
-            } finally {
-                this.isLoading = false;
-            }
-        },
-
-        manageCache(path: string, thumbnail: string) {
-            if (THUMBNAIL_CACHE.size >= MAX_CACHE_SIZE) {
-                const firstKey = THUMBNAIL_CACHE.keys().next().value;
-                if (firstKey) {
-                    THUMBNAIL_CACHE.delete(firstKey);
-                }
-            }
-            
-            THUMBNAIL_CACHE.set(path, thumbnail);
-        },
-
-        async loadMoreThumbnails() {
-            if (this.isLoading || this.loadedCount >= this.imageList.length) return;
-            
-            const start = this.loadedCount;
-            const end = Math.min(start + 3, this.imageList.length);
-            
-            for (let i = start; i < end; i++) {
-                await this.loadThumbnail(i);
-            }
-            
-            this.loadedCount = end;
-        },
-
-        async generateThumbnail(imagePath: string): Promise<string> {
-            if (!this.shellInitialized) return '';
-            
-            try {
-                const ext = imagePath.split('.').pop()?.toLowerCase() || 'jpg';
-                const mimeType = this.getMimeType(ext);
-                
-                let result = '';
-                
-                const encodingMethods = [
-                    `perl -MMIME::Base64 -0777 -ne 'print encode_base64(\$_)' "${imagePath}"`,
-                    `perl -e 'use MIME::Base64; open(F, "<", $ARGV[0]); binmode(F); local $/; print encode_base64(<F>);' "${imagePath}"`
-                ];
-                
-                for (const cmd of encodingMethods) {
-                    try {
-                        result = await Shell.exec(cmd);
-                        if (result && result.trim()) {
-                            break;
-                        }
-                    } catch (e) {
-                        continue;
-                    }
-                }
-                
-                if (result && result.trim()) {
-                    const base64Data = result.trim().replace(/\s/g, '');
-                    return `data:${mimeType};base64,${base64Data}`;
-                }
-            } catch (error: any) {
-                console.error('生成缩略图失败:', error);
-            }
-            
-            return '';
-        },
-        
-        getMimeType(ext: string): string {
-            const mimeTypes: { [key: string]: string } = {
-                'jpg': 'image/jpeg',
-                'jpeg': 'image/jpeg',
-                'png': 'image/png',
-                'gif': 'image/gif',
-                'bmp': 'image/bmp',
-                'webp': 'image/webp'
-            };
-            return mimeTypes[ext] || 'image/jpeg';
-        },
-
         openImage(index: number) {
             const item = this.imageList[index];
-            if (item) {
-                $falcon.navTo("imageViewer", {
-                    initialPath: item.path,
-                    directory: this.currentDirectory
-                });
-            }
+            if (!item) return;
+            $falcon.navTo('imageViewer', {
+                initialPath: item.path,
+                directory: this.currentDirectory,
+                allPaths: this.imageList.map((it: ImageItem) => it.path),
+            });
         },
 
-        handleScroll(event: any) {
-            if (!event || !event.contentOffset) return;
-            
-            const scrollTop = event.contentOffset.y || 0;
-            const scrollHeight = event.contentSize ? event.contentSize.height : 0;
-            const viewHeight = event.contentSize ? event.contentSize.height : 0;
-            
-            if (scrollHeight > 0 && scrollTop + viewHeight >= scrollHeight - 200) {
-                this.loadMoreThumbnails();
+        onGridScroll(e: any) {
+            if (!e || !e.contentOffset) return;
+            // 简单检测：滚到末尾时再生成一批
+            const offsetY = e.contentOffset.y || 0;
+            const scrollH = e.contentSize ? e.contentSize.height : 0;
+            const viewH = 260;
+
+            if (scrollH > 0 && offsetY + viewH >= scrollH - 60) {
+                // 找到第一个未加载的索引
+                let firstUnloaded = -1;
+                for (let i = 0; i < this.imageList.length; i++) {
+                    if (!this.imageList[i].loaded) {
+                        firstUnloaded = i;
+                        break;
+                    }
+                }
+                if (firstUnloaded >= 0) {
+                    this.generateMoreThumbs(firstUnloaded, BATCH_SIZE);
+                }
             }
-        }
-    }
+        },
+    },
 });
 
 export default gallery;
