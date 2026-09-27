@@ -1,0 +1,565 @@
+Microsoft Windows [版本 10.0.19045.6466]
+(c) Microsoft Corporation。保留所有权利。
+
+C:\Users\Administrator>ssh root@192.168.6.226
+root@192.168.6.226's password:
+Permission denied, please try again.
+root@192.168.6.226's password:
+Permission denied, please try again.
+root@192.168.6.226's password:
+root@192.168.6.226: Permission denied (publickey,password,keyboard-interactive).
+
+C:\Users\Administrator>ssh root@192.168.6.226
+root@192.168.6.226's password:
+Permission denied, please try again.
+root@192.168.6.226's password:
+Permission denied, please try again.
+root@192.168.6.226's password:
+root@192.168.6.226: Permission denied (publickey,password,keyboard-interactive).
+
+C:\Users\Administrator>ssh root@192.168.6.226
+root@192.168.6.226's password:
+Permission denied, please try again.
+root@192.168.6.226's password:
+[root@YoudaoDictionaryPen-556:~]# ls
+[root@YoudaoDictionaryPen-556:~]# cd
+[root@YoudaoDictionaryPen-556:~]# # 1. 屏幕分辨率、密度、物理尺寸
+[root@YoudaoDictionaryPen-556:~]# adb shell wm size
+-sh: adb: not found
+[root@YoudaoDictionaryPen-556:~]# adb shell wm density
+-sh: adb: not found
+[root@YoudaoDictionaryPen-556:~]# adb shell dumpsys display | grep -E '(mPhysicalDisplayInfo|mBaseDisplayInfo|PhysicalDi
+splayId|DisplayDeviceInfo|width|height|orientation)' | head -30
+-sh: adb: not found
+b shell cat /proc/meminfo | head -5
+
+# 5. 存储
+adb shell df -h /[root@YoudaoDictionaryPen-556:~]#
+[root@YoudaoDictionaryPen-556:~]# # 2. CPU / 架构
+[root@YoudaoDictionaryPen-556:~]# adb shell cat /proc/cpuinfo
+-sh: adb: not found
+[root@YoudaoDictionaryPen-556:~]# adb shell uname -a
+-sh: adb: not found
+[root@YoudaoDictionaryPen-556:~]#
+data
+adb shell df -h /userdisk[root@YoudaoDictionaryPen-556:~]# # 3. 系统属性
+[root@YoudaoDictionaryPen-556:~]# adb shell getprop ro.build.version.release
+-sh: adb: not found
+[root@YoudaoDictionaryPen-556:~]# adb shell getprop ro.build.version.sdk
+-sh: adb: not found
+[root@YoudaoDictionaryPen-556:~]# adb shell getprop ro.product.model
+-sh: adb: not found
+[root@YoudaoDictionaryPen-556:~]# adb shell getprop ro.product.brand
+-sh: adb: not found
+[root@YoudaoDictionaryPen-556:~]# adb shell getprop ro.hardware
+-sh: adb: not found
+[root@YoudaoDictionaryPen-556:~]#
+[root@YoudaoDictionaryPen-556:~]# # 4. 内存
+[root@YoudaoDictionaryPen-556:~]# adb shell cat /proc/meminfo | head -5
+-sh: adb: not found
+[root@YoudaoDictionaryPen-556:~]#
+[root@YoudaoDictionaryPen-556:~]# # 5. 存储
+[root@YoudaoDictionaryPen-556:~]# adb shell df -h /data
+-sh: adb: not found
+[root@YoudaoDictionaryPen-556:~]# adb shell df -h /userdisk
+-sh: adb: not found
+[root@YoudaoDictionaryPen-556:~]# # 1. 屏幕分辨率（从 framebuffer 或 sysfs 拿，词典笔没有 Android wm）
+[root@YoudaoDictionaryPen-556:~]# cat /sys/class/graphics/fb0/virtual_size 2>/dev/null
+172,560
+[root@YoudaoDictionaryPen-556:~]# cat /sys/class/graphics/fb0/modes 2>/dev/null
+hics/fb0/mode 2>/dev/null
+
+# 2. CPU / 架构
+cat /proc/cpuinfo
+uname -a
+
+# 3. 系统版本
+cat /etc/os-releaseU:172x560p-0
+ 2>/dev/null
+cat /etc/issue 2>/dev/null
+lsb_release -[root@YoudaoDictionaryPen-556:~]# cat /sys/class/graphics/fb0/mode 2>/dev/null
+a 2>/de[root@YoudaoDictionaryPen-556:~]#
+[root@YoudaoDictionaryPen-556:~]# # 2. CPU / 架构
+[root@YoudaoDictionaryPen-556:~]# cat /proc/cpuinfo
+processor       : 0
+model name      : ARMv7 Processor rev 5 (v7l)
+BogoMIPS        : 69.82
+Features        : half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt vfpd32 lpae
+CPU implementer : 0x41
+CPU architecture: 7
+CPU variant     : 0x0
+CPU part        : 0xc07
+CPU revision    : 5
+
+Hardware        : Rockchip (Device Tree)
+Revision        : 0000
+Serial          : b7e9bcd6dfa65d50
+[root@YoudaoDictionaryPen-556:~]# uname -a
+v/null
+
+# 4. 内存
+cat /proc/meminfo | head -10
+
+Linux YoudaoDictionaryPen-556 5.10.160 #33 Mon Dec 1 11:25:54 CST 2025 armv7l GNU/Linux
+[root@YoudaoDictionaryPen-556:~]#
+[root@YoudaoDictionaryPen-556:~]# # 3. 系统版本
+[root@YoudaoDictionaryPen-556:~]# cat /etc/os-release 2>/dev/null
+# 5. 存储
+df -h /
+df -h /userdisk 2>/dev/null
+df -h /userdisk/FNAME=Buildroot
+VERSION=-ga1e8b5d939
+ID=buildroot
+VERSION_ID=2021.11
+PRETTY_NAME="Buildroot 2021.11"
+[root@YoudaoDictionaryPen-556:~]# cat /etc/issue 2>/dev/null
+avorite 2>/dev/nullWelcome to Buildroot
+[root@YoudaoDictionaryPen-556:~]# lsb_release -a 2>/dev/null
+[root@YoudaoDictionaryPen-556:~]#
+[root@YoudaoDictionaryPen-556:~]# # 4. 内存
+[root@YoudaoDictionaryPen-556:~]# cat /proc/meminfo | head -10
+MemTotal:         104440 kB
+MemFree:            2908 kB
+MemAvailable:      49336 kB
+Buffers:            4320 kB
+Cached:            44968 kB
+SwapCached:          744 kB
+Active:            30844 kB
+Inactive:          57360 kB
+Active(anon):       2656 kB
+Inactive(anon):    36560 kB
+[root@YoudaoDictionaryPen-556:~]#
+[root@YoudaoDictionaryPen-556:~]# # 5. 存储
+[root@YoudaoDictionaryPen-556:~]# df -h /
+Filesystem                Size      Used Available Use% Mounted on
+/dev/root                 1.2G      1.1G    172.5M  86% /
+[root@YoudaoDictionaryPen-556:~]# df -h /userdisk 2>/dev/null
+Filesystem                Size      Used Available Use% Mounted on
+/dev/mmcblk0p11          25.8G     14.2G     10.5G  58% /userdisk
+[root@YoudaoDictionaryPen-556:~]# df -h /userdisk/Favorite 2>/dev/null
+Filesystem                Size      Used Available Use% Mounted on
+/dev/mmcblk0p11          25.8G     14.2G     10.5G  58% /userdisk
+[root@YoudaoDictionaryPen-556:~]# # 1. 视频设备
+[root@YoudaoDictionaryPen-556:~]# ls -la /dev/video* 2>/dev/null
+crw-rw----    1 root     root       81,   0 Jan  1  1970 /dev/video0
+crw-rw----    1 root     root       81,   1 Jan  1  1970 /dev/video1
+crw-rw----    1 root     root       81,  10 Jan  1  1970 /dev/video10
+crw-rw----    1 root     root       81,  11 Jan  1  1970 /dev/video11
+crw-rw----    1 root     root       81,  12 Jan  1  1970 /dev/video12
+crw-rw----    1 root     root       81,  13 Jan  1  1970 /dev/video13
+crw-rw----    1 root     root       81,  14 Jan  1  1970 /dev/video14
+crw-rw----    1 root     root       81,  15 Jan  1  1970 /dev/video15
+crw-rw----    1 root     root       81,  16 Jan  1  1970 /dev/video16
+crw-rw----    1 root     root       81,  17 Jan  1  1970 /dev/video17
+crw-rw----    1 root     root       81,  18 Jan  1  1970 /dev/video18
+crw-rw----    1 root     root       81,  19 Jan  1  1970 /dev/video19
+crw-rw----    1 root     root       81,   2 Jan  1  1970 /dev/video2
+crw-rw----    1 root     root       81,  20 Jan  1  1970 /dev/video20
+crw-rw----    1 root     root       81,   3 Jan  1  1970 /dev/video3
+crw-rw----    1 root     root       81,   4 Jan  1  1970 /dev/video4
+crw-rw----    1 root     root       81,   5 Jan  1  1970 /dev/video5
+crw-rw----    1 root     root       81,   6 Jan  1  1970 /dev/video6
+crw-rw----    1 root     root       81,   7 Jan  1  1970 /dev/video7
+crw-rw----    1 root     root       81,   8 Jan  1  1970 /dev/video8
+crw-rw----    1 root     root       81,   9 Jan  1  1970 /dev/video9
+[root@YoudaoDictionaryPen-556:~]# ls -la /dev/v4l 2>/dev/null
+video4linux/video*/name 2>/dev/null
+cat /sys/class/video4linux/video*/format 2>/dev/null
+cat /sys/class/vide[root@YoudaoDictionaryPen-556:~]#
+[root@YoudaoDictionaryPen-556:~]# # 2. 如果有 /dev/video0 之类的，查询能力
+[root@YoudaoDictionaryPen-556:~]# cat /sys/class/video4linux/video*/name 2>/dev/null
+rkisp_mainpath
+rkisp_selfpath
+o4linux/video*/modalias 2>/dev/null
+
+# 3. 搜 cstream_cif_mipi_id0
+stream_cif_mipi_id1
+stream_cif_mipi_id2
+stream_cif_mipi_id3
+rkcif_scale_ch0
+rkcif_scale_ch1
+rkcif_scale_ch2
+rkcif_scale_ch3
+rkcif_tools_id0
+rkcif_tools_id1
+rkisp_bypasspath
+rkcif_tools_id2
+rkisp_mainpath_4x4sampling
+rkisp_bypasspath_4x4sampling
+rkisp_lumapath
+rkisp_rawrd0_m
+rkisp_rawrd2_s
+rkisp-statistics
+rkisp-input-params
+amera/v4l 相关驱动、二进制、配置
+find / -name '*camera*' 2>/dev/[root@YoudaoDictionaryPen-556:~]# cat /sys/class/video4linux/video*/format 2>/dev/null
+[root@YoudaoDictionaryPen-556:~]# cat /sys/class/video4linux/video*/modalias 2>/dev/null
+null | [root@YoudaoDictionaryPen-556:~]#
+[root@YoudaoDictionaryPen-556:~]# # 3. 搜 camera/v4l 相关驱动、二进制、配置
+[root@YoudaoDictionaryPen-556:~]# find / -name '*camera*' 2>/dev/null | head -20
+
+find / -name '*ov*' -o -name '*gc*' -o -name '*imx*' 2>/dev/null | grep -iE 'cam|sensor|spi|i2c' | head -20
+
+# 4. 看看有没有带的拍照/录像命令
+which fswebcam 2>/dev/null; which ffmpeg 2>/dev/null; which v4l2-ctl 2>/dev/null; which streamer 2>/dev/null
+ls /usr/bin/ | grep -iE 'cam|v4l|video|fsweb'
+
+# 5. I2C 设备（摄像头传感器通常挂 I2C）
+ls -la /sys/bus/i2c/devices/ 2>/dev/null
+cat /sys/bus/i2c/devices/*/name 2>/dev/null | head -20
+/lib/udev/rules.d/88-rockchip-camera.rules
+/userdisk/secondary/miniapp/data/mini_app/pkg/8001687764241341/a/tools_camera.js.bin
+/userdisk/secondary/miniapp/data/mini_app/pkg/8001768662037876/a/tools_camera.js.bin
+/userdisk/secondary/miniapp/data/mini_app/pkg/8001785914718594/a/aicamera-5410a98b.js.bin
+/userdisk/secondary/miniapp/data/mini_app/pkg/8001785914718594/a/camera.js.bin
+/usr/bin/set_camera_crop.sh
+/usr/bin/hal-camera
+/usr/bin/camera_rule.sh
+/usr/share/icons/icon_camera.png
+/sys/firmware/devicetree/base/i2c@ff470000/sc2356@30/rockchip,camera-module-facing
+/sys/firmware/devicetree/base/i2c@ff470000/sc2356@30/rockchip,camera-module-index
+/sys/firmware/devicetree/base/i2c@ff470000/sc2356@30/rockchip,camera-module-lens-name
+/sys/firmware/devicetree/base/i2c@ff470000/sc2356@30/rockchip,camera-module-name
+/sys/firmware/devicetree/base/i2c@ff470000/sc2356@10/rockchip,camera-module-facing
+/sys/firmware/devicetree/base/i2c@ff470000/sc2356@10/rockchip,camera-module-index
+/sys/firmware/devicetree/base/i2c@ff470000/sc2356@10/rockchip,camera-module-lens-name
+/sys/firmware/devicetree/base/i2c@ff470000/sc2356@10/rockchip,camera-module-name
+/sys/firmware/devicetree/base/pinctrl/camera
+[root@YoudaoDictionaryPen-556:~]# find / -name '*v4l*' 2>/dev/null | head -20
+/lib/udev/rules.d/60-persistent-v4l.rules
+/lib/udev/v4l_id
+/usr/lib/libv4l1.so.0
+/usr/lib/libv4lconvert.so.0.0.0
+/usr/lib/libv4lconvert.so.0
+/usr/lib/libv4l
+/usr/lib/libv4l/v4l1compat.so
+/usr/lib/libv4l/plugins/libv4l-mplane.so
+/usr/lib/libv4l/v4l2convert.so
+/usr/lib/v4l1compat.so
+/usr/lib/libv4l2.so
+/usr/lib/libv4l1.so
+/usr/lib/libv4l2rds.so.0.0.0
+/usr/lib/libv4lconvert.so
+/usr/lib/libv4l2.so.0.0.0
+/usr/lib/libv4l1.so.0.0.0
+/usr/lib/libv4l2rds.so
+/usr/lib/libv4l2rds.so.0
+/usr/lib/v4l2convert.so
+/usr/lib/libv4l2.so.0
+[root@YoudaoDictionaryPen-556:~]# find / -name '*ov*' -o -name '*gc*' -o -name '*imx*' 2>/dev/null | grep -iE 'cam|senso
+r|spi|i2c' | head -20
+/sys/devices/platform/ff460000.i2c/driver_override
+/sys/devices/platform/ff470000.i2c/driver_override
+/sys/devices/platform/ff320000.i2c/i2c-1/1-001a/rk808-rtc/driver_override
+/sys/devices/platform/ff320000.i2c/i2c-1/1-001a/rk808-rtc/rtc/rtc0/alarmtimer.0.auto/driver_override
+/sys/devices/platform/ff320000.i2c/i2c-1/1-001a/rk805-pwrkey/driver_override
+/sys/devices/platform/ff320000.i2c/i2c-1/1-001a/rk805-pinctrl/driver_override
+/sys/devices/platform/ff320000.i2c/i2c-1/1-001a/rk808-regulator/driver_override
+/sys/devices/platform/ff320000.i2c/i2c-1/1-001a/regulator/regulator.6/suspend_mem_microvolts
+/sys/devices/platform/ff320000.i2c/i2c-1/1-001a/regulator/regulator.6/min_microvolts
+/sys/devices/platform/ff320000.i2c/i2c-1/1-001a/regulator/regulator.6/suspend_standby_microvolts
+/sys/devices/platform/ff320000.i2c/i2c-1/1-001a/regulator/regulator.6/max_microvolts
+/sys/devices/platform/ff320000.i2c/i2c-1/1-001a/regulator/regulator.6/4-0030-dovdd
+/sys/devices/platform/ff320000.i2c/i2c-1/1-001a/regulator/regulator.6/microvolts
+/sys/devices/platform/ff320000.i2c/i2c-1/1-001a/regulator/regulator.6/suspend_disk_microvolts
+/sys/devices/platform/ff320000.i2c/i2c-1/1-001a/regulator/regulator.2/suspend_mem_microvolts
+/sys/devices/platform/ff320000.i2c/i2c-1/1-001a/regulator/regulator.2/min_microvolts
+/sys/devices/platform/ff320000.i2c/i2c-1/1-001a/regulator/regulator.2/suspend_standby_microvolts
+/sys/devices/platform/ff320000.i2c/i2c-1/1-001a/regulator/regulator.2/max_microvolts
+/sys/devices/platform/ff320000.i2c/i2c-1/1-001a/regulator/regulator.2/microvolts
+/sys/devices/platform/ff320000.i2c/i2c-1/1-001a/regulator/regulator.2/suspend_disk_microvolts
+[root@YoudaoDictionaryPen-556:~]#
+[root@YoudaoDictionaryPen-556:~]# # 4. 看看有没有带的拍照/录像命令
+[root@YoudaoDictionaryPen-556:~]# which fswebcam 2>/dev/null; which ffmpeg 2>/dev/null; which v4l2-ctl 2>/dev/null; whic
+h streamer 2>/dev/null
+/usr/bin/ffmpeg
+/usr/bin/v4l2-ctl
+[root@YoudaoDictionaryPen-556:~]# ls /usr/bin/ | grep -iE 'cam|v4l|video|fsweb'
+camera_rule.sh
+hal-camera
+hal_cam
+merge_video.sh
+set_camera_crop.sh
+v4l2-compliance
+v4l2-ctl
+v4l2-sysfs-path
+video_play_by_gst.sh
+[root@YoudaoDictionaryPen-556:~]#
+[root@YoudaoDictionaryPen-556:~]# # 5. I2C 设备（摄像头传感器通常挂 I2C）
+[root@YoudaoDictionaryPen-556:~]# ls -la /sys/bus/i2c/devices/ 2>/dev/null
+drwxr-xr-x    2 root     root             0 Sep 27 09:58 .
+drwxr-xr-x    4 root     root             0 Sep 27 09:58 ..
+lrwxrwxrwx    1 root     root             0 Sep 27 09:58 1-001a -> ../../../devices/platform/ff320000.i2c/i2c-1/1-001a
+lrwxrwxrwx    1 root     root             0 Sep 27 09:58 2-003b -> ../../../devices/platform/ff450000.i2c/i2c-2/2-003b
+lrwxrwxrwx    1 root     root             0 Sep 27 09:58 3-0021 -> ../../../devices/platform/ff460000.i2c/i2c-3/3-0021
+lrwxrwxrwx    1 root     root             0 Sep 27 09:58 4-0010 -> ../../../devices/platform/ff470000.i2c/i2c-4/4-0010
+lrwxrwxrwx    1 root     root             0 Sep 27 09:58 4-0030 -> ../../../devices/platform/ff470000.i2c/i2c-4/4-0030
+lrwxrwxrwx    1 root     root             0 Sep 27 09:58 i2c-1 -> ../../../devices/platform/ff320000.i2c/i2c-1
+lrwxrwxrwx    1 root     root             0 Sep 27 09:58 i2c-2 -> ../../../devices/platform/ff450000.i2c/i2c-2
+lrwxrwxrwx    1 root     root             0 Sep 27 09:58 i2c-3 -> ../../../devices/platform/ff460000.i2c/i2c-3
+lrwxrwxrwx    1 root     root             0 Sep 27 09:58 i2c-4 -> ../../../devices/platform/ff470000.i2c/i2c-4
+[root@YoudaoDictionaryPen-556:~]# cat /sys/bus/i2c/devices/*/name 2>/dev/null | head -20
+rk816
+axs_touch
+husb320
+sc2356_v3
+sc2356
+rk3x-i2c
+rk3x-i2c
+rk3x-i2c
+rk3x-i2c
+[root@YoudaoDictionaryPen-556:~]# # 1. 输入设备
+[root@YoudaoDictionaryPen-556:~]# cat /proc/bus/input/devices 2>/dev/null
+I: Bus=0019 Vendor=0000 Product=0000 Version=0000
+N: Name="rk805 pwrkey"
+P: Phys=rk805_pwrkey/input0
+S: Sysfs=/devices/platform/ff320000.i2c/i2c-1/1-001a/rk805-pwrkey/input/input0
+U: Uniq=
+H: Handlers=event0
+B: PROP=0
+B: EV=3
+B: KEY=100000 0 0 0
+
+I: Bus=0019 Vendor=0001 Product=0001 Version=0100
+N: Name="gpio-keys"
+P: Phys=gpio-keys/input0
+S: Sysfs=/devices/platform/gpio-keys/input/input1
+U: Uniq=
+H: Handlers=event1
+B: PROP=0
+B: EV=3
+B: KEY=100000 0 0 40 0 0 0
+
+I: Bus=0018 Vendor=0000 Product=0000 Version=0000
+N: Name="axs_ts"
+P: Phys=
+S: Sysfs=/devices/platform/ff450000.i2c/i2c-2/2-003b/input/input2
+U: Uniq=
+H: Handlers=event2
+B: PROP=2
+B: EV=b
+B: KEY=420 0 0 0 0 0 0 0 0 0 0
+B: ABS=6618000 0
+
+I: Bus=0019 Vendor=0001 Product=0001 Version=0100
+N: Name="Typec_Headphone"
+P: Phys=typec/input0
+S: Sysfs=/devices/platform/ff460000.i2c/i2c-3/3-0021/input/input3
+U: Uniq=
+H: Handlers=event3
+B: PROP=0
+B: EV=21
+B: SW=4
+
+[root@YoudaoDictionaryPen-556:~]#
+[root@YoudaoDictionaryPen-556:~]# # 2. 触控/按键输入节点
+[root@YoudaoDictionaryPen-556:~]# ls -la /dev/input/
+nfo 2>/dev/null
+ls /sys/class/graphics/ 2>/dev/null
+
+# 5. 有没有 hardware 2D/3D 加速
+ls /dev/ | grep -iE 'dri|galcore|ion|mali|gpu|gralloc'
+cat /proc/mali/* 2>drwxr-xr-x    3 root     root           140 Sep 27 09:14 .
+drwxr-xr-x   10 root     root          1820 Sep 27 09:37 ..
+drwxrwxrwx    2 root     root           140 Sep 27 09:14 by-path
+crw-rw-rw-    1 root     root       13,  64 Jan  1  1970 event0
+crw-rw-rw-    1 root     root       13,  65 Sep 27 09:13 event1
+crw-rw-rw-    1 root     root       13,  66 Sep 27 09:13 event2
+crw-rw-rw-    1 root     root       13,  67 Sep 27 09:14 event3
+[root@YoudaoDictionaryPen-556:~]#
+[root@YoudaoDictionaryPen-556:~]# # 3. framebuffer 详细信息
+[root@YoudaoDictionaryPen-556:~]# fbset 2>/dev/null || cat /sys/class/graphics/fb0/modes 2>/dev/null
+/dev/null | head -5
+find / -name '*mali*' -o -name '*galcore*' -o -name '*dri*' 2>/dev/null | head -15
+mode "172x560-0"
+        # D: 0.000 MHz, H: 0.000 kHz, V: 0.000 Hz
+        geometry 172 560 172 560 16
+        timings 0 0 0 0 0 0 0
+        accel true
+        rgba 5/11,6/5,5/0,0/0
+endmode
+
+[root@YoudaoDictionaryPen-556:~]#
+[root@YoudaoDictionaryPen-556:~]# # 4. 显示驱动
+[root@YoudaoDictionaryPen-556:~]# cat /sys/class/graphics/fb0/info 2>/dev/null
+[root@YoudaoDictionaryPen-556:~]# ls /sys/class/graphics/ 2>/dev/null
+fb0
+[root@YoudaoDictionaryPen-556:~]#
+[root@YoudaoDictionaryPen-556:~]# # 5. 有没有 hardware 2D/3D 加速
+[root@YoudaoDictionaryPen-556:~]# ls /dev/ | grep -iE 'dri|galcore|ion|mali|gpu|gralloc'
+dri
+[root@YoudaoDictionaryPen-556:~]# cat /proc/mali/* 2>/dev/null | head -5
+[root@YoudaoDictionaryPen-556:~]# find / -name '*mali*' -o -name '*galcore*' -o -name '*dri*' 2>/dev/null | head -15
+/lib/udev/rules.d/80-drivers.rules
+/userdisk/secondary/miniapp/data/mini_app/pkg/8001788649638247/b/images/item_drink_30.png
+/usr/lib/perl5/5.32.1/arm-linux/auto/Unicode/Normalize
+/usr/lib/perl5/5.32.1/arm-linux/auto/Unicode/Normalize/Normalize.so
+/usr/lib/perl5/5.32.1/arm-linux/Unicode/Normalize.pm
+/sys/devices/platform/110000.ramoops/driver
+/sys/devices/platform/110000.ramoops/driver_override
+/sys/devices/platform/rockchip-suspend/driver_override
+/sys/devices/platform/reg-dummy/driver
+/sys/devices/platform/reg-dummy/driver_override
+/sys/devices/platform/rk-hwid/driver_override
+/sys/devices/platform/ff388000.syscon/driver_override
+/sys/devices/platform/clocks/driver_override
+/sys/devices/platform/rockchip-system-monitor/driver
+/sys/devices/platform/rockchip-system-monitor/driver_override
+[root@YoudaoDictionaryPen-556:~]# # 1. Falcon miniApp CLI
+[root@YoudaoDictionaryPen-556:~]# which miniapp_cli 2>/dev/null
+/usr/bin/miniapp_cli
+[root@YoudaoDictionaryPen-556:~]# miniapp_cli --help 2>/dev/null
+la /userdisk/Favorite/ 2>/dev/null
+ls -la /userdisk/ 2>/dev/null
+
+# 3. QuickJS / falcon 相关二进制
+find / -name '*falcon*' 2>/dev/null | head -10
+find / -name '*Usage:
+quickjs*' 2>/dev/null | head -10
+find / -name '*jsap     miniapp_cli memoryApp
+                -- show process memory usage.
+        miniapp_cli trimImageCache
+                -- trim image memory cache.
+        miniapp_cli debugApp {appid}
+                -- set debug app (for memoryUsage/memoryUsageGC/dumpMemory & devtool).
+        miniapp_cli debugService {appid}
+                -- set debug app (for memoryUsage/memoryUsageGC/dumpMemory & devtool).
+        miniapp_cli memoryUsage
+                -- show QuickJS memory usage.
+        miniapp_cli memoryUsageGC
+                -- show QuickJS memory usage after GC.
+        miniapp_cli dumpMemory
+                -- dump QuickJS memory to /tmp/httpdump.snapshot.
+        miniapp_cli install {amrPath}
+                -- install the amr.
+        miniapp_cli uninstall {appid}
+                -- uninstall the amr.
+        miniapp_cli start {appId} --{page}
+                -- start the app.
+        miniapp_cli startService {appId} {service}
+                -- start app service.
+        miniapp_cli capture {path}
+                -- capture the screen.
+        miniapp_cli captureFB {path}
+                -- capture the fbdev.
+        miniapp_cli beginMonkey
+                -- begin monkey test if enabled.
+        miniapp_cli stopMonkey
+                -- stop monkey test.
+        miniapp_cli injectKey {keyCode}
+                -- inject key event.
+        miniapp_cli setRenderConfig {key} {value}
+                -- setRenderConfig.
+[root@YoudaoDictionaryPen-556:~]#
+[root@YoudaoDictionaryPen-556:~]# # 2. 已安装应用
+[root@YoudaoDictionaryPen-556:~]# ls -la /userdisk/Favorite/ 2>/dev/null
+i*' 2>drwx------    3 root     root          4096 Sep 27 08:03 .
+drwxr-xr-x   23 root     root          4096 Sep 26 08:30 ..
+-rw-r--r--    1 root     root       1113338 Sep 11 20:41 8001145141919811.amr
+-rw-r--r--    1 root     root       5785832 Sep 26 08:20 8001687764241342.amr
+-rw-r--r--    1 root     root       2678823 Sep 26 08:20 8001687764241343.amr
+-rw-r--r--    1 root     root           138 Sep 26 08:20 80017700000000002.3_0_0_b.amr
+-rw-r--r--    1 root     root         13552 Sep 27 08:01 8001777636672378.amr
+-rw-r--r--    1 root     root          6470 Sep 11 20:41 8001777636672380.amr
+-rw-r--r--    1 root     root     280657990 Sep 26 08:23 8001779591038449.amr
+-rw-r--r--    1 root     root       2348620 Sep 11 20:39 8001785914718594.1_9_75.amr
+-rw-r--r--    1 root     root        677443 Sep 12 20:13 8001792669600002.0_1_2.amr
+-rw-r--r--    1 root     root        181757 Sep 11 20:39 9002000869905603.amr
+-rw-r--r--    1 root     root          6379 Sep 19 13:28 WordBook.txt
+-rw-r--r--    1 root     root       3985621 Sep 27 08:03 cvi_v1.14.85.amr
+drwxr-xr-x    2 root     root          4096 Sep 11 13:56 loli_update
+[root@YoudaoDictionaryPen-556:~]# ls -la /userdisk/ 2>/dev/null
+drwxr-xr-x   23 root     root          4096 Sep 26 08:30 .
+drwxr-xr-x   22 root     root          4096 Sep 26 15:24 ..
+-rw-r--r--    1 root     root             6 Aug 28 21:46 .chat_clipboard
+-rw-rw-rw-    1 root     root       6555196 Apr  7 11:40 8001749644971194.1_2_11.amr
+/dev/null | head -10
+
+# 4. 原生 .so 模块
+ls -la /userdisk/Favorite/*.amr 2>/dev/null
+find / -name '*.so' 2>/dev/null | grep -iE 'falcon|langning|jsapi|a-rw-------    1 root     root       1874932 Apr 19 13:37 8001768662037876.1_3_0.amr
+drwx------    3 root     root          4096 Sep 27 08:03 Favorite
+drwxr-xr-x    5 root     root          4096 Sep 27 09:28 Music
+drwxr-xr-x    3 root     root         36864 Sep 18 18:34 Pictures
+drwxr-xr-x    3 root     root          4096 Jul 13 07:59 Videos
+drwxr-xr-x    2 root     root          4096 Sep 26 09:47 apphide
+-rw-r--r--    1 root     root        192640 Feb 12  2026 blue.bin
+-rw-r--r--    1 root     root        192512 Feb 12  2026 blue.raw
+drwxr-xr-x    2 root     root         40960 Sep 27 09:37 corefile
+drwxr-xr-x    3 root     root          4096 Sep  5 16:44 data-base
+drwxr-xr-x    2 root     root          4096 Sep 27 09:55 database
+-rw-r--r--    1 root     root        255056 Jun  9 17:51 database'cat.zip
+-rw-r--r--    1 root     root        636411 Aug 30 21:38 database-old.zip
+-rw-r--r--    1 root     root        647008 Sep 13 13:58 databasenew.zip
+-rw-r--r--    1 root     root        207965 Sep  5 16:44 databas猫e.zip
+-rw-r--r--    1 root     root         15577 Feb 12  2026 dmesg.log
+drwxr-xr-x    2 root     root          4096 Jan  3  2026 downloads
+drwxr-xr-x    4 root     root          4096 Sep  6 13:02 loli
+drwx------    2 root     root         16384 Aug 28  2024 lost+found
+drwxr-xr-x    5 root     root          4096 Oct  7  2025 miniapp
+-rw-r--r--    1 root     root           106 Sep 26 08:15 myhosts
+drwxr-xr-x    6 root     root          4096 Aug  3 21:34 opt
+drwxr-xr-x    3 root     root          4096 Feb  1  2026 paper
+drwxr-xr-x    2 root     root          4096 Sep 27 09:38 pstore
+drwxr-xr-x    2 root     root          4096 Aug 14 14:57 record
+-rw-r--r--    1 root     root        192512 Feb 12  2026 screen_backup.raw
+drwxr-xr-x    3 root     root          4096 Jan 21  2015 secondary
+drwxr-xr-x    2 root     root          4096 Sep 26 08:15 skip_re
+drwxr-xr-x    2 root     root          4096 Feb  1  2026 swap
+drwxr-xr-x    2 root     root          4096 Feb  9  2026 test_pic
+drwxr-xr-x    4 root     root          4096 Aug 28  2024 uresource
+[root@YoudaoDictionaryPen-556:~]#
+[root@YoudaoDictionaryPen-556:~]# # 3. QuickJS / falcon 相关二进制
+[root@YoudaoDictionaryPen-556:~]# find / -name '*falcon*' 2>/dev/null | head -10
+ad -20
+/oem/secondary/etc/miniapp/resources/fonts/falcon-icons.ttf
+/usr/lib/libfalcon.so
+[root@YoudaoDictionaryPen-556:~]# find / -name '*quickjs*' 2>/dev/null | head -10
+/usr/lib/libquickjs.so
+[root@YoudaoDictionaryPen-556:~]# find / -name '*jsapi*' 2>/dev/null | head -10
+/oem/secondary/etc/miniapp/jsapis
+/oem/secondary/etc/miniapp/jsapis/libjsapi_export.so
+/etc/miniapp/jsapis
+/etc/miniapp/jsapis/libjsapi_export_core.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8001687764241341/a/libs/libjsapi_bridge_8753968.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8001771940015915/b/libs/libjsapi_fileserver_875416753.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8001771940015915/b/libs/libjsapi_shell_875416753.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8001865309000002/a/libs/libjsapi_bridge.so.bak
+/userdisk/secondary/miniapp/data/mini_app/pkg/8001865309000002/a/libs/libjsapi_panet_292678905.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8001865309000002/a/libs/libjsapi_bridge.so.bak2
+[root@YoudaoDictionaryPen-556:~]#
+[root@YoudaoDictionaryPen-556:~]# # 4. 原生 .so 模块
+[root@YoudaoDictionaryPen-556:~]# ls -la /userdisk/Favorite/*.amr 2>/dev/null
+-rw-r--r--    1 root     root       1113338 Sep 11 20:41 /userdisk/Favorite/8001145141919811.amr
+-rw-r--r--    1 root     root       5785832 Sep 26 08:20 /userdisk/Favorite/8001687764241342.amr
+-rw-r--r--    1 root     root       2678823 Sep 26 08:20 /userdisk/Favorite/8001687764241343.amr
+-rw-r--r--    1 root     root           138 Sep 26 08:20 /userdisk/Favorite/80017700000000002.3_0_0_b.amr
+-rw-r--r--    1 root     root         13552 Sep 27 08:01 /userdisk/Favorite/8001777636672378.amr
+-rw-r--r--    1 root     root          6470 Sep 11 20:41 /userdisk/Favorite/8001777636672380.amr
+-rw-r--r--    1 root     root     280657990 Sep 26 08:23 /userdisk/Favorite/8001779591038449.amr
+-rw-r--r--    1 root     root       2348620 Sep 11 20:39 /userdisk/Favorite/8001785914718594.1_9_75.amr
+-rw-r--r--    1 root     root        677443 Sep 12 20:13 /userdisk/Favorite/8001792669600002.0_1_2.amr
+-rw-r--r--    1 root     root        181757 Sep 11 20:39 /userdisk/Favorite/9002000869905603.amr
+-rw-r--r--    1 root     root       3985621 Sep 27 08:03 /userdisk/Favorite/cvi_v1.14.85.amr
+[root@YoudaoDictionaryPen-556:~]# find / -name '*.so' 2>/dev/null | grep -iE 'falcon|langning|jsapi|ai' | head -20
+/oem/secondary/etc/miniapp/jsapis/libjsapi_export.so
+/etc/miniapp/jsapis/libjsapi_export_core.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8001687764241341/a/libs/libjsapi_bridge_8753968.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8001771940015915/b/libs/libjsapi_fileserver_875416753.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8001771940015915/b/libs/libjsapi_shell_875416753.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8001865309000002/a/libs/libjsapi_panet_292678905.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8001654057944134/a/libs/libjsapi_reciter_1603787654.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8080292157485624/a/libs/libjsapi_history_1524958418.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8001660789649766/b/libs/libjsapi_chinesebook_797218182.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8001650599023931/a/libs/libjsapi_mediaplayer_1191470933.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8001667273038889/a/libs/libjsapi_clouddisk_666350098.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8080282263329158/b/libs/libjsapi_user_center_2027774659.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8080282888534774/b/libs/libjsapi_verify_1518485770.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8080212483527402/a/libs/libbusiness_ai_reading_260766682.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8080212483527402/a/libs/libjsapi_ai_reading_260766682.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8001657592345846/b/libs/libjsapi_appstoreIndependent_288823117.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8080292001695606/a/libs/libjsapi_xmly_armv7l-pear_20250730_160116_36209359.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8080212335092787/b/libs/libjsapi_textbook_1096977486.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8001782559140681/b/libs/libjsapi_bridge_1465201815.so
+/userdisk/secondary/miniapp/data/mini_app/pkg/8001782559140681/b/libs/libjsapi_pstore_license_1465201815.so
+[root@YoudaoDictionaryPen-556:~]#
