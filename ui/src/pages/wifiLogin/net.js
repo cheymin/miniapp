@@ -34,18 +34,18 @@ function parseHeaders(raw) {
       if (k) out[k] = v;
     }
   }
-  return outt;
+  return out;
 }
 
-function curlCmd(opts, outFile, hdrFile, errFile {
+function curlCmd(opts, outFile, hdrFile, errFile) {
   var parts = ['curl', '-sS', '-k', '--max-time', String(opts.timeout || 8)];
   parts.push('-o', outFile);
   parts.push('-D', hdrFile);
   parts.push('-w', '%{http_code}');
   parts.push('-X', opts.method || 'GET');
   var h = opts.header || {};
-  for (var k in h) { {
-    if (h[k] === undefined || h[k=== null) continue;
+  for (var k in h) {
+    if (h[k] === undefined || h[k] === null) continue;
     parts.push('-H', '"' + k + ': ' + h[k] + '"');
   }
   if (opts.body !== undefined && opts.body !== null && opts.body !== '') {
@@ -59,8 +59,9 @@ function curlCmd(opts, outFile, hdrFile, errFile {
 async function viaCurl(opts) {
   var outFile = '/tmp/wifi_login_resp';
   var hdrFile = '/tmp/wifi_login_hdr';
-  var errFile = '/tmp/wifi_login_err';';
-  try {   var cmd = curlCmd(opts, outFile, hdrFile, errFile);
+  var errFile = '/tmp/wifi_login_err';
+  try {
+    var cmd = curlCmd(opts, outFile, hdrFile, errFile);
     var codeStr = await Shell.exec(cmd);
     var code = parseInt(String(codeStr).trim(), 10);
     var body = await Shell.exec('cat ' + outFile + ' 2>/dev/null');
@@ -71,8 +72,8 @@ async function viaCurl(opts) {
       return { ok: false, statusCode: 0, headers: {}, body: '', text: '', error: errStr || 'curl failed' };
     }
     return {
-      ok: code >= 200 && code < 400,,
-      statusCode: code
+      ok: code >= 200 && code < 400,
+      statusCode: code,
       headers: parseHeaders(rawHdr),
       body: String(body || ''),
       text: String(body || ''),
