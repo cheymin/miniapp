@@ -1,79 +1,91 @@
-/* 图片查看器 - 横屏 640×260 */
+/* imageViewer — 横屏 640×260 布局
+   左 576px (9/10) 图片区 + 右 64px (1/10) 按钮条
+   ⚠️ Falcon 限制: 不支持复合选择器, 不支持 flex-wrap */
 @bg: #000000;
+@bar-bg: #0d1117;
 @btn-bg: #161b22;
-@btn-border: #30363d;
-@btn-text: #e6edf3;
 @accent: #2f81f7;
-@danger: #f85149;
-@dim: #8b949e;
+@text: #e6edf3;
+@text-dim: #8b949e;
+@close-red: #f85149;
+@close-bg: #3b1c1c;
 
-.viewer {
+.app {
     flex: 1;
-    background-color: @bg;
     flex-direction: row;
+    background-color: @bg;
 }
 
-/* 图片区：左侧 9/10 */
-.image-area {
+/* ===== 左 9/10 图片区 ===== */
+.img-area {
     width: 576px;
     height: 260px;
     background-color: @bg;
-    position: relative;
-    overflow: hidden;
 }
 
-.img-main {
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-color: @bg;
+.img-box {
+    width: 576px;
+    height: 260px;
 }
 
-.info-badge {
-    position: absolute;
-    left: 6px;
-    bottom: 6px;
-    font-size: 10px;
-    color: @dim;
-    background-color: rgba(0,0,0,0.6);
-    padding: 2px 6px;
-    border-radius: 8px;
+.img {
+    width: 576px;
+    height: 260px;
 }
 
-/* 按钮条：右侧 64px */
+.no-img {
+    font-size: 14px;
+    color: @text-dim;
+    margin-left: 280px;
+    margin-top: 130px;
+}
+
+/* ===== 右 1/10 按钮条 ===== */
 .btn-bar {
     width: 64px;
     height: 260px;
-    background-color: @btn-bg;
+    background-color: @bar-bg;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 4px 0;
+    padding-top: 4px;
+    padding-bottom: 4px;
     border-left-width: 1px;
-    border-left-color: @btn-border;
+    border-left-color: #30363d;
 }
 
 .btn {
-    width: 52px;
-    height: 38px;
+    flex: 1;
+    margin: 3px 8px;
     background-color: @btn-bg;
-    border-width: 1px;
-    border-color: @btn-border;
-    border-radius: 6px;
-    font-size: 20px;
-    color: @btn-text;
-    text-align: center;
-    line-height: 38px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
 }
 
-.btn-info {
-    font-size: 11px;
-    color: @accent;
-    text-align: center;
-    width: 52px;
+.btn-icon {
+    font-size: 16px;
+    color: @text;
 }
 
 .btn-close {
-    color: @danger;
-    font-size: 22px;
+    background-color: @close-bg;
+}
+
+.btn-icon-close {
+    font-size: 16px;
+    color: @close-red;
+}
+
+/* ===== 状态栏 ===== */
+.status-bar {
+    height: 16px;
+    background-color: #161b22;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 6px;
+    margin-top: -16px;
+}
+
+.status-text {
+    font-size: 9px;
+    color: @text;
 }

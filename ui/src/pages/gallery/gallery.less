@@ -1,6 +1,5 @@
-/* 图库 - 横屏 640×260 */
 @bg: #0d1117;
-@bar: #161b22;
+@sb: #161b22;
 @border: #30363d;
 @accent: #2f81f7;
 @text: #e6edf3;
@@ -8,127 +7,60 @@
 
 .container {
     flex: 1;
-    background-color: @bg;
-    display: flex;
     flex-direction: column;
+    background-color: @bg;
 }
 
-/* 顶部工具栏 */
-.toolbar {
-    height: 32px;
-    background-color: @bar;
+.topbar {
+    height: 28px;
+    background-color: @sb;
     flex-direction: row;
     align-items: center;
-    padding: 0 8px;
+    padding: 0 10px;
     border-bottom-width: 1px;
     border-bottom-color: @border;
 }
 
-.tool-btn {
-    font-size: 16px;
+.title {
+    font-size: 13px;
     color: @text;
-    width: 28px;
-    text-align: center;
-    padding: 4px 0;
+    margin-right: 8px;
 }
 
-.tool-title {
+.dir {
+    font-size: 9px;
+    color: @accent;
     flex: 1;
-    font-size: 14px;
-    color: @text;
-    font-weight: bold;
-    text-align: center;
 }
 
-.tool-count {
-    font-size: 11px;
-    color: @text-dim;
-    background-color: @border;
-    padding: 2px 7px;
-    border-radius: 8px;
-}
-
-/* 设置面板 */
-.settings {
-    background-color: @bar;
-    padding: 8px 10px;
-    border-bottom-width: 1px;
-    border-bottom-color: @border;
-}
-
-.set-label {
-    font-size: 10px;
-    color: @text-dim;
-    margin-bottom: 3px;
-}
-
-.set-path {
-    font-size: 11px;
-    color: @text;
-    background-color: @bg;
-    padding: 5px 7px;
-    border-radius: 3px;
-    margin-bottom: 6px;
-    lines: 2;
-}
-
-.set-btn {
-    font-size: 11px;
-    color: #fff;
-    background-color: @accent;
-    padding: 5px 12px;
-    border-radius: 3px;
-    text-align: center;
-}
-
-/* 网格 */
 .grid {
     flex: 1;
     padding: 4px;
 }
 
-.grid-row {
+.row {
     flex-direction: row;
+    margin-bottom: 2px;
 }
 
 .cell {
     flex: 1;
+    height: 76px;
     margin: 2px;
-    background-color: @bar;
-    border-radius: 3px;
-    overflow: hidden;
+    background-color: #161b22;
 }
 
 .thumb {
-    width: 100%;
-    height: 80px;
+    flex: 1;
+    height: 76px;
 }
 
-.thumb-empty {
-    width: 100%;
-    height: 80px;
-    justify-content: center;
-    align-items: center;
-    background-color: @bar;
-}
-
-.thumb-dot {
-    font-size: 20px;
-    color: @text-dim;
-}
-
-/* 空状态 */
 .empty {
-    padding: 30px 20px;
+    padding: 60px;
     align-items: center;
 }
 
-.empty-icon {
-    font-size: 32px;
-    margin-bottom: 8px;
-}
-
-.empty-hint {
+.empty-text {
     font-size: 12px;
     color: @text-dim;
 }

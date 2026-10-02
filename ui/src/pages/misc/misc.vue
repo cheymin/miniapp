@@ -1,90 +1,72 @@
+<!-- misc 设置页 — Falcon 兼容版, 新样式 class, 已有软键盘设置 -->
 <template>
-  <div class="container">
-    <scroller class="scroll-area" scroll-direction="vertical">
-      <!-- 页面标题 -->
-      <div class="section">
-        <text class="section-title">杂项设置</text>
-      </div>
+    <div class="container">
+        <scroller class="scroll-area" scroll-direction="vertical">
 
-      <!-- 亮屏时间 -->
-      <div class="section">
-        <text class="section-title">亮屏时间设置</text>
-        <div class="block">
-          <div class="btn-row">
-            <div class="btn-item" @click="setBrightTime(30, '30秒')">
-              <text class="btn-text">30秒</text>
+            <!-- 亮屏时间 -->
+            <text class="sec-title-first">亮屏时间</text>
+            <div class="btn-row">
+                <text class="btn-item-first" @click="setBrightTime(30, '30秒')">
+                    <text class="btn-text">30秒</text>
+                </text>
+                <text class="btn-item" @click="setBrightTime(1800, '30分钟')">
+                    <text class="btn-text">30分钟</text>
+                </text>
             </div>
-            <div class="btn-item" @click="setBrightTime(1800, '30分钟')">
-              <text class="btn-text">30分钟</text>
+            <div class="btn-row">
+                <text class="btn-item-first" @click="setBrightTime(3600, '1小时')">
+                    <text class="btn-text">1小时</text>
+                </text>
+                <text class="btn-item" @click="setBrightTime(2147483647, '无限')">
+                    <text class="btn-text">无限</text>
+                </text>
             </div>
-          </div>
-          <div class="btn-row">
-            <div class="btn-item" @click="setBrightTime(3600, '1小时')">
-              <text class="btn-text">1小时</text>
-            </div>
-            <div class="btn-item" @click="setBrightTime(7200, '2小时')">
-              <text class="btn-text">2小时</text>
-            </div>
-          </div>
-          <div class="btn-row">
-            <div class="btn-item" @click="setBrightTime(10800, '3小时')">
-              <text class="btn-text">3小时</text>
-            </div>
-            <div class="btn-item" @click="setBrightTime(2147483647, '无限')">
-              <text class="btn-text">无限</text>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- 屏幕亮度 -->
-      <div class="section">
-        <text class="section-title">屏幕亮度设置</text>
-        <div class="block">
-          <div class="btn-row">
-            <div class="btn-item" @click="setBrightness(30)">
-              <text class="btn-text">低亮度</text>
+            <!-- 屏幕亮度 -->
+            <text class="sec-title">屏幕亮度</text>
+            <div class="btn-row">
+                <text class="btn-item-first" @click="setBrightness(30)">
+                    <text class="btn-text">低</text>
+                </text>
+                <text class="btn-item" @click="setBrightness(60)">
+                    <text class="btn-text">中</text>
+                </text>
+                <text class="btn-item" @click="setBrightness(100)">
+                    <text class="btn-text">高</text>
+                </text>
             </div>
-            <div class="btn-item" @click="setBrightness(60)">
-              <text class="btn-text">中亮度</text>
-            </div>
-            <div class="btn-item" @click="setBrightness(100)">
-              <text class="btn-text">高亮度</text>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- 手电筒 -->
-      <div class="section">
-        <text class="section-title">手电筒控制</text>
-        <div class="block">
-          <div class="btn-row">
-            <div class="btn-item wide" @click="toggleTorch">
-              <text class="btn-text">{{ torchOn ? '关闭手电筒' : '打开手电筒' }}</text>
+            <!-- 手电筒 -->
+            <text class="sec-title">手电筒</text>
+            <div class="btn-row">
+                <text :class="torchOn ? 'btn-item-on-first' : 'btn-item-first'" @click="toggleTorch">
+                    <text :class="torchOn ? 'btn-text-on' : 'btn-text'">{{ torchOn ? '关闭' : '打开' }}</text>
+                </text>
+                <text class="btn-item" @click="torchOn ? function(){} : function(){}">
+                    <text class="btn-text-dim">—</text>
+                </text>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- 键盘选择 -->
-      <div class="section">
-        <text class="section-title">键盘设置</text>
-        <div class="block">
-          <div class="btn-row">
-            <div class="btn-item" :class="{ 'btn-item-active': keyboardType === 'soft' }" @click="setKeyboardType('soft')">
-              <text class="btn-text">软键盘</text>
+            <!-- 键盘设置 (已支持软键盘/系统键盘切换, 用 dbGet/dbSet 持久化) -->
+            <text class="sec-title">键盘模式</text>
+            <div class="btn-row">
+                <text
+                    :class="keyboardType === 'soft' ? 'btn-item-on-first' : 'btn-item-first'"
+                    @click="setKeyboardType('soft')">
+                    <text :class="keyboardType === 'soft' ? 'btn-text-on' : 'btn-text'">软键盘</text>
+                </text>
+                <text
+                    :class="keyboardType === 'system' ? 'btn-item-on' : 'btn-item'"
+                    @click="setKeyboardType('system')">
+                    <text :class="keyboardType === 'system' ? 'btn-text-on' : 'btn-text'">系统键盘</text>
+                </text>
             </div>
-            <div class="btn-item" :class="{ 'btn-item-active': keyboardType === 'system' }" @click="setKeyboardType('system')">
-              <text class="btn-text">系统键盘</text>
-            </div>
-          </div>
-          <text class="hint-text">当前: {{ keyboardType === 'soft' ? '软键盘' : '系统键盘' }}</text>
-        </div>
-      </div>
+            <text :class="keyboardType === 'soft' ? 'hint-text-on' : 'hint-text'">
+                当前: {{ keyboardType === 'soft' ? 'miniapp 内置软键盘' : '设备物理/系统键盘' }}
+            </text>
 
-    </scroller>
-  </div>
+        </scroller>
+    </div>
 </template>
 
 <style lang="less" scoped>

@@ -1,66 +1,93 @@
-<!--
-    Copyright (C) 2025 Langning Chen
-
-    This file is part of miniapp.
-
-    miniapp is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    miniapp is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
--->
-
+<!-- AI 助手 — Falcon 兼容样式模板, 去掉内联 style, 用语义化 class -->
 <template>
-    <div>
-        <div class="container" style="display: flex; flex-direction: column;">
-            <div style="flex: 1; display: flex; flex-direction: row;">
-                <scroller ref="messageScroller" class="messages-scroller" scroll-direction="vertical"
-                    :show-scrollbar="true">
-                    <div v-for="message in displayMessages" :key="message.id">
-                        <text v-if="message.reasoningContent" class="message-reasoning">{{ message.reasoningContent }}</text>
-                        <text :class="'message message-' + message.role">{{ message.content }}</text>
-                        <text v-if="![0, 1, 6].includes(message.stopReason)" class="stop-reason-warning">{{
-                            getStopReasonText(message.stopReason) }}</text>
-                        <div v-if="message.role === 0 || message.role === 1"
-                            :class="message.role === 0 ? 'message-actions-user' : 'message-actions'">
-                            <text v-if="message.role === 0" @click="editUserMessage(message.id)"
-                                :class="'square-btn' + (isStreaming ? ' square-btn-disabled' : '')">编</text>
-                            <text v-if="message.role === 1" @click="regenerateMessage(message.id)"
-                                :class="'square-btn' + (isStreaming ? ' square-btn-disabled' : '')">重</text>
-                            <text @click="switchVariant(message.id, -1, message.role === 1)"
-                                :class="'square-btn' + ((canGoVariant(message.id, -1) && !isStreaming) ? '' : ' square-btn-disabled')">左</text>
-                            <text class="action-text">{{ getVariantInfo(message.id) }}</text>
-                            <text @click="switchVariant(message.id, 1, message.role === 1)"
-                                :class="'square-btn' + ((canGoVariant(message.id, 1) && !isStreaming) ? '' : ' square-btn-disabled')">右</text>
-                        </div>
+    <div class="container">
+        <!-- 主区: 消息列表 + 右侧按钮 -->
+        <div class="main-row">
+            <scroller class="messages-scroller" scroll-direction="vertical" :show-scrollbar="true">
+                <div v-for="message in displayMessages" :key="message.id" class="msg-item">
+                    <!-- reasoning 折叠 -->
+                    <text
+                        v-if="message.reasoningContent"
+                        class="message-r">{{ message.reasoningContent }}</text>
+                    <!-- 气泡 -->
+                    <text
+                        :class="message.role === 0 ? 'message message-u' : 'message message-a'">{{ message.content }}</text>
+                    <!-- 停流警告 -->
+                    <text
+                        v-if="![0, 1, 6].includes(message.stopReason)"
+                        class="stop-warn">{{ getStopReasonText(message.stopReason) }}</text>
+                    <!-- 消息操作条 (只有 user/assistant) -->
+                    <div
+                        v-if="message.role === 0 || message.role === 1"
+                        :class="message.role === 0 ? 'actions-row-u' : 'actions-row'">
+                        <text
+                            v-if="message.role === 0"
+                            @click="editUserMessage(message.id)"
+                            :class="'sq-btn' + (isStreaming ? ' sq-btn-dis' : '')">
+                            <text class="sq-btn-text">编</text>
+                        </text>
+                        <text
+                            v-if="message.role === 1"
+                            @click="regenerateMessage(message.id)"
+                            :class="'sq-btn' + (isStreaming ? ' sq-btn-dis' : '')">
+                            <text class="sq-btn-text">重</text>
+                        </text>
+                        <text
+                            @click="switchVariant(message.id, -1, message.role === 1)"
+                            :class="'sq-btn' + ((canGoVariant(message.id, -1) && !isStreaming) ? '' : ' sq-btn-dis')">
+                            <text class="sq-btn-text">左</text>
+                        </text>
+                        <text class="variant-text">{{ getVariantInfo(message.id) }}</text>
+                        <text
+                            @click="switchVariant(message.id, 1, message.role === 1)"
+                            :class="'sq-btn' + ((canGoVariant(message.id, 1) && !isStreaming) ? '' : ' sq-btn-dis')">
+                            <text class="sq-btn-text">右</text>
+                        </text>
                     </div>
-                </scroller>
-
-                <div class="side-buttons">
-                    <text @click="openHistory"
-                        :class="'square-btn' + (isStreaming ? ' square-btn-disabled' : '')">历</text>
-                    <text @click="openMessageNavigation"
-                        :class="'square-btn' + (isStreaming ? ' square-btn-disabled' : '')">导</text>
-                    <text @click="openSettings"
-                        :class="'square-btn' + (isStreaming ? ' square-btn-disabled' : '')">设</text>
                 </div>
-            </div>
+            </scroller>
 
-            <div class="item">
-                <text :class="'item-input' + (isStreaming ? ' item-input-disabled' : '')" @click="loadSoftKeyboard">{{
-                    currentInput || '点击输入...' }}</text>
-                <text v-if="!isStreaming" @click="sendMessage(this.currentInput)"
-                    :class="'square-btn square-btn-' + (this.canSendMessage ? 'primary' : 'disabled')">发</text>
-                <text v-else @click="stopGeneration" class="square-btn square-btn-danger">停</text>
+            <!-- 右侧按钮栏 -->
+            <div class="side-btns">
+                <text
+                    @click="openHistory"
+                    :class="'side-btn' + (isStreaming ? ' side-btn-disabled' : '')">
+                    <text class="side-btn-text">历</text>
+                </text>
+                <text
+                    @click="openMessageNavigation"
+                    :class="'side-btn' + (isStreaming ? ' side-btn-disabled' : '')">
+                    <text class="side-btn-text">导</text>
+                </text>
+                <text
+                    @click="openSettings"
+                    :class="'side-btn' + (isStreaming ? ' side-btn-disabled' : '')">
+                    <text class="side-btn-text">设</text>
+                </text>
             </div>
         </div>
+
+        <!-- 底部输入区 -->
+        <div class="input-row">
+            <text
+                class="input-area"
+                @click="loadSoftKeyboard">
+                <text :class="currentInput ? 'input-text' : 'input-empty'">{{ currentInput || '点击输入...' }}</text>
+            </text>
+            <text
+                v-if="!isStreaming"
+                @click="sendMessage(this.currentInput)"
+                :class="'send-btn' + (this.canSendMessage ? '' : '-dis')">
+                <text class="send-btn-text">发</text>
+            </text>
+            <text
+                v-else
+                @click="stopGeneration"
+                class="send-btn">
+                <text class="send-btn-text">停</text>
+            </text>
+        </div>
+
         <ToastMessage />
     </div>
 </template>
@@ -74,8 +101,6 @@ import ToastMessage from '../../components/ToastMessage.vue';
 import ai from './ai';
 export default {
     ...ai,
-    components: {
-        ToastMessage
-    }
+    components: { ToastMessage }
 }
 </script>

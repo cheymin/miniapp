@@ -33,10 +33,8 @@ const CATEGORIES: {
     {
         label: '工具', icon: '工',
         items: [
-            { icon: 'WiFi', label: 'WiFi认证',  page: 'wifiLogin' },
             { icon: '算',   label: '计算器',    page: 'calculator' },
             { icon: '换',   label: '单位换算',  page: 'unitConverter' },
-            { icon: '码',   label: '扫码',      page: 'softKeyboard' },
         ],
     },
     {
