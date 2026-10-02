@@ -20,7 +20,11 @@
     "qqchat": "pages/qqchat/qqchat.vue",
     "browser": "pages/browser/browser.vue",
     "penshell": "pages/penshell/penshell.vue",
-    "wifiLogin": "pages/wifiLogin/wifiLogin.vue"
+    "wifiLogin": "pages/wifiLogin/wifiLogin.vue",
+    "calculator": "pages/calculator/calculator.vue",
+    "unitConverter": "pages/unitConverter/unitConverter.vue",
+    "musicPlayer": "pages/musicPlayer/musicPlayer.vue",
+    "videoPlayer": "pages/videoPlayer/videoPlayer.vue"
   },
   "options": {
     "style": {

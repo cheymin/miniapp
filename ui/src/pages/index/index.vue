@@ -1,55 +1,46 @@
 <!--
- Copyright (C) 2025 Langning Chen
- 
- This file is part of miniapp.
- 
- miniapp is free software: you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation, either version 3 of the License, or
- (at your option) any later version.
- 
- miniapp is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
- 
- You should have received a copy of the GNU General Public License
- along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
+  全新主页 — 卡片网格 + 底部 TabBar
+  横屏 640×260
+  ⚠️ Falcon 限制: 不支持 flex-wrap (手动分行), 不支持复合选择器 (动态 class 切换)
 -->
-
 <template>
-    <scroller class="container" scroll-direction="vertical" :show-scrollbar="true">
-        <div class="section">
-            <text class="section-title">核心功能</text>
-            
-            <div class="item"><text class="item-text" @click="openAi">AI 助手</text></div>
-            <div class="item"><text class="item-text" @click="FileEditor">文本编辑器</text></div>
-            <div class="item"><text class="item-text" @click="FileManager">文件管理器</text></div>
-            <div class="item"><text class="item-text" @click="Browser">网页浏览器</text></div>
-            <div class="item"><text class="item-text" @click="Penshell">Penshell 终端</text></div>
+    <div class="app">
+        <!-- 顶部状态栏 28px -->
+        <div class="status-bar">
+            <text class="sb-title">min的工具箱</text>
+            <text class="sb-sep">·</text>
+            <text class="sb-version">{{ version }}</text>
         </div>
 
-        <div class="section">
-            <text class="section-title">网络</text>
-            <div class="item"><text class="item-text" @click="WifiLogin">WiFi 认证</text></div>
-        </div>
-        
-        <div class="section">
-            <text class="section-title">媒体功能</text>
+        <!-- 主内容区: 手动分行 (Falcon 不支持 flex-wrap) -->
+        <scroller class="main" scroll-direction="vertical" :show-scrollbar="false">
+            <div class="row" v-for="(row, ri) in rows" :key="ri">
+                <div
+                    v-for="(item, ci) in row"
+                    :key="ci"
+                    class="card"
+                    @click="openPage(item.page)">
+                    <text class="card-icon">{{ item.icon }}</text>
+                    <text class="card-label">{{ item.label }}</text>
+                </div>
+            </div>
+            <div v-if="rows.length === 0" class="empty">
+                <text class="empty-text">（此分类暂未启用）</text>
+            </div>
+        </scroller>
 
-            <div class="item"><text class="item-text" @click="ImageViewer">图片查看器</text></div>
-            <div class="item"><text class="item-text" @click="Gallery">图库</text></div>
+        <!-- 底部 TabBar 32px (动态 class, Falcon 不支持 .a.b 复合选择器) -->
+        <div class="tabbar">
+            <div
+                v-for="(tab, i) in tabs"
+                :key="i"
+                class="tab"
+                @click="activeTab = i">
+                <text :class="activeTab === i ? 'tab-icon-on' : 'tab-icon'">{{ tab.icon }}</text>
+                <text :class="activeTab === i ? 'tab-label-on' : 'tab-label'">{{ tab.label }}</text>
+            </div>
         </div>
-        
-        <div class="section">
-            <text class="section-title">系统设置</text>
-            
-            <div class="item"><text class="item-text" @click="Deviceinfo">设备信息</text></div>
-            <div class="item"><text class="item-text" @click="Update">系统更新</text></div>
-            <div class="item"><text class="item-text" @click="Misc">杂项设置</text></div>
-            <div class="item"><text class="item-text" @click="About">关于我们</text></div>       
-        </div>
-    </scroller>
+    </div>
 </template>
 
 <style lang="less" scoped>

@@ -1,0 +1,102 @@
+name: Build & Release
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  TOOLCHAIN_URL: https://github.com/penosext/Cloudpan/releases/download/toolchains/armv7-eabihf--uclibc--bleeding-edge-2018.11-1.tar.bz2
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: |
+          npm install -g pnpm@latest-10
+          pnpm install -C ui
+
+      - name: Setup cross-compile toolchain
+        run: |
+          mkdir -p jsapi/toolchains
+          wget -q $TOOLCHAIN_URL -O toolchain.tar.bz2
+          tar -xjf toolchain.tar.bz2 -C jsapi/toolchains
+          rm toolchain.tar.bz2
+          echo "Toolchain ready:"
+          ls jsapi/toolchains/
+
+      - name: Patch aiot-vue-cli (TypeScript + defineComponent support)
+        run: |
+          cd ui
+          # sed hack A: 启用 @rollup/plugin-typescript
+          sed -i "s/commonjs(),/commonjs(),require('@rollup\/plugin-typescript')(),/g" \
+            node_modules/aiot-vue-cli/src/libs/rollup.config.js
+          # sed hack B: Vue 3.5+ compiler-sfc API
+          sed -i "s/compiler.parseComponent(content, { pad: 'line' })/compiler.parse(content, { pad: 'line' }).descriptor/g" \
+            node_modules/aiot-vue-cli/web-loaders/falcon-vue-loader/lib/parser.js
+          sed -i "s/path.resolve(__dirname, '.\/vue\/packages\/vue-template-compiler\/index.js')/'@vue\/compiler-sfc'/g" \
+            node_modules/aiot-vue-cli/cli-libs/index.js
+          sed -i "s/compiler.parseComponent(content, { pad: true })/compiler.parse(content, { pad: true }).descriptor/g" \
+            node_modules/aiot-vue-cli/src/libs/parser.js
+          sed -i "s/compiler.compile/compiler.compileTemplate/g" \
+            node_modules/aiot-vue-cli/web-loaders/falcon-vue-loader/lib/template-compiler/index.js
+          # sed hack C: 去掉 defineComponent（Falcon 不需要）
+          sed -i "s/const replaceValues = {}/const replaceValues = { 'defineComponent': '' }/g" \
+            node_modules/aiot-vue-cli/src/libs/rollup.config.js
+          # sed hack D: 修正相对图片路径
+          sed -i "s/resolveId(id, importer) {/resolveId(id, importer) {\n      if (id.startsWith('.') \&\& importer) { id = require('path').resolve(require('path').dirname(importer), id); }/g" \
+            node_modules/aiot-vue-cli/src/rollup-plugins/image.js
+          cd ..
+
+      - name: Build native library
+        run: |
+          cd jsapi
+          export CROSS_TOOLCHAIN_PREFIX=$(find $(pwd)/toolchains -path '*/bin/*buildroot*gcc' | head -1 | sed 's/gcc$//')
+          echo "Cross compiler: $CROSS_TOOLCHAIN_PREFIX"
+          sed -i '/project(/a\set(CMAKE_DEPEND_INFO_SKIP 1)\nset(CMAKE_LINK_DEPENDS_USE_LINKER 0)' CMakeLists.txt
+          cmake -S . -B build && make -C build -j $(nproc)
+          cp build/libjsapi_langningchen.so ../ui/libs/
+          echo "Native build done"
+
+      - name: Package UI → .amr
+        run: |
+          cd ui
+          pnpm run package
+          ls -la *.amr
+
+      - name: Get version
+        id: version
+        run: |
+          VERSION=$(grep '"version"' ui/package.json | head -1 | sed 's/.*"version": *"\([^"]*\)".*/\1/')
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+          echo "Version: ${VERSION}"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: miniapp-amr
+          path: './ui/*.amr'
+          retention-days: 30
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.version.outputs.version }}
+          name: min的工具箱 v${{ steps.version.outputs.version }}
+          body_path: CHANGELOG.md
+          files: ./ui/*.amr
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
