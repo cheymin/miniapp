@@ -7,6 +7,8 @@ on:
 
 env:
   TOOLCHAIN_URL: https://github.com/penosext/Cloudpan/releases/download/toolchains/armv7-eabihf--uclibc--bleeding-edge-2018.11-1.tar.bz2
+  # 设备端依赖（curl / sqlite3 的头文件与 ARM 动态库），仓库中被 .gitignore 排除，必须从 Release 拉取
+  VERSIONINFO_URL: https://github.com/penosext/Cloudpan/releases/download/PenA6Pro/A6PversionInfo.tar.gz
 
 permissions:
   contents: write
@@ -35,6 +37,16 @@ jobs:
           rm toolchain.tar.bz2
           echo "Toolchain ready:"
           ls jsapi/toolchains/
+
+      - name: Setup device deps (curl + sqlite3 headers/libs)
+        run: |
+          # 这些是设备端的 libcurl.so / libsqlite3.so 与头文件，被 .gitignore 排除，
+          # 必须从 A6PversionInfo.tar.gz 解出到 jsapi/{lib,include}，否则 CMake find_library 失败
+          wget -q $VERSIONINFO_URL -O A6PversionInfo.tar.gz
+          tar -xf A6PversionInfo.tar.gz -C ./jsapi
+          rm -f A6PversionInfo.tar.gz
+          echo "Device deps ready:"
+          ls -la jsapi/lib/ jsapi/include/
 
       - name: Patch aiot-vue-cli (TypeScript + defineComponent support)
         run: |
@@ -94,7 +106,14 @@ jobs:
         with:
           tag_name: v${{ steps.version.outputs.version }}
           name: min的工具箱 v${{ steps.version.outputs.version }}
-          body_path: CHANGELOG.md
+          body: |
+            ## min的工具箱 v${{ steps.version.outputs.version }}
+
+            ### 更新内容
+            - 详见提交记录
+
+            ### 下载
+            下载下方的 `.amr` 文件安装
           files: ./ui/*.amr
           draft: false
           prerelease: false
