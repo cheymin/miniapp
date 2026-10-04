@@ -1,129 +1,65 @@
-/* 全新主页样式 — 横屏 640×260 深色极简
-   ⚠️ Falcon/Weex 限制: 只支持单类名选择器, 不支持 flex-wrap, 不支持 background/复合选择器 */
-@bg:        #0d1117;
-@sb:        #161b22;
-@border:    #30363d;
-@accent:    #2f81f7;
-@text:      #e6edf3;
-@text-dim:  #8b949e;
-@text-dim2: #6e7681;
-@card-bg:   #1c2128;
-@card-sel:  #262c34;
+/* 首页样式 — 320×240 横屏 */
+@import url('../../styles/theme.less');
 
-.app {
+.page-container {
+    flex: 1;
+    flex-direction: row;
+    background-color: @bg-primary;
+}
+.main-area {
     flex: 1;
     flex-direction: column;
-    background-color: @bg;
 }
-
-/* ===== 顶部状态栏 28px ===== */
-.status-bar {
-    height: 28px;
-    background-color: @sb;
-    flex-direction: row;
-    align-items: center;
-    padding: 0 12px;
+.title-bar {
+    height: @title-height;
+    line-height: @title-height;
+    padding-left: @content-left;
+    background-color: @bg-secondary;
     border-bottom-width: 1px;
-    border-bottom-color: @border;
+    border-bottom-color: @divider;
 }
-
-.sb-title {
-    font-size: 13px;
-    color: @text;
+.title-text {
+    font-size: @fs-title;
+    color: @text-secondary;
 }
-
-.sb-sep {
-    font-size: 10px;
-    color: @text-dim2;
-    margin-left: 6px;
+.title-version {
+    font-size: @fs-small;
+    color: @text-tertiary;
+    padding-left: 4px;
 }
-
-.sb-version {
-    font-size: 10px;
-    color: @text-dim2;
-    margin-left: 4px;
-}
-
-/* ===== 主内容区 ===== */
-.main {
+.content {
     flex: 1;
     padding: 6px;
+    padding-left: @content-left;
 }
-
-/* 手动分两行 (Falcon 不支持 flex-wrap) */
-.row {
+.card-row {
     flex-direction: row;
+    margin-bottom: 6px;
+}
+.home-card {
+    flex: 1;
+    background-color: @card-overlay;
+    border-radius: @radius-card;
+    padding: 10px 6px;
+    align-items: center;
+    margin-right: 5px;
+}
+.home-card-on {
+    background-color: @accent;
+}
+.home-card-icon {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+.home-card-label {
+    font-size: @fs-body;
+    color: @text-primary;
+}
+.home-card-desc {
+    font-size: @fs-small;
+    color: @text-tertiary;
     margin-top: 2px;
 }
-
-/* 图标用中文单字, Falcon 字体一定支持 */
-.card {
-    flex: 1;
-    height: 90px;
-    margin: 2px;
-    background-color: @card-bg;
-    border-radius: 5px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.card-icon {
-    font-size: 22px;
-    color: @accent;
-    margin-bottom: 3px;
-}
-
-.card-label {
-    font-size: 10px;
-    color: @text;
-}
-
-.empty {
-    padding: 50px 20px;
-    align-items: center;
-}
-
-.empty-text {
-    font-size: 12px;
-    color: @text-dim;
-}
-
-/* ===== 底部 TabBar 32px ===== */
-.tabbar {
-    height: 32px;
-    background-color: @sb;
-    flex-direction: row;
-    border-top-width: 1px;
-    border-top-color: @border;
-}
-
-.tab {
-    flex: 1;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* ⚠️ Falcon 不支持 .a.b 复合选择器, 用类拼接 */
-.tab-icon {
-    font-size: 11px;
-    color: @text-dim;
-    margin-bottom: 1px;
-}
-
-.tab-icon-on {
-    font-size: 11px;
-    color: @accent;
-    margin-bottom: 1px;
-}
-
-.tab-label {
-    font-size: 9px;
-    color: @text-dim;
-}
-
-.tab-label-on {
-    font-size: 9px;
-    color: @text;
+.single-card {
+    margin-right: 0;
 }

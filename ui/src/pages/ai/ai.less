@@ -1,226 +1,83 @@
-/* AI 助手样式 — Falcon 兼容版（横屏 640×260）
-   ⚠️ 去掉 gap / word-wrap / 复合 border (Falcon 不支持) */
-@bg: #0d1117;
-@sb: #161b22;
-@border: #30363d;
-@user-bg: #2f81f7;
-@ai-bg: #1c2128;
-@ai-border: #30363d;
-@accent: #2f81f7;
-@danger: #f85149;
-@text: #e6edf3;
-@text-dim: #8b949e;
-@text-dim2: #6e7681;
+@import url('../../styles/theme.less');
 
-.container {
+.chat-list {
     flex: 1;
-    flex-direction: column;
-    background-color: @bg;
 }
-
-/* 主区: 消息列表 + 右侧按钮 */
-.main-row {
-    flex: 1;
+.msg-user {
     flex-direction: row;
-}
-
-.messages-scroller {
-    flex: 1;
-    padding: 6px;
-}
-
-/* 每条消息容器 */
-.msg-item {
-    margin-bottom: 6px;
-    flex-direction: column;
-}
-
-/* 气泡 */
-.message {
-    max-width: 85%;
-    padding: 6px 10px;
-    border-radius: 6px;
-    font-size: 12px;
-    color: @text;
-}
-
-/* user 气泡 */
-.message-u {
-    background-color: @user-bg;
-    align-self: flex-end;
-}
-
-/* assistant 气泡 */
-.message-a {
-    background-color: @ai-bg;
-    align-self: flex-start;
-    border-width: 1px;
-    border-style: solid;
-    border-color: @ai-border;
-}
-
-/* reasoning 折叠 */
-.message-r {
-    max-width: 85%;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 10px;
-    color: @text-dim;
-    background-color: #161b22;
-    align-self: flex-start;
-    margin-bottom: 2px;
-    border-left-width: 2px;
-    border-left-style: solid;
-    border-left-color: @text-dim2;
-}
-
-/* 停流警告 */
-.stop-warn {
-    font-size: 9px;
-    color: #ffcc00;
-    padding: 2px 6px;
-    margin-top: 2px;
-    margin-bottom: 4px;
-}
-
-/* 消息操作条 */
-.actions-row {
-    flex-direction: row;
-    margin-top: 3px;
-    align-items: center;
-}
-
-.actions-row-u {
-    flex-direction: row;
-    margin-top: 3px;
-    align-items: center;
     justify-content: flex-end;
+    margin-bottom: @s4;
 }
-
-.sq-btn {
-    width: 22px;
-    height: 22px;
-    margin-right: 3px;
-    background-color: #21262d;
-    border-radius: 4px;
-    align-items: center;
-    justify-content: center;
+.msg-assistant {
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: @s4;
 }
-
-.sq-btn-text {
-    font-size: 10px;
-    color: @text;
+.msg-bubble-user {
+    background-color: @accent;
+    padding: @s4 @s6;
+    border-radius: @radius-panel;
+    max-width: 200px;
 }
-
-.sq-btn-pri {
-    background-color: @user-bg;
+.msg-bubble-assistant {
+    background-color: @card-overlay;
+    padding: @s4 @s6;
+    border-radius: @radius-panel;
+    max-width: 220px;
 }
-
-.sq-btn-dis {
-    background-color: #161b22;
-}
-
-.sq-btn-dis .sq-btn-text {
-    color: @text-dim2;
-}
-
-.sq-btn-del {
-    background-color: #6e2028;
-}
-
-.sq-btn-del .sq-btn-text {
-    color: @danger;
-}
-
-.variant-text {
-    font-size: 10px;
-    color: @text-dim;
-    margin-right: 3px;
-}
-
-/* 右侧竖排按钮 */
-.side-btns {
-    width: 28px;
-    background-color: @sb;
-    flex-direction: column;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 2px;
-    padding-right: 2px;
-    border-left-width: 1px;
-    border-left-style: solid;
-    border-left-color: @border;
-}
-
-.side-btn {
+.msg-text {
+    font-size: @fs-small;
+    color: @text-primary;
     flex: 1;
-    background-color: #21262d;
-    border-radius: 4px;
-    margin-bottom: 3px;
-    align-items: center;
-    justify-content: center;
 }
-
-.side-btn-text {
-    font-size: 12px;
-    color: @text;
-}
-
-/* 底部输入区 */
-.input-row {
-    height: 32px;
+.input-area {
     flex-direction: row;
     align-items: center;
-    padding: 0 6px;
-    background-color: @sb;
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-top-color: @border;
+    margin-top: @s6;
 }
-
-.input-area {
+.input-box {
     flex: 1;
-    height: 26px;
-    background-color: #21262d;
-    border-radius: 4px;
-    padding: 0 8px;
-    align-items: center;
-    margin-right: 6px;
+    background-color: @card-overlay;
+    border-radius: @radius-btn;
+    padding: @s4 @s6;
 }
-
-.input-text {
-    font-size: 11px;
-    color: @text;
+.input-hint {
+    font-size: @fs-small;
+    color: @text-tertiary;
 }
-
-.input-empty {
-    font-size: 11px;
-    color: @text-dim2;
-}
-
 .send-btn {
-    width: 36px;
-    height: 26px;
-    background-color: @user-bg;
-    border-radius: 4px;
+    background-color: @accent;
+    color: @text-primary;
+    font-size: @fs-body;
+    padding: @s4 @s8;
+    border-radius: @radius-btn;
+    margin-left: @s4;
+}
+.quick-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: @s4;
+}
+.quick-chip {
+    font-size: @fs-small;
+    color: @text-secondary;
+    background-color: @card-overlay;
+    padding: @s2 @s4;
+    margin-right: @s2;
+    margin-bottom: @s2;
+    border-radius: @radius-btn;
+}
+.status-row {
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    margin-bottom: @s4;
 }
-
-.send-btn-dis {
-    width: 36px;
-    height: 26px;
-    background-color: #21262d;
-    border-radius: 4px;
-    align-items: center;
-    justify-content: center;
+.status-text {
+    font-size: @fs-small;
+    color: @text-tertiary;
 }
-
-.send-btn-text {
-    font-size: 11px;
-    color: @text;
-}
-
-.send-btn-dis .send-btn-text {
-    color: @text-dim2;
+.clear-btn {
+    font-size: @fs-small;
+    color: @accent;
 }

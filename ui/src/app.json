@@ -1,29 +1,13 @@
 {
   "pages": {
     "index": "pages/index/index.vue",
-    "desktop": "pages/desktop/desktop.vue",
     "ai": "pages/ai/ai.vue",
-    "update": "pages/update/update.vue",
-    "about": "pages/about/about.vue",
-    "shell": "pages/shell/shell.vue",
-    "softKeyboard": "pages/softKeyboard/softKeyboard.vue",
-    "aiSettings": "pages/aiSettings/aiSettings.vue",
-    "aiHistory": "pages/aiHistory/aiHistory.vue",
-    "aiNav": "pages/aiNav/aiNav.vue",
     "fileManager": "pages/fileManager/fileManager.vue",
-    "fileEditor": "pages/fileEditor/fileEditor.vue",
-    "amrInstall": "pages/amrInstall/amrInstall.vue",
-    "misc": "pages/misc/misc.vue",
-    "deviceinfo": "pages/deviceinfo/deviceinfo.vue",
+    "videoPlayer": "pages/videoPlayer/videoPlayer.vue",
+    "shell": "pages/shell/shell.vue",
     "imageViewer": "pages/imageViewer/imageViewer.vue",
-    "gallery": "pages/gallery/gallery.vue",
-    "qqchat": "pages/qqchat/qqchat.vue",
-    "browser": "pages/browser/browser.vue",
-    "penshell": "pages/penshell/penshell.vue",
-    "calculator": "pages/calculator/calculator.vue",
-    "unitConverter": "pages/unitConverter/unitConverter.vue",
-    "musicPlayer": "pages/musicPlayer/musicPlayer.vue",
-    "videoPlayer": "pages/videoPlayer/videoPlayer.vue"
+    "update": "pages/update/update.vue",
+    "settings": "pages/settings/settings.vue"
   },
   "options": {
     "style": {

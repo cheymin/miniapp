@@ -1,0 +1,29 @@
+/* 通用页面骨架 — LeftRail + PageTitle + 内容 */
+@import url('theme.less');
+
+.shell {
+    flex: 1;
+    flex-direction: row;
+    background-color: @bg-primary;
+}
+.shell-main {
+    flex: 1;
+    flex-direction: column;
+}
+.shell-title {
+    height: @title-height;
+    line-height: @title-height;
+    padding-left: @content-left;
+    background-color: @bg-secondary;
+    border-bottom-width: 1px;
+    border-bottom-color: @divider;
+}
+.shell-title-text {
+    font-size: @fs-title;
+    color: @text-primary;
+}
+.shell-content {
+    flex: 1;
+    padding: @s6;
+    padding-left: @content-left;
+}

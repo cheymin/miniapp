@@ -1,48 +1,40 @@
-<!-- imageViewer — 左9/10图区 + 右1/10按钮条
-     ⚠️ Falcon 限制: 不支持 scroller 内图片拖动 (scroller 会拦截 touchmove),
-        所以图片区绝对不包 scroller, 手势全部手动处理 -->
 <template>
-    <div class="app">
-        <!-- 左 9/10: 图片区 -->
-        <div class="img-area">
-            <!-- 图片本身 -->
-            <div
-                v-if="initialized && src"
-                class="img-box"
-                :style="imageStyle"
-                @touchstart="onTouchStart"
-                @touchmove="onTouchMove"
-                @touchend="onTouchEnd">
-                <image :src="src" resize="contain" class="img" />
+    <PageShell title="图片查看" activeKey="img">
+        <div class="content" style="padding-left: @content-left;">
+            <div class="info-bar">
+                <text class="info-text">{{ indexLabel() }}</text>
+                <text class="info-text" v-if="src">{{ src.split('/').pop() }}</text>
             </div>
-            <!-- 加载失败占位 (永不黑屏) -->
-            <text v-else class="no-img">无图片</text>
 
-            <!-- 左下角状态 (index + zoom%) -->
-            <div class="status-bar">
-                <text class="status-text">{{ indexLabel }} · {{ percentLabel }}</text>
+            <!-- 图片显示区 -->
+            <div class="img-area">
+                <image
+                    v-if="src"
+                    :src="src"
+                    resize="contain"
+                    class="img-tag"
+                    :style="{ transform: 'scale(' + scale + ') translate(' + panX + 'px,' + panY + 'px)' }"
+                    @touchstart="onTouchStart"
+                    @touchmove="onTouchMove"
+                    @touchend="onTouchEnd" />
+                <text v-else class="img-empty">（暂无图片，点下方扫描）</text>
+            </div>
+
+            <!-- 控件 -->
+            <div class="ctrl-row">
+                <text class="ctrl-btn" @click="prev">◀ 上一张</text>
+                <text class="ctrl-btn" @click="zoomOut">-</text>
+                <text class="ctrl-btn" @click="reset">1x</text>
+                <text class="ctrl-btn" @click="zoomIn">+</text>
+                <text class="ctrl-btn" @click="next">下一张 ▶</text>
+            </div>
+
+            <div class="btn-row">
+                <text class="btn" @click="scanQuick">🔍 扫描 /userdisk</text>
+                <text class="btn btn-sec" @click="$falcon.navTo('fileManager', {})">📁 选目录</text>
             </div>
         </div>
-
-        <!-- 右 1/10: 按钮条 -->
-        <div class="btn-bar">
-            <div class="btn" @click="prevImage">
-                <text class="btn-icon">‹</text>
-            </div>
-            <div class="btn" @click="zoomOut">
-                <text class="btn-icon">−</text>
-            </div>
-            <div class="btn" @click="zoomIn">
-                <text class="btn-icon">+</text>
-            </div>
-            <div class="btn" @click="nextImage">
-                <text class="btn-icon">›</text>
-            </div>
-            <div class="btn btn-close" @click="close">
-                <text class="btn-icon-close">×</text>
-            </div>
-        </div>
-    </div>
+    </PageShell>
 </template>
 
 <style lang="less" scoped>
@@ -50,6 +42,6 @@
 </style>
 
 <script>
-import iv from './imageViewer';
-export default iv;
+import imageViewer from './imageViewer';
+export default imageViewer;
 </script>
