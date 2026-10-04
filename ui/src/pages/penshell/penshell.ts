@@ -1,5 +1,7 @@
 import { defineComponent } from 'vue';
-import { Penshell } from 'langningchen';
+// === 原生 JSAPI 动态加载 ===
+const __ln: any = (globalThis as any).langningchen || {};
+const Penshell: any = __ln.Penshell || null;
 import { showError, showSuccess } from '../../components/ToastMessage';
 import { openKeyboard } from '../../utils/softKeyboardUtils';
 

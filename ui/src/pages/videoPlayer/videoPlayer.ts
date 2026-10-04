@@ -1,6 +1,9 @@
 // Copyright (C) 2025 Langning Chen
 // 
 // This file is part of miniapp.
+// === 原生 JSAPI 动态加载 ===
+const __ln: any = (globalThis as any).langningchen || {};
+const Shell: any = __ln.Shell || null;
 // 
 // miniapp is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -16,7 +19,6 @@
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
 import { defineComponent } from 'vue';
-import { Shell } from 'langningchen';
 import { showError, showSuccess, showInfo } from '../../components/ToastMessage';
 import { hideLoading, showLoading } from '../../components/Loading';
 import { openKeyboard } from '../../utils/softKeyboardUtils';

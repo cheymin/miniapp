@@ -1,5 +1,7 @@
 import { defineComponent } from 'vue';
-import { Shell } from 'langningchen';
+// === 原生 JSAPI 动态加载 ===
+const __ln: any = (globalThis as any).langningchen || {};
+const Shell: any = __ln.Shell || null;
 import { showSuccess, showError } from '../../components/ToastMessage';
 import { dbGet, dbSet } from '../../utils/database';
 

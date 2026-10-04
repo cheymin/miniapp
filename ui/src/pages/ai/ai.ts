@@ -1,6 +1,9 @@
 // Copyright (C) 2025 Langning Chen
 // 
 // This file is part of miniapp.
+// === 原生 JSAPI 动态加载 ===
+const __ln: any = (globalThis as any).langningchen || {};
+const AI: any = __ln.AI || null;
 // 
 // miniapp is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -16,7 +19,6 @@
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
 import { defineComponent } from 'vue';
-import { AI } from 'langningchen';
 import { ROLE, ConversationNode, STOP_REASON } from '../../@types/langningchen';
 import { showError } from '../../components/ToastMessage';
 import { openKeyboard } from '../../utils/softKeyboardUtils';

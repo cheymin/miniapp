@@ -1,6 +1,9 @@
 // Copyright (C) 2025 wyxdlz54188
 // 
 // This file is part of miniapp.
+// === 原生 JSAPI 动态加载 ===
+const __ln: any = (globalThis as any).langningchen || {};
+const Shell: any = __ln.Shell || null;
 // 
 // miniapp is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -17,7 +20,6 @@
 
 import { defineComponent } from 'vue';
 import { openKeyboard } from '../../utils/softKeyboardUtils';
-import { Shell } from 'langningchen';
 
 // 在顶部添加导入（如果不存在）
 import { showInfo } from '../../components/ToastMessage';

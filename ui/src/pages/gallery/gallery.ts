@@ -1,10 +1,12 @@
 // gallery — 图库（修复版，永不黑屏）
+// === 原生 JSAPI 动态加载 ===
+const __ln: any = (globalThis as any).langningchen || {};
+const Shell: any = __ln.Shell || null;
 // 策略: 先直接显示原图缩略图 (Falcon resize="cover" 自动缩),
 //       ffmpeg 在后台异步生成真正的缩略图替换。
 //       任何环节失败都有 fallback，保证有图可看。
 
 import { defineComponent } from 'vue';
-import { Shell } from 'langningchen';
 import { showError, showSuccess, showInfo } from '../../components/ToastMessage';
 import { hideLoading, showLoading } from '../../components/Loading';
 

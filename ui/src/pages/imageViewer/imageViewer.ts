@@ -1,10 +1,12 @@
 // imageViewer — 修复版, 永不黑屏
+// === 原生 JSAPI 动态加载 ===
+const __ln: any = (globalThis as any).langningchen || {};
+const Shell: any = __ln.Shell || null;
 // 策略: 直接渲染原图 (Falcon resize="contain" 自动缩到容器内),
 //       手势: 单指平移 / 双指 pinch / 双击切换 1x ↔ 2.5x
 //       所有状态改变都在 mounted 里设置默认值, 保证模板永远有东西渲染
 
 import { defineComponent } from 'vue';
-import { Shell } from 'langningchen';
 import { showError } from '../../components/ToastMessage';
 
 export type ViewerOptions = {
