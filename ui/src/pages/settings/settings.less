@@ -1,86 +1,13 @@
-/* 设置页 */
-@import url('../../styles/theme.less');
-
-.card {
-    background-color: @card-overlay;
-    border-radius: @radius-card;
-    padding: @s6;
-    margin-bottom: @s6;
-}
-.card-title {
-    font-size: @fs-body;
-    color: @text-primary;
-    margin-bottom: @s4;
-}
-.setting-row {
-    flex-direction: row;
-    align-items: center;
-    padding: @s3 0;
-}
-.setting-label {
-    font-size: @fs-body;
-    color: @text-primary;
-    flex: 1;
-}
-.setting-desc {
-    font-size: @fs-small;
-    color: @text-tertiary;
-    margin-top: @s2;
-}
-.toggle {
-    width: 36px;
-    height: 18px;
-    border-radius: 9px;
-    background-color: @divider;
-    align-items: flex-end;
-    padding: 2px;
-}
-.toggle-on {
-    background-color: @accent;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-.toggle-dot {
-    width: 14px;
-    height: 14px;
-    border-radius: 7px;
-    background-color: @text-primary;
-}
-.btn-row {
-    flex-direction: row;
-    margin-top: @s4;
-}
-.btn {
-    background-color: @accent;
-    color: @text-primary;
-    font-size: @fs-btn;
-    padding: @s4 @s8;
-    border-radius: @radius-btn;
-    margin-right: @s4;
-}
-.btn-secondary {
-    background-color: @card-overlay;
-}
-.btn-danger {
-    background-color: @error;
-}
-.version-info {
-    font-size: @fs-small;
-    color: @text-secondary;
-}
-.font-picker {
-    flex-direction: row;
-    margin-top: @s4;
-}
-.font-item {
-    font-size: @fs-small;
-    color: @text-tertiary;
-    padding: @s2 @s4;
-    background-color: @divider;
-    border-radius: @radius-btn;
-    margin-right: @s3;
-}
-.font-item-on {
-    background-color: @accent;
-    color: @text-primary;
-}
+@import '../../styles/theme.less';
+/* settings 骨架 */
+.app-root { flex: 1; flex-direction: row; background-color: @bg-primary; }
+.left-rail { width: @rail-width; flex-direction: column; align-items: center; padding-top: 6px; background-color: @bg-secondary; border-right-width: 1px; border-right-color: @divider; }
+.rail-item { align-items: center; margin-bottom: 10px; }
+.rail-icon { font-size: @fs-icon; color: @text-tertiary; margin-bottom: 2px; }
+.rail-icon-on { font-size: @fs-icon; color: @accent; margin-bottom: 2px; }
+.rail-label { font-size: @fs-small; color: @text-tertiary; }
+.rail-label-on { font-size: @fs-small; color: @accent; }
+.main-area { flex: 1; flex-direction: column; }
+.title-bar { height: @title-height; line-height: @title-height; padding-left: @content-left; background-color: @bg-secondary; border-bottom-width: 1px; border-bottom-color: @divider; }
+.title-text { font-size: @fs-title; color: @text-secondary; }
+.content { flex: 1; padding: @s6; padding-left: @content-left; flex-direction: column; }

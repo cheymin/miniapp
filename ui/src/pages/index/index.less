@@ -1,10 +1,33 @@
+@import '../../styles/theme.less';
 /* 首页样式 — 320×240 横屏 */
-@import url('../../styles/theme.less');
 
-.page-container {
+/* 骨架（每页都一样） */
+.app-root {
     flex: 1;
     flex-direction: row;
     background-color: @bg-primary;
+}
+.left-rail {
+    width: @rail-width;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6px;
+    background-color: @bg-secondary;
+    border-right-width: 1px;
+    border-right-color: @divider;
+}
+.rail-item {
+    align-items: center;
+    margin-bottom: 10px;
+}
+.rail-icon {
+    font-size: @fs-icon;
+    color: @text-tertiary;
+    margin-bottom: 2px;
+}
+.rail-label {
+    font-size: @fs-small;
+    color: @text-tertiary;
 }
 .main-area {
     flex: 1;
@@ -29,9 +52,11 @@
 }
 .content {
     flex: 1;
-    padding: 6px;
+    padding: @s6;
     padding-left: @content-left;
 }
+
+/* 首页特有 */
 .card-row {
     flex-direction: row;
     margin-bottom: 6px;
@@ -47,6 +72,9 @@
 .home-card-on {
     background-color: @accent;
 }
+.single-card {
+    margin-right: 0;
+}
 .home-card-icon {
     font-size: 22px;
     margin-bottom: 4px;
@@ -59,7 +87,4 @@
     font-size: @fs-small;
     color: @text-tertiary;
     margin-top: 2px;
-}
-.single-card {
-    margin-right: 0;
 }

@@ -1,82 +1,70 @@
 import { defineComponent } from 'vue';
 import { AI } from 'langningchen';
-import PageShell from '../../components/PageShell.vue';
 
-export type AIOptions = {};
+export type AiOptions = {};
 
-type Msg = { id: string; role: string; text: string };
+type Msg = { id: number; role: 'user' | 'assistant'; text: string };
+
+const RAIL = [
+    { page: 'index', icon: '🏠', label: '首页' },
+    { page: 'ai', icon: '🤖', label: 'AI' },
+    { page: 'fileManager', icon: '📁', label: '文件' },
+    { page: 'videoPlayer', icon: '🎬', label: '视频' },
+    { page: 'shell', icon: '⌨️', label: '终端' },
+    { page: 'imageViewer', icon: '🖼️', label: '图片' },
+    { page: 'update', icon: '⬇️', label: '更新' },
+];
+
+let mid = 0;
+const uid = () => ++mid;
 
 const ai = defineComponent({
-    components: { PageShell },
     data() {
         return {
-            $page: {} as FalconPage<AIOptions>,
+            $page: {} as FalconPage<AiOptions>,
+            activeKey: 'ai',
+            rail: RAIL,
             initialized: false,
             streaming: false,
             messages: [] as Msg[],
-            currentInput: '',
-            apiKeySet: false,
+            lastMsgId: 0,
         };
     },
-    mounted() {
+    async mounted() {
         this.$page.$npage.setSupportBack(true);
-        const backFn = () => $falcon.navBack();
-        this.$page.$npage.on('backpressed', backFn);
+        this.$page.$npage.on('backpressed', () => $falcon.navBack());
         try {
-            AI.initialize();
-            this.initialized = true;
+            const cfg = await AI.getConfig();
+            if (cfg && cfg.apiKey) {
+                await AI.initialize(cfg);
+                this.initialized = true;
+            }
         } catch (e) {
-            console.error('AI init failed', e);
+            // AI 可能没初始化
         }
-        this.messages.push({
-            id: 'welcome',
-            role: 'assistant',
-            text: '你好！我是 AI 助手，有什么可以帮你的？\n（请先在设置里配置 API Key）'
-        });
     },
     methods: {
-        async send() {
-            if (!this.currentInput.trim() || this.streaming) return;
-            const userMsg = { id: 'u' + Date.now(), role: 'user', text: this.currentInput };
+        open(pageName: string) { $falcon.navTo(pageName, {}); },
+        clearAll() { this.messages = []; },
+        trySettings() { $falcon.navTo('settings', {}); },
+        async quickInput(text: string) {
+            if (!text || !this.initialized) return;
+            const userMsg: Msg = { id: uid(), role: 'user', text };
             this.messages.push(userMsg);
-            const input = this.currentInput;
-            this.currentInput = '';
-
+            const assistantMsg: Msg = { id: uid(), role: 'assistant', text: '' };
+            this.messages.push(assistantMsg);
+            this.lastMsgId = assistantMsg.id;
             this.streaming = true;
-            const aiMsg: Msg = { id: 'a' + Date.now(), role: 'assistant', text: '' };
-            this.messages.push(aiMsg);
-
             try {
-                AI.on('ai_stream', (chunk: string) => {
-                    if (chunk && chunk.length > 0) {
-                        aiMsg.text += chunk;
-                        this.$forceUpdate();
-                    }
+                await AI.chat(text, (delta: string) => {
+                    const m = this.messages.find(x => x.id === this.lastMsgId);
+                    if (m) m.text += delta;
                 });
-                await AI.addUserMessage(input);
-                await AI.generateResponse();
             } catch (e: any) {
-                aiMsg.text += '\n[错误] ' + (e && e.message ? e.message : String(e));
-            } finally {
-                this.streaming = false;
-                this.$forceUpdate();
+                const m = this.messages.find(x => x.id === this.lastMsgId);
+                if (m) m.text = '(生成失败: ' + (e.message || e) + ')';
             }
-        },
-        // 快速输入 — 用 prompt 兜底（等系统键盘 API 挖出来再换）
-        quickInput(text: string) {
-            this.currentInput = text;
-            this.send();
-        },
-        clearAll() {
-            this.messages = [];
-            this.messages.push({
-                id: 'welcome',
-                role: 'assistant',
-                text: '已清空对话'
-            });
-        },
-        trySettings() {
-            $falcon.navTo('settings', {});
+            this.streaming = false;
         }
     }
 });

@@ -1,108 +1,116 @@
 import { defineComponent } from 'vue';
 import { Shell } from 'langningchen';
-import PageShell from '../../components/PageShell.vue';
-import { showError, showSuccess } from '../../components/ToastMessage';
-import { hideLoading, showLoading } from '../../components/Loading';
 
 export type UpdateOptions = {};
 
-const GITHUB_OWNER = 'cheymin';
-const REPO = 'miniapp';
 const CURRENT_VERSION = '1.2.58';
+const REPO_OWNER = 'min';
+const REPO_NAME = 'miniapp';
+
+const RAIL = [
+    { page: 'index', icon: '🏠', label: '首页' },
+    { page: 'ai', icon: '🤖', label: 'AI' },
+    { page: 'fileManager', icon: '📁', label: '文件' },
+    { page: 'videoPlayer', icon: '🎬', label: '视频' },
+    { page: 'shell', icon: '⌨️', label: '终端' },
+    { page: 'imageViewer', icon: '🖼️', label: '图片' },
+    { page: 'update', icon: '⬇️', label: '更新' },
+];
+
+type Status = 'idle' | 'checking' | 'available' | 'downloading' | 'installing' | 'updated' | 'error';
 
 const updatePage = defineComponent({
-    components: { PageShell },
     data() {
         return {
             $page: {} as FalconPage<UpdateOptions>,
-            shellReady: false,
-            status: 'idle' as 'idle' | 'checking' | 'available' | 'downloading' | 'installing' | 'updated' | 'error',
-            errorMsg: '',
+            activeKey: 'update',
+            rail: RAIL,
             currentVersion: CURRENT_VERSION,
             latestVersion: '',
             releaseNotes: '',
-            downloadUrl: '',
-            progress: 0,
+            assetUrl: '',
+            status: 'idle' as Status,
         };
     },
     async mounted() {
         this.$page.$npage.setSupportBack(true);
-        const backFn = () => $falcon.navBack();
-        this.$page.$npage.on('backpressed', backFn);
-        try { await Shell.initialize(); this.shellReady = true; } catch (e) {}
+        this.$page.$npage.on('backpressed', () => $falcon.navBack());
+        await Shell.initialize().catch(() => {});
     },
     methods: {
+        open(pageName: string) { $falcon.navTo(pageName, {}); },
+        statusText() {
+            switch (this.status) {
+                case 'idle': return '等待检查';
+                case 'checking': return '正在检查...';
+                case 'available': return '有新版本可用！';
+                case 'downloading': return '正在下载...';
+                case 'installing': return '正在安装...';
+                case 'updated': return '已是最新版本';
+                case 'error': return '检查失败，请稍后重试';
+            }
+            return '';
+        },
         async checkUpdate() {
             this.status = 'checking';
-            this.errorMsg = '';
             try {
-                // GitHub Releases API — HTTPS 可能 TLS 挂，降级 HTTP 代理
-                let apiUrl = 'http://ghproxy.net/https://api.github.com/repos/' + GITHUB_OWNER + '/' + REPO + '/releases/latest';
-                let resp: any = null;
+                const proxy = 'https://ghproxy.net/';
+                const apiUrl = proxy + 'https://api.github.com/repos/' + REPO_OWNER + '/' + REPO_NAME + '/releases/latest';
+                let body = '';
                 try {
-                    resp = await $falcon.jsapi.http.request({ url: apiUrl, timeout: 8 });
+                    body = await $falcon.jsapi.http.get(apiUrl);
                 } catch (e) {
-                    // fallback: curl 降级
-                    const out = await Shell.exec('curl -sL "' + apiUrl + '" 2>/dev/null | head -c 2000');
-                    if (!out || !out.trim()) throw new Error('网络请求失败');
-                    try { resp = { data: JSON.parse(out) }; } catch (e2) { throw new Error('JSON 解析失败'); }
+                    // try curl fallback
+                    body = await Shell.exec('curl -sL "' + apiUrl + '" 2>/dev/null | head -c 4096');
                 }
-                const data = resp?.data;
-                if (!data || !data.tag_name) throw new Error('未找到 release');
-                this.latestVersion = (data.tag_name || '').replace(/^v/, '');
-                this.releaseNotes = (data.body || '').substring(0, 200);
-
-                // 找 .amr 资产
-                const assets = data.assets || [];
-                let amr = null;
-                for (let i = 0; i < assets.length; i++) {
-                    if ((assets[i].name || '').endsWith('.amr')) { amr = assets[i]; break; }
+                if (!body) throw new Error('no response');
+                const json = JSON.parse(body);
+                const ver = (json.tag_name || '').replace(/^v/, '');
+                const notes = json.body || '';
+                const asset = (json.assets || []).find((a: any) => a.name && a.name.endsWith('.amr'));
+                this.latestVersion = ver;
+                this.releaseNotes = notes;
+                if (asset) this.assetUrl = proxy + asset.browser_download_url;
+                if (this.compareVer(ver, this.currentVersion) > 0) {
+                    this.status = 'available';
+                } else {
+                    this.status = 'updated';
                 }
-                if (!amr) throw new Error('未找到 .amr 安装包');
-                this.downloadUrl = amr.browser_download_url;
-                this.status = this.latestVersion !== this.currentVersion ? 'available' : 'updated';
             } catch (e: any) {
                 this.status = 'error';
-                this.errorMsg = (e && e.message) ? e.message : String(e);
+                this.releaseNotes = '错误: ' + (e.message || String(e));
             }
         },
+        compareVer(a: string, b: string) {
+            const pa = a.split('.').map(n => parseInt(n, 10));
+            const pb = b.split('.').map(n => parseInt(n, 10));
+            for (let i = 0; i < 3; i++) {
+                const va = pa[i] || 0, vb = pb[i] || 0;
+                if (va !== vb) return va - vb;
+            }
+            return 0;
+        },
         async downloadAndInstall() {
-            if (!this.downloadUrl) { showError('无下载链接'); return; }
+            if (!this.assetUrl) return;
             this.status = 'downloading';
+            const dest = '/userdisk/update.amr';
             try {
-                const proxyUrl = 'http://ghproxy.net/' + this.downloadUrl;
-                const savePath = '/userdisk/Favorite/miniapp_update.amr';
-                await Shell.exec('rm -f "' + savePath + '"');
-                // 用 curl -L 跟随重定向，-o 输出到文件
-                await Shell.exec('curl -sL -o "' + savePath + '" "' + proxyUrl + '"');
-                const check = await Shell.exec('ls -la "' + savePath + '"');
-                if (!check.trim()) throw new Error('下载后文件不存在');
+                await Shell.exec('curl -sL -o "' + dest + '" "' + this.assetUrl + '"');
                 this.status = 'installing';
-                // 安装
-                const instOut = await Shell.exec('miniapp_cli install "' + savePath + '" 2>&1 || true');
-                // miniapp_cli 安装后可能自动重启 app
-                showSuccess('安装命令已执行');
+                await Shell.exec('aiot install "' + dest + '"');
                 this.status = 'updated';
             } catch (e: any) {
                 this.status = 'error';
-                this.errorMsg = (e && e.message) ? e.message : String(e);
-                showError('更新失败: ' + this.errorMsg);
+                this.releaseNotes = '安装失败: ' + (e.message || String(e));
             }
         },
-        statusText(): string {
-            switch (this.status) {
-                case 'idle': return '等待检查';
-                case 'checking': return '检查中...';
-                case 'available': return '有新版本 ✨';
-                case 'downloading': return '下载中...';
-                case 'installing': return '安装中...';
-                case 'updated': return '已是最新 ✅';
-                case 'error': return '❌ ' + this.errorMsg;
-                default: return '';
+        async doTestCurl() {
+            try {
+                const out = await Shell.exec('curl -sI https://github.com 2>&1 | head -3');
+                this.releaseNotes = 'curl 测试:\n' + out;
+            } catch (e: any) {
+                this.releaseNotes = 'curl 失败: ' + (e.message || String(e));
             }
-        },
-        doTestCurl() {
-            Shell.exec('curl -sI "http://ghproxy.net/https://github.com" 2>&1 | head -5');
         }
     }
 });

@@ -1,9 +1,7 @@
 import { defineComponent } from 'vue';
-import LeftRail from '../../components/LeftRail.vue';
 
 export type IndexOptions = {};
 
-// 7 个核心功能
 const HOME_ITEMS = [
     { key: 'ai',          icon: '🤖', label: 'AI 助手',   desc: '对话' },
     { key: 'fileManager', icon: '📁', label: '文件管理',  desc: '浏览' },
@@ -13,24 +11,23 @@ const HOME_ITEMS = [
     { key: 'update',      icon: '⬇️', label: '系统更新',  desc: 'OTA' },
 ];
 
-const RAIL_ITEMS = [
-    { key: 'home', key2: 'index',  page: 'index',       icon: '🏠', label: '首页' },
-    { key: 'ai',   key2: 'ai',     page: 'ai',          icon: '🤖', label: 'AI' },
-    { key: 'file', key2: 'file',   page: 'fileManager', icon: '📁', label: '文件' },
-    { key: 'video',key2: 'video',  page: 'videoPlayer', icon: '🎬', label: '视频' },
-    { key: 'term', key2: 'term',   page: 'shell',       icon: '⌨️', label: '终端' },
-    { key: 'img',  key2: 'img',    page: 'imageViewer', icon: '🖼️', label: '图片' },
-    { key: 'upd',  key2: 'upd',    page: 'update',      icon: '⬇️', label: '更新' },
+const RAIL = [
+    { page: 'index',       icon: '🏠', label: '首页' },
+    { page: 'ai',          icon: '🤖', label: 'AI' },
+    { page: 'fileManager', icon: '📁', label: '文件' },
+    { page: 'videoPlayer', icon: '🎬', label: '视频' },
+    { page: 'shell',       icon: '⌨️', label: '终端' },
+    { page: 'imageViewer', icon: '🖼️', label: '图片' },
+    { page: 'update',      icon: '⬇️', label: '更新' },
 ];
 
 const index = defineComponent({
-    components: { LeftRail },
     data() {
         return {
             $page: {} as FalconPage<IndexOptions>,
             version: '1.2.58',
-            railItems: RAIL_ITEMS,
             homeItems: HOME_ITEMS,
+            rail: RAIL,
         };
     },
     computed: {
@@ -43,9 +40,9 @@ const index = defineComponent({
         }
     },
     methods: {
-        open(item: typeof HOME_ITEMS[number]) {
-            $falcon.navTo(item.key, {});
-        }
+        open(pageName: string) { $falcon.navTo(pageName, {}); },
+        go(item: typeof HOME_ITEMS[number]) { $falcon.navTo(item.key, {}); },
+        goSettings() { $falcon.navTo('settings', {}); }
     }
 });
 

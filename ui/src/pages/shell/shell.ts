@@ -1,26 +1,31 @@
 import { defineComponent } from 'vue';
 import { Shell } from 'langningchen';
-import PageShell from '../../components/PageShell.vue';
-import { showError } from '../../components/ToastMessage';
 
 export type ShellOptions = {};
 
 type Line = { type: string; text: string; key: number };
 
 const PROMPT = '# ';
+const RAIL = [
+    { page: 'index',       icon: '🏠', label: '首页' },
+    { page: 'ai',          icon: '🤖', label: 'AI' },
+    { page: 'fileManager', icon: '📁', label: '文件' },
+    { page: 'videoPlayer', icon: '🎬', label: '视频' },
+    { page: 'shell',       icon: '⌨️', label: '终端' },
+    { page: 'imageViewer', icon: '🖼️', label: '图片' },
+    { page: 'update',      icon: '⬇️', label: '更新' },
+];
 
 const shellPage = defineComponent({
-    components: { PageShell },
     data() {
         return {
             $page: {} as FalconPage<ShellOptions>,
+            rail: RAIL,
             shellInitialized: false,
             currentPrompt: PROMPT,
-            inputText: '',
             lines: [] as Line[],
             cwd: '/',
             lineKey: 0,
-            executing: false,
         };
     },
     async mounted() {
@@ -30,26 +35,20 @@ const shellPage = defineComponent({
         try {
             await Shell.initialize();
             this.shellInitialized = true;
-            this.addLine('system', 'Shell 就绪');
-            this.addLine('system', '输入 help 查看可用命令');
+            this.addLine('system', 'Shell 就绪 · 点击下方命令执行');
         } catch (e) {
-            showError('Shell 初始化失败');
+            this.addLine('error', 'Shell 初始化失败');
         }
     },
     methods: {
+        open(pageName: string) { $falcon.navTo(pageName, {}); },
         addLine(type: string, text: string) {
             this.lines.push({ type, text, key: this.lineKey++ });
         },
         async run(cmd: string) {
             if (!cmd.trim()) return;
-            if (cmd === 'clear' || cmd === 'cls') {
-                this.lines = [];
-                return;
-            }
-            if (cmd === 'help') {
-                this.addLine('output', '可用命令: help | clear | pwd | ls | cat | echo | cd | 任何 Linux 命令');
-                return;
-            }
+            if (cmd === 'clear' || cmd === 'cls') { this.lines = []; return; }
+            if (cmd === 'help') { this.addLine('output', '可用: help/clear/pwd/ls/cat/echo/cd + 任何 Linux 命令'); return; }
             if (cmd.startsWith('cd ')) {
                 const dir = cmd.substring(3).trim();
                 const target = dir.startsWith('/') ? dir : (this.cwd + '/' + dir);
@@ -58,9 +57,7 @@ const shellPage = defineComponent({
                 if (pwd) { this.cwd = pwd; this.currentPrompt = pwd + ' # '; }
                 return;
             }
-
             this.addLine('cmd', this.currentPrompt + cmd);
-            this.executing = true;
             try {
                 const out = await Shell.exec(cmd);
                 if (out && out.trim()) {
@@ -72,16 +69,8 @@ const shellPage = defineComponent({
             } catch (e: any) {
                 this.addLine('error', (e && e.message) ? e.message : String(e));
             }
-            this.executing = false;
-            this.inputText = '';
         },
-        // 在我们 miniapp 内部输入时用（但其实我们没有 input，靠软键盘）
-        onInputConfirm() {
-            this.run(this.inputText);
-        },
-        useExample(cmd: string) {
-            this.run(cmd);
-        }
+        useExample(cmd: string) { this.run(cmd); }
     }
 });
 

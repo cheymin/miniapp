@@ -1,83 +1,13 @@
-@import url('../../styles/theme.less');
-
-.chat-list {
-    flex: 1;
-}
-.msg-user {
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-bottom: @s4;
-}
-.msg-assistant {
-    flex-direction: row;
-    justify-content: flex-start;
-    margin-bottom: @s4;
-}
-.msg-bubble-user {
-    background-color: @accent;
-    padding: @s4 @s6;
-    border-radius: @radius-panel;
-    max-width: 200px;
-}
-.msg-bubble-assistant {
-    background-color: @card-overlay;
-    padding: @s4 @s6;
-    border-radius: @radius-panel;
-    max-width: 220px;
-}
-.msg-text {
-    font-size: @fs-small;
-    color: @text-primary;
-    flex: 1;
-}
-.input-area {
-    flex-direction: row;
-    align-items: center;
-    margin-top: @s6;
-}
-.input-box {
-    flex: 1;
-    background-color: @card-overlay;
-    border-radius: @radius-btn;
-    padding: @s4 @s6;
-}
-.input-hint {
-    font-size: @fs-small;
-    color: @text-tertiary;
-}
-.send-btn {
-    background-color: @accent;
-    color: @text-primary;
-    font-size: @fs-body;
-    padding: @s4 @s8;
-    border-radius: @radius-btn;
-    margin-left: @s4;
-}
-.quick-row {
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: @s4;
-}
-.quick-chip {
-    font-size: @fs-small;
-    color: @text-secondary;
-    background-color: @card-overlay;
-    padding: @s2 @s4;
-    margin-right: @s2;
-    margin-bottom: @s2;
-    border-radius: @radius-btn;
-}
-.status-row {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: @s4;
-}
-.status-text {
-    font-size: @fs-small;
-    color: @text-tertiary;
-}
-.clear-btn {
-    font-size: @fs-small;
-    color: @accent;
-}
+@import '../../styles/theme.less';
+/* ai 骨架 */
+.app-root { flex: 1; flex-direction: row; background-color: @bg-primary; }
+.left-rail { width: @rail-width; flex-direction: column; align-items: center; padding-top: 6px; background-color: @bg-secondary; border-right-width: 1px; border-right-color: @divider; }
+.rail-item { align-items: center; margin-bottom: 10px; }
+.rail-icon { font-size: @fs-icon; color: @text-tertiary; margin-bottom: 2px; }
+.rail-icon-on { font-size: @fs-icon; color: @accent; margin-bottom: 2px; }
+.rail-label { font-size: @fs-small; color: @text-tertiary; }
+.rail-label-on { font-size: @fs-small; color: @accent; }
+.main-area { flex: 1; flex-direction: column; }
+.title-bar { height: @title-height; line-height: @title-height; padding-left: @content-left; background-color: @bg-secondary; border-bottom-width: 1px; border-bottom-color: @divider; }
+.title-text { font-size: @fs-title; color: @text-secondary; }
+.content { flex: 1; padding: @s6; padding-left: @content-left; flex-direction: column; }

@@ -1,67 +1,13 @@
-@import url('../../styles/theme.less');
-.dir-header {
-    flex-direction: row;
-    align-items: center;
-    padding: @s4 @s6;
-    background-color: @bg-secondary;
-    border-radius: @radius-panel;
-    margin-bottom: @s6;
-}
-.dir-path {
-    font-size: @fs-small;
-    color: @text-secondary;
-    flex: 1;
-}
-.nav-btn {
-    font-size: @fs-small;
-    color: @accent;
-    padding: @s2 @s4;
-    margin-right: @s2;
-}
-.list-item {
-    flex-direction: row;
-    align-items: center;
-    background-color: @card-overlay;
-    padding: @s4 @s6;
-    margin-bottom: @s2;
-    border-radius: @radius-panel;
-}
-.item-icon {
-    font-size: 16px;
-    margin-right: @s4;
-}
-.item-name {
-    font-size: @fs-body;
-    color: @text-primary;
-    flex: 1;
-}
-.item-size {
-    font-size: @fs-small;
-    color: @text-tertiary;
-}
-.quick-row {
-    flex-direction: row;
-    margin-bottom: @s6;
-    flex-wrap: wrap;
-}
-.quick-chip {
-    font-size: @fs-small;
-    color: @text-secondary;
-    background-color: @card-overlay;
-    padding: @s2 @s6;
-    margin-right: @s3;
-    margin-bottom: @s3;
-    border-radius: @radius-btn;
-}
-.quick-chip-on {
-    background-color: @accent;
-    color: @text-primary;
-}
-.empty {
-    align-items: center;
-    padding: @s12;
-}
-.empty-text {
-    font-size: @fs-body;
-    color: @text-tertiary;
-}
+@import '../../styles/theme.less';
+/* fileManager 骨架 */
+.app-root { flex: 1; flex-direction: row; background-color: @bg-primary; }
+.left-rail { width: @rail-width; flex-direction: column; align-items: center; padding-top: 6px; background-color: @bg-secondary; border-right-width: 1px; border-right-color: @divider; }
+.rail-item { align-items: center; margin-bottom: 10px; }
+.rail-icon { font-size: @fs-icon; color: @text-tertiary; margin-bottom: 2px; }
+.rail-icon-on { font-size: @fs-icon; color: @accent; margin-bottom: 2px; }
+.rail-label { font-size: @fs-small; color: @text-tertiary; }
+.rail-label-on { font-size: @fs-small; color: @accent; }
+.main-area { flex: 1; flex-direction: column; }
+.title-bar { height: @title-height; line-height: @title-height; padding-left: @content-left; background-color: @bg-secondary; border-bottom-width: 1px; border-bottom-color: @divider; }
+.title-text { font-size: @fs-title; color: @text-secondary; }
+.content { flex: 1; padding: @s6; padding-left: @content-left; flex-direction: column; }

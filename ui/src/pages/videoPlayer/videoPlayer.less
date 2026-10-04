@@ -1,93 +1,13 @@
-@import url('../../styles/theme.less');
-
-.video-placeholder {
-    background-color: #000;
-    height: 110px;
-    align-items: center;
-    justify-content: center;
-    border-radius: @radius-panel;
-    margin-bottom: @s6;
-}
-.ph-text {
-    color: @text-tertiary;
-    font-size: @fs-body;
-}
-.ph-video {
-    color: @success;
-    font-size: @fs-body;
-}
-.ctrl-row {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: @s6;
-}
-.ctrl-btn {
-    background-color: @card-overlay;
-    color: @text-primary;
-    font-size: 16px;
-    padding: @s4 @s6;
-    border-radius: @radius-btn;
-    margin: 0 @s2;
-}
-.ctrl-btn-big {
-    background-color: @accent;
-    padding: @s4 @s12;
-}
-.btn-row {
-    flex-direction: row;
-    margin-bottom: @s6;
-}
-.btn {
-    background-color: @accent;
-    color: @text-primary;
-    font-size: @fs-btn;
-    padding: @s3 @s6;
-    border-radius: @radius-btn;
-    margin-right: @s3;
-}
-.btn-sec {
-    background-color: @card-overlay;
-}
-.list-title {
-    font-size: @fs-small;
-    color: @text-secondary;
-    margin-bottom: @s3;
-}
-.list-item {
-    flex-direction: row;
-    align-items: center;
-    background-color: @card-overlay;
-    padding: @s3 @s6;
-    margin-bottom: @s2;
-    border-radius: @radius-panel;
-}
-.item-icon {
-    margin-right: @s4;
-}
-.item-name {
-    font-size: @fs-small;
-    color: @text-primary;
-    flex: 1;
-}
-.log-area {
-    background-color: rgba(0,0,0,0.4);
-    border-radius: @radius-panel;
-    padding: @s3 @s4;
-    margin-top: @s6;
-    height: 60px;
-}
-.log-line {
-    font-size: 8px;
-    color: #4fc3f7;
-    padding: 1px 0;
-}
-.state-chip {
-    font-size: @fs-small;
-    color: @text-primary;
-    padding: 1px 6px;
-    border-radius: 4px;
-    margin-left: @s4;
-}
-.state-playing { background-color: @success; }
-.state-stopped { background-color: @divider; }
+@import '../../styles/theme.less';
+/* videoPlayer 骨架 */
+.app-root { flex: 1; flex-direction: row; background-color: @bg-primary; }
+.left-rail { width: @rail-width; flex-direction: column; align-items: center; padding-top: 6px; background-color: @bg-secondary; border-right-width: 1px; border-right-color: @divider; }
+.rail-item { align-items: center; margin-bottom: 10px; }
+.rail-icon { font-size: @fs-icon; color: @text-tertiary; margin-bottom: 2px; }
+.rail-icon-on { font-size: @fs-icon; color: @accent; margin-bottom: 2px; }
+.rail-label { font-size: @fs-small; color: @text-tertiary; }
+.rail-label-on { font-size: @fs-small; color: @accent; }
+.main-area { flex: 1; flex-direction: column; }
+.title-bar { height: @title-height; line-height: @title-height; padding-left: @content-left; background-color: @bg-secondary; border-bottom-width: 1px; border-bottom-color: @divider; }
+.title-text { font-size: @fs-title; color: @text-secondary; }
+.content { flex: 1; padding: @s6; padding-left: @content-left; flex-direction: column; }
