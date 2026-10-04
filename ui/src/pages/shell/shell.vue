@@ -1,47 +1,53 @@
+<!--
+ Copyright (C) 2025 Langning Chen
+ 
+ This file is part of miniapp.
+ 
+ miniapp is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ 
+ miniapp is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ 
+ You should have received a copy of the GNU General Public License
+ along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
+-->
+
 <template>
-    <div class="app-root">
-        <div class="left-rail">
-            <text v-for="(r, i) in rail" :key="i" class="rail-item" @click="open(r.page)">
-                <text class="rail-icon">{{ r.icon }}</text>
-                <text class="rail-label">{{ r.label }}</text>
-            </text>
-            <text class="rail-item" style="flex:1"></text>
-            <text class="rail-item" @click="open('settings')">
-                <text class="rail-icon">⚙️</text>
-                <text class="rail-label">设置</text>
-            </text>
+  <div class="container">
+    <div class="terminal-content">
+      <scroller 
+        class="terminal-scroller"
+        ref="scroller"
+        scroll-direction="vertical"
+        :show-scrollbar="true"
+      >
+        <div v-for="line in terminalLines" :key="line.id" class="terminal-line">
+          <text :class="['line-text', line.type]">{{ line.content }}</text>
         </div>
-        <div class="main-area">
-            <div class="title-bar"><text class="title-text">Shell 终端</text></div>
-            <div class="content">
-                <div class="status" style="margin-bottom:@s4;">
-                    <div :class="shellInitialized ? 'status-dot status-dot-on' : 'status-dot status-dot-off'"></div>
-                    <text class="status-text">{{ shellInitialized ? '就绪' : '初始化中' }} · cwd: {{ cwd }}</text>
-                </div>
-                <div class="terminal-wrap">
-                    <scroller class="terminal" scroll-direction="vertical" :show-scrollbar="false">
-                        <div v-for="line in lines" :key="line.key" class="line">
-                            <text :class="'line-' + line.type">{{ line.text }}</text>
-                        </div>
-                    </scroller>
-                    <div class="prompt-row">
-                        <text class="prompt">{{ currentPrompt }}</text>
-                        <text class="input-hint" v-if="!shellInitialized">Shell 未就绪</text>
-                        <text class="input-hint" v-else>点击下方命令执行</text>
-                    </div>
-                </div>
-                <div class="quick-row">
-                    <text class="quick-chip" @click="useExample('help')">help</text>
-                    <text class="quick-chip" @click="useExample('ls -la')">ls -la</text>
-                    <text class="quick-chip" @click="useExample('pwd')">pwd</text>
-                    <text class="quick-chip" @click="useExample('cat /proc/meminfo | head -3')">mem</text>
-                    <text class="quick-chip" @click="useExample('echo hello')">echo</text>
-                    <text class="quick-chip" @click="useExample('df -h')">df -h</text>
-                    <text class="quick-chip" @click="useExample('ps | head -5')">ps</text>
-                </div>
-            </div>
+        
+        <div class="command-prompt">
+          <text class="prompt">{{ currentDir }} $</text>
+          <text class="input-display">{{ inputText }}</text>
+          <text v-if="!isExecuting" class="cursor">█</text>
+          <text v-else class="loading">⌛</text>
         </div>
+      </scroller>
     </div>
+
+    <div class="input-section">
+      <div class="input-container" @click="openKeyboard">
+        <text class="input-placeholder" v-if="!inputText">点击输入命令...</text>
+        <text class="input-text" v-else>{{ inputText }}</text>
+      </div>
+      <text class="btn btn-execute" @click="executeCommand">发送</text>
+      <text class="btn btn-clear" @click="clearTerminal">清空</text>
+    </div>
+  </div>
 </template>
 
 <style lang="less" scoped>
@@ -49,6 +55,6 @@
 </style>
 
 <script>
-import shellPage from './shell';
-export default shellPage;
+import shell from './shell';
+export default shell;
 </script>

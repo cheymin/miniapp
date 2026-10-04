@@ -1,0 +1,116 @@
+.container {
+    flex: 1;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+}
+
+.display {
+    background-color: #2c2c2c;
+    padding: 10px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.expression {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+    text-align: right;
+    max-width: 100%;
+}
+
+.result {
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: bold;
+    word-wrap: break-word;
+    text-align: right;
+    max-width: 100%;
+}
+
+.keypad {
+    background-color: #d4d4d4;
+    padding: 5px;
+}
+
+.key-row {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.key {
+    width: 38px;
+    height: 38px;
+    border-radius: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.key:active {
+    opacity: 0.7;
+}
+
+.key-number {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.key-operator {
+    background-color: #FF9500;
+    color: #ffffff;
+}
+
+.key-function {
+    background-color: #a5a5a5;
+    color: #000000;
+}
+
+.key-equals {
+    background-color: #FF9500;
+    color: #ffffff;
+}
+
+.history-section {
+    flex: 1;
+    background-color: #ffffff;
+    margin-top: 5px;
+    padding: 8px;
+}
+
+.history-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.history-list {
+    flex: 1;
+}
+
+.history-item {
+    padding: 8px;
+    border-bottom-width: 1px;
+    border-bottom-color: #eee;
+}
+
+.history-expression {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 3px;
+}
+
+.history-result {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}

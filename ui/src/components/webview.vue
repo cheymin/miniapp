@@ -1,5 +1,5 @@
 <script>
-import { openSoftKeyboard } from '../utils/softKeyboardUtils';
+import { openKeyboard } from '../utils/softKeyboardUtils';
 
 export default {
   name: 'HtmlView',
@@ -309,7 +309,7 @@ export default {
     },
     onInputClick(node) {
       const attrs = node.attrs || (node.attrs = {});
-      openSoftKeyboard(
+      openKeyboard(
         () => attrs.value || '',
         (value) => {
           attrs.value = value;

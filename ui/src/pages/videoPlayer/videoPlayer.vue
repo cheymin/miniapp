@@ -1,40 +1,96 @@
+<!--
+ Copyright (C) 2025 Langning Chen
+ 
+ This file is part of miniapp.
+ 
+ miniapp is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ 
+ miniapp is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ 
+ You should have received a copy of the GNU General Public License
+ along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
+-->
+
 <template>
-    <div class="app-root">
-        <div class="left-rail">
-            <text v-for="(r, i) in rail" :key="i" class="rail-item" @click="open(r.page)">
-                <text :class="activeKey === r.page ? 'rail-icon rail-icon-on' : 'rail-icon'">{{ r.icon }}</text>
-                <text :class="activeKey === r.page ? 'rail-label rail-label-on' : 'rail-label'">{{ r.label }}</text>
-            </text>
-            <text class="rail-item" style="flex:1"></text>
-            <text class="rail-item" @click="open('settings')">
-                <text class="rail-icon">⚙️</text><text class="rail-label">设置</text>
-            </text>
+    <div class="container">
+        <div class="header">
+            <text class="title">视频播放器</text>
         </div>
-        <div class="main-area">
-            <div class="title-bar"><text class="title-text">视频播放</text></div>
-            <div class="content">
-                <div class="video-placeholder">
-                    <text v-if="!isPlaying" class="ph-text">{{ useNative ? '⏸ 等待播放' : '⚠ Shell 模式 (ffplay)' }}</text>
-                    <text v-else class="ph-video">🎬 播放中</text>
-                </div>
-                <div class="btn-row">
-                    <text class="btn" @click="playVideo">▶ 播放</text>
-                    <text class="btn btn-sec" @click="togglePause">{{ isPlaying ? '⏸' : '▶' }}</text>
-                    <text class="btn btn-sec" @click="stopVideo">⏹ 停止</text>
-                    <text class="btn btn-sec" @click="openFileMgr">📁 选文件</text>
-                </div>
-                <text class="list-title">视频列表 ({{ playlist.length }})</text>
-                <div v-for="(v, i) in playlist.slice(0, 8)" :key="i" class="list-item" @click="selectVideo(i)">
-                    <text class="item-icon">🎬</text>
-                    <text class="item-name">{{ v.name }}</text>
-                </div>
-                <div v-if="playlist.length === 0" class="list-item">
-                    <text class="item-name">（未找到视频）</text>
-                </div>
-                <div class="log-area">
-                    <div v-for="(l, i) in logs" :key="i" class="log-line">{{ l }}</div>
-                </div>
+
+        <div class="player-section">
+            <text class="section-title">播放方式</text>
+            
+            <div class="mode-buttons">
+                <text 
+                    class="mode-btn" 
+                    :class="{ active: playMode === 'ffplay' }"
+                    @click="selectPlayMode('ffplay')">
+                    FFplay播放器
+                </text>
+                <text 
+                    class="mode-btn" 
+                    :class="{ active: playMode === 'mpv' }"
+                    @click="selectPlayMode('mpv')">
+                    MPV播放器
+                </text>
+                <text 
+                    class="mode-btn" 
+                    :class="{ active: playMode === 'vlc' }"
+                    @click="selectPlayMode('vlc')">
+                    VLC播放器
+                </text>
             </div>
+        </div>
+
+        <div class="video-section">
+            <text class="section-title">视频文件</text>
+            
+            <div class="current-video" v-if="currentVideo">
+                <text class="video-name">{{ videoName }}</text>
+                <text class="video-path">{{ currentVideo }}</text>
+            </div>
+            
+            <div class="no-video" v-else>
+                <text class="no-video-text">未选择视频文件</text>
+            </div>
+
+            <div class="action-buttons">
+                <text class="action-btn" @click="selectVideoFile">选择视频</text>
+                <text class="action-btn" @click="scanVideos">扫描视频</text>
+            </div>
+        </div>
+
+        <div class="playlist-section" v-if="playlist.length > 0">
+            <text class="section-title">播放列表 ({{ playlist.length }})</text>
+            
+            <scroller class="playlist-scroller" scroll-direction="vertical">
+                <div 
+                    v-for="(video, index) in playlist" 
+                    :key="index"
+                    class="playlist-item"
+                    @click="selectVideo(index)">
+                    <text class="item-name">{{ video.name }}</text>
+                    <text class="item-path">{{ video.path }}</text>
+                </div>
+            </scroller>
+        </div>
+
+        <div class="control-section">
+            <div class="control-buttons">
+                <text class="control-btn" @click="playVideo">▶ 播放</text>
+                <text class="control-btn" @click="stopVideo">⏹ 停止</text>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <text class="info-text">当前模式: {{ playModeText }}</text>
+            <text class="info-text">支持格式: MP4, AVI, MKV, MOV, FLV, WMV</text>
         </div>
     </div>
 </template>
