@@ -1,90 +1,118 @@
 @import '../../styles/theme.less';
-/* 首页样式 — 320×240 横屏 */
 
-/* 骨架（每页都一样） */
-.app-root {
+.home-root {
     flex: 1;
-    flex-direction: row;
+    flex-direction: column;
     background-color: @bg-primary;
 }
-.left-rail {
-    width: @rail-width;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 6px;
-    background-color: @bg-secondary;
-    border-right-width: 1px;
-    border-right-color: @divider;
-}
-.rail-item {
-    align-items: center;
-    margin-bottom: 10px;
-}
-.rail-icon {
-    font-size: @fs-icon;
-    color: @text-tertiary;
-    margin-bottom: 2px;
-}
-.rail-label {
-    font-size: @fs-small;
-    color: @text-tertiary;
-}
-.main-area {
+
+/* === 锁屏 === */
+.lock-screen {
     flex: 1;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.title-bar {
-    height: @title-height;
-    line-height: @title-height;
-    padding-left: @content-left;
-    background-color: @bg-secondary;
-    border-bottom-width: 1px;
-    border-bottom-color: @divider;
+.lock-time {
+    font-size: 72px;
+    color: @text-primary;
+    margin-top: 10px;
 }
-.title-text {
-    font-size: @fs-title;
+.lock-date-row {
+    flex-direction: row;
+    margin-top: 2px;
+    align-items: center;
+}
+.lock-date {
+    font-size: 12px;
     color: @text-secondary;
 }
-.title-version {
-    font-size: @fs-small;
+.lock-version {
+    font-size: 9px;
     color: @text-tertiary;
-    padding-left: 4px;
+    margin-left: 8px;
 }
-.content {
-    flex: 1;
-    padding: @s6;
-    padding-left: @content-left;
-}
-
-/* 首页特有 */
-.card-row {
-    flex-direction: row;
-    margin-bottom: 6px;
-}
-.home-card {
-    flex: 1;
-    background-color: @card-overlay;
-    border-radius: @radius-card;
-    padding: 10px 6px;
+.lock-swipe {
+    flex-direction: column;
     align-items: center;
-    margin-right: 5px;
+    margin-top: 40px;
 }
-.home-card-on {
-    background-color: @accent;
-}
-.single-card {
-    margin-right: 0;
-}
-.home-card-icon {
+.swipe-icon {
     font-size: 22px;
-    margin-bottom: 4px;
+    color: @accent;
 }
-.home-card-label {
-    font-size: @fs-body;
-    color: @text-primary;
-}
-.home-card-desc {
-    font-size: @fs-small;
+.swipe-hint {
+    font-size: 9px;
     color: @text-tertiary;
     margin-top: 2px;
+}
+
+/* === 应用态 === */
+.app-screen {
+    flex: 1;
+    flex-direction: column;
+    padding: 6px;
+}
+
+/* 状态栏 */
+.status-bar {
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 4px;
+    border-bottom-width: 1px;
+    border-bottom-color: @divider;
+    margin-bottom: 8px;
+}
+.status-time {
+    font-size: 14px;
+    color: @text-primary;
+}
+.status-date {
+    font-size: 9px;
+    color: @text-secondary;
+    margin-left: 8px;
+}
+.status-version {
+    font-size: 8px;
+    color: @text-tertiary;
+    margin-left: auto;
+}
+
+/* 应用行（每行3个） */
+.app-row {
+    flex-direction: row;
+    margin-bottom: 4px;
+}
+.app-tile {
+    flex: 1;
+    align-items: center;
+    padding: 6px 0;
+}
+.app-icon {
+    font-size: 36px;
+    margin-bottom: 3px;
+}
+.app-name {
+    font-size: 10px;
+    color: @text-primary;
+    text-align: center;
+}
+
+/* 底部 */
+.app-footer {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 4px;
+    border-top-width: 1px;
+    border-top-color: @divider;
+    margin-top: auto;
+}
+.footer-hint {
+    font-size: 8px;
+    color: @text-tertiary;
+}
+.footer-settings {
+    font-size: 10px;
+    color: @accent;
+    margin-left: auto;
 }
