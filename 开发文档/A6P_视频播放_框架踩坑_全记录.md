@@ -63,6 +63,11 @@
 7. **页面基类可选**: 简单页面只要 .vue，复杂页面可加 .js 写 `class PageXxx extends BasePage { onLoad() { this.setRootComponent(VueComponent) } }`
 
 ### ❌ 绝对不能做的事
+0. **❌❌❌ 不要在模块顶层写 `await`！QuickJS ES 模块不支持顶层 await！**
+   - 错误示范: `let m = await import('global');` 写在 .js 模块顶层 → **整个 App 加载就炸 → 黑屏！**
+   - 正确做法: 包进函数里懒加载 `async function getM() { return await import('global'); }`
+   - player.js 原封不动是因为它的 `await import('player')` 在函数内部！
+   - 所有原生模块动态 import 都必须在函数体内！
 1. **不要 flex-wrap**: Falcon 不支持！手动拆 row
 2. **不要 position: fixed**: Falcon 不支持
 3. **不要组件嵌套**: `<PageShell><slot>` → 整页 JS 炸！所有 template 平铺
