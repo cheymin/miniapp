@@ -1,25 +1,42 @@
 // video-player 播放器服务层
 //
-// 优先方案：import('mediaPlayer')  —— 官方播放器 miniapp (appid 8001650599023931) 提供
-//   模块名来自 mediaPlayerManager-37158e14.js.bin strings:
-//     import('mediaPlayer')
-//     MediaPlayer* getMediaPlayerManager()
-//   依赖 SO：
-//     libjsapi_mediaplayer.so (626KB, JS 桥接层)
-//     libbusiness_mediaplayer.so (834KB, 实际播放实现)
+// 诊断思路：Falcon 模块加载器 (QJSModuleExtension) 用 registerCModuleLoader/registerModuleLoader 注册
+//   custom_init_jsapis() 在 SO dlopen 时被调用 → registerCModuleLoader("player", ...) 注册
+//   import('player') 时查注册表 → 调 load 函数
+// 失败可能：SO 根本没被 dlopen → 注册没发生 → 全部 NOT LOAD
+//   原因 A：平台子目录不对（arm-pear vs arm-coco 等）
+//   原因 B：DT_NEEDED 缺库导致 dlopen 失败
+//   原因 C：SO 签名/校验失败
 //
-// 备选方案：import('player')  —— PenBili 自编译的通用 ffmpeg 播放器
-//
-// 诊断重点：probe() 返回每个模块名的详细错误对象，index.vue 把全部错误显示在 UI 上
+// 本文件 probe() 做全面扫描：
+//   1) Falcon 内置模块（$falcon / $jsapi / 无 $ 前缀）— 确认 import 机制通
+//   2) 第三方 SO 导出的模块名（mediaPlayer / player / ...）
+//   3) $jsapi/xxx 路径形式
 
-// 候选模块名列表（按优先级排序）
-// 可能的 Falcon QuickJS 模块解析规则：大小写敏感、名称必须匹配 so 导出的 JS 模块名
-const MODULE_CANDIDATES = [
-  'mediaPlayer',     // strings: import('mediaPlayer')
-  'mediaplayer',     // 小写兜底
-  'MediaPlayer',     // 大写兜底
-  'player',          // PenBili
-  'Player'           // PenBili 大写兜底
+// 分三类：内置模块、第三方 SO、$jsapi 路径
+const BUILTIN_CANDIDATES = [
+  '$falcon', 'falcon', 'Falcon',
+  '$jsapi', 'jsapi', 'JSAPI',
+  '$system', 'system',
+  '$app', 'app'
+];
+
+const SO_CANDIDATES = [
+  'mediaPlayer', 'mediaplayer', 'MediaPlayer',
+  'player', 'Player',
+  'biliio', 'BiliIO',   // PenBili 可能也带了 biliio SO
+  'httpjson'
+];
+
+const JSAPI_PATH_CANDIDATES = [
+  '$jsapi/mediaPlayer', '$jsapi/mediaplayer',
+  '$jsapi/player',
+  '$jsapi/biliio',
+  '$jsapi/shell', '$jsapi/Shell',
+  '$jsapi/system',
+  '$jsapi/media',
+  '$falcon/jsapi/mediaPlayer',
+  '$falcon/jsapi/player'
 ];
 
 let cachedResult = null;   // probe 缓存 { success, module, manager, moduleName, errors: { [name]: error } }
@@ -54,13 +71,14 @@ export function stringifyError(e) {
 }
 
 /**
- * 探测所有候选模块
+ * 探测所有候选模块（三类都扫）
  * @returns {Promise<{
  *   success: boolean,
  *   moduleName: string|null,
  *   module: any,
  *   manager: any,
  *   errors: { [moduleName]: string }   // 每个候选模块的错误详情
+ *   triedBuiltin: Set<string>, triedSO: Set<string>, triedPath: Set<string>
  * }>}
  */
 export async function probe() {
@@ -68,63 +86,52 @@ export async function probe() {
   tried = true;
 
   const errors = {};
-  let found = null;   // { module, manager, moduleName }
+  let found = null;
 
-  for (const name of MODULE_CANDIDATES) {
+  // 把三类合并成一个大数组，带上类别标签
+  const all = [
+    ...BUILTIN_CANDIDATES.map(n => ({ name: n, kind: 'builtin' })),
+    ...SO_CANDIDATES.map(n => ({ name: n, kind: 'so' })),
+    ...JSAPI_PATH_CANDIDATES.map(n => ({ name: n, kind: 'path' })),
+  ];
+
+  for (const { name, kind } of all) {
     try {
       const m = await import(name);
-      if (!m) { errors[name] = 'import 返回空值'; continue; }
+      if (!m) { errors[name] = '[空值]'; continue; }
 
-      // module 对象可能挂在 m 上或 m.default 上
       let mod = m;
-      // 如果有 default 且 default 是 object（非 constructor），优先 default
       if (m.default && typeof m.default === 'object' && !Array.isArray(m.default)) {
         mod = m.default;
       }
 
-      // 检查 mod 是否真有可用内容
-      const keys = Object.getOwnPropertyNames(mod).filter(k =>
-        k !== 'constructor' && typeof mod[k] !== 'function'
-      );
       const fnKeys = Object.getOwnPropertyNames(mod).filter(k => typeof mod[k] === 'function');
+      const allKeys = Object.getOwnPropertyNames(mod);
 
-      if (fnKeys.length === 0 && keys.length === 0) {
-        errors[name] = 'import 成功但返回空对象';
+      // 如果只有 default 一个属性且没有其他函数，跳过
+      if (fnKeys.length === 0 && allKeys.length <= 2) {
+        errors[name] = 'import 成功但返回空模块: keys=' + JSON.stringify(allKeys);
+        // 内置模块即使空也要记下来（说明 import 语法本身是通的）
         continue;
       }
 
       let manager = null;
-
-      // mediaPlayer 类：调 getMediaPlayerManager()
       if (/media/i.test(name)) {
-        // 尝试多种获取 manager 的方式
         const tryGet = (obj) => {
           if (!obj) return null;
-          if (typeof obj.getMediaPlayerManager === 'function') {
-            return obj.getMediaPlayerManager();
-          }
-          // manager 也可能直接挂在 module 上
-          if (obj.MediaPlayer && typeof obj.MediaPlayer.getMediaPlayerManager === 'function') {
+          if (typeof obj.getMediaPlayerManager === 'function') return obj.getMediaPlayerManager();
+          if (obj.MediaPlayer && typeof obj.MediaPlayer.getMediaPlayerManager === 'function')
             return obj.MediaPlayer.getMediaPlayerManager();
-          }
-          if (obj.mediaPlayer && typeof obj.mediaPlayer.getMediaPlayerManager === 'function') {
+          if (obj.mediaPlayer && typeof obj.mediaPlayer.getMediaPlayerManager === 'function')
             return obj.mediaPlayer.getMediaPlayerManager();
-          }
-          // 也可能 manager 本身就是一个全局单例
-          if (obj.default && typeof obj.default.getMediaPlayerManager === 'function') {
+          if (obj.default && typeof obj.default.getMediaPlayerManager === 'function')
             return obj.default.getMediaPlayerManager();
-          }
           return null;
         };
-
-        try {
-          manager = tryGet(mod) || tryGet(m) || tryGet(m.default);
-        } catch (e) {
-          errors[name + '.getMediaPlayerManager'] = stringifyError(e);
-        }
+        try { manager = tryGet(mod) || tryGet(m) || tryGet(m.default); } catch (_) {}
       }
 
-      found = { module: mod, manager, moduleName: name };
+      found = { module: mod, manager, moduleName: name, kind };
       break;
 
     } catch (e) {

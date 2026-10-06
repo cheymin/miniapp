@@ -9,8 +9,8 @@
   },
   "cert": {
     "app.js.bin": {
-      "size": 15821,
-      "md5": "e1765acb4d67abf65b18fb36e9c55aa4"
+      "size": 16426,
+      "md5": "a8505065ca3054dd14a30bb0afb4619c"
     },
     "assets/app_icon.png": {
       "size": 4939,
@@ -24,13 +24,25 @@
       "size": 626564,
       "md5": "8634337c12818ba0072625ee0243593a"
     },
+    "libs/libjsapi_player.so": {
+      "size": 35676,
+      "md5": "a47431d48d55303908b2019d21b24f7f"
+    },
     "libs/arm-pear/libbusiness_mediaplayer.so": {
       "size": 833748,
       "md5": "a0bfebe67103604eaec75077c452ccc5"
     },
+    "libs/arm-pear/libjsapi_httpjson.so": {
+      "size": 15024,
+      "md5": "c3fec7b2d507564fe188870fa2f9155c"
+    },
     "libs/arm-pear/libjsapi_mediaplayer.so": {
       "size": 626564,
       "md5": "8634337c12818ba0072625ee0243593a"
+    },
+    "libs/arm-pear/libjsapi_player.so": {
+      "size": 35676,
+      "md5": "a47431d48d55303908b2019d21b24f7f"
     }
   }
 }
