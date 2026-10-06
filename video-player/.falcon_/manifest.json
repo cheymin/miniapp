@@ -8,17 +8,21 @@
     "bigNum": false
   },
   "cert": {
-    "app.js.bin": {
-      "size": 12853,
-      "md5": "ef15d28cfbc938b85cfa2434496efc4f"
+    "app.js": {
+      "size": 22280,
+      "md5": "db3c43ca40e69620f7f324276f4278ab"
     },
     "assets/app_icon.png": {
       "size": 4939,
       "md5": "f6d6bff7997bbba1e4925d225bba0236"
     },
-    "libs/libjsapi_player.so": {
-      "size": 35676,
-      "md5": "a47431d48d55303908b2019d21b24f7f"
+    "libs/libbusiness_mediaplayer.so": {
+      "size": 833748,
+      "md5": "a0bfebe67103604eaec75077c452ccc5"
+    },
+    "libs/libjsapi_mediaplayer.so": {
+      "size": 626564,
+      "md5": "8634337c12818ba0072625ee0243593a"
     }
   }
 }
