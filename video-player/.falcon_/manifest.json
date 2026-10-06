@@ -1,0 +1,24 @@
+{
+  "appName": "VidPlayer",
+  "version": "1.0.0",
+  "appid": "8002026091900100",
+  "icon": "app_icon.png",
+  "quickjs": {
+    "version": "20200705",
+    "bigNum": false
+  },
+  "cert": {
+    "app.js.bin": {
+      "size": 12853,
+      "md5": "ef15d28cfbc938b85cfa2434496efc4f"
+    },
+    "assets/app_icon.png": {
+      "size": 4939,
+      "md5": "f6d6bff7997bbba1e4925d225bba0236"
+    },
+    "libs/libjsapi_player.so": {
+      "size": 35676,
+      "md5": "a47431d48d55303908b2019d21b24f7f"
+    }
+  }
+}

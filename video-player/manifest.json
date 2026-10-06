@@ -1,0 +1,10 @@
+{
+  "appName": "VidPlayer",
+  "version": "1.0.0",
+  "appid": "8002026091900100",
+  "icon": "assets/app_icon.png",
+  "quickjs": {
+    "version": "20200705",
+    "bigNum": false
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "vid-player",
+  "appName": "VidPlayer",
+  "appid": "8002026091900100",
+  "version": "1.0.0",
+  "icon": "assets/app_icon.png",
+  "description": "A6P 词典笔视频播放器 — 基于 PenBili libjsapi_player.so",
+  "quickjs": {
+    "version": "20200705",
+    "bigNum": false
+  },
+  "single-js-bundle": false,
+  "scripts": {
+    "build": "aiot-vue-cli build -q -p",
+    "build:dev": "aiot-vue-cli build",
+    "build:prod": "aiot-vue-cli build -c -q -p"
+  },
+  "dependencies": {
+    "falcon-ui": "1.0.3"
+  },
+  "devDependencies": {
+    "aiot-vue-cli": "^1.0.32"
+  }
+}
