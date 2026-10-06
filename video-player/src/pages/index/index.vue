@@ -1,52 +1,47 @@
 <template>
   <div class="page">
-    <!-- 左栏：品牌 + 控制 + 诊断 -->
+    <!-- 左栏：探测 + 控制 -->
     <div class="bar">
       <text class="brand">VidPlayer</text>
-      <text class="sub">A6P · 320×240</text>
+      <text class="sub">A6P 诊断版 · 800×600</text>
 
-      <!-- 模块诊断 -->
-      <text class="diag-title">模块探测</text>
-      <text class="diag-line">模块: {{ moduleName || '探测中...' }}</text>
-      <text class="diag-line">manager: {{ managerOk ? '✓ 已获取' : '— 无' }}</text>
+      <!-- 探测结果 -->
+      <text class="diag-title">① 模块探测</text>
+      <text class="diag-line">状态: {{ probeState }}</text>
+      <text class="diag-line">模块: {{ result.moduleName || '未找到' }}</text>
+      <text class="diag-line">manager: {{ result.manager ? '✓ 已获取' : '— 无' }}</text>
 
-      <!-- 操作按钮 -->
       <div class="btn-row">
         <div class="btn btn-ctrl" @click="onProbeAgain">
           <text class="btn-text">重新探测</text>
         </div>
       </div>
 
-      <!-- 播放控制区 -->
-      <text class="diag-title">播放控制</text>
+      <!-- 播放控制 -->
+      <text class="diag-title">② 播放控制</text>
       <div class="btn-row">
         <div :class="playing ? 'btn btn-stop' : 'btn btn-play'" @click="onTogglePlay">
           <text class="btn-text">{{ playing ? '停止' : '播放' }}</text>
         </div>
       </div>
-      <div class="btn-row">
+      <div v-if="playing" class="btn-row">
         <div class="btn btn-ctrl" @click="onPauseResume">
           <text class="btn-text">{{ paused ? '继续' : '暂停' }}</text>
         </div>
       </div>
 
-      <!-- 状态显示 -->
-      <text v-if="playing || currentState" class="diag-line">
-        状态: {{ currentState }} · {{ timeText }}
-      </text>
-      <text v-if="errorMsg" class="diag-line diag-error">{{ errorMsg }}</text>
-
-      <!-- 可用 API 列表 -->
-      <text class="diag-title">可用 API</text>
-      <scroller class="api-scroll" scroll-y="true">
-        <text class="api-head">{{ apiList.module ? 'module (' + apiList.module.length + ')' : '' }}</text>
+      <!-- API 列表 -->
+      <text class="diag-title">③ 可用 API</text>
+      <scroller class="api-scroll" scroll-y="true" scroll-into-view="api-bottom">
+        <text class="api-head">module ({{ apiList.module.length }})</text>
         <text v-for="fn in apiList.module" :key="'m' + fn" class="api-item">{{ fn }}</text>
-        <text class="api-head">{{ apiList.manager ? 'manager (' + apiList.manager.length + ')' : '' }}</text>
-        <text v-for="fn in apiList.manager" :key="'g' + fn" class="api-item api-item-m">{{ fn }}</text>
+        <text class="api-head">manager ({{ apiList.manager.length }})</text>
+        <text v-for="fn in apiList.manager" :key="'g' + fn" class="api-item api-m">{{ fn }}</text>
+        <text id="api-bottom" class="api-bottom"></text>
       </scroller>
     </div>
 
-    <!-- 右栏：日志输出 + URL -->
+    <!-- 右栏：URL + 完整错误日志 -->
     <div class="right-col">
       <text class="diag-title">视频地址</text>
       <div class="input-wrap">
@@ -54,15 +49,29 @@
           class="url-input"
           :value="url"
           @input="onUrlInput"
-          placeholder="http://.../path.mp4 或 /local/file"
+          placeholder="http://... 或 /local/file"
         />
       </div>
 
-      <text class="diag-title">console 日志</text>
-      <scroller class="log-scroll" scroll-y="true">
-        <text v-for="(line, i) in logs" :key="'l' + i" class="log-line" :class="{ 'log-err': line.err, 'log-ok': line.ok }">
+      <!-- 每个模块的 import() 错误详情 —— 这是关键！ -->
+      <text class="diag-title">④ 每个模块的 import() 错误</text>
+      <scroller class="err-scroll" scroll-y="true" scroll-into-view="err-bottom">
+        <div v-for="(msg, name) in result.errors" :key="'e' + name" class="err-block">
+          <text class="err-name">❌ import('{{ name }}') 失败</text>
+          <text class="err-msg">{{ msg }}</text>
+        </div>
+        <text v-if="!hasAnyError" class="err-none">全部 import() 成功</text>
+        <text id="err-bottom" class="err-bottom"></text>
+      </scroller>
+
+      <!-- 操作日志 -->
+      <text class="diag-title">⑤ 操作日志</text>
+      <scroller class="log-scroll" scroll-y="true" scroll-into-view="log-bottom">
+        <text v-for="(line, i) in logs" :key="'l' + i"
+              :class="'log-line ' + (line.err ? 'log-err' : line.ok ? 'log-ok' : 'log-info')">
           {{ line.text }}
         </text>
+        <text id="log-bottom" class="log-bottom"></text>
       </scroller>
     </div>
   </div>
@@ -71,14 +80,15 @@
 <script>
 import {
   probe, resetCache,
-  getModuleName, getManager,
   getAvailableApiList,
   play, pause as doPause, stop as doStop, resume as doResume,
   getPlayState, getCurrentPos, getDuration,
-  formatTime
+  formatTime, stringifyError
 } from '../../services/player.js';
 
-// 逻辑画布 800×600（A6P 物理 320×240，2.5x 缩放）
+// 把 stringifyError 也导进来用
+import * as playerMod from '../../services/player.js';
+
 const DESIGN_WIDTH = 800;
 const DESIGN_HEIGHT = 600;
 
@@ -89,124 +99,105 @@ export default {
       playing: false,
       paused: false,
       currentState: '',
-      moduleName: '',
-      managerOk: false,
+      currentPos: 0,
+      durationMs: 0,
+      result: { success: false, moduleName: null, manager: null, errors: {} },
       apiList: { module: [], manager: [] },
+      probeState: '点击重新探测',
       logs: [],
       pollToken: null
     };
   },
 
   computed: {
-    timeText() {
-      return formatTime(this.currentPos) + ' / ' + formatTime(this.durationMs);
+    hasAnyError() {
+      const e = this.result.errors;
+      return e && Object.keys(e).length > 0;
     }
   },
 
   onLoad() {
-    // monkey-patch console 收集日志到 UI
-    const self = this;
-    this._origLog = console.log;
-    this._origWarn = console.warn;
-    this._origErr = console.error;
-    console.log = function () {
-      self._pushLog(Array.prototype.slice.call(arguments).join(' '), false, true);
-      self._origLog.apply(console, arguments);
-    };
-    console.warn = function () {
-      self._pushLog(Array.prototype.slice.call(arguments).join(' '), false, false);
-      self._origWarn.apply(console, arguments);
-    };
-    console.error = function () {
-      self._pushLog(Array.prototype.slice.call(arguments).join(' '), true, false);
-      self._origErr.apply(console, arguments);
-    };
-    this._pushLog('页面加载完成', false, true);
+    this._push('页面加载，开始模块探测...', false, true);
     this.onProbeAgain();
   },
 
   onUnload() {
     this.stopPoll();
-    console.log = this._origLog;
-    console.warn = this._origWarn;
-    console.error = this._origErr;
   },
 
   methods: {
-    _pushLog(text, err, ok) {
+    _push(text, err, ok) {
       this.logs.push({ text: String(text), err: !!err, ok: !!ok });
-      if (this.logs.length > 200) this.logs.shift();
+      if (this.logs.length > 300) this.logs.shift();
     },
 
     async onProbeAgain() {
+      this.probeState = '探测中...';
       resetCache();
-      this._pushLog('开始探测 mediaPlayer / player 模块...', false, false);
+      this._push('probe() 开始遍历候选模块...', false, false);
+
       const r = await probe();
-      if (r) {
-        this.moduleName = r.moduleName;
-        this.managerOk = !!r.manager;
-        this._pushLog('✅ 模块: ' + r.moduleName + (r.manager ? ' + manager' : ''), false, true);
+      this.result = r;
+
+      if (r.success) {
+        this.probeState = '✓ 成功';
+        this._push('✅ 找到模块: ' + r.moduleName + (r.manager ? ' + manager' : ''), false, true);
       } else {
-        this.moduleName = '无';
-        this.managerOk = false;
-        this._pushLog('❌ 所有模块加载失败', true, false);
+        this.probeState = '✗ 失败';
+        this._push('❌ 所有候选模块都 import() 失败', true, false);
+        // 把每个错误也打到操作日志里一份
+        for (const [name, err] of Object.entries(r.errors || {})) {
+          this._push('  import("' + name + '"): ' + err, true, false);
+        }
       }
+
       this.apiList = getAvailableApiList();
-      this._pushLog('module API: ' + (this.apiList.module || []).length + ' 个, manager API: ' + (this.apiList.manager || []).length + ' 个', false, false);
-      // 打印完整 API 列表到 console（沙箱看不到 UI 时能用 logcat 看到）
-      this._origLog('[VidPlayer] module APIs:', this.apiList.module);
-      this._origLog('[VidPlayer] manager APIs:', this.apiList.manager);
+      this._push('module API: ' + this.apiList.module.length + ' 个', false, false);
+      this._push('manager API: ' + this.apiList.manager.length + ' 个', false, false);
     },
 
     onUrlInput(e) {
-      this.url = e.detail && e.detail.value ? e.detail.value : e.value;
+      this.url = (e && e.detail && e.detail.value) || this.url;
     },
 
     async onTogglePlay() {
+      if (!this.result.success) {
+        this._push('⚠ 无可用模块，无法播放', true, false);
+        return;
+      }
       if (this.playing) {
-        this._pushLog('调 stop()...', false, false);
+        this._push('调 stop()...', false, false);
         const res = await doStop();
-        this._pushLog('stop 返回: ' + JSON.stringify(res), !!res.error, !res.error);
-        this.playing = false;
-        this.paused = false;
-        this.currentState = 'stopped';
+        this._push('stop() → ' + this._fmt(res), !!res.error, !res.error);
+        this.playing = false; this.paused = false;
         this.stopPoll();
       } else {
-        this._pushLog('调 play()...', false, false);
-        this._pushLog('URL: ' + this.url, false, false);
+        this._push('调 play() → URL: ' + this.url, false, false);
         const res = await play();
-        this._pushLog('play 返回: ' + JSON.stringify(res), !!res.error, !res.error);
+        this._push('play() → ' + this._fmt(res), !!res.error, !res.error);
         if (res.ok !== false) {
-          this.playing = true;
-          this.paused = false;
-          this.currentState = 'playing';
+          this.playing = true; this.paused = false;
           this.startPoll();
-        } else {
-          this.playing = false;
-          this.currentState = 'error: ' + (res.error || 'unknown');
         }
       }
     },
 
     async onPauseResume() {
       if (!this.playing) return;
-      if (this.paused) {
-        this._pushLog('调 resume()...', false, false);
-        const res = await doResume();
-        this._pushLog('resume 返回: ' + JSON.stringify(res), !!res.error, !res.error);
-        if (res.ok !== false) {
-          this.paused = false;
-          this.currentState = 'playing';
-        }
-      } else {
-        this._pushLog('调 pause()...', false, false);
-        const res = await doPause();
-        this._pushLog('pause 返回: ' + JSON.stringify(res), !!res.error, !res.error);
-        if (res.ok !== false) {
-          this.paused = true;
-          this.currentState = 'paused';
-        }
-      }
+      const res = this.paused ? await doResume() : await doPause();
+      this._push((this.paused ? 'resume()' : 'pause()') + ' → ' + this._fmt(res), !!res.error, !res.error);
+      if (res.ok !== false) this.paused = !this.paused;
+    },
+
+    _fmt(res) {
+      if (!res) return 'null';
+      const parts = [];
+      if ('ok' in res) parts.push('ok=' + res.ok);
+      if (res.fnUsed) parts.push('fn=' + res.fnUsed);
+      if (res.error) parts.push('err=' + res.error);
+      if (res.result !== undefined && typeof res.result !== 'object') parts.push('result=' + res.result);
+      if (res.result && typeof res.result === 'object') parts.push('result=' + JSON.stringify(res.result).slice(0, 200));
+      return parts.join(' | ');
     },
 
     startPoll() {
@@ -219,15 +210,11 @@ export default {
           if (s && s.result !== undefined) this.currentState = String(s.result);
           if (p && typeof p.result === 'number') this.currentPos = p.result;
           if (d && typeof d.result === 'number') this.durationMs = d.result;
-        } catch (e) { /* ignore */ }
+        } catch (e) {}
       }, 800);
     },
-
     stopPoll() {
-      if (this.pollToken) {
-        this.clearInterval(this.pollToken);
-        this.pollToken = null;
-      }
+      if (this.pollToken) { this.clearInterval(this.pollToken); this.pollToken = null; }
     }
   }
 };
@@ -237,155 +224,152 @@ export default {
 @import "var.less";
 
 .page {
-  display: flex;
-  width: 800px;
-  height: 600px;
+  flex-direction: row;
   background-color: @background-color;
 }
 
 .bar {
-  display: flex;
   flex-direction: column;
   width: 280px;
   height: 600px;
-  padding: 12px;
+  padding: 10px;
   background-color: @card-background-color;
 }
 
 .brand {
-  font-size: 28px;
+  font-size: 26px;
   color: @accent;
   font-weight: bold;
 }
 
 .sub {
   margin-top: 2px;
-  font-size: 11px;
+  font-size: 10px;
   color: @text-color-dim;
 }
 
 .diag-title {
-  margin-top: 12px;
-  font-size: 13px;
+  margin-top: 10px;
+  font-size: 12px;
   color: @accent;
 }
 
 .diag-line {
-  margin-top: 3px;
-  font-size: 12px;
+  margin-top: 2px;
+  font-size: 11px;
   color: @text-color-dim;
   lines: 2;
   text-overflow: ellipsis;
 }
 
-.diag-error {
-  color: @danger;
-}
-
-.btn-row {
-  margin-top: 6px;
-}
+.btn-row { margin-top: 5px; }
 
 .btn {
-  display: flex;
+  height: 32px;
+  border-radius: 4px;
   justify-content: center;
   align-items: center;
-  height: 36px;
-  border-radius: 4px;
 }
 
-.btn-play {
-  background-color: @accent;
-}
-
-.btn-stop {
-  background-color: #5a2847;
-}
-
-.btn-ctrl {
-  background-color: @background-color;
-}
+.btn-play { background-color: @accent; }
+.btn-stop { background-color: #5a2847; }
+.btn-ctrl { background-color: @background-color; }
 
 .btn-text {
-  font-size: 14px;
+  font-size: 13px;
   color: #ffffff;
   text-align: center;
 }
 
-.btn:active {
-  opacity: 0.7;
-}
+.btn:active { opacity: 0.7; }
 
 .api-scroll {
   width: 256px;
-  height: 200px;
-  margin-top: 6px;
-  background-color: @background-color;
+  height: 170px;
+  margin-top: 5px;
+  padding: 5px;
   border-radius: 4px;
-  padding: 6px;
+  background-color: @background-color;
 }
 
-.api-head {
-  font-size: 11px;
-  color: @accent;
-  margin-top: 4px;
-}
-
-.api-item {
-  font-size: 11px;
-  color: @text-color;
-  margin-top: 1px;
-}
-
-.api-item-m {
-  color: @accent;
-}
+.api-head { margin-top: 3px; font-size: 10px; color: @accent; }
+.api-item { margin-top: 1px; font-size: 10px; color: @text-color; }
+.api-m { color: @accent; }
+.api-bottom { height: 1px; }
 
 .right-col {
-  display: flex;
   flex-direction: column;
   width: 496px;
   height: 600px;
-  padding: 12px;
+  padding: 10px;
 }
 
 .input-wrap {
-  margin-top: 6px;
-  padding: 8px;
-  background-color: @card-background-color;
+  margin-top: 4px;
+  padding: 6px;
   border-radius: 4px;
+  background-color: @card-background-color;
 }
 
 .url-input {
-  width: 480px;
-  font-size: 14px;
+  width: 482px;
+  font-size: 13px;
   color: @text-color;
-  background-color: transparent;
 }
+
+.err-scroll {
+  width: 496px;
+  height: 130px;
+  margin-top: 4px;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: @card-background-color;
+}
+
+.err-block {
+  margin-top: 3px;
+  flex-direction: column;
+}
+
+.err-name {
+  font-size: 11px;
+  color: @danger;
+}
+
+.err-msg {
+  margin-top: 1px;
+  font-size: 10px;
+  color: @text-color;
+  lines: 3;
+  text-overflow: ellipsis;
+}
+
+.err-none {
+  font-size: 11px;
+  color: @accent;
+}
+
+.err-bottom { height: 1px; }
 
 .log-scroll {
   width: 496px;
-  height: 450px;
-  margin-top: 6px;
-  background-color: @card-background-color;
+  height: 340px;
+  margin-top: 4px;
+  padding: 5px;
   border-radius: 4px;
-  padding: 6px;
+  background-color: @card-background-color;
 }
 
 .log-line {
-  font-size: 11px;
-  color: @text-color;
+  font-size: 10px;
   font-family: monospace;
   margin-top: 1px;
   lines: 2;
   text-overflow: ellipsis;
 }
 
-.log-err {
-  color: @danger;
-}
-
-.log-ok {
-  color: @accent;
-}
+.log-info { color: @text-color; }
+.log-ok { color: @accent; }
+.log-err { color: @danger; }
+.log-bottom { height: 1px; }
 </style>

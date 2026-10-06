@@ -9,108 +9,160 @@
 //     libbusiness_mediaplayer.so (834KB, 实际播放实现)
 //
 // 备选方案：import('player')  —— PenBili 自编译的通用 ffmpeg 播放器
-//   模块名来自 PenBili src/services/player.js
-//   SO：libjsapi_player.so (35KB)
 //
-// 诊断能力：probe() 自动探测模块上所有函数，getAvailableApiList() 返回可用 API 列表
+// 诊断重点：probe() 返回每个模块名的详细错误对象，index.vue 把全部错误显示在 UI 上
 
-const MODULE_NAMES = ['mediaPlayer', 'player'];
+// 候选模块名列表（按优先级排序）
+// 可能的 Falcon QuickJS 模块解析规则：大小写敏感、名称必须匹配 so 导出的 JS 模块名
+const MODULE_CANDIDATES = [
+  'mediaPlayer',     // strings: import('mediaPlayer')
+  'mediaplayer',     // 小写兜底
+  'MediaPlayer',     // 大写兜底
+  'player',          // PenBili
+  'Player'           // PenBili 大写兜底
+];
 
-let cachedModule = null;       // 原生 module 对象（import 返回值）
-let cachedManager = null;      // getMediaPlayerManager() 返回的管理器实例
-let cachedModuleName = null;   // 实际加载成功的模块名
+let cachedResult = null;   // probe 缓存 { success, module, manager, moduleName, errors: { [name]: error } }
 let tried = false;
 
 export const PLAYER_STATE = {
-  IDLE: 'idle',
-  PLAYING: 'playing',
-  PAUSED: 'paused',
-  ENDED: 'ended',
-  ERROR: 'error',
-  UNKNOWN: 'unknown'
+  IDLE: 'idle', PLAYING: 'playing', PAUSED: 'paused',
+  ENDED: 'ended', ERROR: 'error', UNKNOWN: 'unknown'
 };
 
+// 把任意 error 转成可 JSON 化的字符串
+export function stringifyError(e) {
+  if (e == null) return 'null';
+  if (typeof e === 'string') return e;
+  const parts = [];
+  try {
+    if (e.name) parts.push('name=' + e.name);
+    if (e.message) parts.push('msg=' + e.message);
+    if (e.code !== undefined) parts.push('code=' + e.code);
+    if (e.stack) parts.push('stack=' + String(e.stack).split('\n')[0]);
+    // QuickJS 错误对象可能有额外属性
+    for (const k of Object.keys(e)) {
+      if (['name','message','stack','code'].indexOf(k) < 0) {
+        let v;
+        try { v = String(e[k]); } catch (_) { v = '[无法序列化]'; }
+        parts.push(k + '=' + v);
+      }
+    }
+  } catch (_) {}
+  const s = parts.join(' | ');
+  return s || String(e);
+}
+
 /**
- * 探测原生模块
- * 依次尝试 import('mediaPlayer') → import('player')
- * @returns {Promise<{ module: any, moduleName: string, manager: any }|null>}
+ * 探测所有候选模块
+ * @returns {Promise<{
+ *   success: boolean,
+ *   moduleName: string|null,
+ *   module: any,
+ *   manager: any,
+ *   errors: { [moduleName]: string }   // 每个候选模块的错误详情
+ * }>}
  */
 export async function probe() {
-  if (tried) return cachedModule ? {
-    module: cachedModule,
-    moduleName: cachedModuleName,
-    manager: cachedManager
-  } : null;
-
+  if (tried) return cachedResult;
   tried = true;
 
-  for (const name of MODULE_NAMES) {
+  const errors = {};
+  let found = null;   // { module, manager, moduleName }
+
+  for (const name of MODULE_CANDIDATES) {
     try {
       const m = await import(name);
-      const mod = (m && typeof m.open === 'function') ? m :
-                  (m && m.default && typeof m.default.open === 'function') ? m.default : m;
+      if (!m) { errors[name] = 'import 返回空值'; continue; }
 
-      if (!mod) continue;
+      // module 对象可能挂在 m 上或 m.default 上
+      let mod = m;
+      // 如果有 default 且 default 是 object（非 constructor），优先 default
+      if (m.default && typeof m.default === 'object' && !Array.isArray(m.default)) {
+        mod = m.default;
+      }
 
-      cachedModule = mod;
-      cachedModuleName = name;
+      // 检查 mod 是否真有可用内容
+      const keys = Object.getOwnPropertyNames(mod).filter(k =>
+        k !== 'constructor' && typeof mod[k] !== 'function'
+      );
+      const fnKeys = Object.getOwnPropertyNames(mod).filter(k => typeof mod[k] === 'function');
 
-      // mediaPlayer 模块：调 getMediaPlayerManager() 拿管理器
-      if (name === 'mediaPlayer') {
-        try {
-          if (typeof mod.getMediaPlayerManager === 'function') {
-            cachedManager = mod.getMediaPlayerManager();
-          } else if (mod.default && typeof mod.default.getMediaPlayerManager === 'function') {
-            cachedManager = mod.default.getMediaPlayerManager();
+      if (fnKeys.length === 0 && keys.length === 0) {
+        errors[name] = 'import 成功但返回空对象';
+        continue;
+      }
+
+      let manager = null;
+
+      // mediaPlayer 类：调 getMediaPlayerManager()
+      if (/media/i.test(name)) {
+        // 尝试多种获取 manager 的方式
+        const tryGet = (obj) => {
+          if (!obj) return null;
+          if (typeof obj.getMediaPlayerManager === 'function') {
+            return obj.getMediaPlayerManager();
           }
+          // manager 也可能直接挂在 module 上
+          if (obj.MediaPlayer && typeof obj.MediaPlayer.getMediaPlayerManager === 'function') {
+            return obj.MediaPlayer.getMediaPlayerManager();
+          }
+          if (obj.mediaPlayer && typeof obj.mediaPlayer.getMediaPlayerManager === 'function') {
+            return obj.mediaPlayer.getMediaPlayerManager();
+          }
+          // 也可能 manager 本身就是一个全局单例
+          if (obj.default && typeof obj.default.getMediaPlayerManager === 'function') {
+            return obj.default.getMediaPlayerManager();
+          }
+          return null;
+        };
+
+        try {
+          manager = tryGet(mod) || tryGet(m) || tryGet(m.default);
         } catch (e) {
-          console.error('[player] getMediaPlayerManager() 失败: ' + (e && e.message));
+          errors[name + '.getMediaPlayerManager'] = stringifyError(e);
         }
       }
 
-      console.log('[player] ✅ 模块已加载: ' + name +
-                  (cachedManager ? ' (manager 已获取)' : ' (无 manager)'));
-      return { module: mod, moduleName: name, manager: cachedManager };
+      found = { module: mod, manager, moduleName: name };
+      break;
 
     } catch (e) {
-      console.warn('[player] ❌ import("' + name + '") 失败: ' + (e && e.message));
+      errors[name] = stringifyError(e);
     }
   }
 
-  console.error('[player] ❌ 所有播放器模块都加载失败');
-  return null;
+  cachedResult = {
+    success: !!found,
+    moduleName: found ? found.moduleName : null,
+    module: found ? found.module : null,
+    manager: found ? found.manager : null,
+    errors
+  };
+
+  return cachedResult;
 }
 
 export function resetCache() {
-  cachedModule = null;
-  cachedManager = null;
-  cachedModuleName = null;
+  cachedResult = null;
   tried = false;
 }
 
-/** 诊断：返回当前使用的模块名 */
-export function getModuleName() {
-  return cachedModuleName;
-}
+/** 获取最新探测缓存（如果没探测过会返回 null） */
+export function getProbeResult() { return cachedResult; }
 
-/** 诊断：返回原始 module 对象 */
-export function getModule() {
-  return cachedModule;
-}
+export function getModule() { return cachedResult && cachedResult.module; }
+export function getManager() { return cachedResult && cachedResult.manager; }
+export function getModuleName() { return cachedResult && cachedResult.moduleName; }
 
-/** 诊断：返回原始 manager 对象（mediaPlayer 专用） */
-export function getManager() {
-  return cachedManager;
-}
-
-/** 诊断：列出 module 和 manager 上所有函数名 */
+/** 列出 module 和 manager 上所有函数名，用于 UI 展示 */
 export function getAvailableApiList() {
-  const result = {};
-  if (cachedModule) {
-    result.module = listFunctions(cachedModule);
+  const result = { module: [], manager: [] };
+  if (cachedResult && cachedResult.module) {
+    result.module = listFunctions(cachedResult.module);
   }
-  if (cachedManager) {
-    result.manager = listFunctions(cachedManager);
+  if (cachedResult && cachedResult.manager) {
+    result.manager = listFunctions(cachedResult.manager);
   }
   return result;
 }
@@ -129,10 +181,10 @@ function listFunctions(obj) {
         if (typeof obj[k] === 'function') names.push(k);
       } catch (e) {}
     }
-    // 原型链上可枚举的
+    // 原型链
     let proto = Object.getPrototypeOf(obj);
     let depth = 0;
-    while (proto && depth < 5) {
+    while (proto && depth < 6) {
       const pnames = Object.getOwnPropertyNames(proto);
       for (const k of pnames) {
         if (seen.has(k) || k === 'constructor') continue;
@@ -157,180 +209,100 @@ function safeCall(obj, fnName, args) {
   try {
     return { ok: true, result: obj[fnName].apply(obj, args || []) };
   } catch (e) {
-    return { ok: false, error: (e && e.message) || '调用 ' + fnName + ' 失败' };
+    return { ok: false, error: fnName + ' 抛错: ' + stringifyError(e) };
   }
 }
 
 function firstAvailable(obj, fns, args) {
+  if (!obj) return { ok: false, error: 'target 为 null' };
   for (const fn of fns) {
-    if (obj && typeof obj[fn] === 'function') {
+    if (typeof obj[fn] === 'function') {
       try {
         return { ok: true, result: obj[fn].apply(obj, args || []), fnUsed: fn };
       } catch (e) {
-        return { ok: false, error: fn + ' 抛错: ' + (e && e.message) };
+        return { ok: false, error: fn + ' 抛错: ' + stringifyError(e) };
       }
     }
   }
-  return { ok: false, error: '找不到任何函数: ' + fns.join('|') };
+  return { ok: false, error: '找不到函数: ' + fns.join('|') };
 }
 
 export async function hasModule() {
   const r = await probe();
-  return !!r;
+  return r && r.success;
 }
 
-// --- 播放控制（自动适配两个模块的不同函数名） ---
+// --- 播放控制 ---
 
 export async function play() {
   const r = await probe();
-  if (!r) return { ok: false, error: '无可用模块' };
-  // mediaPlayer: play() 或 doPlay() / doPlayResumeMedia()
-  // player: 无 play()，open() 后自动播放
-  if (r.manager) {
-    return firstAvailable(r.manager, ['play', 'doPlay', 'doPlayResumeMedia'], []);
-  }
-  if (r.moduleName === 'player') {
-    return { ok: false, error: 'player 模块无直接 play()，需要先 open()' };
-  }
-  return firstAvailable(r.module, ['play', 'doPlay', 'doPlayResumeMedia'], []);
+  if (!r || !r.success) return { ok: false, error: '无可用模块', probe: r };
+  const target = r.manager || r.module;
+  // 按模块类型选候选函数
+  const fns = r.moduleName === 'player'
+    ? ['play']   // PenBili 其实是 open() 后自动播，先试 play 不行 UI 会调 open
+    : ['play', 'doPlay', 'doPlayResumeMedia'];
+  return firstAvailable(target, fns, []);
 }
 
 export async function pause() {
   const r = await probe();
-  if (!r) return { ok: false, error: '无可用模块' };
-  if (r.manager) return firstAvailable(r.manager, ['pause', 'doPause'], []);
-  return firstAvailable(r.module, ['pause', 'doPause'], []);
+  if (!r || !r.success) return { ok: false };
+  const target = r.manager || r.module;
+  return firstAvailable(target, ['pause', 'doPause'], []);
 }
 
 export async function stop() {
   const r = await probe();
-  if (!r) return { ok: false, error: '无可用模块' };
-  if (r.manager) return firstAvailable(r.manager, ['stop', 'doStop'], []);
-  return firstAvailable(r.module, ['stop', 'doStop'], []);
+  if (!r || !r.success) return { ok: false };
+  const target = r.manager || r.module;
+  return firstAvailable(target, ['stop', 'doStop'], []);
 }
 
 export async function resume() {
   const r = await probe();
-  if (!r) return { ok: false, error: '无可用模块' };
-  if (r.manager) return firstAvailable(r.manager, ['resume', 'doPlayResumeMedia'], []);
-  return firstAvailable(r.module, ['resume'], []);
+  if (!r || !r.success) return { ok: false };
+  const target = r.manager || r.module;
+  return firstAvailable(target, ['resume', 'doPlayResumeMedia', 'play'], []);
 }
 
 export async function seek(positionMs) {
   const r = await probe();
-  if (!r) return { ok: false, error: '无可用模块' };
+  if (!r || !r.success) return { ok: false };
+  const target = r.manager || r.module;
   const pos = Math.max(0, Math.round(positionMs || 0));
-  if (r.manager) return firstAvailable(r.manager, ['seekPosition', 'doSeekPlay', 'setCurrentPos', 'seek'], [pos]);
-  return firstAvailable(r.module, ['seek'], [pos]);
+  return firstAvailable(target, ['seekPosition', 'doSeekPlay', 'setCurrentPos', 'seek'], [pos]);
 }
-
-// --- 状态查询 ---
 
 export async function getPlayState() {
   const r = await probe();
-  if (!r) return { ok: false };
-  if (r.manager) return firstAvailable(r.manager, ['getPlayState'], []);
-  return firstAvailable(r.module, ['status'], []);
-}
-
-export async function getIsPlaying() {
-  const r = await probe();
-  if (!r) return false;
-  const res = r.manager
-    ? firstAvailable(r.manager, ['getIsPlaying'], [])
-    : firstAvailable(r.module, ['getIsPlaying'], []);
-  return res.ok && !!res.result;
+  if (!r || !r.success) return { ok: false };
+  const target = r.manager || r.module;
+  return firstAvailable(target, ['getPlayState', 'status'], []);
 }
 
 export async function getCurrentPos() {
   const r = await probe();
-  if (!r) return 0;
-  if (r.manager) return firstAvailable(r.manager, ['getCurrentPos', 'getCurrentPosition'], []);
-  const res = firstAvailable(r.module, ['status'], []);
-  if (res.ok && res.result && typeof res.result.position === 'number') return { ok: true, result: res.result.position };
-  return res;
+  if (!r || !r.success) return { ok: false };
+  const target = r.manager || r.module;
+  return firstAvailable(target, ['getCurrentPos', 'getCurrentPosition'], []);
 }
 
 export async function getDuration() {
   const r = await probe();
-  if (!r) return 0;
-  if (r.manager) return firstAvailable(r.manager, ['getDuration', 'duration'], []);
-  const res = firstAvailable(r.module, ['status'], []);
-  if (res.ok && res.result && typeof res.result.duration === 'number') return { ok: true, result: res.result.duration };
-  return res;
-}
-
-// --- player 模块专用（PenBili ffmpeg 播放器） ---
-
-export async function open(opts) {
-  const r = await probe();
-  if (!r) return { ok: false, error: '无可用模块' };
-  if (r.moduleName !== 'player') {
-    return { ok: false, error: 'open() 只对 player 模块有效，当前是 ' + r.moduleName +
-                                  '。mediaPlayer 需要先用 playMedia() 或 createWithUrl()' };
-  }
-  const o = opts || {};
-  if (!o.input) return { ok: false, error: '缺少 input' };
-  const rect = o.rect || { x: 0, y: 0, width: 0, height: 0 };
-  return firstAvailable(r.module, ['open'], [
-    o.input,
-    Math.max(0, Math.round(o.startMs || 0)),
-    Math.max(0, Math.round(o.durationMs || 0)),
-    Math.max(1, Math.round(o.fps || 24)),
-    o.audio === false ? 0 : 1,
-    o.transpose === 2 ? 2 : 1,
-    Math.round(rect.x), Math.round(rect.y), Math.round(rect.width), Math.round(rect.height)
-  ]);
+  if (!r || !r.success) return { ok: false };
+  const target = r.manager || r.module;
+  return firstAvailable(target, ['getDuration', 'duration'], []);
 }
 
 export async function release() {
   const r = await probe();
-  if (!r) return { ok: false };
-  if (r.moduleName === 'player' && r.module && typeof r.module.release === 'function') {
+  if (!r || !r.success) return { ok: false };
+  const target = r.manager || r.module;
+  if (r.moduleName === 'player') {
     return safeCall(r.module, 'release');
   }
-  if (r.manager) return firstAvailable(r.manager, ['resetPlayer', 'stop', 'doStop'], []);
-  return { ok: false };
-}
-
-// --- mediaPlayer 模块专用 ---
-
-/**
- * mediaPlayer 专用：用 URL/文件创建播放项
- * 从 strings 看到的候选函数：createWithUrl, createWithFile, createPlayMediaPrams
- */
-export async function createPlayItem(url) {
-  const r = await probe();
-  if (!r || r.moduleName !== 'mediaPlayer') return { ok: false, error: 'mediaPlayer 模块未加载' };
-  const target = r.manager || r.module;
-  // 依次尝试
-  let res = firstAvailable(target, ['createWithUrl'], [url]);
-  if (!res.ok) res = firstAvailable(target, ['createWithFile'], [url]);
-  if (!res.ok) res = firstAvailable(target, ['createPlayMediaPrams'], [{ url: url }]);
-  return res;
-}
-
-/**
- * mediaPlayer 专用：直接播放某个 mediaId（有道媒体库 ID）
- */
-export async function playMedia(mediaId) {
-  const r = await probe();
-  if (!r) return { ok: false };
-  const target = r.manager || r.module;
-  return firstAvailable(target, ['playMedia', 'startPlayMedia', 'setToPlayMedia'], [mediaId]);
-}
-
-/** 显示/隐藏播放器 UI（mediaPlayer 有内置 UI） */
-export async function showPlayer() {
-  const r = await probe();
-  if (!r || !r.manager) return { ok: false };
-  return firstAvailable(r.manager, ['showMediaPlayer'], []);
-}
-
-export async function hidePlayer() {
-  const r = await probe();
-  if (!r || !r.manager) return { ok: false };
-  return firstAvailable(r.manager, ['hideMediaPlayer'], []);
+  return firstAvailable(target, ['resetPlayer', 'stop', 'doStop'], []);
 }
 
 // --- 工具 ---

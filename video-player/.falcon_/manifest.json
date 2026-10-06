@@ -8,9 +8,9 @@
     "bigNum": false
   },
   "cert": {
-    "app.js": {
-      "size": 22280,
-      "md5": "db3c43ca40e69620f7f324276f4278ab"
+    "app.js.bin": {
+      "size": 15821,
+      "md5": "e1765acb4d67abf65b18fb36e9c55aa4"
     },
     "assets/app_icon.png": {
       "size": 4939,
