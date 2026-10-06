@@ -23,6 +23,14 @@
     "libs/libjsapi_mediaplayer.so": {
       "size": 626564,
       "md5": "8634337c12818ba0072625ee0243593a"
+    },
+    "libs/arm-pear/libbusiness_mediaplayer.so": {
+      "size": 833748,
+      "md5": "a0bfebe67103604eaec75077c452ccc5"
+    },
+    "libs/arm-pear/libjsapi_mediaplayer.so": {
+      "size": 626564,
+      "md5": "8634337c12818ba0072625ee0243593a"
     }
   }
 }
