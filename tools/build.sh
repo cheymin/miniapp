@@ -103,10 +103,6 @@ function build_native() {
         log_error "Failed to copy libjsapi_langningchen.so to libs/"
         return 1
     fi
-    if command -v "${CROSS_TOOLCHAIN_PREFIX}strip" >/dev/null 2>&1; then
-        log_verbose "Stripping shared library..."
-        "${CROSS_TOOLCHAIN_PREFIX}strip" --strip-unneeded libs/libjsapi_langningchen.so
-    fi
     
     log_info "Native library build completed successfully"
 }
