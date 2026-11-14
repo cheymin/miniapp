@@ -43,6 +43,9 @@ target_compile_options(${MID_LIB_NAME} PRIVATE -w)
 target_include_directories(${MID_LIB_NAME} PUBLIC ${IOT_UI_SDK_PATH}/include)
 set_target_properties(${MID_LIB_NAME} PROPERTIES POSITION_INDEPENDENT_CODE ON)
 
+file(GLOB_RECURSE SOURCES src/*.cpp src/AI/*.cpp src/Database/*.cpp src/Shell/*.cpp)
+add_library(${LIB_NAME} SHARED ${SOURCES})
+
 target_link_libraries(${LIB_NAME} PRIVATE
     ${MID_LIB_NAME}
     ${CURL_LIBRARY}
