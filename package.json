@@ -1,8 +1,8 @@
 {
   "name": "cheymin-pen",
   "appName": "Cheymin Pen",
-  "appid": "8001749644977817",
-  "version": "1.7.0",
+  "appid": "8001749644971194",
+  "version": "2.1.0",
   "description": "Cheymin Pen 工具箱",
   "icon": "app_icon.png",
   "quickjs": {

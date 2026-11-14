@@ -87,7 +87,7 @@ function build_native() {
     log_info "Building native library..."
     
     log_verbose "Running cmake configuration..."
-    if ! cmake -S jsapi -B jsapi/build -DCMAKE_BUILD_TYPE=Release; then
+    if ! cmake -S jsapi -B jsapi/build; then
         log_error "CMake configuration failed"
         return 1
     fi
