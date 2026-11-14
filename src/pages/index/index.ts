@@ -16,6 +16,9 @@
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
 import { defineComponent } from 'vue';
+import { showError, showSuccess } from '../../components/ToastMessage';
+import { loadPassword, verifyPassword } from '../../utils/password';
+import { openSystemInput } from '../../utils/systemInput';
 
 export type indexOptions = {};
 
@@ -23,12 +26,54 @@ const index = defineComponent({
     data() {
         return {
             $page: {} as FalconPage<indexOptions>,
+            checking: true,
+            locked: false,
+            passwordHash: '',
         };
     },
 
+    mounted() {
+        this.checkLock();
+    },
+
     methods: {
+        async checkLock() {
+            this.passwordHash = await loadPassword();
+            this.locked = !!this.passwordHash;
+            this.checking = false;
+        },
+
+        unlock() {
+            openSystemInput(
+                () => '',
+                (value) => {
+                    if (verifyPassword(value, this.passwordHash)) {
+                        this.locked = false;
+                        showSuccess('已解锁');
+                    } else {
+                        showError('密码错误');
+                    }
+                },
+                (value) => {
+                    if (!value) { return '请输入密码'; }
+                }
+            );
+        },
+
         openAi() {
             $falcon.navTo("ai", {});
+        },
+
+        openImageView() {
+            $falcon.navTo("imageView", {});
+        },
+
+        openUpdate() {
+            $falcon.navTo("update", {});
+        },
+
+        openSettings() {
+            $falcon.navTo("appSettings", {});
         }
     }
 });

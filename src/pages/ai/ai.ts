@@ -19,7 +19,7 @@ import { defineComponent } from 'vue';
 import { AI } from 'langningchen';
 import { ROLE, ConversationNode, STOP_REASON } from '../../@types/langningchen';
 import { showError } from '../../components/ToastMessage';
-import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
+import { openSystemInput } from '../../utils/systemInput';
 
 export type aiOptions = {};
 
@@ -98,6 +98,15 @@ const ai = defineComponent({
     },
 
     methods: {
+        scrollToBottom() {
+            const scroller = this.$refs.messageScroller as unknown as {
+                scrollTo?: (options: { x: number; y: number; animated: boolean }) => void;
+            };
+            if (scroller && typeof scroller.scrollTo === 'function') {
+                scroller.scrollTo({ x: 0, y: 999999, animated: true });
+            }
+        },
+
         onPageShow() {
             this.refreshMessages();
         },
@@ -157,9 +166,9 @@ const ai = defineComponent({
             }
         },
 
-        loadSoftKeyboard() {
+        openInput() {
             if (this.isStreaming) return;
-            openSoftKeyboard(
+            openSystemInput(
                 () => this.currentInput,
                 (value) => { this.currentInput = value; this.$forceUpdate(); }
             );
@@ -233,7 +242,7 @@ const ai = defineComponent({
         editUserMessage(messageId: string) {
             if (this.isStreaming) return;
             const message = this.getMessage(messageId)!;
-            openSoftKeyboard(
+            openSystemInput(
                 () => message.content,
                 (newContent) => {
                     if (newContent.trim() !== message.content.trim()) {

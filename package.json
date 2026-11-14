@@ -2,7 +2,7 @@
   "name": "toolbox",
   "appName": "工具箱2",
   "appid": "8001749644971194",
-  "version": "2.0.0",
+  "version": "1.6.0",
   "description": "一个方便用户使用的工具箱",
   "icon": "app_icon.png",
   "quickjs": {

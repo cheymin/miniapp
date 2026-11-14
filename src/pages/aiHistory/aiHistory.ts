@@ -19,7 +19,7 @@ import { defineComponent } from 'vue';
 import { AI } from 'langningchen';
 import { showError, showSuccess } from '../../components/ToastMessage';
 import { hideLoading, showLoading } from '../../components/Loading';
-import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
+import { openSystemInput } from '../../utils/systemInput';
 import { formatTime } from '../../utils/timeUtils';
 
 export type aiHistoryOptions = {};
@@ -104,7 +104,7 @@ const aiHistory = defineComponent({
         },
 
         editConversationTitle(conversationId: string, currentTitle: string) {
-            openSoftKeyboard(
+            openSystemInput(
                 () => currentTitle,
                 (value) => {
                     const trimmedTitle = value.trim();
@@ -124,7 +124,7 @@ const aiHistory = defineComponent({
         },
 
         editSearchKeyword() {
-            openSoftKeyboard(
+            openSystemInput(
                 () => this.searchKeyword,
                 (value) => { this.searchKeyword = value; this.$forceUpdate(); }
             );

@@ -19,7 +19,7 @@ import { defineComponent } from 'vue';
 import { AI } from 'langningchen';
 import { showError, showSuccess } from '../../components/ToastMessage';
 import { hideLoading, showLoading } from '../../components/Loading';
-import { openSoftKeyboard } from '../../utils/softKeyboardUtils';
+import { openSystemInput } from '../../utils/systemInput';
 
 export type aiSettingsOptions = {};
 
@@ -36,7 +36,6 @@ const aiSettings = defineComponent({
             topP: 0,
             systemPrompt: '',
 
-            userBalance: 0.0,
             availableModels: [] as string[],
         };
     },
@@ -45,7 +44,6 @@ const aiSettings = defineComponent({
         try {
             AI.initialize();
             this.loadSettings();
-            this.refreshBalance();
             this.refreshModels();
         } catch (e) {
             showError(e as string || 'AI 初始化失败');
@@ -66,18 +64,6 @@ const aiSettings = defineComponent({
             } catch (e) {
                 showError(e as string || '加载设置失败');
             }
-        },
-
-        refreshBalance() {
-            this.userBalance = 0.0;
-            showLoading();
-            AI.getUserBalance().then((balance) => {
-                this.userBalance = balance;
-            }).catch((e) => {
-                showError(`获取余额失败: ${e}`);
-            }).finally(() => {
-                hideLoading();
-            });
         },
 
         refreshModels() {
@@ -109,14 +95,14 @@ const aiSettings = defineComponent({
         },
 
         editApiKey() {
-            openSoftKeyboard(
+            openSystemInput(
                 () => this.apiKey,
                 (value) => { this.apiKey = value; this.$forceUpdate(); }
             );
         },
 
         editBaseUrl() {
-            openSoftKeyboard(
+            openSystemInput(
                 () => this.baseUrl,
                 (value) => {
                     this.baseUrl = value.endsWith('/') ? value : value + "/";
@@ -129,7 +115,7 @@ const aiSettings = defineComponent({
         },
 
         editMaxTokens() {
-            openSoftKeyboard(
+            openSystemInput(
                 () => this.maxTokens.toString(),
                 (value) => { this.maxTokens = parseInt(value); this.$forceUpdate(); },
                 (value) => {
@@ -141,7 +127,7 @@ const aiSettings = defineComponent({
         },
 
         editTemperature() {
-            openSoftKeyboard(
+            openSystemInput(
                 () => this.temperature.toFixed(1),
                 (value) => { this.temperature = parseFloat(value); this.$forceUpdate(); },
                 (value) => {
@@ -153,7 +139,7 @@ const aiSettings = defineComponent({
         },
 
         editTopP() {
-            openSoftKeyboard(
+            openSystemInput(
                 () => this.topP.toFixed(1),
                 (value) => { this.topP = parseFloat(value); this.$forceUpdate(); },
                 (value) => {
@@ -165,7 +151,7 @@ const aiSettings = defineComponent({
         },
 
         editSystemPrompt() {
-            openSoftKeyboard(
+            openSystemInput(
                 () => this.systemPrompt,
                 (value) => { this.systemPrompt = value; this.$forceUpdate(); }
             );

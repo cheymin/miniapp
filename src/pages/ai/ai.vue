@@ -49,11 +49,12 @@
                         :class="'square-btn' + (isStreaming ? ' square-btn-disabled' : '')">导</text>
                     <text @click="openSettings"
                         :class="'square-btn' + (isStreaming ? ' square-btn-disabled' : '')">设</text>
+                    <text @click="scrollToBottom" class="square-btn">底</text>
                 </div>
             </div>
 
             <div class="item">
-                <text :class="'item-input' + (isStreaming ? ' item-input-disabled' : '')" @click="loadSoftKeyboard">{{
+                <text :class="'item-input' + (isStreaming ? ' item-input-disabled' : '')" @click="openInput">{{
                     currentInput || '点击输入...' }}</text>
                 <text v-if="!isStreaming" @click="sendMessage(this.currentInput)"
                     :class="'square-btn square-btn-' + (this.canSendMessage ? 'primary' : 'disabled')">发</text>

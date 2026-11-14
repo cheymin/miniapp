@@ -18,13 +18,31 @@
 -->
 
 <template>
-    <scroller class="container" scroll-direction="vertical" :show-scrollbar="true">
-        <div class="section">
-            <text class="section-title">可用功能</text>
+    <div>
+        <scroller class="container" scroll-direction="vertical" :show-scrollbar="true">
+            <div v-if="checking" class="section">
+                <text class="section-title">正在启动...</text>
+            </div>
 
-            <div class="item"><text class="item-text" @click="openAi">AI 助手114</text></div>
-        </div>
-    </scroller>
+            <div v-else-if="locked" class="section lock-section">
+                <text class="section-title">应用已锁定</text>
+                <text class="lock-hint">需要输入密码才能继续使用</text>
+                <div class="btn-area">
+                    <text class="btn btn-primary lock-btn" @click="unlock">输入密码解锁</text>
+                </div>
+            </div>
+
+            <div v-else class="section">
+                <text class="section-title">可用功能</text>
+
+                <div class="item"><text class="item-text" @click="openAi">AI 助手</text></div>
+                <div class="item"><text class="item-text" @click="openImageView">图片查看</text></div>
+                <div class="item"><text class="item-text" @click="openUpdate">检查更新</text></div>
+                <div class="item"><text class="item-text" @click="openSettings">设置</text></div>
+            </div>
+        </scroller>
+        <ToastMessage />
+    </div>
 </template>
 
 <style lang="less" scoped>
@@ -32,6 +50,12 @@
 </style>
 
 <script>
+import ToastMessage from '../../components/ToastMessage.vue';
 import index from './index';
-export default index;
+export default {
+    ...index,
+    components: {
+        ToastMessage
+    }
+}
 </script>

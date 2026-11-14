@@ -61,6 +61,12 @@ jobs:
           echo "Device deps ready:"
           ls -la jsapi/lib/ jsapi/include/
 
+      - name: Sync current version to update page
+        run: |
+          VERSION=$(grep '"version"' ./package.json | head -1 | sed 's/.*"version": *"\([^"]*\)".*/\1/')
+          sed -i "s/const CURRENT_VERSION = '[^']*';/const CURRENT_VERSION = '${VERSION}';/" src/pages/update/update.ts
+          grep CURRENT_VERSION src/pages/update/update.ts
+
       - name: Build
         run: |
           # CMake 默认会记录编译器依赖，交叉编译时容易因为找不到主机编译器而失败
