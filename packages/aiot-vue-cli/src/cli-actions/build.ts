@@ -10,11 +10,11 @@ import qjscAll from '../steps/qjsc.js';
 
 export const deviceBuild = async ({ mock, env }: BuildOptions) => {
   const falconBuildDir = getFalconBuildDir();
-  await rm(falconBuildDir, { recursive: true });
+  await rm(falconBuildDir, { recursive: true, force: true });
   await mkdir(falconBuildDir);
 
   const tmpFileDir = getBuildTempFileDir();
-  await rm(tmpFileDir, { recursive: true });
+  await rm(tmpFileDir, { recursive: true, force: true });
   await mkdir(tmpFileDir);
 
   const amrFile = getAmrPath();

@@ -3,7 +3,7 @@ import { appendFile, cp } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { spinner } from '@clack/prompts';
 import { rollup as _rollup } from 'rollup';
-import { getAppEntryFile, getAppRoot, getFalconBuildDir } from '../libs/appinfo.js';
+import { APP_ENTRY_FILE_NAME, getAppRoot, getFalconBuildDir } from '../libs/appinfo.js';
 import { type BuildOptions, getConfig } from '../libs/rollup.config.js';
 import { state } from '../libs/share.js';
 
@@ -18,7 +18,7 @@ export const build = async (opt: BuildOptions) => {
   s.message('Writing bundle...');
   await appBundle.write(options.output);
   await appendFile(
-    getAppEntryFile(),
+    resolve(getFalconBuildDir(), APP_ENTRY_FILE_NAME),
     `$falcon.__KEYFRAMES = ${JSON.stringify(state.keyframes)};\n`,
   );
 

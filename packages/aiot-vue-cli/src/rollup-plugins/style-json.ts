@@ -147,7 +147,9 @@ function style2JSON(appMetaOptions?: Record<string, unknown>): Plugin {
       const themeStyles: Record<string, string> = {};
 
       for (const theme of [undefined, ...themes]) {
-        const opts = { ...styleOpts, theme: theme ?? styleOpts.theme };
+        const opts = { ...styleOpts, theme: theme ?? styleOpts.theme } as {
+          theme?: string;
+        };
         const paths = [dirname(id), ...getLessPaths(opts)];
         themeStyles[theme ?? '_'] = await compileToJson(code, id, paths);
       }

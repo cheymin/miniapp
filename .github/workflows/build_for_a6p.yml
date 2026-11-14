@@ -1,0 +1,114 @@
+name: Build For A6P & Upload AMR
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+env:
+  TOOLCHAIN_URL: https://github.com/penosext/Cloudpan/releases/download/toolchains/armv7-eabihf--uclibc--bleeding-edge-2018.11-1.tar.bz2
+  # 设备端依赖（curl / sqlite3 的头文件与 ARM 动态库），仓库中被 .gitignore 排除，必须从 Release 拉取
+  VERSIONINFO_URL: https://github.com/penosext/Cloudpan/releases/download/PenA6Pro/A6PversionInfo.tar.gz
+  DEVICE: a6p
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.12.4
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Build aiot-vue-cli
+        run: pnpm -C packages/aiot-vue-cli run build
+
+      # 首次 install 时 dist/main.js 还不存在，pnpm 不会生成 aiot-cli 的 bin 链接，
+      # 编译完 CLI 后再 install 一次即可让 tools/build.sh 里的 `pnpm exec aiot-cli` 可用
+      - name: Relink workspace binaries
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Setup cross-compile toolchain
+        run: |
+          mkdir -p jsapi/toolchains
+          wget -q "$TOOLCHAIN_URL" -O toolchain.tar.bz2
+          tar -xjf toolchain.tar.bz2 -C jsapi/toolchains
+          rm toolchain.tar.bz2
+          echo "Toolchain ready:"
+          ls jsapi/toolchains/
+
+      - name: Setup device deps (curl + sqlite3 headers/libs)
+        run: |
+          wget -q "$VERSIONINFO_URL" -O A6PversionInfo.tar.gz
+          tar -xf A6PversionInfo.tar.gz -C ./jsapi
+          rm -f A6PversionInfo.tar.gz
+          echo "Device deps ready:"
+          ls -la jsapi/lib/ jsapi/include/
+
+      - name: Build
+        run: |
+          # CMake 默认会记录编译器依赖，交叉编译时容易因为找不到主机编译器而失败
+          sed -i '/project(/a\set(CMAKE_DEPEND_INFO_SKIP 1)\nset(CMAKE_LINK_DEPENDS_USE_LINKER 0)' ./jsapi/CMakeLists.txt
+          chmod +x ./tools/build.sh
+          ./tools/build.sh
+
+      - name: Get version
+        id: version
+        run: |
+          VERSION=$(grep '"version"' ./package.json | head -1 | sed 's/.*"version": *"\([^"]*\)".*/\1/')
+          echo "version=${VERSION}" >> $GITHUB_OUTPUT
+          echo "Version: ${VERSION}"
+
+      - name: Collect AMR files
+        run: |
+          VERSION="${{ steps.version.outputs.version }}"
+          mkdir -p release_files
+          find ./dist -maxdepth 1 -type f -iname '*.amr' -exec cp {} "release_files/miniapp_${DEVICE}_v${VERSION}.amr" \;
+          if [ ! -f "release_files/miniapp_${DEVICE}_v${VERSION}.amr" ]; then
+            echo "No .amr file found in ./dist" >&2
+            exit 1
+          fi
+          ls -la release_files/
+
+      - name: Upload AMR artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: miniapp-amr
+          path: './release_files/*.amr'
+          retention-days: 30
+
+      - name: Create Release
+        if: github.event_name == 'push'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.version.outputs.version }}
+          name: min的工具箱 v${{ steps.version.outputs.version }}
+          body: |
+            ## min的工具箱 v${{ steps.version.outputs.version }}
+
+            ### 更新内容
+            - 详见提交记录
+
+            ### 下载
+            下载下方的 `.amr` 文件安装
+          files: ./release_files/*.amr
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
