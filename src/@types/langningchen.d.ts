@@ -44,13 +44,6 @@ export declare class AI {
     static on(event: 'ai_stream', callback: (data: string) => void): void;
 }
 
-export declare class IME {
-    static initialize(): Promise<void>;
-    static getCandidates(rawPinyin: string): langningchen.Candidate[];
-    static updateWordFrequency(pinyin: langningchen.Pinyin, hanZi: string): void;
-    static splitPinyin(rawPinyin: string): langningchen.Pinyin;
-}
-
 export declare class ScanInput {
     static initialize(): Promise<void>;
     static deinitialize(): Promise<void>;

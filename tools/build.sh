@@ -87,7 +87,7 @@ function build_native() {
     log_info "Building native library..."
     
     log_verbose "Running cmake configuration..."
-    if ! cmake -S jsapi -B jsapi/build; then
+    if ! cmake -S jsapi -B jsapi/build -DCMAKE_BUILD_TYPE=Release; then
         log_error "CMake configuration failed"
         return 1
     fi
@@ -102,6 +102,10 @@ function build_native() {
     if ! cp jsapi/build/libjsapi_langningchen.so libs/; then
         log_error "Failed to copy libjsapi_langningchen.so to libs/"
         return 1
+    fi
+    if command -v "${CROSS_TOOLCHAIN_PREFIX}strip" >/dev/null 2>&1; then
+        log_verbose "Stripping shared library..."
+        "${CROSS_TOOLCHAIN_PREFIX}strip" --strip-unneeded libs/libjsapi_langningchen.so
     fi
     
     log_info "Native library build completed successfully"
