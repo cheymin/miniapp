@@ -298,12 +298,13 @@ const videoPlayer = defineComponent({
                 const ff = [
                     shellQuote(this.ffmpegBin), '-hide_banner', '-loglevel', 'error', '-nostdin', '-re',
                     ...input,
-                    '-vn', '-ac', '2', '-ar', '44100', '-f', 's16le', '-',
+                    '-vn', '-ac', '2', '-ar', '48000', '-f', 's16le', '-',
                 ].join(' ');
                 // ffmpeg 解出 PCM 直接管道给 aplay，边解边放，不用等整段转换完
+                // 采样率对齐固件音频 HAL 的 48k，避免 aplay 因采样率不匹配静音
                 return this.spawnDetached(
                     this.audioPidFile,
-                    `${ff} 2>/dev/null | aplay -q -f S16_LE -c 2 -r 44100 >/dev/null 2>&1`
+                    `${ff} 2>/dev/null | aplay -q -f S16_LE -c 2 -r 48000 >/dev/null 2>&1`
                 );
             }
 
