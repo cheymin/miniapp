@@ -1,0 +1,60 @@
+# tools_video
+# atoms=56 bytecode_off=705 file_size=1462
+# 格式: <atom_index>\t<atom_text>（\n 已转义为字面量 \\n）
+
+    0	tools_video.js
+    1	./video-e680eea0.js
+    2	./jslog-0a73e180.js
+    3	./player-shared-de500b41.js
+    4	bridge
+    5	volume
+    6	./version-d96a99cf.js
+    7	./base-ac6db2f1.js
+    8	./endpoints-cad58d87.js
+    9	./platform-56cd6f66.js
+   10	./screen-1861a6a2.js
+   11	./format-90a6a181.js
+   12	V
+   13	b
+   14	l
+   15	o
+   16	e
+   17	r
+   18	d
+   19	s
+   20	i
+   21	VideoTool
+   22	components
+   23	forward
+   24	methods
+   25	onLoad
+   26	onShow
+   27	onHide
+   28	onUnload
+   29	_withStripped
+   30	render
+   31	staticRenderFns
+   32	_compiled
+   33	data-v-4d51d564
+   34	_scopeId
+   35	themes
+   36	style
+   37	src/pages/apps/video/video.vue
+   38	__file
+   39	$refs
+   40	tool
+   41	call
+   42	shell-video
+   43	forward ok hook=
+   44	forward 调用抛错 hook=
+   45	forward:组件缺少方法 hook=
+   46	video-tool has no method 
+   47	forward:组件未渲染 hook=
+   48	video-tool not mounted
+   49	onLoad 
+   50	stringify
+   51	$createElement
+   52	_self
+   53	_c
+   54	video-tool
+   55	ref

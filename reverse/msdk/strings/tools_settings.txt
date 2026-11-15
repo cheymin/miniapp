@@ -1,0 +1,1350 @@
+# tools_settings
+# atoms=1346 bytecode_off=19392 file_size=83220
+# 格式: <atom_index>\t<atom_text>（\n 已转义为字面量 \\n）
+
+    0	tools_settings.js
+    1	bridge
+    2	./base-ac6db2f1.js
+    3	./version-d96a99cf.js
+    4	./jslog-0a73e180.js
+    5	./endpoints-cad58d87.js
+    6	./theme-7f2e6c0e.js
+    7	./platform-56cd6f66.js
+    8	./gate-f4009b17.js
+    9	./format-90a6a181.js
+   10	./chaty-67f7d33f.js
+   11	./screen-1861a6a2.js
+   12	C
+   13	q
+   14	s
+   15	t
+   16	A
+   17	b
+   18	u
+   19	e
+   20	v
+   21	f
+   22	o
+   23	n
+   24	g
+   25	j
+   26	h
+   27	a
+   28	p
+   29	c
+   30	D
+   31	V
+   32	i
+   33	l
+   34	r
+   35	d
+   36	m
+   37	x
+   38	y
+   39	_
+   40	k
+   41	S
+   42	w
+   43	I
+   44	F
+   45	L
+   46	P
+   47	B
+   48	T
+   49	R
+   50	E
+   51	$
+   52	M
+   53	N
+   54	O
+   55	type
+   56	token
+   57	props
+   58	data
+   59	mounted
+   60	beforeDestroy
+   61	close
+   62	initBridge
+   63	readTokenFromOptions
+   64	resolveHttpBaseUrl
+   65	formatTs
+   66	displayNick
+   67	batteryText
+   68	fetchDevices
+   69	methods
+   70	_withStripped
+   71	render
+   72	staticRenderFns
+   73	_compiled
+   74	data-v-c44671ae
+   75	_scopeId
+   76	themes
+   77	assign
+   78	100%
+   79	width
+   80	minHeight
+   81	18px
+   82	paddingTop
+   83	paddingRight
+   84	paddingBottom
+   85	paddingLeft
+   86	#0f1115
+   87	backgroundColor
+   88	column
+   89	flexDirection
+   90	root
+   91	row
+   92	space-between
+   93	justifyContent
+   94	center
+   95	alignItems
+   96	16px
+   97	marginBottom
+   98	header
+   99	title-box
+  100	26px
+  101	fontSize
+  102	bold
+  103	fontWeight
+  104	#f3f4f6
+  105	color
+  106	title
+  107	8px
+  108	marginTop
+  109	12px
+  110	#c7c7cc
+  111	sub
+  112	actions
+  113	10px
+  114	14px
+  115	borderRadius
+  116	#0a84ff
+  117	btn
+  118	opacity
+  119	btn-press
+  120	13px
+  121	#ffffff
+  122	btn-text
+  123	rgba(127,29,29,0.35)
+  124	1px
+  125	borderWidth
+  126	rgba(248,113,113,0.35)
+  127	borderColor
+  128	error
+  129	#fecaca
+  130	error-text
+  131	grid
+  132	flex
+  133	#171a21
+  134	#2b3342
+  135	marginRight
+  136	card
+  137	0px
+  138	card-last
+  139	label
+  140	table-wrap
+  141	#1f2430
+  142	borderBottomWidth
+  143	borderBottomColor
+  144	table-head
+  145	th
+  146	400px
+  147	table-body
+  148	tr
+  149	rgba(255,255,255,0.03)
+  150	tr-press
+  151	td
+  152	muted
+  153	height
+  154	4px
+  155	dot
+  156	#34c759
+  157	online
+  158	#ff9f0a
+  159	offline
+  160	status-text
+  161	battery
+  162	2px
+  163	11px
+  164	battery-sub
+  165	20px
+  166	empty-row
+  167	70px
+  168	th-status
+  169	td-status
+  170	120px
+  171	th-nick
+  172	td-nick
+  173	th-id
+  174	td-id
+  175	90px
+  176	th-battery
+  177	td-battery
+  178	130px
+  179	th-last
+  180	td-last
+  181	th-on
+  182	td-on
+  183	th-off
+  184	td-off
+  185	th-seq
+  186	td-seq
+  187	#e7e9ee
+  188	root-l
+  189	#3a3a3c
+  190	title-l
+  191	#636366
+  192	sub-l
+  193	#007aff
+  194	btn-l
+  195	#1c1c1e
+  196	btn-text-l
+  197	rgba(248,113,113,0.85)
+  198	error-l
+  199	error-text-l
+  200	card-l
+  201	label-l
+  202	value-l
+  203	table-wrap-l
+  204	#cfd5e2
+  205	table-head-l
+  206	th-l
+  207	tr-l
+  208	rgba(0,0,0,0.03)
+  209	tr-press-l
+  210	td-l
+  211	muted-l
+  212	online-l
+  213	#ff9500
+  214	offline-l
+  215	status-text-l
+  216	battery-l
+  217	style
+  218	src/pages/apps/settings/components/admin.vue
+  219	__file
+  220	mixins
+  221	AdminPanel
+  222	components
+  223	uiViewport
+  224	pendingUiViewport
+  225	uiScaleText
+  226	uiDesignHeight
+  227	pendingUiScaleText
+  228	pendingUiDesignHeight
+  229	uiAdaptation
+  230	pendingUiAdaptation
+  231	uiViewportDirty
+  232	uiViewportHint
+  233	btQualityLabel
+  234	developerUnlocked
+  235	currentNetworkRouteLabel
+  236	visibleNavItems
+  237	batteryPercent
+  238	storageLine
+  239	storageSubLine
+  240	memoryLine
+  241	memorySubLine
+  242	swapLine
+  243	swapSubLine
+  244	themeModeLabel
+  245	computed
+  246	onShow
+  247	closeAdminPanel
+  248	toggleThemeMode
+  249	init
+  250	onAccountCardClick
+  251	loadSavedLogin
+  252	saveLoginSession
+  253	clearLoginSession
+  254	syncChatyCookie
+  255	refreshCookieBySavedLogin
+  256	doLogin
+  257	doLogout
+  258	fetchUserInfo
+  259	executeLogout
+  260	copyCookieToClipboard
+  261	checkAll
+  262	selectNav
+  263	loadDbList
+  264	confirmDeleteDb
+  265	executeDeleteDb
+  266	stepUiViewport
+  267	saveAdaptationConfigs
+  268	loadAdaptationConfigs
+  269	selectDesktopBackgroundImage
+  270	toggleAdaptationConfig
+  271	toggleHidePasswordChangeEntry
+  272	normalizeNetworkRouteMode
+  273	isNetworkRouteAuto
+  274	isNetworkRouteRowSelected
+  275	getNetworkRouteLabel
+  276	refreshNetworkRouteProbeLabel
+  277	networkRouteOptionDesc
+  278	selectNetworkRoute
+  279	tryRevealHiddenPasswordEntry
+  280	loadBtStartupQuality
+  281	saveBtStartupQuality
+  282	rebuildSkipLoginSh
+  283	toggleLocalSocksProxy
+  284	toggleDisableSystemWhitelist
+  285	toggleAdb
+  286	isNewerVersion
+  287	checkUpdate
+  288	parseChangelog
+  289	startDownload
+  290	startInstall
+  291	startShellDownload
+  292	startDlPoll
+  293	startShellDlPoll
+  294	shellExecMaybeAsync
+  295	stopDlPoll
+  296	killDlShellPid
+  297	finishDownloadByCheck
+  298	setBtQuality
+  299	adjustAvSync
+  300	resetAvSync
+  301	applyAvSync
+  302	safePercent
+  303	getShellOutput
+  304	execSafe
+  305	refreshDeviceInfo
+  306	parseRootFilesystem
+  307	loadDeviceInfo
+  308	formatTimestamp
+  309	reloadDriver
+  310	log
+  311	formatSeconds
+  312	normalizeDesktopEntrySecret
+  313	openKeyboard
+  314	scrollLogToBottom
+  315	clearLogs
+  316	data-v-d2c28694
+  317	#000000
+  318	288px
+  319	sidebar
+  320	9px
+  321	sidebar-content
+  322	22px
+  323	header-title
+  324	search-bar
+  325	search-icon
+  326	search-text
+  327	account-card
+  328	#2c2c2e
+  329	account-card-press
+  330	account-row
+  331	36px
+  332	#39393d
+  333	account-avatar-placeholder
+  334	15px
+  335	avatar-placeholder-text
+  336	account-avatar
+  337	account-info
+  338	account-name
+  339	account-hint
+  340	main-panel
+  341	main-content
+  342	page
+  343	marginLeft
+  344	section-title
+  345	34px
+  346	28px
+  347	6px
+  348	adapt-step
+  349	#48484a
+  350	adapt-step-press
+  351	adapt-step-txt
+  352	hidden
+  353	overflow
+  354	item
+  355	item-press
+  356	icon-box
+  357	icon-img
+  358	item-body
+  359	item-title
+  360	item-subtitle
+  361	borderTopWidth
+  362	borderTopColor
+  363	item-divided
+  364	arrow
+  365	minWidth
+  366	rgba(255,255,255,0.08)
+  367	adapt-input-box
+  368	adapt-input-text
+  369	7px
+  370	3.5px
+  371	mini-dot
+  372	3px
+  373	badge
+  374	badge-text
+  375	rgba(255,149,0,0.2)
+  376	badge-orange
+  377	badge-text-orange
+  378	40px
+  379	transitionProperty
+  380	transitionDuration
+  381	toggle
+  382	property
+  383	duration
+  384	transform
+  385	toggle-thumb
+  386	@TRANSITION
+  387	27px
+  388	log-empty
+  389	log-empty-text
+  390	log-item
+  391	monospace
+  392	fontFamily
+  393	58px
+  394	log-time
+  395	5px
+  396	2.5px
+  397	log-dot
+  398	lines
+  399	ellipsis
+  400	textOverflow
+  401	log-msg
+  402	update-header
+  403	#D0B0FF
+  404	56px
+  405	app-brand
+  406	64px
+  407	app-version
+  408	update-status
+  409	status-txt
+  410	solid
+  411	borderStyle
+  412	24px
+  413	0px 4px 10px #39393d
+  414	boxShadow
+  415	update-btn
+  416	update-btn-press
+  417	ready-btn
+  418	#248a3d
+  419	ready-btn-press
+  420	update-btn-txt
+  421	260px
+  422	update-progress-box
+  423	progress-track
+  424	progress-bar
+  425	blink
+  426	log-version-title
+  427	lineHeight
+  428	log-line
+  429	absolute
+  430	position
+  431	top
+  432	left
+  433	right
+  434	bottom
+  435	rgba(0,0,0,0.7)
+  436	modal-overlay
+  437	320px
+  438	rgba(255,255,255,0.1)
+  439	update-popup-card
+  440	popup-title
+  441	textAlign
+  442	popup-desc
+  443	popup-actions
+  444	popup-btn
+  445	btn-later
+  446	btn-later-press
+  447	btn-now
+  448	btn-now-press
+  449	login-hero
+  450	52px
+  451	login-logo-box
+  452	login-logo-text
+  453	login-brand
+  454	login-slogan
+  455	200px
+  456	maxWidth
+  457	login-input-display
+  458	#ff453a
+  459	login-error
+  460	login-btn-item
+  461	login-btn-item-press
+  462	login-btn-text
+  463	login-footer-hint
+  464	profile-avatar-lg
+  465	search-bar-press
+  466	modal-overlay-press
+  467	update-popup-card-press
+  468	popup-btn-press
+  469	header-title-l
+  470	search-bar-l
+  471	search-text-l
+  472	#f2f2f7
+  473	account-card-l
+  474	account-card-press-l
+  475	#c6c6c8
+  476	account-avatar-placeholder-l
+  477	avatar-placeholder-text-l
+  478	account-name-l
+  479	account-hint-l
+  480	section-title-l
+  481	item-press-l
+  482	item-title-l
+  483	item-subtitle-l
+  484	item-divided-l
+  485	arrow-l
+  486	rgba(0,0,0,0.08)
+  487	adapt-input-box-l
+  488	adapt-input-text-l
+  489	#0062cc
+  490	badge-l
+  491	badge-text-l
+  492	badge-orange-l
+  493	badge-text-orange-l
+  494	toggle-thumb-l
+  495	log-empty-text-l
+  496	log-time-l
+  497	#080014
+  498	app-brand-l
+  499	app-version-l
+  500	update-status-l
+  501	status-txt-l
+  502	update-btn-l
+  503	update-btn-press-l
+  504	ready-btn-l
+  505	#5dd57b
+  506	ready-btn-press-l
+  507	update-btn-txt-l
+  508	progress-track-l
+  509	progress-bar-l
+  510	log-version-title-l
+  511	log-line-l
+  512	modal-overlay-l
+  513	rgba(0,0,0,0.1)
+  514	update-popup-card-l
+  515	popup-title-l
+  516	popup-desc-l
+  517	btn-later-l
+  518	btn-later-press-l
+  519	btn-now-l
+  520	login-logo-box-l
+  521	login-logo-text-l
+  522	login-brand-l
+  523	login-slogan-l
+  524	login-input-display-l
+  525	#ff3b30
+  526	login-error-l
+  527	login-btn-item-l
+  528	login-btn-text-l
+  529	login-footer-hint-l
+  530	src/pages/apps/settings/settings.vue
+  531	adminToken
+  532	errorMsg
+  533	正在加载设备状态...
+  534	subtitle
+  535	devices
+  536	totalCount
+  537	onlineCount
+  538	heartbeatTimeout
+  539	refreshTimer
+  540	httpBaseUrl
+  541	bridgeModule
+  542	setInterval
+  543	缺少 token，请在设置页搜索 admin123456 进入
+  544	clearInterval
+  545	$emit
+  546	$page
+  547	loadOptions
+  548	$route
+  549	query
+  550	secret
+  551	trim
+  552	test
+  553	replace
+  554	https://
+  555	http://
+  556	-
+  557	getFullYear
+  558	getMonth
+  559	padStart
+  560	getDate
+  561	 
+  562	getHours
+  563	:
+  564	getMinutes
+  565	getSeconds
+  566	nickname
+  567	未知
+  568	isNaN
+  569	%
+  570	Fetch
+  571	fetch
+  572	网络模块不可用
+  573	/admin/api/devices?token=
+  574	encodeURIComponent
+  575	GET
+  576	method
+  577	timeout
+  578	verifySSL
+  579	HTTP 
+  580	text
+  581	empty response
+  582	parse
+  583	加载失败
+  584	isArray
+  585	total_count
+  586	online_count
+  587	heartbeat_timeout
+  588	最近刷新: 
+  589	now
+  590	加载设备列表失败: 
+  591	$createElement
+  592	_self
+  593	_c
+  594	scroller
+  595	staticClass
+  596	div
+  597	_v
+  598	Chaty 管理页
+  599	_s
+  600	click
+  601	on
+  602	立即刷新
+  603	返回设置
+  604	_e
+  605	设备总数
+  606	在线设备
+  607	心跳超时阈值
+  608	_m
+  609	暂无设备
+  610	_l
+  611	key
+  612	在线
+  613	离线
+  614	battery_status
+  615	last_seen
+  616	last_online_at
+  617	connected_at
+  618	last_offline_at
+  619	last_seq
+  620	状态
+  621	设备昵称
+  622	设备 ID
+  623	电量
+  624	最后心跳
+  625	上次上线
+  626	上次离线
+  627	已同步序号
+  628	showAdminPanel
+  629	bridgeReady
+  630	shell
+  631	Dbase
+  632	activeNav
+  633	id
+  634	蓝牙
+  635	音频编码设置
+  636	images/6d9dcba0c7abe04fc6a3cd0a65867ed2.png
+  637	icon
+  638	#3A9BFF
+  639	bg
+  640	线路选择
+  641	接口访问线路
+  642	images/b19cb0e40c110f707c26f1de7e2da2d1.png
+  643	#007AFF
+  644	设备信息
+  645	系统运行状态
+  646	images/bc1733378f7d397c48678bb2a29dc80a.png
+  647	开发者选项
+  648	底层驱动与调试
+  649	images/78a81de7f8e91bf199ad5d2545c023f4.png
+  650	#7D7AFF
+  651	操作日志
+  652	系统反馈记录
+  653	images/fb924540c1b785e0e832089010580858.png
+  654	#4CD964
+  655	软件版本
+  656	检查更新
+  657	images/c4fe29091749a2f3d6134a48ca8f7500.png
+  658	#FFA726
+  659	数据管理
+  660	本地存储与缓存
+  661	images/41a3da59ea7dadaa919f9fc5ce8c40ea.png
+  662	#FF2D55
+  663	偏好设置
+  664	设备兼容性与个性化
+  665	images/843dc8d707652c4cf68503259198f39f.png
+  666	#5856D6
+  667	鸣谢
+  668	致谢名单
+  669	images/fb51fdc1f0358c88c326fa02564aa168.png
+  670	#FF9500
+  671	navItems
+  672	adbState
+  673	/tmp/.adb_auth_verified
+  674	adbFilePath
+  675	btQuality
+  676	btStartupQuality
+  677	未运行
+  678	btProcess
+  679	btBusy
+  680	获取中...
+  681	screenInfo
+  682	screenRotation
+  683	ready
+  684	audioDriver
+  685	videoDriver
+  686	logs
+  687	1.0.0
+  688	currentVersion
+  689	latestVersion
+  690	idle
+  691	updateStep
+  692	updateProgress
+  693	updateTimer
+  694	dlHandle
+  695	dlPollTimer
+  696	dlShellPid
+  697	downloadSavedPath
+  698	changelogList
+  699	dbFiles
+  700	dark
+  701	themeMode
+  702	_offTheme
+  703	showDbDeleteModal
+  704	dbToDelete
+  705	searchText
+  706	searchSecretRepeatCount
+  707	lastSearchSecretInput
+  708	map
+  709	networkRouteOptions
+  710	networkRouteDescProbe
+  711	_adaptationSavedSig
+  712	cvia
+  713	isCviaPlatform
+  714	uiViewPort
+  715	networkRouteMode
+  716	p5VideoCoords
+  717	nativeSoftKeyboard
+  718	cacheBeforePlay
+  719	avSyncDelayMs
+  720	disableSystemWhitelist
+  721	adbSkipPassword
+  722	developerPageUnlocked
+  723	desktopLyricOffsetSeconds
+  724	desktopEntrySecret
+  725	pageTestSecretEnabled
+  726	useDesktopImageBackground
+  727	desktopBackgroundImagePath
+  728	hidePasswordChangeEntry
+  729	enableShell
+  730	enableLocalSocksProxy
+  731	adaptationConfigs
+  732	isLoggedIn
+  733	loginLoading
+  734	loginRefreshLoading
+  735	loginError
+  736	pw
+  737	loginForm
+  738	nick
+  739	avatar
+  740	money
+  741	point
+  742	power
+  743	普通用户
+  744	powerText
+  745	cookie
+  746	userInfo
+  747	showLogoutModal
+  748	deviceInfoLoading
+  749	deviceInfoLoadingStep
+  750	deviceInfoRefreshing
+  751	deviceInfoError
+  752	deviceId
+  753	ipAddress
+  754	slotInfo
+  755	deviceInfoTimestamp
+  756	model
+  757	kernel
+  758	version
+  759	systemInfo
+  760	total
+  761	used
+  762	free
+  763	percent
+  764	rootTotal
+  765	rootUsed
+  766	rootFree
+  767	mountCount
+  768	storageInfo
+  769	available
+  770	mem
+  771	swap
+  772	memoryInfo
+  773	batteryLevel
+  774	batteryStatus
+  775	mountOptions
+  776	readWrite
+  777	rootFilesystem
+  778	networkInterfaces
+  779	李子
+  780	3759823756
+  781	qq
+  782	创立POSC社区打通解锁安装全流程，为第三方开发提供可能
+  783	role
+  784	洛神赋
+  785	从无到有独立开发LoliAPP至1.12.x
+  786	.
+  787	2779115061
+  788	为v1.5、v1.10、v1.12.25开发对应cvi版本
+  789	skylight
+  790	3505763475
+  791	协同开发cvi版本并提供Q音解析服务
+  792	小爱
+  793	探索性开发更多实验性功能
+  794	Huhu
+  795	3778463774
+  796	Android 版同步开发
+  797	devTeamList
+  798	KillerZ
+  799	3115216193
+  800	解决相机调用、视频播放等适配性难题
+  801	四夕
+  802	2815730361
+  803	网易云贡献值 / 哔哩贡献者
+  804	nval
+  805	离线浏览器开发者
+  806	Eric
+  807	旋转竖屏阅读器
+  808	thanksList
+  809	librime 1.16.1
+  810	BSD-3-Clause
+  811	license
+  812	离线中文输入引擎；本项目针对 X7/S6 静态构建。
+  813	notice
+  814	https://github.com/rime/librime
+  815	url
+  816	万象拼音 Pure 17.2.5
+  817	CC BY 4.0
+  818	使用 Pure 词库；移除语法模型与 Lua 依赖，并增加项目九键方案。
+  819	https://github.com/amzxyz/rime-wanxiang
+  820	miniz 3.1.2
+  821	MIT
+  822	用于校验并解压 miniapp 内置的 Rime 离线资源包。
+  823	https://github.com/richgel999/miniz
+  824	Boost 1.89.0
+  825	Boost Software License 1.0
+  826	librime 静态依赖。
+  827	https://www.boost.org/
+  828	LevelDB
+  829	librime 用户词典存储依赖；版本提交已锁定。
+  830	https://github.com/google/leveldb
+  831	OpenCC
+  832	Apache-2.0
+  833	librime 字形转换依赖；版本提交已锁定。
+  834	https://github.com/BYVoid/OpenCC
+  835	yaml-cpp
+  836	librime 配置解析依赖；版本提交已锁定。
+  837	https://github.com/jbeder/yaml-cpp
+  838	marisa-trie
+  839	BSD-2-Clause OR LGPL-2.1-or-later
+  840	librime/OpenCC 词典索引依赖；本项目采用兼容的 BSD-2-Clause 条款。
+  841	https://github.com/s-yata/marisa-trie
+  842	thirdPartyNotices
+  843	chongqing
+  844	锁定到重庆专线（手动选择后不再自动切换）
+  845	cdn_cn2
+  846	适合电信 / CN2 网络环境
+  847	国内直连访问节点
+  848	desc
+  849	disabled
+  850	max
+  851	min
+  852	scale
+  853	toFixed
+  854	designHeight
+  855	物理 
+  856	physicalWidth
+  857	×
+  858	physicalHeight
+  859	｜基准 
+  860	viewport
+  861	px → s=
+  862	、可见设计高 
+  863	（改完重启生效）
+  864	未检测
+  865	Level 
+  866	喵！
+  867	filter
+  868	round
+  869	 / 
+  870	 (
+  871	%)
+  872	挂载点: 
+  873	，根目录剩余: 
+  874	可用: 
+  875	空闲: 
+  876	light
+  877	当前：浅色（点击切回深色）
+  878	当前：深色（点击切到浅色）
+  879	setTimeout
+  880	abort
+  881	destroy
+  882	Shell
+  883	Datas
+  884	getSystemStatus
+  885	C++ 引擎就绪
+  886	#34C759
+  887	Bridge 加载失败
+  888	#FF3B30
+  889	初始化异常: 
+  890	read
+  891	sys_login_session
+  892	已恢复登录: 
+  893	检测到本地账号密码，正在恢复登录...
+  894	write
+  895	本地未找到可用账号密码，无法自动刷新登录
+  896	@qq.com
+  897	检测到登录过期，正在自动刷新 cookie...
+  898	POST
+  899	application/json
+  900	Content-Type
+  901	headers
+  902	stringify
+  903	body
+  904	json
+  905	code
+  906	cookie 已自动刷新
+  907	自动刷新 cookie 失败: 
+  908	msg
+  909	账号或密码错误
+  910	自动刷新 cookie 异常: 
+  911	正在登录...
+  912	发送请求: POST /api/login
+  913	#8e8e93
+  914	Body: 
+  915	[1] typeof res = 
+  916	[2] res = 
+  917	[3] res.ok = 
+  918	[4] res.status = 
+  919	[5] res.url = 
+  920	[6] res.text() = 
+  921	[6] res.text() 异常: 
+  922	[7] res.json() = 
+  923	[7] res.json() 异常: 
+  924	[7b] JSON.parse 成功
+  925	[7b] JSON.parse 也失败
+  926	登录成功
+  927	业务失败: 
+  928	响应解析失败 (ok=
+  929	, status=
+  930	)
+  931	无法解析响应体
+  932	fetch 返回 null
+  933	[!] res 为空
+  934	请求失败: 
+  935	catch: 
+  936	stack: 
+  937	无
+  938	Fetch 模块不可用
+  939	请输入密码
+  940	请输入账号（QQ号）
+  941	正在获取用户信息...
+  942	用户接口返回: 
+  943	管理员
+  944	parseInt
+  945	用户信息已更新: 
+  946	cookie 已过期且刷新失败，自动退出登录
+  947	获取用户信息失败
+  948	用户信息请求异常: 
+  949	已退出登录
+  950	tools_clipboard_history
+  951	indexOf
+  952	splice
+  953	unshift
+  954	slice
+  955	Cookie 已复制到软键盘剪切板
+  956	写入剪切板失败: 
+  957	数据库模块不可用
+  958	暂无登录凭证
+  959	getScreenSize
+  960	rotation
+  961	 × 
+  962	°
+  963	ls 
+  964	output
+  965	No such file
+  966	touch 
+  967	audioReady
+  968	audioName
+  969	未加载
+  970	videoReady
+  971	videoName
+  972	运行中
+  973	状态读取失败
+  974	$nextTick
+  975	list
+  976	sort
+  977	读取数据库列表失败
+  978	remove
+  979	已删除数据库: 
+  980	删除数据库失败
+  981	界面缩放基准 → 
+  982	px
+  983	（重启后生效）
+  984	（写入失败，见日志）
+  985	sys_adaptation_configs
+  986	settings
+  987	sys_p5_video
+  988	parseFloat
+  989	$falcon
+  990	navTo
+  991	off
+  992	_selectingDesktopBgImage
+  993	tools_gallery
+  994	tools_settings
+  995	path
+  996	file
+  997	桌面背景图片已设置
+  998	hasOwnProperty
+  999	已
+ 1000	开启
+ 1001	关闭
+ 1002	密码修改入口已隐藏，可在搜索框重复输入密码两次恢复显示
+ 1003	密码修改入口已显示
+ 1004	auto
+ 1005	direct
+ 1006	自动选择
+ 1007	启动时依次探活，自动选第一条可用线路（当前：
+ 1008	）
+ 1009	启动时依次探活，自动选第一条可用线路
+ 1010	线路已锁定为 
+ 1011	，重新打开相关页面后生效
+ 1012	已恢复自动选路，当前生效：
+ 1013	自动选路探测未完成，将按默认线路继续
+ 1014	#FF9F0A
+ 1015	密码修改入口已重新显示
+ 1016	sys_bt_quality_startup
+ 1017	push
+ 1018	mount --bind /userdisk/myhosts /etc/hosts
+ 1019	mkdir -p /data/local/bluealsa_custom && chmod 700 /data/local/bluealsa_custom
+ 1020	umount /usr/bin/bluealsa 2>/dev/null
+ 1021	cp /usr/bin/bluealsa /data/local/bluealsa_custom/bluealsa_orig 2>/dev/null
+ 1022	chmod 755 /data/local/bluealsa_custom/bluealsa_orig
+ 1023	printf "%s\n%s\n" "#!/bin/sh" "exec /data/local/bluealsa_custom/bluealsa_orig --profile=a2dp-source --profile=hfp-ag --a2dp-volume --sbc-quality=
+ 1024	" > /data/local/bluealsa_custom/bluealsa_proxy
+ 1025	chmod 755 /data/local/bluealsa_custom/bluealsa_proxy
+ 1026	mount --bind /data/local/bluealsa_custom/bluealsa_proxy /usr/bin/bluealsa
+ 1027	killall -9 bluealsa bluealsa_orig 2>/dev/null
+ 1028	sh -c 'rm -f /userdisk/skip_re/skip_login.sh'
+ 1029	sh -c 'mkdir -p /userdisk/skip_re && echo "
+ 1030	" > /userdisk/skip_re/skip_login.sh'
+ 1031	sh -c 'echo "
+ 1032	" >> /userdisk/skip_re/skip_login.sh'
+ 1033	sh -c 'chmod +x /userdisk/skip_re/skip_login.sh'
+ 1034	escapeShellDoubleQuoted
+ 1035	异地组网代理已开启（仅终端会话生效）
+ 1036	异地组网代理已关闭
+ 1037	Shell 不可用，无法执行该操作
+ 1038	正在应用 Hosts 覆盖规则...
+ 1039	sh -c 'cp /etc/hosts /userdisk/myhosts; grep -q "api-overmind.youdao.com" /userdisk/myhosts || echo "127.0.0.1 api-overmind.youdao.com" >> /userdisk/myhosts; mount --bind /userdisk/myhosts /etc/hosts'
+ 1040	禁用系统软件白名单已开启
+ 1041	正在恢复 Hosts...
+ 1042	sh -c 'umount /etc/hosts || umount -l /etc/hosts'
+ 1043	禁用系统软件白名单已关闭
+ 1044	执行失败: 
+ 1045	ADB 跳过密码已开启
+ 1046	rm -f 
+ 1047	ADB 跳过密码已关闭
+ 1048	checking
+ 1049	正在获取版本信息...
+ 1050	found
+ 1051	发现新版本: v
+ 1052	latest
+ 1053	当前已是最新版本
+ 1054	获取版本号失败
+ 1055	网络请求异常: 
+ 1056	Fetch 模块不可用，无法检查更新
+ 1057	match
+ 1058	更新内容
+ 1059	.amr
+ 1060	/userdisk/Favorite/
+ 1061	downloading
+ 1062	开始下载: 
+ 1063	downloadFile
+ 1064	rk
+ 1065	loli
+ 1066	cvi
+ 1067	installing
+ 1068	正在执行安装指令...
+ 1069	execAsync
+ 1070	miniapp_cli install "
+ 1071	"
+ 1072	" > /dev/null 2>&1 &
+ 1073	安装指令执行失败
+ 1074	更新包与当前平台（
+ 1075	）不符，已取消安装
+ 1076	rm -f "
+ 1077	curl -k -L "
+ 1078	" -o "
+ 1079	sh -c 'curl -k -L "
+ 1080	" >/dev/null 2>&1 & echo $!'
+ 1081	no pid
+ 1082	ls -l "
+ 1083	poll
+ 1084	progress
+ 1085	downloaded
+ 1086	isFinished
+ 1087	_dlPollBusy
+ 1088	sh -c "kill -0 
+ 1089	 2>/dev/null && echo 1 || echo 0"
+ 1090	sh -c "kill 
+ 1091	 >/dev/null 2>&1 || true"
+ 1092	下载完成，准备安装
+ 1093	文件下载失败或未找到
+ 1094	请求注入 SBC Quality=
+ 1095	 ...
+ 1096	蓝牙已切换至 Quality=
+ 1097	注入失败或服务未重启
+ 1098	音画同步补偿已设为 
+ 1099	 ms（重新开始播放后生效）
+ 1100	rw
+ 1101	读写 (rw)
+ 1102	ro
+ 1103	只读 (ro)
+ 1104	Shell.exec 不可用
+ 1105	(1/7) 获取设备标识
+ 1106	sh -c "cat /etc/machine-id 2>/dev/null || cat /proc/sys/kernel/random/uuid 2>/dev/null"
+ 1107	substring
+ 1108	(2/7) 获取网络地址
+ 1109	sh -c "ip addr show wlan0 2>/dev/null | awk '/inet / {print $2}' | head -n 1 | cut -d/ -f1"
+ 1110	sh -c "ip -4 addr show 2>/dev/null | awk '/inet / {print $2}' | head -n 1 | cut -d/ -f1"
+ 1111	sh -c "cat /proc/cmdline 2>/dev/null | sed -n \"s/.*slot_suffix=\\(\\S*\\).*/\\1/p\""
+ 1112	(3/7) 获取系统版本
+ 1113	uname -m
+ 1114	uname -r
+ 1115	uname -s
+ 1116	(4/7) 获取根文件系统
+ 1117	sh -c "mount 2>/dev/null | awk '$3==\"/\" {print $5, $6; exit}'"
+ 1118	(5/7) 获取存储状态
+ 1119	getStorageInfo
+ 1120	(6/7) 获取内存状态
+ 1121	getMemoryInfo
+ 1122	(7/7) 获取电池信息
+ 1123	getBatteryInfoAsync
+ 1124	race
+ 1125	level
+ 1126	sh -c "ip -4 addr show 2>/dev/null | head -n 120"
+ 1127	超时
+ 1128	执行 
+ 1129	 完成 (Code: 
+ 1130	time
+ 1131	abs
+ 1132	search
+ 1133	loginId
+ 1134	loginPw
+ 1135	desktopLyricOffset
+ 1136	inputMode
+ 1137	password
+ 1138	english
+ 1139	搜索: 
+ 1140	03bdf18ef0b07f90011985a3b4485c31
+ 1141	开发者页面已永久解锁
+ 1142	a66abb5684c45962d887564f08346e8d
+ 1143	管理页已打开
+ 1144	桌面歌词时差同步值已设置为 
+ 1145	进入桌面暗号已设置为 
+ 1146	$refs
+ 1147	mainScroller
+ 1148	logRow
+ 1149	scrollToElement
+ 1150	animated
+ 1151	showScrollbar
+ 1152	overScroll
+ 1153	overFling
+ 1154	attrs
+ 1155	设置
+ 1156	image
+ 1157	images/676c42ddfcd1bb9b8df22ebe6048b07b.png
+ 1158	src
+ 1159	搜索系统设置项
+ 1160	aspectFill
+ 1161	mode
+ 1162	staticStyle
+ 1163	?
+ 1164	已登录
+ 1165	#777777
+ 1166	›
+ 1167	ref
+ 1168	状态与信息
+ 1169	切换音质
+ 1170	音画同步（蓝牙/外放）
+ 1171	 ms
+ 1172	−100
+ 1173	−20
+ 1174	+20
+ 1175	+100
+ 1176	正在加载设备信息... 
+ 1177	错误
+ 1178	基本信息
+ 1179	设备ID
+ 1180	IP 地址
+ 1181	槽位信息
+ 1182	系统信息
+ 1183	设备型号
+ 1184	内核版本
+ 1185	系统版本
+ 1186	电池与电源
+ 1187	当前电量
+ 1188	根文件系统
+ 1189	挂载类型
+ 1190	挂载选项
+ 1191	资源利用率
+ 1192	14px 16px
+ 1193	padding
+ 1194	存储
+ 1195	#1ECE9B
+ 1196	divider
+ 1197	-16px
+ 1198	运行内存
+ 1199	交换空间 (Swap)
+ 1200	#ff375f
+ 1201	系统调试
+ 1202	ADB 跳过密码
+ 1203	验证文件已存在
+ 1204	验证文件不存在
+ 1205	translateX(18px)
+ 1206	translateX(0px)
+ 1207	驱动状态
+ 1208	高级操作
+ 1209	实时日志
+ 1210	暂无日志
+ 1211	LoliAPP
+ 1212	当前版本：v
+ 1213	正在检查更新...
+ 1214	已是最新版本
+ 1215	点击更新 v
+ 1216	正在下载新版本... 
+ 1217	立即安装
+ 1218	正在安装，请稍候...
+ 1219	版本更新记录
+ 1220	本地数据库管理 (
+ 1221	暂无数据库文件
+ 1222	外观
+ 1223	主题外观
+ 1224	个性化
+ 1225	选择桌面背景图片
+ 1226	已选择：
+ 1227	从相册选择一张图片
+ 1228	使用原生软键盘
+ 1229	CVIA 默认系统键盘；本平台不加载 Rime 输入法
+ 1230	在输入框获得焦点时调用系统的虚拟键盘
+ 1231	useSystemVideoPlayer
+ 1232	useCanvasPlayer
+ 1233	适配选项
+ 1234	界面缩放基准
+ 1235	−
+ 1236	＋
+ 1237	账号资产
+ 1238	 g
+ 1239	会话管理
+ 1240	登录凭证
+ 1241	...
+ 1242	transparent
+ 1243	退出登录
+ 1244	账号信息
+ 1245	#fff
+ 1246	#555
+ 1247	\n                  
+ 1248	请输入QQ号
+ 1249	\n                
+ 1250	••••••••
+ 1251	登录中...
+ 1252	登录
+ 1253	账号为QQ号，密码为砂糖云密码
+ 1254	开发团队
+ 1255	鸣谢列表
+ 1256	开源使用声明
+ 1257	确认删除
+ 1258	确定要删除数据库 [
+ 1259	] 吗？此操作不可恢复。
+ 1260	取消
+ 1261	退出后将清除本地登录凭证，需要重新输入账号密码登录。
+ 1262	确认退出
+ 1263	contain
+ 1264	resize
+ 1265	开启桌面终端
+ 1266	network
+ 1267	重载网卡
+ 1268	audio
+ 1269	重载音频
+ 1270	video
+ 1271	重载视频
+ 1272	refInFor
+ 1273	line
+ 1274	.db
+ 1275	删除
+ 1276	使用图片作为桌面背景
+ 1277	页面测试暗号入口
+ 1278	原生软键盘
+ 1279	系统视频播放器
+ 1280	通用播放
+ 1281	低性能先缓冲后播放
+ 1282	P5 视频坐标
+ 1283	stopPropagation
+ 1284	dev
+ 1285	https://q1.qlogo.cn/g?b=qq&nk=
+ 1286	&s=100
+ 1287	thanks
+ 1288	oss
+ 1289	 · 
+ 1290	未
+ 1291	登录砂糖云账号
+ 1292	查看余额、同步数据
+ 1293	SBC Quality
+ 1294	当前蓝牙音频编码等级
+ 1295	服务状态
+ 1296	以 Quality 0 启动
+ 1297	标准质量 · 默认参数
+ 1298	以 Quality 2 启动
+ 1299	高音质 · 推荐使用
+ 1300	推荐
+ 1301	以 Quality 3 启动
+ 1302	极高音质 · 实验性
+ 1303	实验
+ 1304	当前补偿量
+ 1305	声音比画面慢（口型先动）就调大＝延迟画面；改完需重新开始播放生效
+ 1306	声音更快 / 画面更早
+ 1307	微调 −20
+ 1308	微调 +20
+ 1309	声音更慢 / 画面更晚
+ 1310	重置为 0
+ 1311	允许在桌面直接进入终端环境
+ 1312	音频驱动
+ 1313	视频驱动
+ 1314	屏幕分辨率
+ 1315	旋转角度
+ 1316	insmod bes2600.ko
+ 1317	重启 audioserver
+ 1318	重启 surfaceflinger
+ 1319	清空全部日志
+ 1320	开启后桌面将显示自定义图片背景
+ 1321	进入桌面暗号
+ 1322	纯数字，用于计算器页面进入桌面
+ 1323	关闭后，1998/1997 等暗号无法跳转页面
+ 1324	使用系统视频播放器
+ 1325	播放时跳转到系统播放器，支持倍速与缩放
+ 1326	通用播放（Canvas）
+ 1327	开启使用 canvas 渲染，关闭则退回 fb0 显示
+ 1328	先完整解码视频再播放，适合性能不足的设备
+ 1329	异地组网代理（ALL_PROXY）
+ 1330	开启后仅本软件的 QQ 连接和终端会走本地代理 socks5h://127.0.0.1:1055（异地组网），不影响系统其他程序
+ 1331	禁用系统软件白名单
+ 1332	开启后可防止第三方软件被系统删除
+ 1333	针对特定屏幕比例修复视频画面偏移问题
+ 1334	隐藏密码修改入口
+ 1335	在搜索框重复输入密码两次可再次显示
+ 1336	桌面歌词时差同步值
+ 1337	单位秒：正数延迟，负数提前
+ 1338	☁
+ 1339	砂糖云
+ 1340	登录以同步数据与管理余额
+ 1341	账号
+ 1342	密码
+ 1343	砂糖余额
+ 1344	当前积分
+ 1345	用户等级

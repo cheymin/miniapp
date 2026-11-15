@@ -1,0 +1,12 @@
+# small-dbaa2389
+# atoms=8 bytecode_off=160 file_size=228
+# 格式: <atom_index>\t<atom_text>（\n 已转义为字面量 \\n）
+
+    0	small-dbaa2389.js
+    1	_
+    2	a
+    3	b
+    4	d
+    5	images/b9b1657d1477a026d7ab28697f77e120.png
+    6	images/138a818d7c9e0d5514dee18a8b59dc3d.png
+    7	images/99bf110363b3546c62547b09d0888a4d.png

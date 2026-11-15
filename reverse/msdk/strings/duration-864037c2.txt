@@ -1,0 +1,13 @@
+# duration-864037c2
+# atoms=9 bytecode_off=53 file_size=400
+# 格式: <atom_index>\t<atom_text>（\n 已转义为字面量 \\n）
+
+    0	duration-864037c2.js
+    1	d
+    2	n
+    3	t
+    4	isFinite
+    5	r
+    6	s
+    7	auto
+    8	round

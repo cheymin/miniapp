@@ -1,0 +1,349 @@
+# tools_camera
+# atoms=345 bytecode_off=5190 file_size=15248
+# 格式: <atom_index>\t<atom_text>（\n 已转义为字面量 \\n）
+
+    0	tools_camera.js
+    1	bridge
+    2	./format-90a6a181.js
+    3	./jslog-0a73e180.js
+    4	./screen-1861a6a2.js
+    5	f
+    6	b
+    7	l
+    8	g
+    9	t
+   10	e
+   11	r
+   12	i
+   13	o
+   14	a
+   15	s
+   16	n
+   17	d
+   18	c
+   19	h
+   20	p
+   21	u
+   22	/dev/video29
+   23	/dev/video30
+   24	/userdisk/Pictures
+   25	setsar=1
+   26	transpose=1,setsar=1
+   27	hflip,vflip,setsar=1
+   28	transpose=2,setsar=1
+   29	正
+   30	右
+   31	倒
+   32	左
+   33	mixins
+   34	data
+   35	created
+   36	mounted
+   37	beforeDestroy
+   38	initBridge
+   39	getRenderRectangleParam
+   40	getRotationParam
+   41	parseSelectionRect
+   42	buildCentered16By9Crop
+   43	applyCropForDevice
+   44	startPreview
+   45	getRecordFileName
+   46	formatRecordDuration
+   47	updateRecordElapsed
+   48	startRecordTimer
+   49	clearRecordTimer
+   50	toggleRecording
+   51	startRecording
+   52	stopRecording
+   53	takePhoto
+   54	execCmd
+   55	stopPreview
+   56	checkStorage
+   57	ensureDirectory
+   58	getTimestampParts
+   59	getCaptureRotationFilter
+   60	getCaptureRotationLabel
+   61	cycleCaptureRotation
+   62	sanitizeDeviceId
+   63	loadDeviceId
+   64	toast
+   65	showInfo
+   66	showError
+   67	onShow
+   68	onHide
+   69	methods
+   70	_withStripped
+   71	render
+   72	staticRenderFns
+   73	_compiled
+   74	data-v-05831a96
+   75	_scopeId
+   76	themes
+   77	assign
+   78	absolute
+   79	position
+   80	top
+   81	left
+   82	100%
+   83	width
+   84	height
+   85	#000000
+   86	backgroundColor
+   87	camera-container
+   88	rgba(0,0,0,0)
+   89	camera-hole
+   90	zIndex
+   91	opacity
+   92	flash-overlay
+   93	right
+   94	100px
+   95	column
+   96	flexDirection
+   97	center
+   98	justifyContent
+   99	alignItems
+  100	rgba(0,0,0,0.3)
+  101	controls-area
+  102	70px
+  103	16px
+  104	marginTop
+  105	btn-shutter-wrapper
+  106	36px
+  107	12px
+  108	1px
+  109	borderWidth
+  110	solid
+  111	borderStyle
+  112	rgba(255,255,255,0.7)
+  113	borderColor
+  114	borderRadius
+  115	rgba(255,255,255,0.08)
+  116	btn-rotate-wrapper
+  117	#ffffff
+  118	color
+  119	14px
+  120	fontSize
+  121	textAlign
+  122	btn-rotate-label
+  123	#f3f4f6
+  124	btn-rotate-label-disabled
+  125	btn-record-wrapper
+  126	54px
+  127	24px
+  128	3px
+  129	#ff453a
+  130	rgba(255,77,79,0.1)
+  131	btn-record-outer
+  132	34px
+  133	btn-record-inner
+  134	rgba(255,77,79,0.25)
+  135	btn-recording
+  136	20px
+  137	4px
+  138	btn-record-stop
+  139	8px
+  140	record-label
+  141	#ffb3b4
+  142	11px
+  143	record-time
+  144	35px
+  145	#FFFFFF
+  146	transform
+  147	transitionProperty
+  148	transitionDuration
+  149	ease-out
+  150	transitionTimingFunction
+  151	btn-shutter-outer
+  152	property
+  153	duration
+  154	timingFunction
+  155	@TRANSITION
+  156	scale(0.85)
+  157	btn-shutter-active
+  158	50px
+  159	25px
+  160	btn-shutter-inner
+  161	btn-shutter-outer-disabled
+  162	btn-shutter-inner-disabled
+  163	rgba(102,102,102,0.8)
+  164	rgba(102,102,102,0.15)
+  165	btn-rotate-wrapper-disabled
+  166	btn-record-outer-disabled
+  167	btn-record-inner-disabled
+  168	btn-record-stop-disabled
+  169	btn-record-wrapper-press
+  170	btn-shutter-wrapper-press
+  171	btn-rotate-wrapper-press
+  172	controls-area-l
+  173	rgba(0,0,0,0.7)
+  174	rgba(0,0,0,0.08)
+  175	btn-rotate-wrapper-l
+  176	#1c1c1e
+  177	btn-rotate-label-l
+  178	#3a3a3c
+  179	btn-rotate-label-disabled-l
+  180	#ff3b30
+  181	rgba(255,77,79,0.18)
+  182	btn-record-outer-l
+  183	btn-record-inner-l
+  184	btn-recording-l
+  185	record-label-l
+  186	#140000
+  187	record-time-l
+  188	btn-shutter-outer-disabled-l
+  189	btn-shutter-inner-disabled-l
+  190	rgba(102,102,102,0.18)
+  191	btn-rotate-wrapper-disabled-l
+  192	btn-record-outer-disabled-l
+  193	btn-record-stop-disabled-l
+  194	btn-record-inner-disabled-l
+  195	style
+  196	src/components/camera.vue
+  197	__file
+  198	CameraTool
+  199	components
+  200	forward
+  201	onLoad
+  202	onUnload
+  203	data-v-2a87e0f6
+  204	src/pages/apps/camera/camera.vue
+  205	previewPid
+  206	recordPid
+  207	recordPath
+  208	isPreviewing
+  209	isRecording
+  210	recordElapsedMs
+  211	recordStartedAt
+  212	recordTimer
+  213	bridgeReady
+  214	isCapturing
+  215	showFlash
+  216	isAnimating
+  217	captureRotationIndex
+  218	modal
+  219	shell
+  220	UNKNOWN
+  221	deviceId
+  222	deviceIdLoaded
+  223	physW
+  224	physH
+  225	weex
+  226	requireModule
+  227	setTimeout
+  228	Shell
+  229	getScreenSize
+  230	min
+  231	max
+  232	camera
+  233	bridge init
+  234	abs
+  235	round
+  236	render-rectangle="<
+  237	,
+  238	>"
+  239	videoflip video-direction=90l qos=false
+  240	match
+  241	parseInt
+  242	floor
+  243	v4l2-ctl -d 
+  244	 --get-selection=target=crop_bounds
+  245	crop-bounds-unavailable
+  246	 --set-crop top=
+  247	,left=
+  248	,width=
+  249	,height=
+  250	gst-launch-1.0 v4l2src device=
+  251	 ! video/x-raw,width=640,height=360,framerate=30/1,pixel-aspect-ratio=1/1 ! 
+  252	 ! videoscale ! video/x-raw,width=360,height=640,pixel-aspect-ratio=1/1 ! kmssink plane-id=75 sync=false driver-name=rockchip force-aspect-ratio=true 
+  253	 > /userdata/applog/gst_preview.log 2>&1 & echo $!
+  254	trim
+  255	isNaN
+  256	预览启动失败
+  257	date
+  258	time
+  259	ms
+  260	VID_
+  261	_
+  262	_1_
+  263	.avi
+  264	padStart
+  265	:
+  266	now
+  267	setInterval
+  268	clearInterval
+  269	录像存储空间不足
+  270	/
+  271	gst-launch-1.0 -e v4l2src device=
+  272	 ! 
+  273	video/x-raw,format=NV12,width=1280,height=720,framerate=30/1,pixel-aspect-ratio=1/1
+  274	 ! jpegenc ! avimux ! filesink location="
+  275	" > /userdata/applog/gst_record.log 2>&1 & echo $!
+  276	record-pid-invalid
+  277	开始录像
+  278	录像启动失败
+  279	sh -c 'kill -INT 
+  280	 2>/dev/null || true; for i in 1 2 3 4 5; do kill -0 
+  281	 2>/dev/null || exit 0; sleep 1; done; kill -TERM 
+  282	 2>/dev/null || true; for i in 1 2 3; do kill -0 
+  283	 2>/dev/null || exit 0; sleep 1; done; kill -9 
+  284	 2>/dev/null || true'
+  285	ls -l "
+  286	"
+  287	录像已保存
+  288	录像停止失败
+  289	IMG_
+  290	.JPG
+  291	 --silent --set-fmt-video=width=1920,height=1080,pixelformat=UYVY --stream-skip=1 --stream-mmap=1 --stream-poll --stream-count=1 --stream-to=/tmp/gc.yuv
+  292	ffmpeg -y -f rawvideo -video_size 1920x1080 -pixel_format uyvy422 -i /tmp/gc.yuv -vf "
+  293	" -frames:v 1 -q:v 2 "
+  294	照片已保存
+  295	拍照失败
+  296	Shell not ready
+  297	normalizeOutput
+  298	kill -9 
+  299	df -m 
+  300	 2>/dev/null | awk 'NR==2 {print $4}' || df -m /userdisk | awk 'NR==2 {print $4}'
+  301	mkdir -p "
+  302	getFullYear
+  303	getMonth
+  304	getDate
+  305	getHours
+  306	getMinutes
+  307	getSeconds
+  308	getMilliseconds
+  309	成片方向: 
+  310	replace
+  311	toUpperCase
+  312	cat /proc/device-tree/serial-number 2>/dev/null
+  313	cat /proc/cpuinfo 2>/dev/null | awk -F': ' '/Serial/ {print $2; exit}'
+  314	cat /etc/machine-id 2>/dev/null
+  315	错误: 
+  316	$createElement
+  317	_self
+  318	_c
+  319	div
+  320	staticClass
+  321	hole
+  322	_e
+  323	btn-disabled
+  324	click
+  325	on
+  326	text
+  327	_v
+  328	_s
+  329	停止
+  330	录像
+  331	$refs
+  332	tool
+  333	call
+  334	shell-camera
+  335	forward ok hook=
+  336	forward 调用抛错 hook=
+  337	forward:组件缺少方法 hook=
+  338	camera-tool has no method 
+  339	forward:组件未渲染 $refs.tool 为空 hook=
+  340	camera-tool not mounted
+  341	onLoad 
+  342	stringify
+  343	camera-tool
+  344	ref

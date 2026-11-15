@@ -1,0 +1,126 @@
+# jslog-0a73e180
+# atoms=122 bytecode_off=911 file_size=6911
+# 格式: <atom_index>\t<atom_text>（\n 已转义为字面量 \\n）
+
+    0	jslog-0a73e180.js
+    1	a
+    2	b
+    3	c
+    4	d
+    5	e
+    6	f
+    7	g
+    8	h
+    9	i
+   10	j
+   11	k
+   12	l
+   13	m
+   14	n
+   15	o
+   16	r
+   17	s
+   18	u
+   19	t
+   20	y
+   21	p
+   22	v
+   23	w
+   24	S
+   25	_
+   26	x
+   27	D
+   28	E
+   29	T
+   30	C
+   31	$
+   32	H
+   33	I
+   34	X
+   35	F
+   36	J
+   37	O
+   38	R
+   39	q
+   40	[loli]
+   41	info
+   42	/userdata/applog/loli_cvi_dev.txt
+   43	debug
+   44	warn
+   45	error
+   46	log
+   47	require
+   48	bridge
+   49	$falcon
+   50	Datas
+   51	Dbase
+   52	__loliStoreInstrumented
+   53	read
+   54	write
+   55	remove
+   56	(
+   57	)
+   58	Shell
+   59	Fetch
+   60	[fn]
+   61	stringify
+   62	[object]
+   63	[unprintable]
+   64	slice
+   65	 || 
+   66	[err-unprintable]
+   67	console
+   68	bind
+   69	splice
+   70	map
+   71	 
+   72	mkdir -p /userdata/applog; printf '%s\n' 
+   73	 >> 
+   74	replace
+   75	'\''
+   76	getFullYear
+   77	-
+   78	getMonth
+   79	getDate
+   80	getHours
+   81	:
+   82	getMinutes
+   83	getSeconds
+   84	indexOf
+   85	  <
+   86	>
+   87	now
+   88	push
+   89	shift
+   90	setTimeout
+   91	[
+   92	]
+   93	] EXC 
+   94	 :: 
+   95	__loliBridged
+   96	[console:
+   97	onerror
+   98	window
+   99	process
+  100	on
+  101	uncaughtException
+  102	unhandledRejection
+  103	error capture installed
+  104	[global] EXC uncaught :: 
+  105	 @
+  106	[global] EXC uncaughtException :: 
+  107	[global] EXC unhandledRejection :: 
+  108	__loliJsLogInstalled
+  109	config
+  110	errorHandler
+  111	warnHandler
+  112	mixin
+  113	errorCaptured
+  114	created
+  115	vue
+  116	js log installed
+  117	config.errorHandler 
+  118	[vue] WARN 
+  119	errorCaptured 
+  120	$options
+  121	anonymous

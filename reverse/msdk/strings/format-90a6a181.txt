@@ -1,0 +1,59 @@
+# format-90a6a181
+# atoms=55 bytecode_off=432 file_size=1847
+# 格式: <atom_index>\t<atom_text>（\n 已转义为字面量 \\n）
+
+    0	format-90a6a181.js
+    1	./jslog-0a73e180.js
+    2	e
+    3	f
+    4	n
+    5	s
+    6	o
+    7	t
+    8	r
+    9	a
+   10	i
+   11	escapeShellDoubleQuoted
+   12	safeText
+   13	nextFrame
+   14	formatDateKey
+   15	parseDateKey
+   16	getWeekText
+   17	getEventValue
+   18	normalizeOutput
+   19	formatDateTime
+   20	initDbase
+   21	startTickTimer
+   22	stopTickTimer
+   23	methods
+   24	replace
+   25	\\
+   26	\"
+   27	\$
+   28	\`
+   29	setTimeout
+   30	getFullYear
+   31	-
+   32	getMonth
+   33	padStart
+   34	getDate
+   35	parseInt
+   36	isNaN
+   37	日
+   38	一
+   39	二
+   40	三
+   41	四
+   42	五
+   43	六
+   44	detail
+   45	output
+   46	 
+   47	getHours
+   48	:
+   49	getMinutes
+   50	$Dbase
+   51	tickTimer
+   52	setInterval
+   53	handleTick
+   54	clearInterval

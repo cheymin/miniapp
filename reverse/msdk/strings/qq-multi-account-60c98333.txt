@@ -1,0 +1,54 @@
+# qq-multi-account-60c98333
+# atoms=50 bytecode_off=524 file_size=1711
+# 格式: <atom_index>\t<atom_text>（\n 已转义为字面量 \\n）
+
+    0	qq-multi-account-60c98333.js
+    1	c
+    2	r
+    3	s
+    4	u
+    5	t
+    6	e
+    7	n
+    8	i
+    9	o
+   10	ob_accounts
+   11	ob_account_current
+   12	freeze
+   13	ob_account_migrated_v1
+   14	ob_account_session
+   15	ob_qqbot_device_identity
+   16	ob_device_token
+   17	ob_ws_config
+   18	ob_settings
+   19	ob_popup_notice_enabled
+   20	ob_store_diag
+   21	ob_store_probe
+   22	messages
+   23	messageStore
+   24	chatList
+   25	groupList
+   26	friendList
+   27	currentChat
+   28	groupMembers
+   29	addRequests
+   30	pendingImages
+   31	forwardPreviewItems
+   32	memeList
+   33	hiddenChats
+   34	unreadProgress
+   35	unreadTotal
+   36	unreadLoaded
+   37	syncGapWarning
+   38	read
+   39	parse
+   40	isArray
+   41	filter
+   42	map
+   43	qqUin
+   44	trim
+   45	findIndex
+   46	lastUsedAt
+   47	now
+   48	push
+   49	write

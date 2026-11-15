@@ -1,0 +1,18 @@
+# trash-4b64e144
+# atoms=14 bytecode_off=256 file_size=354
+# 格式: <atom_index>\t<atom_text>（\n 已转义为字面量 \\n）
+
+    0	trash-4b64e144.js
+    1	_
+    2	a
+    3	b
+    4	c
+    5	d
+    6	f
+    7	e
+    8	g
+    9	images/b059ed2229b186eb7ef6fe3dcf6a2124.png
+   10	images/3ffe06f89449fd54792ff3e97dc2fad2.png
+   11	images/ff41a7c7720f23ab013fb3b277a317d4.png
+   12	images/348d5bc6f4f5e11a9a3b8ba9ec80f1f8.png
+   13	images/5c228a583f28b0baa013ba718a7910eb.png

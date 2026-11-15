@@ -1,0 +1,12 @@
+# version-d96a99cf
+# atoms=8 bytecode_off=52 file_size=117
+# 格式: <atom_index>\t<atom_text>（\n 已转义为字面量 \\n）
+
+    0	version-d96a99cf.js
+    1	b
+    2	i
+    3	n
+    4	s
+    5	a
+    6	1.15.5
+    7	202610071708
