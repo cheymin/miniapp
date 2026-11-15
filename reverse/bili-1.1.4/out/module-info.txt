@@ -1,0 +1,30 @@
+=== MODULE: m73c240220fc98f0c.js ===
+import module[0]: biliio
+import module[1]: canvasdecoder
+import module[2]: volume
+import module[3]: bilidanmaku
+import module[4]: global
+import module[5]: bililicense
+function: <eval>
+  mode: strict
+  closure vars:
+    0: <null> parent:loc0 const
+    1: <null> parent:loc1 const
+    2: <null> parent:loc2 const
+    3: <null> parent:loc3 const
+    4: <null> parent:loc4 const
+    5: <null> parent:loc5 const
+    6: <null> parent:loc6 const
+    7: <null> parent:loc7 const
+    8: <null> parent:loc8 const
+    9: <null> local:loc0 let
+   10: <null> local:loc1 let
+   11: <null> local:loc2 const
+   12: <null> local:loc3 const
+   13: <null> local:loc4 let
+   14: <null> local:loc5 var
+   15: <null> local:loc6 var
+   16: <null> local:loc7 var
+   17: <null> local:loc8 var
+   18: <null> local:loc9 var
+   19: <null> local:loc10 let

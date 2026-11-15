@@ -1,0 +1,22 @@
+Archive:  /workspace/.uploads/c6e0c864-812e-4612-b8d2-7162a51825b8_bili-a6p-1.1.4-production.amr
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+       67  2026-11-13 18:52   app.js.bin
+  1341233  2026-10-02 01:03   app_icon.png
+     1887  2026-11-13 18:53   manifest.json
+   217268  2026-11-13 18:51   assets/ca-certificates.pem
+   133000  2026-11-13 18:53   libs/libjsapi_bilidanmaku.so
+   362008  2026-11-13 18:53   libs/libjsapi_biliio.so
+    94968  2026-11-13 18:53   libs/libjsapi_bililicense.so
+   187432  2026-11-13 18:53   libs/libjsapi_canvasdecoder.so
+   397760  2026-11-13 18:53   libs/libjsapi_p73c240220fc98f0c.so
+     1773  2026-11-13 18:51   assets/nekoh264/build-info.json
+    27028  2026-11-08 05:54   assets/nekoh264/COPYING.LGPLv2.1
+     7816  2026-11-08 05:54   assets/nekoh264/COPYING.LGPLv3
+     6397  2026-11-08 05:54   assets/nekoh264/COPYING.MUSL
+     1101  2026-11-08 05:54   assets/nekoh264/COPYING.ZIG
+     8775  2026-11-08 05:54   assets/nekoh264/ffmpeg-shim.sh
+  1810552  2026-11-08 05:54   assets/nekoh264/nekoh264
+     2589  2026-11-08 05:54   assets/nekoh264/NOTICE.md
+---------                     -------
+  4601654                     17 files
