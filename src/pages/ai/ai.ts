@@ -19,6 +19,7 @@ import { defineComponent } from 'vue';
 import { AI } from 'langningchen';
 import { ROLE, ConversationNode, STOP_REASON } from '../../@types/langningchen';
 import { showError } from '../../components/ToastMessage';
+import { showLoading, hideLoading } from '../../components/Loading';
 import { openSystemInput } from '../../utils/systemInput';
 
 export type aiOptions = {};
@@ -44,6 +45,10 @@ const ai = defineComponent({
     destroyed() {
         this.$page.off("show", this.onPageShow);
     },
+    unmounted() {
+        this.$page.off("show", this.onPageShow);
+        hideLoading();
+    },
 
     mounted() {
         try {
@@ -51,6 +56,7 @@ const ai = defineComponent({
             this.aiInitialized = true;
             this.refreshMessages();
             AI.on('ai_stream', (data: string) => {
+                if (data) { hideLoading(); }
                 this.streamingContent += data;
                 this.$forceUpdate();
             });
@@ -102,9 +108,13 @@ const ai = defineComponent({
             const scroller = this.$refs.messageScroller as unknown as {
                 scrollTo?: (options: { x: number; y: number; animated: boolean }) => void;
             };
-            if (scroller && typeof scroller.scrollTo === 'function') {
-                scroller.scrollTo({ x: 0, y: 999999, animated: true });
-            }
+            const doScroll = () => {
+                if (scroller && typeof scroller.scrollTo === 'function') {
+                    scroller.scrollTo({ x: 0, y: 999999, animated: true });
+                }
+            };
+            doScroll();
+            setTimeout(doScroll, 80);
         },
 
         onPageShow() {
@@ -143,12 +153,14 @@ const ai = defineComponent({
 
         async generateResponse() {
             this.isStreaming = true;
+            showLoading();
             AI.generateResponse().then(() => {
                 this.refreshMessages();
                 this.$forceUpdate();
             }).catch((e) => {
                 showError(e as string || '生成响应失败');
             }).finally(() => {
+                hideLoading();
                 this.isStreaming = false;
                 this.streamingContent = '';
             });
@@ -157,6 +169,7 @@ const ai = defineComponent({
         stopGeneration() {
             if (this.isStreaming) {
                 AI.stopGeneration();
+                hideLoading();
                 setTimeout(() => {
                     this.isStreaming = false;
                     this.streamingContent = '';

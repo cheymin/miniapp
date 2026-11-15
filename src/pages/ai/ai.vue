@@ -44,12 +44,12 @@
 
                 <div class="side-buttons">
                     <text @click="openHistory"
-                        :class="'square-btn' + (isStreaming ? ' square-btn-disabled' : '')">历</text>
+                        :class="'square-btn side-square-btn' + (isStreaming ? ' square-btn-disabled' : '')">历</text>
                     <text @click="openMessageNavigation"
-                        :class="'square-btn' + (isStreaming ? ' square-btn-disabled' : '')">导</text>
+                        :class="'square-btn side-square-btn' + (isStreaming ? ' square-btn-disabled' : '')">导</text>
                     <text @click="openSettings"
-                        :class="'square-btn' + (isStreaming ? ' square-btn-disabled' : '')">设</text>
-                    <text @click="scrollToBottom" class="square-btn">底</text>
+                        :class="'square-btn side-square-btn' + (isStreaming ? ' square-btn-disabled' : '')">设</text>
+                    <text @click="scrollToBottom" class="square-btn side-square-btn">底</text>
                 </div>
             </div>
 
@@ -61,6 +61,7 @@
                 <text v-else @click="stopGeneration" class="square-btn square-btn-danger">停</text>
             </div>
         </div>
+        <Loading />
         <ToastMessage />
     </div>
 </template>
@@ -70,11 +71,13 @@
 </style>
 
 <script>
+import Loading from '../../components/Loading.vue';
 import ToastMessage from '../../components/ToastMessage.vue';
 import ai from './ai';
 export default {
     ...ai,
     components: {
+        Loading,
         ToastMessage
     }
 }

@@ -19,16 +19,24 @@
 
 <template>
     <div>
-        <div class="container image-view">
-            <div class="item">
-                <text class="item-input" @click="editUrl">{{ url || '点击输入图片地址（http/https/本地路径）' }}</text>
-                <text v-if="url" class="btn btn-danger" @click="clearUrl">清空</text>
-                <text class="btn btn-info" @click="goBack">返回</text>
+        <div class="container viewer">
+            <div class="topbar">
+                <text class="path-input" @click="editPath">{{ path || '输入本地目录或图片路径' }}</text>
+                <text class="viewer-btn btn-primary" @click="scan">{{ scanning ? '扫描中' : '扫描' }}</text>
+                <text class="viewer-btn btn-info" @click="goBack">返回</text>
             </div>
 
             <div class="image-area">
-                <AppImage v-if="url" :src="url" :width="width" :height="height" resize="contain" />
-                <text v-else class="image-hint">输入图片地址后在此查看</text>
+                <AppImage v-if="current" :src="current" :width="544" :height="88" resize="contain" />
+                <text v-else class="image-hint">{{ scanning ? '正在扫描图片...' : '输入目录后点击扫描，可逐张查看' }}</text>
+            </div>
+
+            <div class="bottombar" v-if="images.length > 0">
+                <text :class="'viewer-btn ' + (index > 0 ? 'btn-primary' : 'btn-disabled')" @click="prev">上一张</text>
+                <text class="counter">{{ index + 1 }} / {{ images.length }}</text>
+                <text :class="'viewer-btn ' + (index < images.length - 1 ? 'btn-primary' : 'btn-disabled')" @click="next">下一张</text>
+                <text :class="'viewer-btn ' + (autoPlay ? 'btn-danger' : 'btn-success')" @click="toggleAutoPlay">{{ autoPlay ? '停止' : '播放' }}</text>
+                <text class="filename">{{ currentName }}</text>
             </div>
         </div>
         <ToastMessage />

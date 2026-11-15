@@ -19,28 +19,61 @@
 
 <template>
     <div>
-        <scroller class="container" scroll-direction="vertical" :show-scrollbar="true">
-            <div v-if="checking" class="section">
-                <text class="section-title">正在启动...</text>
+        <div class="container home">
+            <div v-if="checking" class="center-box">
+                <text class="hint">正在启动...</text>
             </div>
 
-            <div v-else-if="locked" class="section lock-section">
-                <text class="section-title">应用已锁定</text>
-                <text class="lock-hint">需要输入密码才能继续使用</text>
-                <div class="btn-area">
-                    <text class="btn btn-primary lock-btn" @click="unlock">输入密码解锁</text>
+            <div v-else-if="locked" class="center-box">
+                <div class="lock-card">
+                    <image class="lock-icon" :src="icons.lock" :width="26" :height="26" />
+                    <text class="lock-title">应用已锁定</text>
+                    <text class="lock-hint">输入密码后继续使用</text>
+                    <text class="unlock-btn" @click="unlock">解锁</text>
                 </div>
             </div>
 
-            <div v-else class="section">
-                <text class="section-title">可用功能</text>
+            <div v-else class="home-body">
+                <div class="home-header">
+                    <text class="home-title">Cheymin Pen</text>
+                    <text class="home-subtitle">工具中心</text>
+                </div>
 
-                <div class="item"><text class="item-text" @click="openAi">AI 助手</text></div>
-                <div class="item"><text class="item-text" @click="openImageView">图片查看</text></div>
-                <div class="item"><text class="item-text" @click="openUpdate">检查更新</text></div>
-                <div class="item"><text class="item-text" @click="openSettings">设置</text></div>
+                <div class="feature-grid">
+                    <div class="feature-card" @click="openAi">
+                        <div class="icon-box icon-ai">
+                            <image class="feature-icon" :src="icons.ai" :width="26" :height="26" />
+                        </div>
+                        <text class="feature-title">AI 助手</text>
+                        <text class="feature-desc">对话与写作</text>
+                    </div>
+
+                    <div class="feature-card" @click="openImageView">
+                        <div class="icon-box icon-image">
+                            <image class="feature-icon" :src="icons.image" :width="26" :height="26" />
+                        </div>
+                        <text class="feature-title">图片查看</text>
+                        <text class="feature-desc">扫描本地图片</text>
+                    </div>
+
+                    <div class="feature-card" @click="openUpdate">
+                        <div class="icon-box icon-update">
+                            <image class="feature-icon" :src="icons.update" :width="26" :height="26" />
+                        </div>
+                        <text class="feature-title">检查更新</text>
+                        <text class="feature-desc">获取最新版本</text>
+                    </div>
+
+                    <div class="feature-card" @click="openSettings">
+                        <div class="icon-box icon-settings">
+                            <image class="feature-icon" :src="icons.settings" :width="26" :height="26" />
+                        </div>
+                        <text class="feature-title">设置</text>
+                        <text class="feature-desc">密码与偏好</text>
+                    </div>
+                </div>
             </div>
-        </scroller>
+        </div>
         <ToastMessage />
     </div>
 </template>

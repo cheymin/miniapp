@@ -19,6 +19,11 @@ import { defineComponent } from 'vue';
 import { showError, showSuccess } from '../../components/ToastMessage';
 import { loadPassword, verifyPassword } from '../../utils/password';
 import { openSystemInput } from '../../utils/systemInput';
+import aiIcon from '../../../images/home/ai.png';
+import imageIcon from '../../../images/home/image.png';
+import updateIcon from '../../../images/home/update.png';
+import settingsIcon from '../../../images/home/settings.png';
+import lockIcon from '../../../images/home/lock.png';
 
 export type indexOptions = {};
 
@@ -29,6 +34,13 @@ const index = defineComponent({
             checking: true,
             locked: false,
             passwordHash: '',
+            icons: {
+                ai: aiIcon,
+                image: imageIcon,
+                update: updateIcon,
+                settings: settingsIcon,
+                lock: lockIcon,
+            },
         };
     },
 

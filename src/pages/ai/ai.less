@@ -1,13 +1,17 @@
 @import url('../../styles/section.less');
 
 .side-buttons {
+    width: 72px;
     background-color: #111111;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
     align-items: center;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    gap: 6px;
+    gap: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 .square-btn {
@@ -32,6 +36,14 @@
 .square-btn-disabled {
     background-color: #444444;
     color: #888888;
+}
+
+.side-square-btn {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 17px;
+    border-radius: 10px;
 }
 
 .messages-scroller {

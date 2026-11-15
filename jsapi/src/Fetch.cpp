@@ -49,25 +49,56 @@ static int xferinfo(void *clientp, curl_off_t dltotal, curl_off_t dlnow, curl_of
         return 1;
     return 0;
 }
+
+struct StreamContext
+{
+    const FetchOptions *options;
+    std::string buffer;
+    std::string raw;
+    bool sawData = false;
+};
+
+static void processStreamLine(StreamContext *context, const std::string &rawLine)
+{
+    std::string line = rawLine;
+    if (!line.empty() && line.back() == '\r')
+        line.pop_back();
+    if (line.rfind("data:", 0) != 0)
+        return;
+
+    std::string payload = line.substr(5);
+    if (!payload.empty() && payload.front() == ' ')
+        payload.erase(payload.begin());
+    if (payload.empty())
+        return;
+
+    context->sawData = true;
+    context->options->streamCallback(payload);
+}
+
 size_t Fetch::StreamWriteCallback(void *contents, size_t size, size_t nmemb, void *userdata)
 {
     size_t totalSize = size * nmemb;
+    StreamContext *context = static_cast<StreamContext *>(userdata);
+    if (!context || !context->options)
+        return totalSize;
+
+    const FetchOptions *options = context->options;
+    if (options->cancelled && options->cancelled->load())
+        return 0;
+
     try
     {
-        const FetchOptions *options = static_cast<const FetchOptions *>(userdata);
-        if (options && options->cancelled && options->cancelled->load())
-            return 0;
-        if (options && options->streamCallback)
+        context->raw.append((char *)contents, totalSize);
+        context->buffer.append((char *)contents, totalSize);
+
+        // 网络分片可能把一行 SSE 拆开，必须缓存到换行再解析，否则反代节点会丢内容
+        size_t newlinePos;
+        while ((newlinePos = context->buffer.find('\n')) != std::string::npos)
         {
-            std::string chunk((char *)contents, totalSize);
-            std::istringstream stream(chunk);
-            std::string line;
-            while (std::getline(stream, line))
-            {
-                line = strUtils::trimEnd(line);
-                if (line.substr(0, 6) == "data: ")
-                    options->streamCallback(line.substr(6));
-            }
+            std::string line = context->buffer.substr(0, newlinePos);
+            context->buffer.erase(0, newlinePos + 1);
+            processStreamLine(context, line);
         }
     }
     catch (const std::exception &e)
@@ -117,10 +148,12 @@ Response Fetch::fetch(const std::string &url, const FetchOptions &options)
         ASSERT_CURL_OK(curl_easy_setopt(curl, CURLOPT_NOPROGRESS, 0L));
     }
 
+    StreamContext streamContext = {&options, "", "", false};
+
     if (options.stream && options.streamCallback)
     {
         ASSERT_CURL_OK(curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, StreamWriteCallback));
-        ASSERT_CURL_OK(curl_easy_setopt(curl, CURLOPT_WRITEDATA, &options));
+        ASSERT_CURL_OK(curl_easy_setopt(curl, CURLOPT_WRITEDATA, &streamContext));
     }
     else
     {
@@ -149,13 +182,31 @@ Response Fetch::fetch(const std::string &url, const FetchOptions &options)
     if (headers)
         ASSERT_CURL_OK(curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers));
 
-    ASSERT_CURL_OK(curl_easy_perform(curl));
+    CURLcode performResult = curl_easy_perform(curl);
+
+    if (options.stream && options.streamCallback)
+    {
+        // 最后一行可能没有换行符
+        if (!streamContext.buffer.empty() && streamContext.sawData)
+            processStreamLine(&streamContext, streamContext.buffer);
+        // 反代忽略 stream=true 时返回普通 JSON，整体交给上层兜底解析
+        if (!streamContext.sawData && !streamContext.raw.empty() &&
+            (!options.cancelled || !options.cancelled->load()))
+            options.streamCallback(streamContext.raw);
+    }
 
     ASSERT_CURL_OK(curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &responseCode));
 
     if (headers)
         curl_slist_free_all(headers);
     curl_easy_cleanup(curl);
+
+    if (performResult != CURLE_OK && performResult != CURLE_ABORTED_BY_CALLBACK)
+    {
+        // 反代提前断开时保留已收内容，不要整段丢弃
+        if (!(options.stream && performResult == CURLE_PARTIAL_FILE))
+            THROW_CURL_ERROR(performResult);
+    }
 
     Response response(responseCode, responseBody);
     response.headers = responseHeaders;

@@ -293,10 +293,27 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
         if (chunk.empty() || chunk == "[DONE]")
             return;
 
-        nlohmann::json chunkJson = nlohmann::json::parse(chunk);
-        auto choice = chunkJson["choices"][0];
+        nlohmann::json chunkJson;
+        try
+        {
+            chunkJson = nlohmann::json::parse(chunk);
+        }
+        catch (const std::exception &e)
+        {
+            // 反代可能截断某一行，跳过坏块但继续接收后续内容
+            std::cerr << "Invalid AI stream chunk: " << e.what() << std::endl;
+            return;
+        }
 
-        if (choice["finish_reason"].is_string())
+        if (!chunkJson.contains("choices") || !chunkJson["choices"].is_array() ||
+            chunkJson["choices"].empty())
+            return;
+
+        const auto &choice = chunkJson["choices"][0];
+        if (!choice.is_object())
+            return;
+
+        if (choice.contains("finish_reason") && choice["finish_reason"].is_string())
         {
             std::string finishReason = choice["finish_reason"];
             if (finishReason == "stop")
@@ -310,10 +327,22 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
         }
 
         std::string content = "";
-        if (choice["delta"]["reasoning_content"].is_string())
-            content += choice["delta"]["reasoning_content"];
-        if (choice["delta"]["content"].is_string())
-            content += choice["delta"]["content"];
+        if (choice.contains("delta") && choice["delta"].is_object())
+        {
+            const auto &delta = choice["delta"];
+            if (delta.contains("reasoning_content") && delta["reasoning_content"].is_string())
+                content += delta["reasoning_content"].get<std::string>();
+            if (delta.contains("content") && delta["content"].is_string())
+                content += delta["content"].get<std::string>();
+        }
+        else if (choice.contains("message") && choice["message"].is_object())
+        {
+            // 兼容反代忽略 stream=true、直接返回完整响应的情况
+            const auto &message = choice["message"];
+            if (message.contains("content") && message["content"].is_string())
+                content += message["content"].get<std::string>();
+            finalStopReason = ConversationNode::STOP_REASON_STOP;
+        }
         if (content != "")
         {
             {
@@ -386,6 +415,9 @@ std::string AI::generateResponse(AIStreamCallback streamCallback)
     }
     if (!response.isOk())
         THROW_NETWORK_ERROR(response.status);
+
+    if (finalStopReason == ConversationNode::STOP_REASON_NONE && !fullAssistantResponse.empty())
+        finalStopReason = ConversationNode::STOP_REASON_STOP;
 
     {
         std::lock_guard<std::mutex> lock(responseMutex);

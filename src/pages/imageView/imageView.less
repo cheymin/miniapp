@@ -1,23 +1,79 @@
 @import url('../../styles/section.less');
 
-.image-view {
+.viewer {
+    padding: 4px 8px;
     display: flex;
     flex-direction: column;
+    gap: 4px;
+}
+
+.topbar {
+    height: 28px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 6px;
 }
 
-.image-area {
+.path-input {
     flex: 1;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 10px;
+    background-color: #15171c;
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 10px;
+}
+
+.viewer-btn {
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 9px;
+    color: #ffffff;
+}
+
+.btn-disabled {
+    background-color: #2a2d33;
+    color: #777c85;
+}
+
+.image-area {
+    height: 88px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #111111;
+    background-color: #0b0c10;
     border-radius: 12px;
-    border-width: 1px;
-    border-color: #333333;
+    overflow: hidden;
 }
 
 .image-hint {
-    font-size: 18px;
-    color: #888888;
+    font-size: 16px;
+    color: #8a8f98;
+}
+
+.bottombar {
+    height: 26px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+}
+
+.counter {
+    font-size: 14px;
+    color: #ffffff;
+    min-width: 54px;
+    text-align: center;
+}
+
+.filename {
+    flex: 1;
+    font-size: 12px;
+    color: #8a8f98;
+    text-align: right;
 }
