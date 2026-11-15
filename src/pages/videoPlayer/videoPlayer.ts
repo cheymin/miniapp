@@ -30,8 +30,6 @@ const SCREEN_HEIGHT = 170;
 // 抽帧帧率：兼顾流畅度与设备解码能力
 const PLAY_FPS = 8;
 const CACHE_ROOT = '/userdisk/.cheymin/player';
-// 后台命令统一解析 ffmpeg 路径（固件通常为 /usr/bin/ffmpeg）
-const FF_PREFIX = 'FF=$(command -v ffmpeg 2>/dev/null || echo /usr/bin/ffmpeg); ';
 
 function shellQuote(value: string): string {
     return `'${value.replace(/'/g, "'\\''")}'`;
@@ -58,6 +56,10 @@ const videoPlayer = defineComponent({
             audioPidFile: '',
 
             ffmpegReady: false,
+            ffmpegBin: '/usr/bin/ffmpeg',
+            ffplayBin: 'ffplay',
+            audioBackend: '' as '' | 'aplay' | 'ffplay',
+            useSetsid: false,
             audioReady: false,
             hasAudio: false,
             duration: 0,
@@ -91,6 +93,7 @@ const videoPlayer = defineComponent({
         hintText(): string {
             if (this.ended) { return '播放结束'; }
             if (this.buffering) { return '缓冲中...'; }
+            if (this.hasAudio && !this.audioReady) { return '无音频输出（缺少 aplay/ffplay）'; }
             if (!this.playing) { return '已暂停'; }
             return '';
         },
@@ -128,7 +131,10 @@ const videoPlayer = defineComponent({
                 return;
             }
 
-            const version = await this.safeExec(`${FF_PREFIX}"$FF" -version 2>&1 | head -n 1`);
+            const ffmpegPath = await this.safeExec('command -v ffmpeg 2>/dev/null');
+            this.ffmpegBin = ffmpegPath.trim() || '/usr/bin/ffmpeg';
+
+            const version = await this.safeExec(`${shellQuote(this.ffmpegBin)} -version 2>&1 | head -n 1`);
             this.ffmpegReady = !!version && /version/i.test(version) && !/not found/i.test(version);
             if (!this.ffmpegReady) {
                 this.message = '设备未找到 ffmpeg，无法解码视频';
@@ -136,8 +142,21 @@ const videoPlayer = defineComponent({
                 return;
             }
 
+            // 音频输出：优先 ALSA 的 aplay，其次 ffplay
             const aplay = await this.safeExec('command -v aplay 2>/dev/null');
-            this.audioReady = !!aplay && aplay.trim().length > 0;
+            if (aplay.trim()) {
+                this.audioBackend = 'aplay';
+            } else {
+                const ffplay = await this.safeExec('command -v ffplay 2>/dev/null');
+                if (ffplay.trim()) {
+                    this.audioBackend = 'ffplay';
+                    this.ffplayBin = ffplay.trim();
+                }
+            }
+            this.audioReady = !!this.audioBackend;
+
+            const setsid = await this.safeExec('command -v setsid 2>/dev/null');
+            this.useSetsid = !!setsid.trim();
 
             const ok = await this.probeMedia();
             if (!ok) { return; }
@@ -153,7 +172,7 @@ const videoPlayer = defineComponent({
         },
 
         async probeMedia(): Promise<boolean> {
-            const cmd = `${FF_PREFIX}"$FF" -hide_banner -i ${shellQuote(this.path)} 2>&1 | head -n 80`;
+            const cmd = `${shellQuote(this.ffmpegBin)} -hide_banner -i ${shellQuote(this.path)} 2>&1 | head -n 80`;
             const text = await this.safeExec(cmd);
 
             const durationMatch = /Duration:\s*(\d+):(\d+):(\d+(?:\.\d+)?)/.exec(text);
@@ -182,11 +201,11 @@ const videoPlayer = defineComponent({
         async diagnose(fromSeconds: number): Promise<string> {
             const input = this.buildInputArgs(fromSeconds);
             const args = [
-                '"$FF"', '-hide_banner', '-loglevel', 'error', '-nostdin',
+                shellQuote(this.ffmpegBin), '-hide_banner', '-loglevel', 'error', '-nostdin',
                 ...input,
                 '-frames:v', '1', '-y', shellQuote(`${this.dir}/diagnose.jpg`),
             ].join(' ');
-            const out = await this.safeExec(`${FF_PREFIX}( ${args} ) 2>&1 | head -n 2`);
+            const out = await this.safeExec(`( ${args} ) 2>&1 | head -n 2`);
             const detail = (out || '').trim();
             return detail ? `无法播放：${detail}` : '无法播放：取帧超时（请检查文件是否存在）';
         },
@@ -213,9 +232,6 @@ const videoPlayer = defineComponent({
             this.stallSince = 0;
 
             await this.spawnVideo(this.index, position);
-            if (this.hasAudio && this.audioReady) {
-                await this.spawnAudio(position);
-            }
 
             const first = await this.waitForFrame(this.index, 10000);
             if (!first) {
@@ -238,7 +254,23 @@ const videoPlayer = defineComponent({
                 return;
             }
 
+            // 首帧已上屏再起音频，让声音和画面从同一个位置开始
+            if (this.hasAudio && this.audioReady) {
+                await this.spawnAudio(position);
+            }
+
             this.scheduleTick();
+        },
+
+        /**
+         * 后台起一个独立进程组执行脚本，退出时整组回收，避免残留 ffmpeg 占 CPU。
+         */
+        spawnDetached(pidFile: string, script: string) {
+            const quoted = shellQuote(script);
+            const launch = this.useSetsid
+                ? `setsid sh -c ${quoted} >/dev/null 2>&1 &`
+                : `sh -c ${quoted} >/dev/null 2>&1 &`;
+            return exec(`( ${launch} echo $! > ${shellQuote(pidFile)} )`);
         },
 
         spawnVideo(startIndex: number, fromSeconds: number) {
@@ -248,7 +280,7 @@ const videoPlayer = defineComponent({
                 `pad=${SCREEN_WIDTH}:${SCREEN_HEIGHT}:(ow-iw)/2:(oh-ih)/2:color=black`;
             const input = this.buildInputArgs(fromSeconds);
             const args = [
-                '"$FF"', '-hide_banner', '-loglevel', 'error', '-nostdin', '-re',
+                shellQuote(this.ffmpegBin), '-hide_banner', '-loglevel', 'error', '-nostdin', '-re',
                 ...input,
                 '-an', '-sn', '-dn',
                 '-vf', shellQuote(filter),
@@ -257,20 +289,34 @@ const videoPlayer = defineComponent({
                 '-y',
                 shellQuote(`${this.dir}/f_%05d.jpg`),
             ].join(' ');
-            return exec(`${FF_PREFIX}( ${args} >/dev/null 2>&1 & echo $! > ${shellQuote(this.pidFile)} )`);
+            return this.spawnDetached(this.pidFile, args);
         },
 
         spawnAudio(fromSeconds: number) {
-            const input = this.buildInputArgs(fromSeconds);
-            const args = [
-                '"$FF"', '-hide_banner', '-loglevel', 'error', '-nostdin',
-                ...input,
-                '-vn', '-ac', '2', '-ar', '44100', '-f', 's16le', '-',
-            ].join(' ');
-            return exec(
-                `${FF_PREFIX}( ${args} 2>/dev/null | aplay -q -f S16_LE -c 2 -r 44100 >/dev/null 2>&1 & ` +
-                `echo $! > ${shellQuote(this.audioPidFile)} )`
-            );
+            if (this.audioBackend === 'aplay') {
+                const input = this.buildInputArgs(fromSeconds);
+                const ff = [
+                    shellQuote(this.ffmpegBin), '-hide_banner', '-loglevel', 'error', '-nostdin', '-re',
+                    ...input,
+                    '-vn', '-ac', '2', '-ar', '44100', '-f', 's16le', '-',
+                ].join(' ');
+                // ffmpeg 解出 PCM 直接管道给 aplay，边解边放，不用等整段转换完
+                return this.spawnDetached(
+                    this.audioPidFile,
+                    `${ff} 2>/dev/null | aplay -q -f S16_LE -c 2 -r 44100 >/dev/null 2>&1`
+                );
+            }
+
+            if (this.audioBackend === 'ffplay') {
+                const args = [
+                    shellQuote(this.ffplayBin), '-nodisp', '-autoexit', '-loglevel', 'quiet',
+                    ...(fromSeconds > 0 ? ['-ss', fromSeconds.toFixed(3)] : []),
+                    '-i', shellQuote(this.path),
+                ].join(' ');
+                return this.spawnDetached(this.audioPidFile, args);
+            }
+
+            return Promise.resolve('');
         },
 
         buildInputArgs(fromSeconds: number): string[] {
@@ -358,13 +404,17 @@ const videoPlayer = defineComponent({
         async killAll() {
             await this.killPid(this.pidFile);
             await this.killPid(this.audioPidFile);
+            // 兜底：清掉可能残留的解码进程（模式里带 []，避免 pkill 匹配到自己）
+            await this.safeExec('pkill -f "[.]cheymin/player/" 2>/dev/null; true');
         },
 
         async killPid(pidFile: string) {
             if (!pidFile) { return; }
             const file = shellQuote(pidFile);
             await this.safeExec(
-                `if [ -f ${file} ]; then kill $(cat ${file}) 2>/dev/null; rm -f ${file}; fi`
+                `if [ -f ${file} ]; then P=$(cat ${file}); ` +
+                `kill -TERM -$P 2>/dev/null || kill -TERM $P 2>/dev/null; ` +
+                `rm -f ${file}; fi`
             );
         },
 
