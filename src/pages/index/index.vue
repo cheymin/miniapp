@@ -56,6 +56,14 @@
                         <text class="feature-desc">扫描本地图片</text>
                     </div>
 
+                    <div class="feature-card" @click="openFileManager">
+                        <div class="icon-box icon-file">
+                            <image class="feature-icon" :src="icons.file" :width="26" :height="26" />
+                        </div>
+                        <text class="feature-title">文件管理</text>
+                        <text class="feature-desc">浏览与操作</text>
+                    </div>
+
                     <div class="feature-card" @click="openUpdate">
                         <div class="icon-box icon-update">
                             <image class="feature-icon" :src="icons.update" :width="26" :height="26" />

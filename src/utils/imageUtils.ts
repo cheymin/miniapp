@@ -9,6 +9,10 @@ export function normalizeImageUrl(url: string, forceHttp = false): string {
     const value = (url || '').trim();
     if (!value) { return ''; }
 
+    // 本地绝对路径：Weex/Falcon 的 ImageLoader 需要 file:// 协议。
+    if (value.startsWith('/')) {
+        return `file://${value}`;
+    }
     if (value.startsWith('//')) {
         return `http:${value}`;
     }

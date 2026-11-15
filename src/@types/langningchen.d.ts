@@ -53,4 +53,13 @@ export declare class ScanInput {
 export declare class Shell {
     static initialize(): Promise<void>;
     static exec(command: string): Promise<string>;
+    static list(path: string): Promise<string>;
+    static stat(path: string): Promise<string>;
+    static mkdir(path: string): Promise<boolean>;
+    static remove(path: string): Promise<boolean>;
+    static rename(from: string, to: string): Promise<boolean>;
+    static copy(from: string, to: string): Promise<boolean>;
+    static readText(path: string): Promise<string>;
+    static writeText(path: string, content: string): Promise<boolean>;
+    static exists(path: string): Promise<boolean>;
 }

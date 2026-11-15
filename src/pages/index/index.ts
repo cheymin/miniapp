@@ -21,6 +21,7 @@ import { loadPassword, verifyPassword } from '../../utils/password';
 import { openSystemInput } from '../../utils/systemInput';
 import aiIcon from '../../../images/home/ai.png';
 import imageIcon from '../../../images/home/image.png';
+import fileIcon from '../../../images/home/file.png';
 import updateIcon from '../../../images/home/update.png';
 import settingsIcon from '../../../images/home/settings.png';
 import lockIcon from '../../../images/home/lock.png';
@@ -37,6 +38,7 @@ const index = defineComponent({
             icons: {
                 ai: aiIcon,
                 image: imageIcon,
+                file: fileIcon,
                 update: updateIcon,
                 settings: settingsIcon,
                 lock: lockIcon,
@@ -78,6 +80,10 @@ const index = defineComponent({
 
         openImageView() {
             $falcon.navTo("imageView", {});
+        },
+
+        openFileManager() {
+            $falcon.navTo("fileManager", {});
         },
 
         openUpdate() {

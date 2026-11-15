@@ -1,26 +1,28 @@
 // Copyright (C) 2025 Langning Chen
-// 
+//
 // This file is part of miniapp.
-// 
+//
 // miniapp is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
-// 
+//
 // miniapp is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
-// 
+//
 // You should have received a copy of the GNU General Public License
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
 import { defineComponent } from 'vue';
-import { Shell } from 'langningchen';
 import { showError, showSuccess } from '../../components/ToastMessage';
 import { openSystemInput } from '../../utils/systemInput';
+import { list, statPath } from '../../utils/nativeShell';
 
-export type imageViewOptions = {};
+export type imageViewOptions = {
+    path?: string;
+};
 
 const IMAGE_PATTERN = /\.(jpe?g|png|webp|bmp|gif)$/i;
 
@@ -47,6 +49,15 @@ const imageView = defineComponent({
         },
     },
 
+    mounted() {
+        const page = this.$page as any;
+        const options = (page.loadOptions || page.options || {}) as imageViewOptions;
+        if (options.path) {
+            this.path = options.path;
+            this.scan();
+        }
+    },
+
     unmounted() {
         this.stopAutoPlay();
     },
@@ -65,6 +76,24 @@ const imageView = defineComponent({
             );
         },
 
+        async collectImages(dir: string, depth: number, result: string[]) {
+            if (depth < 0 || result.length >= 2000) { return; }
+            let entries;
+            try {
+                entries = await list(dir);
+            } catch (e) {
+                return;
+            }
+            for (const entry of entries) {
+                if (result.length >= 2000) { return; }
+                if (entry.dir) {
+                    await this.collectImages(entry.path, depth - 1, result);
+                } else if (IMAGE_PATTERN.test(entry.name)) {
+                    result.push(entry.path);
+                }
+            }
+        },
+
         async scan() {
             const path = this.path.trim();
             if (!path) {
@@ -79,29 +108,23 @@ const imageView = defineComponent({
             this.$forceUpdate();
 
             try {
-                const escaped = path.replace(/'/g, `'\\''`);
-                const output = await Shell.exec(
-                    `if [ -d '${escaped}' ]; then echo '__DIR__'; find '${escaped}' -maxdepth 3 -type f 2>/dev/null; ` +
-                    `elif [ -f '${escaped}' ]; then echo '__FILE__'; echo '${escaped}'; ` +
-                    `else echo '__MISSING__'; fi`
-                );
-                const lines = output.replace(/\r/g, '').split('\n')
-                    .map((line) => line.trim())
-                    .filter((line) => line.length > 0);
-
-                if (!lines.length || lines[0] === '__MISSING__') {
+                const info = await statPath(path);
+                if (!info) {
                     showError('路径不存在或无法读取');
                     return;
                 }
 
                 let files: string[] = [];
-                if (lines[0] === '__DIR__') {
-                    files = lines.slice(1);
-                } else if (lines[0] === '__FILE__') {
-                    files = [lines[1]];
+                if (info.dir) {
+                    await this.collectImages(path, 3, files);
+                } else if (IMAGE_PATTERN.test(info.name)) {
+                    files = [path];
+                } else {
+                    showError('该文件不是图片');
+                    return;
                 }
 
-                files = files.filter((file) => IMAGE_PATTERN.test(file)).sort();
+                files.sort();
                 if (!files.length) {
                     showError('该目录下没有找到图片');
                     return;

@@ -7,6 +7,7 @@
     "aiNav": "pages/aiNav/aiNav.vue",
     "appSettings": "pages/appSettings/appSettings.vue",
     "imageView": "pages/imageView/imageView.vue",
+    "fileManager": "pages/fileManager/fileManager.vue",
     "update": "pages/update/update.vue"
   },
   "options": {
