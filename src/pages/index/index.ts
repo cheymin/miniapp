@@ -22,6 +22,7 @@ import { openSystemInput } from '../../utils/systemInput';
 import aiIcon from '../../../images/home/ai.png';
 import imageIcon from '../../../images/home/image.png';
 import fileIcon from '../../../images/home/file.png';
+import videoIcon from '../../../images/home/video.png';
 import updateIcon from '../../../images/home/update.png';
 import settingsIcon from '../../../images/home/settings.png';
 import lockIcon from '../../../images/home/lock.png';
@@ -39,6 +40,7 @@ const index = defineComponent({
                 ai: aiIcon,
                 image: imageIcon,
                 file: fileIcon,
+                video: videoIcon,
                 update: updateIcon,
                 settings: settingsIcon,
                 lock: lockIcon,
@@ -84,6 +86,20 @@ const index = defineComponent({
 
         openFileManager() {
             $falcon.navTo("fileManager", {});
+        },
+
+        openVideoPlayer() {
+            openSystemInput(
+                () => '',
+                (value) => {
+                    const target = value.trim();
+                    if (!target) { return; }
+                    $falcon.navTo('videoPlayer', { path: target });
+                },
+                (value) => {
+                    if (!value.trim()) { return '请输入视频路径或链接'; }
+                }
+            );
         },
 
         openUpdate() {

@@ -52,10 +52,8 @@ const imageView = defineComponent({
     mounted() {
         const page = this.$page as any;
         const options = (page.loadOptions || page.options || {}) as imageViewOptions;
-        if (options.path) {
-            this.path = options.path;
-            this.scan();
-        }
+        this.path = (options.path || '/userdisk').trim() || '/userdisk';
+        this.scan();
     },
 
     unmounted() {

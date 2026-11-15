@@ -26,7 +26,7 @@
 
             <div v-else-if="locked" class="center-box">
                 <div class="lock-card">
-                    <image class="lock-icon" :src="icons.lock" :width="26" :height="26" />
+                    <image class="lock-icon" :src="icons.lock" :width="22" :height="22" />
                     <text class="lock-title">应用已锁定</text>
                     <text class="lock-hint">输入密码后继续使用</text>
                     <text class="unlock-btn" @click="unlock">解锁</text>
@@ -42,7 +42,7 @@
                 <div class="feature-grid">
                     <div class="feature-card" @click="openAi">
                         <div class="icon-box icon-ai">
-                            <image class="feature-icon" :src="icons.ai" :width="26" :height="26" />
+                            <image class="feature-icon" :src="icons.ai" :width="22" :height="22" />
                         </div>
                         <text class="feature-title">AI 助手</text>
                         <text class="feature-desc">对话与写作</text>
@@ -50,7 +50,7 @@
 
                     <div class="feature-card" @click="openImageView">
                         <div class="icon-box icon-image">
-                            <image class="feature-icon" :src="icons.image" :width="26" :height="26" />
+                            <image class="feature-icon" :src="icons.image" :width="22" :height="22" />
                         </div>
                         <text class="feature-title">图片查看</text>
                         <text class="feature-desc">扫描本地图片</text>
@@ -58,15 +58,23 @@
 
                     <div class="feature-card" @click="openFileManager">
                         <div class="icon-box icon-file">
-                            <image class="feature-icon" :src="icons.file" :width="26" :height="26" />
+                            <image class="feature-icon" :src="icons.file" :width="22" :height="22" />
                         </div>
                         <text class="feature-title">文件管理</text>
                         <text class="feature-desc">浏览与操作</text>
                     </div>
 
+                    <div class="feature-card" @click="openVideoPlayer">
+                        <div class="icon-box icon-video">
+                            <image class="feature-icon" :src="icons.video" :width="22" :height="22" />
+                        </div>
+                        <text class="feature-title">视频播放</text>
+                        <text class="feature-desc">路径或链接</text>
+                    </div>
+
                     <div class="feature-card" @click="openUpdate">
                         <div class="icon-box icon-update">
-                            <image class="feature-icon" :src="icons.update" :width="26" :height="26" />
+                            <image class="feature-icon" :src="icons.update" :width="22" :height="22" />
                         </div>
                         <text class="feature-title">检查更新</text>
                         <text class="feature-desc">获取最新版本</text>
@@ -74,7 +82,7 @@
 
                     <div class="feature-card" @click="openSettings">
                         <div class="icon-box icon-settings">
-                            <image class="feature-icon" :src="icons.settings" :width="26" :height="26" />
+                            <image class="feature-icon" :src="icons.settings" :width="22" :height="22" />
                         </div>
                         <text class="feature-title">设置</text>
                         <text class="feature-desc">密码与偏好</text>

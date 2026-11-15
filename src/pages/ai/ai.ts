@@ -105,16 +105,22 @@ const ai = defineComponent({
 
     methods: {
         scrollToBottom() {
-            const scroller = this.$refs.messageScroller as unknown as {
-                scrollTo?: (options: { x: number; y: number; animated: boolean }) => void;
-            };
             const doScroll = () => {
-                if (scroller && typeof scroller.scrollTo === 'function') {
-                    scroller.scrollTo({ x: 0, y: 999999, animated: true });
+                const scroller = this.$refs.messageScroller as any;
+                if (!scroller) { return; }
+                try {
+                    if (typeof scroller.scrollTo === 'function') {
+                        // 不同运行时对 scroller 的参数命名不一致，同时给出 offset 和 x/y
+                        scroller.scrollTo({ offset: 100000, x: 0, y: 100000, animated: false });
+                    } else if (scroller.$el && typeof scroller.$el.scrollTo === 'function') {
+                        scroller.$el.scrollTo({ offset: 100000, x: 0, y: 100000, animated: false });
+                    }
+                } catch (e) {
+                    // 忽略滚动异常，不影响对话
                 }
             };
-            doScroll();
-            setTimeout(doScroll, 80);
+            // 内容刚更新时布局还没完成，多滚动几次保证到底
+            [0, 60, 200, 500].forEach((delay) => setTimeout(doScroll, delay));
         },
 
         onPageShow() {
