@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="vp">
+        <div class="container vp">
             <div class="vp-stage" @click="toggleControls">
                 <image v-if="frameSrc" class="vp-frame" :src="frameSrc" :width="560" :height="170" resize="contain" />
                 <div v-else class="vp-blank">

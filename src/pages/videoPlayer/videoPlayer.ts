@@ -179,6 +179,18 @@ const videoPlayer = defineComponent({
             return true;
         },
 
+        async diagnose(fromSeconds: number): Promise<string> {
+            const input = this.buildInputArgs(fromSeconds);
+            const args = [
+                '"$FF"', '-hide_banner', '-loglevel', 'error', '-nostdin',
+                ...input,
+                '-frames:v', '1', '-y', shellQuote(`${this.dir}/diagnose.jpg`),
+            ].join(' ');
+            const out = await this.safeExec(`${FF_PREFIX}( ${args} ) 2>&1 | head -n 2`);
+            const detail = (out || '').trim();
+            return detail ? `无法播放：${detail}` : '无法播放：取帧超时（请检查文件是否存在）';
+        },
+
         framePath(index: number): string {
             return `${this.dir}/f_${String(index).padStart(5, '0')}.jpg`;
         },
@@ -205,11 +217,11 @@ const videoPlayer = defineComponent({
                 await this.spawnAudio(position);
             }
 
-            const first = await this.waitForFrame(this.index, 8000);
+            const first = await this.waitForFrame(this.index, 10000);
             if (!first) {
                 this.buffering = false;
                 this.playing = false;
-                this.message = '视频解码失败或超时';
+                this.message = await this.diagnose(position);
                 showError(this.message);
                 await this.killAll();
                 return;
