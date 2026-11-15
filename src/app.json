@@ -8,6 +8,7 @@
     "appSettings": "pages/appSettings/appSettings.vue",
     "imageView": "pages/imageView/imageView.vue",
     "fileManager": "pages/fileManager/fileManager.vue",
+    "videoPlayer": "pages/videoPlayer/videoPlayer.vue",
     "update": "pages/update/update.vue"
   },
   "options": {

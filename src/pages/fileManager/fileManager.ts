@@ -149,7 +149,7 @@ const fileManager = defineComponent({
                 return;
             }
             if (VIDEO_PATTERN.test(item.name)) {
-                showError('视频播放器正在接入解码器，暂不支持直接打开');
+                $falcon.navTo('videoPlayer', { path: item.path });
                 return;
             }
 
