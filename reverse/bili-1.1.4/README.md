@@ -94,16 +94,74 @@ HTTP 接口没有直接以 URL 形式出现在原子表中，请求由原生 `bi
 3. 若需要精确到「某个接口的参数构造、签名算法」，需要继续逆 `biliio.so`（工作量明显更大）。
 4. 该包可能包含 B 站私有接口与 DRM 逻辑，复刻时请自行评估合规风险。
 
-## 8. 产出文件
+## 8. 视频播放逻辑还原
+
+字节码中的字符串使用「自定义 Base64（a-zA-Z0-9+/=）+ 每函数偏移」混淆，已通过解析包装器闭包恢复出 2,002 条字符串，并重写了约 4,600 处字符串调用。播放链路的结论如下。
+
+### 8.1 组件与状态
+
+- `BiliPlayer.vue`：页面级状态机，负责 `openVideo` / `openLive` / `play` / `switchPart` / `resolveQuality`
+- `EmbeddedVideo.vue`：内嵌播放器，负责解码器生命周期
+- `SocialVideo.vue`：动态/卡片中的小播放器
+- `DanmakuOverlay.vue` / `SubtitleOverlay.vue`：弹幕与字幕
+- `DownloadSelector.vue`：清晰度与下载选择
+
+关键状态：`videoTarget`、`partIndex`、`quality`、`current_qn`、`playing`、`paused`、`buffering`、`playLoading`、`position`、`duration`、`audioPath`、`danmakuEnabled`。
+
+### 8.2 取流接口
+
+| 场景 | 接口 |
+|---|---|
+| 视频详情 | `/x/web-interface/wbi/view` |
+| 播放器信息 | `/x/player/wbi/v2` |
+| UGC 取流 | `/x/player/wbi/playurl`（`fnval` 开启 DASH/4K/HDR） |
+| 番剧详情 | `/pgc/view/web/season` |
+| PGC 取流 | `/pgc/player/web/v2/playurl` |
+| 直播取流 | `https://api.live.bilibili.com/xlive/web-room/v2/index/getRoomPlayInfo` |
+| 直播信息 | `/xlive/web-room/v1/index/getH5InfoByRoom` |
+| 弹幕配置 | `/xlive/web-room/v1/index/getDanmuInfo` |
+
+取流结果优先 `dash.video[] / dash.audio[]`，每项含 `baseUrl`、`backupUrl`、`bandwidth`、`codecid`；无 DASH 时回退 `durl[]`。设备侧只保证 AVC（`codecid=7`），选择逻辑为：先过滤 AVC，再按分辨率上限和带宽取最高。
+
+### 8.3 解码与播放
+
+原实现通过 ffmpeg + 原生 `canvasdecoder`：
+
+1. `ffmpeg -analyzeduration 1500000 -probesize 524288 -show_entries format=duration -of csv=p=0` 探测时长；
+2. 用 `-show_entries stream=codec_type,width,height,r_frame_rate:format=duration -of json` 获取轨道信息；
+3. `openSegment(url)` 打开 DASH 分片，`onDecoderOpen` 回调后隐藏加载动画；
+4. 以 `getFrameCounter()` 作为播放时钟，循环调用 `captionFrame()` 把当前帧画到 `videoCanvas`；
+5. 拖动时 `previewSeek()` 只解一帧，松手 `commitSeek()`；`seek()` 提交后重置帧基准；
+6. 音频走 `audioPath`，音量由原生 `volume` 模块控制，`callBackVolumeValue` 回传设备音量；
+7. 失败时按 `backupUrl`/`backup_url` 重试。
+
+### 8.4 直播
+
+- `getRoomPlayInfo` 返回 `playurl_info.playurl.stream[].format[].codec[]`，取 `base_url` + `host` 拼出 FLV/HLS 地址；
+- 分片拉流使用 `&segment_index=`；
+- 弹幕通过 `getDanmuInfo` 拿 token，再 `connectLiveMessages` 长连接，`pollLiveMessages` 轮询，`_stopLiveChat` 停止。
+
+### 8.5 还原代码
+
+- `recovered/playurl.ts`：UGC / PGC / 直播取流与清晰度选择
+- `recovered/player.ts`：播放控制器（open/play/pause/seek/preview/stop、帧时钟、备用地址重试、加载状态）
+
+这两个文件把原生能力抽象成 `NativeDecoder` / `NativeProcess` / `NativeVolume` 三个接口，宿主按原包原生模块（`canvasdecoder`、`Process`、`volume`）实现后即可接入构建。
+
+## 9. 产出文件
 
 - `out/bytecode.txt`：完整 QuickJS 字节码反汇编（122,326 行，1,849 个函数）
+- `out/bytecode.deobf.txt`：字符串调用已还原的反汇编
+- `out/strings.json`：2,002 条解码后的字符串（索引 -> 文本）
 - `out/atoms.json`：4,184 个字符串原子
 - `out/payload.bin`：解密后的 QuickJS 字节码模块
 - `out/module-info.txt`：模块头与导入信息
 - `out/package-files.txt`：AMR 原始文件清单
 - `tools/decrypt_bundle.py`：可复现的解密脚本
+- `tools/deobfuscate.py`：字符串表提取与反汇编注解脚本
+- `recovered/playurl.ts`、`recovered/player.ts`：视频播放逻辑还原
 
-## 9. 复现反汇编（可选）
+## 10. 复现反汇编（可选）
 
 1. 下载 `quickjs-2020-07-05` 源码；
 2. 在 `quickjs.c` 末尾追加一个导出函数，调用静态函数 `js_dump_function_bytecode`（并对模块类型取 `JSModuleDef->func_obj`）；
