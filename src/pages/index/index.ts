@@ -29,6 +29,9 @@ import lockIcon from '../../../images/home/lock.png';
 
 export type indexOptions = {};
 
+const APP_VERSION = '2.4.4';
+const WEEKDAYS = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+
 const index = defineComponent({
     data() {
         return {
@@ -36,6 +39,10 @@ const index = defineComponent({
             checking: true,
             locked: false,
             passwordHash: '',
+            version: APP_VERSION,
+            clockTime: '00:00',
+            clockDate: '',
+            clockTimer: null as number | null,
             icons: {
                 ai: aiIcon,
                 image: imageIcon,
@@ -45,14 +52,37 @@ const index = defineComponent({
                 settings: settingsIcon,
                 lock: lockIcon,
             },
+            apps: [
+                { key: 'ai', name: 'AI 助手', icon: aiIcon, theme: 'theme-ai' },
+                { key: 'image', name: '图片', icon: imageIcon, theme: 'theme-image' },
+                { key: 'file', name: '文件', icon: fileIcon, theme: 'theme-file' },
+                { key: 'video', name: '视频', icon: videoIcon, theme: 'theme-video' },
+                { key: 'update', name: '更新', icon: updateIcon, theme: 'theme-update' },
+                { key: 'settings', name: '设置', icon: settingsIcon, theme: 'theme-settings' },
+            ],
         };
     },
 
     mounted() {
         this.checkLock();
+        this.updateClock();
+        this.clockTimer = setInterval(() => this.updateClock(), 1000);
+    },
+
+    unmounted() {
+        if (this.clockTimer !== null) {
+            clearInterval(this.clockTimer);
+            this.clockTimer = null;
+        }
     },
 
     methods: {
+        updateClock() {
+            const now = new Date();
+            this.clockTime = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+            this.clockDate = `${now.getMonth() + 1} 月 ${now.getDate()} 日 ${WEEKDAYS[now.getDay()]}`;
+        },
+
         async checkLock() {
             this.passwordHash = await loadPassword();
             this.locked = !!this.passwordHash;
@@ -74,6 +104,29 @@ const index = defineComponent({
                     if (!value) { return '请输入密码'; }
                 }
             );
+        },
+
+        openApp(key: string) {
+            switch (key) {
+                case 'ai':
+                    this.openAi();
+                    break;
+                case 'image':
+                    this.openImageView();
+                    break;
+                case 'file':
+                    this.openFileManager();
+                    break;
+                case 'video':
+                    this.openVideoPlayer();
+                    break;
+                case 'update':
+                    this.openUpdate();
+                    break;
+                case 'settings':
+                    this.openSettings();
+                    break;
+            }
         },
 
         openAi() {

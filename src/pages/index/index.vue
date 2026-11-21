@@ -33,59 +33,42 @@
                 </div>
             </div>
 
-            <div v-else class="home-body">
-                <div class="home-header">
-                    <text class="home-title">Cheymin Pen</text>
-                    <text class="home-subtitle">工具中心</text>
+            <div v-else class="desk">
+                <div class="clock-card">
+                    <text class="clock-time">{{ clockTime }}</text>
+                    <text class="clock-date">{{ clockDate }}</text>
+                    <text class="clock-brand">Cheymin Pen</text>
+                    <text class="clock-sub">工具中心 · v{{ version }}</text>
                 </div>
 
-                <div class="feature-grid">
-                    <div class="feature-card" @click="openAi">
-                        <div class="icon-box icon-ai">
-                            <image class="feature-icon" :src="icons.ai" :width="22" :height="22" />
+                <div class="desk-right">
+                    <div class="dock">
+                        <div class="dock-head">
+                            <text class="dock-title">快捷应用</text>
+                            <text class="dock-hint">6 项工具</text>
                         </div>
-                        <text class="feature-title">AI 助手</text>
-                        <text class="feature-desc">对话与写作</text>
+                        <div class="dock-list">
+                            <div v-for="app in apps" :key="app.key" class="dock-item" @click="openApp(app.key)">
+                                <div :class="'dock-icon ' + app.theme">
+                                    <image class="dock-img" :src="app.icon" :width="20" :height="20" />
+                                </div>
+                                <text class="dock-name">{{ app.name }}</text>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="feature-card" @click="openImageView">
-                        <div class="icon-box icon-image">
-                            <image class="feature-icon" :src="icons.image" :width="22" :height="22" />
+                    <div class="bottom-row">
+                        <div class="focus-card" @click="openAi">
+                            <text class="focus-kicker">AI 助手</text>
+                            <text class="focus-title">对话 · 写作 · 翻译</text>
+                            <text class="focus-arrow">打开 ›</text>
                         </div>
-                        <text class="feature-title">图片查看</text>
-                        <text class="feature-desc">扫描本地图片</text>
-                    </div>
 
-                    <div class="feature-card" @click="openFileManager">
-                        <div class="icon-box icon-file">
-                            <image class="feature-icon" :src="icons.file" :width="22" :height="22" />
+                        <div class="status-card" @click="openSettings">
+                            <text class="status-kicker">应用版本</text>
+                            <text class="status-value">v{{ version }}</text>
+                            <text class="status-link">设置 ›</text>
                         </div>
-                        <text class="feature-title">文件管理</text>
-                        <text class="feature-desc">浏览与操作</text>
-                    </div>
-
-                    <div class="feature-card" @click="openVideoPlayer">
-                        <div class="icon-box icon-video">
-                            <image class="feature-icon" :src="icons.video" :width="22" :height="22" />
-                        </div>
-                        <text class="feature-title">视频播放</text>
-                        <text class="feature-desc">路径或链接</text>
-                    </div>
-
-                    <div class="feature-card" @click="openUpdate">
-                        <div class="icon-box icon-update">
-                            <image class="feature-icon" :src="icons.update" :width="22" :height="22" />
-                        </div>
-                        <text class="feature-title">检查更新</text>
-                        <text class="feature-desc">获取最新版本</text>
-                    </div>
-
-                    <div class="feature-card" @click="openSettings">
-                        <div class="icon-box icon-settings">
-                            <image class="feature-icon" :src="icons.settings" :width="22" :height="22" />
-                        </div>
-                        <text class="feature-title">设置</text>
-                        <text class="feature-desc">密码与偏好</text>
                     </div>
                 </div>
             </div>

@@ -1,103 +1,223 @@
+// LoliAPP 桌面风首页：560x170 横向短屏，大时钟 + 横向图标栏 + 卡片。
 @import url('../../styles/section.less');
 
 .home {
-    background-color: #0f1115;
-    padding: 8px 10px;
+    background-color: #08070d;
+    padding: 7px 10px;
     display: flex;
     flex-direction: column;
 }
 
-.home-body {
+.desk {
     flex: 1;
     display: flex;
-    flex-direction: column;
-}
-
-.home-header {
-    height: 24px;
-    display: flex;
     flex-direction: row;
-    align-items: flex-end;
-    gap: 10px;
-    margin-bottom: 6px;
+    gap: 8px;
 }
 
-.home-title {
-    font-size: 22px;
+/* 左侧大时钟卡片 */
+.clock-card {
+    width: 148px;
+    background-color: #171327;
+    border-width: 1px;
+    border-color: #2e2452;
+    border-radius: 16px;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.clock-time {
+    font-size: 34px;
+    font-weight: bold;
     color: #ffffff;
 }
 
-.home-subtitle {
-    font-size: 12px;
+.clock-date {
+    margin-top: 2px;
+    font-size: 11px;
+    color: #c7c7cc;
+}
+
+.clock-brand {
+    margin-top: 8px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #c4b5fd;
+    letter-spacing: 0.5px;
+}
+
+.clock-sub {
+    margin-top: 1px;
+    font-size: 9px;
     color: #8a8f98;
 }
 
-.feature-grid {
+/* 右侧区域 */
+.desk-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.dock {
+    background-color: #101018;
+    border-width: 1px;
+    border-color: #1f1f2b;
+    border-radius: 14px;
+    padding: 6px 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dock-head {
+    height: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dock-title {
+    font-size: 10px;
+    color: #a78bfa;
+    letter-spacing: 0.5px;
+}
+
+.dock-hint {
+    font-size: 9px;
+    color: #636366;
+}
+
+.dock-list {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+}
+
+.dock-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.dock-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dock-img {
+    width: 19px;
+    height: 19px;
+}
+
+.theme-ai {
+    background-color: #6c5ce7;
+}
+
+.theme-image {
+    background-color: #00b894;
+}
+
+.theme-file {
+    background-color: #fdcb6e;
+}
+
+.theme-video {
+    background-color: #e84393;
+}
+
+.theme-update {
+    background-color: #0984e3;
+}
+
+.theme-settings {
+    background-color: #e17055;
+}
+
+.dock-name {
+    font-size: 9px;
+    color: #c7c7cc;
+}
+
+/* 底部卡片 */
+.bottom-row {
     flex: 1;
     display: flex;
     flex-direction: row;
     gap: 6px;
 }
 
-.feature-card {
+.focus-card {
     flex: 1;
-    background-color: #1a1d23;
+    background-color: #1b1530;
+    border-width: 1px;
+    border-color: #4c2f9c;
     border-radius: 14px;
+    padding: 7px 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-}
-
-.icon-box {
-    width: 34px;
-    height: 34px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
     justify-content: center;
 }
 
-.icon-ai {
-    background-color: #6c5ce7;
+.focus-kicker {
+    font-size: 9px;
+    color: #a78bfa;
+    letter-spacing: 0.5px;
 }
 
-.icon-image {
-    background-color: #00b894;
-}
-
-.icon-update {
-    background-color: #0984e3;
-}
-
-.icon-settings {
-    background-color: #e17055;
-}
-
-.icon-file {
-    background-color: #fdcb6e;
-}
-
-.icon-video {
-    background-color: #e84393;
-}
-
-.feature-icon {
-    width: 22px;
-    height: 22px;
-}
-
-.feature-title {
-    font-size: 15px;
+.focus-title {
+    margin-top: 2px;
+    font-size: 14px;
     color: #ffffff;
 }
 
-.feature-desc {
-    font-size: 11px;
+.focus-arrow {
+    margin-top: 1px;
+    font-size: 9px;
+    color: #c4b5fd;
+}
+
+.status-card {
+    width: 108px;
+    background-color: #101018;
+    border-width: 1px;
+    border-color: #1f1f2b;
+    border-radius: 14px;
+    padding: 7px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.status-kicker {
+    font-size: 9px;
     color: #8a8f98;
 }
 
+.status-value {
+    margin-top: 2px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.status-link {
+    margin-top: 1px;
+    font-size: 9px;
+    color: #38bdf8;
+}
+
+/* 启动与锁屏 */
 .center-box {
     flex: 1;
     display: flex;
@@ -113,7 +233,9 @@
 .lock-card {
     width: 300px;
     height: 108px;
-    background-color: #1a1d23;
+    background-color: #171327;
+    border-width: 1px;
+    border-color: #2e2452;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
