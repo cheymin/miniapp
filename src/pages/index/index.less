@@ -1,8 +1,8 @@
-// Loli 风桌面：第 0 页整屏时间，上滑进入应用宫格。
+// 按 Loli desktop 的结构复刻：顶部状态栏 + 时钟/版本卡片 + 通知卡片 + 全部应用页。
 @import url('../../styles/section.less');
 
 .home {
-    background-color: #07060f;
+    background-color: #000000;
     padding: 0;
     overflow: hidden;
 }
@@ -25,77 +25,322 @@
     flex-direction: column;
 }
 
-/* 时间页 */
-.page-clock {
-    align-items: center;
-    justify-content: center;
-    background-color: #07060f;
+.page-home {
+    background-color: #000000;
 }
 
-.clock-time {
-    font-size: 62px;
+.page-apps {
+    background-color: #080213;
+}
+
+/* 顶部状态栏 */
+.safe-top-bar {
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    top: 6px;
+    height: 18px;
+    z-index: 20;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.safe-time-box {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.safe-time {
+    font-size: 15px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.safe-date {
+    margin-left: 6px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.safe-top-right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.safe-next-class {
+    padding: 2px 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.14);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 11px;
+}
+
+.safe-exit-btn {
+    margin-left: 10px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* 时钟与版本卡片 */
+.home-main {
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    top: 26px;
+    height: 92px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.calculator-card {
+    width: 196px;
+    height: 78px;
+    border-radius: 22px;
+    background-color: #7c3aed;
+    padding: 9px 14px;
+}
+
+.calculator-inner {
+    display: flex;
+    flex-direction: column;
+}
+
+.sys-title-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sys-title {
+    font-size: 15px;
     font-weight: bold;
     color: #ffffff;
+}
+
+.pro-badge {
+    margin-left: 6px;
+    padding: 1px 6px;
+    border-radius: 7px;
+    background-color: #ffe9b0;
+}
+
+.pro-badge-txt {
+    font-size: 9px;
+    font-weight: bold;
+    color: #4a1d96;
+}
+
+.sys-version {
+    margin-top: 3px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.btn-update {
+    margin-top: 5px;
+    width: 64px;
+    height: 18px;
+    line-height: 16px;
+    text-align: center;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.5);
+    border-radius: 9px;
+    font-size: 10px;
+    color: #ffffff;
+}
+
+.clock-section {
+    flex: 1;
+    height: 92px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.clock-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.time-text {
+    font-size: 56px;
+    line-height: 58px;
+    font-weight: bold;
+    color: #e9d5ff;
     letter-spacing: 1px;
 }
 
-.clock-date {
+.date-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.date-text {
+    font-size: 11px;
+    color: #c4b5fd;
+    letter-spacing: 1px;
+}
+
+.account-status-row {
     margin-top: 2px;
-    font-size: 14px;
-    color: #a3a8c3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.clock-brand {
-    margin-top: 6px;
-    font-size: 11px;
-    color: #6d5bd0;
-    letter-spacing: 2px;
-}
-
-.swipe-hint {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 14px;
-    text-align: center;
-    font-size: 11px;
-    color: #4a4e66;
-}
-
-/* 应用页 */
-.page-apps {
-    background-color: #07060f;
-    padding: 6px 10px;
-}
-
-.apps-head {
+.account-status-avatar {
+    width: 18px;
     height: 18px;
+    border-radius: 9px;
+    background-color: rgba(139, 92, 246, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account-status-avatar-txt {
+    font-size: 9px;
+    font-weight: bold;
+    color: #e9d5ff;
+}
+
+.account-status-info {
+    margin-left: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.account-status-name {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.account-status-money {
+    margin-left: 6px;
+    font-size: 10px;
+    color: #ff9f0a;
+}
+
+/* 桌面通知/快捷卡片 */
+.messages-section {
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    top: 120px;
+    height: 36px;
+    z-index: 10;
+}
+
+.msg-list {
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.msg-item {
+    width: 48%;
+    height: 36px;
+    padding: 4px 6px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.msg-icon-box {
+    width: 24px;
+    height: 24px;
+    border-radius: 7px;
+    background-color: #7c3aed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.msg-icon-txt {
+    font-size: 11px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.msg-content {
+    flex: 1;
+    margin-left: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.msg-title-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.msg-title {
+    font-size: 10px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.msg-time {
+    font-size: 9px;
+    color: #8f95b2;
+}
+
+.msg-desc {
+    margin-top: 1px;
+    font-size: 9px;
+    color: #7d839e;
+    lines: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 全部应用页 */
+.apps-head {
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    top: 26px;
+    height: 16px;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
 .apps-title {
-    margin-right: 8px;
     font-size: 14px;
     font-weight: bold;
     color: #ffffff;
 }
 
-.apps-time {
-    flex: 1;
-    font-size: 11px;
+.apps-sub {
+    margin-left: 6px;
+    font-size: 10px;
     color: #6b7088;
 }
 
-.apps-back {
-    font-size: 11px;
-    color: #7a86b8;
+.screen2-container {
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    top: 46px;
+    height: 106px;
 }
 
 .apps-grid {
-    flex: 1;
-    margin-top: 4px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -103,7 +348,7 @@
 
 .app-item {
     width: 20%;
-    height: 62px;
+    height: 53px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,7 +356,6 @@
 }
 
 .app-icon {
-    margin-bottom: 4px;
     width: 32px;
     height: 32px;
     border-radius: 10px;
@@ -121,14 +365,14 @@
 }
 
 .app-glyph {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: bold;
     color: #ffffff;
 }
 
 .app-img {
-    width: 19px;
-    height: 19px;
+    width: 26px;
+    height: 26px;
 }
 
 .theme-ai {
@@ -160,7 +404,7 @@
 }
 
 .theme-apps {
-    background-color: #3f4f8f;
+    background-color: #7c3aed;
 }
 
 .theme-lock {
@@ -168,7 +412,8 @@
 }
 
 .app-name {
-    font-size: 10px;
+    margin-top: 2px;
+    font-size: 9px;
     color: #d6d9e8;
 }
 
@@ -177,7 +422,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 4px;
+    bottom: 3px;
     display: flex;
     flex-direction: row;
     justify-content: center;

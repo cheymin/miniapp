@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const VERSION = '3.0.0';
 const FILE_NAME = `cheymin-pen-${VERSION}.amr`;
 const FILE_SIZE = '1.5 MB';
-const SHA256 = '2b2cdd4636d3b2f2c0630c7de77207a17fec90e531d174bd97ca001fde68cbac';
+const SHA256 = '114fa4f58a76be7c20ac61b3145b297981a1f3e22be36acadac96f670733f424';
 
 const features = [
   {
