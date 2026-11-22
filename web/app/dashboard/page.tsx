@@ -17,7 +17,7 @@ export default async function DashboardPage() {
       version="2.4.4"
       fileName="cheymin-pen-2.4.4.amr"
       fileSize="1.5 MB"
-      sha256="35841cc2781821bb1d2b7ca935e3454d20057289bd0ec8d4fb1183a4735139c2"
+      sha256="b489f4ddcff392f5243bcf07755362849b6acc4076ea544ba22a830d024ed2c7"
     />
   );
 }

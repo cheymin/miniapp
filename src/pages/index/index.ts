@@ -57,6 +57,7 @@ const index = defineComponent({
                 { key: 'file', name: '文件', icon: fileIcon, theme: 'theme-file' },
                 { key: 'video', name: '视频', icon: videoIcon, theme: 'theme-video' },
                 { key: 'terminal', name: '终端', glyph: '>_', theme: 'theme-terminal' },
+                { key: 'appsManage', name: '应用', glyph: '应', theme: 'theme-apps' },
                 { key: 'update', name: '更新', icon: updateIcon, theme: 'theme-update' },
                 { key: 'settings', name: '设置', icon: settingsIcon, theme: 'theme-settings' },
                 { key: 'lock', name: '锁屏', glyph: '锁', theme: 'theme-lock' },
@@ -167,6 +168,9 @@ const index = defineComponent({
                     break;
                 case 'terminal':
                     $falcon.navTo('terminal', {});
+                    break;
+                case 'appsManage':
+                    $falcon.navTo('appsManage', {});
                     break;
                 case 'lock':
                     this.lockNow();
