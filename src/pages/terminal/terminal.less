@@ -1,0 +1,142 @@
+// 终端页：黑底绿字，命令通过设备 Shell 在线执行。
+@import url('../../styles/section.less');
+
+.term {
+    background-color: #050807;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.term-head {
+    height: 22px;
+    padding: 0 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom-width: 1px;
+    border-bottom-color: #142019;
+}
+
+.term-title {
+    margin-right: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #7df0b0;
+}
+
+.term-cwd {
+    flex: 1;
+    font-size: 10px;
+    color: #4e7d63;
+}
+
+.term-head-btn {
+    width: 24px;
+    height: 18px;
+    margin-left: 4px;
+    line-height: 18px;
+    text-align: center;
+    font-size: 10px;
+    color: #a9d9bf;
+    background-color: #101a15;
+    border-radius: 6px;
+}
+
+.term-output {
+    flex: 1;
+    padding: 3px 6px;
+}
+
+.term-line {
+    font-size: 11px;
+    line-height: 17px;
+    color: #cfe9db;
+}
+
+.term-line-sys {
+    color: #5c8e73;
+}
+
+.term-line-cmd {
+    color: #7df0b0;
+}
+
+.term-line-out {
+    color: #c9d6cf;
+}
+
+.term-line-err {
+    color: #ff8f8f;
+}
+
+.term-quick {
+    height: 24px;
+    padding: 2px 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.term-chip {
+    height: 19px;
+    margin-right: 4px;
+    padding: 0 7px;
+    line-height: 19px;
+    font-size: 10px;
+    color: #86b39a;
+    background-color: #0d1511;
+    border-width: 1px;
+    border-color: #1b2a22;
+    border-radius: 7px;
+}
+
+.term-input-row {
+    height: 34px;
+    padding: 3px 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top-width: 1px;
+    border-top-color: #142019;
+}
+
+.term-prompt {
+    flex: 1;
+    height: 28px;
+    margin-right: 5px;
+    padding: 0 10px;
+    line-height: 28px;
+    font-size: 13px;
+    color: #7df0b0;
+    background-color: #0b120e;
+    border-width: 1px;
+    border-color: #1c2c23;
+    border-radius: 9px;
+}
+
+.term-prompt-busy {
+    color: #4e7d63;
+}
+
+.term-action {
+    width: 34px;
+    height: 28px;
+    margin-left: 4px;
+    line-height: 28px;
+    text-align: center;
+    font-size: 13px;
+    color: #a9d9bf;
+    background-color: #101a15;
+    border-radius: 9px;
+}
+
+.term-action-run {
+    color: #04120a;
+    background-color: #57d695;
+}
+
+.term-action-disabled {
+    color: #4e7d63;
+    background-color: #0b120e;
+}

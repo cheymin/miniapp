@@ -7,3 +7,10 @@ packages/aiot-vue-cli/dist
 jsapi/lib
 jsapi/include
 jsapi/build
+
+# website
+web/.next
+web/.vercel
+web/.env*.local
+!web/.env.example
+!web/public/download/*.amr

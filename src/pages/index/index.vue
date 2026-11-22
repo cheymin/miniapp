@@ -30,7 +30,8 @@
                     <div class="apps-grid">
                         <div v-for="app in apps" :key="app.key" class="app-item" @click="openApp(app.key)">
                             <div :class="'app-icon ' + app.theme">
-                                <image class="app-img" :src="app.icon" :width="20" :height="20" />
+                                <text v-if="app.glyph" class="app-glyph">{{ app.glyph }}</text>
+                                <image v-else class="app-img" :src="app.icon" :width="20" :height="20" />
                             </div>
                             <text class="app-name">{{ app.name }}</text>
                         </div>

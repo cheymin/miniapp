@@ -56,8 +56,10 @@ const index = defineComponent({
                 { key: 'gallery', name: '图库', icon: imageIcon, theme: 'theme-image' },
                 { key: 'file', name: '文件', icon: fileIcon, theme: 'theme-file' },
                 { key: 'video', name: '视频', icon: videoIcon, theme: 'theme-video' },
+                { key: 'terminal', name: '终端', glyph: '>_', theme: 'theme-terminal' },
                 { key: 'update', name: '更新', icon: updateIcon, theme: 'theme-update' },
                 { key: 'settings', name: '设置', icon: settingsIcon, theme: 'theme-settings' },
+                { key: 'lock', name: '锁屏', glyph: '锁', theme: 'theme-lock' },
             ],
         };
     },
@@ -163,6 +165,12 @@ const index = defineComponent({
                 case 'video':
                     this.openVideoPlayer();
                     break;
+                case 'terminal':
+                    $falcon.navTo('terminal', {});
+                    break;
+                case 'lock':
+                    this.lockNow();
+                    break;
                 case 'update':
                     $falcon.navTo('update', {});
                     break;
@@ -170,6 +178,16 @@ const index = defineComponent({
                     $falcon.navTo('appSettings', {});
                     break;
             }
+        },
+
+        lockNow() {
+            if (!this.passwordHash) {
+                showError('请先在设置中创建应用锁密码');
+                $falcon.navTo('appSettings', {});
+                return;
+            }
+            this.locked = true;
+            this.$forceUpdate();
         },
 
         openVideoPlayer() {

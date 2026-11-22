@@ -9,6 +9,7 @@
     "gallery": "pages/gallery/gallery.vue",
     "imageView": "pages/imageView/imageView.vue",
     "fileManager": "pages/fileManager/fileManager.vue",
+    "terminal": "pages/terminal/terminal.vue",
     "videoPlayer": "pages/videoPlayer/videoPlayer.vue",
     "update": "pages/update/update.vue"
   },
