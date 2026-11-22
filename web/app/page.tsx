@@ -18,10 +18,10 @@ export const metadata: Metadata = {
   title: 'Cheymin Pen · 把 AI 装进一支词典笔',
 };
 
-const VERSION = '2.4.4';
+const VERSION = '3.0.0';
 const FILE_NAME = `cheymin-pen-${VERSION}.amr`;
 const FILE_SIZE = '1.5 MB';
-const SHA256 = 'b489f4ddcff392f5243bcf07755362849b6acc4076ea544ba22a830d024ed2c7';
+const SHA256 = '2b2cdd4636d3b2f2c0630c7de77207a17fec90e531d174bd97ca001fde68cbac';
 
 const features = [
   {

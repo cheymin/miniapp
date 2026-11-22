@@ -14,8 +14,8 @@ export default async function DashboardPage() {
   return (
     <DashboardClient
       account={toAccountView(user)}
-      version="2.4.4"
-      fileName="cheymin-pen-2.4.4.amr"
+      version="3.0.0"
+      fileName="cheymin-pen-3.0.0.amr"
       fileSize="1.5 MB"
       sha256="b489f4ddcff392f5243bcf07755362849b6acc4076ea544ba22a830d024ed2c7"
     />

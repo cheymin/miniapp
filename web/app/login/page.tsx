@@ -98,7 +98,7 @@ export default function LoginPage() {
         <div className="wrap footer-inner">
           <div>© 2025 Cheymin Pen</div>
           <div className="footer-links">
-            <a href="/download/cheymin-pen-2.4.4.amr" download>下载安装包</a>
+            <a href="/download/cheymin-pen-3.0.0.amr" download>下载安装包</a>
             <Link href="/">首页</Link>
           </div>
         </div>

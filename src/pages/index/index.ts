@@ -29,7 +29,7 @@ import settingsIcon from '../../../images/home/settings.png';
 
 export type indexOptions = {};
 
-const APP_VERSION = '2.4.4';
+const APP_VERSION = '3.0.0';
 const WEEKDAYS = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
 const SWIPE_THRESHOLD = 28;
 

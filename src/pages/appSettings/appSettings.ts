@@ -24,7 +24,7 @@ import { clearLearnedWords, getLearnedWordCount, loadUserWords } from '../../uti
 
 export type appSettingsOptions = {};
 
-const APP_VERSION = '2.4.4';
+const APP_VERSION = '3.0.0';
 const LEGACY_CACHE = '/userdisk/.cheymin/player';
 const TEMP_CACHE = '/tmp/cheymin-player';
 
