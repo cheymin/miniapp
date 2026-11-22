@@ -11,13 +11,18 @@
 
             <text v-if="controlsVisible" class="vp-title">{{ fileName }}</text>
 
+            <div v-if="controlsVisible" class="vp-seek-row" @touchstart="beginSeek" @touchmove="updateSeek"
+                @touchend="endSeek" @touchcancel="endSeek" @click="seekTap">
+                <div class="vp-seek-track">
+                    <div class="vp-seek-fill" :style="{ width: displayPercent + '%' }"></div>
+                    <div class="vp-seek-thumb" :style="{ left: displayPercent + '%' }"></div>
+                </div>
+            </div>
+
             <div v-if="controlsVisible" class="vp-bar">
                 <text class="vp-btn" @click="togglePlay">{{ playing ? '暂停' : '播放' }}</text>
                 <text class="vp-btn" @click="seekBy(-10)">-10s</text>
                 <text class="vp-btn" @click="seekBy(10)">+10s</text>
-                <div class="vp-progress">
-                    <div class="vp-progress-fill" :style="{ width: progressPercent + '%' }"></div>
-                </div>
                 <text class="vp-time">{{ timeText }}</text>
                 <text class="vp-btn" @click="toggleFullscreen">全屏</text>
                 <text class="vp-btn vp-btn-danger" @click="goBack">关闭</text>

@@ -16,15 +16,21 @@
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
 import { defineComponent } from 'vue';
-import { showError, showSuccess } from '../../components/ToastMessage';
-import { openSystemInput } from '../../utils/systemInput';
-import { list, statPath } from '../../utils/nativeShell';
+import { showError } from '../../components/ToastMessage';
+import { list, statPath, parentPath, baseName } from '../../utils/nativeShell';
+import { normalizeImageUrl } from '../../utils/imageUtils';
 
 export type imageViewOptions = {
     path?: string;
+    index?: number;
 };
 
 const IMAGE_PATTERN = /\.(jpe?g|png|webp|bmp|gif)$/i;
+const STAGE_WIDTH = 518;
+const STAGE_HEIGHT = 168;
+const MAX_SCALE = 4;
+const MIN_SCALE = 1;
+const SCALE_STEP = 0.5;
 
 const imageView = defineComponent({
     data() {
@@ -34,8 +40,16 @@ const imageView = defineComponent({
             images: [] as string[],
             index: 0,
             scanning: false,
-            autoPlay: false,
-            autoPlayTimer: null as number | null,
+
+            scale: 1,
+            offsetX: 0,
+            offsetY: 0,
+
+            dragging: false,
+            dragStartX: 0,
+            dragStartY: 0,
+            dragOriginX: 0,
+            dragOriginY: 0,
         };
     },
 
@@ -43,9 +57,28 @@ const imageView = defineComponent({
         current(): string {
             return this.images[this.index] || '';
         },
+        currentUrl(): string {
+            return this.current ? normalizeImageUrl(this.current) : '';
+        },
         currentName(): string {
-            const value = this.current;
-            return value ? value.split('/').pop() || value : '';
+            return this.current ? baseName(this.current) : '';
+        },
+        zoomPercent(): number {
+            return Math.round(this.scale * 100);
+        },
+        boxWidth(): number {
+            return Math.round(STAGE_WIDTH * this.scale);
+        },
+        boxHeight(): number {
+            return Math.round(STAGE_HEIGHT * this.scale);
+        },
+        imageStyle(): any {
+            const baseX = -(this.boxWidth - STAGE_WIDTH) / 2;
+            const baseY = -(this.boxHeight - STAGE_HEIGHT) / 2;
+            return {
+                left: `${Math.round(baseX + this.offsetX)}px`,
+                top: `${Math.round(baseY + this.offsetY)}px`,
+            };
         },
     },
 
@@ -53,25 +86,21 @@ const imageView = defineComponent({
         const page = this.$page as any;
         const options = (page.loadOptions || page.options || {}) as imageViewOptions;
         this.path = (options.path || '/userdisk').trim() || '/userdisk';
-        this.scan();
-    },
-
-    unmounted() {
-        this.stopAutoPlay();
+        this.scan(options.index || 0);
     },
 
     methods: {
-        editPath() {
-            openSystemInput(
-                () => this.path,
-                (value) => {
-                    this.path = value.trim();
-                    this.$forceUpdate();
-                },
-                (value) => {
-                    if (!value.trim()) { return '请输入目录或图片路径'; }
-                }
-            );
+        maxOffsetX(): number {
+            return Math.max(0, (this.boxWidth - STAGE_WIDTH) / 2);
+        },
+        maxOffsetY(): number {
+            return Math.max(0, (this.boxHeight - STAGE_HEIGHT) / 2);
+        },
+
+        resetView() {
+            this.scale = 1;
+            this.offsetX = 0;
+            this.offsetY = 0;
         },
 
         async collectImages(dir: string, depth: number, result: string[]) {
@@ -79,12 +108,13 @@ const imageView = defineComponent({
             let entries;
             try {
                 entries = await list(dir);
-            } catch (e) {
+            } catch {
                 return;
             }
             for (const entry of entries) {
                 if (result.length >= 2000) { return; }
                 if (entry.dir) {
+                    if (entry.name.charAt(0) === '.') { continue; }
                     await this.collectImages(entry.path, depth - 1, result);
                 } else if (IMAGE_PATTERN.test(entry.name)) {
                     result.push(entry.path);
@@ -92,17 +122,17 @@ const imageView = defineComponent({
             }
         },
 
-        async scan() {
+        async scan(initialIndex: number) {
             const path = this.path.trim();
             if (!path) {
-                showError('请先输入目录或图片路径');
+                showError('请先选择图片');
                 return;
             }
 
-            this.stopAutoPlay();
             this.scanning = true;
             this.images = [];
             this.index = 0;
+            this.resetView();
             this.$forceUpdate();
 
             try {
@@ -114,23 +144,31 @@ const imageView = defineComponent({
 
                 let files: string[] = [];
                 if (info.dir) {
-                    await this.collectImages(path, 3, files);
+                    await this.collectImages(path, 2, files);
+                    files.sort();
                 } else if (IMAGE_PATTERN.test(info.name)) {
-                    files = [path];
+                    this.collectImages(parentPath(path), 0, files).then(() => {
+                        files.sort();
+                        const found = files.indexOf(path);
+                        this.images = files;
+                        this.index = found >= 0 ? found : 0;
+                        this.resetView();
+                        this.$forceUpdate();
+                    });
+                    return;
                 } else {
                     showError('该文件不是图片');
                     return;
                 }
 
-                files.sort();
                 if (!files.length) {
                     showError('该目录下没有找到图片');
                     return;
                 }
 
                 this.images = files;
-                this.index = 0;
-                showSuccess(`找到 ${files.length} 张图片`);
+                this.index = Math.min(Math.max(initialIndex, 0), files.length - 1);
+                this.resetView();
             } catch (e) {
                 showError(e as string || '扫描失败');
             } finally {
@@ -142,6 +180,7 @@ const imageView = defineComponent({
         prev() {
             if (this.index > 0) {
                 this.index -= 1;
+                this.resetView();
                 this.$forceUpdate();
             }
         },
@@ -149,34 +188,64 @@ const imageView = defineComponent({
         next() {
             if (this.index < this.images.length - 1) {
                 this.index += 1;
+                this.resetView();
                 this.$forceUpdate();
             }
         },
 
-        toggleAutoPlay() {
-            if (this.autoPlay) {
-                this.stopAutoPlay();
-                return;
-            }
-            if (this.images.length < 2) { return; }
-            this.autoPlay = true;
-            this.autoPlayTimer = setInterval(() => {
-                this.index = (this.index + 1) % this.images.length;
-                this.$forceUpdate();
-            }, 2500) as unknown as number;
+        zoomIn() {
+            if (this.scale >= MAX_SCALE) { return; }
+            this.scale = Math.min(MAX_SCALE, this.scale + SCALE_STEP);
+            this.clampOffsets();
             this.$forceUpdate();
         },
 
-        stopAutoPlay() {
-            if (this.autoPlayTimer !== null) {
-                clearInterval(this.autoPlayTimer);
-                this.autoPlayTimer = null;
-            }
-            this.autoPlay = false;
+        zoomOut() {
+            if (this.scale <= MIN_SCALE) { return; }
+            this.scale = Math.max(MIN_SCALE, this.scale - SCALE_STEP);
+            this.clampOffsets();
+            this.$forceUpdate();
+        },
+
+        clampOffsets() {
+            const maxX = this.maxOffsetX();
+            const maxY = this.maxOffsetY();
+            this.offsetX = Math.min(maxX, Math.max(-maxX, this.offsetX));
+            this.offsetY = Math.min(maxY, Math.max(-maxY, this.offsetY));
+        },
+
+        point(event: any): { x: number; y: number } {
+            const list = (event && (event.touches || event.changedTouches)) || [];
+            const item = list[0] || (event && event.detail) || {};
+            const x = item.clientX !== undefined ? item.clientX : (item.pageX !== undefined ? item.pageX : item.screenX);
+            const y = item.clientY !== undefined ? item.clientY : (item.pageY !== undefined ? item.pageY : item.screenY);
+            return { x: Number(x) || 0, y: Number(y) || 0 };
+        },
+
+        onTouchStart(event: any) {
+            if (!this.current) { return; }
+            const start = this.point(event);
+            this.dragging = true;
+            this.dragStartX = start.x;
+            this.dragStartY = start.y;
+            this.dragOriginX = this.offsetX;
+            this.dragOriginY = this.offsetY;
+        },
+
+        onTouchMove(event: any) {
+            if (!this.dragging) { return; }
+            const now = this.point(event);
+            this.offsetX = this.dragOriginX + (now.x - this.dragStartX);
+            this.offsetY = this.dragOriginY + (now.y - this.dragStartY);
+            this.clampOffsets();
+            this.$forceUpdate();
+        },
+
+        onTouchEnd() {
+            this.dragging = false;
         },
 
         goBack() {
-            this.stopAutoPlay();
             this.$page.finish();
         },
     },

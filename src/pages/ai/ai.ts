@@ -34,6 +34,7 @@ const ai = defineComponent({
             isStreaming: false,
             messages: [] as ConversationNode[],
             jumpToMessageId: '',
+            keyboardVisible: false,
 
             currentConversationId: '',
         };
@@ -47,6 +48,7 @@ const ai = defineComponent({
     },
     unmounted() {
         this.$page.off("show", this.onPageShow);
+        this.keyboardVisible = false;
         hideLoading();
     },
 
@@ -144,6 +146,7 @@ const ai = defineComponent({
         async sendMessage(userMessage: string) {
             if (!this.aiInitialized || this.isStreaming || !userMessage?.trim()) return;
             userMessage = userMessage.trim();
+            this.keyboardVisible = false;
 
             this.streamingContent = '';
 
@@ -187,10 +190,25 @@ const ai = defineComponent({
 
         openInput() {
             if (this.isStreaming) return;
-            openSystemInput(
-                () => this.currentInput,
-                (value) => { this.currentInput = value; this.$forceUpdate(); }
-            );
+            this.keyboardVisible = true;
+            this.$forceUpdate();
+        },
+
+        closeKeyboard() {
+            this.keyboardVisible = false;
+            this.$forceUpdate();
+        },
+
+        onKeyboardValue(value: string) {
+            this.currentInput = value;
+            this.$forceUpdate();
+        },
+
+        onKeyboardConfirm(value: string) {
+            this.currentInput = value;
+            this.keyboardVisible = false;
+            this.$forceUpdate();
+            this.sendMessage(value);
         },
 
         openSettings() {

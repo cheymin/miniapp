@@ -6,6 +6,7 @@
     "aiHistory": "pages/aiHistory/aiHistory.vue",
     "aiNav": "pages/aiNav/aiNav.vue",
     "appSettings": "pages/appSettings/appSettings.vue",
+    "gallery": "pages/gallery/gallery.vue",
     "imageView": "pages/imageView/imageView.vue",
     "fileManager": "pages/fileManager/fileManager.vue",
     "videoPlayer": "pages/videoPlayer/videoPlayer.vue",

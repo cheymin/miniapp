@@ -19,24 +19,28 @@
 
 <template>
     <div>
-        <div class="container viewer">
-            <div class="topbar">
-                <text class="path-input" @click="editPath">{{ path || '输入本地目录或图片路径' }}</text>
-                <text class="viewer-btn btn-primary" @click="scan">{{ scanning ? '扫描中' : '扫描' }}</text>
-                <text class="viewer-btn btn-info" @click="goBack">返回</text>
+        <div class="container iv">
+            <div class="iv-stage" @touchstart="onTouchStart" @touchmove="onTouchMove" @touchend="onTouchEnd">
+                <div class="iv-top">
+                    <text class="iv-back" @click="goBack">‹ 返回</text>
+                    <text class="iv-name">{{ images.length ? (index + 1) + ' / ' + images.length : '—' }} · {{ currentName }}</text>
+                    <text class="iv-zoom">{{ zoomPercent }}%</text>
+                </div>
+
+                <div class="iv-canvas">
+                    <image v-if="currentUrl" :key="currentUrl" class="iv-image" :src="currentUrl" :width="boxWidth"
+                        :height="boxHeight" :style="imageStyle" resize="contain" />
+                    <text v-else class="iv-empty">{{ scanning ? '加载中…' : '没有图片' }}</text>
+                </div>
+
+                <text class="iv-tip">拖动查看细节</text>
             </div>
 
-            <div class="image-area">
-                <AppImage v-if="current" :src="current" :width="544" :height="88" resize="contain" />
-                <text v-else class="image-hint">{{ scanning ? '正在扫描图片...' : '输入目录后点击扫描，可逐张查看' }}</text>
-            </div>
-
-            <div class="bottombar" v-if="images.length > 0">
-                <text :class="'viewer-btn ' + (index > 0 ? 'btn-primary' : 'btn-disabled')" @click="prev">上一张</text>
-                <text class="counter">{{ index + 1 }} / {{ images.length }}</text>
-                <text :class="'viewer-btn ' + (index < images.length - 1 ? 'btn-primary' : 'btn-disabled')" @click="next">下一张</text>
-                <text :class="'viewer-btn ' + (autoPlay ? 'btn-danger' : 'btn-success')" @click="toggleAutoPlay">{{ autoPlay ? '停止' : '播放' }}</text>
-                <text class="filename">{{ currentName }}</text>
+            <div class="iv-controls">
+                <text :class="'iv-btn' + (scale >= 4 ? ' iv-btn-off' : '')" @click="zoomIn">＋</text>
+                <text :class="'iv-btn' + (index <= 0 ? ' iv-btn-off' : '')" @click="prev">↑</text>
+                <text :class="'iv-btn' + (index >= images.length - 1 ? ' iv-btn-off' : '')" @click="next">↓</text>
+                <text :class="'iv-btn' + (scale <= 1 ? ' iv-btn-off' : '')" @click="zoomOut">－</text>
             </div>
         </div>
         <ToastMessage />
@@ -48,13 +52,11 @@
 </style>
 
 <script>
-import AppImage from '../../components/AppImage.vue';
 import ToastMessage from '../../components/ToastMessage.vue';
 import imageView from './imageView';
 export default {
     ...imageView,
     components: {
-        AppImage,
         ToastMessage
     }
 }

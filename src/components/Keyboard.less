@@ -1,0 +1,175 @@
+// 自绘键盘：全屏浮层，560x170 下约 168px 高。
+
+.kb {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0d0f1a;
+    padding: 4px 5px;
+    display: flex;
+    flex-direction: column;
+    z-index: 50;
+}
+
+.kb-head {
+    height: 26px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.kb-display {
+    margin-right: 6px;
+    flex: 1;
+    height: 24px;
+    background-color: #171a28;
+    border-width: 1px;
+    border-color: #262a3d;
+    border-radius: 8px;
+    padding: 0 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.kb-display-scroll {
+    flex: 1;
+    height: 24px;
+}
+
+.kb-display-text {
+    height: 24px;
+    line-height: 24px;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.kb-display-placeholder {
+    color: #5c6178;
+}
+
+.kb-close {
+    width: 46px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 13px;
+    color: #9aa2c0;
+    background-color: #1b1f30;
+    border-radius: 8px;
+}
+
+.kb-cand {
+    height: 26px;
+    margin-top: 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #111421;
+    border-radius: 8px;
+    padding: 0 6px;
+}
+
+.kb-pinyin {
+    margin-right: 6px;
+    font-size: 13px;
+    color: #7aa2ff;
+}
+
+.kb-cand-scroll {
+    flex: 1;
+    height: 24px;
+}
+
+.kb-cand-inner {
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.kb-cand-item {
+    height: 22px;
+    line-height: 22px;
+    padding: 0 7px;
+    margin-right: 4px;
+    font-size: 15px;
+    color: #eef1ff;
+    background-color: #202539;
+    border-radius: 7px;
+}
+
+.kb-cand-tip {
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    color: #565c74;
+}
+
+.kb-keys {
+    margin-top: 3px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.kb-row {
+    height: 23px;
+    margin-bottom: 3px;
+    display: flex;
+    flex-direction: row;
+}
+
+.kb-row-middle {
+    padding: 0 24px;
+}
+
+.key {
+    margin-right: 3px;
+    flex: 1;
+    height: 23px;
+    line-height: 23px;
+    text-align: center;
+    font-size: 14px;
+    color: #f2f4ff;
+    background-color: #232838;
+    border-radius: 6px;
+}
+
+.key-fn {
+    flex: 1;
+    background-color: #1a1e2c;
+    color: #aeb6d4;
+    font-size: 13px;
+}
+
+.key-fn-on {
+    background-color: #3b5bdb;
+    color: #ffffff;
+}
+
+.key-fn2 {
+    flex: 1;
+    background-color: #1a1e2c;
+    color: #aeb6d4;
+    font-size: 12px;
+}
+
+.key-space {
+    flex: 3;
+    background-color: #2a3044;
+}
+
+.key-action {
+    flex: 1;
+    background-color: #3b5bdb;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.key-num {
+    flex: 1;
+    font-size: 14px;
+}

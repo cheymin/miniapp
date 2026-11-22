@@ -57,6 +57,7 @@
     max-width: 420px;
     font-size: 13px;
     color: #d7dae0;
+    z-index: 2;
 }
 
 .vp-bar {
@@ -64,16 +65,55 @@
     left: 0;
     right: 0;
     bottom: 0;
-    height: 28px;
+    height: 30px;
     padding: 0 6px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 6px;
-    background-color: rgba(0, 0, 0, 0.72);
+    background-color: rgba(0, 0, 0, 0.78);
+    z-index: 3;
+}
+
+/* 可拖动的进度条：整行都是触摸热区 */
+.vp-seek-row {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    height: 20px;
+    padding: 7px 8px 0;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 3;
+}
+
+.vp-seek-track {
+    position: relative;
+    height: 6px;
+    background-color: #3a3f47;
+    border-radius: 3px;
+}
+
+.vp-seek-fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 6px;
+    background-color: #ffc107;
+    border-radius: 3px;
+}
+
+.vp-seek-thumb {
+    position: absolute;
+    top: -3px;
+    width: 12px;
+    height: 12px;
+    margin-left: -6px;
+    border-radius: 6px;
+    background-color: #ffffff;
 }
 
 .vp-btn {
+    margin-right: 6px;
     height: 22px;
     line-height: 22px;
     padding: 0 9px;
@@ -88,20 +128,8 @@
     background-color: #d73a49;
 }
 
-.vp-progress {
-    flex: 1;
-    height: 6px;
-    background-color: #3a3f47;
-    border-radius: 3px;
-}
-
-.vp-progress-fill {
-    height: 6px;
-    background-color: #ffc107;
-    border-radius: 3px;
-}
-
 .vp-time {
+    flex: 1;
     font-size: 12px;
     color: #c9ced6;
 }

@@ -1,113 +1,117 @@
-// LoliAPP 桌面风首页：560x170 横向短屏，大时钟 + 横向图标栏 + 卡片。
+// Loli 风桌面：第 0 页整屏时间，上滑进入应用宫格。
 @import url('../../styles/section.less');
 
 .home {
-    background-color: #08070d;
-    padding: 7px 10px;
+    background-color: #07060f;
+    padding: 0;
+    overflow: hidden;
+}
+
+.pager {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.page {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.desk {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-}
-
-/* 左侧大时钟卡片 */
-.clock-card {
-    width: 148px;
-    background-color: #171327;
-    border-width: 1px;
-    border-color: #2e2452;
-    border-radius: 16px;
-    padding: 10px 12px;
-    display: flex;
-    flex-direction: column;
+/* 时间页 */
+.page-clock {
+    align-items: center;
     justify-content: center;
+    background-color: #07060f;
 }
 
 .clock-time {
-    font-size: 34px;
+    font-size: 62px;
     font-weight: bold;
     color: #ffffff;
+    letter-spacing: 1px;
 }
 
 .clock-date {
     margin-top: 2px;
-    font-size: 11px;
-    color: #c7c7cc;
+    font-size: 14px;
+    color: #a3a8c3;
 }
 
 .clock-brand {
-    margin-top: 8px;
+    margin-top: 6px;
     font-size: 11px;
+    color: #6d5bd0;
+    letter-spacing: 2px;
+}
+
+.swipe-hint {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 14px;
+    text-align: center;
+    font-size: 11px;
+    color: #4a4e66;
+}
+
+/* 应用页 */
+.page-apps {
+    background-color: #07060f;
+    padding: 6px 10px;
+}
+
+.apps-head {
+    height: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.apps-title {
+    margin-right: 8px;
+    font-size: 14px;
     font-weight: bold;
-    color: #c4b5fd;
-    letter-spacing: 0.5px;
+    color: #ffffff;
 }
 
-.clock-sub {
-    margin-top: 1px;
-    font-size: 9px;
-    color: #8a8f98;
-}
-
-/* 右侧区域 */
-.desk-right {
+.apps-time {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+    font-size: 11px;
+    color: #6b7088;
 }
 
-.dock {
-    background-color: #101018;
-    border-width: 1px;
-    border-color: #1f1f2b;
-    border-radius: 14px;
-    padding: 6px 8px;
-    display: flex;
-    flex-direction: column;
+.apps-back {
+    font-size: 11px;
+    color: #7a86b8;
 }
 
-.dock-head {
-    height: 14px;
+.apps-grid {
+    flex: 1;
+    margin-top: 4px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.app-item {
+    width: 33.33%;
+    height: 58px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-.dock-title {
-    font-size: 10px;
-    color: #a78bfa;
-    letter-spacing: 0.5px;
-}
-
-.dock-hint {
-    font-size: 9px;
-    color: #636366;
-}
-
-.dock-list {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 4px;
-}
-
-.dock-item {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3px;
-}
-
-.dock-icon {
+.app-icon {
+    margin-right: 8px;
     width: 34px;
     height: 34px;
     border-radius: 11px;
@@ -116,110 +120,71 @@
     justify-content: center;
 }
 
-.dock-img {
+.app-img {
     width: 19px;
     height: 19px;
 }
 
 .theme-ai {
-    background-color: #6c5ce7;
+    background-color: #5b5bd6;
 }
 
 .theme-image {
-    background-color: #00b894;
+    background-color: #0f9d7a;
 }
 
 .theme-file {
-    background-color: #fdcb6e;
+    background-color: #c99a2e;
 }
 
 .theme-video {
-    background-color: #e84393;
+    background-color: #d6467f;
 }
 
 .theme-update {
-    background-color: #0984e3;
+    background-color: #1f7ad4;
 }
 
 .theme-settings {
-    background-color: #e17055;
+    background-color: #c4663f;
 }
 
-.dock-name {
-    font-size: 9px;
-    color: #c7c7cc;
+.app-name {
+    font-size: 12px;
+    color: #d6d9e8;
 }
 
-/* 底部卡片 */
-.bottom-row {
-    flex: 1;
+/* 圆点 */
+.dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 4px;
     display: flex;
     flex-direction: row;
-    gap: 6px;
-}
-
-.focus-card {
-    flex: 1;
-    background-color: #1b1530;
-    border-width: 1px;
-    border-color: #4c2f9c;
-    border-radius: 14px;
-    padding: 7px 10px;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
-.focus-kicker {
-    font-size: 9px;
-    color: #a78bfa;
-    letter-spacing: 0.5px;
+.dot {
+    margin: 0 3px;
+    width: 5px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: #2c2f42;
 }
 
-.focus-title {
-    margin-top: 2px;
-    font-size: 14px;
-    color: #ffffff;
-}
-
-.focus-arrow {
-    margin-top: 1px;
-    font-size: 9px;
-    color: #c4b5fd;
-}
-
-.status-card {
-    width: 108px;
-    background-color: #101018;
-    border-width: 1px;
-    border-color: #1f1f2b;
-    border-radius: 14px;
-    padding: 7px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.status-kicker {
-    font-size: 9px;
-    color: #8a8f98;
-}
-
-.status-value {
-    margin-top: 2px;
-    font-size: 14px;
-    color: #ffffff;
-}
-
-.status-link {
-    margin-top: 1px;
-    font-size: 9px;
-    color: #38bdf8;
+.dot-active {
+    background-color: #8b7bff;
 }
 
 /* 启动与锁屏 */
 .center-box {
-    flex: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -231,41 +196,66 @@
 }
 
 .lock-card {
-    width: 300px;
-    height: 108px;
-    background-color: #171327;
+    width: 320px;
+    height: 132px;
+    background-color: #121020;
     border-width: 1px;
-    border-color: #2e2452;
-    border-radius: 16px;
+    border-color: #2a2347;
+    border-radius: 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4px;
 }
 
-.lock-icon {
-    width: 26px;
-    height: 26px;
-}
-
-.lock-title {
-    font-size: 19px;
+.lock-time {
+    font-size: 42px;
+    font-weight: bold;
     color: #ffffff;
 }
 
 .lock-hint {
+    margin-top: 2px;
     font-size: 12px;
     color: #8a8f98;
 }
 
 .unlock-btn {
-    margin-top: 2px;
+    margin-top: 6px;
     height: 26px;
     line-height: 26px;
     padding: 0 18px;
-    font-size: 14px;
+    font-size: 13px;
     color: #ffffff;
-    background-color: #6c5ce7;
+    background-color: #4b4bd0;
     border-radius: 9px;
+}
+
+/* 翻页动画 */
+@keyframes loliPageUp {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes loliPageDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.page-up {
+    animation: loliPageUp 200ms ease-out;
+}
+
+.page-down {
+    animation: loliPageDown 200ms ease-out;
 }

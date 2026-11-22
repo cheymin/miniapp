@@ -1,17 +1,17 @@
 // Copyright (C) 2025 Langning Chen
-// 
+//
 // This file is part of miniapp.
-// 
+//
 // miniapp is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
 // (at your option) any later version.
-// 
+//
 // miniapp is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
-// 
+//
 // You should have received a copy of the GNU General Public License
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
@@ -19,18 +19,19 @@ import { defineComponent } from 'vue';
 import { showError, showSuccess } from '../../components/ToastMessage';
 import { loadPassword, verifyPassword } from '../../utils/password';
 import { openSystemInput } from '../../utils/systemInput';
+import { exec } from '../../utils/nativeShell';
 import aiIcon from '../../../images/home/ai.png';
 import imageIcon from '../../../images/home/image.png';
 import fileIcon from '../../../images/home/file.png';
 import videoIcon from '../../../images/home/video.png';
 import updateIcon from '../../../images/home/update.png';
 import settingsIcon from '../../../images/home/settings.png';
-import lockIcon from '../../../images/home/lock.png';
 
 export type indexOptions = {};
 
 const APP_VERSION = '2.4.4';
 const WEEKDAYS = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+const SWIPE_THRESHOLD = 28;
 
 const index = defineComponent({
     data() {
@@ -43,18 +44,16 @@ const index = defineComponent({
             clockTime: '00:00',
             clockDate: '',
             clockTimer: null as number | null,
-            icons: {
-                ai: aiIcon,
-                image: imageIcon,
-                file: fileIcon,
-                video: videoIcon,
-                update: updateIcon,
-                settings: settingsIcon,
-                lock: lockIcon,
-            },
+
+            page: 0,
+            animClass: '',
+            touchStartY: 0,
+            touchLastY: 0,
+            swiping: false,
+
             apps: [
                 { key: 'ai', name: 'AI 助手', icon: aiIcon, theme: 'theme-ai' },
-                { key: 'image', name: '图片', icon: imageIcon, theme: 'theme-image' },
+                { key: 'gallery', name: '图库', icon: imageIcon, theme: 'theme-image' },
                 { key: 'file', name: '文件', icon: fileIcon, theme: 'theme-file' },
                 { key: 'video', name: '视频', icon: videoIcon, theme: 'theme-video' },
                 { key: 'update', name: '更新', icon: updateIcon, theme: 'theme-update' },
@@ -64,6 +63,12 @@ const index = defineComponent({
     },
 
     mounted() {
+        // 旧版本把抽帧写在 /userdisk，这里主动清掉，避免占用用户空间。
+        try {
+            exec('rm -rf /userdisk/.cheymin/player 2>/dev/null; true').catch(() => undefined);
+        } catch {
+            // Shell 不可用时忽略
+        }
         this.checkLock();
         this.updateClock();
         this.clockTimer = setInterval(() => this.updateClock(), 1000);
@@ -106,39 +111,65 @@ const index = defineComponent({
             );
         },
 
+        goPage(target: number) {
+            if (this.page === target) { return; }
+            this.page = target;
+            this.animClass = target === 1 ? 'page-up' : 'page-down';
+            this.$forceUpdate();
+        },
+
+        touchY(event: any): number {
+            const list = (event && (event.touches || event.changedTouches)) || [];
+            const point = list[0] || (event && event.detail) || {};
+            const value = point.clientY !== undefined ? point.clientY : (point.pageY !== undefined ? point.pageY : point.screenY);
+            return Number(value) || 0;
+        },
+
+        onTouchStart(event: any) {
+            if (this.locked || this.checking) { return; }
+            this.touchStartY = this.touchY(event);
+            this.touchLastY = this.touchStartY;
+            this.swiping = true;
+        },
+
+        onTouchMove(event: any) {
+            if (!this.swiping) { return; }
+            this.touchLastY = this.touchY(event);
+        },
+
+        onTouchEnd(event: any) {
+            if (!this.swiping) { return; }
+            this.swiping = false;
+            const endY = this.touchY(event) || this.touchLastY;
+            const delta = endY - this.touchStartY;
+            if (delta <= -SWIPE_THRESHOLD && this.page === 0) {
+                this.goPage(1);
+            } else if (delta >= SWIPE_THRESHOLD && this.page === 1) {
+                this.goPage(0);
+            }
+        },
+
         openApp(key: string) {
             switch (key) {
                 case 'ai':
-                    this.openAi();
+                    $falcon.navTo('ai', {});
                     break;
-                case 'image':
-                    this.openImageView();
+                case 'gallery':
+                    $falcon.navTo('gallery', {});
                     break;
                 case 'file':
-                    this.openFileManager();
+                    $falcon.navTo('fileManager', {});
                     break;
                 case 'video':
                     this.openVideoPlayer();
                     break;
                 case 'update':
-                    this.openUpdate();
+                    $falcon.navTo('update', {});
                     break;
                 case 'settings':
-                    this.openSettings();
+                    $falcon.navTo('appSettings', {});
                     break;
             }
-        },
-
-        openAi() {
-            $falcon.navTo("ai", {});
-        },
-
-        openImageView() {
-            $falcon.navTo("imageView", {});
-        },
-
-        openFileManager() {
-            $falcon.navTo("fileManager", {});
         },
 
         openVideoPlayer() {
@@ -154,15 +185,7 @@ const index = defineComponent({
                 }
             );
         },
-
-        openUpdate() {
-            $falcon.navTo("update", {});
-        },
-
-        openSettings() {
-            $falcon.navTo("appSettings", {});
-        }
-    }
+    },
 });
 
 export default index;

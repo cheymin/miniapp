@@ -1,19 +1,115 @@
+// Loli 风设置页：分组卡片 + 行式设置项。
 @import url('../../styles/section.less');
 
-.password-state {
-    color: #888888;
+.settings {
+    background-color: #07060f;
+    padding: 6px 10px;
 }
 
-.password-on {
-    color: #28a745;
+.group {
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
 }
 
-.settings-buttons {
-    gap: 8px;
+.group-title {
+    margin-bottom: 4px;
+    padding-left: 4px;
+    font-size: 11px;
+    color: #6b7088;
+    letter-spacing: 1px;
 }
 
-.settings-hint {
-    font-size: 16px;
-    line-height: 20px;
-    color: #888888;
+.card {
+    background-color: #121321;
+    border-width: 1px;
+    border-color: #1e2033;
+    border-radius: 14px;
+    padding: 0 8px;
+}
+
+.row {
+    height: 46px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.row-line {
+    border-top-width: 1px;
+    border-top-color: #1b1d2e;
+}
+
+.row-icon {
+    margin-right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row-icon-text {
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.icon-lock {
+    background-color: #4b4bd0;
+}
+
+.icon-danger {
+    background-color: #b8434f;
+}
+
+.icon-key {
+    background-color: #2b7f6a;
+}
+
+.icon-ai {
+    background-color: #6a4fc9;
+}
+
+.icon-cache {
+    background-color: #9a7230;
+}
+
+.icon-info {
+    background-color: #2f5f9e;
+}
+
+.row-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row-title {
+    font-size: 14px;
+    color: #f0f2ff;
+}
+
+.row-desc {
+    margin-top: 1px;
+    font-size: 10px;
+    color: #7b8098;
+}
+
+.row-action {
+    min-width: 44px;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 7px;
+    text-align: center;
+    font-size: 11px;
+    color: #a8b1ff;
+}
+
+.footer-hint {
+    margin: 4px 0 12px;
+    text-align: center;
+    font-size: 10px;
+    color: #4a4e66;
 }

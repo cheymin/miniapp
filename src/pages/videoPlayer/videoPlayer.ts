@@ -28,8 +28,11 @@ export type videoPlayerOptions = {
 const SCREEN_WIDTH = 560;
 const SCREEN_HEIGHT = 170;
 // 抽帧帧率：兼顾流畅度与设备解码能力
-const PLAY_FPS = 8;
-const CACHE_ROOT = '/userdisk/.cheymin/player';
+const PLAY_FPS = 15;
+// 抽帧只写 /tmp，不碰 /userdisk。
+const CACHE_ROOT = '/tmp/cheymin-player';
+const LEGACY_CACHE = '/userdisk/.cheymin/player';
+const PREBUFFER_FRAMES = 8;
 
 function shellQuote(value: string): string {
     return `'${value.replace(/'/g, "'\\''")}'`;
@@ -76,6 +79,13 @@ const videoPlayer = defineComponent({
             message: '正在准备播放...',
             timer: null as any,
             stallSince: 0,
+            playStartAt: 0,
+            playStartPosition: 0,
+
+            seeking: false,
+            seekRatio: 0,
+            wasPlayingBeforeSeek: false,
+            lastSeekTouch: 0,
         };
     },
 
@@ -86,8 +96,14 @@ const videoPlayer = defineComponent({
             return Math.max(0, Math.min(100, value));
         },
 
+        displayPercent(): number {
+            if (this.seeking) { return Math.max(0, Math.min(100, this.seekRatio * 100)); }
+            return this.progressPercent;
+        },
+
         timeText(): string {
-            return `${formatTime(this.position)} / ${this.duration > 0 ? formatTime(this.duration) : '--:--'}`;
+            const current = this.seeking && this.duration > 0 ? this.seekRatio * this.duration : this.position;
+            return `${formatTime(current)} / ${this.duration > 0 ? formatTime(this.duration) : '--:--'}`;
         },
 
         hintText(): string {
@@ -125,7 +141,11 @@ const videoPlayer = defineComponent({
     methods: {
         async initialize() {
             try {
-                await exec(`rm -rf ${shellQuote(CACHE_ROOT)}; mkdir -p ${shellQuote(this.dir)}`);
+                // 清掉旧版本写在 /userdisk 下的缓存，以及可能残留的临时目录
+                await exec(
+                    `rm -rf ${shellQuote(LEGACY_CACHE)} ${shellQuote(CACHE_ROOT)}; ` +
+                    `mkdir -p ${shellQuote(this.dir)}`
+                );
             } catch (e) {
                 showError(String(e || '无法创建缓存目录'));
                 return;
@@ -254,11 +274,20 @@ const videoPlayer = defineComponent({
                 return;
             }
 
+            // 预缓冲：先让 ffmpeg 多产出几帧，避免起播后每帧都等解码。
+            const preTarget = this.totalFrames > 0
+                ? Math.min(this.index + PREBUFFER_FRAMES, this.totalFrames - 1)
+                : this.index + PREBUFFER_FRAMES;
+            await this.waitForFrame(preTarget, 1200);
+
             // 首帧已上屏再起音频，让声音和画面从同一个位置开始
             if (this.hasAudio && this.audioReady) {
                 await this.spawnAudio(position);
             }
 
+            // 以真实时间为主时钟，帧率波动时按目标帧号追赶，避免累计延迟。
+            this.playStartAt = Date.now();
+            this.playStartPosition = position;
             this.scheduleTick();
         },
 
@@ -365,14 +394,20 @@ const videoPlayer = defineComponent({
                 return;
             }
 
-            const next = this.index + 1;
-            const entry = await statPath(this.framePath(next));
+            const elapsed = (Date.now() - this.playStartAt) / 1000;
+            const target = Math.floor((this.playStartPosition + elapsed) * this.fps);
+            if (target <= this.index) {
+                this.scheduleTick();
+                return;
+            }
+
+            const entry = await statPath(this.framePath(target));
             if (!this.playing) { return; }
 
             if (entry) {
-                this.index = next;
-                this.position = next / this.fps;
-                this.frameSrc = normalizeImageUrl(this.framePath(next));
+                this.index = target;
+                this.position = target / this.fps;
+                this.frameSrc = normalizeImageUrl(this.framePath(target));
                 this.buffering = false;
                 this.stallSince = 0;
                 this.scheduleTick();
@@ -392,7 +427,7 @@ const videoPlayer = defineComponent({
                 await this.killAll();
                 return;
             }
-            this.timer = setTimeout(() => this.tick(), 120);
+            this.timer = setTimeout(() => this.tick(), 70);
         },
 
         stopClock() {
@@ -406,7 +441,10 @@ const videoPlayer = defineComponent({
             await this.killPid(this.pidFile);
             await this.killPid(this.audioPidFile);
             // 兜底：清掉可能残留的解码进程（模式里带 []，避免 pkill 匹配到自己）
-            await this.safeExec('pkill -f "[.]cheymin/player/" 2>/dev/null; true');
+            await this.safeExec(
+                'pkill -f "cheymin[-]player/" 2>/dev/null; ' +
+                'pkill -f "[.]cheymin/player/" 2>/dev/null; true'
+            );
         },
 
         async killPid(pidFile: string) {
@@ -461,6 +499,50 @@ const videoPlayer = defineComponent({
         seekTo(seconds: number) {
             const wasPlaying = this.playing;
             this.start(seconds, true, wasPlaying);
+        },
+
+        seekPointRatio(event: any): number {
+            const list = (event && (event.touches || event.changedTouches)) || [];
+            const item = list[0] || (event && event.detail) || {};
+            const x = item.clientX !== undefined ? item.clientX : (item.pageX !== undefined ? item.pageX : item.screenX);
+            // 进度条左右各留 8px
+            const ratio = ((Number(x) || 0) - 8) / (SCREEN_WIDTH - 16);
+            return Math.max(0, Math.min(1, ratio));
+        },
+
+        beginSeek(event: any) {
+            if (this.duration <= 0) { return; }
+            this.lastSeekTouch = Date.now();
+            this.seeking = true;
+            this.seekRatio = this.seekPointRatio(event);
+            this.wasPlayingBeforeSeek = this.playing;
+            if (this.playing) {
+                this.playing = false;
+                this.stopClock();
+                this.killAll();
+            }
+        },
+
+        updateSeek(event: any) {
+            if (!this.seeking) { return; }
+            this.lastSeekTouch = Date.now();
+            this.seekRatio = this.seekPointRatio(event);
+        },
+
+        endSeek(event: any) {
+            if (!this.seeking) { return; }
+            this.lastSeekTouch = Date.now();
+            this.seekRatio = this.seekPointRatio(event);
+            this.seeking = false;
+            const target = Math.max(0, Math.min(this.duration - 0.2, this.seekRatio * this.duration));
+            this.start(target, true, this.wasPlayingBeforeSeek);
+        },
+
+        seekTap(event: any) {
+            if (Date.now() - this.lastSeekTouch < 600) { return; }
+            if (this.duration <= 0) { return; }
+            const ratio = this.seekPointRatio(event);
+            this.start(Math.max(0, Math.min(this.duration - 0.2, ratio * this.duration)), true, true);
         },
 
         toggleFullscreen() {

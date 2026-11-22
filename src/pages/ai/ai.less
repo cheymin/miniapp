@@ -1,126 +1,213 @@
+// AI 对话页：暗色卡片式界面，右侧 32px 快捷按钮，输入走自绘键盘。
 @import url('../../styles/section.less');
+
+.ai {
+    background-color: #0a0b12;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.ai-head {
+    height: 20px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom-width: 1px;
+    border-bottom-color: #151726;
+}
+
+.ai-title {
+    margin-right: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #eef1ff;
+}
+
+.ai-state {
+    flex: 1;
+    font-size: 10px;
+    color: #4f9d7a;
+}
+
+.ai-state-busy {
+    color: #d8a13a;
+}
+
+.ai-body {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.messages-scroller {
+    flex: 1;
+    padding: 6px 8px;
+}
+
+.message-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.message-row-user {
+    justify-content: flex-end;
+}
+
+.message-col {
+    max-width: 88%;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    max-width: 100%;
+    padding: 5px 10px;
+    border-radius: 13px;
+    line-height: 24px;
+    font-size: 18px;
+    margin-bottom: 3px;
+    color: #ffffff;
+}
+
+// user
+.message-0 {
+    background-color: #4b5bd6;
+}
+
+// assistant
+.message-1 {
+    background-color: #171a26;
+    border-width: 1px;
+    border-color: #22263a;
+}
+
+// system
+.message-2 {
+    background-color: #1f5f45;
+}
+
+.message-actions {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 3px;
+}
+
+.message-actions-user {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 3px;
+    justify-content: flex-end;
+}
+
+.mini-btn {
+    margin-right: 5px;
+    width: 26px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 12px;
+    color: #cfd6ff;
+    background-color: #1b1f30;
+    border-radius: 8px;
+}
+
+.mini-btn-disabled {
+    color: #4a4e66;
+    background-color: #14161f;
+}
+
+.action-text {
+    margin-right: 5px;
+    height: 24px;
+    font-size: 12px;
+    color: #8d93ad;
+    line-height: 24px;
+}
+
+.stop-reason-warning {
+    font-size: 12px;
+    color: #d8a13a;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
 
 .side-buttons {
     width: 72px;
-    background-color: #111111;
+    background-color: #0d0f19;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
     align-items: center;
-    gap: 4px;
-    padding-top: 4px;
-    padding-bottom: 4px;
+    padding: 4px 0;
 }
 
 .square-btn {
-    width: 34px;
-    height: 34px;
-    background-color: #333333;
-    color: #ffffff;
-    text-align: center;
-    font-size: 18px;
-    line-height: 34px;
-    border-radius: 12px;
-}
-
-.square-btn-primary {
-    background-color: #007acc;
-}
-
-.square-btn-danger {
-    background-color: #d73a49;
-}
-
-.square-btn-disabled {
-    background-color: #444444;
-    color: #888888;
-}
-
-.side-square-btn {
+    margin: 2px;
     width: 32px;
     height: 32px;
     line-height: 32px;
-    font-size: 17px;
+    text-align: center;
+    font-size: 13px;
+    color: #d8ddff;
+    background-color: #1b1f30;
     border-radius: 10px;
 }
 
-.messages-scroller {
-    flex: 1;
-    padding: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+.square-btn-disabled {
+    background-color: #14161f;
+    color: #4a4e66;
 }
 
-.message {
-    max-width: 86%;
-    padding: 8px 12px;
-    border-radius: 14px;
-    line-height: 26px;
-    font-size: 20px;
-    margin-bottom: 4px;
-    color: #ffffff;
-}
-
-// user
-.message-0 {
-    background-color: #007acc;
-    align-self: flex-end;
-}
-
-// assistant
-.message-1 {
-    background-color: #333333;
-    align-self: flex-start;
-}
-
-// system
-.message-2 {
-    background-color: #28a745;
-    align-self: center;
-}
-
-.message-actions {
-    flex-direction: row;
-    align-items: center;
-    margin-top: 6px;
-    gap: 8px;
-}
-
-.message-actions-user {
-    flex-direction: row;
-    align-items: center;
-    margin-top: 6px;
-    gap: 8px;
-    justify-content: flex-end;
-}
-
-.action-text {
-    height: 30px;
-    font-size: 18px;
-    color: #ffffff;
-    line-height: 30px;
-}
-
-.stop-reason-warning {
-    font-size: 16px;
-    color: #ffc107;
-    margin-top: 2px;
-    margin-bottom: 2px;
-}
-
-// 输入栏整体加高、圆角加大
-.item {
-    min-height: 36px;
-    gap: 8px;
-}
-
-.item-input {
+.ai-input-row {
     height: 36px;
-    line-height: 26px;
-    font-size: 20px;
-    padding: 4px 10px;
+    padding: 3px 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top-width: 1px;
+    border-top-color: #151726;
+}
+
+.ai-input {
+    margin-right: 6px;
+    flex: 1;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 12px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #151828;
+    border-width: 1px;
+    border-color: #232842;
+    border-radius: 15px;
+}
+
+.ai-input-disabled {
+    color: #5b6078;
+}
+
+.send-btn {
+    width: 46px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #8b91ab;
+    background-color: #1b1f30;
     border-radius: 12px;
+}
+
+.send-btn-on {
+    color: #ffffff;
+    background-color: #4b5bd6;
+}
+
+.send-btn-stop {
+    color: #ffffff;
+    background-color: #b8434f;
 }
