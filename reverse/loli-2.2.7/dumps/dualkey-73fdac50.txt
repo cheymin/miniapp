@@ -1,0 +1,368 @@
+
+/* ===== function depth=0 ===== */
+/* debug: dualkey-73fdac50.js:1 source_len=0 */
+dualkey-73fdac50.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: I local:loc0 var
+    1: g local:loc1 var
+    2: C local:loc2 var
+    3: i local:loc3 var
+    4: A local:loc4 var
+    5: Z local:loc5 var
+  stack_size: 32
+  opcodes:
+    0:  fclosure8 0: [bytecode C]
+    2:  put_var_ref2 2: C
+    3:  fclosure8 1: [bytecode i]
+    5:  put_var_ref3 3: i
+    6:  fclosure8 2: [bytecode A]
+    8:  put_var_ref 4: A
+   11:  fclosure8 3: [bytecode Z]
+   13:  put_var_ref 5: Z
+   16:  push_atom_value "/data/loli_dualkey.sh"
+   21:  put_var_ref0 0: I
+   22:  push_atom_value "IyEvYmluL3NoCiMgTG9saUFQUCDlj4zplK7miKrlsY/lrojmiqTvvIh2Mi4wLjU077yJCiMg6YC7"
+   27:  push_atom_value "6L6R5rqQ6Ieq6K6+5aSH5a6e5rWL5a6a5qGI55qEIC9kYXRhL2R1YWxrZXlfZmluYWwuc2jvvIjm"
+   32:  push_atom_value lofmoaMgL2RhdGEvZHVhbGtleV9zY3JlZW5zaG90Lm1k77yJ77yaCiMgICBldnRlc3QgLS1ncmFi
+   37:  push_atom_value "IOeLrOWNoCBIT01FIOS4jiBQT1dFUu+8jEgvUC9DIOeKtuaAgeacuuivhuWIq+WPjOmUruWQjOaM"
+   42:  push_atom_value "ie+8m+WNlemUrui/mOWOn+i1sOezu+e7n+WRveS7pO+8mgojICAgSE9NRSAtPiBtaW5pYXBwX2Ns"
+   47:  push_atom_value "aSBzdGFydCDmoYzpnaLlupTnlKggLyBQT1dFUiAtPiBoYWwtc2NyZWVuIHN3aXRjaCDmga/kuq7l"
+   52:  push_atom_value "sY/liIfmjaLjgIIKIyB2Mi4wLjQ1IOaWsOWinumVv+aMiSBIT01F77yaY3VybCAxODA5MCAvbXQg"
+   57:  push_atom_value "6YCa55+l5qGM6Z2i6aG15Lqu566A5piT5aSa5Lu75Yqh6aG144CCCiMgdjIuMC40N++8muKRoOmV"
+   62:  push_atom_value "v+aMiSAxLjJzIOWIsOeCueeri+WNs+S6ru+8iOaMieS4i+WNs+i1t+eci+mXqOeLl++8ie+8m+KR"
+   67:  push_atom_value "oeeJiOacrOmXqOWNq+aMiSAvZGF0YS9sb2xpX2R1YWxrZXkudmVyIOmhtuaXp+eJiOOAggojIHYy"
+   72:  push_atom_value "LjAuNjEg55u45py65YmN5Y+w5Y+M6ZSu5ouN54Wn77yaL2RhdGEvbG9saV9jYW1fZmc9Me+8iOeb"
+   77:  push_atom_value "uOacuumhtSBvblNob3cg5YaZ44CB6YCA5Ye65riF6Zu277yJ5pe2CiMg5Y+M6ZSu5Y+q5YaZIC9k"
+   82:  push_atom_value "YXRhL2xvbGlfY2FtX3Nob3Qg6Kem5Y+R5paH5Lu277yM55Sx55u45py66aG16L2u6K+i5raI6LS5"
+   87:  push_atom_value "6LWw5Y6f55Sf5ouN54Wn77yb5ZCm5YiZ54Wn5pen5YWo5bGA5oiq5Zu+44CCCiMgdjIuMC41NCDl"
+   92:  push_atom_value "j4zorr7lpIflhbzlrrnvvJrkuI3lho3lhpnmrbsgZXZlbnQg5Y+34oCU4oCU5oyJIEtFWV9IT01F"
+   97:  push_atom_value "KDEwMikvS0VZX1BPV0VSKDExNikgY2FwYWJpbGl0eSArCiMg6K6+5aSH5ZCN6Ieq5Yqo5o6i5rWL"
+  102:  push_atom_value "77yIeDcgZXZlbnQyPWdwaW8ta2V5cyDmnIkgMTAy77ybeDdwIGV2ZW50Mz1ncGlvLWtleXMg5pyJ"
+  107:  push_atom_value "IDEwMuOAgWV2ZW50Mj1sZWRfY29udHJvbAojIOaYr+aJq+aPj+WOi+aEn+inpuWktOiiq+ivryBn"
+  112:  push_atom_value "cmFiIOiHtOatu++8m3g3cCBldmVudDQ9c2l0cm9uaXhfdHNfc3BpIOS5n+aKpSBLRVlfUE9XRVIg"
+  117:  push_atom_value "5L2G5o6S6Zmk6Ziy5q276Kem5pG477yJ44CCCiMg5om+5LiN5Yiw5Yy56YWN6K6+5aSH5pe26Z2Z"
+  122:  push_atom_value "6buY6YCA5Ye677yI5LiN5Ye65LqL77yJ77yM5pel5b+X6JC9IC9kYXRhL2tleWxvZy9sb2xpX2R1"
+  127:  push_atom_value "YWxrZXkubG9n44CCCiMgdjIuMC43MyDkv67lpI3vvIgyMDI2LTEwLTI1IOecn+acuu+8ie+8muac"
+  132:  push_atom_value "rOWuiOaKpOeUseW6lOeUqOi/m+eoiyBzZXRzaWQg5ouJ6LW377yM5Lya6L+e5ZCM5a6/5Li75bey"
+  137:  push_atom_value "55uR5ZCsCiMg55qEIGZk77yI5qGM6Z2i6aG1IEh0dHBTZXJ2ZXIgMTgwOTAg562J77yJ5LiA6LW3"
+  142:  push_atom_value "57un5om/44CC5a6/5Li76YeN5ZCv5ZCO6ICB5Zue6LCD5raI5aSx77yM5a6I5oqk5Y205LuN5pSl"
+  147:  push_atom_value "552ACiMg55uR5ZCs5aWX5o6l5a2X77ya5paw6L+e5o6l5Y+q6L+b5YaF5qC46Zif5YiX5peg5Lq6"
+  152:  push_atom_value "5bqU562U77yI5a6e5rWLIHJlY3YtcSA544CB5qGM6Z2iIHN0YXJ0ZmFpbCDov57nu60gMTIg5qyh"
+  157:  push_atom_value "44CBCiMg55u45YaML+mUruebmCBIVFRQIOmAmumBk+WFqOWgte+8ieOAguWQr+WKqOWNs+aemuS4"
+  162:  push_atom_value viAvcHJvYy8kJC9mZCDlhbPmjonlhajpg6jnu6fmib8gZmTvvIjlrp7mtYvokL3lnKggZmQgODbv
+  167:  push_atom_value "vIzlm7rlrpogMy4uNjMg5YWz5LiN5Yiw77yJ77yM5Y+q55WZIDAvMS8y44CCCmZvciBmIGluIC9w"
+  172:  push_atom_value cm9jLyQkL2ZkLyo7IGRvCiAgbj0ke2YjIyovfQogIGNhc2UgIiRuIiBpbiAiInwwfDF8MikgY29u
+  177:  push_atom_value "dGludWU7OyBlc2FjCiAgIyBmZCAxMCDmmK8gc2hlbGwg5q2j5Zyo6K+755qE6ISa5pys6Ieq6Lqr"
+  182:  array_from 32
+  185:  push_atom_value "4oCU4oCU5YWz5LqGIHNoZWxsIOeri+WNs+atu++8iHY1NiDmlZnorq3vvIkKICB0PSQocmVhZGxp"
+  190:  define_field "32"
+  195:  push_atom_value bmsgIiRmIiAyPi9kZXYvbnVsbCkKICBjYXNlICIkdCIgaW4gIiQwInwvZGF0YS9sb2xpX2R1YWxr
+  200:  define_field "33"
+  205:  push_atom_value "ZXkuc2gpIGNvbnRpbnVlOzsgZXNhYwogIGV2YWwgImV4ZWMgJG4+Ji0iIDI+L2Rldi9udWxsCmRv"
+  210:  define_field "34"
+  215:  push_atom_value bmUKdW5zZXQgbiB0IGYKVkVSPTU3ClZFUkY9L2RhdGEvbG9saV9kdWFsa2V5LnZlcgpQSURGPS9k
+  220:  define_field "35"
+  225:  push_atom_value YXRhL2xvbGlfZHVhbGtleS5waWQKaWYgWyAtZiAiJFBJREYiIF07IHRoZW4KICBPUD0kKGNhdCAi
+  230:  define_field "36"
+  235:  push_atom_value "JFBJREYiIDI+L2Rldi9udWxsKQogIGlmIFsgLW4gIiRPUCIgXSAmJiBncmVwIC1xICdsb2xpX2R1"
+  240:  define_field "37"
+  245:  push_atom_value YWxrZVt5XScgIi9wcm9jLyRPUC9jbWRsaW5lIiAyPi9kZXYvbnVsbDsgdGhlbgogICAgaWYgWyAi
+  250:  define_field "38"
+  255:  push_atom_value JChjYXQgIiRWRVJGIiAyPi9kZXYvbnVsbCkiID0gIiRWRVIiIF07IHRoZW4gZXhpdCAwOyBmaQog
+  260:  define_field "39"
+  265:  push_atom_value ICAga2lsbCAtOSAiJE9QIiAyPi9kZXYvbnVsbAogICAgc2xlZXAgMC4yCiAgZmkKICBybSAtZiAi
+  270:  define_field "40"
+  275:  push_atom_value JFBJREYiCmZpCmVjaG8gIiRWRVIiID4gIiRWRVJGIgpwa2lsbCAtZiAnZHVhbGtleV9maW5hbC5z
+  280:  define_field "41"
+  285:  push_atom_value aCcgMj4vZGV2L251bGwKcGtpbGwgLWYgJ2R1YWxrZXlfdGVzdC5zaCcgMj4vZGV2L251bGwKcGtp
+  290:  define_field "42"
+  295:  push_atom_value "bGwgLTkgLWYgJ2V2dGVzdCAtLWdyYWInIDI+L2Rldi9udWxsCm1rZGlyIC1wIC91c2VyZGlzay9Q"
+  300:  define_field "43"
+  305:  push_atom_value aWN0dXJlcyAvZGF0YS9rZXlsb2cKTE9HPS9kYXRhL2tleWxvZy9sb2xpX2R1YWxrZXkubG9nCkZJ
+  310:  define_field "44"
+  315:  push_atom_value Rk89L2RhdGEva2V5bG9nL2xvbGkuZmlmbwpERVNLPTgwODAyMjI0Mzc2NjQ0NTEKSE9MREY9L2Rh
+  320:  define_field "45"
+  325:  push_atom_value dGEvbG9saV9ka19ob2xkCkg9MApQPTAKQz0wCkhQPTAKSFI9MApXUD0wClsgLXAgIiRGSUZPIiBd
+  330:  define_field "46"
+  335:  push_atom_value "IHx8IG1rZmlmbyAiJEZJRk8iCjogPiAiJExPRyIKZWNobyAkJCA+ICIkUElERiIKRTE9CkUyPQoK"
+  340:  define_field "47"
+  345:  push_atom_value IyB2Mi4wLjU077ya5oyJIGNhcGFiaWxpdHkg5o6i5rWLIEhPTUUvUE9XRVIg5omA5Zyo55qEIGV2
+  350:  define_field "48"
+  355:  push_atom_value "ZW50IOiKgueCuQojIOi/lOWbnuWMuemFjSBldmVudCDot6/lvoTvvIzmib7kuI3liLDov5Tlm57n"
+  360:  define_field "49"
+  365:  push_atom_value qboKZmluZF9kZXZfYnlfa2V5KCkgewogIGtleT0iJDEiOyBuYW1lX3BhdD0iJDIiCiAgZm9yIGV2
+  370:  define_field "50"
+  375:  push_atom_value IGluIC9kZXYvaW5wdXQvZXZlbnQqOyBkbwogICAgaW5mbz0kKHRpbWVvdXQgMC4yIGV2dGVzdCAi
+  380:  define_field "51"
+  385:  push_atom_value JGV2IiAyPi9kZXYvbnVsbCB8IGhlYWQgLTEyKQogICAgZWNobyAiJGluZm8iIHwgZ3JlcCAtcSAi
+  390:  define_field "52"
+  395:  push_atom_value JG5hbWVfcGF0IiB8fCBjb250aW51ZQogICAgZWNobyAiJGluZm8iIHwgZ3JlcCAtcSAiRXZlbnQg
+  400:  define_field "53"
+  405:  push_atom_value Y29kZSAka2V5ICIgfHwgY29udGludWUKICAgIGVjaG8gIiRldiI7IHJldHVybiAwCiAgZG9uZQog
+  410:  define_field "54"
+  415:  push_atom_value IHJldHVybiAxCn0KCkhERVY9JChmaW5kX2Rldl9ieV9rZXkgMTAyICdncGlvLWtleXMnKQpQREVW
+  420:  define_field "55"
+  425:  push_atom_value PSQoZmluZF9kZXZfYnlfa2V5IDExNiAncHdya2V5JykKWyAteiAiJEhERVYiIF0gJiYgSERFVj0k
+  430:  define_field "56"
+  435:  push_atom_value KGZpbmRfZGV2X2J5X2tleSAxMDIgJ2tleXMnKQpbIC16ICIkUERFViIgXSAmJiBQREVWPSQoZmlu
+  440:  define_field "57"
+  445:  push_atom_value ZF9kZXZfYnlfa2V5IDExNiAncHdya2V5JykKaWYgWyAteiAiJEhERVYiIF0gfHwgWyAteiAiJFBE
+  450:  define_field "58"
+  455:  push_atom_value RVYiIF07IHRoZW4KICBlY2hvICIkKGRhdGUgKyVtJWRfJUglTSVTKSBuby1ob21lLW9yLXBvd2Vy
+  460:  define_field "59"
+  465:  push_atom_value LWRldiIgPj4gIiRMT0ciCiAgcm0gLWYgIiRQSURGIiAiJFZFUkYiCiAgZXhpdCAxCmZpCmVjaG8g
+  470:  define_field "60"
+  475:  push_atom_value "IiQoZGF0ZSArJW0lZF8lSCVNJVMpIGhvbWU9JEhERVYgcG93ZXI9JFBERVYiID4+ICIkTE9HIgoK"
+  480:  define_field "61"
+  485:  push_atom_value Y2xlYW51cCgpIHsKICBbIC1uICIkRTEiIF0gJiYga2lsbCAtOSAkRTEgMj4vZGV2L251bGwKICBb
+  490:  define_field "62"
+  495:  push_atom_value IC1uICIkRTIiIF0gJiYga2lsbCAtOSAkRTIgMj4vZGV2L251bGwKICBbICIkV1AiICE9IDAgXSAm
+  500:  define_field "63"
+  505:  push_atom_value JiBraWxsIC05ICRXUCAyPi9kZXYvbnVsbAogIGVjaG8gdXAgPiAiJEhPTERGIiAyPi9kZXYvbnVs
+  510:  define_field "64"
+  515:  push_atom_value bAogIHJtIC1mICIkUElERiIKfQp0cmFwIGNsZWFudXAgRVhJVApldnRlc3QgLS1ncmFiICIkSERF
+  520:  define_field "65"
+  525:  push_atom_value "ViIgPiAiJEZJRk8iIDI+L2Rldi9udWxsICYKRTE9JCEKZXZ0ZXN0IC0tZ3JhYiAiJFBERVYiID4g"
+  530:  define_field "66"
+  535:  push_atom_value IiRGSUZPIiAyPi9kZXYvbnVsbCAmCkUyPSQhCndoaWxlIHJlYWQgbGluZTsgZG8KICBjYXNlICRs
+  540:  define_field "67"
+  545:  push_atom_value aW5lIGluCiAgICAqY29kZSoxMDIqdmFsdWUqWzEyXSopCiAgICAgIGlmIFsgJEggPSAwIF07IHRo
+  550:  define_field "68"
+  555:  push_atom_value "ZW4gSFA9JChkYXRlICslcyVOIDI+L2Rldi9udWxsKTsgWyAteiAiJEhQIiBdICYmIEhQPSQoZGF0"
+  560:  define_field "69"
+  565:  push_atom_value ZSArJXMpMDAwMDAwMDAwOyBIUj0wCiAgICAgICAgZWNobyBkb3duID4gIiRIT0xERiIKICAgICAg
+  570:  define_field "70"
+  575:  push_atom_value ICAoIHNsZWVwIDEuMgogICAgICAgICAgaWYgWyAiJChjYXQgIiRIT0xERiIgMj4vZGV2L251bGwp
+  580:  define_field "71"
+  585:  push_atom_value IiA9IGRvd24gXTsgdGhlbgogICAgICAgICAgICBlY2hvIGZpcmVkID4gIiRIT0xERiIKICAgICAg
+  590:  define_field "72"
+  595:  push_atom_value ICAgICAgY3VybCAtcyAtbSAyICJodHRwOi8vMTI3LjAuMC4xOjE4MDkwL210IiA8L2Rldi9udWxs
+  600:  define_field "73"
+  605:  push_atom_value "ID4+ICIkTE9HIiAyPiYxICYKICAgICAgICAgIGZpCiAgICAgICAgKSA8L2Rldi9udWxsID4vZGV2"
+  610:  define_field "74"
+  615:  push_atom_value L251bGwgMj4mMSAmCiAgICAgICAgV1A9JCEKICAgICAgZmkKICAgICAgSD0xIDs7CiAgICAqY29k
+  620:  define_field "75"
+  625:  push_atom_value ZSoxMTYqdmFsdWUqMSopIFA9MSA7OwogICAgKmNvZGUqMTAyKnZhbHVlKjAqKQogICAgICBpZiBb
+  630:  define_field "76"
+  635:  push_atom_value ICRIID0gMSBdOyB0aGVuCiAgICAgICAgaWYgWyAiJFdQIiAhPSAwIF07IHRoZW4ga2lsbCAtOSAi
+  640:  define_field "77"
+  645:  push_atom_value "JFdQIiAyPi9kZXYvbnVsbDsgV1A9MDsgZmkKICAgICAgICBIT0xEPSQoY2F0ICIkSE9MREYiIDI+"
+  650:  define_field "78"
+  655:  push_atom_value L2Rldi9udWxsKQogICAgICAgIGVjaG8gdXAgPiAiJEhPTERGIgogICAgICAgIE5PVz0kKGRhdGUg
+  660:  define_field "79"
+  665:  push_atom_value KyVzJU4gMj4vZGV2L251bGwpOyBbIC16ICIkTk9XIiBdICYmIE5PVz0kKGRhdGUgKyVzKTAwMDAw
+  670:  define_field "80"
+  675:  push_atom_value MDAwMAogICAgICAgIGlmIFsgIiRIT0xEIiA9IGZpcmVkIF0gfHwgWyAkSFIgPSAxIF07IHRoZW4K
+  680:  define_field "81"
+  685:  push_atom_value ICAgICAgICAgIDoKICAgICAgICBlbGlmIFsgJEMgPSAwIF0gJiYgWyAkKChOT1cgLSBIUCkpIC1n
+  690:  define_field "82"
+  695:  push_atom_value ZSAxMjAwMDAwMDAwIF07IHRoZW4KICAgICAgICAgIGN1cmwgLXMgLW0gMiAiaHR0cDovLzEyNy4w
+  700:  define_field "83"
+  705:  push_atom_value "LjAuMToxODA5MC9tdCIgPC9kZXYvbnVsbCA+PiAiJExPRyIgMj4mMSAmCiAgICAgICAgICBIUj0x"
+  710:  define_field "84"
+  715:  push_atom_value CiAgICAgICAgZWxpZiBbICRDID0gMCBdOyB0aGVuCiAgICAgICAgICBtaW5pYXBwX2NsaSBzdGFy
+  720:  define_field "85"
+  725:  push_atom_value "dCAkREVTSyA+PiAiJExPRyIgMj4mMQogICAgICAgIGZpCiAgICAgIGZpCiAgICAgIEg9MDsgWyAk"
+  730:  define_field "86"
+  735:  push_atom_value UCA9IDAgXSAmJiBDPTAgOzsKICAgICpjb2RlKjExNip2YWx1ZSowKikKICAgICAgWyAkQyA9IDAg
+  740:  define_field "87"
+  745:  push_atom_value "XSAmJiBoYWwtc2NyZWVuIHN3aXRjaCA+PiAiJExPRyIgMj4mMQogICAgICBQPTA7IFsgJEggPSAw"
+  750:  define_field "88"
+  755:  push_atom_value IF0gJiYgQz0wIDs7CiAgZXNhYwogIGlmIFsgJEggPSAxIF0gJiYgWyAkUCA9IDEgXSAmJiBbICRD
+  760:  define_field "89"
+  765:  push_atom_value ID0gMCBdOyB0aGVuCiAgICBDPTEKICAgIGlmIFsgIiRXUCIgIT0gMCBdOyB0aGVuIGtpbGwgLTkg
+  770:  define_field "90"
+  775:  push_atom_value IiRXUCIgMj4vZGV2L251bGw7IFdQPTA7IGZpCiAgICBlY2hvIHVwID4gIiRIT0xERiIKICAgICMg
+  780:  define_field "91"
+  785:  push_atom_value "djIuMC42Me+8muebuOacuumhteWJjeWPsCDihpIg5YaZ6Kem5Y+R5paH5Lu255Sx55u45py66aG1"
+  790:  define_field "92"
+  795:  push_atom_value "6Ieq5bex5ouN54Wn77yb5ZCm5YiZ5YWo5bGA5oiq5Zu+CiAgICBpZiBbICIkKGNhdCAvZGF0YS9s"
+  800:  define_field "93"
+  805:  push_atom_value "b2xpX2NhbV9mZyAyPi9kZXYvbnVsbCkiID0gMSBdOyB0aGVuCiAgICAgIGVjaG8gMSA+IC9kYXRh"
+  810:  define_field "94"
+  815:  push_atom_value L2xvbGlfY2FtX3Nob3QKICAgIGVsc2UKICAgICAgU0hPVD0vdXNlcmRpc2svUGljdHVyZXMvc2hv
+  820:  define_field "95"
+  825:  push_atom_value dF8kKGRhdGUgKyVZJW0lZF8lSCVNJVMpXzAwMS5wbmcKICAgICAgbWluaWFwcF9jbGkgY2FwdHVy
+  830:  define_field "96"
+  835:  push_atom_value "ZSAiJFNIT1QiID4+ICIkTE9HIiAyPiYxCiAgICAgIFsgLWYgIiRTSE9UIiBdICYmIGN1cmwgLXMg"
+  840:  define_field "97"
+  845:  push_atom_value LW0gMyAiaHR0cDovLzEyNy4wLjAuMToxODA5MC9zaG90P3A9JFNIT1QiIDwvZGV2L251bGwgPj4g
+  850:  define_field "98"
+  855:  push_atom_value "IiRMT0ciIDI+JjEgJgogICAgZmkKICBmaQpkb25lIDwgIiRGSUZPIgo="
+  860:  define_field "99"
+  865:  get_field2 join
+  870:  push_empty_string
+  871:  call_method 1
+  874:  put_var_ref1 1: g
+  875:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: dualkey-73fdac50.js:1 source_len=0 */
+dualkey-73fdac50.js:1: function: C
+  mode: strict
+  args: I g
+  locals:
+    0: var C
+    1: catch I [level:4 next:-1]
+  stack_size: 4
+  opcodes:
+    0:  get_arg0 0: I
+    1:  lnot
+    2:  dup
+    3:  if_true8 19
+    5:  drop
+    6:  push_atom_value function
+   11:  get_arg0 0: I
+   12:  get_field exec
+   17:  typeof
+   18:  neq
+   19:  if_false8 23
+   21:  push_empty_string
+   22:  return
+   23:  catch 74
+   28:  get_arg0 0: I
+   29:  get_field2 exec
+   34:  get_arg1 1: g
+   35:  call_method 1
+   38:  put_loc0 0: C
+   39:  get_var String
+   44:  get_loc0 0: C
+   45:  if_false8 65
+   47:  push_atom_value object
+   52:  get_loc0 0: C
+   53:  typeof
+   54:  eq
+   55:  if_false8 65
+   57:  get_loc0 0: C
+   58:  get_field output
+   63:  goto8 66
+   65:  get_loc0 0: C
+   66:  dup
+   67:  if_true8 71
+   69:  drop
+   70:  push_empty_string
+   71:  call1 1
+   72:  nip
+   73:  return
+   74:  put_loc1 1: I
+   75:  catch 83
+   80:  push_empty_string
+   81:  nip
+   82:  return
+   83:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: dualkey-73fdac50.js:1 source_len=0 */
+dualkey-73fdac50.js:1: function: i
+  mode: strict
+  args: I g
+  closure vars:
+    0: C parent:loc2 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: C
+    1:  get_arg0 0: I
+    2:  push_atom_value "echo $(date +%m%d_%H%M%S) "
+    7:  get_arg1 1: g
+    8:  add
+    9:  push_atom_value " >> /data/loli_dk_launch.log"
+   14:  add
+   15:  call2 2
+   16:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: dualkey-73fdac50.js:1 source_len=0 */
+dualkey-73fdac50.js:1: function: A
+  mode: strict
+  args: A
+  closure vars:
+    0: i parent:loc3 var
+    1: C parent:loc2 var
+    2: g parent:loc1 var
+    3: I parent:loc0 var
+  stack_size: 7
+  opcodes:
+    0:  get_arg0 0: A
+    1:  if_false8 103
+    3:  push_atom_value function
+    8:  get_arg0 0: A
+    9:  get_field exec
+   14:  typeof
+   15:  eq
+   16:  if_false8 103
+   18:  get_var_ref0 0: i
+   19:  get_arg0 0: A
+   20:  push_atom_value begin
+   25:  call2 2
+   26:  drop
+   27:  get_var_ref1 1: C
+   28:  get_arg0 0: A
+   29:  push_atom_value "echo '"
+   34:  get_var_ref2 2: g
+   35:  add
+   36:  push_atom_value "' | base64 -d > "
+   41:  add
+   42:  get_var_ref3 3: I
+   43:  add
+   44:  call2 2
+   45:  drop
+   46:  get_var_ref0 0: i
+   47:  get_arg0 0: A
+   48:  push_atom_value "written:"
+   53:  get_var_ref1 1: C
+   54:  get_arg0 0: A
+   55:  push_atom_value "wc -c < "
+   60:  get_var_ref3 3: I
+   61:  add
+   62:  call2 2
+   63:  get_field2 trim
+   68:  call_method 0
+   71:  add
+   72:  call2 2
+   73:  drop
+   74:  get_var_ref1 1: C
+   75:  get_arg0 0: A
+   76:  push_atom_value "setsid sh "
+   81:  get_var_ref3 3: I
+   82:  add
+   83:  push_atom_value " >/dev/null 2>&1 &"
+   88:  add
+   89:  call2 2
+   90:  drop
+   91:  get_var_ref0 0: i
+   92:  get_arg0 0: A
+   93:  push_atom_value launched
+   98:  call2 2
+   99:  drop
+  100:  push_0 0
+  101:  lnot
+  102:  return
+  103:  get_var_ref0 0: i
+  104:  get_arg0 0: A
+  105:  push_atom_value "no-shell"
+  110:  call2 2
+  111:  drop
+  112:  push_1 1
+  113:  lnot
+  114:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: dualkey-73fdac50.js:1 source_len=0 */
+dualkey-73fdac50.js:1: function: Z
+  mode: strict
+  args: I
+  closure vars:
+    0: C parent:loc2 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: C
+    1:  get_arg0 0: I
+    2:  push_atom_value "if [ -f /data/loli_dualkey.pid ]; then kill $(cat /data/loli_dualkey.pid) 2>/dev/null; fi; pkill -9 -f 'evtest --grab' 2>/dev/null; true"
+    7:  call2 2
+    8:  return_undef
+

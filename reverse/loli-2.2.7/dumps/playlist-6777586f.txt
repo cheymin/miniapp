@@ -1,0 +1,2090 @@
+
+/* ===== function depth=0 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: t local:loc0 const
+  stack_size: 3
+  opcodes:
+    0:  object
+    1:  fclosure8 0: [bytecode <null>]
+    3:  set_name data
+    8:  define_field data
+   13:  object
+   14:  fclosure8 1: [bytecode <null>]
+   16:  define_method _playlistStore,4
+   22:  fclosure8 2: [bytecode <null>]
+   24:  define_method _playlistShell,4
+   30:  fclosure8 3: [bytecode <null>]
+   32:  define_method loadPlaylists,4
+   38:  fclosure8 4: [bytecode <null>]
+   40:  define_method savePlaylists,4
+   46:  fclosure8 5: [bytecode <null>]
+   48:  define_method createPlaylist,4
+   54:  fclosure8 6: [bytecode <null>]
+   56:  define_method playlistById,4
+   62:  fclosure8 7: [bytecode <null>]
+   64:  define_method renamePlaylist,4
+   70:  fclosure8 8: [bytecode <null>]
+   72:  define_method deletePlaylist,4
+   78:  fclosure8 9: [bytecode <null>]
+   80:  set_name totalPlaylistSongs
+   85:  define_field totalPlaylistSongs
+   90:  fclosure8 10: [bytecode <null>]
+   92:  set_name songKey
+   97:  define_field songKey
+  102:  fclosure8 11: [bytecode <null>]
+  104:  define_method addSongsToPlaylist,4
+  110:  fclosure8 12: [bytecode <null>]
+  112:  define_method removeSongFromPlaylist,4
+  118:  fclosure8 13: [bytecode <null>]
+  120:  define_method moveSongInPlaylist,4
+  126:  fclosure8 14: [bytecode <null>]
+  128:  define_method emitMusicCommand,4
+  134:  fclosure8 15: [bytecode <null>]
+  136:  define_method playPlaylist,4
+  142:  fclosure8 16: [bytecode <null>]
+  144:  define_method playPlaylistSong,4
+  150:  fclosure8 17: [bytecode <null>]
+  152:  define_method loadMusicFolders,4
+  158:  fclosure8 18: [bytecode <null>]
+  160:  define_method saveMusicFolders,4
+  166:  fclosure8 19: [bytecode <null>]
+  168:  define_method addMusicFolder,4
+  174:  fclosure8 20: [bytecode <null>]
+  176:  define_method removeMusicFolder,4
+  182:  fclosure8 21: [bytecode <null>]
+  184:  define_method scanFolderForMusic,4
+  190:  fclosure8 22: [bytecode <null>]
+  192:  define_method getBiliLocalVideos,4
+  198:  fclosure8 23: [bytecode <null>]
+  200:  define_method addBiliVideosToPlaylist,4
+  206:  fclosure8 24: [bytecode <null>]
+  208:  set_name getShellOutput
+  213:  define_field getShellOutput
+  218:  fclosure8 25: [bytecode <null>]
+  220:  define_method execShellText,4
+  226:  fclosure8 26: [bytecode <null>]
+  228:  set_name escapeShellDoubleQuoted
+  233:  define_field escapeShellDoubleQuoted
+  238:  fclosure8 27: [bytecode <null>]
+  240:  define_method parseDurationOutput,4
+  246:  fclosure8 28: [bytecode <null>]
+  248:  define_method probeLocalDurationMs,4
+  254:  fclosure8 29: [bytecode <null>]
+  256:  define_method fileExists,4
+  262:  define_field methods
+  267:  put_var_ref0 0: t
+  268:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  stack_size: 2
+  opcodes:
+    0:  object
+    1:  array_from 0
+    4:  define_field playlists
+    9:  array_from 0
+   12:  define_field musicFolders
+   17:  push_1 1
+   18:  lnot
+   19:  define_field playlistScanning
+   24:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field $Dbase
+    8:  dup
+    9:  if_true8 23
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field Dbase
+   18:  dup
+   19:  if_true8 23
+   21:  drop
+   22:  null
+   23:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field Shell
+    8:  dup
+    9:  if_true8 23
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field shell
+   18:  dup
+   19:  if_true8 23
+   21:  drop
+   22:  null
+   23:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var s
+    2: catch t [level:4 next:-1]
+    3: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  get_field2 _playlistStore
+    8:  call_method 0
+   11:  set_loc0 0: t
+   12:  if_false8 82
+   14:  catch 64
+   19:  get_loc0 0: t
+   20:  get_field2 read
+   25:  push_atom_value desktop_playlists
+   30:  call_method 1
+   33:  put_loc1 1: s
+   34:  get_loc3 3: this
+   35:  get_var Array
+   40:  get_field2 isArray
+   45:  get_loc1 1: s
+   46:  call_method 1
+   49:  if_false8 54
+   51:  get_loc1 1: s
+   52:  goto8 57
+   54:  array_from 0
+   57:  put_field playlists
+   62:  drop
+   63:  return_undef
+   64:  put_loc2 2: t
+   65:  catch 81
+   70:  get_loc3 3: this
+   71:  array_from 0
+   74:  put_field playlists
+   79:  drop
+   80:  return_undef
+   81:  throw
+   82:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: catch t [level:4 next:-1]
+    2: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field2 _playlistStore
+    8:  call_method 0
+   11:  set_loc0 0: t
+   12:  if_false8 58
+   14:  catch 49
+   19:  get_loc0 0: t
+   20:  get_field2 write
+   25:  push_atom_value desktop_playlists
+   30:  get_loc2 2: this
+   31:  get_field playlists
+   36:  dup
+   37:  if_true8 43
+   39:  drop
+   40:  array_from 0
+   43:  call_method 2
+   46:  drop
+   47:  drop
+   48:  return_undef
+   49:  put_loc1 1: t
+   50:  catch 57
+   55:  drop
+   56:  return_undef
+   57:  throw
+   58:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var s
+    1: var e
+    2: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  push_atom_value pl_
+    7:  get_var Date
+   12:  get_field2 now
+   17:  call_method 0
+   20:  add
+   21:  push_atom_value _
+   26:  add
+   27:  get_var Math
+   32:  get_field2 floor
+   37:  push_i16 1000
+   40:  get_var Math
+   45:  get_field2 random
+   50:  call_method 0
+   53:  mul
+   54:  call_method 1
+   57:  add
+   58:  put_loc0 0: s
+   59:  object
+   60:  get_loc0 0: s
+   61:  define_field id
+   66:  get_arg0 0: t
+   67:  dup
+   68:  if_true8 76
+   70:  drop
+   71:  push_atom_value "\u00e6\u0096\u00b0\u00e5\u00bb\u00ba\u00e6\u00ad\u008c\u00e5\u008d\u0095"
+   76:  define_field name
+   81:  push_empty_string
+   82:  define_field cover
+   87:  get_var Date
+   92:  get_field2 now
+   97:  call_method 0
+  100:  define_field createdAt
+  105:  get_var Date
+  110:  get_field2 now
+  115:  call_method 0
+  118:  define_field updatedAt
+  123:  array_from 0
+  126:  define_field songs
+  131:  put_loc1 1: e
+  132:  get_loc2 2: this
+  133:  get_field playlists
+  138:  get_field2 unshift
+  143:  get_loc1 1: e
+  144:  call_method 1
+  147:  drop
+  148:  get_loc2 2: this
+  149:  get_field2 savePlaylists
+  154:  call_method 0
+  157:  drop
+  158:  get_loc0 0: s
+  159:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var s
+    1: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_arg0 0: t
+    3:  lnot
+    4:  if_false8 8
+    6:  null
+    7:  return
+    8:  push_0 0
+    9:  put_loc0 0: s
+   10:  get_loc0 0: s
+   11:  get_loc1 1: this
+   12:  get_field playlists
+   17:  get_length
+   18:  lt
+   19:  if_false8 61
+   21:  get_loc1 1: this
+   22:  get_field playlists
+   27:  get_loc0 0: s
+   28:  get_array_el
+   29:  if_false8 57
+   31:  get_loc1 1: this
+   32:  get_field playlists
+   37:  get_loc0 0: s
+   38:  get_array_el
+   39:  get_field id
+   44:  get_arg0 0: t
+   45:  strict_eq
+   46:  if_false8 57
+   48:  get_loc1 1: this
+   49:  get_field playlists
+   54:  get_loc0 0: s
+   55:  get_array_el
+   56:  return
+   57:  inc_loc 0: s
+   59:  goto8 10
+   61:  null
+   62:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t s
+  locals:
+    0: var e
+    1: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field2 playlistById
+    8:  get_arg0 0: t
+    9:  call_method 1
+   12:  set_loc0 0: e
+   13:  dup
+   14:  if_false8 78
+   16:  drop
+   17:  get_loc0 0: e
+   18:  get_var String
+   23:  get_arg1 1: s
+   24:  dup
+   25:  if_true8 33
+   27:  drop
+   28:  push_atom_value "\u00e6\u009c\u00aa\u00e5\u0091\u00bd\u00e5\u0090\u008d\u00e6\u00ad\u008c\u00e5\u008d\u0095"
+   33:  call1 1
+   34:  get_field2 slice
+   39:  push_0 0
+   40:  push_i8 40
+   42:  call_method 2
+   45:  put_field name
+   50:  get_loc0 0: e
+   51:  get_var Date
+   56:  get_field2 now
+   61:  call_method 0
+   64:  put_field updatedAt
+   69:  get_loc1 1: this
+   70:  get_field2 savePlaylists
+   75:  call_method 0
+   78:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var s
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  push_0 0
+    3:  put_loc0 0: s
+    4:  get_loc0 0: s
+    5:  get_loc1 1: this
+    6:  get_field playlists
+   11:  get_length
+   12:  lt
+   13:  if_false8 74
+   15:  get_loc1 1: this
+   16:  get_field playlists
+   21:  get_loc0 0: s
+   22:  get_array_el
+   23:  if_false8 70
+   25:  get_loc1 1: this
+   26:  get_field playlists
+   31:  get_loc0 0: s
+   32:  get_array_el
+   33:  get_field id
+   38:  get_arg0 0: t
+   39:  strict_eq
+   40:  if_false8 70
+   42:  get_loc1 1: this
+   43:  get_field playlists
+   48:  get_field2 splice
+   53:  get_loc0 0: s
+   54:  push_1 1
+   55:  call_method 2
+   58:  drop
+   59:  get_loc1 1: this
+   60:  get_field2 savePlaylists
+   65:  call_method 0
+   68:  drop
+   69:  return_undef
+   70:  inc_loc 0: s
+   72:  goto8 4
+   74:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: t
+    1:  if_false8 32
+    3:  get_var Array
+    8:  get_field2 isArray
+   13:  get_arg0 0: t
+   14:  get_field songs
+   19:  call_method 1
+   22:  if_false8 32
+   24:  get_arg0 0: t
+   25:  get_field songs
+   30:  get_length
+   31:  return
+   32:  push_0 0
+   33:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: t
+    1:  if_false8 62
+    3:  get_arg0 0: t
+    4:  get_field local_path
+    9:  dup
+   10:  if_true8 19
+   12:  drop
+   13:  get_arg0 0: t
+   14:  get_field localPath
+   19:  if_false8 44
+   21:  push_atom_value "local:"
+   26:  get_arg0 0: t
+   27:  get_field local_path
+   32:  dup
+   33:  if_true8 42
+   35:  drop
+   36:  get_arg0 0: t
+   37:  get_field localPath
+   42:  add
+   43:  return
+   44:  push_atom_value "online:"
+   49:  get_arg0 0: t
+   50:  get_field song_mid
+   55:  dup
+   56:  if_true8 60
+   58:  drop
+   59:  push_empty_string
+   60:  add
+   61:  return
+   62:  push_empty_string
+   63:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t s
+  locals:
+    0: var e
+    1: var i
+    2: var l
+    3: var r
+    4: var a
+    5: var n
+    6: var o
+    7: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc8 7: this
+    3:  get_loc8 7: this
+    5:  get_field2 playlistById
+   10:  get_arg0 0: t
+   11:  call_method 1
+   14:  set_loc0 0: e
+   15:  lnot
+   16:  dup
+   17:  if_true8 42
+   19:  drop
+   20:  get_var Array
+   25:  get_field2 isArray
+   30:  get_arg1 1: s
+   31:  call_method 1
+   34:  lnot
+   35:  dup
+   36:  if_true8 42
+   38:  drop
+   39:  get_arg1 1: s
+   40:  get_length
+   41:  lnot
+   42:  if_false8 46
+   44:  push_0 0
+   45:  return
+   46:  get_var Array
+   51:  get_field2 isArray
+   56:  get_loc0 0: e
+   57:  get_field songs
+   62:  call_method 1
+   65:  dup
+   66:  if_true8 79
+   68:  drop
+   69:  get_loc0 0: e
+   70:  array_from 0
+   73:  insert2
+   74:  put_field songs
+   79:  drop
+   80:  object
+   81:  put_loc1 1: i
+   82:  push_0 0
+   83:  put_loc2 2: l
+   84:  get_loc2 2: l
+   85:  get_loc0 0: e
+   86:  get_field songs
+   91:  get_length
+   92:  lt
+   93:  if_false8 130
+   95:  get_loc8 7: this
+   97:  get_field2 songKey
+  102:  get_loc0 0: e
+  103:  get_field songs
+  108:  get_loc2 2: l
+  109:  get_array_el
+  110:  call_method 1
+  113:  set_loc3 3: r
+  114:  dup
+  115:  if_false8 125
+  117:  drop
+  118:  get_loc1 1: i
+  119:  get_loc3 3: r
+  120:  to_propkey2
+  121:  push_0 0
+  122:  lnot
+  123:  insert3
+  124:  put_array_el
+  125:  drop
+  126:  inc_loc 2: l
+  128:  goto8 84
+  130:  push_0 0
+  131:  put_loc8 4: a
+  133:  push_0 0
+  134:  put_loc8 5: n
+  136:  get_loc8 5: n
+  138:  get_arg1 1: s
+  139:  get_length
+  140:  lt
+  141:  if_false8 215
+  143:  get_loc8 7: this
+  145:  get_field2 songKey
+  150:  get_arg1 1: s
+  151:  get_loc8 5: n
+  153:  get_array_el
+  154:  call_method 1
+  157:  set_loc8 6: o
+  159:  dup
+  160:  if_false8 167
+  162:  drop
+  163:  get_loc1 1: i
+  164:  get_loc8 6: o
+  166:  get_array_el
+  167:  dup
+  168:  if_true8 210
+  170:  drop
+  171:  get_loc0 0: e
+  172:  get_field songs
+  177:  get_field2 push
+  182:  get_arg1 1: s
+  183:  get_loc8 5: n
+  185:  get_array_el
+  186:  call_method 1
+  189:  drop
+  190:  get_loc8 6: o
+  192:  dup
+  193:  if_false8 204
+  195:  drop
+  196:  get_loc1 1: i
+  197:  get_loc8 6: o
+  199:  to_propkey2
+  200:  push_0 0
+  201:  lnot
+  202:  insert3
+  203:  put_array_el
+  204:  drop
+  205:  get_loc8 4: a
+  207:  post_inc
+  208:  put_loc8 4: a
+  210:  drop
+  211:  inc_loc 5: n
+  213:  goto8 136
+  215:  get_loc0 0: e
+  216:  get_var Date
+  221:  get_field2 now
+  226:  call_method 0
+  229:  put_field updatedAt
+  234:  get_loc8 7: this
+  236:  get_field2 savePlaylists
+  241:  call_method 0
+  244:  drop
+  245:  get_loc8 4: a
+  247:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t s
+  locals:
+    0: var e
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field2 playlistById
+    8:  get_arg0 0: t
+    9:  call_method 1
+   12:  set_loc0 0: e
+   13:  dup
+   14:  if_false8 117
+   16:  drop
+   17:  get_var Array
+   22:  get_field2 isArray
+   27:  get_loc0 0: e
+   28:  get_field songs
+   33:  call_method 1
+   36:  dup
+   37:  if_false8 117
+   39:  drop
+   40:  push_atom_value number
+   45:  get_arg1 1: s
+   46:  typeof
+   47:  eq
+   48:  dup
+   49:  if_false8 117
+   51:  drop
+   52:  get_arg1 1: s
+   53:  push_0 0
+   54:  lt
+   55:  dup
+   56:  if_true8 117
+   58:  drop
+   59:  get_arg1 1: s
+   60:  get_loc0 0: e
+   61:  get_field songs
+   66:  get_length
+   67:  gte
+   68:  dup
+   69:  if_true8 117
+   71:  drop
+   72:  get_loc0 0: e
+   73:  get_field songs
+   78:  get_field2 splice
+   83:  get_arg1 1: s
+   84:  push_1 1
+   85:  call_method 2
+   88:  drop
+   89:  get_loc0 0: e
+   90:  get_var Date
+   95:  get_field2 now
+  100:  call_method 0
+  103:  put_field updatedAt
+  108:  get_loc1 1: this
+  109:  get_field2 savePlaylists
+  114:  call_method 0
+  117:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t s e
+  locals:
+    0: var i
+    1: var l
+    2: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field2 playlistById
+    8:  get_arg0 0: t
+    9:  call_method 1
+   12:  set_loc0 0: i
+   13:  if_false 151
+   18:  get_var Array
+   23:  get_field2 isArray
+   28:  get_loc0 0: i
+   29:  get_field songs
+   34:  call_method 1
+   37:  if_false8 151
+   39:  get_arg1 1: s
+   40:  push_0 0
+   41:  lt
+   42:  dup
+   43:  if_true8 82
+   45:  drop
+   46:  get_arg1 1: s
+   47:  get_loc0 0: i
+   48:  get_field songs
+   53:  get_length
+   54:  gte
+   55:  dup
+   56:  if_true8 82
+   58:  drop
+   59:  get_arg2 2: e
+   60:  push_0 0
+   61:  lt
+   62:  dup
+   63:  if_true8 82
+   65:  drop
+   66:  get_arg2 2: e
+   67:  get_loc0 0: i
+   68:  get_field songs
+   73:  get_length
+   74:  gte
+   75:  dup
+   76:  if_true8 82
+   78:  drop
+   79:  get_arg1 1: s
+   80:  get_arg2 2: e
+   81:  strict_eq
+   82:  lnot
+   83:  if_false8 151
+   85:  get_loc0 0: i
+   86:  get_field songs
+   91:  get_field2 splice
+   96:  get_arg1 1: s
+   97:  push_1 1
+   98:  call_method 2
+  101:  push_0 0
+  102:  get_array_el
+  103:  put_loc1 1: l
+  104:  get_loc0 0: i
+  105:  get_field songs
+  110:  get_field2 splice
+  115:  get_arg2 2: e
+  116:  push_0 0
+  117:  get_loc1 1: l
+  118:  call_method 3
+  121:  drop
+  122:  get_loc0 0: i
+  123:  get_var Date
+  128:  get_field2 now
+  133:  call_method 0
+  136:  put_field updatedAt
+  141:  get_loc2 2: this
+  142:  get_field2 savePlaylists
+  147:  call_method 0
+  150:  drop
+  151:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: catch t [level:6 next:-1]
+  stack_size: 5
+  opcodes:
+    0:  push_atom_value undefined
+    5:  get_var_undef $falcon
+   10:  typeof
+   11:  eq
+   12:  dup
+   13:  if_true8 18
+   15:  drop
+   16:  get_arg0 0: t
+   17:  lnot
+   18:  if_false8 23
+   20:  push_1 1
+   21:  lnot
+   22:  return
+   23:  catch 117
+   28:  push_atom_value function
+   33:  get_var $falcon
+   38:  get_field trigger
+   43:  typeof
+   44:  eq
+   45:  if_false8 71
+   47:  get_var $falcon
+   52:  get_field2 trigger
+   57:  push_atom_value music_command
+   62:  get_arg0 0: t
+   63:  call_method 2
+   66:  drop
+   67:  push_0 0
+   68:  lnot
+   69:  nip
+   70:  return
+   71:  push_atom_value function
+   76:  get_var $falcon
+   81:  get_field emit
+   86:  typeof
+   87:  eq
+   88:  if_false8 114
+   90:  get_var $falcon
+   95:  get_field2 emit
+  100:  push_atom_value music_command
+  105:  get_arg0 0: t
+  106:  call_method 2
+  109:  drop
+  110:  push_0 0
+  111:  lnot
+  112:  nip
+  113:  return
+  114:  drop
+  115:  goto8 127
+  117:  put_loc0 0: t
+  118:  catch 126
+  123:  drop
+  124:  goto8 127
+  126:  throw
+  127:  push_1 1
+  128:  lnot
+  129:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t s
+  locals:
+    0: var e
+    1: var i
+    2: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field2 playlistById
+    8:  get_arg0 0: t
+    9:  call_method 1
+   12:  set_loc0 0: e
+   13:  lnot
+   14:  dup
+   15:  if_true8 50
+   17:  drop
+   18:  get_var Array
+   23:  get_field2 isArray
+   28:  get_loc0 0: e
+   29:  get_field songs
+   34:  call_method 1
+   37:  lnot
+   38:  dup
+   39:  if_true8 50
+   41:  drop
+   42:  get_loc0 0: e
+   43:  get_field songs
+   48:  get_length
+   49:  lnot
+   50:  if_false8 55
+   52:  push_1 1
+   53:  lnot
+   54:  return
+   55:  push_atom_value number
+   60:  get_arg1 1: s
+   61:  typeof
+   62:  eq
+   63:  if_false8 68
+   65:  get_arg1 1: s
+   66:  goto8 69
+   68:  push_0 0
+   69:  set_loc1 1: i
+   70:  push_0 0
+   71:  lt
+   72:  dup
+   73:  if_true8 85
+   75:  drop
+   76:  get_loc1 1: i
+   77:  get_loc0 0: e
+   78:  get_field songs
+   83:  get_length
+   84:  gte
+   85:  dup
+   86:  if_false8 91
+   88:  drop
+   89:  push_0 0
+   90:  set_loc1 1: i
+   91:  drop
+   92:  get_loc2 2: this
+   93:  get_field2 emitMusicCommand
+   98:  object
+   99:  push_atom_value play_list_at
+  104:  define_field action
+  109:  get_loc0 0: e
+  110:  get_field songs
+  115:  get_field2 slice
+  120:  call_method 0
+  123:  define_field list
+  128:  get_loc1 1: i
+  129:  define_field index
+  134:  tail_call_method 1
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t s
+  locals:
+    0: var e
+    1: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field2 playlistById
+    8:  get_arg0 0: t
+    9:  call_method 1
+   12:  set_loc0 0: e
+   13:  lnot
+   14:  dup
+   15:  if_true8 38
+   17:  drop
+   18:  get_var Array
+   23:  get_field2 isArray
+   28:  get_loc0 0: e
+   29:  get_field songs
+   34:  call_method 1
+   37:  lnot
+   38:  lnot
+   39:  dup
+   40:  if_false8 109
+   42:  drop
+   43:  push_atom_value number
+   48:  get_arg1 1: s
+   49:  typeof
+   50:  neq
+   51:  dup
+   52:  if_true8 71
+   54:  drop
+   55:  get_arg1 1: s
+   56:  push_0 0
+   57:  lt
+   58:  dup
+   59:  if_true8 71
+   61:  drop
+   62:  get_arg1 1: s
+   63:  get_loc0 0: e
+   64:  get_field songs
+   69:  get_length
+   70:  gte
+   71:  lnot
+   72:  dup
+   73:  if_false8 109
+   75:  drop
+   76:  get_loc1 1: this
+   77:  get_field2 emitMusicCommand
+   82:  object
+   83:  push_atom_value play_song
+   88:  define_field action
+   93:  get_loc0 0: e
+   94:  get_field songs
+   99:  get_arg1 1: s
+  100:  get_array_el
+  101:  define_field song
+  106:  call_method 1
+  109:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var s
+    2: catch t [level:4 next:-1]
+    3: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  get_field2 _playlistStore
+    8:  call_method 0
+   11:  set_loc0 0: t
+   12:  if_false8 82
+   14:  catch 64
+   19:  get_loc0 0: t
+   20:  get_field2 read
+   25:  push_atom_value desktop_music_folders
+   30:  call_method 1
+   33:  put_loc1 1: s
+   34:  get_loc3 3: this
+   35:  get_var Array
+   40:  get_field2 isArray
+   45:  get_loc1 1: s
+   46:  call_method 1
+   49:  if_false8 54
+   51:  get_loc1 1: s
+   52:  goto8 57
+   54:  array_from 0
+   57:  put_field musicFolders
+   62:  drop
+   63:  return_undef
+   64:  put_loc2 2: t
+   65:  catch 81
+   70:  get_loc3 3: this
+   71:  array_from 0
+   74:  put_field musicFolders
+   79:  drop
+   80:  return_undef
+   81:  throw
+   82:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: catch t [level:4 next:-1]
+    2: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field2 _playlistStore
+    8:  call_method 0
+   11:  set_loc0 0: t
+   12:  if_false8 58
+   14:  catch 49
+   19:  get_loc0 0: t
+   20:  get_field2 write
+   25:  push_atom_value desktop_music_folders
+   30:  get_loc2 2: this
+   31:  get_field musicFolders
+   36:  dup
+   37:  if_true8 43
+   39:  drop
+   40:  array_from 0
+   43:  call_method 2
+   46:  drop
+   47:  drop
+   48:  return_undef
+   49:  put_loc1 1: t
+   50:  catch 57
+   55:  drop
+   56:  return_undef
+   57:  throw
+   58:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var s
+    1: var e
+    2: var i
+    3: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_arg0 0: t
+    3:  lnot
+    4:  if_false8 9
+    6:  push_1 1
+    7:  lnot
+    8:  return
+    9:  push_1 1
+   10:  lnot
+   11:  put_loc0 0: s
+   12:  push_0 0
+   13:  put_loc1 1: e
+   14:  get_loc1 1: e
+   15:  get_loc3 3: this
+   16:  get_field musicFolders
+   21:  get_length
+   22:  lt
+   23:  if_false8 61
+   25:  get_loc3 3: this
+   26:  get_field musicFolders
+   31:  get_loc1 1: e
+   32:  get_array_el
+   33:  if_false8 57
+   35:  get_loc3 3: this
+   36:  get_field musicFolders
+   41:  get_loc1 1: e
+   42:  get_array_el
+   43:  get_field path
+   48:  get_arg0 0: t
+   49:  strict_eq
+   50:  if_false8 57
+   52:  push_0 0
+   53:  lnot
+   54:  put_loc0 0: s
+   55:  goto8 61
+   57:  inc_loc 1: e
+   59:  goto8 14
+   61:  get_loc0 0: s
+   62:  if_false8 67
+   64:  push_1 1
+   65:  lnot
+   66:  return
+   67:  get_var String
+   72:  get_arg0 0: t
+   73:  call1 1
+   74:  get_field2 split
+   79:  push_atom_value "/"
+   84:  call_method 1
+   87:  get_field2 filter
+   92:  get_var Boolean
+   97:  call_method 1
+  100:  put_loc2 2: i
+  101:  get_loc3 3: this
+  102:  get_field musicFolders
+  107:  get_field2 push
+  112:  object
+  113:  get_arg0 0: t
+  114:  define_field path
+  119:  get_loc2 2: i
+  120:  get_length
+  121:  if_false8 131
+  123:  get_loc2 2: i
+  124:  get_loc2 2: i
+  125:  get_length
+  126:  push_1 1
+  127:  sub
+  128:  get_array_el
+  129:  goto8 132
+  131:  get_arg0 0: t
+  132:  define_field name
+  137:  get_var Date
+  142:  get_field2 now
+  147:  call_method 0
+  150:  define_field scannedAt
+  155:  call_method 1
+  158:  drop
+  159:  get_loc3 3: this
+  160:  get_field2 saveMusicFolders
+  165:  call_method 0
+  168:  drop
+  169:  push_0 0
+  170:  lnot
+  171:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  push_atom_value number
+    7:  get_arg0 0: t
+    8:  typeof
+    9:  neq
+   10:  dup
+   11:  if_true8 60
+   13:  drop
+   14:  get_arg0 0: t
+   15:  push_0 0
+   16:  lt
+   17:  dup
+   18:  if_true8 60
+   20:  drop
+   21:  get_arg0 0: t
+   22:  get_loc0 0: this
+   23:  get_field musicFolders
+   28:  get_length
+   29:  gte
+   30:  dup
+   31:  if_true8 60
+   33:  drop
+   34:  get_loc0 0: this
+   35:  get_field musicFolders
+   40:  get_field2 splice
+   45:  get_arg0 0: t
+   46:  push_1 1
+   47:  call_method 2
+   50:  drop
+   51:  get_loc0 0: this
+   52:  get_field2 saveMusicFolders
+   57:  call_method 0
+   60:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t s
+  locals:
+    0: var e
+    1: var i
+    2: var l
+    3: var r
+    4: var a
+    5: var n
+    6: var o
+    7: var h
+    8: var u
+    9: var c
+   10: var p
+   11: var y
+   12: var d
+   13: var f
+   14: var g
+   15: var this
+  stack_size: 8
+  opcodes:
+    0:  push_this
+    1:  put_loc8 15: this
+    3:  get_loc8 15: this
+    5:  get_field2 _playlistShell
+   10:  call_method 0
+   13:  lnot
+   14:  dup
+   15:  if_true8 20
+   17:  drop
+   18:  get_arg0 0: t
+   19:  lnot
+   20:  if_false8 26
+   22:  array_from 0
+   25:  return_async
+   26:  get_arg1 1: s
+   27:  dup
+   28:  if_true8 32
+   30:  drop
+   31:  object
+   32:  put_loc0 0: e
+   33:  push_atom_value mp3
+   38:  push_atom_value flac
+   43:  push_atom_value m4a
+   48:  push_atom_value wav
+   53:  push_atom_value ogg
+   58:  push_atom_value aac
+   63:  push_atom_value ape
+   68:  push_atom_value wma
+   73:  array_from 8
+   76:  put_loc1 1: i
+   77:  push_1 1
+   78:  lnot
+   79:  get_loc0 0: e
+   80:  get_field includeVideo
+   85:  strict_neq
+   86:  dup
+   87:  if_false8 133
+   89:  drop
+   90:  get_loc1 1: i
+   91:  get_field2 concat
+   96:  push_atom_value mp4
+  101:  push_atom_value mkv
+  106:  push_atom_value webm
+  111:  push_atom_value flv
+  116:  push_atom_value mov
+  121:  push_atom_value m4v
+  126:  array_from 6
+  129:  call_method 1
+  132:  set_loc1 1: i
+  133:  drop
+  134:  push_empty_string
+  135:  put_loc2 2: l
+  136:  push_0 0
+  137:  put_loc3 3: r
+  138:  get_loc3 3: r
+  139:  get_loc1 1: i
+  140:  get_length
+  141:  lt
+  142:  if_false8 180
+  144:  get_loc2 2: l
+  145:  get_loc3 3: r
+  146:  push_0 0
+  147:  gt
+  148:  if_false8 157
+  150:  push_atom_value " -o "
+  155:  goto8 158
+  157:  push_empty_string
+  158:  push_atom_value "-iname \"*."
+  163:  add
+  164:  get_loc1 1: i
+  165:  get_loc3 3: r
+  166:  get_array_el
+  167:  add
+  168:  push_atom_value "\""
+  173:  add
+  174:  add
+  175:  put_loc2 2: l
+  176:  inc_loc 3: r
+  178:  goto8 138
+  180:  push_atom_value "sh -c 'find \""
+  185:  get_loc8 15: this
+  187:  get_field2 escapeShellDoubleQuoted
+  192:  get_arg0 0: t
+  193:  call_method 1
+  196:  add
+  197:  push_atom_value "\" -maxdepth "
+  202:  add
+  203:  push_1 1
+  204:  lnot
+  205:  get_loc0 0: e
+  206:  get_field recursive
+  211:  strict_eq
+  212:  if_false8 217
+  214:  push_1 1
+  215:  goto8 219
+  217:  push_i8 16
+  219:  add
+  220:  push_atom_value " -type f \\("
+  225:  add
+  226:  get_loc2 2: l
+  227:  add
+  228:  push_atom_value "\\) -print0 2>/dev/null'"
+  233:  add
+  234:  put_loc8 4: a
+  236:  get_loc8 15: this
+  238:  get_field2 execShellText
+  243:  get_loc8 4: a
+  245:  call_method 1
+  248:  await
+  249:  set_loc8 5: n
+  251:  lnot
+  252:  if_false8 258
+  254:  array_from 0
+  257:  return_async
+  258:  get_loc8 5: n
+  260:  get_field2 split
+  265:  push_atom_value ""
+  270:  call_method 1
+  273:  get_field2 filter
+  278:  fclosure8 0: [bytecode <null>]
+  280:  call_method 1
+  283:  set_loc8 6: o
+  285:  get_length
+  286:  push_i16 500
+  289:  gt
+  290:  dup
+  291:  if_false8 310
+  293:  drop
+  294:  get_loc8 6: o
+  296:  get_field2 slice
+  301:  push_0 0
+  302:  push_i16 500
+  305:  call_method 2
+  308:  set_loc8 6: o
+  310:  drop
+  311:  array_from 0
+  314:  put_loc8 7: h
+  316:  push_0 0
+  317:  put_loc8 8: u
+  319:  get_loc8 8: u
+  321:  get_loc8 6: o
+  323:  get_length
+  324:  lt
+  325:  if_false 576
+  330:  get_loc8 6: o
+  332:  get_loc8 8: u
+  334:  get_array_el
+  335:  put_loc8 9: c
+  337:  get_loc8 15: this
+  339:  get_field2 probeLocalDurationMs
+  344:  get_loc8 9: c
+  346:  call_method 1
+  349:  await
+  350:  put_loc8 10: p
+  352:  get_var String
+  357:  get_loc8 9: c
+  359:  get_field2 split
+  364:  push_atom_value "/"
+  369:  call_method 1
+  372:  get_field2 pop
+  377:  call_method 0
+  380:  dup
+  381:  if_true8 385
+  383:  drop
+  384:  push_empty_string
+  385:  call1 1
+  386:  set_loc8 11: y
+  388:  get_field2 lastIndexOf
+  393:  push_atom_value "."
+  398:  call_method 1
+  401:  set_loc8 12: d
+  403:  push_0 0
+  404:  gt
+  405:  if_false8 422
+  407:  get_loc8 11: y
+  409:  get_field2 slice
+  414:  push_0 0
+  415:  get_loc8 12: d
+  417:  call_method 2
+  420:  goto8 424
+  422:  get_loc8 11: y
+  424:  put_loc8 13: f
+  426:  get_loc8 12: d
+  428:  push_0 0
+  429:  gt
+  430:  if_false8 456
+  432:  get_loc8 11: y
+  434:  get_field2 slice
+  439:  get_loc8 12: d
+  441:  push_1 1
+  442:  add
+  443:  call_method 1
+  446:  get_field2 toLowerCase
+  451:  call_method 0
+  454:  goto8 457
+  456:  push_empty_string
+  457:  put_loc8 14: g
+  459:  get_loc8 7: h
+  461:  get_field2 push
+  466:  object
+  467:  push_atom_value file_
+  472:  get_loc8 9: c
+  474:  add
+  475:  define_field song_mid
+  480:  get_loc8 13: f
+  482:  dup
+  483:  if_true8 491
+  485:  drop
+  486:  push_atom_value "\u00e6\u009c\u00aa\u00e7\u009f\u00a5\u00e6\u00ad\u008c\u00e6\u009b\u00b2"
+  491:  define_field title
+  496:  push_atom_value "\u00e6\u009c\u00ac\u00e5\u009c\u00b0\u00e6\u0096\u0087\u00e4\u00bb\u00b6\u00e5\u00a4\u00b9"
+  501:  define_field singer_text
+  506:  push_empty_string
+  507:  define_field cover
+  512:  get_loc8 10: p
+  514:  define_field duration_ms
+  519:  get_loc8 10: p
+  521:  define_field duration
+  526:  get_loc8 9: c
+  528:  define_field local_path
+  533:  get_loc8 14: g
+  535:  define_field file_ext
+  540:  push_0 0
+  541:  lnot
+  542:  define_field is_local
+  547:  push_atom_value folder_scan
+  552:  define_field sourceType
+  557:  push_atom_value local
+  562:  define_field platform
+  567:  call_method 1
+  570:  drop
+  571:  inc_loc 8: u
+  573:  goto16 319
+  576:  get_loc8 7: h
+  578:  return_async
+
+
+/* ===== function depth=2 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: t
+    1:  dup
+    2:  if_false8 9
+    4:  drop
+    5:  get_arg0 0: t
+    6:  get_length
+    7:  push_0 0
+    8:  gt
+    9:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var s
+    2: var e
+    3: var i
+    4: var l
+    5: var r
+    6: var a
+    7: catch t [level:9 next:-1]
+    8: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc8 8: this
+    3:  get_loc8 8: this
+    5:  get_field2 _playlistStore
+   10:  call_method 0
+   13:  set_loc0 0: t
+   14:  lnot
+   15:  if_false8 21
+   17:  array_from 0
+   20:  return
+   21:  catch 354
+   26:  get_loc0 0: t
+   27:  get_field2 read
+   32:  push_atom_value bili_local_videos
+   37:  call_method 1
+   40:  put_loc1 1: s
+   41:  get_var Array
+   46:  get_field2 isArray
+   51:  get_loc1 1: s
+   52:  call_method 1
+   55:  lnot
+   56:  if_false8 63
+   58:  array_from 0
+   61:  nip
+   62:  return
+   63:  array_from 0
+   66:  put_loc2 2: e
+   67:  push_0 0
+   68:  put_loc3 3: i
+   69:  get_loc3 3: i
+   70:  get_loc1 1: s
+   71:  get_length
+   72:  lt
+   73:  if_false 351
+   78:  get_loc1 1: s
+   79:  get_loc3 3: i
+   80:  get_array_el
+   81:  set_loc8 4: l
+   83:  if_false 346
+   88:  get_loc8 4: l
+   90:  get_field videoFile
+   95:  if_false 346
+  100:  get_loc8 4: l
+  102:  get_field cover
+  107:  dup
+  108:  if_true8 112
+  110:  drop
+  111:  push_empty_string
+  112:  put_loc8 5: r
+  114:  push_0 0
+  115:  get_loc8 5: r
+  117:  get_field2 indexOf
+  122:  push_atom_value "//"
+  127:  call_method 1
+  130:  strict_eq
+  131:  dup
+  132:  if_false8 145
+  134:  drop
+  135:  push_atom_value "https:"
+  140:  get_loc8 5: r
+  142:  add
+  143:  set_loc8 5: r
+  145:  drop
+  146:  get_var Number
+  151:  get_loc8 4: l
+  153:  get_field duration
+  158:  dup
+  159:  if_true8 174
+  161:  drop
+  162:  get_loc8 4: l
+  164:  get_field duration_ms
+  169:  dup
+  170:  if_true8 174
+  172:  drop
+  173:  push_0 0
+  174:  call1 1
+  175:  put_loc8 6: a
+  177:  get_loc2 2: e
+  178:  get_field2 push
+  183:  object
+  184:  get_loc8 4: l
+  186:  get_field bvid
+  191:  dup
+  192:  if_true8 208
+  194:  drop
+  195:  push_atom_value bili_
+  200:  get_loc8 4: l
+  202:  get_field videoFile
+  207:  add
+  208:  define_field song_mid
+  213:  get_loc8 4: l
+  215:  get_field bvid
+  220:  dup
+  221:  if_true8 225
+  223:  drop
+  224:  push_empty_string
+  225:  define_field bvid
+  230:  get_loc8 4: l
+  232:  get_field title
+  237:  dup
+  238:  if_true8 246
+  240:  drop
+  241:  push_atom_value "Bilibili \u00e8\u00a7\u0086\u00e9\u00a2\u0091"
+  246:  define_field title
+  251:  get_loc8 4: l
+  253:  get_field author
+  258:  dup
+  259:  if_true8 267
+  261:  drop
+  262:  push_atom_value Bilibili
+  267:  define_field singer_text
+  272:  get_loc8 5: r
+  274:  define_field cover
+  279:  get_loc8 6: a
+  281:  define_field duration_ms
+  286:  get_loc8 6: a
+  288:  define_field duration
+  293:  get_loc8 4: l
+  295:  get_field videoFile
+  300:  define_field local_path
+  305:  push_atom_value mp4
+  310:  define_field file_ext
+  315:  push_0 0
+  316:  lnot
+  317:  define_field is_local
+  322:  push_atom_value bili_video
+  327:  define_field sourceType
+  332:  push_atom_value bili
+  337:  define_field platform
+  342:  call_method 1
+  345:  drop
+  346:  inc_loc 3: i
+  348:  goto16 69
+  351:  get_loc2 2: e
+  352:  nip
+  353:  return
+  354:  put_loc8 7: t
+  356:  catch 366
+  361:  array_from 0
+  364:  nip
+  365:  return
+  366:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t s
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 addSongsToPlaylist
+    8:  get_arg0 0: t
+    9:  get_arg1 1: s
+   10:  tail_call_method 2
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 3
+  opcodes:
+    0:  null
+    1:  get_arg0 0: t
+    2:  eq
+    3:  if_false8 7
+    5:  push_empty_string
+    6:  return
+    7:  push_atom_value string
+   12:  get_arg0 0: t
+   13:  typeof
+   14:  eq
+   15:  if_false8 19
+   17:  get_arg0 0: t
+   18:  return
+   19:  get_arg0 0: t
+   20:  if_false8 44
+   22:  push_atom_value string
+   27:  get_arg0 0: t
+   28:  get_field output
+   33:  typeof
+   34:  eq
+   35:  if_false8 44
+   37:  get_arg0 0: t
+   38:  get_field output
+   43:  return
+   44:  get_arg0 0: t
+   45:  if_false8 69
+   47:  push_atom_value string
+   52:  get_arg0 0: t
+   53:  get_field text
+   58:  typeof
+   59:  eq
+   60:  if_false8 69
+   62:  get_arg0 0: t
+   63:  get_field text
+   68:  return
+   69:  get_var String
+   74:  get_arg0 0: t
+   75:  dup
+   76:  if_true8 80
+   78:  drop
+   79:  push_empty_string
+   80:  call1 1
+   81:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var s
+    1: var e
+    2: catch t [level:4 next:-1]
+    3: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  get_field2 _playlistShell
+    8:  call_method 0
+   11:  set_loc0 0: s
+   12:  lnot
+   13:  if_false8 17
+   15:  push_empty_string
+   16:  return_async
+   17:  push_empty_string
+   18:  put_loc1 1: e
+   19:  catch 85
+   24:  push_atom_value function
+   29:  get_loc0 0: s
+   30:  get_field execAsync
+   35:  typeof
+   36:  eq
+   37:  if_false8 53
+   39:  get_loc0 0: s
+   40:  get_field2 execAsync
+   45:  get_arg0 0: t
+   46:  call_method 1
+   49:  await
+   50:  set_loc1 1: e
+   51:  goto8 81
+   53:  push_atom_value function
+   58:  get_loc0 0: s
+   59:  get_field exec
+   64:  typeof
+   65:  eq
+   66:  dup
+   67:  if_false8 81
+   69:  drop
+   70:  get_loc0 0: s
+   71:  get_field2 exec
+   76:  get_arg0 0: t
+   77:  call_method 1
+   80:  set_loc1 1: e
+   81:  drop
+   82:  drop
+   83:  goto8 95
+   85:  put_loc2 2: t
+   86:  catch 94
+   91:  drop
+   92:  goto8 95
+   94:  throw
+   95:  get_loc3 3: this
+   96:  get_field2 getShellOutput
+  101:  get_loc1 1: e
+  102:  call_method 1
+  105:  get_field2 trim
+  110:  call_method 0
+  113:  return_async
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 4
+  opcodes:
+    0:  get_var String
+    5:  null
+    6:  get_arg0 0: t
+    7:  eq
+    8:  if_false8 13
+   10:  push_empty_string
+   11:  goto8 14
+   13:  get_arg0 0: t
+   14:  call1 1
+   15:  get_field2 replace
+   20:  push_const8 0: 1"\\\\"
+   22:  push_const8 1: 1"\u0001\u0001\u0000\u0013\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001\\\u0000\u000c\u0000\n"
+   24:  regexp
+   25:  push_atom_value "\\\\"
+   30:  call_method 2
+   33:  get_field2 replace
+   38:  push_const8 2: 1"\""
+   40:  push_const8 3: 1"\u0001\u0001\u0000\u0013\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001\"\u0000\u000c\u0000\n"
+   42:  regexp
+   43:  push_atom_value "\\\""
+   48:  call_method 2
+   51:  get_field2 replace
+   56:  push_const8 4: 1"\\$"
+   58:  push_const8 5: 1"\u0001\u0001\u0000\u0013\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001$\u0000\u000c\u0000\n"
+   60:  regexp
+   61:  push_atom_value "\\$"
+   66:  call_method 2
+   69:  get_field2 replace
+   74:  push_const8 6: 1"`"
+   76:  push_const8 7: 1"\u0001\u0001\u0000\u0013\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001`\u0000\u000c\u0000\n"
+   78:  regexp
+   79:  push_atom_value "\\`"
+   84:  tail_call_method 2
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var s
+    1: var e
+    2: var i
+    3: var l
+  stack_size: 6
+  opcodes:
+    0:  get_var String
+    5:  get_arg0 0: t
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  push_empty_string
+   11:  call1 1
+   12:  get_field2 trim
+   17:  call_method 0
+   20:  set_loc0 0: s
+   21:  lnot
+   22:  if_false8 26
+   24:  push_0 0
+   25:  return
+   26:  get_loc0 0: s
+   27:  get_field2 match
+   32:  push_const8 0: 1"(\\d+):(\\d{1,2}):(\\d{1,2})(?:\\.(\\d{1,3}))?"
+   34:  push_const8 1: 1"\u0000\u0005\u0000\u0095\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u000b\u0001\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u000c\u0001\u0001:\u0000\u000b\u0002\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u000c\u0002\u0001:\u0000\u000b\u0003\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u000c\u0003\u000d\u0004\u0004\u0009 \u0000\u0000\u0000\u0001.\u0000\u000b\u0004\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0003\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u000c\u0004\u000c\u0000\n"
+   36:  regexp
+   37:  call_method 1
+   40:  set_loc1 1: e
+   41:  if_false8 127
+   43:  push_i32 3600000
+   48:  get_var parseInt
+   53:  get_loc1 1: e
+   54:  push_1 1
+   55:  get_array_el
+   56:  call1 1
+   57:  mul
+   58:  push_i32 60000
+   63:  get_var parseInt
+   68:  get_loc1 1: e
+   69:  push_2 2
+   70:  get_array_el
+   71:  call1 1
+   72:  mul
+   73:  add
+   74:  push_i16 1000
+   77:  get_var parseInt
+   82:  get_loc1 1: e
+   83:  push_3 3
+   84:  get_array_el
+   85:  call1 1
+   86:  mul
+   87:  add
+   88:  put_loc2 2: i
+   89:  get_loc1 1: e
+   90:  push_4 4
+   91:  get_array_el
+   92:  dup
+   93:  if_false8 124
+   95:  drop
+   96:  get_loc2 2: i
+   97:  get_var parseInt
+  102:  get_loc1 1: e
+  103:  push_4 4
+  104:  get_array_el
+  105:  push_atom_value "00"
+  110:  add
+  111:  get_field2 slice
+  116:  push_0 0
+  117:  push_3 3
+  118:  call_method 2
+  121:  call1 1
+  122:  add
+  123:  set_loc2 2: i
+  124:  drop
+  125:  get_loc2 2: i
+  126:  return
+  127:  get_var parseFloat
+  132:  get_loc0 0: s
+  133:  call1 1
+  134:  put_loc3 3: l
+  135:  get_var isFinite
+  140:  get_loc3 3: l
+  141:  call1 1
+  142:  if_false8 168
+  144:  get_loc3 3: l
+  145:  push_0 0
+  146:  gt
+  147:  if_false8 168
+  149:  get_var Math
+  154:  get_field2 round
+  159:  push_i16 1000
+  162:  get_loc3 3: l
+  163:  mul
+  164:  call_method 1
+  167:  return
+  168:  push_0 0
+  169:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var s
+    1: var e
+    2: catch t [level:5 next:-1]
+    3: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_arg0 0: t
+    3:  lnot
+    4:  if_false8 8
+    6:  push_0 0
+    7:  return_async
+    8:  get_loc3 3: this
+    9:  get_field2 _playlistShell
+   14:  call_method 0
+   17:  lnot
+   18:  if_false8 22
+   20:  push_0 0
+   21:  return_async
+   22:  catch 90
+   27:  get_loc3 3: this
+   28:  get_field2 escapeShellDoubleQuoted
+   33:  get_arg0 0: t
+   34:  call_method 1
+   37:  put_loc0 0: s
+   38:  get_loc3 3: this
+   39:  get_field2 execShellText
+   44:  push_atom_value "sh -c 'if [ ! -s \""
+   49:  get_loc0 0: s
+   50:  add
+   51:  push_atom_value "\" ]; then exit 0; fi; if command -v ffprobe >/dev/null 2>&1; then ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 \""
+   56:  add
+   57:  get_loc0 0: s
+   58:  add
+   59:  push_atom_value "\" 2>/dev/null; else ffmpeg -i \""
+   64:  add
+   65:  get_loc0 0: s
+   66:  add
+   67:  push_atom_value "\" 2>&1 | sed -n \"s/.*Duration: \\([0-9:.]*\\).*/\\1/p\" | head -n 1; fi'"
+   72:  add
+   73:  call_method 1
+   76:  await
+   77:  put_loc1 1: e
+   78:  get_loc3 3: this
+   79:  get_field2 parseDurationOutput
+   84:  get_loc1 1: e
+   85:  call_method 1
+   88:  nip
+   89:  return_async
+   90:  put_loc2 2: t
+   91:  catch 99
+   96:  push_0 0
+   97:  nip
+   98:  return_async
+   99:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: playlist-6777586f.js:1 source_len=0 */
+playlist-6777586f.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var s
+    1: catch t [level:5 next:-1]
+    2: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_arg0 0: t
+    3:  lnot
+    4:  if_false8 9
+    6:  push_1 1
+    7:  lnot
+    8:  return_async
+    9:  get_loc2 2: this
+   10:  get_field2 _playlistShell
+   15:  call_method 0
+   18:  lnot
+   19:  if_false8 24
+   21:  push_0 0
+   22:  lnot
+   23:  return_async
+   24:  catch 68
+   29:  get_loc2 2: this
+   30:  get_field2 escapeShellDoubleQuoted
+   35:  get_arg0 0: t
+   36:  call_method 1
+   39:  put_loc0 0: s
+   40:  push_const8 0: 1"1"
+   42:  get_loc2 2: this
+   43:  get_field2 execShellText
+   48:  push_atom_value "sh -c 'if [ -f \""
+   53:  get_loc0 0: s
+   54:  add
+   55:  push_atom_value "\" ]; then echo 1; else echo 0; fi'"
+   60:  add
+   61:  call_method 1
+   64:  await
+   65:  strict_eq
+   66:  nip
+   67:  return_async
+   68:  put_loc1 1: t
+   69:  catch 78
+   74:  push_0 0
+   75:  lnot
+   76:  nip
+   77:  return_async
+   78:  throw
+

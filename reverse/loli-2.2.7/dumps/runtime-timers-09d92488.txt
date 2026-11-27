@@ -1,0 +1,535 @@
+
+/* ===== function depth=0 ===== */
+/* debug: runtime-timers-09d92488.js:1 source_len=0 */
+runtime-timers-09d92488.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: t local:loc0 var
+    1: e local:loc1 var
+    2: r local:loc2 var
+    3: a local:loc3 var
+    4: n local:loc4 var
+  stack_size: 1
+  opcodes:
+    0:  fclosure8 0: [bytecode <null>]
+    2:  call0 0
+    3:  set_var_ref0 0: t
+    4:  get_field setTimeout
+    9:  put_var_ref1 1: e
+   10:  get_var_ref0 0: t
+   11:  get_field setInterval
+   16:  put_var_ref2 2: r
+   17:  get_var_ref0 0: t
+   18:  get_field clearTimeout
+   23:  put_var_ref3 3: a
+   24:  get_var_ref0 0: t
+   25:  get_field clearInterval
+   30:  put_var_ref 4: n
+   33:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: runtime-timers-09d92488.js:1 source_len=0 */
+runtime-timers-09d92488.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var r
+    2: var a
+    3: var n
+    4: var l
+    5: var o
+    6: var i
+    7: var u
+    8: var c
+    9: var f
+   10: var s
+   11: var m
+   12: var v
+   13: var p
+  stack_size: 2
+  opcodes:
+    0:  fclosure8 1: [bytecode f]
+    2:  put_loc8 9: f
+    4:  fclosure8 2: [bytecode s]
+    6:  put_loc8 10: s
+    8:  fclosure8 3: [bytecode m]
+   10:  put_loc8 11: m
+   12:  fclosure8 4: [bytecode v]
+   14:  put_loc8 12: v
+   16:  fclosure8 5: [bytecode p]
+   18:  put_loc8 13: p
+   20:  get_arg0 0: t
+   21:  dup
+   22:  if_true8 26
+   24:  drop
+   25:  object
+   26:  set_arg0 0: t
+   27:  get_field setTimeout
+   32:  dup
+   33:  if_true8 41
+   35:  drop
+   36:  get_var setTimeout
+   41:  put_loc0 0: e
+   42:  get_arg0 0: t
+   43:  get_field clearTimeout
+   48:  dup
+   49:  if_true8 57
+   51:  drop
+   52:  get_var clearTimeout
+   57:  put_loc1 1: r
+   58:  get_arg0 0: t
+   59:  get_field now
+   64:  dup
+   65:  if_true8 78
+   67:  drop
+   68:  get_var Date
+   73:  get_field now
+   78:  put_loc2 2: a
+   79:  get_arg0 0: t
+   80:  get_field onError
+   85:  dup
+   86:  if_true8 91
+   88:  drop
+   89:  fclosure8 0: [bytecode <null>]
+   91:  put_loc3 3: n
+   92:  object
+   93:  put_loc8 4: l
+   95:  push_0 0
+   96:  put_loc8 5: o
+   98:  null
+   99:  put_loc8 6: i
+  101:  push_0 0
+  102:  put_loc8 7: u
+  104:  push_1 1
+  105:  lnot
+  106:  put_loc8 8: c
+  108:  object
+  109:  fclosure8 6: [bytecode <null>]
+  111:  set_name setTimeout
+  116:  define_field setTimeout
+  121:  fclosure8 7: [bytecode <null>]
+  123:  set_name setInterval
+  128:  define_field setInterval
+  133:  get_loc8 13: p
+  135:  define_field clearTimeout
+  140:  get_loc8 13: p
+  142:  define_field clearInterval
+  147:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: runtime-timers-09d92488.js:1 source_len=0 */
+runtime-timers-09d92488.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 4
+  opcodes:
+    0:  push_atom_value undefined
+    5:  get_var_undef console
+   10:  typeof
+   11:  neq
+   12:  dup
+   13:  if_false8 49
+   15:  drop
+   16:  get_var console
+   21:  get_field error
+   26:  dup
+   27:  if_false8 49
+   29:  drop
+   30:  get_var console
+   35:  get_field2 error
+   40:  push_atom_value "[runtime-timers]"
+   45:  get_arg0 0: t
+   46:  call_method 2
+   49:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: runtime-timers-09d92488.js:1 source_len=0 */
+runtime-timers-09d92488.js:1: function: f
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var r
+  closure vars:
+    0: l local:loc4 var
+  stack_size: 3
+  opcodes:
+    0:  null
+    1:  put_loc0 0: t
+    2:  get_var_ref0 0: l
+    3:  for_in_start
+    4:  goto8 71
+    6:  put_loc1 1: e
+    7:  get_var_ref0 0: l
+    8:  get_loc1 1: e
+    9:  get_array_el
+   10:  put_loc2 2: r
+   11:  get_loc0 0: t
+   12:  lnot
+   13:  dup
+   14:  if_true8 64
+   16:  drop
+   17:  get_loc2 2: r
+   18:  get_field at
+   23:  get_loc0 0: t
+   24:  get_field at
+   29:  lt
+   30:  dup
+   31:  if_true8 64
+   33:  drop
+   34:  get_loc2 2: r
+   35:  get_field at
+   40:  get_loc0 0: t
+   41:  get_field at
+   46:  strict_eq
+   47:  dup
+   48:  if_false8 64
+   50:  drop
+   51:  get_loc2 2: r
+   52:  get_field id
+   57:  get_loc0 0: t
+   58:  get_field id
+   63:  lt
+   64:  dup
+   65:  if_false8 70
+   67:  drop
+   68:  get_loc2 2: r
+   69:  set_loc0 0: t
+   70:  drop
+   71:  for_in_next
+   72:  if_false8 6
+   74:  drop
+   75:  drop
+   76:  get_loc0 0: t
+   77:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: runtime-timers-09d92488.js:1 source_len=0 */
+runtime-timers-09d92488.js:1: function: s
+  mode: strict
+  locals:
+    0: var t
+    1: var n
+  closure vars:
+    0: c local:loc8 var
+    1: f local:loc9 var
+    2: i local:loc6 var
+    3: r local:loc1 var
+    4: a local:loc2 var
+    5: u local:loc7 var
+    6: e local:loc0 var
+    7: m local:loc11 var
+  stack_size: 7
+  opcodes:
+    0:  get_var_ref0 0: c
+    1:  lnot
+    2:  if_false8 110
+    4:  get_var_ref1 1: f
+    5:  call0 0
+    6:  set_loc0 0: t
+    7:  lnot
+    8:  if_false8 24
+   10:  null
+   11:  get_var_ref2 2: i
+   12:  strict_neq
+   13:  dup
+   14:  if_false8 20
+   16:  drop
+   17:  get_var_ref3 3: r
+   18:  get_var_ref2 2: i
+   19:  call1 1
+   20:  drop
+   21:  null
+   22:  put_var_ref2 2: i
+   23:  return_undef
+   24:  get_var Math
+   29:  get_field2 max
+   34:  get_var_ref 4: a
+   37:  call0 0
+   38:  push_4 4
+   39:  add
+   40:  get_loc0 0: t
+   41:  get_field at
+   46:  call_method 2
+   49:  put_loc1 1: n
+   50:  null
+   51:  get_var_ref2 2: i
+   52:  strict_neq
+   53:  dup
+   54:  if_false8 62
+   56:  drop
+   57:  get_var_ref 5: u
+   60:  get_loc1 1: n
+   61:  lte
+   62:  dup
+   63:  if_true8 109
+   65:  drop
+   66:  null
+   67:  get_var_ref2 2: i
+   68:  strict_neq
+   69:  dup
+   70:  if_false8 76
+   72:  drop
+   73:  get_var_ref3 3: r
+   74:  get_var_ref2 2: i
+   75:  call1 1
+   76:  drop
+   77:  get_loc1 1: n
+   78:  put_var_ref 5: u
+   81:  get_var_ref 6: e
+   84:  get_var_ref 7: m
+   87:  get_var Math
+   92:  get_field2 max
+   97:  push_4 4
+   98:  get_loc1 1: n
+   99:  get_var_ref 4: a
+  102:  call0 0
+  103:  sub
+  104:  call_method 2
+  107:  call2 2
+  108:  set_var_ref2 2: i
+  109:  drop
+  110:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: runtime-timers-09d92488.js:1 source_len=0 */
+runtime-timers-09d92488.js:1: function: m
+  mode: strict
+  locals:
+    0: var t
+    1: catch t [level:5 next:-1]
+    2: catch t [level:9 next:1]
+  closure vars:
+    0: i local:loc6 var
+    1: c local:loc8 var
+    2: f local:loc9 var
+    3: a local:loc2 var
+    4: l local:loc4 var
+    5: n local:loc3 var
+    6: s local:loc10 var
+  stack_size: 5
+  opcodes:
+    0:  null
+    1:  put_var_ref0 0: i
+    2:  push_0 0
+    3:  lnot
+    4:  put_var_ref1 1: c
+    5:  get_var_ref2 2: f
+    6:  call0 0
+    7:  set_loc0 0: t
+    8:  if_false8 122
+   10:  get_loc0 0: t
+   11:  get_field at
+   16:  get_var_ref3 3: a
+   17:  call0 0
+   18:  lte
+   19:  if_false8 122
+   21:  get_loc0 0: t
+   22:  get_field repeat
+   27:  if_false8 47
+   29:  get_loc0 0: t
+   30:  get_var_ref3 3: a
+   31:  call0 0
+   32:  get_loc0 0: t
+   33:  get_field delay
+   38:  add
+   39:  insert2
+   40:  put_field at
+   45:  goto8 57
+   47:  get_var_ref 4: l
+   50:  get_loc0 0: t
+   51:  get_field id
+   56:  delete
+   57:  drop
+   58:  catch 88
+   63:  get_loc0 0: t
+   64:  get_field fn
+   69:  get_field2 apply
+   74:  null
+   75:  get_loc0 0: t
+   76:  get_field args
+   81:  call_method 2
+   84:  drop
+   85:  drop
+   86:  goto8 122
+   88:  put_loc1 1: t
+   89:  catch 121
+   94:  catch 108
+   99:  get_var_ref 5: n
+  102:  get_loc1 1: t
+  103:  call1 1
+  104:  drop
+  105:  drop
+  106:  goto8 118
+  108:  put_loc2 2: t
+  109:  catch 117
+  114:  drop
+  115:  goto8 118
+  117:  throw
+  118:  drop
+  119:  goto8 122
+  121:  throw
+  122:  push_1 1
+  123:  lnot
+  124:  put_var_ref1 1: c
+  125:  get_var_ref 6: s
+  128:  call0 0
+  129:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: runtime-timers-09d92488.js:1 source_len=0 */
+runtime-timers-09d92488.js:1: function: v
+  mode: strict
+  args: t e r n
+  locals:
+    0: var i
+  closure vars:
+    0: o local:loc5 var
+    1: l local:loc4 var
+    2: a local:loc2 var
+    3: s local:loc10 var
+  stack_size: 5
+  opcodes:
+    0:  push_atom_value function
+    5:  get_arg0 0: t
+    6:  typeof
+    7:  neq
+    8:  if_false8 25
+   10:  get_var TypeError
+   15:  dup
+   16:  push_atom_value "Timer callback must be a function"
+   21:  call_constructor 1
+   24:  throw
+   25:  get_var Math
+   30:  get_field2 max
+   35:  push_4 4
+   36:  get_var Number
+   41:  get_arg1 1: e
+   42:  call1 1
+   43:  dup
+   44:  if_true8 48
+   46:  drop
+   47:  push_0 0
+   48:  call_method 2
+   51:  put_arg1 1: e
+   52:  get_var isFinite
+   57:  get_arg1 1: e
+   58:  call1 1
+   59:  dup
+   60:  if_true8 69
+   62:  drop
+   63:  push_i32 2147483647
+   68:  set_arg1 1: e
+   69:  drop
+   70:  get_var_ref0 0: o
+   71:  inc
+   72:  set_var_ref0 0: o
+   73:  put_loc0 0: i
+   74:  get_var_ref1 1: l
+   75:  get_loc0 0: i
+   76:  to_propkey2
+   77:  object
+   78:  get_loc0 0: i
+   79:  define_field id
+   84:  get_arg0 0: t
+   85:  define_field fn
+   90:  get_arg1 1: e
+   91:  define_field delay
+   96:  get_var_ref2 2: a
+   97:  call0 0
+   98:  get_arg1 1: e
+   99:  add
+  100:  define_field at
+  105:  get_arg2 2: r
+  106:  define_field repeat
+  111:  get_arg3 3: n
+  112:  define_field args
+  117:  put_array_el
+  118:  get_var_ref3 3: s
+  119:  call0 0
+  120:  drop
+  121:  get_loc0 0: i
+  122:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: runtime-timers-09d92488.js:1 source_len=0 */
+runtime-timers-09d92488.js:1: function: p
+  mode: strict
+  args: t
+  closure vars:
+    0: l local:loc4 var
+    1: s local:loc10 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: l
+    1:  get_arg0 0: t
+    2:  delete
+    3:  drop
+    4:  get_var_ref1 1: s
+    5:  call0 0
+    6:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: runtime-timers-09d92488.js:1 source_len=0 */
+runtime-timers-09d92488.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: var arguments
+  closure vars:
+    0: v local:loc12 var
+  stack_size: 8
+  opcodes:
+    0:  special_object 0
+    2:  put_loc0 0: arguments
+    3:  get_var_ref0 0: v
+    4:  get_arg0 0: t
+    5:  get_arg1 1: e
+    6:  push_1 1
+    7:  lnot
+    8:  get_var Array
+   13:  get_field prototype
+   18:  get_field slice
+   23:  get_field2 call
+   28:  get_loc0 0: arguments
+   29:  push_2 2
+   30:  call_method 2
+   33:  tail_call 4
+
+
+/* ===== function depth=2 ===== */
+/* debug: runtime-timers-09d92488.js:1 source_len=0 */
+runtime-timers-09d92488.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: var arguments
+  closure vars:
+    0: v local:loc12 var
+  stack_size: 8
+  opcodes:
+    0:  special_object 0
+    2:  put_loc0 0: arguments
+    3:  get_var_ref0 0: v
+    4:  get_arg0 0: t
+    5:  get_arg1 1: e
+    6:  push_0 0
+    7:  lnot
+    8:  get_var Array
+   13:  get_field prototype
+   18:  get_field slice
+   23:  get_field2 call
+   28:  get_loc0 0: arguments
+   29:  push_2 2
+   30:  call_method 2
+   33:  tail_call 4
+

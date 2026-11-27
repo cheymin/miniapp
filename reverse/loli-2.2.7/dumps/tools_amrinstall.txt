@@ -1,0 +1,4098 @@
+
+/* ===== function depth=0 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: t parent:loc0 const
+    1: i parent:loc1 const
+    2: e parent:loc2 const
+    3: s local:loc0 var
+    4: a local:loc1 var
+    5: r local:loc2 var
+    6: n local:loc3 var
+    7: o local:loc4 const
+  stack_size: 7
+  opcodes:
+    0:  fclosure8 0: [bytecode a]
+    2:  put_var_ref 4: a
+    5:  push_atom_value "/tmp/loliapp_ai_"
+   10:  put_var_ref3 3: s
+   11:  object
+   12:  object
+   13:  object
+   14:  get_var Object
+   19:  define_field type
+   24:  null
+   25:  define_field default
+   30:  define_field loadOptions
+   35:  define_field props
+   40:  fclosure8 1: [bytecode <null>]
+   42:  set_name data
+   47:  define_field data
+   52:  object
+   53:  fclosure8 2: [bytecode <null>]
+   55:  define_method fallbackChar,4
+   61:  fclosure8 3: [bytecode <null>]
+   63:  define_method isMainApp,4
+   69:  fclosure8 4: [bytecode <null>]
+   71:  define_method sizeText,4
+   77:  define_field computed
+   82:  fclosure8 5: [bytecode <null>]
+   84:  define_method created,4
+   90:  fclosure8 6: [bytecode <null>]
+   92:  define_method onNewOptions,4
+   98:  fclosure8 7: [bytecode <null>]
+  100:  define_method beforeDestroy,4
+  106:  object
+  107:  fclosure8 8: [bytecode <null>]
+  109:  define_method resolveInstallOptions,4
+  115:  fclosure8 9: [bytecode <null>]
+  117:  define_method openInstallPackage,4
+  123:  fclosure8 10: [bytecode <null>]
+  125:  define_method initBridge,4
+  131:  fclosure8 11: [bytecode <null>]
+  133:  define_method toast,4
+  139:  fclosure8 12: [bytecode <null>]
+  141:  define_method run,4
+  147:  fclosure8 13: [bytecode <null>]
+  149:  define_method fail,4
+  155:  fclosure8 14: [bytecode <null>]
+  157:  define_method _cleanupTmp,4
+  163:  fclosure8 15: [bytecode <null>]
+  165:  define_method _clearTimers,4
+  171:  fclosure8 16: [bytecode <null>]
+  173:  define_method startCheck,4
+  179:  fclosure8 17: [bytecode <null>]
+  181:  define_method confirmInstall,4
+  187:  fclosure8 18: [bytecode <null>]
+  189:  define_method _pollInstallDone,4
+  195:  fclosure8 19: [bytecode <null>]
+  197:  define_method _finishInstall,4
+  203:  fclosure8 20: [bytecode <null>]
+  205:  define_method openInstalledApp,4
+  211:  fclosure8 21: [bytecode <null>]
+  213:  define_method cancelPage,4
+  219:  define_field methods
+  224:  put_var_ref 5: r
+  227:  fclosure8 22: [bytecode <null>]
+  229:  set_name n
+  234:  set_var_ref 6: n
+  237:  push_0 0
+  238:  lnot
+  239:  put_field _withStripped
+  244:  get_var_ref 5: r
+  247:  put_var_ref 7: o
+  250:  get_var_ref_check 7: o
+  253:  get_var_ref 6: n
+  256:  put_field render
+  261:  get_var_ref_check 7: o
+  264:  fclosure8 23: [bytecode <null>]
+  266:  fclosure8 24: [bytecode <null>]
+  268:  array_from 2
+  271:  put_field staticRenderFns
+  276:  get_var_ref_check 7: o
+  279:  push_0 0
+  280:  lnot
+  281:  put_field _compiled
+  286:  get_var_ref_check 7: o
+  289:  push_atom_value "data-v-7c8aa466"
+  294:  put_field _scopeId
+  299:  get_var_ref_check 7: o
+  302:  object
+  303:  put_field themes
+  308:  get_var_ref_check 7: o
+  311:  get_var Object
+  316:  get_field2 assign
+  321:  object
+  322:  object
+  323:  object
+  324:  push_atom_value "100%"
+  329:  define_field width
+  334:  push_atom_value "100%"
+  339:  define_field height
+  344:  push_atom_value "#101013"
+  349:  define_field backgroundColor
+  354:  push_atom_value column
+  359:  define_field flexDirection
+  364:  define_field app
+  369:  object
+  370:  push_1 1
+  371:  define_field flex
+  376:  push_atom_value row
+  381:  define_field flexDirection
+  386:  push_atom_value center
+  391:  define_field alignItems
+  396:  push_atom_value "36px"
+  401:  define_field paddingLeft
+  406:  push_atom_value "36px"
+  411:  define_field paddingRight
+  416:  push_atom_value "14px"
+  421:  define_field paddingTop
+  426:  push_atom_value "14px"
+  431:  define_field paddingBottom
+  436:  define_field stage
+  441:  object
+  442:  push_atom_value "216px"
+  447:  define_field width
+  452:  push_atom_value center
+  457:  define_field alignItems
+  462:  define_field head
+  467:  object
+  468:  push_atom_value "76px"
+  473:  define_field width
+  478:  push_atom_value "76px"
+  483:  define_field height
+  488:  push_atom_value "18px"
+  493:  define_field borderRadius
+  498:  push_atom_value "#1c1e23"
+  503:  define_field backgroundColor
+  508:  define_field "app-icon"
+  513:  object
+  514:  push_atom_value center
+  519:  define_field alignItems
+  524:  push_atom_value center
+  529:  define_field justifyContent
+  534:  push_atom_value "#2d4d78"
+  539:  define_field backgroundColor
+  544:  define_field "app-icon-fb"
+  549:  object
+  550:  push_atom_value "#ffffff"
+  555:  define_field color
+  560:  push_atom_value "36px"
+  565:  define_field fontSize
+  570:  push_const8 25: 1"700"
+  572:  define_field fontWeight
+  577:  define_field "app-icon-fb-txt"
+  582:  object
+  583:  push_atom_value center
+  588:  define_field alignItems
+  593:  push_atom_value "10px"
+  598:  define_field marginTop
+  603:  push_atom_value "216px"
+  608:  define_field width
+  613:  define_field "head-txt"
+  618:  object
+  619:  push_atom_value "#ffffff"
+  624:  define_field color
+  629:  push_atom_value "18px"
+  634:  define_field fontSize
+  639:  push_const8 26: 1"700"
+  641:  define_field fontWeight
+  646:  push_1 1
+  647:  define_field lines
+  652:  push_atom_value ellipsis
+  657:  define_field textOverflow
+  662:  push_atom_value center
+  667:  define_field textAlign
+  672:  define_field "app-name"
+  677:  object
+  678:  push_atom_value "#8f959f"
+  683:  define_field color
+  688:  push_atom_value "12px"
+  693:  define_field fontSize
+  698:  push_atom_value "6px"
+  703:  define_field marginTop
+  708:  push_1 1
+  709:  define_field lines
+  714:  push_atom_value ellipsis
+  719:  define_field textOverflow
+  724:  push_atom_value center
+  729:  define_field textAlign
+  734:  define_field "app-sub"
+  739:  object
+  740:  push_1 1
+  741:  define_field flex
+  746:  push_atom_value center
+  751:  define_field alignItems
+  756:  push_atom_value center
+  761:  define_field justifyContent
+  766:  push_atom_value "20px"
+  771:  define_field marginLeft
+  776:  push_atom_value "8px"
+  781:  define_field marginRight
+  786:  define_field block
+  791:  object
+  792:  push_atom_value center
+  797:  define_field alignItems
+  802:  push_atom_value "100%"
+  807:  define_field width
+  812:  define_field "block-inner"
+  817:  object
+  818:  push_atom_value "24px"
+  823:  define_field width
+  828:  push_atom_value "24px"
+  833:  define_field height
+  838:  push_atom_value "3px"
+  843:  define_field borderWidth
+  848:  push_atom_value solid
+  853:  define_field borderStyle
+  858:  push_atom_value "#3f4750"
+  863:  define_field borderColor
+  868:  push_atom_value "#6ea8ff"
+  873:  define_field borderTopColor
+  878:  push_atom_value "12px"
+  883:  define_field borderRadius
+  888:  push_atom_value "ai-spindata-v-7c8aa466"
+  893:  define_field animationName
+  898:  push_i16 800
+  901:  define_field animationDuration
+  906:  push_atom_value linear
+  911:  define_field animationTimingFunction
+  916:  push_atom_value infinite
+  921:  define_field animationIterationCount
+  926:  define_field spinner
+  931:  object
+  932:  push_atom_value "#e8eaee"
+  937:  define_field color
+  942:  push_atom_value "15px"
+  947:  define_field fontSize
+  952:  push_const8 27: 1"600"
+  954:  define_field fontWeight
+  959:  push_atom_value "12px"
+  964:  define_field marginTop
+  969:  define_field "block-title"
+  974:  object
+  975:  push_atom_value "#8f959f"
+  980:  define_field color
+  985:  push_atom_value "12px"
+  990:  define_field fontSize
+  995:  push_atom_value "10px"
+ 1000:  define_field marginTop
+ 1005:  push_1 1
+ 1006:  define_field lines
+ 1011:  push_atom_value ellipsis
+ 1016:  define_field textOverflow
+ 1021:  push_atom_value center
+ 1026:  define_field textAlign
+ 1031:  define_field "block-sub"
+ 1036:  object
+ 1037:  push_atom_value "320px"
+ 1042:  define_field width
+ 1047:  push_atom_value "4px"
+ 1052:  define_field height
+ 1057:  push_atom_value "2px"
+ 1062:  define_field borderRadius
+ 1067:  push_atom_value "#23252b"
+ 1072:  define_field backgroundColor
+ 1077:  push_atom_value "12px"
+ 1082:  define_field marginTop
+ 1087:  push_atom_value hidden
+ 1092:  define_field overflow
+ 1097:  define_field "prog-track"
+ 1102:  object
+ 1103:  push_atom_value "4px"
+ 1108:  define_field height
+ 1113:  push_atom_value "2px"
+ 1118:  define_field borderRadius
+ 1123:  push_atom_value "#2f6fe4"
+ 1128:  define_field backgroundColor
+ 1133:  define_field "prog-bar"
+ 1138:  object
+ 1139:  push_atom_value "16px"
+ 1144:  define_field paddingLeft
+ 1149:  push_atom_value "16px"
+ 1154:  define_field paddingRight
+ 1159:  push_atom_value "30px"
+ 1164:  define_field height
+ 1169:  push_atom_value "15px"
+ 1174:  define_field borderRadius
+ 1179:  push_atom_value center
+ 1184:  define_field alignItems
+ 1189:  push_atom_value center
+ 1194:  define_field justifyContent
+ 1199:  define_field verdict
+ 1204:  object
+ 1205:  push_atom_value "#12291c"
+ 1210:  define_field backgroundColor
+ 1215:  define_field "verdict-ok"
+ 1220:  object
+ 1221:  push_atom_value "#4a3512"
+ 1226:  define_field backgroundColor
+ 1231:  define_field "verdict-warn"
+ 1236:  object
+ 1237:  push_atom_value "#3a1719"
+ 1242:  define_field backgroundColor
+ 1247:  define_field "verdict-bad"
+ 1252:  object
+ 1253:  push_atom_value "13px"
+ 1258:  define_field fontSize
+ 1263:  push_const8 28: 1"700"
+ 1265:  define_field fontWeight
+ 1270:  define_field "verdict-txt"
+ 1275:  object
+ 1276:  push_atom_value "#6ee7a0"
+ 1281:  define_field color
+ 1286:  define_field "verdict-txt-ok"
+ 1291:  object
+ 1292:  push_atom_value "#ffd98a"
+ 1297:  define_field color
+ 1302:  define_field "verdict-txt-warn"
+ 1307:  object
+ 1308:  push_atom_value "#f28b99"
+ 1313:  define_field color
+ 1318:  define_field "verdict-txt-bad"
+ 1323:  object
+ 1324:  push_atom_value "100%"
+ 1329:  define_field width
+ 1334:  push_atom_value "#1a1c21"
+ 1339:  define_field backgroundColor
+ 1344:  push_atom_value "12px"
+ 1349:  define_field borderRadius
+ 1354:  push_atom_value "12px"
+ 1359:  define_field marginTop
+ 1364:  push_atom_value "2px"
+ 1369:  define_field paddingTop
+ 1374:  push_atom_value "2px"
+ 1379:  define_field paddingBottom
+ 1384:  push_atom_value "16px"
+ 1389:  define_field paddingLeft
+ 1394:  push_atom_value "16px"
+ 1399:  define_field paddingRight
+ 1404:  push_atom_value row
+ 1409:  define_field flexDirection
+ 1414:  define_field "info-card"
+ 1419:  object
+ 1420:  push_1 1
+ 1421:  define_field flex
+ 1426:  define_field "info-col"
+ 1431:  object
+ 1432:  push_atom_value row
+ 1437:  define_field flexDirection
+ 1442:  push_atom_value center
+ 1447:  define_field alignItems
+ 1452:  push_atom_value "32px"
+ 1457:  define_field height
+ 1462:  push_atom_value "1px"
+ 1467:  define_field borderTopWidth
+ 1472:  push_atom_value "rgba(255,255,255,0.05)"
+ 1477:  define_field borderTopColor
+ 1482:  define_field "info-row"
+ 1487:  object
+ 1488:  push_atom_value "#8f959f"
+ 1493:  define_field color
+ 1498:  push_atom_value "12px"
+ 1503:  define_field fontSize
+ 1508:  push_atom_value "92px"
+ 1513:  define_field width
+ 1518:  define_field "info-label"
+ 1523:  object
+ 1524:  push_atom_value "#d6dae0"
+ 1529:  define_field color
+ 1534:  push_atom_value "12px"
+ 1539:  define_field fontSize
+ 1544:  push_1 1
+ 1545:  define_field flex
+ 1550:  push_1 1
+ 1551:  define_field lines
+ 1556:  push_atom_value ellipsis
+ 1561:  define_field textOverflow
+ 1566:  push_atom_value right
+ 1571:  define_field textAlign
+ 1576:  define_field "info-value"
+ 1581:  object
+ 1582:  push_atom_value "#ffd98a"
+ 1587:  define_field color
+ 1592:  define_field "info-value-warn"
+ 1597:  object
+ 1598:  push_atom_value "#6e747d"
+ 1603:  define_field color
+ 1608:  push_atom_value "12px"
+ 1613:  define_field fontSize
+ 1618:  push_atom_value "10px"
+ 1623:  define_field marginTop
+ 1628:  push_1 1
+ 1629:  define_field lines
+ 1634:  push_atom_value ellipsis
+ 1639:  define_field textOverflow
+ 1644:  push_atom_value center
+ 1649:  define_field textAlign
+ 1654:  define_field hint
+ 1659:  object
+ 1660:  push_atom_value "10px"
+ 1665:  define_field marginTop
+ 1670:  define_field "hint-foot"
+ 1675:  object
+ 1676:  push_atom_value "#b9bec6"
+ 1681:  define_field color
+ 1686:  push_atom_value "13px"
+ 1691:  define_field fontSize
+ 1696:  push_atom_value "12px"
+ 1701:  define_field marginTop
+ 1706:  push_2 2
+ 1707:  define_field lines
+ 1712:  push_atom_value center
+ 1717:  define_field textAlign
+ 1722:  push_atom_value "18px"
+ 1727:  define_field lineHeight
+ 1732:  define_field "err-text"
+ 1737:  object
+ 1738:  push_atom_value "54px"
+ 1743:  define_field height
+ 1748:  push_atom_value row
+ 1753:  define_field flexDirection
+ 1758:  push_atom_value center
+ 1763:  define_field alignItems
+ 1768:  push_atom_value "flex-end"
+ 1773:  define_field justifyContent
+ 1778:  push_atom_value "24px"
+ 1783:  define_field paddingLeft
+ 1788:  push_atom_value "20px"
+ 1793:  define_field paddingRight
+ 1798:  push_atom_value "1px"
+ 1803:  define_field borderTopWidth
+ 1808:  push_atom_value "rgba(255,255,255,0.06)"
+ 1813:  define_field borderTopColor
+ 1818:  define_field foot
+ 1823:  object
+ 1824:  push_1 1
+ 1825:  define_field flex
+ 1830:  define_field "foot-spacer"
+ 1835:  object
+ 1836:  push_atom_value "38px"
+ 1841:  define_field height
+ 1846:  push_atom_value "20px"
+ 1851:  define_field paddingLeft
+ 1856:  push_atom_value "20px"
+ 1861:  define_field paddingRight
+ 1866:  push_atom_value "19px"
+ 1871:  define_field borderRadius
+ 1876:  push_atom_value center
+ 1881:  define_field alignItems
+ 1886:  push_atom_value center
+ 1891:  define_field justifyContent
+ 1896:  push_atom_value "10px"
+ 1901:  define_field marginRight
+ 1906:  push_atom_value "#1e2026"
+ 1911:  define_field "backgroundColor:active"
+ 1916:  define_field "foot-btn"
+ 1921:  object
+ 1922:  push_atom_value "#6ea8ff"
+ 1927:  define_field color
+ 1932:  push_atom_value "14px"
+ 1937:  define_field fontSize
+ 1942:  push_const8 29: 1"600"
+ 1944:  define_field fontWeight
+ 1949:  define_field "foot-btn-txt"
+ 1954:  object
+ 1955:  push_atom_value "38px"
+ 1960:  define_field height
+ 1965:  push_atom_value "30px"
+ 1970:  define_field paddingLeft
+ 1975:  push_atom_value "30px"
+ 1980:  define_field paddingRight
+ 1985:  push_atom_value "19px"
+ 1990:  define_field borderRadius
+ 1995:  push_atom_value "#2f6fe4"
+ 2000:  define_field backgroundColor
+ 2005:  push_atom_value center
+ 2010:  define_field alignItems
+ 2015:  push_atom_value center
+ 2020:  define_field justifyContent
+ 2025:  push_atom_value "#2558b8"
+ 2030:  define_field "backgroundColor:active"
+ 2035:  define_field "foot-btn-fill"
+ 2040:  object
+ 2041:  push_atom_value "#ffffff"
+ 2046:  define_field color
+ 2051:  push_atom_value "14px"
+ 2056:  define_field fontSize
+ 2061:  push_const8 30: 1"700"
+ 2063:  define_field fontWeight
+ 2068:  define_field "foot-btn-fill-txt"
+ 2073:  call_method 2
+ 2076:  put_field style
+ 2081:  get_var_ref_check 7: o
+ 2084:  push_atom_value "src/pages/tools/amrinstall.vue"
+ 2089:  put_field __file
+ 2094:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: a
+  mode: strict
+  args: t
+  stack_size: 4
+  opcodes:
+    0:  get_var String
+    5:  get_arg0 0: t
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  push_empty_string
+   11:  call1 1
+   12:  get_field2 replace
+   17:  push_const8 0: 1"[\"\\\\$`]"
+   19:  push_const8 1: 1"\u0001\u0001\u0000#\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0015\u0004\u0000\"\u0000\"\u0000$\u0000$\u0000\\\u0000\\\u0000`\u0000`\u0000\u000c\u0000\n"
+   21:  regexp
+   22:  push_atom_value "\\$&"
+   27:  tail_call_method 2
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  stack_size: 2
+  opcodes:
+    0:  object
+    1:  push_atom_value checking
+    6:  define_field phase
+   11:  push_empty_string
+   12:  define_field filePath
+   17:  push_empty_string
+   18:  define_field fileName
+   23:  push_empty_string
+   24:  define_field appName
+   29:  push_empty_string
+   30:  define_field version
+   35:  push_empty_string
+   36:  define_field appid
+   41:  push_empty_string
+   42:  define_field iconUrl
+   47:  push_0 0
+   48:  define_field sizeBytes
+   53:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e8\u00af\u00bb\u00e5\u008f\u0096\u00e5\u00ba\u0094\u00e7\u0094\u00a8\u00e4\u00bf\u00a1\u00e6\u0081\u00af\u00e2\u0080\u00a6"
+   58:  define_field stepText
+   63:  push_i8 8
+   65:  define_field progress
+   70:  push_atom_value "\u00e5\u00be\u0085\u00e6\u00a0\u00a1\u00e9\u00aa\u008c"
+   75:  define_field integrityText
+   80:  push_1 1
+   81:  lnot
+   82:  define_field risk
+   87:  push_empty_string
+   88:  define_field riskText
+   93:  push_empty_string
+   94:  define_field errorText
+   99:  push_empty_string
+  100:  define_field doneText
+  105:  push_1 1
+  106:  lnot
+  107:  define_field installedConfirmed
+  112:  null
+  113:  define_field shell
+  118:  null
+  119:  define_field modal
+  124:  push_empty_string
+  125:  define_field _workDir
+  130:  push_empty_string
+  131:  define_field _iconDir
+  136:  null
+  137:  define_field _installTimer
+  142:  null
+  143:  define_field _progressTimer
+  148:  push_1 1
+  149:  lnot
+  150:  define_field _destroyed
+  155:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field appName
+    8:  dup
+    9:  if_true8 27
+   11:  drop
+   12:  get_loc1 1: this
+   13:  get_field fileName
+   18:  dup
+   19:  if_true8 27
+   21:  drop
+   22:  push_atom_value "?"
+   27:  put_loc0 0: t
+   28:  get_var String
+   33:  get_loc0 0: t
+   34:  call1 1
+   35:  get_field2 charAt
+   40:  push_0 0
+   41:  call_method 1
+   44:  get_field2 toUpperCase
+   49:  tail_call_method 0
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  push_atom_value "8001687764241341"
+    7:  get_var String
+   12:  get_loc0 0: this
+   13:  get_field appid
+   18:  dup
+   19:  if_true8 23
+   21:  drop
+   22:  push_empty_string
+   23:  call1 1
+   24:  strict_eq
+   25:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_var Number
+    7:  get_loc1 1: this
+    8:  get_field sizeBytes
+   13:  call1 1
+   14:  dup
+   15:  if_true8 19
+   17:  drop
+   18:  push_0 0
+   19:  set_loc0 0: t
+   20:  if_false8 90
+   22:  get_loc0 0: t
+   23:  push_i32 1048576
+   28:  gte
+   29:  if_false8 54
+   31:  get_loc0 0: t
+   32:  push_i32 1048576
+   37:  div
+   38:  get_field2 toFixed
+   43:  push_1 1
+   44:  call_method 1
+   47:  push_atom_value " MB"
+   52:  add
+   53:  return
+   54:  get_loc0 0: t
+   55:  push_i16 1024
+   58:  gte
+   59:  if_false8 82
+   61:  get_loc0 0: t
+   62:  push_i16 1024
+   65:  div
+   66:  get_field2 toFixed
+   71:  push_0 0
+   72:  call_method 1
+   75:  push_atom_value " KB"
+   80:  add
+   81:  return
+   82:  get_loc0 0: t
+   83:  push_atom_value " B"
+   88:  add
+   89:  return
+   90:  push_empty_string
+   91:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 initBridge
+    8:  call_method 0
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field2 openInstallPackage
+   18:  call_method 0
+   21:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 openInstallPackage
+    8:  get_arg0 0: t
+    9:  call_method 1
+   12:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_0 0
+    4:  lnot
+    5:  put_field _destroyed
+   10:  get_loc0 0: this
+   11:  get_loc0 0: this
+   12:  get_field _checkGeneration
+   17:  dup
+   18:  if_true8 22
+   20:  drop
+   21:  push_0 0
+   22:  push_1 1
+   23:  add
+   24:  put_field _checkGeneration
+   29:  get_loc0 0: this
+   30:  get_field2 _clearTimers
+   35:  call_method 0
+   38:  drop
+   39:  get_loc0 0: this
+   40:  get_field2 _cleanupTmp
+   45:  call_method 0
+   48:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var i
+    1: catch t [level:3 next:-1]
+    2: var e
+    3: var s
+    4: var a
+    5: var r
+    6: var n
+    7: catch t [level:11 next:-1]
+    8: catch t [level:14 next:-1]
+    9: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc8 9: this
+    3:  get_arg0 0: t
+    4:  get_loc8 9: this
+    6:  get_field loadOptions
+   11:  array_from 2
+   14:  put_loc0 0: i
+   15:  catch 68
+   20:  get_loc8 9: this
+   22:  get_field $page
+   27:  dup
+   28:  if_false8 64
+   30:  drop
+   31:  get_loc0 0: i
+   32:  get_field2 push
+   37:  get_loc8 9: this
+   39:  get_field $page
+   44:  get_field loadOptions
+   49:  get_loc8 9: this
+   51:  get_field $page
+   56:  get_field options
+   61:  call_method 2
+   64:  drop
+   65:  drop
+   66:  goto8 78
+   68:  put_loc1 1: t
+   69:  catch 77
+   74:  drop
+   75:  goto8 78
+   77:  throw
+   78:  push_0 0
+   79:  put_loc2 2: e
+   80:  get_loc2 2: e
+   81:  get_loc0 0: i
+   82:  get_length
+   83:  lt
+   84:  if_false8 166
+   86:  get_loc0 0: i
+   87:  get_loc2 2: e
+   88:  get_array_el
+   89:  set_loc3 3: s
+   90:  if_false8 162
+   92:  push_atom_value string
+   97:  get_loc3 3: s
+   98:  get_field path
+  103:  typeof
+  104:  eq
+  105:  if_false8 162
+  107:  get_loc3 3: s
+  108:  get_field path
+  113:  get_field2 trim
+  118:  call_method 0
+  121:  if_false8 162
+  123:  object
+  124:  get_loc3 3: s
+  125:  get_field path
+  130:  define_field path
+  135:  get_loc3 3: s
+  136:  get_field name
+  141:  dup
+  142:  if_true8 156
+  144:  drop
+  145:  get_loc3 3: s
+  146:  get_field title
+  151:  dup
+  152:  if_true8 156
+  154:  drop
+  155:  push_empty_string
+  156:  define_field name
+  161:  return
+  162:  inc_loc 2: e
+  164:  goto8 80
+  166:  get_loc8 9: this
+  168:  get_field $route
+  173:  dup
+  174:  if_false8 189
+  176:  drop
+  177:  get_loc8 9: this
+  179:  get_field $route
+  184:  get_field query
+  189:  set_loc8 4: a
+  191:  if_false 340
+  196:  push_atom_value string
+  201:  get_loc8 4: a
+  203:  get_field path
+  208:  typeof
+  209:  eq
+  210:  if_false 340
+  215:  get_loc8 4: a
+  217:  get_field path
+  222:  get_field2 trim
+  227:  call_method 0
+  230:  if_false8 340
+  232:  get_loc8 4: a
+  234:  get_field path
+  239:  put_loc8 5: r
+  241:  get_loc8 4: a
+  243:  get_field name
+  248:  dup
+  249:  if_true8 264
+  251:  drop
+  252:  get_loc8 4: a
+  254:  get_field title
+  259:  dup
+  260:  if_true8 264
+  262:  drop
+  263:  push_empty_string
+  264:  put_loc8 6: n
+  266:  catch 284
+  271:  get_var decodeURIComponent
+  276:  get_loc8 5: r
+  278:  call1 1
+  279:  put_loc8 5: r
+  281:  drop
+  282:  goto8 295
+  284:  put_loc8 7: t
+  286:  catch 294
+  291:  drop
+  292:  goto8 295
+  294:  throw
+  295:  catch 313
+  300:  get_var decodeURIComponent
+  305:  get_loc8 6: n
+  307:  call1 1
+  308:  put_loc8 6: n
+  310:  drop
+  311:  goto8 324
+  313:  put_loc8 8: t
+  315:  catch 323
+  320:  drop
+  321:  goto8 324
+  323:  throw
+  324:  object
+  325:  get_loc8 5: r
+  327:  define_field path
+  332:  get_loc8 6: n
+  334:  define_field name
+  339:  return
+  340:  object
+  341:  push_empty_string
+  342:  define_field path
+  347:  push_empty_string
+  348:  define_field name
+  353:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var i
+    1: var e
+    2: var s
+    3: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  get_field2 resolveInstallOptions
+    8:  get_arg0 0: t
+    9:  call_method 1
+   12:  put_loc0 0: i
+   13:  get_loc3 3: this
+   14:  get_field2 _clearTimers
+   19:  call_method 0
+   22:  drop
+   23:  get_loc3 3: this
+   24:  get_field2 _cleanupTmp
+   29:  call_method 0
+   32:  drop
+   33:  get_loc3 3: this
+   34:  get_field _checkGeneration
+   39:  dup
+   40:  if_true8 44
+   42:  drop
+   43:  push_0 0
+   44:  push_1 1
+   45:  add
+   46:  put_loc1 1: e
+   47:  get_loc3 3: this
+   48:  get_loc1 1: e
+   49:  put_field _checkGeneration
+   54:  get_loc3 3: this
+   55:  push_empty_string
+   56:  put_field _workDir
+   61:  get_loc3 3: this
+   62:  push_empty_string
+   63:  put_field _iconDir
+   68:  get_loc3 3: this
+   69:  get_var String
+   74:  get_loc0 0: i
+   75:  get_field path
+   80:  dup
+   81:  if_true8 85
+   83:  drop
+   84:  push_empty_string
+   85:  call1 1
+   86:  put_field filePath
+   91:  push_0 0
+   92:  get_loc3 3: this
+   93:  get_field filePath
+   98:  get_field2 indexOf
+  103:  push_atom_value "file://"
+  108:  call_method 1
+  111:  strict_eq
+  112:  dup
+  113:  if_false8 138
+  115:  drop
+  116:  get_loc3 3: this
+  117:  get_loc3 3: this
+  118:  get_field filePath
+  123:  get_field2 slice
+  128:  push_7 7
+  129:  call_method 1
+  132:  insert2
+  133:  put_field filePath
+  138:  drop
+  139:  get_loc3 3: this
+  140:  get_var String
+  145:  get_loc0 0: i
+  146:  get_field name
+  151:  dup
+  152:  if_true8 187
+  154:  drop
+  155:  get_loc3 3: this
+  156:  get_field filePath
+  161:  get_field2 split
+  166:  push_atom_value "/"
+  171:  call_method 1
+  174:  get_field2 pop
+  179:  call_method 0
+  182:  dup
+  183:  if_true8 187
+  185:  drop
+  186:  push_empty_string
+  187:  call1 1
+  188:  put_field fileName
+  193:  get_loc3 3: this
+  194:  push_atom_value checking
+  199:  put_field phase
+  204:  get_loc3 3: this
+  205:  push_i8 8
+  207:  put_field progress
+  212:  get_loc3 3: this
+  213:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e8\u00af\u00bb\u00e5\u008f\u0096\u00e5\u00ba\u0094\u00e7\u0094\u00a8\u00e4\u00bf\u00a1\u00e6\u0081\u00af\u00e2\u0080\u00a6"
+  218:  put_field stepText
+  223:  get_loc3 3: this
+  224:  push_empty_string
+  225:  put_field appName
+  230:  get_loc3 3: this
+  231:  push_empty_string
+  232:  put_field version
+  237:  get_loc3 3: this
+  238:  push_empty_string
+  239:  put_field appid
+  244:  get_loc3 3: this
+  245:  push_empty_string
+  246:  put_field iconUrl
+  251:  get_loc3 3: this
+  252:  push_0 0
+  253:  put_field sizeBytes
+  258:  get_loc3 3: this
+  259:  push_atom_value "\u00e5\u00be\u0085\u00e6\u00a0\u00a1\u00e9\u00aa\u008c"
+  264:  put_field integrityText
+  269:  get_loc3 3: this
+  270:  push_1 1
+  271:  lnot
+  272:  put_field risk
+  277:  get_loc3 3: this
+  278:  push_empty_string
+  279:  put_field riskText
+  284:  get_loc3 3: this
+  285:  push_empty_string
+  286:  put_field errorText
+  291:  get_loc3 3: this
+  292:  push_empty_string
+  293:  put_field doneText
+  298:  get_loc3 3: this
+  299:  push_1 1
+  300:  lnot
+  301:  put_field installedConfirmed
+  306:  get_loc3 3: this
+  307:  put_loc2 2: s
+  308:  get_loc3 3: this
+  309:  get_field2 startCheck
+  314:  get_loc1 1: e
+  315:  call_method 1
+  318:  get_field2 catch
+  323:  fclosure8 0: [bytecode <null>]
+  325:  tail_call_method 1
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: s local:loc2 var
+    1: e local:loc1 var
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: s
+    1:  get_field _destroyed
+    6:  dup
+    7:  if_true8 59
+    9:  drop
+   10:  get_var_ref1 1: e
+   11:  get_var_ref0 0: s
+   12:  get_field _checkGeneration
+   17:  strict_neq
+   18:  dup
+   19:  if_true8 59
+   21:  drop
+   22:  get_var_ref0 0: s
+   23:  get_field2 fail
+   28:  push_atom_value "\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u008c\u0085\u00e6\u00a3\u0080\u00e6\u009f\u00a5\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5\u00ef\u00bc\u009a"
+   33:  get_arg0 0: t
+   34:  dup
+   35:  if_false8 44
+   37:  drop
+   38:  get_arg0 0: t
+   39:  get_field message
+   44:  dup
+   45:  if_true8 55
+   47:  drop
+   48:  get_var String
+   53:  get_arg0 0: t
+   54:  call1 1
+   55:  add
+   56:  call_method 1
+   59:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var e
+    1: catch t [level:4 next:-1]
+    2: catch t [level:6 next:-1]
+    3: var this
+  closure vars:
+    0: t parent:loc0 const
+    1: i parent:loc1 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  catch 180
+    7:  null
+    8:  put_loc0 0: e
+    9:  catch 21
+   14:  get_var_ref_check 0: t
+   17:  put_loc0 0: e
+   18:  drop
+   19:  goto8 31
+   21:  put_loc1 1: t
+   22:  catch 30
+   27:  drop
+   28:  goto8 31
+   30:  throw
+   31:  get_loc0 0: e
+   32:  dup
+   33:  if_true8 58
+   35:  drop
+   36:  push_atom_value undefined
+   41:  get_var_undef bridge
+   46:  typeof
+   47:  eq
+   48:  dup
+   49:  if_true8 58
+   51:  drop
+   52:  get_var bridge
+   57:  set_loc0 0: e
+   58:  drop
+   59:  get_loc0 0: e
+   60:  dup
+   61:  if_false8 81
+   63:  drop
+   64:  get_loc0 0: e
+   65:  get_field default
+   70:  dup
+   71:  if_false8 81
+   73:  drop
+   74:  get_loc0 0: e
+   75:  get_field default
+   80:  set_loc0 0: e
+   81:  drop
+   82:  get_loc3 3: this
+   83:  get_loc0 0: e
+   84:  dup
+   85:  if_false8 104
+   87:  drop
+   88:  get_loc0 0: e
+   89:  get_field Shell
+   94:  dup
+   95:  if_true8 104
+   97:  drop
+   98:  get_loc0 0: e
+   99:  get_field shell
+  104:  dup
+  105:  if_true8 118
+  107:  drop
+  108:  get_var_ref_check 1: i
+  111:  get_loc3 3: this
+  112:  call1 1
+  113:  dup
+  114:  if_true8 118
+  116:  drop
+  117:  null
+  118:  put_field shell
+  123:  get_loc0 0: e
+  124:  if_false8 149
+  126:  get_loc0 0: e
+  127:  get_field Modal
+  132:  if_false8 149
+  134:  get_loc3 3: this
+  135:  get_loc0 0: e
+  136:  get_field Modal
+  141:  insert2
+  142:  put_field modal
+  147:  goto8 177
+  149:  get_loc0 0: e
+  150:  dup
+  151:  if_false8 177
+  153:  drop
+  154:  get_loc0 0: e
+  155:  get_field modal
+  160:  dup
+  161:  if_false8 177
+  163:  drop
+  164:  get_loc3 3: this
+  165:  get_loc0 0: e
+  166:  get_field modal
+  171:  insert2
+  172:  put_field modal
+  177:  drop
+  178:  drop
+  179:  return_undef
+  180:  put_loc2 2: t
+  181:  catch 188
+  186:  drop
+  187:  return_undef
+  188:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: catch t [level:4 next:-1]
+    1: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field modal
+    8:  if_false8 69
+   10:  get_loc1 1: this
+   11:  get_field modal
+   16:  get_field toast
+   21:  if_false8 69
+   23:  catch 59
+   28:  get_loc1 1: this
+   29:  get_field modal
+   34:  get_field2 toast
+   39:  object
+   40:  get_arg0 0: t
+   41:  define_field message
+   46:  push_2 2
+   47:  define_field duration
+   52:  call_method 1
+   55:  drop
+   56:  undefined
+   57:  nip
+   58:  return
+   59:  put_loc0 0: t
+   60:  catch 68
+   65:  drop
+   66:  goto8 69
+   68:  throw
+   69:  get_var console
+   74:  get_field2 log
+   79:  push_atom_value "[TOAST] "
+   84:  get_arg0 0: t
+   85:  add
+   86:  call_method 1
+   89:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var i
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field shell
+    8:  set_loc0 0: i
+    9:  lnot
+   10:  dup
+   11:  if_true8 42
+   13:  drop
+   14:  push_atom_value function
+   19:  get_loc0 0: i
+   20:  get_field exec
+   25:  typeof
+   26:  neq
+   27:  if_false8 71
+   29:  push_atom_value function
+   34:  get_loc0 0: i
+   35:  get_field execAsync
+   40:  typeof
+   41:  neq
+   42:  if_false8 71
+   44:  get_var Promise
+   49:  get_field2 resolve
+   54:  object
+   55:  push_minus1 -1
+   56:  define_field code
+   61:  push_empty_string
+   62:  define_field output
+   67:  call_method 1
+   70:  return
+   71:  get_var Promise
+   76:  dup
+   77:  fclosure8 0: [bytecode <null>]
+   79:  call_constructor 1
+   82:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: var s
+    1: var a
+    2: catch t [level:6 next:-1]
+  closure vars:
+    0: i local:loc0 var
+    1: t local:arg0 var
+  stack_size: 5
+  opcodes:
+    0:  fclosure8 0: [bytecode <null>]
+    2:  set_name s
+    7:  put_loc0 0: s
+    8:  catch 93
+   13:  push_atom_value function
+   18:  get_var_ref0 0: i
+   19:  get_field execAsync
+   24:  typeof
+   25:  eq
+   26:  if_false8 78
+   28:  get_var_ref0 0: i
+   29:  get_field2 execAsync
+   34:  get_var_ref1 1: t
+   35:  call_method 1
+   38:  set_loc1 1: a
+   39:  if_false8 72
+   41:  push_atom_value function
+   46:  get_loc1 1: a
+   47:  get_field then
+   52:  typeof
+   53:  eq
+   54:  if_false8 72
+   56:  get_loc1 1: a
+   57:  get_field2 then
+   62:  get_loc0 0: s
+   63:  fclosure8 1: [bytecode <null>]
+   65:  call_method 2
+   68:  drop
+   69:  undefined
+   70:  nip
+   71:  return
+   72:  get_loc0 0: s
+   73:  get_loc1 1: a
+   74:  call1 1
+   75:  drop
+   76:  goto8 91
+   78:  get_loc0 0: s
+   79:  get_var_ref0 0: i
+   80:  get_field2 exec
+   85:  get_var_ref1 1: t
+   86:  call_method 1
+   89:  call1 1
+   90:  drop
+   91:  drop
+   92:  return_undef
+   93:  put_loc2 2: t
+   94:  catch 138
+   99:  get_loc0 0: s
+  100:  object
+  101:  push_minus1 -1
+  102:  define_field code
+  107:  get_loc2 2: t
+  108:  dup
+  109:  if_false8 118
+  111:  drop
+  112:  get_loc2 2: t
+  113:  get_field message
+  118:  dup
+  119:  if_true8 129
+  121:  drop
+  122:  get_var String
+  127:  get_loc2 2: t
+  128:  call1 1
+  129:  define_field output
+  134:  call1 1
+  135:  drop
+  136:  drop
+  137:  return_undef
+  138:  throw
+
+
+/* ===== function depth=3 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var i
+  closure vars:
+    0: e local:arg0 var
+  stack_size: 5
+  opcodes:
+    0:  get_arg0 0: t
+    1:  if_false8 73
+    3:  push_atom_value object
+    8:  get_arg0 0: t
+    9:  typeof
+   10:  eq
+   11:  if_false8 73
+   13:  get_var Number
+   18:  get_arg0 0: t
+   19:  get_field code
+   24:  call1 1
+   25:  put_loc0 0: i
+   26:  get_var isFinite
+   31:  get_loc0 0: i
+   32:  call1 1
+   33:  dup
+   34:  if_true8 39
+   36:  drop
+   37:  push_0 0
+   38:  set_loc0 0: i
+   39:  drop
+   40:  get_var_ref0 0: e
+   41:  object
+   42:  get_loc0 0: i
+   43:  define_field code
+   48:  get_var String
+   53:  get_arg0 0: t
+   54:  get_field output
+   59:  dup
+   60:  if_true8 64
+   62:  drop
+   63:  push_empty_string
+   64:  call1 1
+   65:  define_field output
+   70:  call1 1
+   71:  drop
+   72:  return_undef
+   73:  get_var_ref0 0: e
+   74:  object
+   75:  push_0 0
+   76:  define_field code
+   81:  null
+   82:  get_arg0 0: t
+   83:  eq
+   84:  if_false8 89
+   86:  push_empty_string
+   87:  goto8 96
+   89:  get_var String
+   94:  get_arg0 0: t
+   95:  call1 1
+   96:  define_field output
+  101:  call1 1
+  102:  drop
+  103:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: s local:loc0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: s
+    1:  object
+    2:  push_minus1 -1
+    3:  define_field code
+    8:  get_arg0 0: t
+    9:  dup
+   10:  if_false8 19
+   12:  drop
+   13:  get_arg0 0: t
+   14:  get_field message
+   19:  dup
+   20:  if_true8 24
+   22:  drop
+   23:  push_empty_string
+   24:  define_field output
+   29:  call1 1
+   30:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_atom_value error
+    8:  put_field phase
+   13:  get_loc0 0: this
+   14:  get_arg0 0: t
+   15:  put_field errorText
+   20:  get_loc0 0: this
+   21:  get_field2 _cleanupTmp
+   26:  call_method 0
+   29:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var i
+    2: catch t [level:6 next:-1]
+    3: var this
+  closure vars:
+    0: a parent:loc4 var
+  stack_size: 7
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  array_from 0
+    5:  put_loc0 0: t
+    6:  get_loc3 3: this
+    7:  get_field _workDir
+   12:  dup
+   13:  if_false8 31
+   15:  drop
+   16:  get_loc0 0: t
+   17:  get_field2 push
+   22:  get_loc3 3: this
+   23:  get_field _workDir
+   28:  call_method 1
+   31:  drop
+   32:  get_loc3 3: this
+   33:  get_field _iconDir
+   38:  dup
+   39:  if_false8 57
+   41:  drop
+   42:  get_loc0 0: t
+   43:  get_field2 push
+   48:  get_loc3 3: this
+   49:  get_field _iconDir
+   54:  call_method 1
+   57:  drop
+   58:  get_loc0 0: t
+   59:  get_length
+   60:  if_false8 141
+   62:  get_loc3 3: this
+   63:  get_field shell
+   68:  set_loc1 1: i
+   69:  if_false8 141
+   71:  get_loc1 1: i
+   72:  get_field exec
+   77:  if_false8 141
+   79:  catch 132
+   84:  get_loc1 1: i
+   85:  get_field2 exec
+   90:  push_atom_value "rm -rf "
+   95:  get_loc0 0: t
+   96:  get_field2 map
+  101:  fclosure8 0: [bytecode <null>]
+  103:  call_method 1
+  106:  get_field2 join
+  111:  push_atom_value " "
+  116:  call_method 1
+  119:  add
+  120:  push_atom_value " >/dev/null 2>&1"
+  125:  add
+  126:  call_method 1
+  129:  drop
+  130:  drop
+  131:  return_undef
+  132:  put_loc2 2: t
+  133:  catch 140
+  138:  drop
+  139:  return_undef
+  140:  throw
+  141:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: a parent:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  push_atom_value "\""
+    5:  get_var_ref0 0: a
+    6:  get_arg0 0: t
+    7:  call1 1
+    8:  add
+    9:  push_atom_value "\""
+   14:  add
+   15:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field _installTimer
+    8:  dup
+    9:  if_false8 33
+   11:  drop
+   12:  get_var clearTimeout
+   17:  get_loc0 0: this
+   18:  get_field _installTimer
+   23:  call1 1
+   24:  drop
+   25:  get_loc0 0: this
+   26:  null
+   27:  insert2
+   28:  put_field _installTimer
+   33:  drop
+   34:  get_loc0 0: this
+   35:  get_field _progressTimer
+   40:  dup
+   41:  if_false8 65
+   43:  drop
+   44:  get_var clearInterval
+   49:  get_loc0 0: this
+   50:  get_field _progressTimer
+   55:  call1 1
+   56:  drop
+   57:  get_loc0 0: this
+   58:  null
+   59:  insert2
+   60:  put_field _progressTimer
+   65:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var i
+    1: var e
+    2: var r
+    3: var n
+    4: var o
+    5: var l
+    6: var c
+    7: catch t [level:15 next:-1]
+    8: var p
+    9: var h
+   10: catch t [level:21 next:-1]
+   11: var d
+   12: var f
+   13: var x
+   14: var g
+   15: var u
+   16: var v
+   17: var m
+   18: var _
+   19: var b
+   20: var C
+   21: var k
+   22: var y
+   23: var T
+   24: var w
+   25: var S
+   26: var this
+  closure vars:
+    0: a parent:loc4 var
+    1: s parent:loc3 var
+  stack_size: 8
+  opcodes:
+    0:  push_this
+    1:  put_loc8 26: this
+    3:  undefined
+    4:  get_arg0 0: t
+    5:  strict_eq
+    6:  dup
+    7:  if_false8 18
+    9:  drop
+   10:  get_loc8 26: this
+   12:  get_field _checkGeneration
+   17:  set_arg0 0: t
+   18:  drop
+   19:  get_loc8 26: this
+   21:  get_field filePath
+   26:  if_false 1859
+   31:  get_loc8 26: this
+   33:  get_field shell
+   38:  lnot
+   39:  dup
+   40:  if_true8 83
+   42:  drop
+   43:  push_atom_value function
+   48:  get_loc8 26: this
+   50:  get_field shell
+   55:  get_field exec
+   60:  typeof
+   61:  neq
+   62:  if_false8 104
+   64:  push_atom_value function
+   69:  get_loc8 26: this
+   71:  get_field shell
+   76:  get_field execAsync
+   81:  typeof
+   82:  neq
+   83:  if_false8 104
+   85:  get_loc8 26: this
+   87:  get_field2 fail
+   92:  push_atom_value "Shell \u00e6\u00a8\u00a1\u00e5\u009d\u0097\u00e4\u00b8\u008d\u00e5\u008f\u00af\u00e7\u0094\u00a8"
+   97:  call_method 1
+  100:  drop
+  101:  goto16 1875
+  104:  push_atom_value "\""
+  109:  get_var_ref0 0: a
+  110:  get_loc8 26: this
+  112:  get_field filePath
+  117:  call1 1
+  118:  add
+  119:  push_atom_value "\""
+  124:  add
+  125:  put_loc0 0: i
+  126:  get_loc8 26: this
+  128:  get_field2 run
+  133:  push_atom_value "test -e "
+  138:  get_loc0 0: i
+  139:  add
+  140:  call_method 1
+  143:  await
+  144:  put_loc1 1: e
+  145:  get_loc8 26: this
+  147:  get_field _destroyed
+  152:  lnot
+  153:  if_false 1875
+  158:  get_arg0 0: t
+  159:  get_loc8 26: this
+  161:  get_field _checkGeneration
+  166:  strict_eq
+  167:  if_false 1875
+  172:  get_loc1 1: e
+  173:  get_field code
+  178:  push_0 0
+  179:  gt
+  180:  if_false8 201
+  182:  get_loc8 26: this
+  184:  get_field2 fail
+  189:  push_atom_value "\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u008c\u0085\u00e6\u0096\u0087\u00e4\u00bb\u00b6\u00e4\u00b8\u008d\u00e5\u00ad\u0098\u00e5\u009c\u00a8"
+  194:  call_method 1
+  197:  drop
+  198:  goto16 1875
+  201:  get_loc8 26: this
+  203:  get_field2 run
+  208:  push_atom_value "wc -c < "
+  213:  get_loc0 0: i
+  214:  add
+  215:  push_atom_value " 2>/dev/null"
+  220:  add
+  221:  call_method 1
+  224:  await
+  225:  put_loc2 2: r
+  226:  get_loc8 26: this
+  228:  get_field _destroyed
+  233:  lnot
+  234:  if_false 1875
+  239:  get_arg0 0: t
+  240:  get_loc8 26: this
+  242:  get_field _checkGeneration
+  247:  strict_eq
+  248:  if_false 1875
+  253:  get_var parseInt
+  258:  get_var String
+  263:  get_loc2 2: r
+  264:  get_field output
+  269:  dup
+  270:  if_true8 274
+  272:  drop
+  273:  push_empty_string
+  274:  call1 1
+  275:  get_field2 trim
+  280:  call_method 0
+  283:  push_i8 10
+  285:  call2 2
+  286:  set_loc3 3: n
+  287:  push_0 0
+  288:  gt
+  289:  dup
+  290:  if_false8 302
+  292:  drop
+  293:  get_loc8 26: this
+  295:  get_loc3 3: n
+  296:  insert2
+  297:  put_field sizeBytes
+  302:  drop
+  303:  get_loc3 3: n
+  304:  push_i32 104857600
+  309:  gt
+  310:  if_false8 331
+  312:  get_loc8 26: this
+  314:  get_field2 fail
+  319:  push_atom_value "\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u008c\u0085\u00e5\u00bc\u0082\u00e5\u00b8\u00b8\u00ef\u00bc\u0088\u00e8\u00b6\u0085\u00e8\u00bf\u0087 100MB\u00ef\u00bc\u0089"
+  324:  call_method 1
+  327:  drop
+  328:  goto16 1875
+  331:  get_loc8 26: this
+  333:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e8\u00af\u00bb\u00e5\u008f\u0096\u00e5\u00ba\u0094\u00e7\u0094\u00a8\u00e4\u00bf\u00a1\u00e6\u0081\u00af\u00e2\u0080\u00a6"
+  338:  put_field stepText
+  343:  get_loc8 26: this
+  345:  push_i8 20
+  347:  put_field progress
+  352:  get_loc8 26: this
+  354:  get_field2 run
+  359:  push_atom_value "unzip -p "
+  364:  get_loc0 0: i
+  365:  add
+  366:  push_atom_value " manifest.json"
+  371:  add
+  372:  call_method 1
+  375:  await
+  376:  put_loc8 4: o
+  378:  get_loc8 26: this
+  380:  get_field _destroyed
+  385:  lnot
+  386:  if_false 1875
+  391:  get_arg0 0: t
+  392:  get_loc8 26: this
+  394:  get_field _checkGeneration
+  399:  strict_eq
+  400:  if_false 1875
+  405:  null
+  406:  put_loc8 5: l
+  408:  get_var String
+  413:  get_loc8 4: o
+  415:  get_field output
+  420:  dup
+  421:  if_true8 425
+  423:  drop
+  424:  push_empty_string
+  425:  call1 1
+  426:  put_loc8 6: c
+  428:  catch 453
+  433:  get_var JSON
+  438:  get_field2 parse
+  443:  get_loc8 6: c
+  445:  call_method 1
+  448:  put_loc8 5: l
+  450:  drop
+  451:  goto8 464
+  453:  put_loc8 7: t
+  455:  catch 463
+  460:  drop
+  461:  goto8 464
+  463:  throw
+  464:  get_loc8 5: l
+  466:  lnot
+  467:  if_false8 566
+  469:  get_loc8 6: c
+  471:  get_field2 indexOf
+  476:  push_atom_value "{"
+  481:  call_method 1
+  484:  put_loc8 8: p
+  486:  get_loc8 6: c
+  488:  get_field2 lastIndexOf
+  493:  push_atom_value "}"
+  498:  call_method 1
+  501:  put_loc8 9: h
+  503:  get_loc8 8: p
+  505:  push_0 0
+  506:  gte
+  507:  if_false8 566
+  509:  get_loc8 9: h
+  511:  get_loc8 8: p
+  513:  gt
+  514:  if_false8 566
+  516:  catch 555
+  521:  get_var JSON
+  526:  get_field2 parse
+  531:  get_loc8 6: c
+  533:  get_field2 slice
+  538:  get_loc8 8: p
+  540:  get_loc8 9: h
+  542:  push_1 1
+  543:  add
+  544:  call_method 2
+  547:  call_method 1
+  550:  put_loc8 5: l
+  552:  drop
+  553:  goto8 566
+  555:  put_loc8 10: t
+  557:  catch 565
+  562:  drop
+  563:  goto8 566
+  565:  throw
+  566:  push_0 0
+  567:  get_loc8 4: o
+  569:  get_field code
+  574:  strict_neq
+  575:  dup
+  576:  if_true8 594
+  578:  drop
+  579:  get_loc8 5: l
+  581:  lnot
+  582:  dup
+  583:  if_true8 594
+  585:  drop
+  586:  get_loc8 5: l
+  588:  get_field appid
+  593:  lnot
+  594:  if_false8 690
+  596:  get_loc8 6: c
+  598:  get_field2 replace
+  603:  push_const8 0: 1"\\s+"
+  605:  push_const8 1: 1"\u0001\u0001\u0000M\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u001c,\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u000c\u0000\n"
+  607:  regexp
+  608:  push_atom_value " "
+  613:  call_method 2
+  616:  get_field2 trim
+  621:  call_method 0
+  624:  set_loc8 11: d
+  626:  get_length
+  627:  push_i8 100
+  629:  gt
+  630:  dup
+  631:  if_false8 655
+  633:  drop
+  634:  get_loc8 11: d
+  636:  get_field2 slice
+  641:  push_0 0
+  642:  push_i8 100
+  644:  call_method 2
+  647:  push_atom_value "\u00e2\u0080\u00a6"
+  652:  add
+  653:  set_loc8 11: d
+  655:  drop
+  656:  get_loc8 26: this
+  658:  get_field2 fail
+  663:  push_atom_value "\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u008c\u0085\u00e8\u00a7\u00a3\u00e6\u009e\u0090\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5\u00ef\u00bc\u0088manifest \u00e8\u00af\u00bb\u00e5\u008f\u0096\u00e5\u00bc\u0082\u00e5\u00b8\u00b8\u00ef\u00bc\u0089"
+  668:  get_loc8 11: d
+  670:  if_false8 682
+  672:  push_atom_value "\u00ef\u00bc\u009a"
+  677:  get_loc8 11: d
+  679:  add
+  680:  goto8 683
+  682:  push_empty_string
+  683:  add
+  684:  call_method 1
+  687:  drop
+  688:  undefined
+  689:  return_async
+  690:  get_loc8 26: this
+  692:  get_var String
+  697:  get_loc8 5: l
+  699:  get_field appName
+  704:  dup
+  705:  if_true8 709
+  707:  drop
+  708:  push_empty_string
+  709:  call1 1
+  710:  get_field2 trim
+  715:  call_method 0
+  718:  dup
+  719:  if_true8 729
+  721:  drop
+  722:  get_loc8 26: this
+  724:  get_field fileName
+  729:  put_field appName
+  734:  get_loc8 26: this
+  736:  get_var String
+  741:  get_loc8 5: l
+  743:  get_field version
+  748:  dup
+  749:  if_true8 753
+  751:  drop
+  752:  push_empty_string
+  753:  call1 1
+  754:  get_field2 trim
+  759:  call_method 0
+  762:  put_field version
+  767:  get_loc8 26: this
+  769:  get_var String
+  774:  get_loc8 5: l
+  776:  get_field appid
+  781:  dup
+  782:  if_true8 786
+  784:  drop
+  785:  push_empty_string
+  786:  call1 1
+  787:  get_field2 trim
+  792:  call_method 0
+  795:  put_field appid
+  800:  push_const8 2: 1"^[0-9]{6,20}$"
+  802:  push_const8 3: 1"\u0000\u0001\u0000+\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u001c\u0008\u0000\u0000\u0000\u0006\u0000\u0000\u0000\u0014\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u0006\u000c\u0000\n"
+  804:  regexp
+  805:  get_field2 test
+  810:  get_loc8 26: this
+  812:  get_field appid
+  817:  call_method 1
+  820:  if_false 1841
+  825:  get_var String
+  830:  get_loc8 5: l
+  832:  get_field icon
+  837:  dup
+  838:  if_true8 842
+  840:  drop
+  841:  push_empty_string
+  842:  call1 1
+  843:  get_field2 trim
+  848:  call_method 0
+  851:  set_loc8 12: f
+  853:  if_false 1077
+  858:  get_loc8 12: f
+  860:  get_field2 indexOf
+  865:  push_atom_value "/"
+  870:  call_method 1
+  873:  push_0 0
+  874:  lt
+  875:  if_false 1077
+  880:  get_loc8 12: f
+  882:  get_field2 indexOf
+  887:  push_atom_value ".."
+  892:  call_method 1
+  895:  push_0 0
+  896:  lt
+  897:  if_false 1077
+  902:  get_loc8 26: this
+  904:  get_var_ref1 1: s
+  905:  push_atom_value ic_
+  910:  add
+  911:  get_var Date
+  916:  get_field2 now
+  921:  call_method 0
+  924:  add
+  925:  put_field _iconDir
+  930:  get_loc8 26: this
+  932:  get_field2 run
+  937:  push_atom_value "rm -rf \""
+  942:  get_loc8 26: this
+  944:  get_field _iconDir
+  949:  add
+  950:  push_atom_value "\" && mkdir -p \""
+  955:  add
+  956:  get_loc8 26: this
+  958:  get_field _iconDir
+  963:  add
+  964:  push_atom_value "\" && unzip -o "
+  969:  add
+  970:  get_loc0 0: i
+  971:  add
+  972:  push_atom_value " \""
+  977:  add
+  978:  get_var_ref0 0: a
+  979:  get_loc8 12: f
+  981:  call1 1
+  982:  add
+  983:  push_atom_value "\" -d \""
+  988:  add
+  989:  get_loc8 26: this
+  991:  get_field _iconDir
+  996:  add
+  997:  push_atom_value "\" >/dev/null 2>&1"
+ 1002:  add
+ 1003:  call_method 1
+ 1006:  await
+ 1007:  put_loc8 13: x
+ 1009:  get_loc8 26: this
+ 1011:  get_field _destroyed
+ 1016:  dup
+ 1017:  if_true8 1029
+ 1019:  drop
+ 1020:  get_arg0 0: t
+ 1021:  get_loc8 26: this
+ 1023:  get_field _checkGeneration
+ 1028:  strict_neq
+ 1029:  if_false8 1033
+ 1031:  undefined
+ 1032:  return_async
+ 1033:  push_0 0
+ 1034:  get_loc8 13: x
+ 1036:  get_field code
+ 1041:  strict_eq
+ 1042:  dup
+ 1043:  if_false8 1076
+ 1045:  drop
+ 1046:  get_loc8 26: this
+ 1048:  push_atom_value "file://"
+ 1053:  get_loc8 26: this
+ 1055:  get_field _iconDir
+ 1060:  add
+ 1061:  push_atom_value "/"
+ 1066:  add
+ 1067:  get_loc8 12: f
+ 1069:  add
+ 1070:  insert2
+ 1071:  put_field iconUrl
+ 1076:  drop
+ 1077:  get_loc8 26: this
+ 1079:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e6\u00a0\u00a1\u00e9\u00aa\u008c\u00e6\u0096\u0087\u00e4\u00bb\u00b6\u00e5\u00ae\u008c\u00e6\u0095\u00b4\u00e6\u0080\u00a7\u00e2\u0080\u00a6"
+ 1084:  put_field stepText
+ 1089:  get_loc8 26: this
+ 1091:  push_i8 48
+ 1093:  put_field progress
+ 1098:  get_loc8 26: this
+ 1100:  get_var_ref1 1: s
+ 1101:  push_atom_value w_
+ 1106:  add
+ 1107:  get_var Date
+ 1112:  get_field2 now
+ 1117:  call_method 0
+ 1120:  add
+ 1121:  put_field _workDir
+ 1126:  push_atom_value "\""
+ 1131:  get_var_ref0 0: a
+ 1132:  get_loc8 26: this
+ 1134:  get_field _workDir
+ 1139:  call1 1
+ 1140:  add
+ 1141:  push_atom_value "\""
+ 1146:  add
+ 1147:  put_loc8 14: g
+ 1149:  get_loc8 26: this
+ 1151:  get_field2 run
+ 1156:  push_atom_value "rm -rf "
+ 1161:  get_loc8 14: g
+ 1163:  add
+ 1164:  push_atom_value " && mkdir -p "
+ 1169:  add
+ 1170:  get_loc8 14: g
+ 1172:  add
+ 1173:  push_atom_value " && unzip -o "
+ 1178:  add
+ 1179:  get_loc0 0: i
+ 1180:  add
+ 1181:  push_atom_value " -d "
+ 1186:  add
+ 1187:  get_loc8 14: g
+ 1189:  add
+ 1190:  push_atom_value " >/dev/null 2>&1"
+ 1195:  add
+ 1196:  call_method 1
+ 1199:  await
+ 1200:  put_loc8 15: u
+ 1202:  get_loc8 26: this
+ 1204:  get_field _destroyed
+ 1209:  lnot
+ 1210:  if_false 1875
+ 1215:  get_arg0 0: t
+ 1216:  get_loc8 26: this
+ 1218:  get_field _checkGeneration
+ 1223:  strict_eq
+ 1224:  if_false 1875
+ 1229:  push_0 0
+ 1230:  get_loc8 15: u
+ 1232:  get_field code
+ 1237:  strict_eq
+ 1238:  if_false 1823
+ 1243:  get_loc8 26: this
+ 1245:  get_field2 run
+ 1250:  push_atom_value "cd "
+ 1255:  get_loc8 14: g
+ 1257:  add
+ 1258:  push_atom_value " && find . -type f -exec md5sum {} \\; 2>/dev/null"
+ 1263:  add
+ 1264:  call_method 1
+ 1267:  await
+ 1268:  put_loc8 16: v
+ 1270:  get_loc8 26: this
+ 1272:  get_field _destroyed
+ 1277:  lnot
+ 1278:  if_false 1875
+ 1283:  get_arg0 0: t
+ 1284:  get_loc8 26: this
+ 1286:  get_field _checkGeneration
+ 1291:  strict_eq
+ 1292:  if_false 1875
+ 1297:  get_loc8 5: l
+ 1299:  if_false8 1335
+ 1301:  get_loc8 5: l
+ 1303:  get_field cert
+ 1308:  if_false8 1335
+ 1310:  push_atom_value object
+ 1315:  get_loc8 5: l
+ 1317:  get_field cert
+ 1322:  typeof
+ 1323:  eq
+ 1324:  if_false8 1335
+ 1326:  get_loc8 5: l
+ 1328:  get_field cert
+ 1333:  goto8 1336
+ 1335:  null
+ 1336:  put_loc8 17: m
+ 1338:  object
+ 1339:  put_loc8 18: _
+ 1341:  get_var String
+ 1346:  get_loc8 16: v
+ 1348:  get_field output
+ 1353:  dup
+ 1354:  if_true8 1358
+ 1356:  drop
+ 1357:  push_empty_string
+ 1358:  call1 1
+ 1359:  get_field2 split
+ 1364:  push_atom_value "\n"
+ 1369:  call_method 1
+ 1372:  get_field2 forEach
+ 1377:  fclosure8 4: [bytecode <null>]
+ 1379:  call_method 1
+ 1382:  drop
+ 1383:  get_loc8 17: m
+ 1385:  if_false 1595
+ 1390:  push_0 0
+ 1391:  put_loc8 19: b
+ 1393:  push_0 0
+ 1394:  put_loc8 20: C
+ 1396:  get_loc8 17: m
+ 1398:  for_in_start
+ 1399:  goto8 1481
+ 1401:  put_loc8 21: k
+ 1403:  get_loc8 17: m
+ 1405:  get_field2 hasOwnProperty
+ 1410:  get_loc8 21: k
+ 1412:  call_method 1
+ 1415:  if_false8 1481
+ 1417:  get_var String
+ 1422:  get_loc8 17: m
+ 1424:  get_loc8 21: k
+ 1426:  get_array_el
+ 1427:  dup
+ 1428:  if_false8 1441
+ 1430:  drop
+ 1431:  get_loc8 17: m
+ 1433:  get_loc8 21: k
+ 1435:  get_array_el
+ 1436:  get_field md5
+ 1441:  dup
+ 1442:  if_true8 1446
+ 1444:  drop
+ 1445:  push_empty_string
+ 1446:  call1 1
+ 1447:  get_field2 toLowerCase
+ 1452:  call_method 0
+ 1455:  set_loc8 22: y
+ 1457:  dup
+ 1458:  if_false8 1480
+ 1460:  drop
+ 1461:  inc_loc 19: b
+ 1463:  get_loc8 18: _
+ 1465:  get_loc8 21: k
+ 1467:  get_array_el
+ 1468:  get_loc8 22: y
+ 1470:  strict_eq
+ 1471:  dup
+ 1472:  if_false8 1480
+ 1474:  drop
+ 1475:  get_loc8 20: C
+ 1477:  post_inc
+ 1478:  put_loc8 20: C
+ 1480:  drop
+ 1481:  for_in_next
+ 1482:  if_false8 1401
+ 1484:  drop
+ 1485:  drop
+ 1486:  get_loc8 19: b
+ 1488:  push_0 0
+ 1489:  gt
+ 1490:  if_false8 1526
+ 1492:  push_0 0
+ 1493:  get_var Object
+ 1498:  get_field2 keys
+ 1503:  get_loc8 18: _
+ 1505:  call_method 1
+ 1508:  get_length
+ 1509:  strict_eq
+ 1510:  if_false8 1526
+ 1512:  get_loc8 26: this
+ 1514:  push_atom_value "\u00e6\u0097\u00a0\u00e6\u00b3\u0095\u00e6\u00a0\u00a1\u00e9\u00aa\u008c\u00ef\u00bc\u0088\u00e7\u00bc\u00ba\u00e5\u00b0\u0091 md5sum\u00ef\u00bc\u0089"
+ 1519:  put_field integrityText
+ 1524:  goto8 1607
+ 1526:  get_loc8 20: C
+ 1528:  get_loc8 19: b
+ 1530:  strict_neq
+ 1531:  if_false8 1569
+ 1533:  get_loc8 26: this
+ 1535:  get_field2 fail
+ 1540:  push_atom_value "\u00e6\u0096\u0087\u00e4\u00bb\u00b6\u00e6\u00a0\u00a1\u00e9\u00aa\u008c\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5 "
+ 1545:  get_loc8 20: C
+ 1547:  add
+ 1548:  push_atom_value "/"
+ 1553:  add
+ 1554:  get_loc8 19: b
+ 1556:  add
+ 1557:  push_atom_value "\u00ef\u00bc\u008c\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u008c\u0085\u00e5\u008f\u00af\u00e8\u0083\u00bd\u00e8\u00a2\u00ab\u00e7\u00af\u00a1\u00e6\u0094\u00b9"
+ 1562:  add
+ 1563:  call_method 1
+ 1566:  drop
+ 1567:  undefined
+ 1568:  return_async
+ 1569:  get_loc8 26: this
+ 1571:  push_atom_value "\u00e6\u00a0\u00a1\u00e9\u00aa\u008c\u00e9\u0080\u009a\u00e8\u00bf\u0087 "
+ 1576:  get_loc8 20: C
+ 1578:  add
+ 1579:  push_atom_value "/"
+ 1584:  add
+ 1585:  get_loc8 19: b
+ 1587:  add
+ 1588:  put_field integrityText
+ 1593:  goto8 1607
+ 1595:  get_loc8 26: this
+ 1597:  push_atom_value "\u00e6\u009c\u00aa\u00e6\u008f\u0090\u00e4\u00be\u009b\u00e6\u00a0\u00a1\u00e9\u00aa\u008c\u00e4\u00bf\u00a1\u00e6\u0081\u00af"
+ 1602:  put_field integrityText
+ 1607:  get_loc8 26: this
+ 1609:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e6\u0089\u00ab\u00e6\u008f\u008f\u00e9\u00a3\u008e\u00e9\u0099\u00a9\u00e7\u0089\u00b9\u00e5\u00be\u0081\u00e2\u0080\u00a6"
+ 1614:  put_field stepText
+ 1619:  get_loc8 26: this
+ 1621:  push_i8 82
+ 1623:  put_field progress
+ 1628:  get_loc8 26: this
+ 1630:  get_field2 run
+ 1635:  push_atom_value "cd "
+ 1640:  get_loc8 14: g
+ 1642:  add
+ 1643:  push_atom_value " && grep -r -l -e mkfs. -e flash_eraseall -e eraseall -e /dev/mtd -e mtdblock -e flashcp -e \"dd if=/dev/\" . 2>/dev/null"
+ 1648:  add
+ 1649:  call_method 1
+ 1652:  await
+ 1653:  put_loc8 23: T
+ 1655:  get_loc8 26: this
+ 1657:  get_field _destroyed
+ 1662:  lnot
+ 1663:  if_false 1875
+ 1668:  get_arg0 0: t
+ 1669:  get_loc8 26: this
+ 1671:  get_field _checkGeneration
+ 1676:  strict_eq
+ 1677:  if_false 1875
+ 1682:  push_0 0
+ 1683:  get_loc8 23: T
+ 1685:  get_field code
+ 1690:  strict_eq
+ 1691:  if_false8 1784
+ 1693:  get_var String
+ 1698:  get_loc8 23: T
+ 1700:  get_field output
+ 1705:  dup
+ 1706:  if_true8 1710
+ 1708:  drop
+ 1709:  push_empty_string
+ 1710:  call1 1
+ 1711:  get_field2 split
+ 1716:  push_atom_value "\n"
+ 1721:  call_method 1
+ 1724:  get_field2 map
+ 1729:  fclosure8 5: [bytecode <null>]
+ 1731:  call_method 1
+ 1734:  get_field2 filter
+ 1739:  fclosure8 6: [bytecode <null>]
+ 1741:  call_method 1
+ 1744:  set_loc8 24: w
+ 1746:  get_length
+ 1747:  dup
+ 1748:  if_false8 1783
+ 1750:  drop
+ 1751:  get_loc8 26: this
+ 1753:  push_0 0
+ 1754:  lnot
+ 1755:  put_field risk
+ 1760:  get_loc8 26: this
+ 1762:  push_atom_value "\u00e5\u0090\u00ab\u00e5\u00ba\u0095\u00e5\u00b1\u0082\u00e7\u00a3\u0081\u00e7\u009b\u0098\u00e6\u0093\u008d\u00e4\u00bd\u009c\u00e6\u008c\u0087\u00e4\u00bb\u00a4\u00ef\u00bc\u0088"
+ 1767:  get_loc8 24: w
+ 1769:  get_length
+ 1770:  add
+ 1771:  push_atom_value " \u00e4\u00b8\u00aa\u00e6\u0096\u0087\u00e4\u00bb\u00b6\u00ef\u00bc\u0089"
+ 1776:  add
+ 1777:  insert2
+ 1778:  put_field riskText
+ 1783:  drop
+ 1784:  get_loc8 26: this
+ 1786:  push_i8 100
+ 1788:  put_field progress
+ 1793:  get_loc8 26: this
+ 1795:  push_atom_value "\u00e6\u00a3\u0080\u00e6\u009f\u00a5\u00e5\u00ae\u008c\u00e6\u0088\u0090"
+ 1800:  put_field stepText
+ 1805:  get_loc8 26: this
+ 1807:  put_loc8 25: S
+ 1809:  get_var setTimeout
+ 1814:  fclosure8 7: [bytecode <null>]
+ 1816:  push_i16 260
+ 1819:  call2 2
+ 1820:  drop
+ 1821:  goto8 1875
+ 1823:  get_loc8 26: this
+ 1825:  get_field2 fail
+ 1830:  push_atom_value "\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u008c\u0085\u00e5\u00b7\u00b2\u00e6\u008d\u009f\u00e5\u009d\u008f\u00e6\u0088\u0096\u00e4\u00b8\u008d\u00e5\u00ae\u008c\u00e6\u0095\u00b4"
+ 1835:  call_method 1
+ 1838:  drop
+ 1839:  goto8 1875
+ 1841:  get_loc8 26: this
+ 1843:  get_field2 fail
+ 1848:  push_atom_value "\u00e5\u00ba\u0094\u00e7\u0094\u00a8\u00e5\u008c\u0085\u00e5\u0090\u008d\u00e5\u00bc\u0082\u00e5\u00b8\u00b8\u00ef\u00bc\u008c\u00e6\u008b\u0092\u00e7\u00bb\u009d\u00e5\u00ae\u0089\u00e8\u00a3\u0085"
+ 1853:  call_method 1
+ 1856:  drop
+ 1857:  goto8 1875
+ 1859:  get_loc8 26: this
+ 1861:  get_field2 fail
+ 1866:  push_atom_value "\u00e6\u009c\u00aa\u00e6\u008c\u0087\u00e5\u00ae\u009a\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u008c\u0085\u00e8\u00b7\u00af\u00e5\u00be\u0084"
+ 1871:  call_method 1
+ 1874:  drop
+ 1875:  undefined
+ 1876:  return_async
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var i
+  closure vars:
+    0: _ local:loc18 var
+  stack_size: 5
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_field2 match
+    6:  push_const8 0: 1"^([0-9a-fA-F]{32})\\s+(.+)$"
+    8:  push_const8 1: 1"\u0000\u0003\u0000\u008b\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u000b\u0001\u001c\u0010\u0000\u0000\u0000 \u0000\u0000\u0000 \u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0015\u0003\u00000\u00009\u0000A\u0000F\u0000a\u0000f\u0000\n\u000c\u0001\u001c,\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u000b\u0002\u001c\u0002\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0003\n\u000c\u0002\u0006\u000c\u0000\n"
+   10:  regexp
+   11:  call_method 1
+   14:  set_loc0 0: i
+   15:  dup
+   16:  if_false8 59
+   18:  drop
+   19:  get_var_ref0 0: _
+   20:  get_loc0 0: i
+   21:  push_2 2
+   22:  get_array_el
+   23:  get_field2 replace
+   28:  push_const8 2: 1"^\\.\\/"
+   30:  push_const8 3: 1"\u0000\u0001\u0000\u0017\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u0001.\u0000\u0001/\u0000\u000c\u0000\n"
+   32:  regexp
+   33:  push_empty_string
+   34:  call_method 2
+   37:  get_field2 trim
+   42:  call_method 0
+   45:  to_propkey2
+   46:  get_loc0 0: i
+   47:  push_1 1
+   48:  get_array_el
+   49:  get_field2 toLowerCase
+   54:  call_method 0
+   57:  insert3
+   58:  put_array_el
+   59:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 4
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_field2 trim
+    6:  call_method 0
+    9:  get_field2 replace
+   14:  push_const8 0: 1"^\\.\\/"
+   16:  push_const8 1: 1"\u0000\u0001\u0000\u0017\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u0001.\u0000\u0001/\u0000\u000c\u0000\n"
+   18:  regexp
+   19:  push_empty_string
+   20:  tail_call_method 2
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: t
+    1:  dup
+    2:  if_false8 21
+    4:  drop
+    5:  get_arg0 0: t
+    6:  get_field2 indexOf
+   11:  push_atom_value "No such"
+   16:  call_method 1
+   19:  push_0 0
+   20:  lt
+   21:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: S local:loc25 var
+    1: t local:arg0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: S
+    1:  get_field _destroyed
+    6:  dup
+    7:  if_true8 50
+    9:  drop
+   10:  get_var_ref1 1: t
+   11:  get_var_ref0 0: S
+   12:  get_field _checkGeneration
+   17:  strict_neq
+   18:  dup
+   19:  if_true8 50
+   21:  drop
+   22:  push_atom_value checking
+   27:  get_var_ref0 0: S
+   28:  get_field phase
+   33:  strict_neq
+   34:  dup
+   35:  if_true8 50
+   37:  drop
+   38:  get_var_ref0 0: S
+   39:  push_atom_value ready
+   44:  insert2
+   45:  put_field phase
+   50:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var i
+    2: var this
+  closure vars:
+    0: a parent:loc4 var
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  put_loc0 0: t
+    4:  push_atom_value ready
+    9:  get_loc2 2: this
+   10:  get_field phase
+   15:  strict_eq
+   16:  if_false8 101
+   18:  get_loc2 2: this
+   19:  push_atom_value installing
+   24:  put_field phase
+   29:  get_loc2 2: this
+   30:  push_6 6
+   31:  put_field progress
+   36:  get_loc2 2: this
+   37:  get_var setInterval
+   42:  fclosure8 0: [bytecode <null>]
+   44:  push_i16 400
+   47:  call2 2
+   48:  put_field _progressTimer
+   53:  push_atom_value "\""
+   58:  get_var_ref0 0: a
+   59:  get_loc2 2: this
+   60:  get_field filePath
+   65:  call1 1
+   66:  add
+   67:  push_atom_value "\""
+   72:  add
+   73:  put_loc1 1: i
+   74:  get_loc2 2: this
+   75:  get_field2 run
+   80:  push_atom_value "miniapp_cli install "
+   85:  get_loc1 1: i
+   86:  add
+   87:  call_method 1
+   90:  get_field2 then
+   95:  fclosure8 1: [bytecode <null>]
+   97:  call_method 1
+  100:  drop
+  101:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 10
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field progress
+    6:  push_i8 92
+    8:  lt
+    9:  dup
+   10:  if_false8 72
+   12:  drop
+   13:  get_var_ref0 0: t
+   14:  get_var Math
+   19:  get_field2 min
+   24:  push_i8 92
+   26:  get_var_ref0 0: t
+   27:  get_field progress
+   32:  push_3 3
+   33:  add
+   34:  get_var Math
+   39:  get_field2 round
+   44:  push_4 4
+   45:  get_var Math
+   50:  get_field2 random
+   55:  call_method 0
+   58:  mul
+   59:  call_method 1
+   62:  add
+   63:  call_method 2
+   66:  insert2
+   67:  put_field progress
+   72:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  args: i
+  locals:
+    0: var e
+    1: var s
+    2: var a
+    3: var r
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field _destroyed
+    6:  lnot
+    7:  if_false 249
+   12:  get_var String
+   17:  get_arg0 0: i
+   18:  dup
+   19:  if_false8 28
+   21:  drop
+   22:  get_arg0 0: i
+   23:  get_field output
+   28:  dup
+   29:  if_true8 33
+   31:  drop
+   32:  push_empty_string
+   33:  call1 1
+   34:  set_loc0 0: e
+   35:  get_field2 match
+   40:  push_const8 0: 1"\"ret\"\\s*:\\s*(-?\\d+)"
+   42:  push_const8 1: 1"\u0000\u0002\u0000\u00ce\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001\"\u0000\u0001r\u0000\u0001e\u0000\u0001t\u0000\u0001\"\u0000\u001c,\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u0001:\u0000\u001c,\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u000b\u0001\u001c\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001-\u0000\n\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u000c\u0001\u000c\u0000\n"
+   44:  regexp
+   45:  call_method 1
+   48:  set_loc1 1: s
+   49:  if_false8 62
+   51:  get_var Number
+   56:  get_loc1 1: s
+   57:  push_1 1
+   58:  get_array_el
+   59:  call1 1
+   60:  goto8 63
+   62:  null
+   63:  put_loc2 2: a
+   64:  get_arg0 0: i
+   65:  dup
+   66:  if_false8 77
+   68:  drop
+   69:  push_0 0
+   70:  get_arg0 0: i
+   71:  get_field code
+   76:  strict_neq
+   77:  dup
+   78:  if_true8 98
+   80:  drop
+   81:  null
+   82:  get_loc2 2: a
+   83:  strict_neq
+   84:  dup
+   85:  if_false8 91
+   87:  drop
+   88:  push_0 0
+   89:  get_loc2 2: a
+   90:  strict_neq
+   91:  dup
+   92:  if_true8 98
+   94:  drop
+   95:  null
+   96:  get_loc2 2: a
+   97:  strict_eq
+   98:  if_false 238
+  103:  get_var_ref0 0: t
+  104:  get_field2 _clearTimers
+  109:  call_method 0
+  112:  drop
+  113:  get_loc0 0: e
+  114:  get_field2 replace
+  119:  push_const8 2: 1"\\s+"
+  121:  push_const8 3: 1"\u0001\u0001\u0000M\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u001c,\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u000c\u0000\n"
+  123:  regexp
+  124:  push_atom_value " "
+  129:  call_method 2
+  132:  get_field2 trim
+  137:  call_method 0
+  140:  set_loc3 3: r
+  141:  get_length
+  142:  push_i8 120
+  144:  gt
+  145:  dup
+  146:  if_false8 168
+  148:  drop
+  149:  get_loc3 3: r
+  150:  get_field2 slice
+  155:  push_0 0
+  156:  push_i8 120
+  158:  call_method 2
+  161:  push_atom_value "\u00e2\u0080\u00a6"
+  166:  add
+  167:  set_loc3 3: r
+  168:  drop
+  169:  get_var_ref0 0: t
+  170:  push_atom_value error
+  175:  put_field phase
+  180:  get_var_ref0 0: t
+  181:  push_atom_value "\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  186:  null
+  187:  get_loc2 2: a
+  188:  strict_neq
+  189:  if_false8 206
+  191:  push_atom_value "\u00ef\u00bc\u0088ret="
+  196:  get_loc2 2: a
+  197:  add
+  198:  push_atom_value "\u00ef\u00bc\u0089"
+  203:  add
+  204:  goto8 207
+  206:  push_empty_string
+  207:  add
+  208:  get_loc3 3: r
+  209:  if_false8 220
+  211:  push_atom_value "\u00ef\u00bc\u009a"
+  216:  get_loc3 3: r
+  217:  add
+  218:  goto8 221
+  220:  push_empty_string
+  221:  add
+  222:  put_field errorText
+  227:  get_var_ref0 0: t
+  228:  get_field2 _cleanupTmp
+  233:  call_method 0
+  236:  drop
+  237:  return_undef
+  238:  get_var_ref0 0: t
+  239:  get_field2 _pollInstallDone
+  244:  push_0 0
+  245:  call_method 1
+  248:  drop
+  249:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var i
+    1: var s
+    2: catch t [level:6 next:-1]
+    3: var a
+    4: var this
+  closure vars:
+    0: e parent:loc2 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc8 4: this
+    3:  get_loc8 4: this
+    5:  put_loc0 0: i
+    6:  get_loc8 4: this
+    8:  get_field _destroyed
+   13:  lnot
+   14:  if_false 187
+   19:  get_arg0 0: t
+   20:  push_i8 24
+   22:  gt
+   23:  if_false8 39
+   25:  get_loc8 4: this
+   27:  get_field2 _finishInstall
+   32:  push_1 1
+   33:  lnot
+   34:  call_method 1
+   37:  drop
+   38:  return_undef
+   39:  array_from 0
+   42:  put_loc1 1: s
+   43:  catch 65
+   48:  get_var_ref_check 0: e
+   51:  get_loc8 4: this
+   53:  call1 1
+   54:  dup
+   55:  if_true8 61
+   57:  drop
+   58:  array_from 0
+   61:  put_loc1 1: s
+   62:  drop
+   63:  goto8 75
+   65:  put_loc2 2: t
+   66:  catch 74
+   71:  drop
+   72:  goto8 75
+   74:  throw
+   75:  push_0 0
+   76:  put_loc3 3: a
+   77:  get_loc3 3: a
+   78:  get_loc1 1: s
+   79:  get_length
+   80:  lt
+   81:  if_false8 169
+   83:  get_var String
+   88:  get_loc1 1: s
+   89:  get_loc3 3: a
+   90:  get_array_el
+   91:  dup
+   92:  if_false8 127
+   94:  drop
+   95:  get_loc1 1: s
+   96:  get_loc3 3: a
+   97:  get_array_el
+   98:  get_field appid
+  103:  dup
+  104:  if_true8 127
+  106:  drop
+  107:  get_loc1 1: s
+  108:  get_loc3 3: a
+  109:  get_array_el
+  110:  get_field appId
+  115:  dup
+  116:  if_true8 127
+  118:  drop
+  119:  get_loc1 1: s
+  120:  get_loc3 3: a
+  121:  get_array_el
+  122:  get_field id
+  127:  dup
+  128:  if_true8 132
+  130:  drop
+  131:  push_empty_string
+  132:  call1 1
+  133:  get_field2 trim
+  138:  call_method 0
+  141:  get_loc8 4: this
+  143:  get_field appid
+  148:  strict_eq
+  149:  if_false8 165
+  151:  get_loc8 4: this
+  153:  get_field2 _finishInstall
+  158:  push_0 0
+  159:  lnot
+  160:  call_method 1
+  163:  drop
+  164:  return_undef
+  165:  inc_loc 3: a
+  167:  goto8 77
+  169:  get_loc8 4: this
+  171:  get_var setTimeout
+  176:  fclosure8 0: [bytecode <null>]
+  178:  push_i16 1250
+  181:  call2 2
+  182:  put_field _installTimer
+  187:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: i local:loc0 var
+    1: t local:arg0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: i
+    1:  get_field2 _pollInstallDone
+    6:  get_var_ref1 1: t
+    7:  push_1 1
+    8:  add
+    9:  call_method 1
+   12:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: catch t [level:3 next:-1]
+    1: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field2 _clearTimers
+    8:  call_method 0
+   11:  drop
+   12:  get_loc1 1: this
+   13:  push_i8 100
+   15:  put_field progress
+   20:  get_loc1 1: this
+   21:  get_arg0 0: t
+   22:  put_field installedConfirmed
+   27:  get_loc1 1: this
+   28:  push_atom_value done
+   33:  put_field phase
+   38:  get_loc1 1: this
+   39:  get_arg0 0: t
+   40:  if_false8 56
+   42:  get_loc1 1: this
+   43:  get_field appName
+   48:  push_atom_value " \u00e5\u00b7\u00b2\u00e6\u0088\u0090\u00e5\u008a\u009f\u00e5\u00ae\u0089\u00e8\u00a3\u0085"
+   53:  add
+   54:  goto8 61
+   56:  push_atom_value "\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e6\u008c\u0087\u00e4\u00bb\u00a4\u00e5\u00b7\u00b2\u00e6\u008f\u0090\u00e4\u00ba\u00a4\u00ef\u00bc\u008c\u00e8\u00af\u00b7\u00e5\u009b\u009e\u00e5\u0088\u00b0\u00e6\u00a1\u008c\u00e9\u009d\u00a2\u00e6\u009f\u00a5\u00e7\u009c\u008b"
+   61:  put_field doneText
+   66:  get_loc1 1: this
+   67:  get_field2 _cleanupTmp
+   72:  call_method 0
+   75:  drop
+   76:  catch 140
+   81:  push_atom_value undefined
+   86:  get_var_undef $falcon
+   91:  typeof
+   92:  neq
+   93:  dup
+   94:  if_false8 137
+   96:  drop
+   97:  push_atom_value function
+  102:  get_var $falcon
+  107:  get_field trigger
+  112:  typeof
+  113:  eq
+  114:  dup
+  115:  if_false8 137
+  117:  drop
+  118:  get_var $falcon
+  123:  get_field2 trigger
+  128:  push_atom_value shop_app_installed
+  133:  null
+  134:  call_method 2
+  137:  drop
+  138:  drop
+  139:  return_undef
+  140:  put_loc0 0: t
+  141:  catch 148
+  146:  drop
+  147:  return_undef
+  148:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:3 next:-1]
+    1: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  catch 42
+    7:  get_var $falcon
+   12:  get_field2 navTo
+   17:  push_atom_value "falcon://"
+   22:  get_loc1 1: this
+   23:  get_field appid
+   28:  add
+   29:  push_atom_value "/index"
+   34:  add
+   35:  call_method 1
+   38:  drop
+   39:  drop
+   40:  goto8 52
+   42:  put_loc0 0: t
+   43:  catch 51
+   48:  drop
+   49:  goto8 52
+   51:  throw
+   52:  get_loc1 1: this
+   53:  get_field2 cancelPage
+   58:  call_method 0
+   61:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:3 next:-1]
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field2 _clearTimers
+    8:  call_method 0
+   11:  drop
+   12:  get_loc1 1: this
+   13:  get_field2 _cleanupTmp
+   18:  call_method 0
+   21:  drop
+   22:  catch 120
+   27:  get_loc1 1: this
+   28:  get_field $page
+   33:  if_false8 71
+   35:  push_atom_value function
+   40:  get_loc1 1: this
+   41:  get_field $page
+   46:  get_field finish
+   51:  typeof
+   52:  eq
+   53:  if_false8 71
+   55:  get_loc1 1: this
+   56:  get_field $page
+   61:  get_field2 finish
+   66:  call_method 0
+   69:  goto8 117
+   71:  get_loc1 1: this
+   72:  get_field $router
+   77:  dup
+   78:  if_false8 117
+   80:  drop
+   81:  push_atom_value function
+   86:  get_loc1 1: this
+   87:  get_field $router
+   92:  get_field back
+   97:  typeof
+   98:  eq
+   99:  dup
+  100:  if_false8 117
+  102:  drop
+  103:  get_loc1 1: this
+  104:  get_field $router
+  109:  get_field2 back
+  114:  call_method 0
+  117:  drop
+  118:  drop
+  119:  return_undef
+  120:  put_loc0 0: t
+  121:  catch 128
+  126:  drop
+  127:  return_undef
+  128:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var i
+    2: var e
+    3: var this
+  stack_size: 35
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  set_loc0 0: t
+    4:  get_field $createElement
+    9:  put_loc1 1: i
+   10:  get_loc0 0: t
+   11:  get_field _self
+   16:  get_field _c
+   21:  dup
+   22:  if_true8 26
+   24:  drop
+   25:  get_loc1 1: i
+   26:  set_loc2 2: e
+   27:  push_atom_value div
+   32:  object
+   33:  push_atom_value app
+   38:  array_from 1
+   41:  define_field staticClass
+   46:  get_loc2 2: e
+   47:  push_atom_value div
+   52:  object
+   53:  push_atom_value stage
+   58:  array_from 1
+   61:  define_field staticClass
+   66:  get_loc2 2: e
+   67:  push_atom_value div
+   72:  object
+   73:  push_atom_value head
+   78:  array_from 1
+   81:  define_field staticClass
+   86:  get_loc0 0: t
+   87:  get_field iconUrl
+   92:  if_false8 144
+   94:  get_loc2 2: e
+   95:  push_atom_value image
+  100:  object
+  101:  push_atom_value "app-icon"
+  106:  array_from 1
+  109:  define_field staticClass
+  114:  object
+  115:  get_loc0 0: t
+  116:  get_field iconUrl
+  121:  define_field src
+  126:  push_atom_value cover
+  131:  define_field resize
+  136:  define_field attrs
+  141:  call2 2
+  142:  goto8 221
+  144:  get_loc2 2: e
+  145:  push_atom_value div
+  150:  object
+  151:  push_atom_value "app-icon"
+  156:  push_atom_value "app-icon-fb"
+  161:  array_from 2
+  164:  define_field staticClass
+  169:  get_loc2 2: e
+  170:  push_atom_value text
+  175:  object
+  176:  push_atom_value "app-icon-fb-txt"
+  181:  array_from 1
+  184:  define_field staticClass
+  189:  get_loc0 0: t
+  190:  get_field2 _v
+  195:  get_loc0 0: t
+  196:  get_field2 _s
+  201:  get_loc0 0: t
+  202:  get_field fallbackChar
+  207:  call_method 1
+  210:  call_method 1
+  213:  array_from 1
+  216:  call3 3
+  217:  array_from 1
+  220:  call3 3
+  221:  get_loc2 2: e
+  222:  push_atom_value div
+  227:  object
+  228:  push_atom_value "head-txt"
+  233:  array_from 1
+  236:  define_field staticClass
+  241:  get_loc2 2: e
+  242:  push_atom_value text
+  247:  object
+  248:  push_atom_value "app-name"
+  253:  array_from 1
+  256:  define_field staticClass
+  261:  get_loc0 0: t
+  262:  get_field2 _v
+  267:  get_loc0 0: t
+  268:  get_field2 _s
+  273:  get_loc0 0: t
+  274:  get_field appName
+  279:  dup
+  280:  if_true8 298
+  282:  drop
+  283:  get_loc0 0: t
+  284:  get_field fileName
+  289:  dup
+  290:  if_true8 298
+  292:  drop
+  293:  push_atom_value "\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u008c\u0085"
+  298:  call_method 1
+  301:  call_method 1
+  304:  array_from 1
+  307:  call3 3
+  308:  get_loc2 2: e
+  309:  push_atom_value text
+  314:  object
+  315:  push_atom_value "app-sub"
+  320:  array_from 1
+  323:  define_field staticClass
+  328:  get_loc0 0: t
+  329:  get_field2 _v
+  334:  get_loc0 0: t
+  335:  get_field2 _s
+  340:  get_loc0 0: t
+  341:  get_field version
+  346:  if_false8 362
+  348:  push_atom_value "\u00e7\u0089\u0088\u00e6\u009c\u00ac "
+  353:  get_loc0 0: t
+  354:  get_field version
+  359:  add
+  360:  goto8 367
+  362:  push_atom_value "\u00e7\u0089\u0088\u00e6\u009c\u00ac\u00e6\u009c\u00aa\u00e7\u009f\u00a5"
+  367:  call_method 1
+  370:  get_loc0 0: t
+  371:  get_field2 _s
+  376:  get_loc0 0: t
+  377:  get_field sizeText
+  382:  if_false8 398
+  384:  push_atom_value " \u00c2\u00b7 "
+  389:  get_loc0 0: t
+  390:  get_field sizeText
+  395:  add
+  396:  goto8 399
+  398:  push_empty_string
+  399:  call_method 1
+  402:  add
+  403:  call_method 1
+  406:  array_from 1
+  409:  call3 3
+  410:  array_from 2
+  413:  call3 3
+  414:  array_from 2
+  417:  call3 3
+  418:  get_loc2 2: e
+  419:  push_atom_value div
+  424:  object
+  425:  push_atom_value block
+  430:  array_from 1
+  433:  define_field staticClass
+  438:  push_atom_value checking
+  443:  get_loc0 0: t
+  444:  get_field phase
+  449:  strict_eq
+  450:  if_false 657
+  455:  get_loc2 2: e
+  456:  push_atom_value div
+  461:  object
+  462:  push_atom_value "block-inner"
+  467:  array_from 1
+  470:  define_field staticClass
+  475:  get_loc2 2: e
+  476:  push_atom_value div
+  481:  object
+  482:  push_atom_value spinner
+  487:  array_from 1
+  490:  define_field staticClass
+  495:  call2 2
+  496:  get_loc2 2: e
+  497:  push_atom_value text
+  502:  object
+  503:  push_atom_value "block-title"
+  508:  array_from 1
+  511:  define_field staticClass
+  516:  get_loc0 0: t
+  517:  get_field2 _v
+  522:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e6\u00a3\u0080\u00e6\u009f\u00a5\u00e5\u00ba\u0094\u00e7\u0094\u00a8"
+  527:  call_method 1
+  530:  array_from 1
+  533:  call3 3
+  534:  get_loc2 2: e
+  535:  push_atom_value div
+  540:  object
+  541:  push_atom_value "prog-track"
+  546:  array_from 1
+  549:  define_field staticClass
+  554:  get_loc2 2: e
+  555:  push_atom_value div
+  560:  object
+  561:  push_atom_value "prog-bar"
+  566:  array_from 1
+  569:  define_field staticClass
+  574:  object
+  575:  get_loc0 0: t
+  576:  get_field progress
+  581:  push_atom_value "%"
+  586:  add
+  587:  define_field width
+  592:  define_field style
+  597:  call2 2
+  598:  array_from 1
+  601:  call3 3
+  602:  get_loc2 2: e
+  603:  push_atom_value text
+  608:  object
+  609:  push_atom_value "block-sub"
+  614:  array_from 1
+  617:  define_field staticClass
+  622:  get_loc0 0: t
+  623:  get_field2 _v
+  628:  get_loc0 0: t
+  629:  get_field2 _s
+  634:  get_loc0 0: t
+  635:  get_field stepText
+  640:  call_method 1
+  643:  call_method 1
+  646:  array_from 1
+  649:  call3 3
+  650:  array_from 4
+  653:  call3 3
+  654:  goto16 2158
+  657:  push_atom_value ready
+  662:  get_loc0 0: t
+  663:  get_field phase
+  668:  strict_eq
+  669:  if_false 1711
+  674:  get_loc2 2: e
+  675:  push_atom_value div
+  680:  object
+  681:  push_atom_value "block-inner"
+  686:  array_from 1
+  689:  define_field staticClass
+  694:  get_loc2 2: e
+  695:  push_atom_value div
+  700:  object
+  701:  push_atom_value verdict
+  706:  get_loc0 0: t
+  707:  get_field risk
+  712:  if_false8 721
+  714:  push_atom_value "verdict-warn"
+  719:  goto8 726
+  721:  push_atom_value "verdict-ok"
+  726:  array_from 2
+  729:  define_field class
+  734:  get_loc2 2: e
+  735:  push_atom_value text
+  740:  object
+  741:  push_atom_value "verdict-txt"
+  746:  get_loc0 0: t
+  747:  get_field risk
+  752:  if_false8 761
+  754:  push_atom_value "verdict-txt-warn"
+  759:  goto8 766
+  761:  push_atom_value "verdict-txt-ok"
+  766:  array_from 2
+  769:  define_field class
+  774:  get_loc0 0: t
+  775:  get_field2 _v
+  780:  get_loc0 0: t
+  781:  get_field2 _s
+  786:  get_loc0 0: t
+  787:  get_field risk
+  792:  if_false8 801
+  794:  push_atom_value "\u00e6\u00a3\u0080\u00e6\u00b5\u008b\u00e5\u0088\u00b0\u00e5\u008f\u00af\u00e7\u0096\u0091\u00e7\u0089\u00b9\u00e5\u00be\u0081"
+  799:  goto8 806
+  801:  push_atom_value "\u00e6\u009c\u00aa\u00e6\u00a3\u0080\u00e6\u00b5\u008b\u00e5\u0088\u00b0\u00e9\u00a3\u008e\u00e9\u0099\u00a9"
+  806:  call_method 1
+  809:  call_method 1
+  812:  array_from 1
+  815:  call3 3
+  816:  array_from 1
+  819:  call3 3
+  820:  get_loc2 2: e
+  821:  push_atom_value div
+  826:  object
+  827:  push_atom_value "info-card"
+  832:  array_from 1
+  835:  define_field staticClass
+  840:  get_loc2 2: e
+  841:  push_atom_value div
+  846:  object
+  847:  push_atom_value "info-col"
+  852:  array_from 1
+  855:  define_field staticClass
+  860:  get_loc2 2: e
+  861:  push_atom_value div
+  866:  object
+  867:  push_atom_value "info-row"
+  872:  array_from 1
+  875:  define_field staticClass
+  880:  get_loc2 2: e
+  881:  push_atom_value text
+  886:  object
+  887:  push_atom_value "info-label"
+  892:  array_from 1
+  895:  define_field staticClass
+  900:  get_loc0 0: t
+  901:  get_field2 _v
+  906:  push_atom_value "\u00e5\u00ba\u0094\u00e7\u0094\u00a8\u00e5\u0090\u008d\u00e7\u00a7\u00b0"
+  911:  call_method 1
+  914:  array_from 1
+  917:  call3 3
+  918:  get_loc2 2: e
+  919:  push_atom_value text
+  924:  object
+  925:  push_atom_value "info-value"
+  930:  array_from 1
+  933:  define_field staticClass
+  938:  get_loc0 0: t
+  939:  get_field2 _v
+  944:  get_loc0 0: t
+  945:  get_field2 _s
+  950:  get_loc0 0: t
+  951:  get_field appName
+  956:  dup
+  957:  if_true8 966
+  959:  drop
+  960:  get_loc0 0: t
+  961:  get_field fileName
+  966:  call_method 1
+  969:  call_method 1
+  972:  array_from 1
+  975:  call3 3
+  976:  array_from 2
+  979:  call3 3
+  980:  get_loc2 2: e
+  981:  push_atom_value div
+  986:  object
+  987:  push_atom_value "info-row"
+  992:  array_from 1
+  995:  define_field staticClass
+ 1000:  get_loc2 2: e
+ 1001:  push_atom_value text
+ 1006:  object
+ 1007:  push_atom_value "info-label"
+ 1012:  array_from 1
+ 1015:  define_field staticClass
+ 1020:  get_loc0 0: t
+ 1021:  get_field2 _v
+ 1026:  push_atom_value "\u00e7\u0089\u0088\u00e6\u009c\u00ac"
+ 1031:  call_method 1
+ 1034:  array_from 1
+ 1037:  call3 3
+ 1038:  get_loc2 2: e
+ 1039:  push_atom_value text
+ 1044:  object
+ 1045:  push_atom_value "info-value"
+ 1050:  array_from 1
+ 1053:  define_field staticClass
+ 1058:  get_loc0 0: t
+ 1059:  get_field2 _v
+ 1064:  get_loc0 0: t
+ 1065:  get_field2 _s
+ 1070:  get_loc0 0: t
+ 1071:  get_field version
+ 1076:  dup
+ 1077:  if_true8 1085
+ 1079:  drop
+ 1080:  push_atom_value "\u00e6\u009c\u00aa\u00e7\u009f\u00a5"
+ 1085:  call_method 1
+ 1088:  call_method 1
+ 1091:  array_from 1
+ 1094:  call3 3
+ 1095:  array_from 2
+ 1098:  call3 3
+ 1099:  get_loc2 2: e
+ 1100:  push_atom_value div
+ 1105:  object
+ 1106:  push_atom_value "info-row"
+ 1111:  array_from 1
+ 1114:  define_field staticClass
+ 1119:  get_loc2 2: e
+ 1120:  push_atom_value text
+ 1125:  object
+ 1126:  push_atom_value "info-label"
+ 1131:  array_from 1
+ 1134:  define_field staticClass
+ 1139:  get_loc0 0: t
+ 1140:  get_field2 _v
+ 1145:  push_atom_value "\u00e5\u00a4\u00a7\u00e5\u00b0\u008f"
+ 1150:  call_method 1
+ 1153:  array_from 1
+ 1156:  call3 3
+ 1157:  get_loc2 2: e
+ 1158:  push_atom_value text
+ 1163:  object
+ 1164:  push_atom_value "info-value"
+ 1169:  array_from 1
+ 1172:  define_field staticClass
+ 1177:  get_loc0 0: t
+ 1178:  get_field2 _v
+ 1183:  get_loc0 0: t
+ 1184:  get_field2 _s
+ 1189:  get_loc0 0: t
+ 1190:  get_field sizeText
+ 1195:  dup
+ 1196:  if_true8 1204
+ 1198:  drop
+ 1199:  push_atom_value "\u00e6\u009c\u00aa\u00e7\u009f\u00a5"
+ 1204:  call_method 1
+ 1207:  call_method 1
+ 1210:  array_from 1
+ 1213:  call3 3
+ 1214:  array_from 2
+ 1217:  call3 3
+ 1218:  array_from 3
+ 1221:  call3 3
+ 1222:  get_loc2 2: e
+ 1223:  push_atom_value div
+ 1228:  object
+ 1229:  push_atom_value "info-col"
+ 1234:  array_from 1
+ 1237:  define_field staticClass
+ 1242:  get_loc2 2: e
+ 1243:  push_atom_value div
+ 1248:  object
+ 1249:  push_atom_value "info-row"
+ 1254:  array_from 1
+ 1257:  define_field staticClass
+ 1262:  get_loc2 2: e
+ 1263:  push_atom_value text
+ 1268:  object
+ 1269:  push_atom_value "info-label"
+ 1274:  array_from 1
+ 1277:  define_field staticClass
+ 1282:  get_loc0 0: t
+ 1283:  get_field2 _v
+ 1288:  push_atom_value "\u00e5\u008c\u0085\u00e5\u0090\u008d"
+ 1293:  call_method 1
+ 1296:  array_from 1
+ 1299:  call3 3
+ 1300:  get_loc2 2: e
+ 1301:  push_atom_value text
+ 1306:  object
+ 1307:  push_atom_value "info-value"
+ 1312:  array_from 1
+ 1315:  define_field staticClass
+ 1320:  get_loc0 0: t
+ 1321:  get_field2 _v
+ 1326:  get_loc0 0: t
+ 1327:  get_field2 _s
+ 1332:  get_loc0 0: t
+ 1333:  get_field appid
+ 1338:  dup
+ 1339:  if_true8 1347
+ 1341:  drop
+ 1342:  push_atom_value "\u00e6\u009c\u00aa\u00e7\u009f\u00a5"
+ 1347:  call_method 1
+ 1350:  call_method 1
+ 1353:  array_from 1
+ 1356:  call3 3
+ 1357:  array_from 2
+ 1360:  call3 3
+ 1361:  get_loc2 2: e
+ 1362:  push_atom_value div
+ 1367:  object
+ 1368:  push_atom_value "info-row"
+ 1373:  array_from 1
+ 1376:  define_field staticClass
+ 1381:  get_loc2 2: e
+ 1382:  push_atom_value text
+ 1387:  object
+ 1388:  push_atom_value "info-label"
+ 1393:  array_from 1
+ 1396:  define_field staticClass
+ 1401:  get_loc0 0: t
+ 1402:  get_field2 _v
+ 1407:  push_atom_value "\u00e5\u00ae\u008c\u00e6\u0095\u00b4\u00e6\u0080\u00a7\u00e6\u00a0\u00a1\u00e9\u00aa\u008c"
+ 1412:  call_method 1
+ 1415:  array_from 1
+ 1418:  call3 3
+ 1419:  get_loc2 2: e
+ 1420:  push_atom_value text
+ 1425:  object
+ 1426:  push_atom_value "info-value"
+ 1431:  array_from 1
+ 1434:  define_field staticClass
+ 1439:  get_loc0 0: t
+ 1440:  get_field2 _v
+ 1445:  get_loc0 0: t
+ 1446:  get_field2 _s
+ 1451:  get_loc0 0: t
+ 1452:  get_field integrityText
+ 1457:  call_method 1
+ 1460:  call_method 1
+ 1463:  array_from 1
+ 1466:  call3 3
+ 1467:  array_from 2
+ 1470:  call3 3
+ 1471:  get_loc0 0: t
+ 1472:  get_field risk
+ 1477:  if_false8 1596
+ 1479:  get_loc2 2: e
+ 1480:  push_atom_value div
+ 1485:  object
+ 1486:  push_atom_value "info-row"
+ 1491:  array_from 1
+ 1494:  define_field staticClass
+ 1499:  get_loc2 2: e
+ 1500:  push_atom_value text
+ 1505:  object
+ 1506:  push_atom_value "info-label"
+ 1511:  array_from 1
+ 1514:  define_field staticClass
+ 1519:  get_loc0 0: t
+ 1520:  get_field2 _v
+ 1525:  push_atom_value "\u00e9\u00a3\u008e\u00e9\u0099\u00a9\u00e9\u00a1\u00b9"
+ 1530:  call_method 1
+ 1533:  array_from 1
+ 1536:  call3 3
+ 1537:  get_loc2 2: e
+ 1538:  push_atom_value text
+ 1543:  object
+ 1544:  push_atom_value "info-value"
+ 1549:  push_atom_value "info-value-warn"
+ 1554:  array_from 2
+ 1557:  define_field staticClass
+ 1562:  get_loc0 0: t
+ 1563:  get_field2 _v
+ 1568:  get_loc0 0: t
+ 1569:  get_field2 _s
+ 1574:  get_loc0 0: t
+ 1575:  get_field riskText
+ 1580:  call_method 1
+ 1583:  call_method 1
+ 1586:  array_from 1
+ 1589:  call3 3
+ 1590:  array_from 2
+ 1593:  call3 3
+ 1594:  goto8 1696
+ 1596:  get_loc2 2: e
+ 1597:  push_atom_value div
+ 1602:  object
+ 1603:  push_atom_value "info-row"
+ 1608:  array_from 1
+ 1611:  define_field staticClass
+ 1616:  get_loc2 2: e
+ 1617:  push_atom_value text
+ 1622:  object
+ 1623:  push_atom_value "info-label"
+ 1628:  array_from 1
+ 1631:  define_field staticClass
+ 1636:  get_loc0 0: t
+ 1637:  get_field2 _v
+ 1642:  push_atom_value "\u00e9\u00a3\u008e\u00e9\u0099\u00a9\u00e6\u0089\u00ab\u00e6\u008f\u008f"
+ 1647:  call_method 1
+ 1650:  array_from 1
+ 1653:  call3 3
+ 1654:  get_loc2 2: e
+ 1655:  push_atom_value text
+ 1660:  object
+ 1661:  push_atom_value "info-value"
+ 1666:  array_from 1
+ 1669:  define_field staticClass
+ 1674:  get_loc0 0: t
+ 1675:  get_field2 _v
+ 1680:  push_atom_value "\u00e6\u009c\u00aa\u00e5\u008f\u0091\u00e7\u008e\u00b0\u00e9\u00a3\u008e\u00e9\u0099\u00a9"
+ 1685:  call_method 1
+ 1688:  array_from 1
+ 1691:  call3 3
+ 1692:  array_from 2
+ 1695:  call3 3
+ 1696:  array_from 3
+ 1699:  call3 3
+ 1700:  array_from 2
+ 1703:  call3 3
+ 1704:  array_from 2
+ 1707:  call3 3
+ 1708:  goto16 2158
+ 1711:  push_atom_value installing
+ 1716:  get_loc0 0: t
+ 1717:  get_field phase
+ 1722:  strict_eq
+ 1723:  if_false 1944
+ 1728:  get_loc2 2: e
+ 1729:  push_atom_value div
+ 1734:  object
+ 1735:  push_atom_value "block-inner"
+ 1740:  array_from 1
+ 1743:  define_field staticClass
+ 1748:  get_loc2 2: e
+ 1749:  push_atom_value div
+ 1754:  object
+ 1755:  push_atom_value spinner
+ 1760:  array_from 1
+ 1763:  define_field staticClass
+ 1768:  call2 2
+ 1769:  get_loc2 2: e
+ 1770:  push_atom_value text
+ 1775:  object
+ 1776:  push_atom_value "block-title"
+ 1781:  array_from 1
+ 1784:  define_field staticClass
+ 1789:  get_loc0 0: t
+ 1790:  get_field2 _v
+ 1795:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e5\u00ae\u0089\u00e8\u00a3\u0085"
+ 1800:  call_method 1
+ 1803:  array_from 1
+ 1806:  call3 3
+ 1807:  get_loc2 2: e
+ 1808:  push_atom_value div
+ 1813:  object
+ 1814:  push_atom_value "prog-track"
+ 1819:  array_from 1
+ 1822:  define_field staticClass
+ 1827:  get_loc2 2: e
+ 1828:  push_atom_value div
+ 1833:  object
+ 1834:  push_atom_value "prog-bar"
+ 1839:  array_from 1
+ 1842:  define_field staticClass
+ 1847:  object
+ 1848:  get_loc0 0: t
+ 1849:  get_field progress
+ 1854:  push_atom_value "%"
+ 1859:  add
+ 1860:  define_field width
+ 1865:  define_field style
+ 1870:  call2 2
+ 1871:  array_from 1
+ 1874:  call3 3
+ 1875:  get_loc2 2: e
+ 1876:  push_atom_value text
+ 1881:  object
+ 1882:  push_atom_value "block-sub"
+ 1887:  array_from 1
+ 1890:  define_field staticClass
+ 1895:  get_loc0 0: t
+ 1896:  get_field2 _v
+ 1901:  get_loc0 0: t
+ 1902:  get_field2 _s
+ 1907:  get_loc0 0: t
+ 1908:  get_field isMainApp
+ 1913:  if_false8 1922
+ 1915:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e6\u009b\u00b4\u00e6\u0096\u00b0\u00e4\u00b8\u00bb\u00e5\u00ba\u0094\u00e7\u0094\u00a8\u00ef\u00bc\u008c\u00e7\u00ac\u0094\u00e5\u00b0\u0086\u00e8\u0087\u00aa\u00e5\u008a\u00a8\u00e9\u0087\u008d\u00e5\u0090\u00af\u00ef\u00bc\u008c\u00e8\u00af\u00b7\u00e5\u008b\u00bf\u00e5\u0085\u00b3\u00e6\u009c\u00ba"
+ 1920:  goto8 1927
+ 1922:  push_atom_value "\u00e8\u00af\u00b7\u00e7\u00a8\u008d\u00e5\u0080\u0099\u00ef\u00bc\u008c\u00e4\u00b8\u008d\u00e8\u00a6\u0081\u00e9\u0080\u0080\u00e5\u0087\u00ba\u00e6\u00ad\u00a4\u00e9\u00a1\u00b5\u00e9\u009d\u00a2"
+ 1927:  call_method 1
+ 1930:  call_method 1
+ 1933:  array_from 1
+ 1936:  call3 3
+ 1937:  array_from 4
+ 1940:  call3 3
+ 1941:  goto16 2158
+ 1944:  push_atom_value done
+ 1949:  get_loc0 0: t
+ 1950:  get_field phase
+ 1955:  strict_eq
+ 1956:  if_false8 2042
+ 1958:  get_loc2 2: e
+ 1959:  push_atom_value div
+ 1964:  object
+ 1965:  push_atom_value "block-inner"
+ 1970:  array_from 1
+ 1973:  define_field staticClass
+ 1978:  get_loc0 0: t
+ 1979:  get_field2 _m
+ 1984:  push_0 0
+ 1985:  call_method 1
+ 1988:  get_loc2 2: e
+ 1989:  push_atom_value text
+ 1994:  object
+ 1995:  push_atom_value hint
+ 2000:  array_from 1
+ 2003:  define_field staticClass
+ 2008:  get_loc0 0: t
+ 2009:  get_field2 _v
+ 2014:  get_loc0 0: t
+ 2015:  get_field2 _s
+ 2020:  get_loc0 0: t
+ 2021:  get_field doneText
+ 2026:  call_method 1
+ 2029:  call_method 1
+ 2032:  array_from 1
+ 2035:  call3 3
+ 2036:  array_from 2
+ 2039:  call3 3
+ 2040:  goto8 2158
+ 2042:  push_atom_value error
+ 2047:  get_loc0 0: t
+ 2048:  get_field phase
+ 2053:  strict_eq
+ 2054:  if_false8 2149
+ 2056:  get_loc2 2: e
+ 2057:  push_atom_value div
+ 2062:  object
+ 2063:  push_atom_value "block-inner"
+ 2068:  array_from 1
+ 2071:  define_field staticClass
+ 2076:  get_loc0 0: t
+ 2077:  get_field2 _m
+ 2082:  push_1 1
+ 2083:  call_method 1
+ 2086:  get_loc2 2: e
+ 2087:  push_atom_value text
+ 2092:  object
+ 2093:  push_atom_value "err-text"
+ 2098:  array_from 1
+ 2101:  define_field staticClass
+ 2106:  get_loc0 0: t
+ 2107:  get_field2 _v
+ 2112:  get_loc0 0: t
+ 2113:  get_field2 _s
+ 2118:  get_loc0 0: t
+ 2119:  get_field errorText
+ 2124:  dup
+ 2125:  if_true8 2133
+ 2127:  drop
+ 2128:  push_atom_value "\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u008c\u0085\u00e6\u0097\u00a0\u00e6\u0095\u0088\u00e6\u0088\u0096\u00e5\u00b7\u00b2\u00e6\u008d\u009f\u00e5\u009d\u008f"
+ 2133:  call_method 1
+ 2136:  call_method 1
+ 2139:  array_from 1
+ 2142:  call3 3
+ 2143:  array_from 2
+ 2146:  call3 3
+ 2147:  goto8 2158
+ 2149:  get_loc0 0: t
+ 2150:  get_field2 _e
+ 2155:  call_method 0
+ 2158:  push_atom_value ready
+ 2163:  get_loc0 0: t
+ 2164:  get_field phase
+ 2169:  strict_eq
+ 2170:  if_false8 2217
+ 2172:  get_loc2 2: e
+ 2173:  push_atom_value text
+ 2178:  object
+ 2179:  push_atom_value hint
+ 2184:  push_atom_value "hint-foot"
+ 2189:  array_from 2
+ 2192:  define_field staticClass
+ 2197:  get_loc0 0: t
+ 2198:  get_field2 _v
+ 2203:  push_atom_value "\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u008c\u0085\u00e6\u009d\u00a5\u00e8\u0087\u00aa\u00e6\u009c\u00ac\u00e5\u009c\u00b0\u00e6\u0096\u0087\u00e4\u00bb\u00b6\u00ef\u00bc\u008c\u00e8\u00af\u00b7\u00e7\u00a1\u00ae\u00e8\u00ae\u00a4\u00e6\u009d\u00a5\u00e6\u00ba\u0090\u00e5\u008f\u00af\u00e9\u009d\u00a0\u00e5\u0090\u008e\u00e5\u0086\u008d\u00e7\u00bb\u00a7"
+ 2208:  call_method 1
+ 2211:  array_from 1
+ 2214:  call3 3
+ 2215:  goto8 2226
+ 2217:  get_loc0 0: t
+ 2218:  get_field2 _e
+ 2223:  call_method 0
+ 2226:  array_from 2
+ 2229:  call3 3
+ 2230:  array_from 2
+ 2233:  call3 3
+ 2234:  push_atom_value ready
+ 2239:  get_loc0 0: t
+ 2240:  get_field phase
+ 2245:  strict_eq
+ 2246:  dup
+ 2247:  if_true8 2278
+ 2249:  drop
+ 2250:  push_atom_value error
+ 2255:  get_loc0 0: t
+ 2256:  get_field phase
+ 2261:  strict_eq
+ 2262:  dup
+ 2263:  if_true8 2278
+ 2265:  drop
+ 2266:  push_atom_value done
+ 2271:  get_loc0 0: t
+ 2272:  get_field phase
+ 2277:  strict_eq
+ 2278:  if_false 2647
+ 2283:  get_loc2 2: e
+ 2284:  push_atom_value div
+ 2289:  object
+ 2290:  push_atom_value foot
+ 2295:  array_from 1
+ 2298:  define_field staticClass
+ 2303:  get_loc2 2: e
+ 2304:  push_atom_value div
+ 2309:  object
+ 2310:  push_atom_value "foot-spacer"
+ 2315:  array_from 1
+ 2318:  define_field staticClass
+ 2323:  call2 2
+ 2324:  get_loc2 2: e
+ 2325:  push_atom_value div
+ 2330:  object
+ 2331:  push_atom_value "foot-btn"
+ 2336:  array_from 1
+ 2339:  define_field staticClass
+ 2344:  object
+ 2345:  get_loc0 0: t
+ 2346:  get_field cancelPage
+ 2351:  define_field click
+ 2356:  define_field on
+ 2361:  get_loc2 2: e
+ 2362:  push_atom_value text
+ 2367:  object
+ 2368:  push_atom_value "foot-btn-txt"
+ 2373:  array_from 1
+ 2376:  define_field staticClass
+ 2381:  get_loc0 0: t
+ 2382:  get_field2 _v
+ 2387:  get_loc0 0: t
+ 2388:  get_field2 _s
+ 2393:  push_atom_value ready
+ 2398:  get_loc0 0: t
+ 2399:  get_field phase
+ 2404:  strict_eq
+ 2405:  if_false8 2414
+ 2407:  push_atom_value "\u00e5\u008f\u0096\u00e6\u00b6\u0088"
+ 2412:  goto8 2419
+ 2414:  push_atom_value "\u00e5\u0085\u00b3\u00e9\u0097\u00ad"
+ 2419:  call_method 1
+ 2422:  call_method 1
+ 2425:  array_from 1
+ 2428:  call3 3
+ 2429:  array_from 1
+ 2432:  call3 3
+ 2433:  push_atom_value ready
+ 2438:  get_loc0 0: t
+ 2439:  get_field phase
+ 2444:  strict_eq
+ 2445:  if_false8 2528
+ 2447:  get_loc2 2: e
+ 2448:  push_atom_value div
+ 2453:  object
+ 2454:  push_atom_value "foot-btn-fill"
+ 2459:  array_from 1
+ 2462:  define_field staticClass
+ 2467:  object
+ 2468:  get_loc0 0: t
+ 2469:  get_field confirmInstall
+ 2474:  define_field click
+ 2479:  define_field on
+ 2484:  get_loc2 2: e
+ 2485:  push_atom_value text
+ 2490:  object
+ 2491:  push_atom_value "foot-btn-fill-txt"
+ 2496:  array_from 1
+ 2499:  define_field staticClass
+ 2504:  get_loc0 0: t
+ 2505:  get_field2 _v
+ 2510:  push_atom_value "\u00e5\u00ae\u0089\u00e8\u00a3\u0085"
+ 2515:  call_method 1
+ 2518:  array_from 1
+ 2521:  call3 3
+ 2522:  array_from 1
+ 2525:  call3 3
+ 2526:  goto8 2537
+ 2528:  get_loc0 0: t
+ 2529:  get_field2 _e
+ 2534:  call_method 0
+ 2537:  push_atom_value done
+ 2542:  get_loc0 0: t
+ 2543:  get_field phase
+ 2548:  strict_eq
+ 2549:  if_false8 2632
+ 2551:  get_loc2 2: e
+ 2552:  push_atom_value div
+ 2557:  object
+ 2558:  push_atom_value "foot-btn-fill"
+ 2563:  array_from 1
+ 2566:  define_field staticClass
+ 2571:  object
+ 2572:  get_loc0 0: t
+ 2573:  get_field openInstalledApp
+ 2578:  define_field click
+ 2583:  define_field on
+ 2588:  get_loc2 2: e
+ 2589:  push_atom_value text
+ 2594:  object
+ 2595:  push_atom_value "foot-btn-fill-txt"
+ 2600:  array_from 1
+ 2603:  define_field staticClass
+ 2608:  get_loc0 0: t
+ 2609:  get_field2 _v
+ 2614:  push_atom_value "\u00e6\u0089\u0093\u00e5\u00bc\u0080"
+ 2619:  call_method 1
+ 2622:  array_from 1
+ 2625:  call3 3
+ 2626:  array_from 1
+ 2629:  call3 3
+ 2630:  goto8 2641
+ 2632:  get_loc0 0: t
+ 2633:  get_field2 _e
+ 2638:  call_method 0
+ 2641:  array_from 4
+ 2644:  call3 3
+ 2645:  goto8 2656
+ 2647:  get_loc0 0: t
+ 2648:  get_field2 _e
+ 2653:  call_method 0
+ 2656:  array_from 2
+ 2659:  tail_call 3
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var i
+    2: var e
+    3: var this
+  stack_size: 9
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  set_loc0 0: t
+    4:  get_field $createElement
+    9:  put_loc1 1: i
+   10:  get_loc0 0: t
+   11:  get_field _self
+   16:  get_field _c
+   21:  dup
+   22:  if_true8 26
+   24:  drop
+   25:  get_loc1 1: i
+   26:  set_loc2 2: e
+   27:  push_atom_value div
+   32:  object
+   33:  push_atom_value verdict
+   38:  push_atom_value "verdict-ok"
+   43:  array_from 2
+   46:  define_field staticClass
+   51:  get_loc2 2: e
+   52:  push_atom_value text
+   57:  object
+   58:  push_atom_value "verdict-txt"
+   63:  push_atom_value "verdict-txt-ok"
+   68:  array_from 2
+   71:  define_field staticClass
+   76:  get_loc0 0: t
+   77:  get_field2 _v
+   82:  push_atom_value "\u00e5\u00b7\u00b2\u00e5\u00ae\u0089\u00e8\u00a3\u0085"
+   87:  call_method 1
+   90:  array_from 1
+   93:  call3 3
+   94:  array_from 1
+   97:  tail_call 3
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_amrinstall.js:1 source_len=0 */
+tools_amrinstall.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var i
+    2: var e
+    3: var this
+  stack_size: 9
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  set_loc0 0: t
+    4:  get_field $createElement
+    9:  put_loc1 1: i
+   10:  get_loc0 0: t
+   11:  get_field _self
+   16:  get_field _c
+   21:  dup
+   22:  if_true8 26
+   24:  drop
+   25:  get_loc1 1: i
+   26:  set_loc2 2: e
+   27:  push_atom_value div
+   32:  object
+   33:  push_atom_value verdict
+   38:  push_atom_value "verdict-bad"
+   43:  array_from 2
+   46:  define_field staticClass
+   51:  get_loc2 2: e
+   52:  push_atom_value text
+   57:  object
+   58:  push_atom_value "verdict-txt"
+   63:  push_atom_value "verdict-txt-bad"
+   68:  array_from 2
+   71:  define_field staticClass
+   76:  get_loc0 0: t
+   77:  get_field2 _v
+   82:  push_atom_value "\u00e6\u0097\u00a0\u00e6\u00b3\u0095\u00e5\u00ae\u0089\u00e8\u00a3\u0085"
+   87:  call_method 1
+   90:  array_from 1
+   93:  call3 3
+   94:  array_from 1
+   97:  tail_call 3
+

@@ -1,0 +1,316 @@
+    0	apps_webui.js
+    1	bridge
+    2	t
+    3	e
+    4	s
+    5	o
+    6	i
+    7	l
+    8	r
+    9	a
+   10	n
+   11	h
+   12	https://sq.loliyc.com/a/posc/a.tar
+   13	/userdisk/a.tar
+   14	/userdisk/chroot/rootfs
+   15	/debian-12-arm64
+   16	/opt/wpe-hostabi/lib
+   17	path
+   18	d
+   19	kind
+   20	WPE lib 目录
+   21	label
+   22	/opt/wpe-hostabi/lib/libWPEWebKit-1.1.so.0
+   23	f
+   24	WebKit 主库
+   25	/opt/wpe-hostabi/libexec/wpe-webkit-1.1/WPEWebProcess
+   26	WPEWebProcess
+   27	/opt/wpe-hostabi/libexec/wpe-webkit-1.1/WPENetworkProcess
+   28	WPENetworkProcess
+   29	/opt/wpe-hostabi/lib/wpe-webkit-1.1/injected-bundle/libWPEInjectedBundle.so
+   30	InjectedBundle
+   31	/opt/wpe-hostabi/etc/fonts/fonts.conf
+   32	fonts.conf
+   33	/opt/wpe-hostabi/share/glvnd/egl_vendor.d/50_mesa_hostabi.json
+   34	EGL vendor
+   35	/etc/ssl/certs/ca-certificates.crt
+   36	CA 证书
+   37	/usr/lib/gstreamer-1.0
+   38	宿主 GStreamer 插件目录缺失，网页音视频可能异常
+   39	/usr/libexec/gstreamer-1.0/gst-plugin-scanner
+   40	宿主 gst-plugin-scanner 缺失，网页音视频可能异常
+   41	apps_webui
+   42	data
+   43	mounted
+   44	beforeDestroy
+   45	toast
+   46	log
+   47	initBridge
+   48	shellOutput
+   49	escapeShellDoubleQuoted
+   50	execShell
+   51	cleanupBrowserProcesses
+   52	pathExists
+   53	collectHostWarnings
+   54	checkBundle
+   55	hasDownloadedArchive
+   56	startBootstrap
+   57	downloadArchive
+   58	startDownloadPoll
+   59	stopDownloadPoll
+   60	targetDirExists
+   61	installArchive
+   62	reinstall
+   63	forceCloseBrowser
+   64	openBrowser
+   65	methods
+   66	_withStripped
+   67	render
+   68	staticRenderFns
+   69	_compiled
+   70	data-v-7df2c30f
+   71	_scopeId
+   72	themes
+   73	assign
+   74	100%
+   75	width
+   76	height
+   77	#0b1220
+   78	backgroundColor
+   79	page-scroll
+   80	minHeight
+   81	center
+   82	justifyContent
+   83	alignItems
+   84	14px
+   85	paddingTop
+   86	paddingRight
+   87	paddingBottom
+   88	paddingLeft
+   89	page
+   90	820px
+   91	maxWidth
+   92	#121a2b
+   93	16px
+   94	borderRadius
+   95	card
+   96	#ffffff
+   97	color
+   98	28px
+   99	fontSize
+  100	bold
+  101	fontWeight
+  102	title
+  103	10px
+  104	marginTop
+  105	#c6d0e1
+  106	18px
+  107	12px
+  108	#24314d
+  109	999px
+  110	hidden
+  111	overflow
+  112	progress-track
+  113	#3b82f6
+  114	progress-fill
+  115	8px
+  116	#9fb3d9
+  117	15px
+  118	progress-text
+  119	#2c1f0d
+  120	warn-box
+  121	#ffd37a
+  122	17px
+  123	warn-title
+  124	4px
+  125	warn-text
+  126	220px
+  127	#0a0f1a
+  128	log-box
+  129	#7fe3a1
+  130	22px
+  131	lineHeight
+  132	log-line
+  133	row
+  134	flexDirection
+  135	flex-start
+  136	actions
+  137	108px
+  138	minWidth
+  139	38px
+  140	marginRight
+  141	btn
+  142	#2563eb
+  143	btn-primary
+  144	#334155
+  145	btn-secondary
+  146	#d97706
+  147	btn-reinstall
+  148	#b42318
+  149	btn-danger
+  150	btn-text
+  151	style
+  152	src/pages/apps/webui.vue
+  153	__file
+  154	Shell
+  155	Fetch
+  156	busy
+  157	cleaning
+  158	reinstalling
+  159	准备检查浏览器运行环境...
+  160	statusText
+  161	progress
+  162	logs
+  163	hostWarnings
+  164	downloadHandle
+  165	downloadPollTimer
+  166	$falcon
+  167	[
+  168	] 
+  169	push
+  170	slice
+  171	getHours
+  172	padStart
+  173	:
+  174	getMinutes
+  175	getSeconds
+  176	bridge 初始化失败: 
+  177	output
+  178	replace
+  179	\\
+  180	\"
+  181	\$
+  182	\`
+  183	Shell.exec 不可用
+  184	bridge.Shell 不可用
+  185	manual
+  186	pkill -9 WPEWebProcess 2>/dev/null || true
+  187	pkill -9 WPENetworkProcess 2>/dev/null || true
+  188	sh -c 'for f in /proc/*/comm; do n=$(cat "$f" 2>/dev/null); case "$n" in WPEWebProcess|WPENetworkProcess) echo 1;; esac; done'
+  189	trim
+  190	killall -9 WPEWebProcess 2>/dev/null || true
+  191	killall -9 WPENetworkProcess 2>/dev/null || true
+  192	已清理浏览器残留进程(
+  193	)
+  194	未发现浏览器残留进程(
+  195	cleaned
+  196	sh -c "test -
+  197	 \"
+  198	\" && echo 1 || echo 0"
+  199	missing
+  200	正在检查浏览器文件...
+  201	环境已就绪，正在打开浏览器...
+  202	检测到 WebUI 运行时完整
+  203	缺少 
+  204	 项文件，开始安装
+  205	缺失: 
+  206	 -> 
+  207	收到手动重试，准备重新下载安装
+  208	检测到已下载的安装包，跳过下载...
+  209	检测到已有安装包: 
+  210	正在验证安装结果...
+  211	map
+  212	、
+  213	安装后仍缺少文件: 
+  214	安装完成，正在打开浏览器...
+  215	WebUI 运行时安装成功
+  216	WebUI 安装完成
+  217	失败: 
+  218	WebUI 安装失败
+  219	正在下载 WebUI 运行时...
+  220	开始下载 
+  221	 (134MB)
+  222	downloadFile
+  223	Fetch.downloadFile 不可用
+  224	timeout
+  225	downloadFile 调用失败: 
+  226	downloadFile 返回空句柄
+  227	clearInterval
+  228	setInterval
+  229	下载句柄无效
+  230	下载句柄丢失
+  231	poll
+  232	destroy
+  233	下载轮询异常: 
+  234	type
+  235	total
+  236	max
+  237	min
+  238	round
+  239	downloaded
+  240	下载中 
+  241	toFixed
+  242	MB / 
+  243	MB
+  244	error
+  245	下载失败
+  246	isFinished
+  247	下载完成，准备解压安装
+  248	下载完成但未找到 a.tar
+  249	正在解压并安装运行时...
+  250	开始解压 a.tar
+  251	目标目录已存在: 
+  252	，先删除旧版本
+  253	sh -c "rm -rf \"
+  254	\""
+  255	旧版本已删除
+  256	删除旧版本失败: 
+  257	sh -c "mkdir -p \"
+  258	\" && gzip -dc \"
+  259	\" | tar -xvf - -C \"
+  260	解压安装失败: 
+  261	解压完成但目标目录为空或缺少关键文件
+  262	解压安装完成
+  263	sh -c "chmod 755 \"
+  264	/opt/wpe-hostabi/libexec/wpe-webkit-1.1/WPEWebProcess\" \"
+  265	/opt/wpe-hostabi/libexec/wpe-webkit-1.1/WPENetworkProcess\" 2>/dev/null || true"
+  266	正在清理旧文件...
+  267	重新安装: 清理 /userdisk/chroot
+  268	/userdisk/chroot 已删除
+  269	删除 chroot 失败: 
+  270	sh -c "rm -f \"
+  271	旧安装包已删除
+  272	删除安装包失败: 
+  273	正在解压安装...
+  274	WebUI 运行时重新安装成功
+  275	WebUI 重新安装完成
+  276	重新安装失败: 
+  277	WebUI 重新安装失败
+  278	正在强制清理浏览器进程...
+  279	manual_close
+  280	已清理 
+  281	 个浏览器进程
+  282	未发现需要清理的浏览器进程
+  283	浏览器进程已清理
+  284	清理失败: 
+  285	浏览器进程清理失败
+  286	浏览器功能已移除，仅保留安装器
+  287	浏览器已移除，仅保留安装器
+  288	$createElement
+  289	_self
+  290	_c
+  291	scroller
+  292	staticClass
+  293	div
+  294	text
+  295	_v
+  296	WebUI 安装器
+  297	_s
+  298	%
+  299	环境提示
+  300	_l
+  301	_e
+  302	vertical
+  303	scrollDirection
+  304	attrs
+  305	click
+  306	tap
+  307	on
+  308	处理中...
+  309	重试
+  310	重新安装中...
+  311	重新安装
+  312	直接打开
+  313	清理中...
+  314	关闭并清理
+  315	key

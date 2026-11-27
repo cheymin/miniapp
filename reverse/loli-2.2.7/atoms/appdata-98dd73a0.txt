@@ -1,0 +1,7 @@
+    0	appdata-98dd73a0.js
+    1	./base-c5a492b5.js
+    2	A
+    3	a
+    4	s
+    5	/userdisk/secondary/miniapp/data/mini_app/pkg/
+    6	/data/loli

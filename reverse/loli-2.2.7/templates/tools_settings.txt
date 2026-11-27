@@ -1,0 +1,237 @@
+
+# ---- render function 118 ----
+<div.modal-overlay>
+  <div.update-popup-card>
+    <text.popup-title>
+      "<确认删除>"
+    <text.popup-desc>
+      "<<add>>"
+    <div.popup-actions>
+      <text.popup-btn.btn-later>
+        "<取消>"
+      <text.popup-btn.btn-now>
+        "<确认删除>"
+
+# ---- render function 172 ----
+<div.account-avatar-placeholder>
+  <text.avatar-placeholder-text>
+    "<未>"
+
+# ---- render function 173 ----
+<div.account-info>
+  <text.account-name>
+    "<登录砂糖云账号>"
+  <text.account-hint>
+    "<查看余额、同步数据>"
+
+# ---- render function 174 ----
+<div.item-body>
+  <text.item-title>
+    "<开启桌面终端>"
+  <text.item-subtitle>
+    "<允许在桌面直接进入终端环境>"
+
+# ---- render function 175 ----
+<div.item-body>
+  <text.item-title>
+    "<音频驱动>"
+
+# ---- render function 176 ----
+<div.item-body>
+  <text.item-title>
+    "<视频驱动>"
+
+# ---- render function 177 ----
+<div.item-body>
+  <text.item-title>
+    "<屏幕分辨率>"
+
+# ---- render function 178 ----
+<div.item-body>
+  <text.item-title>
+    "<旋转角度>"
+
+# ---- render function 179 ----
+<div.item-body>
+  <text.item-title>
+    "<重载网卡>"
+  <text.item-subtitle>
+    "<insmod bes2600.ko>"
+
+# ---- render function 180 ----
+<div.item-body>
+  <text.item-title>
+    "<重载音频>"
+  <text.item-subtitle>
+    "<重启 audioserver>"
+
+# ---- render function 181 ----
+<div.item-body>
+  <text.item-title>
+    "<重载视频>"
+  <text.item-subtitle>
+    "<重启 surfaceflinger>"
+
+# ---- render function 182 ----
+<div.item-body>
+  <text.item-title>
+    "<清空全部日志>"
+
+# ---- render function 183 ----
+<div.item-body>
+  <text.item-title>
+    "<使用图片作为桌面背景>"
+  <text.item-subtitle>
+    "<开启后桌面将显示自定义图片背景>"
+
+# ---- render function 184 ----
+<div.item-body>
+  <text.item-title>
+    "<进入桌面暗号>"
+  <text.item-subtitle>
+    "<纯数字，用于计算器页面进入桌面>"
+
+# ---- render function 185 ----
+<div.item-body>
+  <text.item-title>
+    "<页面测试暗号入口>"
+  <text.item-subtitle>
+    "<关闭后，1998/1997 等暗号无法跳转页面>"
+
+# ---- render function 186 ----
+<div.item-body>
+  <text.item-title>
+    "<使用原生软键盘>"
+  <text.item-subtitle>
+    "<在输入框获得焦点时调用系统的虚拟键盘>"
+
+# ---- render function 187 ----
+<div.item-body>
+  <text.item-title>
+    "<使用系统视频播放器>"
+  <text.item-subtitle>
+    "<播放时跳转到系统播放器，支持倍速与缩放>"
+
+# ---- render function 188 ----
+<div.item-body>
+  <text.item-title>
+    "<双键截屏>"
+  <text.item-subtitle>
+    "<HOME 键与电源键同按截屏，图片存入图库（仅>"
+
+# ---- render function 189 ----
+<div.item-body>
+  <text.item-title>
+    "<禁用系统软件白名单>"
+  <text.item-subtitle>
+    "<开启后可防止第三方软件被系统删除>"
+
+# ---- render function 190 ----
+<div.item-body>
+  <text.item-title>
+    "<P5 视频坐标>"
+  <text.item-subtitle>
+    "<针对特定屏幕比例修复视频画面偏移问题>"
+
+# ---- render function 191 ----
+<div.item-body>
+  <text.item-title>
+    "<隐藏密码修改入口>"
+  <text.item-subtitle>
+    "<在搜索框重复输入密码两次可再次显示>"
+
+# ---- render function 192 ----
+<div.item-body>
+  <text.item-title>
+    "<桌面歌词时差同步值>"
+  <text.item-subtitle>
+    "<单位秒：正数延迟，负数提前>"
+
+# ---- render function 193 ----
+<div.login-hero>
+  <div.login-logo-box>
+    <text.login-logo-text>
+      "<☁>"
+  <text.login-brand>
+    "<砂糖云>"
+  <text.login-slogan>
+    "<登录以同步数据与管理余额>"
+
+# ---- render function 194 ----
+<div.item-body>
+  <text.item-title>
+    "<账号>"
+
+# ---- render function 195 ----
+<div.item-body>
+  <text.item-title>
+    "<密码>"
+
+# ---- render function 196 ----
+<div.item-body>
+  <text.item-title>
+    "<手机号>"
+
+# ---- render function 197 ----
+<div.item-body>
+  <text.item-title>
+    "<验证码>"
+
+# ---- render function 198 ----
+<div.item-body>
+  <text.item-title>
+    "<砂糖余额>"
+
+# ---- render function 199 ----
+<div.item-body>
+  <text.item-title>
+    "<当前积分>"
+
+# ---- render function 200 ----
+<div.item-body>
+  <text.item-title>
+    "<用户等级>"
+
+# ---- render function 201 ----
+<div.item-body>
+  <text.item-title>
+    "<未登录砂糖云>"
+  <text.item-subtitle>
+    "<登录后才能充值与使用云端权益>"
+
+# ---- render function 202 ----
+<div.item-body>
+  <text.item-title>
+    "<当前积分>"
+
+# ---- render function 203 ----
+<div.card>
+  <div.item>
+    <div.item-body>
+      <text.item-title>
+        "<Ai 酒馆（联网版）>"
+      <text.item-subtitle>
+        "<云端对话与跨设备同步，按量扣砂糖>"
+  <div.divider>
+  <div.item>
+    <div.item-body>
+      <text.item-title>
+        "<AI 中转>"
+      <text.item-subtitle>
+        "<ai.loliyo.cn · OpenAI 兼容接口按 token 计费>"
+  <div.divider>
+  <div.item>
+    <div.item-body>
+      <text.item-title>
+        "<开发者密钥>"
+      <text.item-subtitle>
+        "<网页端 auth.loliyo.cn 可管理 sk- 密钥>"
+
+# ---- render function 204 ----
+<div.card>
+  <div.item>
+    <div.item-body>
+      <text.item-title>
+        "<支持开发>"
+      <text.item-subtitle>
+        "<充值即赞助 · 赞助者名单见「鸣谢」页>"

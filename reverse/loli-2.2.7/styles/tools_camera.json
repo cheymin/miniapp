@@ -1,0 +1,156 @@
+{
+  "camera-container": {
+    "position": "absolute",
+    "top": 0,
+    "left": 0,
+    "width": "100%",
+    "height": "100%",
+    "backgroundColor": "#000000"
+  },
+  "camera-hole": {
+    "position": "absolute",
+    "left": 0,
+    "top": 0,
+    "width": "100%",
+    "height": "100%",
+    "backgroundColor": "rgba(0,0,0,0)"
+  },
+  "flash-overlay": {
+    "position": "absolute",
+    "top": 0,
+    "left": 0,
+    "width": "100%",
+    "height": "100%",
+    "backgroundColor": "#000000",
+    "zIndex": "<expr>",
+    "opacity": 0.8
+  },
+  "controls-area": {
+    "position": "absolute",
+    "top": 0,
+    "right": 0,
+    "width": "100px",
+    "height": "100%",
+    "flexDirection": "column",
+    "justifyContent": "center",
+    "alignItems": "center",
+    "backgroundColor": "rgba(0,0,0,0.3)",
+    "zIndex": "<expr>"
+  },
+  "btn-shutter-wrapper": {
+    "width": "70px",
+    "height": "70px",
+    "marginTop": "18px",
+    "justifyContent": "center",
+    "alignItems": "center"
+  },
+  "btn-rotate-wrapper": {
+    "width": "70px",
+    "height": "36px",
+    "marginTop": "12px",
+    "justifyContent": "center",
+    "alignItems": "center",
+    "borderWidth": "1px",
+    "borderStyle": "solid",
+    "borderColor": "rgba(255,255,255,0.7)",
+    "borderRadius": "18px",
+    "backgroundColor": "rgba(255,255,255,0.08)"
+  },
+  "btn-rotate-label": {
+    "color": "#ffffff",
+    "fontSize": "14px",
+    "textAlign": "center"
+  },
+  "btn-rotate-label-disabled": {
+    "color": "#999999"
+  },
+  "btn-record-wrapper": {
+    "width": "70px",
+    "justifyContent": "center",
+    "alignItems": "center"
+  },
+  "btn-record-outer": {
+    "width": "54px",
+    "height": "54px",
+    "borderRadius": "27px",
+    "borderWidth": "3px",
+    "borderStyle": "solid",
+    "borderColor": "#ff4d4f",
+    "justifyContent": "center",
+    "alignItems": "center",
+    "backgroundColor": "rgba(255,77,79,0.1)"
+  },
+  "btn-record-inner": {
+    "width": "34px",
+    "height": "34px",
+    "borderRadius": "17px",
+    "backgroundColor": "#ff4d4f"
+  },
+  "btn-recording": {
+    "borderColor": "#ffffff",
+    "backgroundColor": "rgba(255,77,79,0.25)"
+  },
+  "btn-record-stop": {
+    "width": "20px",
+    "height": "20px",
+    "borderRadius": "4px"
+  },
+  "record-label": {
+    "marginTop": "8px",
+    "color": "#ffffff",
+    "fontSize": "12px",
+    "textAlign": "center"
+  },
+  "record-time": {
+    "marginTop": "4px",
+    "color": "#ffb3b4",
+    "fontSize": "11px",
+    "textAlign": "center"
+  },
+  "btn-shutter-outer": {
+    "width": "70px",
+    "height": "70px",
+    "borderRadius": "35px",
+    "borderWidth": "3px",
+    "borderStyle": "solid",
+    "borderColor": "#FFFFFF",
+    "justifyContent": "center",
+    "alignItems": "center",
+    "backgroundColor": "rgba(0,0,0,0)",
+    "transitionProperty": "transform",
+    "transitionDuration": 200,
+    "transitionTimingFunction": "ease-out"
+  },
+  "@TRANSITION": {
+    "btn-shutter-outer": {
+      "property": "transform",
+      "duration": 200,
+      "timingFunction": "ease-out"
+    }
+  },
+  "btn-shutter-active": {
+    "transform": "scale(0.85)"
+  },
+  "btn-shutter-inner": {
+    "width": "50px",
+    "height": "50px",
+    "borderRadius": "25px",
+    "backgroundColor": "#FFFFFF"
+  },
+  "btn-shutter-outer-disabled": {
+    "borderColor": "#666666"
+  },
+  "btn-shutter-inner-disabled": {
+    "backgroundColor": "#666666"
+  },
+  "btn-record-outer-disabled": {
+    "borderColor": "#666666",
+    "backgroundColor": "rgba(102,102,102,0.15)"
+  },
+  "btn-record-inner-disabled": {
+    "backgroundColor": "#666666"
+  },
+  "btn-record-stop-disabled": {
+    "backgroundColor": "#666666"
+  }
+}

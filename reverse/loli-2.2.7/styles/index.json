@@ -1,0 +1,19 @@
+{
+  "wrapper": {
+    "flex": 1
+  },
+  "button": {
+    "flex": 1,
+    "marginTop": "1.5vh",
+    "marginRight": "1.5vh",
+    "marginBottom": "1.5vh",
+    "marginLeft": "1.5vh",
+    "borderRadius": "5vh",
+    "justifyContent": "center",
+    "alignItems": "center",
+    "opacity:active": 0.6
+  },
+  "text": {
+    "fontSize": "9vh"
+  }
+}

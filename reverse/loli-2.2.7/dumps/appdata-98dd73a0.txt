@@ -1,0 +1,18 @@
+
+/* ===== function depth=0 ===== */
+/* debug: appdata-98dd73a0.js:1 source_len=0 */
+appdata-98dd73a0.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: a parent:loc0 const
+    1: s local:loc0 const
+  stack_size: 2
+  opcodes:
+    0:  push_atom_value "/userdisk/secondary/miniapp/data/mini_app/pkg/"
+    5:  get_var_ref_check 0: a
+    8:  add
+    9:  push_atom_value "/data/loli"
+   14:  add
+   15:  put_var_ref1 1: s
+   16:  return_undef
+

@@ -1,0 +1,38 @@
+
+/* ===== function depth=0 ===== */
+/* debug: upstreams-f2b4e729.js:1 source_len=0 */
+upstreams-f2b4e729.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: n local:loc0 var
+    1: u local:loc1 var
+  stack_size: 1
+  opcodes:
+    0:  fclosure8 0: [bytecode n]
+    2:  put_var_ref0 0: n
+    3:  fclosure8 1: [bytecode u]
+    5:  put_var_ref1 1: u
+    6:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: upstreams-f2b4e729.js:1 source_len=0 */
+upstreams-f2b4e729.js:1: function: n
+  mode: strict
+  args: n
+  stack_size: 1
+  opcodes:
+    0:  null
+    1:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: upstreams-f2b4e729.js:1 source_len=0 */
+upstreams-f2b4e729.js:1: function: u
+  mode: strict
+  args: n
+  stack_size: 1
+  opcodes:
+    0:  null
+    1:  return
+

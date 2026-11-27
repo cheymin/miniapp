@@ -1,0 +1,6589 @@
+
+/* ===== function depth=0 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: e parent:loc0 const
+    1: t parent:loc1 const
+    2: a parent:loc2 const
+    3: i parent:loc3 const
+    4: r local:loc0 const
+    5: o local:loc1 var
+    6: s local:loc2 var
+    7: n local:loc3 var
+    8: l local:loc4 var
+    9: c local:loc5 var
+   10: d local:loc6 var
+   11: f local:loc7 const
+   12: h local:loc8 var
+   13: u local:loc9 var
+   14: g local:loc10 var
+   15: v local:loc11 var
+   16: p local:loc12 var
+   17: y local:loc13 var
+   18: m local:loc14 var
+   19: b local:loc15 var
+   20: D local:loc16 var
+   21: w local:loc17 var
+   22: k local:loc18 var
+   23: S local:loc19 var
+  stack_size: 3
+  opcodes:
+    0:  fclosure8 0: [bytecode o]
+    2:  put_var_ref 5: o
+    5:  fclosure8 1: [bytecode s]
+    7:  put_var_ref 6: s
+   10:  fclosure8 2: [bytecode n]
+   12:  put_var_ref 7: n
+   15:  fclosure8 3: [bytecode l]
+   17:  put_var_ref 8: l
+   20:  fclosure8 4: [bytecode c]
+   22:  put_var_ref 9: c
+   25:  fclosure8 5: [bytecode d]
+   27:  put_var_ref 10: d
+   30:  fclosure8 24: [bytecode g]
+   32:  put_var_ref 14: g
+   35:  fclosure8 25: [bytecode v]
+   37:  put_var_ref 15: v
+   40:  fclosure8 26: [bytecode p]
+   42:  put_var_ref 16: p
+   45:  fclosure8 27: [bytecode y]
+   47:  put_var_ref 17: y
+   50:  fclosure8 28: [bytecode m]
+   52:  put_var_ref 18: m
+   55:  fclosure8 29: [bytecode D]
+   57:  put_var_ref 20: D
+   60:  fclosure8 30: [bytecode w]
+   62:  put_var_ref 21: w
+   65:  fclosure8 31: [bytecode S]
+   67:  put_var_ref 23: S
+   70:  object
+   71:  push_atom_value "8001687764241360"
+   76:  define_field qq
+   81:  push_atom_value "8001687764241359"
+   86:  define_field rccws
+   91:  push_atom_value "8001687764241361"
+   96:  define_field assis
+  101:  put_var_ref 4: r
+  104:  object
+  105:  fclosure8 6: [bytecode <null>]
+  107:  set_name data
+  112:  define_field data
+  117:  fclosure8 7: [bytecode <null>]
+  119:  set_name beforeDestroy
+  124:  define_field beforeDestroy
+  129:  object
+  130:  fclosure8 8: [bytecode <null>]
+  132:  set_name normalizeFalconEventPayload
+  137:  define_field normalizeFalconEventPayload
+  142:  fclosure8 9: [bytecode <null>]
+  144:  define_method normalizeBiliDownloadTask,4
+  150:  fclosure8 10: [bytecode <null>]
+  152:  define_method initOther,4
+  158:  fclosure8 11: [bytecode <null>]
+  160:  set_name getBiliDownloadAvatar
+  165:  define_field getBiliDownloadAvatar
+  170:  fclosure8 12: [bytecode <null>]
+  172:  define_method buildBiliDownloadDesktopMessages,4
+  178:  fclosure8 13: [bytecode <null>]
+  180:  define_method handleBiliDownloadTask,4
+  186:  fclosure8 14: [bytecode <null>]
+  188:  define_method removeBiliPartFile,4
+  194:  fclosure8 15: [bytecode <null>]
+  196:  define_method removeBiliCoverPartFile,4
+  202:  fclosure8 16: [bytecode <null>]
+  204:  define_method finishBiliDownloadTask,4
+  210:  fclosure8 17: [bytecode <null>]
+  212:  define_method saveCompletedBiliMeta,4
+  218:  fclosure8 18: [bytecode <null>]
+  220:  define_method finalizeBiliDownload,4
+  226:  fclosure8 19: [bytecode <null>]
+  228:  define_method updateBiliDownloadMessage,4
+  234:  fclosure8 20: [bytecode <null>]
+  236:  define_method startBiliDlPoll,4
+  242:  fclosure8 21: [bytecode <null>]
+  244:  define_method stopBiliDlPoll,4
+  250:  fclosure8 22: [bytecode <null>]
+  252:  define_method clearBiliDesktopMessages,4
+  258:  fclosure8 23: [bytecode <null>]
+  260:  define_method updateAiAssisMessage,4
+  266:  define_field methods
+  271:  put_var_ref 11: f
+  274:  object
+  275:  push_1 1
+  276:  lnot
+  277:  define_field inited
+  282:  null
+  283:  define_field Fetch
+  288:  null
+  289:  define_field Dbase
+  294:  null
+  295:  define_field Shell
+  300:  push_atom_value ai_assis_history
+  305:  define_field storageKey
+  310:  push_atom_value sys_login_session
+  315:  define_field loginSessionKey
+  320:  push_atom_value "https://ai.loliyo.cn/v1"
+  325:  define_field apiBase
+  330:  push_atom_value "qwen3.8-flash"
+  335:  define_field flashModel
+  340:  push_atom_value "qwen3.8-max"
+  345:  define_field plusModel
+  350:  null
+  351:  define_field state
+  356:  push_0 0
+  357:  define_field rev
+  362:  null
+  363:  define_field persistTimer
+  368:  null
+  369:  define_field metaPersistTimer
+  374:  push_1 1
+  375:  lnot
+  376:  define_field metaOnly
+  381:  object
+  382:  define_field chatMsgsDirty
+  387:  object
+  388:  define_field pendingMsgsDirty
+  393:  object
+  394:  define_field chatLoaded
+  399:  array_from 0
+  402:  define_field subscribers
+  407:  object
+  408:  define_field tasks
+  413:  put_var_ref 12: h
+  416:  push_i8 10
+  418:  put_var_ref 13: u
+  421:  null
+  422:  put_var_ref 19: b
+  425:  push_i8 12
+  427:  put_var_ref 22: k
+  430:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: o
+  mode: strict
+  args: e t
+  stack_size: 3
+  opcodes:
+    0:  get_var Array
+    5:  get_field2 isArray
+   10:  get_arg0 0: e
+   11:  call_method 1
+   14:  dup
+   15:  if_false8 29
+   17:  drop
+   18:  get_arg0 0: e
+   19:  get_field2 some
+   24:  fclosure8 0: [bytecode <null>]
+   26:  call_method 1
+   29:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:arg1 var
+  stack_size: 3
+  opcodes:
+    0:  fclosure8 0: [bytecode <null>]
+    2:  get_arg0 0: e
+    3:  call1 1
+    4:  get_var String
+    9:  get_var_ref0 0: t
+   10:  call1 1
+   11:  strict_eq
+   12:  return
+
+
+/* ===== function depth=3 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e
+  stack_size: 3
+  opcodes:
+    0:  get_var String
+    5:  get_arg0 0: e
+    6:  dup
+    7:  if_false8 36
+    9:  drop
+   10:  get_arg0 0: e
+   11:  get_field appid
+   16:  dup
+   17:  if_true8 36
+   19:  drop
+   20:  get_arg0 0: e
+   21:  get_field appId
+   26:  dup
+   27:  if_true8 36
+   29:  drop
+   30:  get_arg0 0: e
+   31:  get_field id
+   36:  dup
+   37:  if_true8 41
+   39:  drop
+   40:  push_empty_string
+   41:  call1 1
+   42:  get_field2 trim
+   47:  tail_call_method 0
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: s
+  mode: strict
+  args: e
+  locals:
+    0: const t [level:1 next:-1]
+  closure vars:
+    0: o parent:loc5 var
+    1: r parent:loc4 const
+  stack_size: 3
+  opcodes:
+    0:  set_loc_uninitialized 0: t
+    3:  object
+    4:  put_loc0 0: t
+    5:  get_var Object
+   10:  get_field2 keys
+   15:  get_var_ref_check 1: r
+   18:  call_method 1
+   21:  get_field2 forEach
+   26:  fclosure8 0: [bytecode <null>]
+   28:  call_method 1
+   31:  drop
+   32:  get_loc_check 0: t
+   35:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: a
+  closure vars:
+    0: t local:loc0 const
+    1: o parent:loc0 var
+    2: e local:arg0 var
+    3: r parent:loc1 const
+  stack_size: 6
+  opcodes:
+    0:  get_var_ref_check 0: t
+    3:  get_arg0 0: a
+    4:  to_propkey2
+    5:  get_var_ref1 1: o
+    6:  get_var_ref2 2: e
+    7:  get_var_ref_check 3: r
+   10:  get_arg0 0: a
+   11:  get_array_el
+   12:  call2 2
+   13:  put_array_el
+   14:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: n
+  mode: strict
+  args: e
+  locals:
+    0: var t
+    1: var a
+    2: catch e [level:5 next:-1]
+    3: catch e [level:8 next:-1]
+  stack_size: 4
+  opcodes:
+    0:  get_arg0 0: e
+    1:  dup
+    2:  if_false8 41
+    4:  drop
+    5:  get_arg0 0: e
+    6:  get_field otherShell
+   11:  dup
+   12:  if_true8 41
+   14:  drop
+   15:  get_arg0 0: e
+   16:  get_field Shell
+   21:  dup
+   22:  if_true8 41
+   24:  drop
+   25:  get_arg0 0: e
+   26:  get_field shell
+   31:  dup
+   32:  if_true8 41
+   34:  drop
+   35:  get_arg0 0: e
+   36:  get_field $qqShell
+   41:  dup
+   42:  if_true8 46
+   44:  drop
+   45:  null
+   46:  set_loc0 0: t
+   47:  if_false8 59
+   49:  get_loc0 0: t
+   50:  get_field exec
+   55:  if_false8 59
+   57:  get_loc0 0: t
+   58:  return
+   59:  catch 190
+   64:  null
+   65:  put_loc1 1: a
+   66:  catch 86
+   71:  get_var require
+   76:  push_atom_value bridge
+   81:  call1 1
+   82:  put_loc1 1: a
+   83:  drop
+   84:  goto8 96
+   86:  put_loc2 2: e
+   87:  catch 95
+   92:  drop
+   93:  goto8 96
+   95:  throw
+   96:  get_loc1 1: a
+   97:  dup
+   98:  if_true8 123
+  100:  drop
+  101:  push_atom_value undefined
+  106:  get_var_undef bridge
+  111:  typeof
+  112:  eq
+  113:  dup
+  114:  if_true8 123
+  116:  drop
+  117:  get_var bridge
+  122:  set_loc1 1: a
+  123:  drop
+  124:  get_loc1 1: a
+  125:  dup
+  126:  if_false8 146
+  128:  drop
+  129:  get_loc1 1: a
+  130:  get_field default
+  135:  dup
+  136:  if_false8 146
+  138:  drop
+  139:  get_loc1 1: a
+  140:  get_field default
+  145:  set_loc1 1: a
+  146:  drop
+  147:  get_loc1 1: a
+  148:  dup
+  149:  if_false8 168
+  151:  drop
+  152:  get_loc1 1: a
+  153:  get_field Shell
+  158:  dup
+  159:  if_true8 168
+  161:  drop
+  162:  get_loc1 1: a
+  163:  get_field shell
+  168:  dup
+  169:  if_true8 173
+  171:  drop
+  172:  null
+  173:  set_loc0 0: t
+  174:  if_false8 187
+  176:  get_loc0 0: t
+  177:  get_field exec
+  182:  if_false8 187
+  184:  get_loc0 0: t
+  185:  nip
+  186:  return
+  187:  drop
+  188:  goto8 200
+  190:  put_loc3 3: e
+  191:  catch 199
+  196:  drop
+  197:  goto8 200
+  199:  throw
+  200:  get_loc0 0: t
+  201:  dup
+  202:  if_true8 206
+  204:  drop
+  205:  null
+  206:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: l
+  mode: strict
+  args: e
+  locals:
+    0: var t
+    1: var a
+    2: var i
+    3: var r
+    4: var o
+    5: var s
+    6: catch e [level:7 next:-1]
+    7: catch e [level:11 next:-1]
+  closure vars:
+    0: n parent:loc7 var
+  stack_size: 6
+  opcodes:
+    0:  get_var_ref0 0: n
+    1:  get_arg0 0: e
+    2:  call1 1
+    3:  set_loc0 0: t
+    4:  lnot
+    5:  dup
+    6:  if_true8 16
+    8:  drop
+    9:  get_loc0 0: t
+   10:  get_field exec
+   15:  lnot
+   16:  if_false8 22
+   18:  array_from 0
+   21:  return
+   22:  push_atom_value "/userdata/miniapp/data/mini_app/pkg/packages.json"
+   27:  push_atom_value "/userdisk/secondary/miniapp/data/mini_app/pkg/packages.json"
+   32:  push_atom_value "/userdisk/miniapp/data/mini_app/pkg/packages.json"
+   37:  array_from 3
+   40:  put_loc1 1: a
+   41:  push_empty_string
+   42:  put_loc2 2: i
+   43:  push_0 0
+   44:  put_loc3 3: r
+   45:  get_loc3 3: r
+   46:  get_loc1 1: a
+   47:  get_length
+   48:  lt
+   49:  if_false 199
+   54:  catch 183
+   59:  get_loc0 0: t
+   60:  get_field2 exec
+   65:  push_atom_value "cat \""
+   70:  get_loc1 1: a
+   71:  get_loc3 3: r
+   72:  get_array_el
+   73:  add
+   74:  push_atom_value "\" 2>/dev/null"
+   79:  add
+   80:  call_method 1
+   83:  set_loc8 4: o
+   85:  if_false8 107
+   87:  push_atom_value object
+   92:  get_loc8 4: o
+   94:  typeof
+   95:  eq
+   96:  if_false8 107
+   98:  get_loc8 4: o
+  100:  get_field output
+  105:  goto8 109
+  107:  get_loc8 4: o
+  109:  dup
+  110:  if_true8 114
+  112:  drop
+  113:  push_empty_string
+  114:  put_loc8 5: s
+  116:  get_var String
+  121:  get_loc8 5: s
+  123:  call1 1
+  124:  get_field2 trim
+  129:  call_method 0
+  132:  set_loc8 5: s
+  134:  if_false8 180
+  136:  push_minus1 -1
+  137:  get_loc8 5: s
+  139:  get_field2 indexOf
+  144:  push_atom_value "No such file"
+  149:  call_method 1
+  152:  strict_eq
+  153:  if_false8 180
+  155:  push_minus1 -1
+  156:  get_loc8 5: s
+  158:  get_field2 indexOf
+  163:  push_atom_value "not found"
+  168:  call_method 1
+  171:  strict_eq
+  172:  if_false8 180
+  174:  get_loc8 5: s
+  176:  put_loc2 2: i
+  177:  drop
+  178:  goto8 199
+  180:  drop
+  181:  goto8 194
+  183:  put_loc8 6: e
+  185:  catch 193
+  190:  drop
+  191:  goto8 194
+  193:  throw
+  194:  inc_loc 3: r
+  196:  goto16 45
+  199:  get_loc2 2: i
+  200:  lnot
+  201:  if_false8 207
+  203:  array_from 0
+  206:  return
+  207:  catch 218
+  212:  fclosure8 0: [bytecode <null>]
+  214:  get_loc2 2: i
+  215:  call1 1
+  216:  nip
+  217:  return
+  218:  put_loc8 7: e
+  220:  catch 230
+  225:  array_from 0
+  228:  nip
+  229:  return
+  230:  throw
+
+
+/* ===== function depth=2 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: const t [level:2 next:-1]
+    1: const a [level:2 next:0]
+    2: catch e [level:3 next:-1]
+  stack_size: 4
+  opcodes:
+    0:  catch 149
+    5:  set_loc_uninitialized 1: a
+    8:  set_loc_uninitialized 0: t
+   11:  push_atom_value string
+   16:  get_arg0 0: e
+   17:  typeof
+   18:  eq
+   19:  if_false8 37
+   21:  get_var JSON
+   26:  get_field2 parse
+   31:  get_arg0 0: e
+   32:  call_method 1
+   35:  goto8 38
+   37:  get_arg0 0: e
+   38:  put_loc0 0: t
+   39:  get_var Array
+   44:  get_field2 isArray
+   49:  get_loc_check 0: t
+   52:  call_method 1
+   55:  if_false8 62
+   57:  get_loc_check 0: t
+   60:  goto8 110
+   62:  get_loc_check 0: t
+   65:  dup
+   66:  if_false8 110
+   68:  drop
+   69:  get_var Array
+   74:  get_field2 isArray
+   79:  get_loc_check 0: t
+   82:  get_field packages
+   87:  call_method 1
+   90:  if_false8 102
+   92:  get_loc_check 0: t
+   95:  get_field packages
+  100:  goto8 110
+  102:  get_loc_check 0: t
+  105:  get_field apps
+  110:  put_loc1 1: a
+  111:  get_var Array
+  116:  get_field2 isArray
+  121:  get_loc_check 1: a
+  124:  call_method 1
+  127:  if_false8 144
+  129:  get_loc_check 1: a
+  132:  get_field2 filter
+  137:  fclosure8 0: [bytecode <null>]
+  139:  call_method 1
+  142:  goto8 147
+  144:  array_from 0
+  147:  nip
+  148:  return
+  149:  put_loc2 2: e
+  150:  catch 160
+  155:  array_from 0
+  158:  nip
+  159:  return
+  160:  throw
+
+
+/* ===== function depth=3 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: e
+    1:  dup
+    2:  if_false8 13
+    4:  drop
+    5:  push_atom_value object
+   10:  get_arg0 0: e
+   11:  typeof
+   12:  eq
+   13:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: c
+  mode: strict
+  args: e
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: e
+    1:  dup
+    2:  if_false8 66
+    4:  drop
+    5:  get_arg0 0: e
+    6:  get_field Dbase
+   11:  dup
+   12:  if_true8 66
+   14:  drop
+   15:  get_arg0 0: e
+   16:  get_field $Dbase
+   21:  dup
+   22:  if_true8 66
+   24:  drop
+   25:  get_arg0 0: e
+   26:  get_field $qqBridge
+   31:  dup
+   32:  if_false8 46
+   34:  drop
+   35:  get_arg0 0: e
+   36:  get_field $qqBridge
+   41:  get_field Datas
+   46:  dup
+   47:  if_true8 66
+   49:  drop
+   50:  get_arg0 0: e
+   51:  get_field $chatyBgDbase
+   56:  dup
+   57:  if_true8 66
+   59:  drop
+   60:  get_arg0 0: e
+   61:  get_field $qqBgDbase
+   66:  dup
+   67:  if_true8 71
+   69:  drop
+   70:  null
+   71:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: d
+  mode: strict
+  args: e t
+  locals:
+    0: catch e [level:5 next:-1]
+    1: catch e [level:9 next:-1]
+  stack_size: 5
+  opcodes:
+    0:  push_atom_value undefined
+    5:  get_var_undef $falcon
+   10:  typeof
+   11:  eq
+   12:  dup
+   13:  if_true8 18
+   15:  drop
+   16:  get_arg0 0: e
+   17:  lnot
+   18:  if_false8 23
+   20:  push_1 1
+   21:  lnot
+   22:  return
+   23:  catch 70
+   28:  push_atom_value function
+   33:  get_var $falcon
+   38:  get_field trigger
+   43:  typeof
+   44:  eq
+   45:  if_false8 67
+   47:  get_var $falcon
+   52:  get_field2 trigger
+   57:  get_arg0 0: e
+   58:  get_arg1 1: t
+   59:  call_method 2
+   62:  drop
+   63:  push_0 0
+   64:  lnot
+   65:  nip
+   66:  return
+   67:  drop
+   68:  goto8 80
+   70:  put_loc0 0: e
+   71:  catch 79
+   76:  drop
+   77:  goto8 80
+   79:  throw
+   80:  catch 127
+   85:  push_atom_value function
+   90:  get_var $falcon
+   95:  get_field emit
+  100:  typeof
+  101:  eq
+  102:  if_false8 124
+  104:  get_var $falcon
+  109:  get_field2 emit
+  114:  get_arg0 0: e
+  115:  get_arg1 1: t
+  116:  call_method 2
+  119:  drop
+  120:  push_0 0
+  121:  lnot
+  122:  nip
+  123:  return
+  124:  drop
+  125:  goto8 137
+  127:  put_loc1 1: e
+  128:  catch 136
+  133:  drop
+  134:  goto8 137
+  136:  throw
+  137:  push_1 1
+  138:  lnot
+  139:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  stack_size: 2
+  opcodes:
+    0:  object
+    1:  null
+    2:  define_field otherShell
+    7:  null
+    8:  define_field otherFetch
+   13:  null
+   14:  define_field otherFiles
+   19:  array_from 0
+   22:  define_field biliDlTasks
+   27:  null
+   28:  define_field biliDlPollTimer
+   33:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 stopBiliDlPoll
+    8:  call_method 0
+   11:  drop
+   12:  push_atom_value undefined
+   17:  get_var_undef $falcon
+   22:  typeof
+   23:  neq
+   24:  dup
+   25:  if_false8 52
+   27:  drop
+   28:  get_var $falcon
+   33:  get_field2 off
+   38:  push_atom_value bili_download_task
+   43:  get_loc0 0: this
+   44:  get_field _handleBiliDownloadTaskBound
+   49:  call_method 2
+   52:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: e
+    1:  if_false8 20
+    3:  undefined
+    4:  get_arg0 0: e
+    5:  get_field data
+   10:  strict_neq
+   11:  if_false8 20
+   13:  get_arg0 0: e
+   14:  get_field data
+   19:  return
+   20:  get_arg0 0: e
+   21:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: var t
+    1: var a
+    2: var i
+    3: var r
+    4: var o
+    5: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc8 5: this
+    3:  get_loc8 5: this
+    5:  get_field2 normalizeFalconEventPayload
+   10:  get_arg0 0: e
+   11:  call_method 1
+   14:  dup
+   15:  if_true8 19
+   17:  drop
+   18:  object
+   19:  put_loc0 0: t
+   20:  object
+   21:  put_loc1 1: a
+   22:  get_loc0 0: t
+   23:  for_in_start
+   24:  goto8 34
+   26:  put_loc2 2: i
+   27:  get_loc1 1: a
+   28:  get_loc2 2: i
+   29:  to_propkey2
+   30:  get_loc0 0: t
+   31:  get_loc2 2: i
+   32:  get_array_el
+   33:  put_array_el
+   34:  for_in_next
+   35:  if_false8 26
+   37:  drop
+   38:  drop
+   39:  get_loc1 1: a
+   40:  get_field v
+   45:  if_false8 70
+   47:  push_atom_value object
+   52:  get_loc1 1: a
+   53:  get_field v
+   58:  typeof
+   59:  eq
+   60:  if_false8 70
+   62:  get_loc1 1: a
+   63:  get_field v
+   68:  goto8 71
+   70:  null
+   71:  put_loc3 3: r
+   72:  get_loc1 1: a
+   73:  get_field name
+   78:  lnot
+   79:  if_false8 179
+   81:  get_loc3 3: r
+   82:  if_false8 120
+   84:  get_loc3 3: r
+   85:  get_field title
+   90:  dup
+   91:  if_true8 100
+   93:  drop
+   94:  get_loc3 3: r
+   95:  get_field bvid
+  100:  if_false8 120
+  102:  get_loc3 3: r
+  103:  get_field title
+  108:  dup
+  109:  if_true8 125
+  111:  drop
+  112:  get_loc3 3: r
+  113:  get_field bvid
+  118:  goto8 125
+  120:  push_atom_value video
+  125:  put_loc8 4: o
+  127:  get_loc1 1: a
+  128:  get_var String
+  133:  get_loc8 4: o
+  135:  call1 1
+  136:  get_field2 replace
+  141:  push_const8 0: 1"[\\/\\\\:*?\"<>|]"
+  143:  push_const8 1: 1"\u0001\u0001\u00003\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0015\u0008\u0000\"\u0000\"\u0000*\u0000*\u0000/\u0000/\u0000:\u0000:\u0000<\u0000<\u0000>\u0000?\u0000\\\u0000\\\u0000|\u0000|\u0000\u000c\u0000\n"
+  145:  regexp
+  146:  push_atom_value _
+  151:  call_method 2
+  154:  get_field2 substring
+  159:  push_0 0
+  160:  push_i8 80
+  162:  call_method 2
+  165:  dup
+  166:  if_true8 174
+  168:  drop
+  169:  push_atom_value video
+  174:  put_field name
+  179:  get_loc1 1: a
+  180:  get_field dir
+  185:  lnot
+  186:  dup
+  187:  if_false8 224
+  189:  drop
+  190:  get_loc3 3: r
+  191:  dup
+  192:  if_false8 224
+  194:  drop
+  195:  get_loc3 3: r
+  196:  get_field bvid
+  201:  dup
+  202:  if_false8 224
+  204:  drop
+  205:  get_loc1 1: a
+  206:  push_atom_value "/userdisk/Favorite/bili/"
+  211:  get_loc3 3: r
+  212:  get_field bvid
+  217:  add
+  218:  insert2
+  219:  put_field dir
+  224:  drop
+  225:  get_loc1 1: a
+  226:  get_field coverUrl
+  231:  lnot
+  232:  dup
+  233:  if_false8 270
+  235:  drop
+  236:  get_loc3 3: r
+  237:  dup
+  238:  if_false8 270
+  240:  drop
+  241:  get_loc3 3: r
+  242:  get_field cover
+  247:  dup
+  248:  if_false8 270
+  250:  drop
+  251:  get_loc1 1: a
+  252:  get_var String
+  257:  get_loc3 3: r
+  258:  get_field cover
+  263:  call1 1
+  264:  insert2
+  265:  put_field coverUrl
+  270:  drop
+  271:  get_loc1 1: a
+  272:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: var t
+    1: var a
+    2: catch a [level:5 next:-1]
+    3: var i
+    4: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc8 4: this
+    3:  push_atom_value function
+    8:  get_loc8 4: this
+   10:  get_field logDesktopTrace
+   15:  typeof
+   16:  eq
+   17:  dup
+   18:  if_false8 36
+   20:  drop
+   21:  get_loc8 4: this
+   23:  get_field2 logDesktopTrace
+   28:  push_atom_value other_init_begin
+   33:  call_method 1
+   36:  drop
+   37:  get_arg0 0: e
+   38:  if_false 209
+   43:  get_arg0 0: e
+   44:  get_field default
+   49:  if_false8 59
+   51:  get_arg0 0: e
+   52:  get_field default
+   57:  goto8 60
+   59:  get_arg0 0: e
+   60:  put_loc0 0: t
+   61:  get_loc8 4: this
+   63:  get_loc0 0: t
+   64:  get_field Shell
+   69:  dup
+   70:  if_true8 84
+   72:  drop
+   73:  get_arg0 0: e
+   74:  get_field Shell
+   79:  dup
+   80:  if_true8 84
+   82:  drop
+   83:  get_loc0 0: t
+   84:  put_field otherShell
+   89:  get_loc8 4: this
+   91:  get_loc0 0: t
+   92:  get_field Fetch
+   97:  dup
+   98:  if_true8 123
+  100:  drop
+  101:  get_arg0 0: e
+  102:  get_field Fetch
+  107:  dup
+  108:  if_true8 123
+  110:  drop
+  111:  get_loc0 0: t
+  112:  get_field downloadFile
+  117:  if_false8 122
+  119:  get_loc0 0: t
+  120:  goto8 123
+  122:  null
+  123:  put_field otherFetch
+  128:  catch 171
+  133:  get_loc0 0: t
+  134:  get_field Files
+  139:  dup
+  140:  if_true8 149
+  142:  drop
+  143:  get_arg0 0: e
+  144:  get_field Files
+  149:  put_loc1 1: a
+  150:  get_loc8 4: this
+  152:  get_loc1 1: a
+  153:  if_false8 162
+  155:  get_loc1 1: a
+  156:  dup
+  157:  call_constructor 0
+  160:  goto8 163
+  162:  get_loc0 0: t
+  163:  put_field otherFiles
+  168:  drop
+  169:  goto8 209
+  171:  put_loc2 2: a
+  172:  catch 208
+  177:  get_loc8 4: this
+  179:  get_loc0 0: t
+  180:  get_field Files
+  185:  dup
+  186:  if_true8 200
+  188:  drop
+  189:  get_arg0 0: e
+  190:  get_field Files
+  195:  dup
+  196:  if_true8 200
+  198:  drop
+  199:  get_loc0 0: t
+  200:  put_field otherFiles
+  205:  drop
+  206:  goto8 209
+  208:  throw
+  209:  push_atom_value undefined
+  214:  get_var_undef $falcon
+  219:  typeof
+  220:  neq
+  221:  if_false8 261
+  223:  get_loc8 4: this
+  225:  put_loc3 3: i
+  226:  get_loc8 4: this
+  228:  fclosure8 0: [bytecode <null>]
+  230:  put_field _handleBiliDownloadTaskBound
+  235:  get_var $falcon
+  240:  get_field2 on
+  245:  push_atom_value bili_download_task
+  250:  get_loc8 4: this
+  252:  get_field _handleBiliDownloadTaskBound
+  257:  call_method 2
+  260:  drop
+  261:  push_atom_value function
+  266:  get_loc8 4: this
+  268:  get_field logDesktopTrace
+  273:  typeof
+  274:  eq
+  275:  dup
+  276:  if_false8 294
+  278:  drop
+  279:  get_loc8 4: this
+  281:  get_field2 logDesktopTrace
+  286:  push_atom_value other_updateAiAssisMessage_begin
+  291:  call_method 1
+  294:  drop
+  295:  push_atom_value function
+  300:  get_loc8 4: this
+  302:  get_field logDesktopTrace
+  307:  typeof
+  308:  eq
+  309:  dup
+  310:  if_false8 328
+  312:  drop
+  313:  get_loc8 4: this
+  315:  get_field2 logDesktopTrace
+  320:  push_atom_value other_updateAiAssisMessage_end
+  325:  call_method 1
+  328:  drop
+  329:  push_atom_value function
+  334:  get_loc8 4: this
+  336:  get_field logDesktopTrace
+  341:  typeof
+  342:  eq
+  343:  dup
+  344:  if_false8 362
+  346:  drop
+  347:  get_loc8 4: this
+  349:  get_field2 logDesktopTrace
+  354:  push_atom_value other_init_finish
+  359:  call_method 1
+  362:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: i local:loc3 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: i
+    1:  get_field2 handleBiliDownloadTask
+    6:  get_arg0 0: e
+    7:  call_method 1
+   10:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  stack_size: 1
+  opcodes:
+    0:  push_atom_value "https://img.icons8.com/color/96/bilibili.png"
+    5:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var e
+    1: var t
+    2: var a
+    3: var i
+    4: var r
+    5: var o
+    6: var s
+    7: var n
+    8: var l
+    9: var this
+  stack_size: 9
+  opcodes:
+    0:  push_this
+    1:  put_loc8 9: this
+    3:  get_var Array
+    8:  get_field2 isArray
+   13:  get_loc8 9: this
+   15:  get_field biliDlTasks
+   20:  call_method 1
+   23:  if_false8 42
+   25:  get_loc8 9: this
+   27:  get_field biliDlTasks
+   32:  get_field2 slice
+   37:  call_method 0
+   40:  goto8 45
+   42:  array_from 0
+   45:  put_loc0 0: e
+   46:  push_0 0
+   47:  get_loc0 0: e
+   48:  get_length
+   49:  strict_eq
+   50:  if_false8 56
+   52:  array_from 0
+   55:  return
+   56:  get_loc0 0: e
+   57:  get_field2 sort
+   62:  fclosure8 0: [bytecode <null>]
+   64:  call_method 1
+   67:  drop
+   68:  array_from 0
+   71:  put_loc1 1: t
+   72:  push_0 0
+   73:  put_loc2 2: a
+   74:  get_loc2 2: a
+   75:  get_loc0 0: e
+   76:  get_length
+   77:  lt
+   78:  if_false 580
+   83:  get_loc0 0: e
+   84:  get_loc2 2: a
+   85:  get_array_el
+   86:  set_loc3 3: i
+   87:  if_false 575
+   92:  get_var Number
+   97:  push_atom_value downloading
+  102:  get_loc3 3: i
+  103:  get_field status
+  108:  strict_eq
+  109:  if_false8 136
+  111:  get_loc3 3: i
+  112:  get_field createdAt
+  117:  dup
+  118:  if_true8 169
+  120:  drop
+  121:  get_var Date
+  126:  get_field2 now
+  131:  call_method 0
+  134:  goto8 169
+  136:  get_loc3 3: i
+  137:  get_field finishedAt
+  142:  dup
+  143:  if_true8 169
+  145:  drop
+  146:  get_loc3 3: i
+  147:  get_field createdAt
+  152:  dup
+  153:  if_true8 169
+  155:  drop
+  156:  get_var Date
+  161:  get_field2 now
+  166:  call_method 0
+  169:  call1 1
+  170:  put_loc8 4: r
+  172:  get_var Date
+  177:  dup
+  178:  get_loc8 4: r
+  180:  call_constructor 1
+  183:  put_loc8 5: o
+  185:  get_var String
+  190:  get_loc8 5: o
+  192:  get_field2 getHours
+  197:  call_method 0
+  200:  call1 1
+  201:  get_field2 padStart
+  206:  push_2 2
+  207:  push_const8 1: 1"0"
+  209:  call_method 2
+  212:  push_atom_value ":"
+  217:  add
+  218:  get_var String
+  223:  get_loc8 5: o
+  225:  get_field2 getMinutes
+  230:  call_method 0
+  233:  call1 1
+  234:  get_field2 padStart
+  239:  push_2 2
+  240:  push_const8 2: 1"0"
+  242:  call_method 2
+  245:  add
+  246:  put_loc8 6: s
+  248:  push_atom_value error
+  253:  get_loc3 3: i
+  254:  get_field status
+  259:  strict_eq
+  260:  put_loc8 7: n
+  262:  push_atom_value done
+  267:  get_loc3 3: i
+  268:  get_field status
+  273:  strict_eq
+  274:  put_loc8 8: l
+  276:  get_loc1 1: t
+  277:  get_field2 push
+  282:  object
+  283:  push_0 0
+  284:  lnot
+  285:  define_field _isBiliDl
+  290:  get_loc3 3: i
+  291:  get_field taskId
+  296:  dup
+  297:  if_true8 307
+  299:  drop
+  300:  push_atom_value bili_task_
+  305:  get_loc2 2: a
+  306:  add
+  307:  define_field _biliTaskId
+  312:  push_atom_value "\u00e5\u0093\u0094"
+  317:  define_field icon
+  322:  get_loc8 7: n
+  324:  if_false8 333
+  326:  push_atom_value "\u00e5\u0093\u0094\u00e5\u0093\u00a9\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  331:  goto8 349
+  333:  get_loc8 8: l
+  335:  if_false8 344
+  337:  push_atom_value "\u00e5\u0093\u0094\u00e5\u0093\u00a9\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e5\u00b7\u00b2\u00e5\u00ae\u008c\u00e6\u0088\u0090"
+  342:  goto8 349
+  344:  push_atom_value "\u00e5\u0093\u0094\u00e5\u0093\u00a9\u00e4\u00b8\u008b\u00e8\u00bd\u00bd"
+  349:  define_field title
+  354:  get_loc8 7: n
+  356:  if_false8 405
+  358:  get_loc3 3: i
+  359:  get_field name
+  364:  dup
+  365:  if_true8 373
+  367:  drop
+  368:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e4\u00bb\u00bb\u00e5\u008a\u00a1"
+  373:  push_atom_value " \u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  378:  add
+  379:  get_loc3 3: i
+  380:  get_field errorMsg
+  385:  if_false8 401
+  387:  push_atom_value "\u00ef\u00bc\u009a"
+  392:  get_loc3 3: i
+  393:  get_field errorMsg
+  398:  add
+  399:  goto8 402
+  401:  push_empty_string
+  402:  add
+  403:  goto8 496
+  405:  get_loc8 8: l
+  407:  if_false8 432
+  409:  get_loc3 3: i
+  410:  get_field name
+  415:  dup
+  416:  if_true8 424
+  418:  drop
+  419:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e4\u00bb\u00bb\u00e5\u008a\u00a1"
+  424:  push_atom_value " \u00e5\u00b7\u00b2\u00e5\u00ae\u008c\u00e6\u0088\u0090"
+  429:  add
+  430:  goto8 496
+  432:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e4\u00b8\u008b\u00e8\u00bd\u00bd "
+  437:  get_loc3 3: i
+  438:  get_field name
+  443:  dup
+  444:  if_true8 452
+  446:  drop
+  447:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e4\u00bb\u00bb\u00e5\u008a\u00a1"
+  452:  add
+  453:  push_atom_value " \u00c2\u00b7 "
+  458:  add
+  459:  get_var Math
+  464:  get_field2 round
+  469:  get_var Number
+  474:  get_loc3 3: i
+  475:  get_field progress
+  480:  dup
+  481:  if_true8 485
+  483:  drop
+  484:  push_0 0
+  485:  call1 1
+  486:  call_method 1
+  489:  add
+  490:  push_atom_value "%"
+  495:  add
+  496:  define_field desc
+  501:  get_loc8 6: s
+  503:  define_field time
+  508:  get_loc8 7: n
+  510:  if_false8 519
+  512:  push_atom_value "#ef4444"
+  517:  goto8 535
+  519:  get_loc8 8: l
+  521:  if_false8 530
+  523:  push_atom_value "#22c55e"
+  528:  goto8 535
+  530:  push_atom_value "#3b82f6"
+  535:  define_field color
+  540:  push_1 1
+  541:  define_field count
+  546:  get_loc8 9: this
+  548:  get_field2 getBiliDownloadAvatar
+  553:  call_method 0
+  556:  define_field avatarUrl
+  561:  push_atom_value bilibili
+  566:  define_field route
+  571:  call_method 1
+  574:  drop
+  575:  inc_loc 2: a
+  577:  goto16 74
+  580:  get_loc1 1: t
+  581:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e t
+  locals:
+    0: var a
+    1: var i
+    2: var r
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: e
+    1:  if_false8 20
+    3:  push_atom_value downloading
+    8:  get_arg0 0: e
+    9:  get_field status
+   14:  strict_eq
+   15:  if_false8 20
+   17:  push_0 0
+   18:  goto8 21
+   20:  push_1 1
+   21:  put_loc0 0: a
+   22:  get_arg1 1: t
+   23:  if_false8 42
+   25:  push_atom_value downloading
+   30:  get_arg1 1: t
+   31:  get_field status
+   36:  strict_eq
+   37:  if_false8 42
+   39:  push_0 0
+   40:  goto8 43
+   42:  push_1 1
+   43:  put_loc1 1: i
+   44:  get_loc0 0: a
+   45:  get_loc1 1: i
+   46:  strict_neq
+   47:  if_false8 53
+   49:  get_loc0 0: a
+   50:  get_loc1 1: i
+   51:  sub
+   52:  return
+   53:  get_var Number
+   58:  get_arg0 0: e
+   59:  dup
+   60:  if_false8 79
+   62:  drop
+   63:  get_arg0 0: e
+   64:  get_field finishedAt
+   69:  dup
+   70:  if_true8 79
+   72:  drop
+   73:  get_arg0 0: e
+   74:  get_field createdAt
+   79:  dup
+   80:  if_true8 84
+   82:  drop
+   83:  push_0 0
+   84:  call1 1
+   85:  put_loc2 2: r
+   86:  get_var Number
+   91:  get_arg1 1: t
+   92:  dup
+   93:  if_false8 112
+   95:  drop
+   96:  get_arg1 1: t
+   97:  get_field finishedAt
+  102:  dup
+  103:  if_true8 112
+  105:  drop
+  106:  get_arg1 1: t
+  107:  get_field createdAt
+  112:  dup
+  113:  if_true8 117
+  115:  drop
+  116:  push_0 0
+  117:  call1 1
+  118:  get_loc2 2: r
+  119:  sub
+  120:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: var t
+    1: var a
+    2: var i
+    3: var r
+    4: var o
+    5: var s
+    6: var n
+    7: var l
+    8: var c
+    9: var f
+   10: var this
+  closure vars:
+    0: d parent:loc10 var
+  stack_size: 7
+  opcodes:
+    0:  push_this
+    1:  put_loc8 10: this
+    3:  get_loc8 10: this
+    5:  get_field2 normalizeBiliDownloadTask
+   10:  get_arg0 0: e
+   11:  call_method 1
+   14:  put_arg0 0: e
+   15:  get_loc8 10: this
+   17:  get_field otherFetch
+   22:  dup
+   23:  if_true8 60
+   25:  drop
+   26:  get_loc8 10: this
+   28:  get_field $Fetch
+   33:  dup
+   34:  if_true8 60
+   36:  drop
+   37:  get_loc8 10: this
+   39:  get_field $qqBridge
+   44:  dup
+   45:  if_false8 60
+   47:  drop
+   48:  get_loc8 10: this
+   50:  get_field $qqBridge
+   55:  get_field Fetch
+   60:  set_loc0 0: t
+   61:  if_false 914
+   66:  push_atom_value function
+   71:  get_loc0 0: t
+   72:  get_field downloadFile
+   77:  typeof
+   78:  eq
+   79:  if_false 914
+   84:  get_arg0 0: e
+   85:  get_field playUrl
+   90:  if_false 864
+   95:  get_arg0 0: e
+   96:  get_field dir
+  101:  if_false 864
+  106:  get_arg0 0: e
+  107:  get_field name
+  112:  if_false 864
+  117:  get_arg0 0: e
+  118:  get_field partVideoPath
+  123:  dup
+  124:  if_true8 152
+  126:  drop
+  127:  get_arg0 0: e
+  128:  get_field dir
+  133:  push_atom_value "/"
+  138:  add
+  139:  get_arg0 0: e
+  140:  get_field name
+  145:  add
+  146:  push_atom_value ".mp4.part"
+  151:  add
+  152:  put_loc1 1: a
+  153:  get_arg0 0: e
+  154:  get_field finalVideoPath
+  159:  dup
+  160:  if_true8 188
+  162:  drop
+  163:  get_arg0 0: e
+  164:  get_field dir
+  169:  push_atom_value "/"
+  174:  add
+  175:  get_arg0 0: e
+  176:  get_field name
+  181:  add
+  182:  push_atom_value ".mp4"
+  187:  add
+  188:  put_loc2 2: i
+  189:  push_0 0
+  190:  put_loc3 3: r
+  191:  get_loc3 3: r
+  192:  get_loc8 10: this
+  194:  get_field biliDlTasks
+  199:  get_length
+  200:  lt
+  201:  if_false8 296
+  203:  get_loc8 10: this
+  205:  get_field biliDlTasks
+  210:  get_loc3 3: r
+  211:  get_array_el
+  212:  set_loc8 4: o
+  214:  if_false8 292
+  216:  push_atom_value downloading
+  221:  get_loc8 4: o
+  223:  get_field status
+  228:  strict_eq
+  229:  if_false8 292
+  231:  get_loc8 4: o
+  233:  get_field finalVideoPath
+  238:  get_loc2 2: i
+  239:  strict_eq
+  240:  if_false8 292
+  242:  push_atom_value undefined
+  247:  get_var_undef $falcon
+  252:  typeof
+  253:  neq
+  254:  dup
+  255:  if_false8 290
+  257:  drop
+  258:  get_var $falcon
+  263:  get_field toast
+  268:  dup
+  269:  if_false8 290
+  271:  drop
+  272:  get_var $falcon
+  277:  get_field2 toast
+  282:  push_atom_value "\u00e8\u00af\u00a5\u00e8\u00a7\u0086\u00e9\u00a2\u0091\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e4\u00b8\u008b\u00e8\u00bd\u00bd"
+  287:  call_method 1
+  290:  drop
+  291:  return_undef
+  292:  inc_loc 3: r
+  294:  goto8 191
+  296:  get_arg0 0: e
+  297:  get_field dir
+  302:  push_atom_value "/"
+  307:  add
+  308:  get_arg0 0: e
+  309:  get_field name
+  314:  add
+  315:  push_atom_value ".jpg"
+  320:  add
+  321:  set_loc8 5: s
+  323:  push_atom_value ".part"
+  328:  add
+  329:  put_loc8 6: n
+  331:  null
+  332:  put_loc8 7: l
+  334:  get_arg0 0: e
+  335:  get_field coverUrl
+  340:  dup
+  341:  if_false8 371
+  343:  drop
+  344:  get_loc0 0: t
+  345:  get_field2 downloadFile
+  350:  get_arg0 0: e
+  351:  get_field coverUrl
+  356:  get_loc8 6: n
+  358:  object
+  359:  push_i8 30
+  361:  define_field timeout
+  366:  call_method 3
+  369:  set_loc8 7: l
+  371:  drop
+  372:  get_loc0 0: t
+  373:  get_field2 downloadFile
+  378:  get_arg0 0: e
+  379:  get_field playUrl
+  384:  get_loc1 1: a
+  385:  object
+  386:  push_i16 600
+  389:  define_field timeout
+  394:  call_method 3
+  397:  put_loc8 8: c
+  399:  object
+  400:  push_atom_value bili_
+  405:  get_var Date
+  410:  get_field2 now
+  415:  call_method 0
+  418:  add
+  419:  push_atom_value _
+  424:  add
+  425:  get_var Math
+  430:  get_field2 floor
+  435:  push_i32 100000
+  440:  get_var Math
+  445:  get_field2 random
+  450:  call_method 0
+  453:  mul
+  454:  call_method 1
+  457:  add
+  458:  define_field taskId
+  463:  get_arg0 0: e
+  464:  get_field name
+  469:  define_field name
+  474:  get_arg0 0: e
+  475:  get_field dir
+  480:  define_field dir
+  485:  get_loc8 7: l
+  487:  define_field coverHandle
+  492:  get_loc8 8: c
+  494:  define_field videoHandle
+  499:  get_loc1 1: a
+  500:  define_field partVideoPath
+  505:  get_loc2 2: i
+  506:  define_field finalVideoPath
+  511:  get_loc8 5: s
+  513:  define_field coverFilePath
+  518:  get_loc8 6: n
+  520:  define_field coverPartPath
+  525:  push_1 1
+  526:  lnot
+  527:  define_field coverCandidateReady
+  532:  push_1 1
+  533:  lnot
+  534:  define_field coverReady
+  539:  push_1 1
+  540:  lnot
+  541:  define_field sawCoverDone
+  546:  push_1 1
+  547:  lnot
+  548:  define_field sawCoverError
+  553:  get_arg0 0: e
+  554:  get_field localMeta
+  559:  dup
+  560:  if_true8 574
+  562:  drop
+  563:  get_arg0 0: e
+  564:  get_field v
+  569:  dup
+  570:  if_true8 574
+  572:  drop
+  573:  object
+  574:  define_field localMeta
+  579:  push_0 0
+  580:  define_field progress
+  585:  push_atom_value downloading
+  590:  define_field status
+  595:  get_arg0 0: e
+  596:  get_field coverUrl
+  601:  define_field coverUrl
+  606:  push_empty_string
+  607:  define_field errorMsg
+  612:  push_1 1
+  613:  lnot
+  614:  define_field sawVideoDone
+  619:  push_1 1
+  620:  lnot
+  621:  define_field sawVideoError
+  626:  push_0 0
+  627:  define_field lastDownloaded
+  632:  push_0 0
+  633:  define_field lastTotal
+  638:  push_0 0
+  639:  define_field terminalMissingTicks
+  644:  push_1 1
+  645:  lnot
+  646:  define_field finalizing
+  651:  push_0 0
+  652:  define_field finishedAt
+  657:  get_var Date
+  662:  get_field2 now
+  667:  call_method 0
+  670:  define_field createdAt
+  675:  put_loc8 9: f
+  677:  get_loc8 10: this
+  679:  get_field biliDlTasks
+  684:  get_field2 push
+  689:  get_loc8 9: f
+  691:  call_method 1
+  694:  drop
+  695:  push_atom_value undefined
+  700:  get_var_undef $falcon
+  705:  typeof
+  706:  neq
+  707:  dup
+  708:  if_false8 750
+  710:  drop
+  711:  get_var $falcon
+  716:  get_field toast
+  721:  dup
+  722:  if_false8 750
+  724:  drop
+  725:  get_var $falcon
+  730:  get_field2 toast
+  735:  push_atom_value "\u00e5\u00bc\u0080\u00e5\u00a7\u008b\u00e4\u00b8\u008b\u00e8\u00bd\u00bd: "
+  740:  get_arg0 0: e
+  741:  get_field name
+  746:  add
+  747:  call_method 1
+  750:  drop
+  751:  get_loc8 10: this
+  753:  get_field2 updateBiliDownloadMessage
+  758:  call_method 0
+  761:  drop
+  762:  push_atom_value undefined
+  767:  get_var_undef $falcon
+  772:  typeof
+  773:  neq
+  774:  dup
+  775:  if_false8 851
+  777:  drop
+  778:  get_var_ref0 0: d
+  779:  push_atom_value show_global_notification_modal
+  784:  object
+  785:  push_atom_value "\u00e5\u0093\u0094\u00e5\u0093\u00a9"
+  790:  define_field title
+  795:  push_atom_value "\u00e5\u00bc\u0080\u00e5\u00a7\u008b\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00ef\u00bc\u009a"
+  800:  get_arg0 0: e
+  801:  get_field name
+  806:  add
+  807:  define_field desc
+  812:  get_loc8 10: this
+  814:  get_field2 getBiliDownloadAvatar
+  819:  call_method 0
+  822:  define_field avatarUrl
+  827:  push_1 1
+  828:  define_field count
+  833:  push_atom_value bilibili
+  838:  define_field route
+  843:  push_0 0
+  844:  lnot
+  845:  define_field replaceExisting
+  850:  call2 2
+  851:  drop
+  852:  get_loc8 10: this
+  854:  get_field2 startBiliDlPoll
+  859:  call_method 0
+  862:  drop
+  863:  return_undef
+  864:  push_atom_value undefined
+  869:  get_var_undef $falcon
+  874:  typeof
+  875:  neq
+  876:  dup
+  877:  if_false8 912
+  879:  drop
+  880:  get_var $falcon
+  885:  get_field toast
+  890:  dup
+  891:  if_false8 912
+  893:  drop
+  894:  get_var $falcon
+  899:  get_field2 toast
+  904:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e4\u00bb\u00bb\u00e5\u008a\u00a1\u00e5\u008f\u0082\u00e6\u0095\u00b0\u00e4\u00b8\u008d\u00e5\u00ae\u008c\u00e6\u0095\u00b4"
+  909:  call_method 1
+  912:  drop
+  913:  return_undef
+  914:  push_atom_value undefined
+  919:  get_var_undef $falcon
+  924:  typeof
+  925:  neq
+  926:  dup
+  927:  if_false8 962
+  929:  drop
+  930:  get_var $falcon
+  935:  get_field toast
+  940:  dup
+  941:  if_false8 962
+  943:  drop
+  944:  get_var $falcon
+  949:  get_field2 toast
+  954:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e6\u00a8\u00a1\u00e5\u009d\u0097\u00e6\u009c\u00aa\u00e5\u00b0\u00b1\u00e7\u00bb\u00aa"
+  959:  call_method 1
+  962:  drop
+  963:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: var t
+    1: catch e [level:4 next:-1]
+    2: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field otherFiles
+    8:  set_loc0 0: t
+    9:  if_false8 85
+   11:  push_atom_value function
+   16:  get_loc0 0: t
+   17:  get_field fsAction
+   22:  typeof
+   23:  eq
+   24:  if_false8 85
+   26:  get_arg0 0: e
+   27:  if_false8 85
+   29:  get_arg0 0: e
+   30:  get_field partVideoPath
+   35:  if_false8 85
+   37:  catch 76
+   42:  get_loc0 0: t
+   43:  get_field2 fsAction
+   48:  object
+   49:  push_atom_value rm
+   54:  define_field cmd
+   59:  get_arg0 0: e
+   60:  get_field partVideoPath
+   65:  define_field path
+   70:  call_method 1
+   73:  drop
+   74:  drop
+   75:  return_undef
+   76:  put_loc1 1: e
+   77:  catch 84
+   82:  drop
+   83:  return_undef
+   84:  throw
+   85:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: var t
+    1: catch e [level:4 next:-1]
+    2: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field otherFiles
+    8:  set_loc0 0: t
+    9:  if_false8 85
+   11:  push_atom_value function
+   16:  get_loc0 0: t
+   17:  get_field fsAction
+   22:  typeof
+   23:  eq
+   24:  if_false8 85
+   26:  get_arg0 0: e
+   27:  if_false8 85
+   29:  get_arg0 0: e
+   30:  get_field coverPartPath
+   35:  if_false8 85
+   37:  catch 76
+   42:  get_loc0 0: t
+   43:  get_field2 fsAction
+   48:  object
+   49:  push_atom_value rm
+   54:  define_field cmd
+   59:  get_arg0 0: e
+   60:  get_field coverPartPath
+   65:  define_field path
+   70:  call_method 1
+   73:  drop
+   74:  drop
+   75:  return_undef
+   76:  put_loc1 1: e
+   77:  catch 84
+   82:  drop
+   83:  return_undef
+   84:  throw
+   85:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e t
+  locals:
+    0: catch e [level:7 next:-1]
+    1: catch e [level:12 next:-1]
+    2: var this
+  closure vars:
+    0: d parent:loc10 var
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_arg0 0: e
+    3:  if_false 330
+    8:  push_atom_value downloading
+   13:  get_arg0 0: e
+   14:  get_field status
+   19:  strict_eq
+   20:  if_false 330
+   25:  get_arg0 0: e
+   26:  get_arg1 1: t
+   27:  if_false8 36
+   29:  push_atom_value error
+   34:  goto8 41
+   36:  push_atom_value done
+   41:  put_field status
+   46:  get_arg0 0: e
+   47:  get_arg1 1: t
+   48:  dup
+   49:  if_true8 53
+   51:  drop
+   52:  push_empty_string
+   53:  put_field errorMsg
+   58:  get_arg0 0: e
+   59:  get_var Date
+   64:  get_field2 now
+   69:  call_method 0
+   72:  put_field finishedAt
+   77:  get_arg0 0: e
+   78:  push_1 1
+   79:  lnot
+   80:  put_field finalizing
+   85:  get_arg0 0: e
+   86:  get_field coverHandle
+   91:  if_false8 141
+   93:  catch 116
+   98:  get_arg0 0: e
+   99:  get_field coverHandle
+  104:  get_field2 destroy
+  109:  call_method 0
+  112:  drop
+  113:  drop
+  114:  goto8 126
+  116:  put_loc0 0: e
+  117:  catch 125
+  122:  drop
+  123:  goto8 126
+  125:  throw
+  126:  get_arg0 0: e
+  127:  null
+  128:  put_field coverHandle
+  133:  get_arg0 0: e
+  134:  push_1 1
+  135:  lnot
+  136:  put_field coverReady
+  141:  get_arg1 1: t
+  142:  lnot
+  143:  dup
+  144:  if_false8 153
+  146:  drop
+  147:  get_arg0 0: e
+  148:  get_field coverReady
+  153:  dup
+  154:  if_true8 167
+  156:  drop
+  157:  get_loc2 2: this
+  158:  get_field2 removeBiliCoverPartFile
+  163:  get_arg0 0: e
+  164:  call_method 1
+  167:  drop
+  168:  get_arg0 0: e
+  169:  get_field videoHandle
+  174:  if_false8 216
+  176:  catch 199
+  181:  get_arg0 0: e
+  182:  get_field videoHandle
+  187:  get_field2 destroy
+  192:  call_method 0
+  195:  drop
+  196:  drop
+  197:  goto8 209
+  199:  put_loc1 1: e
+  200:  catch 208
+  205:  drop
+  206:  goto8 209
+  208:  throw
+  209:  get_arg0 0: e
+  210:  null
+  211:  put_field videoHandle
+  216:  get_var_ref0 0: d
+  217:  push_atom_value show_global_notification_modal
+  222:  object
+  223:  push_atom_value "\u00e5\u0093\u0094\u00e5\u0093\u00a9"
+  228:  define_field title
+  233:  get_arg1 1: t
+  234:  if_false8 264
+  236:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5\u00ef\u00bc\u009a"
+  241:  get_arg0 0: e
+  242:  get_field name
+  247:  add
+  248:  push_atom_value " ("
+  253:  add
+  254:  get_arg1 1: t
+  255:  add
+  256:  push_atom_value ")"
+  261:  add
+  262:  goto8 276
+  264:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e5\u00b7\u00b2\u00e5\u00ae\u008c\u00e6\u0088\u0090\u00ef\u00bc\u009a"
+  269:  get_arg0 0: e
+  270:  get_field name
+  275:  add
+  276:  define_field desc
+  281:  get_loc2 2: this
+  282:  get_field2 getBiliDownloadAvatar
+  287:  call_method 0
+  290:  define_field avatarUrl
+  295:  push_1 1
+  296:  define_field count
+  301:  push_atom_value bilibili
+  306:  define_field route
+  311:  push_0 0
+  312:  lnot
+  313:  define_field replaceExisting
+  318:  call2 2
+  319:  drop
+  320:  get_loc2 2: this
+  321:  get_field2 updateBiliDownloadMessage
+  326:  call_method 0
+  329:  drop
+  330:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: var t
+    1: var a
+    2: var i
+    3: var r
+    4: var o
+    5: var s
+    6: catch e [level:10 next:-1]
+    7: var this
+  closure vars:
+    0: c parent:loc9 var
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc8 7: this
+    3:  get_var_ref0 0: c
+    4:  get_loc8 7: this
+    6:  call1 1
+    7:  set_loc0 0: t
+    8:  lnot
+    9:  dup
+   10:  if_true8 43
+   12:  drop
+   13:  push_atom_value function
+   18:  get_loc0 0: t
+   19:  get_field read
+   24:  typeof
+   25:  neq
+   26:  dup
+   27:  if_true8 43
+   29:  drop
+   30:  push_atom_value function
+   35:  get_loc0 0: t
+   36:  get_field write
+   41:  typeof
+   42:  neq
+   43:  if_false8 48
+   45:  push_1 1
+   46:  lnot
+   47:  return
+   48:  catch 511
+   53:  get_arg0 0: e
+   54:  get_field localMeta
+   59:  dup
+   60:  if_true8 64
+   62:  drop
+   63:  object
+   64:  put_loc1 1: a
+   65:  get_loc0 0: t
+   66:  get_field2 read
+   71:  push_atom_value bili_local_videos
+   76:  call_method 1
+   79:  put_loc2 2: i
+   80:  get_var Array
+   85:  get_field2 isArray
+   90:  get_loc2 2: i
+   91:  call_method 1
+   94:  dup
+   95:  if_true8 102
+   97:  drop
+   98:  array_from 0
+  101:  set_loc2 2: i
+  102:  drop
+  103:  push_0 0
+  104:  put_loc3 3: r
+  105:  get_loc3 3: r
+  106:  get_loc2 2: i
+  107:  get_length
+  108:  lt
+  109:  if_false8 151
+  111:  get_loc2 2: i
+  112:  get_loc3 3: r
+  113:  get_array_el
+  114:  if_false8 147
+  116:  get_loc2 2: i
+  117:  get_loc3 3: r
+  118:  get_array_el
+  119:  get_field bvid
+  124:  get_loc1 1: a
+  125:  get_field bvid
+  130:  strict_eq
+  131:  if_false8 147
+  133:  get_loc2 2: i
+  134:  get_field2 splice
+  139:  get_loc3 3: r
+  140:  push_1 1
+  141:  call_method 2
+  144:  drop
+  145:  goto8 151
+  147:  inc_loc 3: r
+  149:  goto8 105
+  151:  get_loc2 2: i
+  152:  get_field2 unshift
+  157:  object
+  158:  get_loc1 1: a
+  159:  get_field bvid
+  164:  dup
+  165:  if_true8 169
+  167:  drop
+  168:  push_empty_string
+  169:  define_field bvid
+  174:  get_loc1 1: a
+  175:  get_field title
+  180:  dup
+  181:  if_true8 195
+  183:  drop
+  184:  get_arg0 0: e
+  185:  get_field name
+  190:  dup
+  191:  if_true8 195
+  193:  drop
+  194:  push_empty_string
+  195:  define_field title
+  200:  get_loc1 1: a
+  201:  get_field author
+  206:  dup
+  207:  if_true8 211
+  209:  drop
+  210:  push_empty_string
+  211:  define_field author
+  216:  get_loc1 1: a
+  217:  get_field author_mid
+  222:  dup
+  223:  if_true8 237
+  225:  drop
+  226:  get_loc1 1: a
+  227:  get_field mid
+  232:  dup
+  233:  if_true8 237
+  235:  drop
+  236:  push_empty_string
+  237:  define_field author_mid
+  242:  get_loc1 1: a
+  243:  get_field cover
+  248:  dup
+  249:  if_true8 263
+  251:  drop
+  252:  get_arg0 0: e
+  253:  get_field coverUrl
+  258:  dup
+  259:  if_true8 263
+  261:  drop
+  262:  push_empty_string
+  263:  define_field cover
+  268:  get_loc1 1: a
+  269:  get_field play
+  274:  dup
+  275:  if_true8 279
+  277:  drop
+  278:  push_0 0
+  279:  define_field play
+  284:  get_loc1 1: a
+  285:  get_field danmaku
+  290:  dup
+  291:  if_true8 295
+  293:  drop
+  294:  push_0 0
+  295:  define_field danmaku
+  300:  get_arg0 0: e
+  301:  get_field dir
+  306:  define_field dir
+  311:  get_arg0 0: e
+  312:  get_field name
+  317:  define_field name
+  322:  get_arg0 0: e
+  323:  get_field finalVideoPath
+  328:  define_field videoFile
+  333:  get_arg0 0: e
+  334:  get_field coverReady
+  339:  if_false8 349
+  341:  get_arg0 0: e
+  342:  get_field coverFilePath
+  347:  goto8 350
+  349:  push_empty_string
+  350:  define_field coverFile
+  355:  push_0 0
+  356:  lnot
+  357:  define_field complete
+  362:  get_var Date
+  367:  get_field2 now
+  372:  call_method 0
+  375:  define_field time
+  380:  call_method 1
+  383:  drop
+  384:  get_loc0 0: t
+  385:  get_field2 write
+  390:  push_atom_value bili_local_videos
+  395:  get_loc2 2: i
+  396:  call_method 2
+  399:  drop
+  400:  get_loc0 0: t
+  401:  get_field2 read
+  406:  push_atom_value bili_local_videos
+  411:  call_method 1
+  414:  put_loc8 4: o
+  416:  get_var Array
+  421:  get_field2 isArray
+  426:  get_loc8 4: o
+  428:  call_method 1
+  431:  lnot
+  432:  if_false8 438
+  434:  push_1 1
+  435:  lnot
+  436:  nip
+  437:  return
+  438:  push_0 0
+  439:  put_loc8 5: s
+  441:  get_loc8 5: s
+  443:  get_loc8 4: o
+  445:  get_length
+  446:  lt
+  447:  if_false8 507
+  449:  get_loc8 4: o
+  451:  get_loc8 5: s
+  453:  get_array_el
+  454:  if_false8 503
+  456:  get_loc8 4: o
+  458:  get_loc8 5: s
+  460:  get_array_el
+  461:  get_field bvid
+  466:  get_loc1 1: a
+  467:  get_field bvid
+  472:  dup
+  473:  if_true8 477
+  475:  drop
+  476:  push_empty_string
+  477:  strict_eq
+  478:  if_false8 503
+  480:  get_loc8 4: o
+  482:  get_loc8 5: s
+  484:  get_array_el
+  485:  get_field videoFile
+  490:  get_arg0 0: e
+  491:  get_field finalVideoPath
+  496:  strict_eq
+  497:  if_false8 503
+  499:  push_0 0
+  500:  lnot
+  501:  nip
+  502:  return
+  503:  inc_loc 5: s
+  505:  goto8 441
+  507:  push_1 1
+  508:  lnot
+  509:  nip
+  510:  return
+  511:  put_loc8 6: e
+  513:  catch 522
+  518:  push_1 1
+  519:  lnot
+  520:  nip
+  521:  return
+  522:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: var t
+    1: var a
+    2: var i
+    3: var r
+    4: var o
+    5: var s
+    6: var l
+    7: var this
+  closure vars:
+    0: n parent:loc7 var
+  stack_size: 8
+  opcodes:
+    0:  push_this
+    1:  put_loc8 7: this
+    3:  get_arg0 0: e
+    4:  if_false 302
+    9:  get_arg0 0: e
+   10:  get_field finalizing
+   15:  lnot
+   16:  if_false 302
+   21:  push_atom_value downloading
+   26:  get_arg0 0: e
+   27:  get_field status
+   32:  strict_eq
+   33:  if_false 302
+   38:  get_arg0 0: e
+   39:  push_0 0
+   40:  lnot
+   41:  put_field finalizing
+   46:  get_loc8 7: this
+   48:  put_loc0 0: t
+   49:  get_var_ref0 0: n
+   50:  get_loc8 7: this
+   52:  call1 1
+   53:  set_loc1 1: a
+   54:  lnot
+   55:  dup
+   56:  if_true8 72
+   58:  drop
+   59:  push_atom_value function
+   64:  get_loc1 1: a
+   65:  get_field getFileSizeAsync
+   70:  typeof
+   71:  neq
+   72:  if_false8 102
+   74:  get_loc0 0: t
+   75:  get_field2 removeBiliPartFile
+   80:  get_arg0 0: e
+   81:  call_method 1
+   84:  drop
+   85:  get_loc0 0: t
+   86:  get_field2 finishBiliDownloadTask
+   91:  get_arg0 0: e
+   92:  push_atom_value "\u00e6\u0097\u00a0\u00e6\u00b3\u0095\u00e6\u00a0\u00a1\u00e9\u00aa\u008c\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e6\u0096\u0087\u00e4\u00bb\u00b6"
+   97:  call_method 2
+  100:  drop
+  101:  return_undef
+  102:  get_arg0 0: e
+  103:  get_field finalVideoPath
+  108:  push_atom_value ".backup."
+  113:  add
+  114:  get_arg0 0: e
+  115:  get_field taskId
+  120:  add
+  121:  put_loc2 2: i
+  122:  push_1 1
+  123:  lnot
+  124:  put_loc3 3: r
+  125:  push_1 1
+  126:  lnot
+  127:  put_loc8 4: o
+  129:  push_1 1
+  130:  lnot
+  131:  put_loc8 5: s
+  133:  get_arg0 0: e
+  134:  get_field coverCandidateReady
+  139:  if_false8 191
+  141:  get_var Promise
+  146:  get_field2 resolve
+  151:  get_loc1 1: a
+  152:  get_field2 getFileSizeAsync
+  157:  get_arg0 0: e
+  158:  get_field coverPartPath
+  163:  call_method 1
+  166:  call_method 1
+  169:  get_field2 then
+  174:  fclosure8 0: [bytecode <null>]
+  176:  call_method 1
+  179:  get_field2 catch
+  184:  fclosure8 1: [bytecode <null>]
+  186:  call_method 1
+  189:  goto8 205
+  191:  get_var Promise
+  196:  get_field2 resolve
+  201:  push_minus1 -1
+  202:  call_method 1
+  205:  put_loc8 6: l
+  207:  get_var Promise
+  212:  get_field2 all
+  217:  get_var Promise
+  222:  get_field2 resolve
+  227:  get_loc1 1: a
+  228:  get_field2 getFileSizeAsync
+  233:  get_arg0 0: e
+  234:  get_field partVideoPath
+  239:  call_method 1
+  242:  call_method 1
+  245:  get_var Promise
+  250:  get_field2 resolve
+  255:  get_loc1 1: a
+  256:  get_field2 getFileSizeAsync
+  261:  get_arg0 0: e
+  262:  get_field finalVideoPath
+  267:  call_method 1
+  270:  call_method 1
+  273:  get_loc8 6: l
+  275:  array_from 3
+  278:  call_method 1
+  281:  get_field2 then
+  286:  fclosure8 2: [bytecode <null>]
+  288:  call_method 1
+  291:  get_field2 catch
+  296:  fclosure8 3: [bytecode <null>]
+  298:  call_method 1
+  301:  drop
+  302:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e
+  stack_size: 2
+  opcodes:
+    0:  get_var Number
+    5:  get_arg0 0: e
+    6:  tail_call 1
+
+
+/* ===== function depth=2 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  stack_size: 1
+  opcodes:
+    0:  push_minus1 -1
+    1:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: a
+  locals:
+    0: var n
+    1: var l
+    2: var c
+    3: var d
+    4: var f
+    5: var h
+    6: var u
+    7: var g
+    8: catch t [level:15 next:-1]
+  closure vars:
+    0: e local:arg0 var
+    1: t local:loc0 var
+    2: i local:loc2 var
+    3: r local:loc3 var
+    4: o local:loc4 var
+    5: s local:loc5 var
+  stack_size: 5
+  opcodes:
+    0:  get_var Number
+    5:  get_arg0 0: a
+    6:  push_0 0
+    7:  get_array_el
+    8:  call1 1
+    9:  put_loc0 0: n
+   10:  get_var Number
+   15:  get_arg0 0: a
+   16:  push_1 1
+   17:  get_array_el
+   18:  call1 1
+   19:  put_loc1 1: l
+   20:  get_var Number
+   25:  get_arg0 0: a
+   26:  push_2 2
+   27:  get_array_el
+   28:  call1 1
+   29:  put_loc2 2: c
+   30:  get_loc0 0: n
+   31:  push_0 0
+   32:  gt
+   33:  lnot
+   34:  if_false8 51
+   36:  get_var Error
+   41:  dup
+   42:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e6\u0096\u0087\u00e4\u00bb\u00b6\u00e4\u00b8\u00ba\u00e7\u00a9\u00ba"
+   47:  call_constructor 1
+   50:  throw
+   51:  get_var_ref0 0: e
+   52:  get_field lastTotal
+   57:  push_0 0
+   58:  gt
+   59:  if_false8 86
+   61:  get_loc0 0: n
+   62:  get_var_ref0 0: e
+   63:  get_field lastTotal
+   68:  strict_neq
+   69:  if_false8 86
+   71:  get_var Error
+   76:  dup
+   77:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e6\u0096\u0087\u00e4\u00bb\u00b6\u00e4\u00b8\u008d\u00e5\u00ae\u008c\u00e6\u0095\u00b4"
+   82:  call_constructor 1
+   85:  throw
+   86:  get_var_ref1 1: t
+   87:  get_field otherFiles
+   92:  set_loc3 3: d
+   93:  lnot
+   94:  dup
+   95:  if_true8 111
+   97:  drop
+   98:  push_atom_value function
+  103:  get_loc3 3: d
+  104:  get_field fsAction
+  109:  typeof
+  110:  neq
+  111:  if_false8 128
+  113:  get_var Error
+  118:  dup
+  119:  push_atom_value "\u00e6\u0096\u0087\u00e4\u00bb\u00b6\u00e6\u00a8\u00a1\u00e5\u009d\u0097\u00e6\u009c\u00aa\u00e5\u00b0\u00b1\u00e7\u00bb\u00aa"
+  124:  call_constructor 1
+  127:  throw
+  128:  get_loc1 1: l
+  129:  push_0 0
+  130:  gte
+  131:  if_false8 212
+  133:  get_loc3 3: d
+  134:  get_field2 fsAction
+  139:  object
+  140:  push_atom_value cp
+  145:  define_field cmd
+  150:  get_var_ref0 0: e
+  151:  get_field finalVideoPath
+  156:  define_field path
+  161:  get_var_ref2 2: i
+  162:  define_field newPath
+  167:  call_method 1
+  170:  set_loc8 4: f
+  172:  lnot
+  173:  dup
+  174:  if_true8 192
+  176:  drop
+  177:  push_0 0
+  178:  get_var Number
+  183:  get_loc8 4: f
+  185:  get_field code
+  190:  call1 1
+  191:  strict_neq
+  192:  if_false8 209
+  194:  get_var Error
+  199:  dup
+  200:  push_atom_value "\u00e6\u0097\u00a0\u00e6\u00b3\u0095\u00e5\u00a4\u0087\u00e4\u00bb\u00bd\u00e6\u0097\u00a7\u00e8\u00a7\u0086\u00e9\u00a2\u0091"
+  205:  call_constructor 1
+  208:  throw
+  209:  push_0 0
+  210:  lnot
+  211:  put_var_ref3 3: r
+  212:  get_loc3 3: d
+  213:  get_field2 fsAction
+  218:  object
+  219:  push_atom_value rename
+  224:  define_field cmd
+  229:  get_var_ref0 0: e
+  230:  get_field partVideoPath
+  235:  define_field path
+  240:  get_var_ref0 0: e
+  241:  get_field finalVideoPath
+  246:  define_field newPath
+  251:  call_method 1
+  254:  set_loc8 5: h
+  256:  lnot
+  257:  dup
+  258:  if_true8 276
+  260:  drop
+  261:  push_0 0
+  262:  get_var Number
+  267:  get_loc8 5: h
+  269:  get_field code
+  274:  call1 1
+  275:  strict_neq
+  276:  if_false8 310
+  278:  get_var Error
+  283:  dup
+  284:  get_loc8 5: h
+  286:  dup
+  287:  if_false8 297
+  289:  drop
+  290:  get_loc8 5: h
+  292:  get_field msg
+  297:  dup
+  298:  if_true8 306
+  300:  drop
+  301:  push_atom_value "\u00e6\u008f\u0090\u00e4\u00ba\u00a4\u00e6\u0096\u0087\u00e4\u00bb\u00b6\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  306:  call_constructor 1
+  309:  throw
+  310:  push_0 0
+  311:  lnot
+  312:  put_var_ref 4: o
+  315:  get_var_ref0 0: e
+  316:  push_1 1
+  317:  lnot
+  318:  put_field coverReady
+  323:  get_var_ref1 1: t
+  324:  get_field2 saveCompletedBiliMeta
+  329:  get_var_ref0 0: e
+  330:  call_method 1
+  333:  lnot
+  334:  if_false8 351
+  336:  get_var Error
+  341:  dup
+  342:  push_atom_value "\u00e6\u0094\u00b6\u00e8\u0097\u008f\u00e8\u00ae\u00b0\u00e5\u00bd\u0095\u00e5\u0086\u0099\u00e5\u0085\u00a5\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  347:  call_constructor 1
+  350:  throw
+  351:  push_0 0
+  352:  lnot
+  353:  put_var_ref 5: s
+  356:  get_var_ref3 3: r
+  357:  if_false8 414
+  359:  get_loc3 3: d
+  360:  get_field2 fsAction
+  365:  object
+  366:  push_atom_value rm
+  371:  define_field cmd
+  376:  get_var_ref2 2: i
+  377:  define_field path
+  382:  call_method 1
+  385:  set_loc8 6: u
+  387:  dup
+  388:  if_false8 413
+  390:  drop
+  391:  push_0 0
+  392:  get_var Number
+  397:  get_loc8 6: u
+  399:  get_field code
+  404:  call1 1
+  405:  strict_eq
+  406:  dup
+  407:  if_false8 413
+  409:  drop
+  410:  push_1 1
+  411:  lnot
+  412:  set_var_ref3 3: r
+  413:  drop
+  414:  catch 529
+  419:  get_var_ref0 0: e
+  420:  get_field coverCandidateReady
+  425:  if_false8 526
+  427:  get_loc2 2: c
+  428:  push_0 0
+  429:  gt
+  430:  if_false8 526
+  432:  get_loc3 3: d
+  433:  get_field2 fsAction
+  438:  object
+  439:  push_atom_value rename
+  444:  define_field cmd
+  449:  get_var_ref0 0: e
+  450:  get_field coverPartPath
+  455:  define_field path
+  460:  get_var_ref0 0: e
+  461:  get_field coverFilePath
+  466:  define_field newPath
+  471:  call_method 1
+  474:  put_loc8 7: g
+  476:  get_var_ref0 0: e
+  477:  get_loc8 7: g
+  479:  lnot
+  480:  lnot
+  481:  dup
+  482:  if_false8 500
+  484:  drop
+  485:  push_0 0
+  486:  get_var Number
+  491:  get_loc8 7: g
+  493:  get_field code
+  498:  call1 1
+  499:  strict_eq
+  500:  put_field coverReady
+  505:  get_var_ref0 0: e
+  506:  get_field coverReady
+  511:  dup
+  512:  if_false8 525
+  514:  drop
+  515:  get_var_ref1 1: t
+  516:  get_field2 saveCompletedBiliMeta
+  521:  get_var_ref0 0: e
+  522:  call_method 1
+  525:  drop
+  526:  drop
+  527:  goto8 548
+  529:  put_loc8 8: t
+  531:  catch 547
+  536:  get_var_ref0 0: e
+  537:  push_1 1
+  538:  lnot
+  539:  put_field coverReady
+  544:  drop
+  545:  goto8 548
+  547:  throw
+  548:  get_var_ref0 0: e
+  549:  get_field coverReady
+  554:  dup
+  555:  if_true8 568
+  557:  drop
+  558:  get_var_ref1 1: t
+  559:  get_field2 removeBiliCoverPartFile
+  564:  get_var_ref0 0: e
+  565:  call_method 1
+  568:  drop
+  569:  get_var_ref1 1: t
+  570:  get_field2 finishBiliDownloadTask
+  575:  get_var_ref0 0: e
+  576:  push_empty_string
+  577:  call_method 2
+  580:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: a
+  locals:
+    0: var n
+    1: var l
+    2: var c
+    3: var d
+    4: var f
+  closure vars:
+    0: s local:loc5 var
+    1: t local:loc0 var
+    2: e local:arg0 var
+    3: o local:loc4 var
+    4: r local:loc3 var
+    5: i local:loc2 var
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: s
+    1:  if_false8 27
+    3:  get_var_ref1 1: t
+    4:  get_field2 removeBiliCoverPartFile
+    9:  get_var_ref2 2: e
+   10:  call_method 1
+   13:  drop
+   14:  get_var_ref1 1: t
+   15:  get_field2 finishBiliDownloadTask
+   20:  get_var_ref2 2: e
+   21:  push_empty_string
+   22:  call_method 2
+   25:  drop
+   26:  return_undef
+   27:  push_empty_string
+   28:  put_loc0 0: n
+   29:  get_var_ref1 1: t
+   30:  get_field otherFiles
+   35:  set_loc1 1: l
+   36:  if_false 274
+   41:  push_atom_value function
+   46:  get_loc1 1: l
+   47:  get_field fsAction
+   52:  typeof
+   53:  eq
+   54:  if_false 274
+   59:  get_var_ref3 3: o
+   60:  if_false8 142
+   62:  get_var_ref 4: r
+   65:  if_false8 142
+   67:  get_loc1 1: l
+   68:  get_field2 fsAction
+   73:  object
+   74:  push_atom_value rename
+   79:  define_field cmd
+   84:  get_var_ref 5: i
+   87:  define_field path
+   92:  get_var_ref2 2: e
+   93:  get_field finalVideoPath
+   98:  define_field newPath
+  103:  call_method 1
+  106:  set_loc2 2: c
+  107:  if_false8 132
+  109:  push_0 0
+  110:  get_var Number
+  115:  get_loc2 2: c
+  116:  get_field code
+  121:  call1 1
+  122:  strict_eq
+  123:  if_false8 132
+  125:  push_1 1
+  126:  lnot
+  127:  set_var_ref 4: r
+  130:  goto8 138
+  132:  push_atom_value "\u00ef\u00bc\u008c\u00e4\u00b8\u0094\u00e6\u0097\u00a7\u00e8\u00a7\u0086\u00e9\u00a2\u0091\u00e6\u0081\u00a2\u00e5\u00a4\u008d\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  137:  set_loc0 0: n
+  138:  drop
+  139:  goto16 293
+  142:  get_var_ref3 3: o
+  143:  if_false8 208
+  145:  get_loc1 1: l
+  146:  get_field2 fsAction
+  151:  object
+  152:  push_atom_value rm
+  157:  define_field cmd
+  162:  get_var_ref2 2: e
+  163:  get_field finalVideoPath
+  168:  define_field path
+  173:  call_method 1
+  176:  set_loc3 3: d
+  177:  dup
+  178:  if_false8 195
+  180:  drop
+  181:  push_0 0
+  182:  get_var Number
+  187:  get_loc3 3: d
+  188:  get_field code
+  193:  call1 1
+  194:  strict_eq
+  195:  dup
+  196:  if_true8 205
+  198:  drop
+  199:  push_atom_value "\u00ef\u00bc\u008c\u00e4\u00b8\u0094\u00e6\u0096\u00b0\u00e8\u00a7\u0086\u00e9\u00a2\u0091\u00e6\u00b8\u0085\u00e7\u0090\u0086\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  204:  set_loc0 0: n
+  205:  drop
+  206:  goto8 293
+  208:  get_var_ref 4: r
+  211:  if_false8 293
+  213:  get_loc1 1: l
+  214:  get_field2 fsAction
+  219:  object
+  220:  push_atom_value rm
+  225:  define_field cmd
+  230:  get_var_ref 5: i
+  233:  define_field path
+  238:  call_method 1
+  241:  set_loc8 4: f
+  243:  dup
+  244:  if_false8 271
+  246:  drop
+  247:  push_0 0
+  248:  get_var Number
+  253:  get_loc8 4: f
+  255:  get_field code
+  260:  call1 1
+  261:  strict_eq
+  262:  dup
+  263:  if_false8 271
+  265:  drop
+  266:  push_1 1
+  267:  lnot
+  268:  set_var_ref 4: r
+  271:  drop
+  272:  goto8 293
+  274:  get_var_ref3 3: o
+  275:  dup
+  276:  if_true8 282
+  278:  drop
+  279:  get_var_ref 4: r
+  282:  dup
+  283:  if_false8 292
+  285:  drop
+  286:  push_atom_value "\u00ef\u00bc\u008c\u00e4\u00b8\u0094\u00e6\u0096\u0087\u00e4\u00bb\u00b6\u00e6\u00a8\u00a1\u00e5\u009d\u0097\u00e4\u00b8\u008d\u00e5\u008f\u00af\u00e7\u0094\u00a8\u00ef\u00bc\u008c\u00e6\u0097\u00a0\u00e6\u00b3\u0095\u00e5\u009b\u009e\u00e6\u00bb\u009a"
+  291:  set_loc0 0: n
+  292:  drop
+  293:  get_var_ref1 1: t
+  294:  get_field2 removeBiliPartFile
+  299:  get_var_ref2 2: e
+  300:  call_method 1
+  303:  drop
+  304:  get_var_ref1 1: t
+  305:  get_field2 finishBiliDownloadTask
+  310:  get_var_ref2 2: e
+  311:  get_arg0 0: a
+  312:  if_false8 330
+  314:  get_arg0 0: a
+  315:  get_field message
+  320:  if_false8 330
+  322:  get_arg0 0: a
+  323:  get_field message
+  328:  goto8 337
+  330:  get_var String
+  335:  get_arg0 0: a
+  336:  call1 1
+  337:  get_loc0 0: n
+  338:  add
+  339:  call_method 2
+  342:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var e
+    1: var t
+    2: var a
+    3: var i
+    4: var r
+    5: var o
+    6: catch e [level:7 next:-1]
+    7: var this
+  closure vars:
+    0: c parent:loc9 var
+    1: d parent:loc10 var
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc8 7: this
+    3:  get_var_ref0 0: c
+    4:  get_loc8 7: this
+    6:  call1 1
+    7:  put_loc0 0: e
+    8:  array_from 0
+   11:  put_loc1 1: t
+   12:  get_loc0 0: e
+   13:  if_false8 66
+   15:  push_atom_value function
+   20:  get_loc0 0: e
+   21:  get_field read
+   26:  typeof
+   27:  eq
+   28:  if_false8 66
+   30:  get_loc0 0: e
+   31:  get_field2 read
+   36:  push_atom_value ob_desktop_messages
+   41:  call_method 1
+   44:  put_loc2 2: a
+   45:  get_var Array
+   50:  get_field2 isArray
+   55:  get_loc2 2: a
+   56:  call_method 1
+   59:  dup
+   60:  if_false8 65
+   62:  drop
+   63:  get_loc2 2: a
+   64:  set_loc1 1: t
+   65:  drop
+   66:  array_from 0
+   69:  put_loc3 3: i
+   70:  push_0 0
+   71:  put_loc8 4: r
+   73:  get_loc8 4: r
+   75:  get_loc1 1: t
+   76:  get_length
+   77:  lt
+   78:  if_false8 122
+   80:  get_loc1 1: t
+   81:  get_loc8 4: r
+   83:  get_array_el
+   84:  dup
+   85:  if_false8 117
+   87:  drop
+   88:  push_0 0
+   89:  lnot
+   90:  get_loc1 1: t
+   91:  get_loc8 4: r
+   93:  get_array_el
+   94:  get_field _isBiliDl
+   99:  strict_neq
+  100:  dup
+  101:  if_false8 117
+  103:  drop
+  104:  get_loc3 3: i
+  105:  get_field2 push
+  110:  get_loc1 1: t
+  111:  get_loc8 4: r
+  113:  get_array_el
+  114:  call_method 1
+  117:  drop
+  118:  inc_loc 4: r
+  120:  goto8 73
+  122:  get_loc8 7: this
+  124:  get_field2 buildBiliDownloadDesktopMessages
+  129:  call_method 0
+  132:  set_loc8 5: o
+  134:  get_length
+  135:  push_0 0
+  136:  gt
+  137:  dup
+  138:  if_false8 153
+  140:  drop
+  141:  get_loc8 5: o
+  143:  get_field2 concat
+  148:  get_loc3 3: i
+  149:  call_method 1
+  152:  set_loc3 3: i
+  153:  drop
+  154:  get_loc0 0: e
+  155:  if_false8 207
+  157:  push_atom_value function
+  162:  get_loc0 0: e
+  163:  get_field write
+  168:  typeof
+  169:  eq
+  170:  if_false8 207
+  172:  catch 196
+  177:  get_loc0 0: e
+  178:  get_field2 write
+  183:  push_atom_value ob_desktop_messages
+  188:  get_loc3 3: i
+  189:  call_method 2
+  192:  drop
+  193:  drop
+  194:  goto8 207
+  196:  put_loc8 6: e
+  198:  catch 206
+  203:  drop
+  204:  goto8 207
+  206:  throw
+  207:  get_var_ref1 1: d
+  208:  push_atom_value desktop_notification_pushed
+  213:  object
+  214:  get_loc3 3: i
+  215:  define_field allMessages
+  220:  call2 2
+  221:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  closure vars:
+    0: e parent:loc0 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field biliDlPollTimer
+    8:  lnot
+    9:  if_false8 28
+   11:  get_loc1 1: this
+   12:  put_loc0 0: t
+   13:  get_loc1 1: this
+   14:  get_var_ref_check 0: e
+   17:  fclosure8 0: [bytecode <null>]
+   19:  push_i16 500
+   22:  call2 2
+   23:  put_field biliDlPollTimer
+   28:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var e
+    1: var a
+    2: var i
+    3: var r
+    4: var o
+    5: catch d [level:9 next:-1]
+    6: var s
+    7: var n
+    8: catch d [level:13 next:-1]
+    9: catch d [level:18 next:-1]
+   10: var l
+   11: var c
+   12: var d
+   13: var f
+   14: var h
+   15: catch d [level:29 next:-1]
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 5
+  opcodes:
+    0:  push_0 0
+    1:  lnot
+    2:  put_loc0 0: e
+    3:  push_1 1
+    4:  lnot
+    5:  put_loc1 1: a
+    6:  push_0 0
+    7:  put_loc2 2: i
+    8:  get_loc2 2: i
+    9:  get_var_ref0 0: t
+   10:  get_field biliDlTasks
+   15:  get_length
+   16:  lt
+   17:  if_false 789
+   22:  get_var_ref0 0: t
+   23:  get_field biliDlTasks
+   28:  get_loc2 2: i
+   29:  get_array_el
+   30:  put_loc3 3: r
+   31:  push_atom_value downloading
+   36:  get_loc3 3: r
+   37:  get_field status
+   42:  strict_eq
+   43:  if_false 784
+   48:  push_1 1
+   49:  lnot
+   50:  put_loc0 0: e
+   51:  get_loc3 3: r
+   52:  get_field finalizing
+   57:  lnot
+   58:  if_false 784
+   63:  get_loc3 3: r
+   64:  get_field coverHandle
+   69:  if_false 318
+   74:  array_from 0
+   77:  put_loc8 4: o
+   79:  catch 103
+   84:  get_loc3 3: r
+   85:  get_field coverHandle
+   90:  get_field2 poll
+   95:  call_method 0
+   98:  put_loc8 4: o
+  100:  drop
+  101:  goto8 114
+  103:  put_loc8 5: d
+  105:  catch 113
+  110:  drop
+  111:  goto8 114
+  113:  throw
+  114:  push_0 0
+  115:  put_loc8 6: s
+  117:  get_loc8 6: s
+  119:  get_loc8 4: o
+  121:  get_length
+  122:  lt
+  123:  if_false8 188
+  125:  push_atom_value done
+  130:  get_loc8 4: o
+  132:  get_loc8 6: s
+  134:  get_array_el
+  135:  get_field type
+  140:  strict_eq
+  141:  if_false8 154
+  143:  get_loc3 3: r
+  144:  push_0 0
+  145:  lnot
+  146:  insert2
+  147:  put_field sawCoverDone
+  152:  goto8 183
+  154:  push_atom_value error
+  159:  get_loc8 4: o
+  161:  get_loc8 6: s
+  163:  get_array_el
+  164:  get_field type
+  169:  strict_eq
+  170:  dup
+  171:  if_false8 183
+  173:  drop
+  174:  get_loc3 3: r
+  175:  push_0 0
+  176:  lnot
+  177:  insert2
+  178:  put_field sawCoverError
+  183:  drop
+  184:  inc_loc 6: s
+  186:  goto8 117
+  188:  push_1 1
+  189:  lnot
+  190:  put_loc8 7: n
+  192:  catch 218
+  197:  get_loc3 3: r
+  198:  get_field coverHandle
+  203:  get_field2 isFinished
+  208:  call_method 0
+  211:  lnot
+  212:  lnot
+  213:  put_loc8 7: n
+  215:  drop
+  216:  goto8 229
+  218:  put_loc8 8: d
+  220:  catch 228
+  225:  drop
+  226:  goto8 229
+  228:  throw
+  229:  get_loc8 7: n
+  231:  if_false8 318
+  233:  catch 256
+  238:  get_loc3 3: r
+  239:  get_field coverHandle
+  244:  get_field2 destroy
+  249:  call_method 0
+  252:  drop
+  253:  drop
+  254:  goto8 267
+  256:  put_loc8 9: d
+  258:  catch 266
+  263:  drop
+  264:  goto8 267
+  266:  throw
+  267:  get_loc3 3: r
+  268:  null
+  269:  put_field coverHandle
+  274:  get_loc3 3: r
+  275:  get_loc3 3: r
+  276:  get_field sawCoverDone
+  281:  dup
+  282:  if_false8 292
+  284:  drop
+  285:  get_loc3 3: r
+  286:  get_field sawCoverError
+  291:  lnot
+  292:  put_field coverCandidateReady
+  297:  get_loc3 3: r
+  298:  get_field coverCandidateReady
+  303:  dup
+  304:  if_true8 317
+  306:  drop
+  307:  get_var_ref0 0: t
+  308:  get_field2 removeBiliCoverPartFile
+  313:  get_loc3 3: r
+  314:  call_method 1
+  317:  drop
+  318:  get_loc3 3: r
+  319:  get_field videoHandle
+  324:  if_false 757
+  329:  get_loc3 3: r
+  330:  get_field videoHandle
+  335:  get_field2 poll
+  340:  call_method 0
+  343:  put_loc8 10: l
+  345:  push_0 0
+  346:  put_loc8 11: c
+  348:  get_loc8 11: c
+  350:  get_loc8 10: l
+  352:  get_length
+  353:  lt
+  354:  if_false 591
+  359:  get_loc8 10: l
+  361:  get_loc8 11: c
+  363:  get_array_el
+  364:  put_loc8 12: d
+  366:  push_atom_value progress
+  371:  get_loc8 12: d
+  373:  get_field type
+  378:  strict_eq
+  379:  if_false 511
+  384:  get_loc3 3: r
+  385:  get_var Number
+  390:  get_loc8 12: d
+  392:  get_field downloaded
+  397:  call1 1
+  398:  dup
+  399:  if_true8 403
+  401:  drop
+  402:  push_0 0
+  403:  put_field lastDownloaded
+  408:  get_loc3 3: r
+  409:  get_var Number
+  414:  get_loc8 12: d
+  416:  get_field total
+  421:  call1 1
+  422:  dup
+  423:  if_true8 437
+  425:  drop
+  426:  get_loc3 3: r
+  427:  get_field lastTotal
+  432:  dup
+  433:  if_true8 437
+  435:  drop
+  436:  push_0 0
+  437:  put_field lastTotal
+  442:  get_loc3 3: r
+  443:  get_field lastTotal
+  448:  push_0 0
+  449:  gt
+  450:  if_false 586
+  455:  get_var Math
+  460:  get_field2 round
+  465:  get_loc3 3: r
+  466:  get_field lastDownloaded
+  471:  get_loc3 3: r
+  472:  get_field lastTotal
+  477:  div
+  478:  push_i8 100
+  480:  mul
+  481:  call_method 1
+  484:  set_loc8 13: f
+  486:  get_loc3 3: r
+  487:  get_field progress
+  492:  strict_neq
+  493:  dup
+  494:  if_false8 508
+  496:  drop
+  497:  get_loc3 3: r
+  498:  get_loc8 13: f
+  500:  put_field progress
+  505:  push_0 0
+  506:  lnot
+  507:  set_loc1 1: a
+  508:  drop
+  509:  goto8 586
+  511:  push_atom_value done
+  516:  get_loc8 12: d
+  518:  get_field type
+  523:  strict_eq
+  524:  if_false8 537
+  526:  get_loc3 3: r
+  527:  push_0 0
+  528:  lnot
+  529:  insert2
+  530:  put_field sawVideoDone
+  535:  goto8 585
+  537:  push_atom_value error
+  542:  get_loc8 12: d
+  544:  get_field type
+  549:  strict_eq
+  550:  dup
+  551:  if_false8 585
+  553:  drop
+  554:  get_loc3 3: r
+  555:  push_0 0
+  556:  lnot
+  557:  put_field sawVideoError
+  562:  get_loc3 3: r
+  563:  get_loc8 12: d
+  565:  get_field message
+  570:  dup
+  571:  if_true8 579
+  573:  drop
+  574:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  579:  insert2
+  580:  put_field errorMsg
+  585:  drop
+  586:  inc_loc 11: c
+  588:  goto16 348
+  591:  push_1 1
+  592:  lnot
+  593:  put_loc8 14: h
+  595:  catch 621
+  600:  get_loc3 3: r
+  601:  get_field videoHandle
+  606:  get_field2 isFinished
+  611:  call_method 0
+  614:  lnot
+  615:  lnot
+  616:  put_loc8 14: h
+  618:  drop
+  619:  goto8 632
+  621:  put_loc8 15: d
+  623:  catch 631
+  628:  drop
+  629:  goto8 632
+  631:  throw
+  632:  get_loc8 14: h
+  634:  dup
+  635:  if_false8 754
+  637:  drop
+  638:  get_loc3 3: r
+  639:  get_field sawVideoError
+  644:  if_false8 684
+  646:  get_var_ref0 0: t
+  647:  get_field2 removeBiliPartFile
+  652:  get_loc3 3: r
+  653:  call_method 1
+  656:  drop
+  657:  get_var_ref0 0: t
+  658:  get_field2 finishBiliDownloadTask
+  663:  get_loc3 3: r
+  664:  get_loc3 3: r
+  665:  get_field errorMsg
+  670:  dup
+  671:  if_true8 679
+  673:  drop
+  674:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  679:  call_method 2
+  682:  goto8 754
+  684:  get_loc3 3: r
+  685:  get_field sawVideoDone
+  690:  if_false8 704
+  692:  get_var_ref0 0: t
+  693:  get_field2 finalizeBiliDownload
+  698:  get_loc3 3: r
+  699:  call_method 1
+  702:  goto8 754
+  704:  get_loc3 3: r
+  705:  get_field2 terminalMissingTicks
+  710:  inc
+  711:  put_field terminalMissingTicks
+  716:  get_loc3 3: r
+  717:  get_field terminalMissingTicks
+  722:  push_2 2
+  723:  gte
+  724:  dup
+  725:  if_false8 754
+  727:  drop
+  728:  get_var_ref0 0: t
+  729:  get_field2 removeBiliPartFile
+  734:  get_loc3 3: r
+  735:  call_method 1
+  738:  drop
+  739:  get_var_ref0 0: t
+  740:  get_field2 finishBiliDownloadTask
+  745:  get_loc3 3: r
+  746:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e7\u00bb\u0093\u00e6\u009d\u009f\u00e4\u00bd\u0086\u00e7\u00bc\u00ba\u00e5\u00b0\u0091\u00e5\u00ae\u008c\u00e6\u0088\u0090\u00e7\u008a\u00b6\u00e6\u0080\u0081"
+  751:  call_method 2
+  754:  drop
+  755:  goto8 784
+  757:  get_var_ref0 0: t
+  758:  get_field2 removeBiliPartFile
+  763:  get_loc3 3: r
+  764:  call_method 1
+  767:  drop
+  768:  get_var_ref0 0: t
+  769:  get_field2 finishBiliDownloadTask
+  774:  get_loc3 3: r
+  775:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e5\u008f\u00a5\u00e6\u009f\u0084\u00e6\u0097\u00a0\u00e6\u0095\u0088"
+  780:  call_method 2
+  783:  drop
+  784:  inc_loc 2: i
+  786:  goto16 8
+  789:  get_loc1 1: a
+  790:  dup
+  791:  if_false8 803
+  793:  drop
+  794:  get_var_ref0 0: t
+  795:  get_field2 updateBiliDownloadMessage
+  800:  call_method 0
+  803:  drop
+  804:  get_loc0 0: e
+  805:  dup
+  806:  if_false8 818
+  808:  drop
+  809:  get_var_ref0 0: t
+  810:  get_field2 stopBiliDlPoll
+  815:  call_method 0
+  818:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: t parent:loc1 const
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field biliDlPollTimer
+    8:  dup
+    9:  if_false8 31
+   11:  drop
+   12:  get_var_ref_check 0: t
+   15:  get_loc0 0: this
+   16:  get_field biliDlPollTimer
+   21:  call1 1
+   22:  drop
+   23:  get_loc0 0: this
+   24:  null
+   25:  insert2
+   26:  put_field biliDlPollTimer
+   31:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var e
+    1: var t
+    2: var a
+    3: var i
+    4: var r
+    5: var o
+    6: var s
+    7: var n
+    8: catch e [level:9 next:-1]
+    9: var this
+  closure vars:
+    0: c parent:loc9 var
+    1: d parent:loc10 var
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc8 9: this
+    3:  array_from 0
+    6:  put_loc0 0: e
+    7:  push_0 0
+    8:  put_loc1 1: t
+    9:  get_loc1 1: t
+   10:  get_loc8 9: this
+   12:  get_field biliDlTasks
+   17:  get_length
+   18:  lt
+   19:  if_false8 66
+   21:  get_loc8 9: this
+   23:  get_field biliDlTasks
+   28:  get_loc1 1: t
+   29:  get_array_el
+   30:  set_loc2 2: a
+   31:  dup
+   32:  if_false8 61
+   34:  drop
+   35:  push_atom_value downloading
+   40:  get_loc2 2: a
+   41:  get_field status
+   46:  strict_eq
+   47:  dup
+   48:  if_false8 61
+   50:  drop
+   51:  get_loc0 0: e
+   52:  get_field2 push
+   57:  get_loc2 2: a
+   58:  call_method 1
+   61:  drop
+   62:  inc_loc 1: t
+   64:  goto8 9
+   66:  get_loc8 9: this
+   68:  get_loc0 0: e
+   69:  put_field biliDlTasks
+   74:  get_var_ref0 0: c
+   75:  get_loc8 9: this
+   77:  call1 1
+   78:  set_loc3 3: i
+   79:  if_false 329
+   84:  push_atom_value function
+   89:  get_loc3 3: i
+   90:  get_field read
+   95:  typeof
+   96:  eq
+   97:  if_false 329
+  102:  push_atom_value function
+  107:  get_loc3 3: i
+  108:  get_field write
+  113:  typeof
+  114:  eq
+  115:  if_false 329
+  120:  catch 319
+  125:  get_loc3 3: i
+  126:  get_field2 read
+  131:  push_atom_value ob_desktop_messages
+  136:  call_method 1
+  139:  dup
+  140:  if_true8 146
+  142:  drop
+  143:  array_from 0
+  146:  put_loc8 4: r
+  148:  get_var Array
+  153:  get_field2 isArray
+  158:  get_loc8 4: r
+  160:  call_method 1
+  163:  if_false 317
+  168:  array_from 0
+  171:  put_loc8 5: o
+  173:  push_0 0
+  174:  put_loc8 6: s
+  176:  get_loc8 6: s
+  178:  get_loc8 4: r
+  180:  get_length
+  181:  lt
+  182:  if_false8 250
+  184:  get_loc8 4: r
+  186:  get_loc8 6: s
+  188:  get_array_el
+  189:  dup
+  190:  if_false8 245
+  192:  drop
+  193:  push_0 0
+  194:  lnot
+  195:  get_loc8 4: r
+  197:  get_loc8 6: s
+  199:  get_array_el
+  200:  get_field _isBiliDl
+  205:  strict_neq
+  206:  dup
+  207:  if_false8 245
+  209:  drop
+  210:  push_atom_value bilibili
+  215:  get_loc8 4: r
+  217:  get_loc8 6: s
+  219:  get_array_el
+  220:  get_field route
+  225:  strict_neq
+  226:  dup
+  227:  if_false8 245
+  229:  drop
+  230:  get_loc8 5: o
+  232:  get_field2 push
+  237:  get_loc8 4: r
+  239:  get_loc8 6: s
+  241:  get_array_el
+  242:  call_method 1
+  245:  drop
+  246:  inc_loc 6: s
+  248:  goto8 176
+  250:  get_loc8 9: this
+  252:  get_field2 buildBiliDownloadDesktopMessages
+  257:  call_method 0
+  260:  set_loc8 7: n
+  262:  get_length
+  263:  push_0 0
+  264:  gt
+  265:  dup
+  266:  if_false8 283
+  268:  drop
+  269:  get_loc8 7: n
+  271:  get_field2 concat
+  276:  get_loc8 5: o
+  278:  call_method 1
+  281:  set_loc8 5: o
+  283:  drop
+  284:  get_loc3 3: i
+  285:  get_field2 write
+  290:  push_atom_value ob_desktop_messages
+  295:  get_loc8 5: o
+  297:  call_method 2
+  300:  drop
+  301:  get_var_ref1 1: d
+  302:  push_atom_value desktop_notification_pushed
+  307:  object
+  308:  get_loc8 5: o
+  310:  define_field allMessages
+  315:  call2 2
+  316:  drop
+  317:  drop
+  318:  return_undef
+  319:  put_loc8 8: e
+  321:  catch 328
+  326:  drop
+  327:  return_undef
+  328:  throw
+  329:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch e [level:3 next:-1]
+    1: var this
+  closure vars:
+    0: h parent:loc12 var
+    1: y parent:loc17 var
+    2: w parent:loc21 var
+    3: p parent:loc16 var
+    4: d parent:loc10 var
+    5: c parent:loc9 var
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  push_atom_value function
+    7:  get_loc1 1: this
+    8:  get_field logDesktopTrace
+   13:  typeof
+   14:  eq
+   15:  dup
+   16:  if_false8 33
+   18:  drop
+   19:  get_loc1 1: this
+   20:  get_field2 logDesktopTrace
+   25:  push_atom_value other_aiAssis_sync_begin
+   30:  call_method 1
+   33:  drop
+   34:  catch 51
+   39:  fclosure8 0: [bytecode <null>]
+   41:  get_loc1 1: this
+   42:  null
+   43:  push_0 0
+   44:  lnot
+   45:  call3 3
+   46:  lnot
+   47:  drop
+   48:  drop
+   49:  goto8 61
+   51:  put_loc0 0: e
+   52:  catch 60
+   57:  drop
+   58:  goto8 61
+   60:  throw
+   61:  fclosure8 1: [bytecode <null>]
+   63:  get_var_ref 5: c
+   66:  get_loc1 1: this
+   67:  call1 1
+   68:  call1 1
+   69:  lnot
+   70:  drop
+   71:  push_atom_value function
+   76:  get_loc1 1: this
+   77:  get_field logDesktopTrace
+   82:  typeof
+   83:  eq
+   84:  dup
+   85:  if_false8 102
+   87:  drop
+   88:  get_loc1 1: this
+   89:  get_field2 logDesktopTrace
+   94:  push_atom_value other_aiAssis_sync_end
+   99:  call_method 1
+  102:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e t a
+  locals:
+    0: var i
+    1: var r
+  closure vars:
+    0: h parent:loc0 var
+    1: y parent:loc1 var
+    2: w parent:loc2 var
+    3: p parent:loc3 var
+  stack_size: 3
+  opcodes:
+    0:  get_arg2 2: a
+    1:  lnot
+    2:  lnot
+    3:  put_loc0 0: i
+    4:  get_arg1 1: t
+    5:  if_false 144
+   10:  get_arg1 1: t
+   11:  get_field default
+   16:  if_false8 26
+   18:  get_arg1 1: t
+   19:  get_field default
+   24:  goto8 27
+   26:  get_arg1 1: t
+   27:  put_loc1 1: r
+   28:  get_var_ref0 0: h
+   29:  get_loc1 1: r
+   30:  get_field Fetch
+   35:  dup
+   36:  if_true8 55
+   38:  drop
+   39:  get_arg1 1: t
+   40:  get_field Fetch
+   45:  dup
+   46:  if_true8 55
+   48:  drop
+   49:  get_var_ref0 0: h
+   50:  get_field Fetch
+   55:  put_field Fetch
+   60:  get_var_ref0 0: h
+   61:  get_loc1 1: r
+   62:  get_field Datas
+   67:  dup
+   68:  if_true8 107
+   70:  drop
+   71:  get_loc1 1: r
+   72:  get_field Dbase
+   77:  dup
+   78:  if_true8 107
+   80:  drop
+   81:  get_arg1 1: t
+   82:  get_field Datas
+   87:  dup
+   88:  if_true8 107
+   90:  drop
+   91:  get_arg1 1: t
+   92:  get_field Dbase
+   97:  dup
+   98:  if_true8 107
+  100:  drop
+  101:  get_var_ref0 0: h
+  102:  get_field Dbase
+  107:  put_field Dbase
+  112:  get_var_ref0 0: h
+  113:  get_loc1 1: r
+  114:  get_field Shell
+  119:  dup
+  120:  if_true8 139
+  122:  drop
+  123:  get_arg1 1: t
+  124:  get_field Shell
+  129:  dup
+  130:  if_true8 139
+  132:  drop
+  133:  get_var_ref0 0: h
+  134:  get_field Shell
+  139:  put_field Shell
+  144:  get_arg0 0: e
+  145:  dup
+  146:  if_false 402
+  151:  drop
+  152:  get_var_ref0 0: h
+  153:  get_arg0 0: e
+  154:  get_field Fetch
+  159:  dup
+  160:  if_true8 194
+  162:  drop
+  163:  get_arg0 0: e
+  164:  get_field bridge
+  169:  dup
+  170:  if_false8 184
+  172:  drop
+  173:  get_arg0 0: e
+  174:  get_field bridge
+  179:  get_field Fetch
+  184:  dup
+  185:  if_true8 194
+  187:  drop
+  188:  get_var_ref0 0: h
+  189:  get_field Fetch
+  194:  put_field Fetch
+  199:  get_var_ref0 0: h
+  200:  get_arg0 0: e
+  201:  get_field Dbase
+  206:  dup
+  207:  if_true8 226
+  209:  drop
+  210:  get_arg0 0: e
+  211:  get_field $Dbase
+  216:  dup
+  217:  if_true8 226
+  219:  drop
+  220:  get_var_ref0 0: h
+  221:  get_field Dbase
+  226:  put_field Dbase
+  231:  get_var_ref0 0: h
+  232:  get_arg0 0: e
+  233:  get_field shell
+  238:  dup
+  239:  if_true8 258
+  241:  drop
+  242:  get_arg0 0: e
+  243:  get_field Shell
+  248:  dup
+  249:  if_true8 258
+  251:  drop
+  252:  get_var_ref0 0: h
+  253:  get_field Shell
+  258:  put_field Shell
+  263:  get_arg0 0: e
+  264:  get_field fixedApiBase
+  269:  dup
+  270:  if_true8 279
+  272:  drop
+  273:  get_arg0 0: e
+  274:  get_field apiBase
+  279:  dup
+  280:  if_false8 306
+  282:  drop
+  283:  get_var_ref0 0: h
+  284:  get_arg0 0: e
+  285:  get_field fixedApiBase
+  290:  dup
+  291:  if_true8 300
+  293:  drop
+  294:  get_arg0 0: e
+  295:  get_field apiBase
+  300:  insert2
+  301:  put_field apiBase
+  306:  drop
+  307:  get_arg0 0: e
+  308:  get_field flashModel
+  313:  dup
+  314:  if_false8 330
+  316:  drop
+  317:  get_var_ref0 0: h
+  318:  get_arg0 0: e
+  319:  get_field flashModel
+  324:  insert2
+  325:  put_field flashModel
+  330:  drop
+  331:  get_arg0 0: e
+  332:  get_field plusModel
+  337:  dup
+  338:  if_false8 354
+  340:  drop
+  341:  get_var_ref0 0: h
+  342:  get_arg0 0: e
+  343:  get_field plusModel
+  348:  insert2
+  349:  put_field plusModel
+  354:  drop
+  355:  get_arg0 0: e
+  356:  get_field storageKey
+  361:  dup
+  362:  if_false8 378
+  364:  drop
+  365:  get_var_ref0 0: h
+  366:  get_arg0 0: e
+  367:  get_field storageKey
+  372:  insert2
+  373:  put_field storageKey
+  378:  drop
+  379:  get_arg0 0: e
+  380:  get_field loginSessionKey
+  385:  dup
+  386:  if_false8 402
+  388:  drop
+  389:  get_var_ref0 0: h
+  390:  get_arg0 0: e
+  391:  get_field loginSessionKey
+  396:  insert2
+  397:  put_field loginSessionKey
+  402:  drop
+  403:  get_var_ref0 0: h
+  404:  get_field inited
+  409:  if_false8 440
+  411:  get_var_ref0 0: h
+  412:  get_field metaOnly
+  417:  if_false8 437
+  419:  get_loc0 0: i
+  420:  lnot
+  421:  if_false8 437
+  423:  get_var_ref0 0: h
+  424:  push_1 1
+  425:  lnot
+  426:  put_field metaOnly
+  431:  get_var_ref1 1: y
+  432:  call0 0
+  433:  drop
+  434:  get_var_ref2 2: w
+  435:  call0 0
+  436:  return_undef
+  437:  get_var_ref3 3: p
+  438:  call0 0
+  439:  return_undef
+  440:  get_var_ref0 0: h
+  441:  push_0 0
+  442:  lnot
+  443:  put_field inited
+  448:  get_var_ref0 0: h
+  449:  get_loc0 0: i
+  450:  put_field metaOnly
+  455:  get_var_ref1 1: y
+  456:  call0 0
+  457:  drop
+  458:  get_var_ref0 0: h
+  459:  get_field metaOnly
+  464:  dup
+  465:  if_true8 470
+  467:  drop
+  468:  get_var_ref2 2: w
+  469:  call0 0
+  470:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: var t
+    1: var a
+    2: catch e [level:4 next:-1]
+    3: var i
+    4: var r
+    5: catch e [level:9 next:-1]
+  closure vars:
+    0: h parent:loc0 var
+    1: d parent:loc4 var
+  stack_size: 5
+  opcodes:
+    0:  get_arg0 0: e
+    1:  lnot
+    2:  dup
+    3:  if_true8 36
+    5:  drop
+    6:  push_atom_value function
+   11:  get_arg0 0: e
+   12:  get_field read
+   17:  typeof
+   18:  neq
+   19:  dup
+   20:  if_true8 36
+   22:  drop
+   23:  push_atom_value function
+   28:  get_arg0 0: e
+   29:  get_field write
+   34:  typeof
+   35:  neq
+   36:  if_false8 39
+   38:  return_undef
+   39:  array_from 0
+   42:  put_loc0 0: t
+   43:  catch 87
+   48:  get_arg0 0: e
+   49:  get_field2 read
+   54:  push_atom_value ob_desktop_messages
+   59:  call_method 1
+   62:  put_loc1 1: a
+   63:  get_var Array
+   68:  get_field2 isArray
+   73:  get_loc1 1: a
+   74:  call_method 1
+   77:  dup
+   78:  if_false8 83
+   80:  drop
+   81:  get_loc1 1: a
+   82:  set_loc0 0: t
+   83:  drop
+   84:  drop
+   85:  goto8 97
+   87:  put_loc2 2: e
+   88:  catch 96
+   93:  drop
+   94:  goto8 97
+   96:  throw
+   97:  array_from 0
+  100:  put_loc3 3: i
+  101:  push_0 0
+  102:  put_loc8 4: r
+  104:  get_loc8 4: r
+  106:  get_loc0 0: t
+  107:  get_length
+  108:  lt
+  109:  if_false8 153
+  111:  get_loc0 0: t
+  112:  get_loc8 4: r
+  114:  get_array_el
+  115:  dup
+  116:  if_false8 148
+  118:  drop
+  119:  push_0 0
+  120:  lnot
+  121:  get_loc0 0: t
+  122:  get_loc8 4: r
+  124:  get_array_el
+  125:  get_field _isAiAssis
+  130:  strict_neq
+  131:  dup
+  132:  if_false8 148
+  134:  drop
+  135:  get_loc3 3: i
+  136:  get_field2 push
+  141:  get_loc0 0: t
+  142:  get_loc8 4: r
+  144:  get_array_el
+  145:  call_method 1
+  148:  drop
+  149:  inc_loc 4: r
+  151:  goto8 104
+  153:  fclosure8 0: [bytecode <null>]
+  155:  get_var_ref0 0: h
+  156:  get_field state
+  161:  call1 1
+  162:  get_field2 concat
+  167:  get_loc3 3: i
+  168:  call_method 1
+  171:  put_loc3 3: i
+  172:  get_var JSON
+  177:  get_field2 stringify
+  182:  get_loc0 0: t
+  183:  call_method 1
+  186:  get_var JSON
+  191:  get_field2 stringify
+  196:  get_loc3 3: i
+  197:  call_method 1
+  200:  strict_eq
+  201:  if_false8 204
+  203:  return_undef
+  204:  catch 228
+  209:  get_arg0 0: e
+  210:  get_field2 write
+  215:  push_atom_value ob_desktop_messages
+  220:  get_loc3 3: i
+  221:  call_method 2
+  224:  drop
+  225:  drop
+  226:  goto8 239
+  228:  put_loc8 5: e
+  230:  catch 238
+  235:  drop
+  236:  goto8 239
+  238:  throw
+  239:  get_var_ref1 1: d
+  240:  push_atom_value desktop_notification_pushed
+  245:  object
+  246:  get_loc3 3: i
+  247:  define_field allMessages
+  252:  call2 2
+  253:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: var t
+    1: var a
+    2: var i
+    3: var r
+    4: var o
+    5: var s
+    6: var n
+    7: var l
+    8: var c
+    9: var d
+   10: var f
+   11: var h
+  stack_size: 8
+  opcodes:
+    0:  get_arg0 0: e
+    1:  lnot
+    2:  dup
+    3:  if_true8 13
+    5:  drop
+    6:  get_arg0 0: e
+    7:  get_field runs
+   12:  lnot
+   13:  if_false8 19
+   15:  array_from 0
+   18:  return
+   19:  array_from 0
+   22:  put_loc0 0: t
+   23:  get_arg0 0: e
+   24:  get_field runs
+   29:  for_in_start
+   30:  goto8 79
+   32:  put_loc1 1: a
+   33:  get_arg0 0: e
+   34:  get_field runs
+   39:  get_loc1 1: a
+   40:  get_array_el
+   41:  dup
+   42:  if_false8 78
+   44:  drop
+   45:  get_arg0 0: e
+   46:  get_field runs
+   51:  get_loc1 1: a
+   52:  get_array_el
+   53:  get_field running
+   58:  dup
+   59:  if_false8 78
+   61:  drop
+   62:  get_loc0 0: t
+   63:  get_field2 push
+   68:  get_var String
+   73:  get_loc1 1: a
+   74:  call1 1
+   75:  call_method 1
+   78:  drop
+   79:  for_in_next
+   80:  if_false8 32
+   82:  drop
+   83:  drop
+   84:  push_0 0
+   85:  get_loc0 0: t
+   86:  get_length
+   87:  strict_eq
+   88:  if_false8 94
+   90:  array_from 0
+   93:  return
+   94:  object
+   95:  put_loc2 2: i
+   96:  get_var Array
+  101:  get_field2 isArray
+  106:  get_arg0 0: e
+  107:  get_field chatList
+  112:  call_method 1
+  115:  if_false8 194
+  117:  push_0 0
+  118:  put_loc3 3: r
+  119:  get_loc3 3: r
+  120:  get_arg0 0: e
+  121:  get_field chatList
+  126:  get_length
+  127:  lt
+  128:  if_false8 194
+  130:  get_arg0 0: e
+  131:  get_field chatList
+  136:  get_loc3 3: r
+  137:  get_array_el
+  138:  set_loc8 4: o
+  140:  dup
+  141:  if_false8 189
+  143:  drop
+  144:  undefined
+  145:  get_loc8 4: o
+  147:  get_field id
+  152:  strict_neq
+  153:  dup
+  154:  if_false8 189
+  156:  drop
+  157:  null
+  158:  get_loc8 4: o
+  160:  get_field id
+  165:  strict_neq
+  166:  dup
+  167:  if_false8 189
+  169:  drop
+  170:  get_loc2 2: i
+  171:  get_var String
+  176:  get_loc8 4: o
+  178:  get_field id
+  183:  call1 1
+  184:  to_propkey2
+  185:  get_loc8 4: o
+  187:  insert3
+  188:  put_array_el
+  189:  drop
+  190:  inc_loc 3: r
+  192:  goto8 119
+  194:  get_loc0 0: t
+  195:  get_field2 sort
+  200:  fclosure8 0: [bytecode <null>]
+  202:  call_method 1
+  205:  drop
+  206:  array_from 0
+  209:  put_loc8 5: s
+  211:  push_0 0
+  212:  put_loc8 6: n
+  214:  get_loc8 6: n
+  216:  get_loc0 0: t
+  217:  get_length
+  218:  lt
+  219:  if_false 489
+  224:  get_loc0 0: t
+  225:  get_loc8 6: n
+  227:  get_array_el
+  228:  put_loc8 7: l
+  230:  get_loc2 2: i
+  231:  get_loc8 7: l
+  233:  get_array_el
+  234:  dup
+  235:  if_true8 239
+  237:  drop
+  238:  object
+  239:  set_loc8 8: c
+  241:  get_field name
+  246:  dup
+  247:  if_true8 255
+  249:  drop
+  250:  push_atom_value "\u00e5\u00af\u00b9\u00e8\u00af\u009d"
+  255:  put_loc8 9: d
+  257:  push_i16 1000
+  260:  get_var Number
+  265:  get_loc8 8: c
+  267:  get_field lastTime
+  272:  dup
+  273:  if_true8 306
+  275:  drop
+  276:  get_var Math
+  281:  get_field2 floor
+  286:  get_var Date
+  291:  get_field2 now
+  296:  call_method 0
+  299:  push_i16 1000
+  302:  div
+  303:  call_method 1
+  306:  call1 1
+  307:  mul
+  308:  put_loc8 10: f
+  310:  get_var Date
+  315:  dup
+  316:  get_loc8 10: f
+  318:  call_constructor 1
+  321:  put_loc8 11: h
+  323:  get_loc8 5: s
+  325:  get_field2 push
+  330:  object
+  331:  push_0 0
+  332:  lnot
+  333:  define_field _isAiAssis
+  338:  get_loc8 7: l
+  340:  define_field _aiChatId
+  345:  push_atom_value "\u00ed\u00a0\u00be\u00ed\u00b4\u0096"
+  350:  define_field icon
+  355:  push_atom_value "AI \u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e7\u0094\u009f\u00e6\u0088\u0090"
+  360:  define_field title
+  365:  get_loc8 9: d
+  367:  push_atom_value " \u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e5\u009b\u009e\u00e5\u00a4\u008d\u00e4\u00b8\u00ad..."
+  372:  add
+  373:  define_field desc
+  378:  get_var String
+  383:  get_loc8 11: h
+  385:  get_field2 getHours
+  390:  call_method 0
+  393:  call1 1
+  394:  get_field2 padStart
+  399:  push_2 2
+  400:  push_const8 1: 1"0"
+  402:  call_method 2
+  405:  push_atom_value ":"
+  410:  add
+  411:  get_var String
+  416:  get_loc8 11: h
+  418:  get_field2 getMinutes
+  423:  call_method 0
+  426:  call1 1
+  427:  get_field2 padStart
+  432:  push_2 2
+  433:  push_const8 2: 1"0"
+  435:  call_method 2
+  438:  add
+  439:  define_field time
+  444:  push_atom_value "#10a37f"
+  449:  define_field color
+  454:  push_1 1
+  455:  define_field count
+  460:  push_atom_value "https://img.icons8.com/color/96/chatgpt.png"
+  465:  define_field avatarUrl
+  470:  push_atom_value assis
+  475:  define_field route
+  480:  call_method 1
+  483:  drop
+  484:  inc_loc 6: n
+  486:  goto16 214
+  489:  get_loc8 5: s
+  491:  return
+
+
+/* ===== function depth=4 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e t
+  locals:
+    0: var a
+    1: var r
+    2: var o
+  closure vars:
+    0: i local:loc2 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: i
+    1:  get_arg0 0: e
+    2:  get_array_el
+    3:  put_loc0 0: a
+    4:  get_var_ref0 0: i
+    5:  get_arg1 1: t
+    6:  get_array_el
+    7:  put_loc1 1: r
+    8:  get_var Number
+   13:  get_loc0 0: a
+   14:  if_false8 32
+   16:  get_loc0 0: a
+   17:  get_field lastTime
+   22:  if_false8 32
+   24:  get_loc0 0: a
+   25:  get_field lastTime
+   30:  goto8 33
+   32:  push_0 0
+   33:  call1 1
+   34:  put_loc2 2: o
+   35:  get_var Number
+   40:  get_loc1 1: r
+   41:  if_false8 59
+   43:  get_loc1 1: r
+   44:  get_field lastTime
+   49:  if_false8 59
+   51:  get_loc1 1: r
+   52:  get_field lastTime
+   57:  goto8 60
+   59:  push_0 0
+   60:  call1 1
+   61:  get_loc2 2: o
+   62:  sub
+   63:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: g
+  mode: strict
+  stack_size: 4
+  opcodes:
+    0:  get_var Math
+    5:  get_field2 floor
+   10:  get_var Date
+   15:  get_field2 now
+   20:  call_method 0
+   23:  push_i16 1000
+   26:  div
+   27:  tail_call_method 1
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: v
+  mode: strict
+  locals:
+    0: var e
+    1: var t
+    2: var a
+    3: var i
+    4: var r
+    5: var o
+    6: var s
+    7: var n
+    8: var l
+    9: var c
+   10: var d
+  closure vars:
+    0: h parent:loc12 var
+    1: u parent:loc13 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: h
+    1:  get_field state
+    6:  if_false 585
+   11:  get_var Array
+   16:  get_field2 isArray
+   21:  get_var_ref0 0: h
+   22:  get_field state
+   27:  get_field chatList
+   32:  call_method 1
+   35:  if_false 585
+   40:  get_var String
+   45:  get_var_ref0 0: h
+   46:  get_field state
+   51:  get_field currentChatId
+   56:  dup
+   57:  if_true8 61
+   59:  drop
+   60:  push_empty_string
+   61:  call1 1
+   62:  put_loc0 0: e
+   63:  get_var_ref0 0: h
+   64:  get_field state
+   69:  get_field chatList
+   74:  put_loc1 1: t
+   75:  array_from 0
+   78:  put_loc2 2: a
+   79:  object
+   80:  put_loc3 3: i
+   81:  null
+   82:  put_loc8 4: r
+   84:  push_0 0
+   85:  put_loc8 5: o
+   87:  push_0 0
+   88:  put_loc8 5: o
+   90:  get_loc8 5: o
+   92:  get_loc1 1: t
+   93:  get_length
+   94:  lt
+   95:  if_false8 184
+   97:  get_loc1 1: t
+   98:  get_loc8 5: o
+  100:  get_array_el
+  101:  set_loc8 6: s
+  103:  if_false8 180
+  105:  get_var String
+  110:  get_loc8 6: s
+  112:  get_field id
+  117:  dup
+  118:  if_true8 122
+  120:  drop
+  121:  push_empty_string
+  122:  call1 1
+  123:  set_loc8 7: n
+  125:  dup
+  126:  if_false8 179
+  128:  drop
+  129:  get_loc3 3: i
+  130:  get_loc8 7: n
+  132:  get_array_el
+  133:  lnot
+  134:  dup
+  135:  if_false8 179
+  137:  drop
+  138:  get_loc8 7: n
+  140:  get_loc0 0: e
+  141:  strict_eq
+  142:  dup
+  143:  if_false8 150
+  145:  drop
+  146:  get_loc8 6: s
+  148:  set_loc8 4: r
+  150:  drop
+  151:  get_loc2 2: a
+  152:  get_length
+  153:  get_var_ref1 1: u
+  154:  lt
+  155:  dup
+  156:  if_false8 179
+  158:  drop
+  159:  get_loc2 2: a
+  160:  get_field2 push
+  165:  get_loc8 6: s
+  167:  call_method 1
+  170:  drop
+  171:  get_loc3 3: i
+  172:  get_loc8 7: n
+  174:  to_propkey2
+  175:  push_0 0
+  176:  lnot
+  177:  insert3
+  178:  put_array_el
+  179:  drop
+  180:  inc_loc 5: o
+  182:  goto8 90
+  184:  get_loc0 0: e
+  185:  if_false8 278
+  187:  get_loc8 4: r
+  189:  if_false8 278
+  191:  get_loc3 3: i
+  192:  get_loc0 0: e
+  193:  get_array_el
+  194:  lnot
+  195:  if_false8 278
+  197:  get_loc2 2: a
+  198:  get_length
+  199:  get_var_ref1 1: u
+  200:  gte
+  201:  if_false8 260
+  203:  get_loc2 2: a
+  204:  get_field2 pop
+  209:  call_method 0
+  212:  set_loc8 8: l
+  214:  dup
+  215:  if_false8 259
+  217:  drop
+  218:  undefined
+  219:  get_loc8 8: l
+  221:  get_field id
+  226:  strict_neq
+  227:  dup
+  228:  if_false8 259
+  230:  drop
+  231:  null
+  232:  get_loc8 8: l
+  234:  get_field id
+  239:  strict_neq
+  240:  dup
+  241:  if_false8 259
+  243:  drop
+  244:  get_loc3 3: i
+  245:  get_var String
+  250:  get_loc8 8: l
+  252:  get_field id
+  257:  call1 1
+  258:  delete
+  259:  drop
+  260:  get_loc2 2: a
+  261:  get_field2 push
+  266:  get_loc8 4: r
+  268:  call_method 1
+  271:  drop
+  272:  get_loc3 3: i
+  273:  get_loc0 0: e
+  274:  to_propkey2
+  275:  push_0 0
+  276:  lnot
+  277:  put_array_el
+  278:  get_var_ref0 0: h
+  279:  get_field state
+  284:  get_loc2 2: a
+  285:  put_field chatList
+  290:  get_var_ref0 0: h
+  291:  get_field state
+  296:  get_field messageStore
+  301:  if_false8 385
+  303:  push_atom_value object
+  308:  get_var_ref0 0: h
+  309:  get_field state
+  314:  get_field messageStore
+  319:  typeof
+  320:  eq
+  321:  if_false8 385
+  323:  get_var_ref0 0: h
+  324:  get_field state
+  329:  get_field messageStore
+  334:  for_in_start
+  335:  goto8 380
+  337:  put_loc8 9: c
+  339:  get_loc3 3: i
+  340:  get_loc8 9: c
+  342:  get_array_el
+  343:  dup
+  344:  if_true8 379
+  346:  drop
+  347:  get_loc8 9: c
+  349:  get_loc0 0: e
+  350:  strict_eq
+  351:  dup
+  352:  if_true8 379
+  354:  drop
+  355:  get_var_ref0 0: h
+  356:  get_field state
+  361:  get_field messageStore
+  366:  get_loc8 9: c
+  368:  delete
+  369:  drop
+  370:  get_var_ref0 0: h
+  371:  get_field chatLoaded
+  376:  get_loc8 9: c
+  378:  delete
+  379:  drop
+  380:  for_in_next
+  381:  if_false8 337
+  383:  drop
+  384:  drop
+  385:  get_var_ref0 0: h
+  386:  get_field state
+  391:  get_field runs
+  396:  if_false8 470
+  398:  push_atom_value object
+  403:  get_var_ref0 0: h
+  404:  get_field state
+  409:  get_field runs
+  414:  typeof
+  415:  eq
+  416:  if_false8 470
+  418:  get_var_ref0 0: h
+  419:  get_field state
+  424:  get_field runs
+  429:  for_in_start
+  430:  goto8 465
+  432:  put_loc8 10: d
+  434:  get_loc3 3: i
+  435:  get_loc8 10: d
+  437:  get_array_el
+  438:  dup
+  439:  if_true8 464
+  441:  drop
+  442:  get_loc8 10: d
+  444:  get_loc0 0: e
+  445:  strict_eq
+  446:  dup
+  447:  if_true8 464
+  449:  drop
+  450:  get_var_ref0 0: h
+  451:  get_field state
+  456:  get_field runs
+  461:  get_loc8 10: d
+  463:  delete
+  464:  drop
+  465:  for_in_next
+  466:  if_false8 432
+  468:  drop
+  469:  drop
+  470:  get_loc0 0: e
+  471:  dup
+  472:  if_false8 584
+  474:  drop
+  475:  get_loc3 3: i
+  476:  get_loc0 0: e
+  477:  get_array_el
+  478:  lnot
+  479:  dup
+  480:  if_false8 584
+  482:  drop
+  483:  get_loc8 4: r
+  485:  dup
+  486:  if_true8 515
+  488:  drop
+  489:  get_var_ref0 0: h
+  490:  get_field state
+  495:  get_field messageStore
+  500:  if_false8 532
+  502:  get_var_ref0 0: h
+  503:  get_field state
+  508:  get_field messageStore
+  513:  get_loc0 0: e
+  514:  get_array_el
+  515:  if_false8 532
+  517:  get_var_ref0 0: h
+  518:  get_field state
+  523:  get_loc0 0: e
+  524:  insert2
+  525:  put_field currentChatId
+  530:  goto8 584
+  532:  get_loc2 2: a
+  533:  get_length
+  534:  push_0 0
+  535:  gt
+  536:  if_false8 571
+  538:  get_var_ref0 0: h
+  539:  get_field state
+  544:  get_var String
+  549:  get_loc2 2: a
+  550:  push_0 0
+  551:  get_array_el
+  552:  get_field id
+  557:  dup
+  558:  if_true8 562
+  560:  drop
+  561:  push_empty_string
+  562:  call1 1
+  563:  insert2
+  564:  put_field currentChatId
+  569:  goto8 584
+  571:  get_var_ref0 0: h
+  572:  get_field state
+  577:  push_empty_string
+  578:  insert2
+  579:  put_field currentChatId
+  584:  drop
+  585:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: p
+  mode: strict
+  closure vars:
+    0: h parent:loc12 var
+    1: k parent:loc22 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: h
+    1:  get_field state
+    6:  dup
+    7:  if_false8 23
+    9:  drop
+   10:  push_atom_value object
+   15:  get_var_ref0 0: h
+   16:  get_field state
+   21:  typeof
+   22:  eq
+   23:  dup
+   24:  if_true8 137
+   26:  drop
+   27:  get_var_ref0 0: h
+   28:  object
+   29:  array_from 0
+   32:  define_field chatList
+   37:  object
+   38:  define_field messageStore
+   43:  push_empty_string
+   44:  define_field currentChatId
+   49:  push_0 0
+   50:  define_field chatCounter
+   55:  push_minus1 -1
+   56:  define_field totalRetention
+   61:  push_minus1 -1
+   62:  define_field cotRetention
+   67:  push_i8 12
+   69:  define_field toolMaxRounds
+   74:  push_1 1
+   75:  lnot
+   76:  define_field thinkingEnabled
+   81:  push_atom_value off
+   86:  define_field thinkingLevel
+   91:  push_0 0
+   92:  lnot
+   93:  define_field reasoningDisplayEnabled
+   98:  array_from 0
+  101:  define_field presets
+  106:  push_empty_string
+  107:  define_field currentPresetName
+  112:  push_1 1
+  113:  lnot
+  114:  define_field mcdEnabled
+  119:  push_empty_string
+  120:  define_field mcdToken
+  125:  object
+  126:  define_field runs
+  131:  insert2
+  132:  put_field state
+  137:  drop
+  138:  get_var Array
+  143:  get_field2 isArray
+  148:  get_var_ref0 0: h
+  149:  get_field state
+  154:  get_field chatList
+  159:  call_method 1
+  162:  dup
+  163:  if_true8 181
+  165:  drop
+  166:  get_var_ref0 0: h
+  167:  get_field state
+  172:  array_from 0
+  175:  insert2
+  176:  put_field chatList
+  181:  drop
+  182:  get_var_ref0 0: h
+  183:  get_field state
+  188:  get_field messageStore
+  193:  dup
+  194:  if_false8 215
+  196:  drop
+  197:  push_atom_value object
+  202:  get_var_ref0 0: h
+  203:  get_field state
+  208:  get_field messageStore
+  213:  typeof
+  214:  eq
+  215:  dup
+  216:  if_true8 232
+  218:  drop
+  219:  get_var_ref0 0: h
+  220:  get_field state
+  225:  object
+  226:  insert2
+  227:  put_field messageStore
+  232:  drop
+  233:  get_var_ref0 0: h
+  234:  get_field state
+  239:  get_field runs
+  244:  dup
+  245:  if_false8 266
+  247:  drop
+  248:  push_atom_value object
+  253:  get_var_ref0 0: h
+  254:  get_field state
+  259:  get_field runs
+  264:  typeof
+  265:  eq
+  266:  dup
+  267:  if_true8 283
+  269:  drop
+  270:  get_var_ref0 0: h
+  271:  get_field state
+  276:  object
+  277:  insert2
+  278:  put_field runs
+  283:  drop
+  284:  get_var Array
+  289:  get_field2 isArray
+  294:  get_var_ref0 0: h
+  295:  get_field state
+  300:  get_field presets
+  305:  call_method 1
+  308:  dup
+  309:  if_true8 327
+  311:  drop
+  312:  get_var_ref0 0: h
+  313:  get_field state
+  318:  array_from 0
+  321:  insert2
+  322:  put_field presets
+  327:  drop
+  328:  push_atom_value string
+  333:  get_var_ref0 0: h
+  334:  get_field state
+  339:  get_field currentPresetName
+  344:  typeof
+  345:  neq
+  346:  dup
+  347:  if_false8 363
+  349:  drop
+  350:  get_var_ref0 0: h
+  351:  get_field state
+  356:  push_empty_string
+  357:  insert2
+  358:  put_field currentPresetName
+  363:  drop
+  364:  push_atom_value number
+  369:  get_var_ref0 0: h
+  370:  get_field state
+  375:  get_field chatCounter
+  380:  typeof
+  381:  neq
+  382:  dup
+  383:  if_false8 399
+  385:  drop
+  386:  get_var_ref0 0: h
+  387:  get_field state
+  392:  push_0 0
+  393:  insert2
+  394:  put_field chatCounter
+  399:  drop
+  400:  push_atom_value number
+  405:  get_var_ref0 0: h
+  406:  get_field state
+  411:  get_field totalRetention
+  416:  typeof
+  417:  neq
+  418:  dup
+  419:  if_false8 435
+  421:  drop
+  422:  get_var_ref0 0: h
+  423:  get_field state
+  428:  push_minus1 -1
+  429:  insert2
+  430:  put_field totalRetention
+  435:  drop
+  436:  push_atom_value number
+  441:  get_var_ref0 0: h
+  442:  get_field state
+  447:  get_field cotRetention
+  452:  typeof
+  453:  neq
+  454:  dup
+  455:  if_false8 471
+  457:  drop
+  458:  get_var_ref0 0: h
+  459:  get_field state
+  464:  push_minus1 -1
+  465:  insert2
+  466:  put_field cotRetention
+  471:  drop
+  472:  push_atom_value number
+  477:  get_var_ref0 0: h
+  478:  get_field state
+  483:  get_field toolMaxRounds
+  488:  typeof
+  489:  neq
+  490:  dup
+  491:  if_true8 507
+  493:  drop
+  494:  get_var_ref0 0: h
+  495:  get_field state
+  500:  get_field toolMaxRounds
+  505:  push_1 1
+  506:  lt
+  507:  dup
+  508:  if_false8 524
+  510:  drop
+  511:  get_var_ref0 0: h
+  512:  get_field state
+  517:  get_var_ref1 1: k
+  518:  insert2
+  519:  put_field toolMaxRounds
+  524:  drop
+  525:  push_atom_value boolean
+  530:  get_var_ref0 0: h
+  531:  get_field state
+  536:  get_field thinkingEnabled
+  541:  typeof
+  542:  neq
+  543:  dup
+  544:  if_false8 561
+  546:  drop
+  547:  get_var_ref0 0: h
+  548:  get_field state
+  553:  push_1 1
+  554:  lnot
+  555:  insert2
+  556:  put_field thinkingEnabled
+  561:  drop
+  562:  push_atom_value boolean
+  567:  get_var_ref0 0: h
+  568:  get_field state
+  573:  get_field reasoningDisplayEnabled
+  578:  typeof
+  579:  neq
+  580:  dup
+  581:  if_false8 598
+  583:  drop
+  584:  get_var_ref0 0: h
+  585:  get_field state
+  590:  push_0 0
+  591:  lnot
+  592:  insert2
+  593:  put_field reasoningDisplayEnabled
+  598:  drop
+  599:  push_atom_value boolean
+  604:  get_var_ref0 0: h
+  605:  get_field state
+  610:  get_field mcdEnabled
+  615:  typeof
+  616:  neq
+  617:  dup
+  618:  if_false8 635
+  620:  drop
+  621:  get_var_ref0 0: h
+  622:  get_field state
+  627:  push_1 1
+  628:  lnot
+  629:  insert2
+  630:  put_field mcdEnabled
+  635:  drop
+  636:  push_atom_value string
+  641:  get_var_ref0 0: h
+  642:  get_field state
+  647:  get_field mcdToken
+  652:  typeof
+  653:  neq
+  654:  dup
+  655:  if_false8 671
+  657:  drop
+  658:  get_var_ref0 0: h
+  659:  get_field state
+  664:  push_empty_string
+  665:  insert2
+  666:  put_field mcdToken
+  671:  drop
+  672:  push_atom_value string
+  677:  get_var_ref0 0: h
+  678:  get_field state
+  683:  get_field thinkingLevel
+  688:  typeof
+  689:  neq
+  690:  dup
+  691:  if_true8 738
+  693:  drop
+  694:  push_atom_value off
+  699:  push_atom_value low
+  704:  push_atom_value medium
+  709:  push_atom_value high
+  714:  array_from 4
+  717:  get_field2 indexOf
+  722:  get_var_ref0 0: h
+  723:  get_field state
+  728:  get_field thinkingLevel
+  733:  call_method 1
+  736:  push_0 0
+  737:  lt
+  738:  dup
+  739:  if_false8 779
+  741:  drop
+  742:  get_var_ref0 0: h
+  743:  get_field state
+  748:  get_var_ref0 0: h
+  749:  get_field state
+  754:  get_field thinkingEnabled
+  759:  if_false8 768
+  761:  push_atom_value medium
+  766:  goto8 773
+  768:  push_atom_value off
+  773:  insert2
+  774:  put_field thinkingLevel
+  779:  drop
+  780:  get_var_ref0 0: h
+  781:  get_field state
+  786:  push_atom_value off
+  791:  get_var_ref0 0: h
+  792:  get_field state
+  797:  get_field thinkingLevel
+  802:  strict_neq
+  803:  put_field thinkingEnabled
+  808:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: y
+  mode: strict
+  locals:
+    0: var e
+    1: var t
+    2: catch e [level:7 next:-1]
+    3: catch e [level:11 next:-1]
+    4: catch e [level:15 next:-1]
+    5: catch e [level:18 next:-1]
+    6: var a
+    7: var i
+    8: catch e [level:24 next:-1]
+    9: catch e [level:27 next:-1]
+   10: var r
+   11: catch e [level:31 next:-1]
+   12: var o
+  closure vars:
+    0: h parent:loc12 var
+    1: m parent:loc18 var
+    2: g parent:loc14 var
+    3: v parent:loc15 var
+    4: w parent:loc21 var
+    5: p parent:loc16 var
+  stack_size: 10
+  opcodes:
+    0:  get_var_ref0 0: h
+    1:  get_field Dbase
+    6:  if_false 740
+   11:  push_atom_value function
+   16:  get_var_ref0 0: h
+   17:  get_field Dbase
+   22:  get_field read
+   27:  typeof
+   28:  eq
+   29:  if_false 740
+   34:  catch 547
+   39:  null
+   40:  put_loc0 0: e
+   41:  null
+   42:  put_loc1 1: t
+   43:  get_var_ref0 0: h
+   44:  get_field metaOnly
+   49:  if_false8 98
+   51:  catch 87
+   56:  get_var_ref0 0: h
+   57:  get_field Dbase
+   62:  get_field2 read
+   67:  get_var_ref0 0: h
+   68:  get_field storageKey
+   73:  push_atom_value _meta
+   78:  add
+   79:  call_method 1
+   82:  put_loc0 0: e
+   83:  drop
+   84:  goto16 237
+   87:  put_loc2 2: e
+   88:  catch 97
+   93:  drop
+   94:  goto16 237
+   97:  throw
+   98:  catch 133
+  103:  get_var_ref0 0: h
+  104:  get_field Dbase
+  109:  get_field2 read
+  114:  get_var_ref0 0: h
+  115:  get_field storageKey
+  120:  push_atom_value _meta
+  125:  add
+  126:  call_method 1
+  129:  put_loc0 0: e
+  130:  drop
+  131:  goto8 143
+  133:  put_loc3 3: e
+  134:  catch 142
+  139:  drop
+  140:  goto8 143
+  142:  throw
+  143:  get_loc0 0: e
+  144:  if_false8 196
+  146:  push_atom_value object
+  151:  get_loc0 0: e
+  152:  typeof
+  153:  eq
+  154:  if_false8 196
+  156:  catch 185
+  161:  get_var_ref0 0: h
+  162:  get_field Dbase
+  167:  get_field2 read
+  172:  get_var_ref0 0: h
+  173:  get_field storageKey
+  178:  call_method 1
+  181:  put_loc1 1: t
+  182:  drop
+  183:  goto8 237
+  185:  put_loc8 4: e
+  187:  catch 195
+  192:  drop
+  193:  goto8 237
+  195:  throw
+  196:  catch 226
+  201:  get_var_ref0 0: h
+  202:  get_field Dbase
+  207:  get_field2 read
+  212:  get_var_ref0 0: h
+  213:  get_field storageKey
+  218:  call_method 1
+  221:  set_loc1 1: t
+  222:  put_loc0 0: e
+  223:  drop
+  224:  goto8 237
+  226:  put_loc8 5: e
+  228:  catch 236
+  233:  drop
+  234:  goto8 237
+  236:  throw
+  237:  get_loc1 1: t
+  238:  if_false 442
+  243:  push_atom_value object
+  248:  get_loc1 1: t
+  249:  typeof
+  250:  eq
+  251:  if_false 442
+  256:  get_loc1 1: t
+  257:  get_field messageStore
+  262:  if_false 442
+  267:  push_atom_value object
+  272:  get_loc1 1: t
+  273:  get_field messageStore
+  278:  typeof
+  279:  eq
+  280:  if_false 442
+  285:  get_loc1 1: t
+  286:  get_field messageStore
+  291:  put_loc8 6: a
+  293:  get_loc8 6: a
+  295:  for_in_start
+  296:  goto8 368
+  298:  put_loc8 7: i
+  300:  catch 357
+  305:  get_var_ref0 0: h
+  306:  get_field Dbase
+  311:  get_field2 write
+  316:  get_var_ref1 1: m
+  317:  get_loc8 7: i
+  319:  call1 1
+  320:  get_var Array
+  325:  get_field2 isArray
+  330:  get_loc8 6: a
+  332:  get_loc8 7: i
+  334:  get_array_el
+  335:  call_method 1
+  338:  if_false8 347
+  340:  get_loc8 6: a
+  342:  get_loc8 7: i
+  344:  get_array_el
+  345:  goto8 350
+  347:  array_from 0
+  350:  call_method 2
+  353:  drop
+  354:  drop
+  355:  goto8 368
+  357:  put_loc8 8: e
+  359:  catch 367
+  364:  drop
+  365:  goto8 368
+  367:  throw
+  368:  for_in_next
+  369:  if_false8 298
+  371:  drop
+  372:  drop
+  373:  get_loc0 0: e
+  374:  dup
+  375:  if_false8 386
+  377:  drop
+  378:  push_atom_value object
+  383:  get_loc0 0: e
+  384:  typeof
+  385:  eq
+  386:  dup
+  387:  if_true8 392
+  389:  drop
+  390:  get_loc1 1: t
+  391:  set_loc0 0: e
+  392:  drop
+  393:  get_loc1 1: t
+  394:  push_atom_value messageStore
+  399:  delete
+  400:  drop
+  401:  catch 431
+  406:  get_var_ref0 0: h
+  407:  get_field Dbase
+  412:  get_field2 write
+  417:  get_var_ref0 0: h
+  418:  get_field storageKey
+  423:  get_loc1 1: t
+  424:  call_method 2
+  427:  drop
+  428:  drop
+  429:  goto8 442
+  431:  put_loc8 9: e
+  433:  catch 441
+  438:  drop
+  439:  goto8 442
+  441:  throw
+  442:  get_loc0 0: e
+  443:  if_false8 544
+  445:  push_atom_value object
+  450:  get_loc0 0: e
+  451:  typeof
+  452:  eq
+  453:  if_false8 544
+  455:  get_var_ref0 0: h
+  456:  get_loc0 0: e
+  457:  put_field state
+  462:  get_var_ref0 0: h
+  463:  object
+  464:  put_field chatLoaded
+  469:  get_var_ref0 0: h
+  470:  get_field state
+  475:  get_field runs
+  480:  if_false8 544
+  482:  get_var_ref0 0: h
+  483:  get_field state
+  488:  get_field runs
+  493:  for_in_start
+  494:  goto8 539
+  496:  put_loc8 10: r
+  498:  get_var_ref0 0: h
+  499:  get_field state
+  504:  get_field runs
+  509:  get_loc8 10: r
+  511:  get_array_el
+  512:  dup
+  513:  if_false8 538
+  515:  drop
+  516:  get_var_ref0 0: h
+  517:  get_field state
+  522:  get_field runs
+  527:  get_loc8 10: r
+  529:  get_array_el
+  530:  push_1 1
+  531:  lnot
+  532:  insert2
+  533:  put_field running
+  538:  drop
+  539:  for_in_next
+  540:  if_false8 496
+  542:  drop
+  543:  drop
+  544:  drop
+  545:  goto8 558
+  547:  put_loc8 11: e
+  549:  catch 557
+  554:  drop
+  555:  goto8 558
+  557:  throw
+  558:  get_var_ref 5: p
+  561:  call0 0
+  562:  drop
+  563:  get_var_ref3 3: v
+  564:  call0 0
+  565:  drop
+  566:  get_var_ref0 0: h
+  567:  get_field metaOnly
+  572:  lnot
+  573:  if_false 745
+  578:  get_var_ref0 0: h
+  579:  get_field state
+  584:  get_field currentChatId
+  589:  lnot
+  590:  dup
+  591:  if_false8 653
+  593:  drop
+  594:  get_var_ref0 0: h
+  595:  get_field state
+  600:  get_field chatList
+  605:  get_length
+  606:  push_0 0
+  607:  gt
+  608:  dup
+  609:  if_false8 653
+  611:  drop
+  612:  get_var_ref0 0: h
+  613:  get_field state
+  618:  get_var String
+  623:  get_var_ref0 0: h
+  624:  get_field state
+  629:  get_field chatList
+  634:  push_0 0
+  635:  get_array_el
+  636:  get_field id
+  641:  dup
+  642:  if_true8 646
+  644:  drop
+  645:  push_empty_string
+  646:  call1 1
+  647:  insert2
+  648:  put_field currentChatId
+  653:  drop
+  654:  get_var_ref0 0: h
+  655:  get_field state
+  660:  get_field currentChatId
+  665:  if_false8 732
+  667:  get_var String
+  672:  get_var_ref0 0: h
+  673:  get_field state
+  678:  get_field currentChatId
+  683:  call1 1
+  684:  put_loc8 12: o
+  686:  fclosure8 0: [bytecode <null>]
+  688:  get_loc8 12: o
+  690:  call1 1
+  691:  lnot
+  692:  drop
+  693:  get_var_ref0 0: h
+  694:  get_field state
+  699:  get_field messageStore
+  704:  get_loc8 12: o
+  706:  get_array_el
+  707:  dup
+  708:  if_true8 730
+  710:  drop
+  711:  get_var_ref0 0: h
+  712:  get_field state
+  717:  get_field messageStore
+  722:  get_loc8 12: o
+  724:  to_propkey2
+  725:  array_from 0
+  728:  insert3
+  729:  put_array_el
+  730:  drop
+  731:  return_undef
+  732:  fclosure8 1: [bytecode <null>]
+  734:  push_0 0
+  735:  lnot
+  736:  call1 1
+  737:  lnot
+  738:  drop
+  739:  return_undef
+  740:  get_var_ref 5: p
+  743:  call0 0
+  744:  drop
+  745:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: var t
+    1: var a
+    2: catch e [level:7 next:-1]
+  closure vars:
+    0: h parent:loc0 var
+    1: m parent:loc1 var
+  stack_size: 5
+  opcodes:
+    0:  get_var String
+    5:  get_arg0 0: e
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  push_empty_string
+   11:  call1 1
+   12:  set_loc0 0: t
+   13:  lnot
+   14:  if_false8 17
+   16:  return_undef
+   17:  get_var Array
+   22:  get_field2 isArray
+   27:  get_var_ref0 0: h
+   28:  get_field state
+   33:  get_field messageStore
+   38:  get_loc0 0: t
+   39:  get_array_el
+   40:  call_method 1
+   43:  if_false8 46
+   45:  return_undef
+   46:  get_var_ref0 0: h
+   47:  get_field chatLoaded
+   52:  get_loc0 0: t
+   53:  get_array_el
+   54:  lnot
+   55:  if_false8 143
+   57:  null
+   58:  put_loc1 1: a
+   59:  catch 85
+   64:  get_var_ref0 0: h
+   65:  get_field Dbase
+   70:  get_field2 read
+   75:  get_var_ref1 1: m
+   76:  get_loc0 0: t
+   77:  call1 1
+   78:  call_method 1
+   81:  put_loc1 1: a
+   82:  drop
+   83:  goto8 95
+   85:  put_loc2 2: e
+   86:  catch 94
+   91:  drop
+   92:  goto8 95
+   94:  throw
+   95:  get_var_ref0 0: h
+   96:  get_field chatLoaded
+  101:  get_loc0 0: t
+  102:  to_propkey2
+  103:  push_0 0
+  104:  lnot
+  105:  put_array_el
+  106:  get_var_ref0 0: h
+  107:  get_field state
+  112:  get_field messageStore
+  117:  get_loc0 0: t
+  118:  to_propkey2
+  119:  get_var Array
+  124:  get_field2 isArray
+  129:  get_loc1 1: a
+  130:  call_method 1
+  133:  if_false8 138
+  135:  get_loc1 1: a
+  136:  goto8 141
+  138:  array_from 0
+  141:  put_array_el
+  142:  return_undef
+  143:  get_var_ref0 0: h
+  144:  get_field state
+  149:  get_field messageStore
+  154:  get_loc0 0: t
+  155:  to_propkey2
+  156:  array_from 0
+  159:  put_array_el
+  160:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: var t
+    1: var a
+  closure vars:
+    0: h parent:loc0 var
+    1: g parent:loc2 var
+    2: v parent:loc3 var
+    3: w parent:loc4 var
+  stack_size: 5
+  opcodes:
+    0:  undefined
+    1:  get_arg0 0: e
+    2:  strict_eq
+    3:  dup
+    4:  if_false8 10
+    6:  drop
+    7:  push_0 0
+    8:  lnot
+    9:  set_arg0 0: e
+   10:  drop
+   11:  get_var String
+   16:  get_var Date
+   21:  get_field2 now
+   26:  call_method 0
+   29:  call1 1
+   30:  push_atom_value _
+   35:  add
+   36:  get_var String
+   41:  get_var_ref0 0: h
+   42:  get_field state
+   47:  get_field2 chatCounter
+   52:  inc
+   53:  insert2
+   54:  put_field chatCounter
+   59:  call1 1
+   60:  add
+   61:  put_loc0 0: t
+   62:  push_atom_value "\u00e6\u0096\u00b0\u00e5\u00af\u00b9\u00e8\u00af\u009d "
+   67:  get_var_ref0 0: h
+   68:  get_field state
+   73:  get_field chatCounter
+   78:  add
+   79:  put_loc1 1: a
+   80:  get_arg0 0: e
+   81:  dup
+   82:  if_true8 130
+   84:  drop
+   85:  get_var_ref0 0: h
+   86:  get_field state
+   91:  get_field chatList
+   96:  get_field2 unshift
+  101:  object
+  102:  get_loc0 0: t
+  103:  define_field id
+  108:  get_loc1 1: a
+  109:  define_field name
+  114:  push_empty_string
+  115:  define_field lastMsg
+  120:  get_var_ref1 1: g
+  121:  call0 0
+  122:  define_field lastTime
+  127:  call_method 1
+  130:  drop
+  131:  get_var_ref0 0: h
+  132:  get_field state
+  137:  get_loc0 0: t
+  138:  put_field currentChatId
+  143:  get_var_ref0 0: h
+  144:  get_field state
+  149:  get_field messageStore
+  154:  get_loc0 0: t
+  155:  get_array_el
+  156:  dup
+  157:  if_true8 178
+  159:  drop
+  160:  get_var_ref0 0: h
+  161:  get_field state
+  166:  get_field messageStore
+  171:  get_loc0 0: t
+  172:  to_propkey2
+  173:  array_from 0
+  176:  insert3
+  177:  put_array_el
+  178:  drop
+  179:  get_var_ref0 0: h
+  180:  get_field chatLoaded
+  185:  get_loc0 0: t
+  186:  to_propkey2
+  187:  push_0 0
+  188:  lnot
+  189:  put_array_el
+  190:  get_var_ref2 2: v
+  191:  call0 0
+  192:  drop
+  193:  get_var_ref3 3: w
+  194:  call0 0
+  195:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: m
+  mode: strict
+  args: e
+  closure vars:
+    0: h parent:loc12 var
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: h
+    1:  get_field storageKey
+    6:  push_atom_value _h_
+   11:  add
+   12:  get_var String
+   17:  get_arg0 0: e
+   18:  dup
+   19:  if_true8 23
+   21:  drop
+   22:  push_empty_string
+   23:  call1 1
+   24:  get_field2 replace
+   29:  push_const8 0: 1"[^0-9A-Za-z_\\-]"
+   31:  push_const8 1: 1"\u0001\u0001\u0000+\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0015\u0006\u0000\u0000\u0000,\u0000.\u0000/\u0000:\u0000@\u0000[\u0000^\u0000`\u0000`\u0000{\u0000\u00ff\u00ff\u000c\u0000\n"
+   33:  regexp
+   34:  push_atom_value _
+   39:  call_method 2
+   42:  add
+   43:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: D
+  mode: strict
+  closure vars:
+    0: b parent:loc19 var
+    1: h parent:loc12 var
+    2: i parent:loc3 const
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: b
+    1:  dup
+    2:  if_true8 15
+    4:  drop
+    5:  get_var_ref_check 2: i
+    8:  fclosure8 0: [bytecode <null>]
+   10:  push_i16 140
+   13:  call2 2
+   14:  set_var_ref0 0: b
+   15:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var e
+    1: catch e [level:4 next:-1]
+    2: var t
+    3: catch e [level:8 next:-1]
+  closure vars:
+    0: b parent:loc0 var
+    1: h parent:loc1 var
+  stack_size: 6
+  opcodes:
+    0:  null
+    1:  put_var_ref0 0: b
+    2:  fclosure8 0: [bytecode <null>]
+    4:  call0 0
+    5:  set_loc0 0: e
+    6:  if_false8 68
+    8:  push_atom_value function
+   13:  get_loc0 0: e
+   14:  get_field emit
+   19:  typeof
+   20:  eq
+   21:  if_false8 68
+   23:  catch 58
+   28:  get_loc0 0: e
+   29:  get_field2 emit
+   34:  push_atom_value ai_assis_update
+   39:  object
+   40:  get_var_ref1 1: h
+   41:  get_field rev
+   46:  define_field rev
+   51:  call_method 2
+   54:  drop
+   55:  drop
+   56:  goto8 68
+   58:  put_loc1 1: e
+   59:  catch 67
+   64:  drop
+   65:  goto8 68
+   67:  throw
+   68:  push_0 0
+   69:  put_loc2 2: t
+   70:  get_loc2 2: t
+   71:  get_var_ref1 1: h
+   72:  get_field subscribers
+   77:  get_length
+   78:  lt
+   79:  if_false8 121
+   81:  catch 107
+   86:  get_var_ref1 1: h
+   87:  get_field subscribers
+   92:  get_loc2 2: t
+   93:  get_array_el2
+   94:  get_var_ref1 1: h
+   95:  get_field rev
+  100:  call_method 1
+  103:  drop
+  104:  drop
+  105:  goto8 117
+  107:  put_loc3 3: e
+  108:  catch 116
+  113:  drop
+  114:  goto8 117
+  116:  throw
+  117:  inc_loc 2: t
+  119:  goto8 70
+  121:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch e [level:3 next:-1]
+  stack_size: 3
+  opcodes:
+    0:  catch 29
+    5:  push_atom_value undefined
+   10:  get_var_undef $falcon
+   15:  typeof
+   16:  neq
+   17:  if_false8 26
+   19:  get_var $falcon
+   24:  goto8 27
+   26:  null
+   27:  nip
+   28:  return
+   29:  put_loc0 0: e
+   30:  catch 38
+   35:  null
+   36:  nip
+   37:  return
+   38:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: w
+  mode: strict
+  args: e
+  closure vars:
+    0: h parent:loc12 var
+    1: m parent:loc18 var
+    2: a parent:loc2 const
+    3: i parent:loc3 const
+    4: D parent:loc20 var
+  stack_size: 3
+  opcodes:
+    0:  fclosure8 0: [bytecode <null>]
+    2:  null
+    3:  get_arg0 0: e
+    4:  neq
+    5:  if_false8 10
+    7:  get_arg0 0: e
+    8:  goto8 21
+   10:  get_var_ref0 0: h
+   11:  get_field state
+   16:  get_field currentChatId
+   21:  call1 1
+   22:  lnot
+   23:  drop
+   24:  get_var_ref0 0: h
+   25:  get_field2 rev
+   30:  inc
+   31:  put_field rev
+   36:  fclosure8 1: [bytecode <null>]
+   38:  call0 0
+   39:  drop
+   40:  get_var_ref 4: D
+   43:  call0 0
+   44:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: var t
+  closure vars:
+    0: h parent:loc0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var String
+    5:  get_arg0 0: e
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  push_empty_string
+   11:  call1 1
+   12:  set_loc0 0: t
+   13:  dup
+   14:  if_false8 29
+   16:  drop
+   17:  get_var_ref0 0: h
+   18:  get_field chatMsgsDirty
+   23:  get_loc0 0: t
+   24:  to_propkey2
+   25:  push_0 0
+   26:  lnot
+   27:  insert3
+   28:  put_array_el
+   29:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var e
+    1: var t
+  closure vars:
+    0: h parent:loc0 var
+    1: m parent:loc1 var
+    2: a parent:loc2 const
+    3: i parent:loc3 const
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: h
+    1:  get_field Dbase
+    6:  if_false 165
+   11:  push_atom_value function
+   16:  get_var_ref0 0: h
+   17:  get_field Dbase
+   22:  get_field write
+   27:  typeof
+   28:  eq
+   29:  if_false 165
+   34:  get_var_ref0 0: h
+   35:  get_field metaOnly
+   40:  lnot
+   41:  if_false8 165
+   43:  push_1 1
+   44:  lnot
+   45:  put_loc0 0: e
+   46:  get_var_ref0 0: h
+   47:  get_field chatMsgsDirty
+   52:  for_in_start
+   53:  goto8 83
+   55:  put_loc1 1: t
+   56:  get_var_ref0 0: h
+   57:  get_field pendingMsgsDirty
+   62:  get_loc1 1: t
+   63:  get_array_el
+   64:  dup
+   65:  if_true8 82
+   67:  drop
+   68:  get_var_ref0 0: h
+   69:  get_field pendingMsgsDirty
+   74:  get_loc1 1: t
+   75:  to_propkey2
+   76:  push_0 0
+   77:  lnot
+   78:  put_array_el
+   79:  push_0 0
+   80:  lnot
+   81:  set_loc0 0: e
+   82:  drop
+   83:  for_in_next
+   84:  if_false8 55
+   86:  drop
+   87:  drop
+   88:  get_var_ref0 0: h
+   89:  object
+   90:  put_field chatMsgsDirty
+   95:  get_loc0 0: e
+   96:  dup
+   97:  if_false8 137
+   99:  drop
+  100:  get_var_ref0 0: h
+  101:  get_field persistTimer
+  106:  dup
+  107:  if_false8 120
+  109:  drop
+  110:  get_var_ref_check 2: a
+  113:  get_var_ref0 0: h
+  114:  get_field persistTimer
+  119:  call1 1
+  120:  drop
+  121:  get_var_ref0 0: h
+  122:  get_var_ref_check 3: i
+  125:  fclosure8 0: [bytecode <null>]
+  127:  push_i16 1000
+  130:  call2 2
+  131:  insert2
+  132:  put_field persistTimer
+  137:  drop
+  138:  get_var_ref0 0: h
+  139:  get_field metaPersistTimer
+  144:  dup
+  145:  if_true8 164
+  147:  drop
+  148:  get_var_ref0 0: h
+  149:  get_var_ref_check 3: i
+  152:  fclosure8 1: [bytecode <null>]
+  154:  push_i16 200
+  157:  call2 2
+  158:  insert2
+  159:  put_field metaPersistTimer
+  164:  drop
+  165:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var e
+    1: var t
+    2: var a
+    3: catch e [level:4 next:-1]
+  closure vars:
+    0: h parent:loc0 var
+    1: m parent:loc1 var
+  stack_size: 7
+  opcodes:
+    0:  get_var_ref0 0: h
+    1:  null
+    2:  put_field persistTimer
+    7:  get_var Object
+   12:  get_field2 keys
+   17:  get_var_ref0 0: h
+   18:  get_field pendingMsgsDirty
+   23:  call_method 1
+   26:  put_loc0 0: e
+   27:  get_var_ref0 0: h
+   28:  object
+   29:  put_field pendingMsgsDirty
+   34:  push_0 0
+   35:  put_loc1 1: t
+   36:  get_loc1 1: t
+   37:  get_loc0 0: e
+   38:  get_length
+   39:  lt
+   40:  if_false8 122
+   42:  catch 108
+   47:  get_var_ref0 0: h
+   48:  get_field state
+   53:  get_field messageStore
+   58:  get_loc0 0: e
+   59:  get_loc1 1: t
+   60:  get_array_el
+   61:  get_array_el
+   62:  put_loc2 2: a
+   63:  get_var_ref0 0: h
+   64:  get_field Dbase
+   69:  get_field2 write
+   74:  get_var_ref1 1: m
+   75:  get_loc0 0: e
+   76:  get_loc1 1: t
+   77:  get_array_el
+   78:  call1 1
+   79:  get_var Array
+   84:  get_field2 isArray
+   89:  get_loc2 2: a
+   90:  call_method 1
+   93:  if_false8 98
+   95:  get_loc2 2: a
+   96:  goto8 101
+   98:  array_from 0
+  101:  call_method 2
+  104:  drop
+  105:  drop
+  106:  goto8 118
+  108:  put_loc3 3: e
+  109:  catch 117
+  114:  drop
+  115:  goto8 118
+  117:  throw
+  118:  inc_loc 1: t
+  120:  goto8 36
+  122:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var e
+    1: catch e [level:3 next:-1]
+  closure vars:
+    0: h parent:loc0 var
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: h
+    1:  null
+    2:  put_field metaPersistTimer
+    7:  catch 70
+   12:  get_var Object
+   17:  get_field2 assign
+   22:  object
+   23:  get_var_ref0 0: h
+   24:  get_field state
+   29:  call_method 2
+   32:  set_loc0 0: e
+   33:  push_atom_value messageStore
+   38:  delete
+   39:  drop
+   40:  get_var_ref0 0: h
+   41:  get_field Dbase
+   46:  get_field2 write
+   51:  get_var_ref0 0: h
+   52:  get_field storageKey
+   57:  push_atom_value _meta
+   62:  add
+   63:  get_loc0 0: e
+   64:  call_method 2
+   67:  drop
+   68:  drop
+   69:  return_undef
+   70:  put_loc1 1: e
+   71:  catch 78
+   76:  drop
+   77:  return_undef
+   78:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: S
+  mode: strict
+  args: e t a
+  locals:
+    0: var i
+    1: var r
+    2: var o
+    3: var s
+    4: var n
+    5: var l
+    6: catch e [level:4 next:-1]
+    7: var c
+  closure vars:
+    0: h parent:loc12 var
+  stack_size: 4
+  opcodes:
+    0:  get_arg1 1: t
+    1:  dup
+    2:  if_true8 6
+    4:  drop
+    5:  object
+    6:  put_arg1 1: t
+    7:  get_arg2 2: a
+    8:  dup
+    9:  if_true8 13
+   11:  drop
+   12:  object
+   13:  set_arg2 2: a
+   14:  get_field Fetch
+   19:  dup
+   20:  if_true8 29
+   22:  drop
+   23:  get_var_ref0 0: h
+   24:  get_field Fetch
+   29:  put_loc0 0: i
+   30:  get_arg2 2: a
+   31:  get_field Dbase
+   36:  dup
+   37:  if_true8 46
+   39:  drop
+   40:  get_var_ref0 0: h
+   41:  get_field Dbase
+   46:  put_loc1 1: r
+   47:  get_arg2 2: a
+   48:  get_field apiBase
+   53:  dup
+   54:  if_true8 63
+   56:  drop
+   57:  get_var_ref0 0: h
+   58:  get_field apiBase
+   63:  put_loc2 2: o
+   64:  get_arg2 2: a
+   65:  get_field model
+   70:  dup
+   71:  if_true8 90
+   73:  drop
+   74:  get_arg1 1: t
+   75:  get_field model
+   80:  dup
+   81:  if_true8 90
+   83:  drop
+   84:  get_var_ref0 0: h
+   85:  get_field flashModel
+   90:  put_loc3 3: s
+   91:  get_loc0 0: i
+   92:  lnot
+   93:  if_false8 126
+   95:  get_var Promise
+  100:  get_field2 resolve
+  105:  object
+  106:  push_1 1
+  107:  lnot
+  108:  define_field ok
+  113:  push_atom_value no_fetch
+  118:  define_field error
+  123:  tail_call_method 1
+  126:  push_empty_string
+  127:  put_loc8 4: n
+  129:  catch 227
+  134:  get_loc1 1: r
+  135:  if_false8 169
+  137:  push_atom_value function
+  142:  get_loc1 1: r
+  143:  get_field read
+  148:  typeof
+  149:  eq
+  150:  if_false8 169
+  152:  get_loc1 1: r
+  153:  get_field2 read
+  158:  get_var_ref0 0: h
+  159:  get_field loginSessionKey
+  164:  call_method 1
+  167:  goto8 170
+  169:  null
+  170:  set_loc8 5: l
+  172:  dup
+  173:  if_false8 223
+  175:  drop
+  176:  push_atom_value object
+  181:  get_loc8 5: l
+  183:  typeof
+  184:  eq
+  185:  dup
+  186:  if_false8 223
+  188:  drop
+  189:  get_loc8 5: l
+  191:  get_field cookie
+  196:  dup
+  197:  if_false8 223
+  199:  drop
+  200:  get_var String
+  205:  get_loc8 5: l
+  207:  get_field cookie
+  212:  call1 1
+  213:  get_field2 trim
+  218:  call_method 0
+  221:  set_loc8 4: n
+  223:  drop
+  224:  drop
+  225:  goto8 238
+  227:  put_loc8 6: e
+  229:  catch 237
+  234:  drop
+  235:  goto8 238
+  237:  throw
+  238:  get_loc8 4: n
+  240:  lnot
+  241:  if_false8 274
+  243:  get_var Promise
+  248:  get_field2 resolve
+  253:  object
+  254:  push_1 1
+  255:  lnot
+  256:  define_field ok
+  261:  push_atom_value not_logged_in
+  266:  define_field error
+  271:  tail_call_method 1
+  274:  object
+  275:  get_loc3 3: s
+  276:  define_field model
+  281:  get_arg0 0: e
+  282:  define_field messages
+  287:  push_1 1
+  288:  lnot
+  289:  define_field stream
+  294:  get_arg1 1: t
+  295:  get_field maxTokens
+  300:  dup
+  301:  if_true8 307
+  303:  drop
+  304:  push_i16 2048
+  307:  define_field max_tokens
+  312:  put_loc8 7: c
+  314:  get_var Promise
+  319:  dup
+  320:  fclosure8 0: [bytecode <null>]
+  322:  call_constructor 1
+  325:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: i local:loc0 var
+    1: o local:loc2 var
+    2: t local:arg1 var
+    3: n local:loc4 var
+    4: c local:loc7 var
+  stack_size: 7
+  opcodes:
+    0:  get_var_ref0 0: i
+    1:  get_field2 fetch
+    6:  get_var_ref1 1: o
+    7:  push_atom_value "/chat/completions"
+   12:  add
+   13:  object
+   14:  push_atom_value POST
+   19:  define_field method
+   24:  get_var_ref2 2: t
+   25:  get_field timeout
+   30:  dup
+   31:  if_true8 37
+   33:  drop
+   34:  push_i16 180
+   37:  define_field timeout
+   42:  object
+   43:  push_atom_value "application/json"
+   48:  define_field "Content-Type"
+   53:  push_atom_value "Bearer "
+   58:  get_var_ref3 3: n
+   59:  add
+   60:  define_field Authorization
+   65:  define_field headers
+   70:  get_var JSON
+   75:  get_field2 stringify
+   80:  get_var_ref 4: c
+   83:  call_method 1
+   86:  define_field body
+   91:  call_method 2
+   94:  get_field2 then
+   99:  fclosure8 0: [bytecode <null>]
+  101:  fclosure8 1: [bytecode <null>]
+  103:  call_method 2
+  106:  get_field2 catch
+  111:  fclosure8 2: [bytecode <null>]
+  113:  call_method 1
+  116:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var a
+    1: catch e [level:4 next:-1]
+    2: catch e [level:8 next:-1]
+    3: var i
+    4: var r
+    5: catch e [level:14 next:-1]
+    6: var o
+    7: var s
+    8: var n
+    9: var l
+   10: catch t [level:20 next:-1]
+  closure vars:
+    0: e local:arg0 var
+  stack_size: 7
+  opcodes:
+    0:  catch 548
+    5:  push_empty_string
+    6:  put_loc0 0: a
+    7:  catch 83
+   12:  push_atom_value function
+   17:  get_arg0 0: t
+   18:  get_field text
+   23:  typeof
+   24:  eq
+   25:  if_false8 38
+   27:  get_arg0 0: t
+   28:  get_field2 text
+   33:  call_method 0
+   36:  goto8 79
+   38:  get_arg0 0: t
+   39:  get_field text
+   44:  dup
+   45:  if_true8 79
+   47:  drop
+   48:  get_arg0 0: t
+   49:  get_field body
+   54:  dup
+   55:  if_true8 79
+   57:  drop
+   58:  get_arg0 0: t
+   59:  get_field _body
+   64:  dup
+   65:  if_true8 79
+   67:  drop
+   68:  get_arg0 0: t
+   69:  get_field data
+   74:  dup
+   75:  if_true8 79
+   77:  drop
+   78:  push_empty_string
+   79:  put_loc0 0: a
+   80:  drop
+   81:  goto8 93
+   83:  put_loc1 1: e
+   84:  catch 92
+   89:  drop
+   90:  goto8 93
+   92:  throw
+   93:  push_atom_value string
+   98:  get_loc0 0: a
+   99:  typeof
+  100:  neq
+  101:  if_false8 138
+  103:  catch 126
+  108:  get_var JSON
+  113:  get_field2 stringify
+  118:  get_loc0 0: a
+  119:  call_method 1
+  122:  put_loc0 0: a
+  123:  drop
+  124:  goto8 138
+  126:  put_loc2 2: e
+  127:  catch 137
+  132:  push_empty_string
+  133:  put_loc0 0: a
+  134:  drop
+  135:  goto8 138
+  137:  throw
+  138:  get_arg0 0: t
+  139:  lnot
+  140:  dup
+  141:  if_true8 151
+  143:  drop
+  144:  get_arg0 0: t
+  145:  get_field ok
+  150:  lnot
+  151:  if_false 349
+  156:  push_empty_string
+  157:  put_loc3 3: i
+  158:  catch 247
+  163:  get_var JSON
+  168:  get_field2 parse
+  173:  get_loc0 0: a
+  174:  call_method 1
+  177:  set_loc8 4: r
+  179:  get_field error
+  184:  dup
+  185:  if_false8 216
+  187:  drop
+  188:  get_loc8 4: r
+  190:  get_field error
+  195:  get_field message
+  200:  dup
+  201:  if_true8 216
+  203:  drop
+  204:  get_loc8 4: r
+  206:  get_field error
+  211:  get_field code
+  216:  dup
+  217:  if_true8 243
+  219:  drop
+  220:  get_loc8 4: r
+  222:  get_field message
+  227:  dup
+  228:  if_true8 243
+  230:  drop
+  231:  get_loc8 4: r
+  233:  get_field code
+  238:  dup
+  239:  if_true8 243
+  241:  drop
+  242:  push_empty_string
+  243:  put_loc3 3: i
+  244:  drop
+  245:  goto8 282
+  247:  put_loc8 5: e
+  249:  catch 281
+  254:  get_var String
+  259:  get_loc0 0: a
+  260:  dup
+  261:  if_true8 265
+  263:  drop
+  264:  push_empty_string
+  265:  call1 1
+  266:  get_field2 slice
+  271:  push_0 0
+  272:  push_i8 120
+  274:  call_method 2
+  277:  put_loc3 3: i
+  278:  drop
+  279:  goto8 282
+  281:  throw
+  282:  get_var_ref0 0: e
+  283:  object
+  284:  push_1 1
+  285:  lnot
+  286:  define_field ok
+  291:  push_atom_value http_
+  296:  get_arg0 0: t
+  297:  if_false8 315
+  299:  get_arg0 0: t
+  300:  get_field status
+  305:  if_false8 315
+  307:  get_arg0 0: t
+  308:  get_field status
+  313:  goto8 316
+  315:  push_0 0
+  316:  add
+  317:  define_field error
+  322:  get_var String
+  327:  get_loc3 3: i
+  328:  call1 1
+  329:  get_field2 slice
+  334:  push_0 0
+  335:  push_i16 160
+  338:  call_method 2
+  341:  define_field detail
+  346:  call1 1
+  347:  nip
+  348:  return
+  349:  get_var JSON
+  354:  get_field2 parse
+  359:  get_loc0 0: a
+  360:  call_method 1
+  363:  set_loc8 6: o
+  365:  get_field choices
+  370:  if_false8 415
+  372:  get_loc8 6: o
+  374:  get_field choices
+  379:  push_0 0
+  380:  get_array_el
+  381:  if_false8 415
+  383:  get_loc8 6: o
+  385:  get_field choices
+  390:  push_0 0
+  391:  get_array_el
+  392:  get_field message
+  397:  if_false8 415
+  399:  get_loc8 6: o
+  401:  get_field choices
+  406:  push_0 0
+  407:  get_array_el
+  408:  get_field message
+  413:  goto8 416
+  415:  object
+  416:  get_field content
+  421:  dup
+  422:  if_true8 426
+  424:  drop
+  425:  push_empty_string
+  426:  put_loc8 7: s
+  428:  get_var Array
+  433:  get_field2 isArray
+  438:  get_loc8 7: s
+  440:  call_method 1
+  443:  if_false8 522
+  445:  array_from 0
+  448:  put_loc8 8: n
+  450:  push_0 0
+  451:  put_loc8 9: l
+  453:  get_loc8 9: l
+  455:  get_loc8 7: s
+  457:  get_length
+  458:  lt
+  459:  if_false8 509
+  461:  get_loc8 7: s
+  463:  get_loc8 9: l
+  465:  get_array_el
+  466:  dup
+  467:  if_false8 504
+  469:  drop
+  470:  get_loc8 7: s
+  472:  get_loc8 9: l
+  474:  get_array_el
+  475:  get_field text
+  480:  dup
+  481:  if_false8 504
+  483:  drop
+  484:  get_loc8 8: n
+  486:  get_field2 push
+  491:  get_loc8 7: s
+  493:  get_loc8 9: l
+  495:  get_array_el
+  496:  get_field text
+  501:  call_method 1
+  504:  drop
+  505:  inc_loc 9: l
+  507:  goto8 453
+  509:  get_loc8 8: n
+  511:  get_field2 join
+  516:  push_empty_string
+  517:  call_method 1
+  520:  put_loc8 7: s
+  522:  get_var_ref0 0: e
+  523:  object
+  524:  push_0 0
+  525:  lnot
+  526:  define_field ok
+  531:  get_var String
+  536:  get_loc8 7: s
+  538:  call1 1
+  539:  define_field text
+  544:  call1 1
+  545:  drop
+  546:  drop
+  547:  return_undef
+  548:  put_loc8 10: t
+  550:  catch 578
+  555:  get_var_ref0 0: e
+  556:  object
+  557:  push_1 1
+  558:  lnot
+  559:  define_field ok
+  564:  push_atom_value parse
+  569:  define_field error
+  574:  call1 1
+  575:  drop
+  576:  drop
+  577:  return_undef
+  578:  throw
+
+
+/* ===== function depth=3 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: e local:arg0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: e
+    1:  object
+    2:  push_1 1
+    3:  lnot
+    4:  define_field ok
+    9:  push_atom_value network
+   14:  define_field error
+   19:  call1 1
+   20:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: other-7ba6c1d4.js:1 source_len=0 */
+other-7ba6c1d4.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: e local:arg0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: e
+    1:  object
+    2:  push_1 1
+    3:  lnot
+    4:  define_field ok
+    9:  push_atom_value network
+   14:  define_field error
+   19:  call1 1
+   20:  return_undef
+

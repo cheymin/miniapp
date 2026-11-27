@@ -1,0 +1,397 @@
+    0	tools_camera.js
+    1	bridge
+    2	./runtime-timers-09d92488.js
+    3	./host-tool-result-990120f5.js
+    4	s
+    5	c
+    6	a
+    7	b
+    8	f
+    9	t
+   10	e
+   11	i
+   12	r
+   13	o
+   14	h
+   15	n
+   16	l
+   17	d
+   18	p
+   19	u
+   20	g
+   21	m
+   22	v
+   23	w
+   24	y
+   25	/dev/video29
+   26	/dev/video30
+   27	/userdisk/Pictures
+   28	setsar=1
+   29	transpose=1,setsar=1
+   30	hflip,vflip,setsar=1
+   31	transpose=2,setsar=1
+   32	正
+   33	右
+   34	倒
+   35	左
+   36	/tmp/loli_cam.hb
+   37	/tmp/loli_cam_prev.pid
+   38	/tmp/loli_cam_rec.pid
+   39	/data/loli_cam_shot
+   40	type
+   41	floating
+   42	pageData
+   43	pageBridge
+   44	props
+   45	data
+   46	created
+   47	mounted
+   48	beforeDestroy
+   49	initBridge
+   50	getRenderRectangleParam
+   51	getRotationParam
+   52	parseSelectionRect
+   53	buildCentered16By9Crop
+   54	applyCropForDevice
+   55	sweepGstProcesses
+   56	markCamFg
+   57	startDualkeyPoll
+   58	stopDualkeyPoll
+   59	pollDualkeyShot
+   60	camWriteHeartbeat
+   61	startCamHeartbeat
+   62	stopCamHeartbeat
+   63	spawnCamWatchdog
+   64	startPreview
+   65	getRenderRectObject
+   66	getRecordFileName
+   67	formatRecordDuration
+   68	updateRecordElapsed
+   69	startRecordTimer
+   70	clearRecordTimer
+   71	toggleRecording
+   72	startRecording
+   73	stopRecording
+   74	takePhoto
+   75	afterCapture
+   76	finishStandaloneCamera
+   77	getLoadOption
+   78	execCmd
+   79	normalizeOutput
+   80	stopPreview
+   81	cleanupCameraProcesses
+   82	kickScanDaemonShell
+   83	checkStorage
+   84	ensureDirectory
+   85	getTimestampParts
+   86	getCaptureRotationFilter
+   87	getCaptureRotationLabel
+   88	cycleCaptureRotation
+   89	sanitizeDeviceId
+   90	loadDeviceId
+   91	toast
+   92	showInfo
+   93	showError
+   94	onShow
+   95	onHide
+   96	onUnload
+   97	methods
+   98	_withStripped
+   99	render
+  100	staticRenderFns
+  101	_compiled
+  102	data-v-520e1046
+  103	_scopeId
+  104	themes
+  105	assign
+  106	absolute
+  107	position
+  108	top
+  109	left
+  110	100%
+  111	width
+  112	height
+  113	#000000
+  114	backgroundColor
+  115	camera-container
+  116	rgba(0,0,0,0)
+  117	camera-hole
+  118	zIndex
+  119	opacity
+  120	flash-overlay
+  121	right
+  122	100px
+  123	column
+  124	flexDirection
+  125	center
+  126	justifyContent
+  127	alignItems
+  128	rgba(0,0,0,0.3)
+  129	controls-area
+  130	70px
+  131	18px
+  132	marginTop
+  133	btn-shutter-wrapper
+  134	36px
+  135	12px
+  136	1px
+  137	borderWidth
+  138	solid
+  139	borderStyle
+  140	rgba(255,255,255,0.7)
+  141	borderColor
+  142	borderRadius
+  143	rgba(255,255,255,0.08)
+  144	btn-rotate-wrapper
+  145	#ffffff
+  146	color
+  147	14px
+  148	fontSize
+  149	textAlign
+  150	btn-rotate-label
+  151	#999999
+  152	btn-rotate-label-disabled
+  153	btn-record-wrapper
+  154	54px
+  155	27px
+  156	3px
+  157	#ff4d4f
+  158	rgba(255,77,79,0.1)
+  159	btn-record-outer
+  160	34px
+  161	17px
+  162	btn-record-inner
+  163	rgba(255,77,79,0.25)
+  164	btn-recording
+  165	20px
+  166	4px
+  167	btn-record-stop
+  168	8px
+  169	record-label
+  170	#ffb3b4
+  171	11px
+  172	record-time
+  173	35px
+  174	#FFFFFF
+  175	transform
+  176	transitionProperty
+  177	transitionDuration
+  178	ease-out
+  179	transitionTimingFunction
+  180	btn-shutter-outer
+  181	property
+  182	duration
+  183	timingFunction
+  184	@TRANSITION
+  185	scale(0.85)
+  186	btn-shutter-active
+  187	50px
+  188	25px
+  189	btn-shutter-inner
+  190	#666666
+  191	btn-shutter-outer-disabled
+  192	btn-shutter-inner-disabled
+  193	rgba(102,102,102,0.15)
+  194	btn-record-outer-disabled
+  195	btn-record-inner-disabled
+  196	btn-record-stop-disabled
+  197	style
+  198	src/pages/tools/camera.vue
+  199	__file
+  200	previewPid
+  201	recordPid
+  202	recordPath
+  203	isPreviewing
+  204	isRecording
+  205	recordElapsedMs
+  206	recordStartedAt
+  207	recordTimer
+  208	bridgeReady
+  209	isCapturing
+  210	showFlash
+  211	isAnimating
+  212	captureRotationIndex
+  213	modal
+  214	shell
+  215	cam
+  216	UNKNOWN
+  217	deviceId
+  218	deviceIdLoaded
+  219	physW
+  220	physH
+  221	weex
+  222	requireModule
+  223	_previewStarting
+  224	_pageDead
+  225	_pageHidden
+  226	_mountedTimer
+  227	Shell
+  228	Camera
+  229	$falcon
+  230	jsapi
+  231	getScreenSize
+  232	min
+  233	max
+  234	console
+  235	error
+  236	Bridge init failed
+  237	abs
+  238	round
+  239	render-rectangle="<
+  240	,
+  241	>"
+  242	videoflip video-direction=90l qos=false
+  243	match
+  244	parseInt
+  245	floor
+  246	v4l2-ctl -d 
+  247	 --get-selection=target=crop_bounds
+  248	crop-bounds-unavailable
+  249	 --set-crop top=
+  250	,left=
+  251	,width=
+  252	,height=
+  253	for f in /proc/[0-9]*/cmdline; do p=$(echo $f | cut -d/ -f3); [ "$p" = "$$" ] && continue; c=$(tr '\0' ' ' < $f 2>/dev/null); case "$c" in *gst-launch*'
+  254	'*) kill -9 $p 2>/dev/null;; esac; done; echo ok
+  255	echo 
+  256	 > /data/loli_cam_fg
+  257	_dkTimer
+  258	camReq
+  259	c=$(cat 
+  260	 2>/dev/null); [ -n "$c" ] && rm -f 
+  261	; echo "$c"
+  262	output
+  263	indexOf
+  264	date +%s > 
+  265	_camHbTimer
+  266	rm -f 
+  267	 
+  268	P=
+  269	; while kill -0 $P 2>/dev/null; do tr "\0" " " < /proc/$P/cmdline 2>/dev/null | grep -q gst-launch || break; N=$(date +%s); H=$(cat 
+  270	 2>/dev/null || echo 0); if [ $((N-H)) -gt 8 ]; then 
+  271	rec
+  272	kill -INT $P 2>/dev/null; sleep 3; kill -9 $P 2>/dev/null
+  273	kill -9 $P 2>/dev/null
+  274	; break; fi; sleep 3; done
+  275	setsid sh -c '
+  276	' >/dev/null 2>&1 < /dev/null &
+  277	setCrop
+  278	device
+  279	openPreview
+  280	rotation
+  281	rect
+  282	native preview failed, fallback to shell
+  283	gst-launch-1.0 v4l2src device=
+  284	 ! video/x-raw,width=640,height=360,framerate=30/1,pixel-aspect-ratio=1/1 ! 
+  285	 ! videoscale ! 
+  286	video/x-raw,width=360,height=640,pixel-aspect-ratio=1/1
+  287	 ! kmssink plane-id=75 sync=false driver-name=rockchip force-aspect-ratio=true 
+  288	 > /userdata/applog/gst_preview.log 2>&1 & echo $!
+  289	trim
+  290	isNaN
+  291	printf %s 
+  292	 > 
+  293	prev
+  294	预览启动失败
+  295	x
+  296	date
+  297	time
+  298	ms
+  299	VID_
+  300	_
+  301	_1_
+  302	.avi
+  303	padStart
+  304	:
+  305	now
+  306	录像存储空间不足
+  307	/
+  308	startRecord
+  309	file
+  310	fps
+  311	开始录像
+  312	native record failed, fallback to shell
+  313	gst-launch-1.0 -e v4l2src device=
+  314	 ! 
+  315	video/x-raw,format=NV12,width=1280,height=720,framerate=30/1,pixel-aspect-ratio=1/1
+  316	 ! jpegenc ! avimux ! filesink location="
+  317	" > /userdata/applog/gst_record.log 2>&1 & echo $!
+  318	record-pid-invalid
+  319	录像启动失败
+  320	stopRecord
+  321	path
+  322	录像已保存
+  323	native stopRecord failed
+  324	录像停止失败
+  325	sh -c 'kill -INT 
+  326	 2>/dev/null || true; for i in 1 2 3 4 5; do kill -0 
+  327	 2>/dev/null || exit 0; sleep 1; done; kill -TERM 
+  328	 2>/dev/null || true; for i in 1 2 3; do kill -0 
+  329	 2>/dev/null || exit 0; sleep 1; done; kill -9 
+  330	 2>/dev/null || true'
+  331	ls -l "
+  332	"
+  333	IMG_
+  334	.JPG
+  335	capture
+  336	native capture failed, fallback to shell
+  337	 --silent --set-fmt-video=width=1920,height=1080,pixelformat=UYVY --stream-skip=1 --stream-mmap=1 --stream-poll --stream-count=1 --stream-to=/tmp/gc.yuv
+  338	ffmpeg -y -f rawvideo -video_size 1920x1080 -pixel_format uyvy422 -i /tmp/gc.yuv -vf "
+  339	" -frames:v 1 -q:v 2 "
+  340	拍照失败
+  341	trigger
+  342	tools_camera
+  343	$page
+  344	finish
+  345	照片已保存
+  346	hostReq
+  347	_hostFinishedReq
+  348	$emit
+  349	req
+  350	cancelled
+  351	hostCaller
+  352	回传失败，请重试
+  353	options
+  354	push
+  355	loadOptions
+  356	newOptions
+  357	$route
+  358	query
+  359	Shell not ready
+  360	closePreview
+  361	kill -9 
+  362	 2>/dev/null; echo ok
+  363	releaseAll
+  364	sleep 1; for p in /proc/[0-9]*; do pid=${p#/proc/}; c=$(tr "\0" " " < $p/cmdline 2>/dev/null); case "$c" in "/usr/bin/CaptureFrame"*) kill $pid;; esac; done; echo kick-done
+  365	df -m 
+  366	 2>/dev/null | awk 'NR==2 {print $4}' || df -m /userdisk | awk 'NR==2 {print $4}'
+  367	mkdir -p "
+  368	getFullYear
+  369	getMonth
+  370	getDate
+  371	getHours
+  372	getMinutes
+  373	getSeconds
+  374	getMilliseconds
+  375	成片方向: 
+  376	replace
+  377	toUpperCase
+  378	cat /proc/device-tree/serial-number 2>/dev/null
+  379	cat /proc/cpuinfo 2>/dev/null | awk -F': ' '/Serial/ {print $2; exit}'
+  380	cat /etc/machine-id 2>/dev/null
+  381	错误: 
+  382	$createElement
+  383	_self
+  384	_c
+  385	div
+  386	staticClass
+  387	hole
+  388	_e
+  389	btn-disabled
+  390	click
+  391	on
+  392	text
+  393	_v
+  394	_s
+  395	停止
+  396	录像

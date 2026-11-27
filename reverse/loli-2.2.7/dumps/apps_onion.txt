@@ -1,0 +1,7192 @@
+
+/* ===== function depth=0 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: t parent:loc0 const
+    1: e local:loc0 let
+    2: i local:loc1 let
+    3: a local:loc2 var
+    4: s local:loc3 var
+    5: o local:loc4 var
+    6: n local:loc5 var
+    7: r local:loc6 var
+    8: c local:loc7 const
+  stack_size: 8
+  opcodes:
+    0:  fclosure8 0: [bytecode a]
+    2:  put_var_ref3 3: a
+    3:  fclosure8 1: [bytecode s]
+    5:  put_var_ref 4: s
+    8:  push_0 0
+    9:  put_var_ref1 1: e
+   10:  null
+   11:  put_var_ref2 2: i
+   12:  object
+   13:  push_atom_value "onion-browser"
+   18:  define_field name
+   23:  fclosure8 2: [bytecode <null>]
+   25:  set_name data
+   30:  define_field data
+   35:  object
+   36:  fclosure8 3: [bytecode <null>]
+   38:  define_method headerPathFirst,4
+   44:  fclosure8 4: [bytecode <null>]
+   46:  define_method headerPathLast,4
+   52:  fclosure8 5: [bytecode <null>]
+   54:  define_method filteredVideos,4
+   60:  fclosure8 6: [bytecode <null>]
+   62:  set_name gridCols
+   67:  define_field gridCols
+   72:  fclosure8 7: [bytecode <null>]
+   74:  define_method viHeight,4
+   80:  fclosure8 8: [bytecode <null>]
+   82:  define_method videoRows,4
+   88:  fclosure8 9: [bytecode <null>]
+   90:  define_method subscriptionStatusText,4
+   96:  fclosure8 10: [bytecode <null>]
+   98:  define_method subscriptionExpireText,4
+  104:  define_field computed
+  109:  fclosure8 11: [bytecode <null>]
+  111:  define_method created,4
+  117:  fclosure8 12: [bytecode <null>]
+  119:  define_method mounted,4
+  125:  object
+  126:  fclosure8 13: [bytecode <null>]
+  128:  set_name fullVideoName
+  133:  define_field fullVideoName
+  138:  fclosure8 14: [bytecode <null>]
+  140:  define_method formatVideoName,4
+  146:  fclosure8 15: [bytecode <null>]
+  148:  set_name videoRefKey
+  153:  define_field videoRefKey
+  158:  fclosure8 16: [bytecode <null>]
+  160:  set_name videoRefKeyByPath
+  165:  define_field videoRefKeyByPath
+  170:  fclosure8 17: [bytecode <null>]
+  172:  define_method scrollToLastWatchedIfAny,4
+  178:  fclosure8 18: [bytecode <null>]
+  180:  define_method scrollToVideoByPath,4
+  186:  fclosure8 19: [bytecode <null>]
+  188:  define_method selectSidebarVideo,4
+  194:  fclosure8 20: [bytecode <null>]
+  196:  define_method onSearchInput,4
+  202:  fclosure8 21: [bytecode <null>]
+  204:  define_method initBridge,4
+  210:  fclosure8 22: [bytecode <null>]
+  212:  define_method refreshScreenSize,4
+  218:  fclosure8 23: [bytecode <null>]
+  220:  define_method loadPreferences,4
+  226:  fclosure8 24: [bytecode <null>]
+  228:  define_method savePreferences,4
+  234:  fclosure8 25: [bytecode <null>]
+  236:  define_method isLastWatched,4
+  242:  fclosure8 26: [bytecode <null>]
+  244:  define_method loadAuthInfo,4
+  250:  fclosure8 27: [bytecode <null>]
+  252:  define_method saveAuthInfo,4
+  258:  fclosure8 28: [bytecode <null>]
+  260:  set_name resText
+  265:  define_field resText
+  270:  fclosure8 29: [bytecode <null>]
+  272:  define_method maskToken,4
+  278:  fclosure8 30: [bytecode <null>]
+  280:  define_method normalizeMac,4
+  286:  fclosure8 31: [bytecode <null>]
+  288:  define_method ensureDeviceMac,4
+  294:  fclosure8 32: [bytecode <null>]
+  296:  define_method applyStatus,4
+  302:  fclosure8 33: [bytecode <null>]
+  304:  define_method fetchJson,4
+  310:  fclosure8 34: [bytecode <null>]
+  312:  define_method openTokenKeyboard,4
+  318:  fclosure8 35: [bytecode <null>]
+  320:  define_method doLogout,4
+  326:  fclosure8 36: [bytecode <null>]
+  328:  define_method openAuthModal,4
+  334:  fclosure8 37: [bytecode <null>]
+  336:  define_method closeAuthModal,4
+  342:  fclosure8 38: [bytecode <null>]
+  344:  define_method refreshActivationStatus,4
+  350:  fclosure8 39: [bytecode <null>]
+  352:  define_method activateAndSaveKey,4
+  358:  fclosure8 40: [bytecode <null>]
+  360:  define_method openPurchaseLink,4
+  366:  fclosure8 41: [bytecode <null>]
+  368:  define_method ensureActivatedForPlayback,4
+  374:  fclosure8 42: [bytecode <null>]
+  376:  define_method verifyAndSaveToken,4
+  382:  fclosure8 43: [bytecode <null>]
+  384:  define_method verifyToken,4
+  390:  fclosure8 44: [bytecode <null>]
+  392:  define_method openCascader,4
+  398:  fclosure8 45: [bytecode <null>]
+  400:  define_method closeCascader,4
+  406:  fclosure8 46: [bytecode <null>]
+  408:  define_method selectTempLevel,4
+  414:  fclosure8 47: [bytecode <null>]
+  416:  define_method confirmCascader,4
+  422:  fclosure8 48: [bytecode <null>]
+  424:  define_method loadLevelOptions,4
+  430:  fclosure8 49: [bytecode <null>]
+  432:  define_method loadVideos,4
+  438:  fclosure8 50: [bytecode <null>]
+  440:  define_method cardBoxStyle,4
+  446:  fclosure8 51: [bytecode <null>]
+  448:  define_method clearPlayerContext,4
+  454:  fclosure8 52: [bytecode <null>]
+  456:  define_method openPlayerWithCallback,4
+  462:  fclosure8 53: [bytecode <null>]
+  464:  define_method previewUrl,4
+  470:  fclosure8 54: [bytecode <null>]
+  472:  define_method playVideo,4
+  478:  define_field methods
+  483:  put_var_ref 5: o
+  486:  push_atom_value "images/65461a02a98633e0684df447b960ae4f.png"
+  491:  put_var_ref 6: n
+  494:  fclosure8 55: [bytecode <null>]
+  496:  set_name r
+  501:  set_var_ref 7: r
+  504:  push_0 0
+  505:  lnot
+  506:  put_field _withStripped
+  511:  get_var_ref 5: o
+  514:  put_var_ref 8: c
+  517:  get_var_ref_check 8: c
+  520:  get_var_ref 7: r
+  523:  put_field render
+  528:  get_var_ref_check 8: c
+  531:  array_from 0
+  534:  put_field staticRenderFns
+  539:  get_var_ref_check 8: c
+  542:  push_0 0
+  543:  lnot
+  544:  put_field _compiled
+  549:  get_var_ref_check 8: c
+  552:  push_atom_value "data-v-29e24120"
+  557:  put_field _scopeId
+  562:  get_var_ref_check 8: c
+  565:  object
+  566:  put_field themes
+  571:  get_var_ref_check 8: c
+  574:  get_var Object
+  579:  get_field2 assign
+  584:  object
+  585:  object
+  586:  object
+  587:  push_atom_value "100%"
+  592:  define_field width
+  597:  push_atom_value "100%"
+  602:  define_field height
+  607:  push_atom_value "#f7f7f8"
+  612:  define_field backgroundColor
+  617:  push_atom_value relative
+  622:  define_field position
+  627:  define_field "onion-page"
+  632:  object
+  633:  push_atom_value absolute
+  638:  define_field position
+  643:  push_0 0
+  644:  define_field top
+  649:  push_0 0
+  650:  define_field left
+  655:  push_0 0
+  656:  define_field right
+  661:  push_0 0
+  662:  define_field bottom
+  667:  push_atom_value "#1a1a1a"
+  672:  define_field backgroundColor
+  677:  push_atom_value center
+  682:  define_field justifyContent
+  687:  push_atom_value center
+  692:  define_field alignItems
+  697:  push_i16 999
+  700:  define_field zIndex
+  705:  push_1 1
+  706:  define_field opacity
+  711:  push_atom_value opacity
+  716:  define_field transitionProperty
+  721:  push_i16 800
+  724:  define_field transitionDuration
+  729:  push_atom_value "cubic-bezier(0.25,0.1,0.25,1)"
+  734:  define_field transitionTimingFunction
+  739:  define_field "splash-screen"
+  744:  object
+  745:  object
+  746:  push_atom_value opacity
+  751:  define_field property
+  756:  push_i16 800
+  759:  define_field duration
+  764:  push_atom_value "cubic-bezier(0.25,0.1,0.25,1)"
+  769:  define_field timingFunction
+  774:  define_field "splash-screen"
+  779:  object
+  780:  push_atom_value opacity
+  785:  define_field property
+  790:  push_i16 400
+  793:  define_field duration
+  798:  push_atom_value "cubic-bezier(0.25,0.1,0.25,1)"
+  803:  define_field timingFunction
+  808:  define_field "splash-bg"
+  813:  object
+  814:  push_atom_value opacity
+  819:  define_field property
+  824:  push_i16 600
+  827:  define_field duration
+  832:  push_atom_value "cubic-bezier(0.25,0.1,0.25,1)"
+  837:  define_field timingFunction
+  842:  define_field "splash-icon-wrapper"
+  847:  object
+  848:  push_atom_value transform
+  853:  define_field property
+  858:  push_i16 600
+  861:  define_field duration
+  866:  push_atom_value "cubic-bezier(0.25,0.1,0.25,1)"
+  871:  define_field timingFunction
+  876:  define_field "splash-icon"
+  881:  define_field "@TRANSITION"
+  886:  object
+  887:  push_0 0
+  888:  define_field opacity
+  893:  define_field "splash-fade-out"
+  898:  object
+  899:  push_atom_value absolute
+  904:  define_field position
+  909:  push_0 0
+  910:  define_field top
+  915:  push_0 0
+  916:  define_field left
+  921:  push_0 0
+  922:  define_field right
+  927:  push_0 0
+  928:  define_field bottom
+  933:  push_atom_value "#fcfcfc"
+  938:  define_field backgroundColor
+  943:  push_0 0
+  944:  define_field opacity
+  949:  push_atom_value opacity
+  954:  define_field transitionProperty
+  959:  push_i16 400
+  962:  define_field transitionDuration
+  967:  push_atom_value "cubic-bezier(0.25,0.1,0.25,1)"
+  972:  define_field transitionTimingFunction
+  977:  define_field "splash-bg"
+  982:  object
+  983:  push_const8 56: 0.95
+  985:  define_field opacity
+  990:  define_field "splash-bg-anim"
+  995:  object
+  996:  push_0 0
+  997:  define_field opacity
+ 1002:  push_atom_value "200px"
+ 1007:  define_field width
+ 1012:  push_atom_value "200px"
+ 1017:  define_field height
+ 1022:  push_atom_value center
+ 1027:  define_field justifyContent
+ 1032:  push_atom_value center
+ 1037:  define_field alignItems
+ 1042:  push_atom_value opacity
+ 1047:  define_field transitionProperty
+ 1052:  push_i16 600
+ 1055:  define_field transitionDuration
+ 1060:  push_atom_value "cubic-bezier(0.25,0.1,0.25,1)"
+ 1065:  define_field transitionTimingFunction
+ 1070:  define_field "splash-icon-wrapper"
+ 1075:  object
+ 1076:  push_1 1
+ 1077:  define_field opacity
+ 1082:  define_field "splash-icon-anim-opacity"
+ 1087:  object
+ 1088:  push_atom_value "120px"
+ 1093:  define_field width
+ 1098:  push_atom_value "120px"
+ 1103:  define_field height
+ 1108:  push_atom_value "scale(0.8)"
+ 1113:  define_field transform
+ 1118:  push_atom_value transform
+ 1123:  define_field transitionProperty
+ 1128:  push_i16 600
+ 1131:  define_field transitionDuration
+ 1136:  push_atom_value "cubic-bezier(0.25,0.1,0.25,1)"
+ 1141:  define_field transitionTimingFunction
+ 1146:  define_field "splash-icon"
+ 1151:  object
+ 1152:  push_atom_value "scale(1.15)"
+ 1157:  define_field transform
+ 1162:  define_field "splash-icon-anim-scale"
+ 1167:  object
+ 1168:  push_atom_value "100%"
+ 1173:  define_field width
+ 1178:  push_atom_value "100%"
+ 1183:  define_field height
+ 1188:  push_atom_value row
+ 1193:  define_field flexDirection
+ 1198:  define_field "main-layout"
+ 1203:  object
+ 1204:  push_atom_value "220px"
+ 1209:  define_field width
+ 1214:  push_atom_value "100%"
+ 1219:  define_field height
+ 1224:  push_atom_value "#ffffff"
+ 1229:  define_field backgroundColor
+ 1234:  push_atom_value "1px"
+ 1239:  define_field borderRightWidth
+ 1244:  push_atom_value "rgba(0,0,0,0.05)"
+ 1249:  define_field borderRightColor
+ 1254:  push_atom_value "20px"
+ 1259:  define_field paddingTop
+ 1264:  push_atom_value "16px"
+ 1269:  define_field paddingRight
+ 1274:  push_atom_value "20px"
+ 1279:  define_field paddingBottom
+ 1284:  push_atom_value "16px"
+ 1289:  define_field paddingLeft
+ 1294:  push_atom_value "2px 0 8px rgba(0,0,0,0.02)"
+ 1299:  define_field boxShadow
+ 1304:  define_field sidebar
+ 1309:  object
+ 1310:  push_atom_value row
+ 1315:  define_field flexDirection
+ 1320:  push_atom_value center
+ 1325:  define_field alignItems
+ 1330:  push_atom_value "24px"
+ 1335:  define_field marginBottom
+ 1340:  define_field "sidebar-header"
+ 1345:  object
+ 1346:  push_atom_value "14px"
+ 1351:  define_field fontSize
+ 1356:  push_atom_value bold
+ 1361:  define_field fontWeight
+ 1366:  push_atom_value "#333333"
+ 1371:  define_field color
+ 1376:  push_1 1
+ 1377:  define_field lines
+ 1382:  push_atom_value ellipsis
+ 1387:  define_field textOverflow
+ 1392:  push_atom_value nowrap
+ 1397:  define_field whiteSpace
+ 1402:  define_field "sidebar-title"
+ 1407:  object
+ 1408:  push_atom_value "14px"
+ 1413:  define_field fontSize
+ 1418:  push_atom_value bold
+ 1423:  define_field fontWeight
+ 1428:  push_atom_value "#333333"
+ 1433:  define_field color
+ 1438:  push_1 1
+ 1439:  define_field flex
+ 1444:  push_atom_value left
+ 1449:  define_field textAlign
+ 1454:  push_1 1
+ 1455:  define_field lines
+ 1460:  push_atom_value ellipsis
+ 1465:  define_field textOverflow
+ 1470:  push_atom_value nowrap
+ 1475:  define_field whiteSpace
+ 1480:  define_field "sidebar-title-last"
+ 1485:  object
+ 1486:  push_atom_value "16px"
+ 1491:  define_field width
+ 1496:  push_atom_value "16px"
+ 1501:  define_field height
+ 1506:  push_0 0
+ 1507:  define_field marginTop
+ 1512:  push_atom_value "4px"
+ 1517:  define_field marginRight
+ 1522:  push_0 0
+ 1523:  define_field marginBottom
+ 1528:  push_atom_value "4px"
+ 1533:  define_field marginLeft
+ 1538:  define_field "header-arrow"
+ 1543:  object
+ 1544:  push_1 1
+ 1545:  define_field flex
+ 1550:  define_field "sidebar-spacer"
+ 1555:  object
+ 1556:  push_1 1
+ 1557:  define_field flex
+ 1562:  push_atom_value "100%"
+ 1567:  define_field width
+ 1572:  push_atom_value "6px"
+ 1577:  define_field paddingRight
+ 1582:  define_field "sidebar-video-list"
+ 1587:  object
+ 1588:  push_atom_value "8px"
+ 1593:  define_field paddingTop
+ 1598:  push_0 0
+ 1599:  define_field paddingRight
+ 1604:  push_atom_value "8px"
+ 1609:  define_field paddingBottom
+ 1614:  push_0 0
+ 1615:  define_field paddingLeft
+ 1620:  define_field "sv-empty"
+ 1625:  object
+ 1626:  push_atom_value "12px"
+ 1631:  define_field fontSize
+ 1636:  push_atom_value "#999999"
+ 1641:  define_field color
+ 1646:  define_field "sv-empty-txt"
+ 1651:  object
+ 1652:  push_atom_value "8px"
+ 1657:  define_field paddingTop
+ 1662:  push_atom_value "10px"
+ 1667:  define_field paddingRight
+ 1672:  push_atom_value "8px"
+ 1677:  define_field paddingBottom
+ 1682:  push_atom_value "10px"
+ 1687:  define_field paddingLeft
+ 1692:  push_atom_value "8px"
+ 1697:  define_field borderRadius
+ 1702:  push_atom_value "6px"
+ 1707:  define_field marginBottom
+ 1712:  push_const8 57: 0.8
+ 1714:  define_field "opacity:active"
+ 1719:  define_field "sv-item"
+ 1724:  object
+ 1725:  push_atom_value "rgba(10,132,255,0.12)"
+ 1730:  define_field backgroundColor
+ 1735:  define_field "sv-item-active"
+ 1740:  object
+ 1741:  push_atom_value "12px"
+ 1746:  define_field fontSize
+ 1751:  push_atom_value "#333333"
+ 1756:  define_field color
+ 1761:  push_1 1
+ 1762:  define_field lines
+ 1767:  push_atom_value ellipsis
+ 1772:  define_field textOverflow
+ 1777:  push_atom_value nowrap
+ 1782:  define_field whiteSpace
+ 1787:  define_field "sv-txt"
+ 1792:  object
+ 1793:  push_atom_value "#0a84ff"
+ 1798:  define_field color
+ 1803:  push_atom_value bold
+ 1808:  define_field fontWeight
+ 1813:  define_field "sv-txt-active"
+ 1818:  object
+ 1819:  push_atom_value "20px"
+ 1824:  define_field marginTop
+ 1829:  define_field "sidebar-status"
+ 1834:  object
+ 1835:  push_atom_value "12px"
+ 1840:  define_field fontSize
+ 1845:  push_atom_value "#888888"
+ 1850:  define_field color
+ 1855:  define_field "status-txt"
+ 1860:  object
+ 1861:  push_atom_value "12px"
+ 1866:  define_field fontSize
+ 1871:  push_atom_value "#ff4d4f"
+ 1876:  define_field color
+ 1881:  define_field "status-error"
+ 1886:  object
+ 1887:  push_1 1
+ 1888:  define_field flex
+ 1893:  push_atom_value "100%"
+ 1898:  define_field height
+ 1903:  push_atom_value "16px"
+ 1908:  define_field paddingTop
+ 1913:  push_atom_value "20px"
+ 1918:  define_field paddingRight
+ 1923:  push_0 0
+ 1924:  define_field paddingBottom
+ 1929:  push_atom_value "20px"
+ 1934:  define_field paddingLeft
+ 1939:  push_atom_value "#fcfcfc"
+ 1944:  define_field backgroundColor
+ 1949:  define_field "content-area"
+ 1954:  object
+ 1955:  push_atom_value row
+ 1960:  define_field flexDirection
+ 1965:  push_atom_value "space-between"
+ 1970:  define_field justifyContent
+ 1975:  push_atom_value center
+ 1980:  define_field alignItems
+ 1985:  push_atom_value "12px"
+ 1990:  define_field marginBottom
+ 1995:  push_atom_value "32px"
+ 2000:  define_field height
+ 2005:  define_field "content-header"
+ 2010:  object
+ 2011:  push_1 1
+ 2012:  define_field flex
+ 2017:  push_atom_value "30px"
+ 2022:  define_field height
+ 2027:  push_atom_value "#f0f0f0"
+ 2032:  define_field backgroundColor
+ 2037:  push_atom_value "15px"
+ 2042:  define_field borderRadius
+ 2047:  push_0 0
+ 2048:  define_field paddingTop
+ 2053:  push_atom_value "16px"
+ 2058:  define_field paddingRight
+ 2063:  push_0 0
+ 2064:  define_field paddingBottom
+ 2069:  push_atom_value "16px"
+ 2074:  define_field paddingLeft
+ 2079:  push_atom_value "16px"
+ 2084:  define_field marginRight
+ 2089:  push_atom_value center
+ 2094:  define_field justifyContent
+ 2099:  define_field "search-box"
+ 2104:  object
+ 2105:  push_1 1
+ 2106:  define_field flex
+ 2111:  push_atom_value "30px"
+ 2116:  define_field height
+ 2121:  push_atom_value "13px"
+ 2126:  define_field fontSize
+ 2131:  push_atom_value "#333333"
+ 2136:  define_field color
+ 2141:  push_atom_value "rgba(0,0,0,0)"
+ 2146:  define_field backgroundColor
+ 2151:  push_0 0
+ 2152:  define_field borderWidth
+ 2157:  push_atom_value none
+ 2162:  define_field outline
+ 2167:  define_field "search-input"
+ 2172:  object
+ 2173:  push_atom_value "rgba(10,132,255,0.1)"
+ 2178:  define_field backgroundColor
+ 2183:  push_atom_value "6px"
+ 2188:  define_field paddingTop
+ 2193:  push_atom_value "14px"
+ 2198:  define_field paddingRight
+ 2203:  push_atom_value "6px"
+ 2208:  define_field paddingBottom
+ 2213:  push_atom_value "14px"
+ 2218:  define_field paddingLeft
+ 2223:  push_atom_value "16px"
+ 2228:  define_field borderRadius
+ 2233:  push_const8 58: 0.7
+ 2235:  define_field "opacity:active"
+ 2240:  define_field "auth-btn"
+ 2245:  object
+ 2246:  push_atom_value "13px"
+ 2251:  define_field fontSize
+ 2256:  push_atom_value "#0a84ff"
+ 2261:  define_field color
+ 2266:  push_atom_value bold
+ 2271:  define_field fontWeight
+ 2276:  define_field "auth-btn-txt"
+ 2281:  object
+ 2282:  push_1 1
+ 2283:  define_field flex
+ 2288:  push_atom_value "100%"
+ 2293:  define_field width
+ 2298:  define_field "video-scroller"
+ 2303:  object
+ 2304:  push_atom_value row
+ 2309:  define_field flexDirection
+ 2314:  push_atom_value "16px"
+ 2319:  define_field marginBottom
+ 2324:  define_field vrow
+ 2329:  object
+ 2330:  push_1 1
+ 2331:  define_field flex
+ 2336:  push_atom_value "#ffffff"
+ 2341:  define_field backgroundColor
+ 2346:  push_atom_value "6px"
+ 2351:  define_field borderRadius
+ 2356:  push_atom_value "1px"
+ 2361:  define_field borderWidth
+ 2366:  push_atom_value "rgba(0,0,0,0.45)"
+ 2371:  define_field borderColor
+ 2376:  push_atom_value "0 0 8px rgba(0,0,0,0.1)"
+ 2381:  define_field boxShadow
+ 2386:  push_atom_value hidden
+ 2391:  define_field overflow
+ 2396:  push_const8 59: 0.8
+ 2398:  define_field "opacity:active"
+ 2403:  push_atom_value "scale(0.98)"
+ 2408:  define_field "transform:active"
+ 2413:  define_field vc
+ 2418:  object
+ 2419:  push_atom_value "rgba(0,0,0,0)"
+ 2424:  define_field backgroundColor
+ 2429:  push_0 0
+ 2430:  define_field borderWidth
+ 2435:  define_field vph
+ 2440:  object
+ 2441:  push_atom_value "100%"
+ 2446:  define_field width
+ 2451:  push_atom_value "135px"
+ 2456:  define_field height
+ 2461:  push_atom_value "#f0f0f0"
+ 2466:  define_field backgroundColor
+ 2471:  define_field vi
+ 2476:  object
+ 2477:  push_atom_value relative
+ 2482:  define_field position
+ 2487:  define_field "vi-box"
+ 2492:  object
+ 2493:  push_atom_value "12px"
+ 2498:  define_field paddingTop
+ 2503:  push_atom_value "10px"
+ 2508:  define_field paddingRight
+ 2513:  push_atom_value "12px"
+ 2518:  define_field paddingBottom
+ 2523:  push_atom_value "10px"
+ 2528:  define_field paddingLeft
+ 2533:  define_field vb
+ 2538:  object
+ 2539:  push_atom_value "13px"
+ 2544:  define_field fontSize
+ 2549:  push_atom_value "#333333"
+ 2554:  define_field color
+ 2559:  push_1 1
+ 2560:  define_field lines
+ 2565:  push_atom_value ellipsis
+ 2570:  define_field textOverflow
+ 2575:  push_atom_value nowrap
+ 2580:  define_field whiteSpace
+ 2585:  push_atom_value "18px"
+ 2590:  define_field lineHeight
+ 2595:  define_field vt
+ 2600:  object
+ 2601:  push_atom_value "100%"
+ 2606:  define_field width
+ 2611:  push_atom_value "200px"
+ 2616:  define_field height
+ 2621:  push_atom_value center
+ 2626:  define_field justifyContent
+ 2631:  push_atom_value center
+ 2636:  define_field alignItems
+ 2641:  define_field "empty-box"
+ 2646:  object
+ 2647:  push_atom_value "14px"
+ 2652:  define_field fontSize
+ 2657:  push_atom_value "#999999"
+ 2662:  define_field color
+ 2667:  define_field "empty-txt"
+ 2672:  object
+ 2673:  push_atom_value absolute
+ 2678:  define_field position
+ 2683:  push_0 0
+ 2684:  define_field top
+ 2689:  push_0 0
+ 2690:  define_field right
+ 2695:  push_atom_value "#e91e63"
+ 2700:  define_field backgroundColor
+ 2705:  push_atom_value "4px"
+ 2710:  define_field paddingTop
+ 2715:  push_atom_value "6px"
+ 2720:  define_field paddingRight
+ 2725:  push_atom_value "4px"
+ 2730:  define_field paddingBottom
+ 2735:  push_atom_value "6px"
+ 2740:  define_field paddingLeft
+ 2745:  push_atom_value "6px"
+ 2750:  define_field borderBottomLeftRadius
+ 2755:  push_atom_value "6px"
+ 2760:  define_field borderTopRightRadius
+ 2765:  push_i8 10
+ 2767:  define_field zIndex
+ 2772:  define_field "last-watched-badge"
+ 2777:  object
+ 2778:  push_atom_value "#ffffff"
+ 2783:  define_field color
+ 2788:  push_atom_value "10px"
+ 2793:  define_field fontSize
+ 2798:  push_atom_value bold
+ 2803:  define_field fontWeight
+ 2808:  define_field "badge-txt"
+ 2813:  object
+ 2814:  push_atom_value absolute
+ 2819:  define_field position
+ 2824:  push_0 0
+ 2825:  define_field top
+ 2830:  push_0 0
+ 2831:  define_field left
+ 2836:  push_0 0
+ 2837:  define_field right
+ 2842:  push_0 0
+ 2843:  define_field bottom
+ 2848:  push_atom_value "rgba(0,0,0,0.4)"
+ 2853:  define_field backgroundColor
+ 2858:  push_atom_value center
+ 2863:  define_field justifyContent
+ 2868:  push_atom_value center
+ 2873:  define_field alignItems
+ 2878:  push_i16 1000
+ 2881:  define_field zIndex
+ 2886:  define_field "modal-overlay"
+ 2891:  object
+ 2892:  push_atom_value "100%"
+ 2897:  define_field width
+ 2902:  push_atom_value "80%"
+ 2907:  define_field height
+ 2912:  push_atom_value "#ffffff"
+ 2917:  define_field backgroundColor
+ 2922:  push_atom_value "0px"
+ 2927:  define_field borderRadius
+ 2932:  push_atom_value "0 8px 30px rgba(0,0,0,0.15)"
+ 2937:  define_field boxShadow
+ 2942:  push_atom_value hidden
+ 2947:  define_field overflow
+ 2952:  define_field "cascader-card"
+ 2957:  object
+ 2958:  push_1 1
+ 2959:  define_field flex
+ 2964:  push_atom_value row
+ 2969:  define_field flexDirection
+ 2974:  push_atom_value "20px"
+ 2979:  define_field paddingLeft
+ 2984:  push_atom_value "20px"
+ 2989:  define_field paddingRight
+ 2994:  define_field "cascader-cols"
+ 2999:  object
+ 3000:  push_atom_value "0px"
+ 3005:  define_field borderRightWidth
+ 3010:  push_atom_value "#fafafa"
+ 3015:  define_field backgroundColor
+ 3020:  define_field "cascader-col"
+ 3025:  object
+ 3026:  push_atom_value "14px"
+ 3031:  define_field paddingTop
+ 3036:  push_atom_value "8px"
+ 3041:  define_field paddingRight
+ 3046:  push_atom_value "14px"
+ 3051:  define_field paddingBottom
+ 3056:  push_atom_value "8px"
+ 3061:  define_field paddingLeft
+ 3066:  push_atom_value "#f0f0f0"
+ 3071:  define_field "backgroundColor:active"
+ 3076:  define_field "cascader-item"
+ 3081:  object
+ 3082:  push_atom_value "#ffffff"
+ 3087:  define_field backgroundColor
+ 3092:  define_field "item-active"
+ 3097:  object
+ 3098:  push_atom_value "14px"
+ 3103:  define_field fontSize
+ 3108:  push_atom_value "#666666"
+ 3113:  define_field color
+ 3118:  push_atom_value center
+ 3123:  define_field textAlign
+ 3128:  define_field "item-txt"
+ 3133:  object
+ 3134:  push_atom_value "#0a84ff"
+ 3139:  define_field color
+ 3144:  push_atom_value bold
+ 3149:  define_field fontWeight
+ 3154:  define_field "txt-active"
+ 3159:  object
+ 3160:  push_atom_value "20px"
+ 3165:  define_field paddingTop
+ 3170:  push_atom_value "20px"
+ 3175:  define_field paddingRight
+ 3180:  push_atom_value "20px"
+ 3185:  define_field paddingBottom
+ 3190:  push_atom_value "20px"
+ 3195:  define_field paddingLeft
+ 3200:  push_atom_value center
+ 3205:  define_field alignItems
+ 3210:  define_field "cascader-empty"
+ 3215:  object
+ 3216:  push_atom_value "12px"
+ 3221:  define_field fontSize
+ 3226:  push_atom_value "#aaaaaa"
+ 3231:  define_field color
+ 3236:  define_field "c-empty-txt"
+ 3241:  object
+ 3242:  push_atom_value "#0a84ff"
+ 3247:  define_field backgroundColor
+ 3252:  push_atom_value "8px"
+ 3257:  define_field paddingTop
+ 3262:  push_atom_value "24px"
+ 3267:  define_field paddingRight
+ 3272:  push_atom_value "8px"
+ 3277:  define_field paddingBottom
+ 3282:  push_atom_value "24px"
+ 3287:  define_field paddingLeft
+ 3292:  push_atom_value "20px"
+ 3297:  define_field borderRadius
+ 3302:  push_const8 60: 0.8
+ 3304:  define_field "opacity:active"
+ 3309:  define_field "btn-confirm"
+ 3314:  object
+ 3315:  push_atom_value "14px"
+ 3320:  define_field fontSize
+ 3325:  push_atom_value "#ffffff"
+ 3330:  define_field color
+ 3335:  push_atom_value bold
+ 3340:  define_field fontWeight
+ 3345:  define_field "btn-confirm-txt"
+ 3350:  object
+ 3351:  push_atom_value "500px"
+ 3356:  define_field width
+ 3361:  push_atom_value "#ffffff"
+ 3366:  define_field backgroundColor
+ 3371:  push_atom_value "16px"
+ 3376:  define_field borderRadius
+ 3381:  push_atom_value "24px"
+ 3386:  define_field paddingTop
+ 3391:  push_atom_value "24px"
+ 3396:  define_field paddingRight
+ 3401:  push_atom_value "24px"
+ 3406:  define_field paddingBottom
+ 3411:  push_atom_value "24px"
+ 3416:  define_field paddingLeft
+ 3421:  push_atom_value row
+ 3426:  define_field flexDirection
+ 3431:  push_atom_value "flex-start"
+ 3436:  define_field alignItems
+ 3441:  define_field "auth-modal"
+ 3446:  object
+ 3447:  push_1 1
+ 3448:  define_field flex
+ 3453:  push_atom_value "20px"
+ 3458:  define_field paddingRight
+ 3463:  push_atom_value "1px"
+ 3468:  define_field borderRightWidth
+ 3473:  push_atom_value "#eeeeee"
+ 3478:  define_field borderRightColor
+ 3483:  push_atom_value center
+ 3488:  define_field justifyContent
+ 3493:  push_atom_value center
+ 3498:  define_field alignItems
+ 3503:  define_field "auth-modal-left"
+ 3508:  object
+ 3509:  push_atom_value "180px"
+ 3514:  define_field width
+ 3519:  push_atom_value "180px"
+ 3524:  define_field height
+ 3529:  define_field "auth-qrcode"
+ 3534:  object
+ 3535:  push_const8 61: 1.2
+ 3537:  define_field flex
+ 3542:  push_atom_value "20px"
+ 3547:  define_field paddingLeft
+ 3552:  push_atom_value center
+ 3557:  define_field justifyContent
+ 3562:  define_field "auth-modal-right"
+ 3567:  object
+ 3568:  push_atom_value "100%"
+ 3573:  define_field width
+ 3578:  push_atom_value "#f7f9fc"
+ 3583:  define_field backgroundColor
+ 3588:  push_atom_value "10px"
+ 3593:  define_field borderRadius
+ 3598:  push_atom_value "12px"
+ 3603:  define_field paddingTop
+ 3608:  push_atom_value "12px"
+ 3613:  define_field paddingRight
+ 3618:  push_atom_value "12px"
+ 3623:  define_field paddingBottom
+ 3628:  push_atom_value "12px"
+ 3633:  define_field paddingLeft
+ 3638:  push_atom_value "12px"
+ 3643:  define_field marginBottom
+ 3648:  define_field "auth-status-box"
+ 3653:  object
+ 3654:  push_atom_value "14px"
+ 3659:  define_field fontSize
+ 3664:  push_atom_value "#1f1f1f"
+ 3669:  define_field color
+ 3674:  push_atom_value bold
+ 3679:  define_field fontWeight
+ 3684:  define_field "auth-status-main"
+ 3689:  object
+ 3690:  push_atom_value "12px"
+ 3695:  define_field fontSize
+ 3700:  push_atom_value "#666666"
+ 3705:  define_field color
+ 3710:  push_atom_value "4px"
+ 3715:  define_field marginTop
+ 3720:  define_field "auth-status-sub"
+ 3725:  object
+ 3726:  push_atom_value "100%"
+ 3731:  define_field width
+ 3736:  push_atom_value "12px"
+ 3741:  define_field marginBottom
+ 3746:  define_field "auth-input-box"
+ 3751:  object
+ 3752:  push_atom_value "12px"
+ 3757:  define_field fontSize
+ 3762:  push_atom_value "#666666"
+ 3767:  define_field color
+ 3772:  push_atom_value "8px"
+ 3777:  define_field marginBottom
+ 3782:  define_field "auth-label"
+ 3787:  object
+ 3788:  push_atom_value "100%"
+ 3793:  define_field width
+ 3798:  push_atom_value "44px"
+ 3803:  define_field height
+ 3808:  push_atom_value "#f5f5f5"
+ 3813:  define_field backgroundColor
+ 3818:  push_atom_value "8px"
+ 3823:  define_field borderRadius
+ 3828:  push_atom_value center
+ 3833:  define_field justifyContent
+ 3838:  push_0 0
+ 3839:  define_field paddingTop
+ 3844:  push_atom_value "12px"
+ 3849:  define_field paddingRight
+ 3854:  push_0 0
+ 3855:  define_field paddingBottom
+ 3860:  push_atom_value "12px"
+ 3865:  define_field paddingLeft
+ 3870:  push_atom_value "#ebebeb"
+ 3875:  define_field "backgroundColor:active"
+ 3880:  define_field "auth-input"
+ 3885:  object
+ 3886:  push_atom_value "14px"
+ 3891:  define_field fontSize
+ 3896:  push_atom_value "#333333"
+ 3901:  define_field color
+ 3906:  define_field "auth-input-txt"
+ 3911:  object
+ 3912:  push_atom_value "#999999"
+ 3917:  define_field color
+ 3922:  define_field "auth-placeholder"
+ 3927:  object
+ 3928:  push_atom_value "100%"
+ 3933:  define_field width
+ 3938:  push_atom_value "12px"
+ 3943:  define_field fontSize
+ 3948:  push_atom_value "#ff4d4f"
+ 3953:  define_field color
+ 3958:  push_atom_value "16px"
+ 3963:  define_field marginBottom
+ 3968:  define_field "auth-tip"
+ 3973:  object
+ 3974:  push_atom_value row
+ 3979:  define_field flexDirection
+ 3984:  push_atom_value "100%"
+ 3989:  define_field width
+ 3994:  push_atom_value "space-between"
+ 3999:  define_field justifyContent
+ 4004:  push_atom_value "10px"
+ 4009:  define_field marginTop
+ 4014:  define_field "auth-actions"
+ 4019:  object
+ 4020:  push_1 1
+ 4021:  define_field flex
+ 4026:  push_atom_value "40px"
+ 4031:  define_field height
+ 4036:  push_atom_value "#f0f0f0"
+ 4041:  define_field backgroundColor
+ 4046:  push_atom_value "20px"
+ 4051:  define_field borderRadius
+ 4056:  push_atom_value center
+ 4061:  define_field justifyContent
+ 4066:  push_atom_value center
+ 4071:  define_field alignItems
+ 4076:  push_atom_value "10px"
+ 4081:  define_field marginRight
+ 4086:  push_const8 62: 0.7
+ 4088:  define_field "opacity:active"
+ 4093:  define_field "auth-btn-cancel"
+ 4098:  object
+ 4099:  push_atom_value "14px"
+ 4104:  define_field fontSize
+ 4109:  push_atom_value "#666666"
+ 4114:  define_field color
+ 4119:  define_field "auth-btn-txt-cancel"
+ 4124:  object
+ 4125:  push_1 1
+ 4126:  define_field flex
+ 4131:  push_atom_value "40px"
+ 4136:  define_field height
+ 4141:  push_atom_value "#0a84ff"
+ 4146:  define_field backgroundColor
+ 4151:  push_atom_value "20px"
+ 4156:  define_field borderRadius
+ 4161:  push_atom_value center
+ 4166:  define_field justifyContent
+ 4171:  push_atom_value center
+ 4176:  define_field alignItems
+ 4181:  push_atom_value "10px"
+ 4186:  define_field marginLeft
+ 4191:  push_const8 63: 0.7
+ 4193:  define_field "opacity:active"
+ 4198:  define_field "auth-btn-save"
+ 4203:  object
+ 4204:  push_atom_value "14px"
+ 4209:  define_field fontSize
+ 4214:  push_atom_value "#ffffff"
+ 4219:  define_field color
+ 4224:  push_atom_value bold
+ 4229:  define_field fontWeight
+ 4234:  define_field "auth-btn-txt-save"
+ 4239:  call_method 2
+ 4242:  put_field style
+ 4247:  get_var_ref_check 8: c
+ 4250:  push_atom_value "src/pages/apps/onion.vue"
+ 4255:  put_field __file
+ 4260:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: a
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  push_atom_value string
+    5:  get_arg0 0: t
+    6:  typeof
+    7:  eq
+    8:  if_false8 12
+   10:  get_arg0 0: t
+   11:  return
+   12:  get_arg0 0: t
+   13:  if_false8 113
+   15:  push_atom_value object
+   20:  get_arg0 0: t
+   21:  typeof
+   22:  eq
+   23:  if_false8 113
+   25:  push_atom_value string
+   30:  get_arg0 0: t
+   31:  get_field value
+   36:  typeof
+   37:  eq
+   38:  if_false8 47
+   40:  get_arg0 0: t
+   41:  get_field value
+   46:  return
+   47:  push_atom_value string
+   52:  get_arg0 0: t
+   53:  get_field text
+   58:  typeof
+   59:  eq
+   60:  if_false8 69
+   62:  get_arg0 0: t
+   63:  get_field text
+   68:  return
+   69:  push_atom_value string
+   74:  get_arg0 0: t
+   75:  get_field data
+   80:  typeof
+   81:  eq
+   82:  if_false8 91
+   84:  get_arg0 0: t
+   85:  get_field data
+   90:  return
+   91:  push_atom_value string
+   96:  get_arg0 0: t
+   97:  get_field key
+  102:  typeof
+  103:  eq
+  104:  if_false8 113
+  106:  get_arg0 0: t
+  107:  get_field key
+  112:  return
+  113:  null
+  114:  get_arg0 0: t
+  115:  eq
+  116:  if_false8 120
+  118:  push_empty_string
+  119:  return
+  120:  get_var String
+  125:  get_arg0 0: t
+  126:  call1 1
+  127:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: s
+  mode: strict
+  args: t s
+  locals:
+    0: var o
+    1: var n
+    2: var r
+    3: var c
+    4: var l
+  closure vars:
+    0: a parent:loc3 var
+    1: i parent:loc2 let
+    2: e parent:loc1 let
+  stack_size: 5
+  opcodes:
+    0:  get_arg1 1: s
+    1:  dup
+    2:  if_true8 6
+    4:  drop
+    5:  object
+    6:  set_loc0 0: o
+    7:  get_field route
+   12:  dup
+   13:  if_true8 21
+   15:  drop
+   16:  push_atom_value tools_keyboard
+   21:  put_loc1 1: n
+   22:  get_loc0 0: o
+   23:  get_field eventName
+   28:  dup
+   29:  if_true8 46
+   31:  drop
+   32:  push_atom_value tools_keyboard_result_
+   37:  get_var_ref_check 2: e
+   40:  inc
+   41:  dup
+   42:  put_var_ref_check 2: e
+   45:  add
+   46:  put_loc2 2: r
+   47:  object
+   48:  get_var String
+   53:  null
+   54:  get_arg0 0: t
+   55:  eq
+   56:  if_false8 61
+   58:  push_empty_string
+   59:  goto8 62
+   61:  get_arg0 0: t
+   62:  call1 1
+   63:  define_field data
+   68:  get_loc2 2: r
+   69:  define_field eventName
+   74:  put_loc3 3: c
+   75:  get_loc0 0: o
+   76:  get_field loadOptions
+   81:  if_false8 128
+   83:  push_atom_value object
+   88:  get_loc0 0: o
+   89:  get_field loadOptions
+   94:  typeof
+   95:  eq
+   96:  if_false8 128
+   98:  get_loc0 0: o
+   99:  get_field loadOptions
+  104:  for_in_start
+  105:  goto8 123
+  107:  put_loc8 4: l
+  109:  get_loc3 3: c
+  110:  get_loc8 4: l
+  112:  to_propkey2
+  113:  get_loc0 0: o
+  114:  get_field loadOptions
+  119:  get_loc8 4: l
+  121:  get_array_el
+  122:  put_array_el
+  123:  for_in_next
+  124:  if_false8 107
+  126:  drop
+  127:  drop
+  128:  get_var Promise
+  133:  dup
+  134:  fclosure8 0: [bytecode <null>]
+  136:  call_constructor 1
+  139:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var s
+    2: var o
+    3: catch t [level:5 next:-1]
+    4: var l
+    5: var d
+  closure vars:
+    0: a parent:loc0 var
+    1: r local:loc2 var
+    2: i parent:loc1 let
+    3: n local:loc1 var
+    4: c local:loc3 var
+  stack_size: 5
+  opcodes:
+    0:  fclosure8 2: [bytecode l]
+    2:  put_loc8 4: l
+    4:  fclosure8 3: [bytecode d]
+    6:  put_loc8 5: d
+    8:  push_atom_value undefined
+   13:  get_var_undef $falcon
+   18:  typeof
+   19:  neq
+   20:  if_false 201
+   25:  get_var $falcon
+   30:  if_false 201
+   35:  push_atom_value function
+   40:  get_var $falcon
+   45:  get_field navTo
+   50:  typeof
+   51:  eq
+   52:  if_false 201
+   57:  push_atom_value function
+   62:  get_var $falcon
+   67:  get_field on
+   72:  typeof
+   73:  eq
+   74:  if_false8 201
+   76:  get_var_ref_check 2: i
+   79:  dup
+   80:  if_false8 114
+   82:  drop
+   83:  push_atom_value function
+   88:  get_var_ref_check 2: i
+   91:  get_field resolve
+   96:  typeof
+   97:  eq
+   98:  dup
+   99:  if_false8 114
+  101:  drop
+  102:  get_var_ref_check 2: i
+  105:  get_field2 resolve
+  110:  null
+  111:  call_method 1
+  114:  drop
+  115:  push_1 1
+  116:  lnot
+  117:  put_loc0 0: e
+  118:  fclosure8 0: [bytecode <null>]
+  120:  set_name s
+  125:  put_loc1 1: s
+  126:  object
+  127:  fclosure8 1: [bytecode <null>]
+  129:  set_name resolve
+  134:  define_field resolve
+  139:  set_loc2 2: o
+  140:  dup
+  141:  put_var_ref_check 2: i
+  144:  drop
+  145:  catch 186
+  150:  get_var $falcon
+  155:  get_field2 on
+  160:  get_var_ref1 1: r
+  161:  get_loc1 1: s
+  162:  call_method 2
+  165:  drop
+  166:  get_var $falcon
+  171:  get_field2 navTo
+  176:  get_var_ref3 3: n
+  177:  get_var_ref 4: c
+  180:  call_method 2
+  183:  drop
+  184:  drop
+  185:  return_undef
+  186:  put_loc3 3: t
+  187:  catch 200
+  192:  get_loc8 5: d
+  194:  get_loc1 1: s
+  195:  null
+  196:  call2 2
+  197:  drop
+  198:  drop
+  199:  return_undef
+  200:  throw
+  201:  get_arg0 0: t
+  202:  null
+  203:  call1 1
+  204:  drop
+  205:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+  closure vars:
+    0: a parent:loc0 var
+    1: d local:loc5 var
+    2: s local:loc1 var
+  stack_size: 3
+  opcodes:
+    0:  fclosure8 0: [bytecode <null>]
+    2:  get_arg0 0: t
+    3:  call1 1
+    4:  put_loc0 0: e
+    5:  get_var_ref1 1: d
+    6:  get_var_ref2 2: s
+    7:  get_loc0 0: e
+    8:  get_field value
+   13:  call2 2
+   14:  return_undef
+
+
+/* ===== function depth=4 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var i
+    2: var s
+  closure vars:
+    0: a parent:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: t
+    1:  if_false8 21
+    3:  undefined
+    4:  get_arg0 0: t
+    5:  get_field data
+   10:  strict_neq
+   11:  if_false8 21
+   13:  get_arg0 0: t
+   14:  get_field data
+   19:  goto8 22
+   21:  get_arg0 0: t
+   22:  set_loc0 0: e
+   23:  lnot
+   24:  dup
+   25:  if_true8 49
+   27:  drop
+   28:  push_atom_value object
+   33:  get_loc0 0: e
+   34:  typeof
+   35:  neq
+   36:  dup
+   37:  if_true8 49
+   39:  drop
+   40:  push_0 0
+   41:  lnot
+   42:  get_loc0 0: e
+   43:  get_field cancelled
+   48:  strict_neq
+   49:  lnot
+   50:  put_loc1 1: i
+   51:  get_loc0 0: e
+   52:  put_loc2 2: s
+   53:  get_loc0 0: e
+   54:  dup
+   55:  if_false8 146
+   57:  drop
+   58:  push_atom_value object
+   63:  get_loc0 0: e
+   64:  typeof
+   65:  eq
+   66:  dup
+   67:  if_false8 146
+   69:  drop
+   70:  undefined
+   71:  get_loc0 0: e
+   72:  get_field value
+   77:  strict_neq
+   78:  if_false8 89
+   80:  get_loc0 0: e
+   81:  get_field value
+   86:  set_loc2 2: s
+   87:  goto8 146
+   89:  undefined
+   90:  get_loc0 0: e
+   91:  get_field text
+   96:  strict_neq
+   97:  if_false8 108
+   99:  get_loc0 0: e
+  100:  get_field text
+  105:  set_loc2 2: s
+  106:  goto8 146
+  108:  undefined
+  109:  get_loc0 0: e
+  110:  get_field data
+  115:  strict_neq
+  116:  if_false8 127
+  118:  get_loc0 0: e
+  119:  get_field data
+  124:  set_loc2 2: s
+  125:  goto8 146
+  127:  undefined
+  128:  get_loc0 0: e
+  129:  get_field key
+  134:  strict_neq
+  135:  dup
+  136:  if_false8 146
+  138:  drop
+  139:  get_loc0 0: e
+  140:  get_field key
+  145:  set_loc2 2: s
+  146:  drop
+  147:  object
+  148:  get_loc1 1: i
+  149:  define_field cancelled
+  154:  get_loc1 1: i
+  155:  if_false8 160
+  157:  null
+  158:  goto8 163
+  160:  get_var_ref0 0: a
+  161:  get_loc2 2: s
+  162:  call1 1
+  163:  define_field value
+  168:  return
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: d local:loc5 var
+    1: s local:loc1 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: d
+    1:  get_var_ref1 1: s
+    2:  get_arg0 0: t
+    3:  call2 2
+    4:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: l
+  mode: strict
+  args: t
+  closure vars:
+    0: r parent:loc1 var
+    1: i parent:loc2 let
+    2: o local:loc2 var
+  stack_size: 3
+  opcodes:
+    0:  fclosure8 0: [bytecode <null>]
+    2:  get_var_ref0 0: r
+    3:  get_arg0 0: t
+    4:  call2 2
+    5:  lnot
+    6:  drop
+    7:  get_var_ref_check 1: i
+   10:  get_var_ref2 2: o
+   11:  strict_eq
+   12:  dup
+   13:  if_false8 21
+   15:  drop
+   16:  null
+   17:  dup
+   18:  put_var_ref_check 1: i
+   21:  return_undef
+
+
+/* ===== function depth=4 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: catch t [level:3 next:-1]
+  stack_size: 5
+  opcodes:
+    0:  catch 69
+    5:  push_atom_value undefined
+   10:  get_var_undef $falcon
+   15:  typeof
+   16:  neq
+   17:  dup
+   18:  if_false8 66
+   20:  drop
+   21:  get_var $falcon
+   26:  dup
+   27:  if_false8 66
+   29:  drop
+   30:  push_atom_value function
+   35:  get_var $falcon
+   40:  get_field off
+   45:  typeof
+   46:  eq
+   47:  dup
+   48:  if_false8 66
+   50:  drop
+   51:  get_var $falcon
+   56:  get_field2 off
+   61:  get_arg0 0: t
+   62:  get_arg1 1: e
+   63:  call_method 2
+   66:  drop
+   67:  drop
+   68:  return_undef
+   69:  put_loc0 0: t
+   70:  catch 77
+   75:  drop
+   76:  return_undef
+   77:  throw
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: d
+  mode: strict
+  args: i a
+  closure vars:
+    0: e local:loc0 var
+    1: l local:loc4 var
+    2: t local:arg0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: e
+    1:  dup
+    2:  if_true8 15
+    4:  drop
+    5:  push_0 0
+    6:  lnot
+    7:  put_var_ref0 0: e
+    8:  get_var_ref1 1: l
+    9:  get_arg0 0: i
+   10:  call1 1
+   11:  drop
+   12:  get_var_ref2 2: t
+   13:  get_arg1 1: a
+   14:  call1 1
+   15:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  stack_size: 5
+  opcodes:
+    0:  object
+    1:  null
+    2:  define_field bridge
+    7:  null
+    8:  define_field Fetch
+   13:  null
+   14:  define_field Dbase
+   19:  null
+   20:  define_field shell
+   25:  push_atom_value "http://oni.tyc.plus"
+   30:  define_field serverUrl
+   35:  push_empty_string
+   36:  define_field token
+   41:  push_1 1
+   42:  lnot
+   43:  define_field isValidated
+   48:  push_empty_string
+   49:  define_field deviceMac
+   54:  push_0 0
+   55:  define_field remainingDays
+   60:  push_empty_string
+   61:  define_field expiresAt
+   66:  push_empty_string
+   67:  define_field statusCode
+   72:  push_empty_string
+   73:  define_field statusMessage
+   78:  push_1 1
+   79:  lnot
+   80:  define_field isLoading
+   85:  push_empty_string
+   86:  define_field tipText
+   91:  push_0 0
+   92:  lnot
+   93:  define_field showSplash
+   98:  push_1 1
+   99:  lnot
+  100:  define_field splashAnimating
+  105:  push_1 1
+  106:  lnot
+  107:  define_field splashBgAnimating
+  112:  push_1 1
+  113:  lnot
+  114:  define_field splashFading
+  119:  push_1 1
+  120:  lnot
+  121:  define_field showCascader
+  126:  push_1 1
+  127:  lnot
+  128:  define_field showAuthModal
+  133:  push_empty_string
+  134:  define_field authTipText
+  139:  push_1 1
+  140:  lnot
+  141:  define_field isVerifying
+  146:  push_atom_value "\u00e5\u00ad\u00a6\u00e6\u00ae\u00b5"
+  151:  push_atom_value "\u00e5\u00ad\u00a6\u00e7\u00a7\u0091"
+  156:  push_atom_value "\u00e7\u0089\u0088\u00e6\u009c\u00ac"
+  161:  push_atom_value "\u00e5\u0086\u008c\u00e6\u0095\u00b0"
+  166:  array_from 4
+  169:  define_field levels
+  174:  array_from 0
+  177:  define_field selectedPaths
+  182:  push_empty_string
+  183:  push_empty_string
+  184:  push_empty_string
+  185:  push_empty_string
+  186:  array_from 4
+  189:  define_field tempSelected
+  194:  array_from 0
+  197:  define_field optionsLevel0
+  202:  array_from 0
+  205:  define_field optionsLevel1
+  210:  array_from 0
+  213:  define_field optionsLevel2
+  218:  array_from 0
+  221:  define_field optionsLevel3
+  226:  array_from 0
+  229:  define_field videos
+  234:  push_empty_string
+  235:  define_field videoUrl
+  240:  push_0 0
+  241:  define_field screenWidth
+  246:  push_0 0
+  247:  define_field screenHeight
+  252:  push_0 0
+  253:  define_field screenRotation
+  258:  push_empty_string
+  259:  define_field searchKeyword
+  264:  push_empty_string
+  265:  define_field selectedVideoPath
+  270:  object
+  271:  define_field lastWatchedMap
+  276:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  push_0 0
+    3:  get_loc0 0: this
+    4:  get_field selectedPaths
+    9:  get_length
+   10:  strict_eq
+   11:  if_false8 15
+   13:  push_empty_string
+   14:  return
+   15:  get_loc0 0: this
+   16:  get_field selectedPaths
+   21:  push_0 0
+   22:  get_array_el
+   23:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  push_0 0
+    3:  get_loc1 1: this
+    4:  get_field selectedPaths
+    9:  get_length
+   10:  strict_eq
+   11:  if_false8 15
+   13:  push_empty_string
+   14:  return
+   15:  get_loc1 1: this
+   16:  get_field selectedPaths
+   21:  get_loc1 1: this
+   22:  get_field selectedPaths
+   27:  get_length
+   28:  push_1 1
+   29:  sub
+   30:  get_array_el
+   31:  set_loc0 0: t
+   32:  get_length
+   33:  push_7 7
+   34:  gt
+   35:  if_false8 57
+   37:  push_atom_value "\u00e2\u0080\u00a6"
+   42:  get_loc0 0: t
+   43:  get_field2 substring
+   48:  get_loc0 0: t
+   49:  get_length
+   50:  push_6 6
+   51:  sub
+   52:  call_method 1
+   55:  add
+   56:  return
+   57:  get_loc0 0: t
+   58:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field searchKeyword
+    8:  lnot
+    9:  if_false8 18
+   11:  get_loc1 1: this
+   12:  get_field videos
+   17:  return
+   18:  get_loc1 1: this
+   19:  get_field searchKeyword
+   24:  get_field2 toLowerCase
+   29:  call_method 0
+   32:  put_loc0 0: t
+   33:  get_loc1 1: this
+   34:  get_field videos
+   39:  get_field2 filter
+   44:  fclosure8 0: [bytecode <null>]
+   46:  tail_call_method 1
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 4
+  opcodes:
+    0:  get_arg0 0: e
+    1:  get_field name
+    6:  dup
+    7:  if_false8 35
+    9:  drop
+   10:  push_minus1 -1
+   11:  get_arg0 0: e
+   12:  get_field name
+   17:  get_field2 toLowerCase
+   22:  call_method 0
+   25:  get_field2 indexOf
+   30:  get_var_ref0 0: t
+   31:  call_method 1
+   34:  strict_neq
+   35:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  stack_size: 1
+  opcodes:
+    0:  push_3 3
+    1:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var i
+    3: var a
+    4: var s
+    5: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc8 5: this
+    3:  get_var parseInt
+    8:  get_loc8 5: this
+   10:  get_field screenWidth
+   15:  push_i8 10
+   17:  call2 2
+   18:  dup
+   19:  if_true8 23
+   21:  drop
+   22:  push_0 0
+   23:  set_loc0 0: t
+   24:  push_0 0
+   25:  lte
+   26:  if_false8 32
+   28:  push_i16 135
+   31:  return
+   32:  get_loc8 5: this
+   34:  get_field gridCols
+   39:  dup
+   40:  if_true8 44
+   42:  drop
+   43:  push_3 3
+   44:  put_loc1 1: e
+   45:  get_loc0 0: t
+   46:  push_i16 220
+   49:  sub
+   50:  push_i8 40
+   52:  sub
+   53:  set_loc2 2: i
+   54:  push_0 0
+   55:  lte
+   56:  if_false8 62
+   58:  push_i16 135
+   61:  return
+   62:  get_loc2 2: i
+   63:  push_i8 12
+   65:  get_loc1 1: e
+   66:  push_1 1
+   67:  sub
+   68:  mul
+   69:  sub
+   70:  get_loc1 1: e
+   71:  div
+   72:  set_loc3 3: a
+   73:  push_0 0
+   74:  lte
+   75:  if_false8 81
+   77:  push_i16 135
+   80:  return
+   81:  get_var Math
+   86:  get_field2 round
+   91:  push_i8 9
+   93:  get_loc3 3: a
+   94:  mul
+   95:  push_i8 16
+   97:  div
+   98:  call_method 1
+  101:  set_loc8 4: s
+  103:  lnot
+  104:  dup
+  105:  if_true8 113
+  107:  drop
+  108:  get_loc8 4: s
+  110:  push_i8 80
+  112:  lt
+  113:  if_false8 119
+  115:  push_i16 135
+  118:  return
+  119:  get_loc8 4: s
+  121:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var i
+    3: var a
+    4: var this
+  stack_size: 7
+  opcodes:
+    0:  push_this
+    1:  put_loc8 4: this
+    3:  array_from 0
+    6:  put_loc0 0: t
+    7:  get_loc8 4: this
+    9:  get_field gridCols
+   14:  put_loc1 1: e
+   15:  get_loc8 4: this
+   17:  get_field filteredVideos
+   22:  put_loc2 2: i
+   23:  push_0 0
+   24:  put_loc3 3: a
+   25:  get_loc3 3: a
+   26:  get_loc2 2: i
+   27:  get_length
+   28:  lt
+   29:  if_false8 59
+   31:  get_loc0 0: t
+   32:  get_field2 push
+   37:  get_loc2 2: i
+   38:  get_field2 slice
+   43:  get_loc3 3: a
+   44:  get_loc3 3: a
+   45:  get_loc1 1: e
+   46:  add
+   47:  call_method 2
+   50:  call_method 1
+   53:  drop
+   54:  get_loc1 1: e
+   55:  add_loc 3: a
+   57:  goto8 25
+   59:  get_loc0 0: t
+   60:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field token
+    8:  if_false8 26
+   10:  get_loc0 0: this
+   11:  get_field statusMessage
+   16:  dup
+   17:  if_true8 31
+   19:  drop
+   20:  push_atom_value "\u00e6\u0089\u00ab\u00e6\u008f\u008f\u00e4\u00ba\u0086\u00e8\u00a7\u00a3\u00e5\u00a5\u0097\u00e9\u00a4\u0090\u00e4\u00bf\u00a1\u00e6\u0081\u00af"
+   25:  return
+   26:  push_atom_value "\u00e6\u009c\u00aa\u00e8\u00be\u0093\u00e5\u0085\u00a5\u00e6\u00bf\u0080\u00e6\u00b4\u00bb\u00e7\u00a0\u0081"
+   31:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field remainingDays
+    8:  push_0 0
+    9:  gt
+   10:  if_false8 55
+   12:  push_atom_value "\u00e5\u0089\u00a9\u00e4\u00bd\u0099 "
+   17:  get_loc0 0: this
+   18:  get_field remainingDays
+   23:  add
+   24:  push_atom_value " \u00e5\u00a4\u00a9"
+   29:  add
+   30:  get_loc0 0: this
+   31:  get_field expiresAt
+   36:  if_false8 52
+   38:  push_atom_value "\u00ef\u00bc\u008c\u00e5\u0088\u00b0\u00e6\u009c\u009f\u00e6\u0097\u00b6\u00e9\u0097\u00b4 "
+   43:  get_loc0 0: this
+   44:  get_field expiresAt
+   49:  add
+   50:  goto8 53
+   52:  push_empty_string
+   53:  add
+   54:  return
+   55:  get_loc0 0: this
+   56:  get_field expiresAt
+   61:  if_false8 76
+   63:  push_atom_value "\u00e5\u0088\u00b0\u00e6\u009c\u009f\u00e6\u0097\u00b6\u00e9\u0097\u00b4 "
+   68:  get_loc0 0: this
+   69:  get_field expiresAt
+   74:  add
+   75:  return
+   76:  push_empty_string
+   77:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 initBridge
+    8:  call_method 0
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field2 refreshScreenSize
+   18:  call_method 0
+   21:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  put_loc0 0: t
+    4:  get_var setTimeout
+    9:  fclosure8 0: [bytecode <null>]
+   11:  push_i8 50
+   13:  call2 2
+   14:  drop
+   15:  get_var setTimeout
+   20:  fclosure8 1: [bytecode <null>]
+   22:  push_i8 100
+   24:  call2 2
+   25:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  push_0 0
+    2:  lnot
+    3:  put_field splashBgAnimating
+    8:  get_var setTimeout
+   13:  fclosure8 0: [bytecode <null>]
+   15:  push_i16 200
+   18:  call2 2
+   19:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t parent:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  push_0 0
+    2:  lnot
+    3:  put_field splashAnimating
+    8:  get_var setTimeout
+   13:  fclosure8 0: [bytecode <null>]
+   15:  push_i16 1000
+   18:  call2 2
+   19:  return_undef
+
+
+/* ===== function depth=4 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t parent:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  push_0 0
+    2:  lnot
+    3:  put_field splashFading
+    8:  get_var setTimeout
+   13:  fclosure8 0: [bytecode <null>]
+   15:  push_i16 600
+   18:  call2 2
+   19:  return_undef
+
+
+/* ===== function depth=5 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t parent:loc0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  push_1 1
+    2:  lnot
+    3:  put_field showSplash
+    8:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 initBridge
+    6:  call_method 0
+    9:  drop
+   10:  get_var_ref0 0: t
+   11:  get_field2 refreshScreenSize
+   16:  call_method 0
+   19:  drop
+   20:  get_var setTimeout
+   25:  fclosure8 0: [bytecode <null>]
+   27:  push_i16 300
+   30:  call2 2
+   31:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t parent:loc0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 loadPreferences
+    6:  call_method 0
+    9:  drop
+   10:  get_var_ref0 0: t
+   11:  get_field2 loadAuthInfo
+   16:  call_method 0
+   19:  drop
+   20:  get_var_ref0 0: t
+   21:  get_field2 loadLevelOptions
+   26:  push_0 0
+   27:  push_empty_string
+   28:  call_method 2
+   31:  drop
+   32:  get_var_ref0 0: t
+   33:  get_field selectedPaths
+   38:  get_length
+   39:  push_0 0
+   40:  gt
+   41:  dup
+   42:  if_false8 54
+   44:  drop
+   45:  get_var_ref0 0: t
+   46:  get_field2 loadVideos
+   51:  call_method 0
+   54:  drop
+   55:  get_var_ref0 0: t
+   56:  get_field token
+   61:  dup
+   62:  if_false8 86
+   64:  drop
+   65:  get_var_ref0 0: t
+   66:  get_field serverUrl
+   71:  dup
+   72:  if_false8 86
+   74:  drop
+   75:  get_var_ref0 0: t
+   76:  get_field2 refreshActivationStatus
+   81:  push_0 0
+   82:  lnot
+   83:  call_method 1
+   86:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 4
+  opcodes:
+    0:  get_arg0 0: t
+    1:  if_false8 25
+    3:  get_var String
+    8:  get_arg0 0: t
+    9:  call1 1
+   10:  get_field2 replace
+   15:  push_const8 0: 1"\\.[^/.]+$"
+   17:  push_const8 1: 1"\u0000\u0001\u00001\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001.\u0000\u001c\u000c\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0002\u0000\u0000\u0000-\u00000\u0000\u00ff\u00ff\n\u0006\u000c\u0000\n"
+   19:  regexp
+   20:  push_empty_string
+   21:  call_method 2
+   24:  return
+   25:  push_empty_string
+   26:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var i
+    2: var a
+    3: var s
+  stack_size: 4
+  opcodes:
+    0:  get_arg0 0: t
+    1:  lnot
+    2:  if_false8 6
+    4:  push_empty_string
+    5:  return
+    6:  get_arg0 0: t
+    7:  get_field2 replace
+   12:  push_const8 0: 1"\\.(mp4|webm|ogg|mov)$"
+   14:  push_const8 1: 1"\u0002\u0002\u0000]\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001.\u0000\u000b\u0001\u00097\u0000\u0000\u0000\u0009$\u0000\u0000\u0000\u0009\u000e\u0000\u0000\u0000\u0001M\u0000\u0001P\u0000\u00014\u0000\u0007\u000c\u0000\u0000\u0000\u0001W\u0000\u0001E\u0000\u0001B\u0000\u0001M\u0000\u0007\u0009\u0000\u0000\u0000\u0001O\u0000\u0001G\u0000\u0001G\u0000\u0007\u0009\u0000\u0000\u0000\u0001M\u0000\u0001O\u0000\u0001V\u0000\u000c\u0001\u0006\u000c\u0000\n"
+   16:  regexp
+   17:  push_empty_string
+   18:  call_method 2
+   21:  get_field2 split
+   26:  push_atom_value _
+   31:  call_method 1
+   34:  set_loc0 0: e
+   35:  get_loc0 0: e
+   36:  get_length
+   37:  push_1 1
+   38:  sub
+   39:  get_array_el
+   40:  dup
+   41:  if_true8 45
+   43:  drop
+   44:  push_empty_string
+   45:  set_loc1 1: i
+   46:  get_field2 split
+   51:  push_atom_value "-"
+   56:  call_method 1
+   59:  set_loc2 2: a
+   60:  get_loc2 2: a
+   61:  get_length
+   62:  push_1 1
+   63:  sub
+   64:  get_array_el
+   65:  dup
+   66:  if_true8 70
+   68:  drop
+   69:  get_loc1 1: i
+   70:  set_loc1 1: i
+   71:  get_field2 split
+   76:  push_atom_value "."
+   81:  call_method 1
+   84:  set_loc3 3: s
+   85:  get_length
+   86:  push_1 1
+   87:  gt
+   88:  if_false8 100
+   90:  get_loc3 3: s
+   91:  get_field2 pop
+   96:  call_method 0
+   99:  return
+  100:  get_loc1 1: i
+  101:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 5
+  opcodes:
+    0:  push_atom_value videoNode_
+    5:  get_arg0 0: t
+    6:  if_false8 30
+    8:  get_arg0 0: t
+    9:  get_field path
+   14:  if_false8 30
+   16:  get_var String
+   21:  get_arg0 0: t
+   22:  get_field path
+   27:  call1 1
+   28:  goto8 31
+   30:  push_empty_string
+   31:  get_field2 replace
+   36:  push_const8 0: 1"[^a-zA-Z0-9]"
+   38:  push_const8 1: 1"\u0001\u0001\u0000#\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0015\u0004\u0000\u0000\u0000/\u0000:\u0000@\u0000[\u0000`\u0000{\u0000\u00ff\u00ff\u000c\u0000\n"
+   40:  regexp
+   41:  push_atom_value _
+   46:  call_method 2
+   49:  add
+   50:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 5
+  opcodes:
+    0:  push_atom_value videoNode_
+    5:  get_arg0 0: t
+    6:  if_false8 17
+    8:  get_var String
+   13:  get_arg0 0: t
+   14:  call1 1
+   15:  goto8 18
+   17:  push_empty_string
+   18:  get_field2 replace
+   23:  push_const8 0: 1"[^a-zA-Z0-9]"
+   25:  push_const8 1: 1"\u0001\u0001\u0000#\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0015\u0004\u0000\u0000\u0000/\u0000:\u0000@\u0000[\u0000`\u0000{\u0000\u00ff\u00ff\u000c\u0000\n"
+   27:  regexp
+   28:  push_atom_value _
+   33:  call_method 2
+   36:  add
+   37:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var i
+    3: var a
+    4: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc8 4: this
+    3:  get_loc8 4: this
+    5:  set_loc0 0: t
+    6:  get_field selectedPaths
+   11:  get_field2 join
+   16:  push_atom_value "/"
+   21:  call_method 1
+   24:  put_loc1 1: e
+   25:  get_loc0 0: t
+   26:  get_field lastWatchedMap
+   31:  if_false8 53
+   33:  get_loc0 0: t
+   34:  get_field lastWatchedMap
+   39:  get_loc1 1: e
+   40:  get_array_el
+   41:  if_false8 53
+   43:  get_loc0 0: t
+   44:  get_field lastWatchedMap
+   49:  get_loc1 1: e
+   50:  get_array_el
+   51:  goto8 54
+   53:  push_empty_string
+   54:  set_loc2 2: i
+   55:  if_false8 103
+   57:  fclosure8 0: [bytecode <null>]
+   59:  set_name a
+   64:  put_loc3 3: a
+   65:  push_atom_value function
+   70:  get_loc0 0: t
+   71:  get_field $nextTick
+   76:  typeof
+   77:  eq
+   78:  if_false8 93
+   80:  get_loc0 0: t
+   81:  get_field2 $nextTick
+   86:  fclosure8 1: [bytecode <null>]
+   88:  call_method 1
+   91:  goto8 102
+   93:  get_var setTimeout
+   98:  get_loc3 3: a
+   99:  push_i8 90
+  101:  call2 2
+  102:  drop
+  103:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var e
+    1: var a
+    2: var s
+    3: catch t [level:4 next:-1]
+  closure vars:
+    0: t local:loc0 var
+    1: i local:loc2 var
+  stack_size: 6
+  opcodes:
+    0:  catch 209
+    5:  get_var_ref0 0: t
+    6:  get_field2 videoRefKeyByPath
+   11:  get_var_ref1 1: i
+   12:  call_method 1
+   15:  put_loc0 0: e
+   16:  get_var_ref0 0: t
+   17:  get_field $refs
+   22:  get_loc0 0: e
+   23:  get_array_el
+   24:  put_loc1 1: a
+   25:  get_var Array
+   30:  get_field2 isArray
+   35:  get_loc1 1: a
+   36:  call_method 1
+   39:  if_false8 46
+   41:  get_loc1 1: a
+   42:  push_0 0
+   43:  get_array_el
+   44:  goto8 47
+   46:  get_loc1 1: a
+   47:  set_loc2 2: s
+   48:  lnot
+   49:  if_false8 53
+   51:  drop
+   52:  return_undef
+   53:  get_var_ref0 0: t
+   54:  get_field $page
+   59:  if_false8 136
+   61:  get_var_ref0 0: t
+   62:  get_field $page
+   67:  get_field $dom
+   72:  if_false8 136
+   74:  push_atom_value function
+   79:  get_var_ref0 0: t
+   80:  get_field $page
+   85:  get_field $dom
+   90:  get_field scrollToElement
+   95:  typeof
+   96:  eq
+   97:  if_false8 136
+   99:  get_var_ref0 0: t
+  100:  get_field $page
+  105:  get_field $dom
+  110:  get_field2 scrollToElement
+  115:  get_loc2 2: s
+  116:  object
+  117:  push_i8 -20
+  119:  define_field offset
+  124:  push_1 1
+  125:  lnot
+  126:  define_field animated
+  131:  call_method 2
+  134:  goto8 206
+  136:  get_var_ref0 0: t
+  137:  get_field $refs
+  142:  get_field videoScroller
+  147:  dup
+  148:  if_false8 206
+  150:  drop
+  151:  push_atom_value function
+  156:  get_var_ref0 0: t
+  157:  get_field $refs
+  162:  get_field videoScroller
+  167:  get_field scrollToElement
+  172:  typeof
+  173:  eq
+  174:  dup
+  175:  if_false8 206
+  177:  drop
+  178:  get_var_ref0 0: t
+  179:  get_field $refs
+  184:  get_field videoScroller
+  189:  get_field2 scrollToElement
+  194:  get_loc2 2: s
+  195:  object
+  196:  push_1 1
+  197:  lnot
+  198:  define_field animated
+  203:  call_method 2
+  206:  drop
+  207:  drop
+  208:  return_undef
+  209:  put_loc3 3: t
+  210:  catch 217
+  215:  drop
+  216:  return_undef
+  217:  throw
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: a local:loc3 var
+  stack_size: 3
+  opcodes:
+    0:  get_var setTimeout
+    5:  get_var_ref0 0: a
+    6:  push_i8 60
+    8:  call2 2
+    9:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var i
+    2: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  put_loc0 0: e
+    4:  get_arg0 0: t
+    5:  if_false8 53
+    7:  fclosure8 0: [bytecode <null>]
+    9:  set_name i
+   14:  put_loc1 1: i
+   15:  push_atom_value function
+   20:  get_loc0 0: e
+   21:  get_field $nextTick
+   26:  typeof
+   27:  eq
+   28:  if_false8 43
+   30:  get_loc0 0: e
+   31:  get_field2 $nextTick
+   36:  fclosure8 1: [bytecode <null>]
+   38:  call_method 1
+   41:  goto8 52
+   43:  get_var setTimeout
+   48:  get_loc1 1: i
+   49:  push_i8 90
+   51:  call2 2
+   52:  drop
+   53:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var i
+    1: var a
+    2: var s
+    3: catch t [level:4 next:-1]
+  closure vars:
+    0: e local:loc0 var
+    1: t local:arg0 var
+  stack_size: 6
+  opcodes:
+    0:  catch 209
+    5:  get_var_ref0 0: e
+    6:  get_field2 videoRefKeyByPath
+   11:  get_var_ref1 1: t
+   12:  call_method 1
+   15:  put_loc0 0: i
+   16:  get_var_ref0 0: e
+   17:  get_field $refs
+   22:  get_loc0 0: i
+   23:  get_array_el
+   24:  put_loc1 1: a
+   25:  get_var Array
+   30:  get_field2 isArray
+   35:  get_loc1 1: a
+   36:  call_method 1
+   39:  if_false8 46
+   41:  get_loc1 1: a
+   42:  push_0 0
+   43:  get_array_el
+   44:  goto8 47
+   46:  get_loc1 1: a
+   47:  set_loc2 2: s
+   48:  lnot
+   49:  if_false8 53
+   51:  drop
+   52:  return_undef
+   53:  get_var_ref0 0: e
+   54:  get_field $page
+   59:  if_false8 136
+   61:  get_var_ref0 0: e
+   62:  get_field $page
+   67:  get_field $dom
+   72:  if_false8 136
+   74:  push_atom_value function
+   79:  get_var_ref0 0: e
+   80:  get_field $page
+   85:  get_field $dom
+   90:  get_field scrollToElement
+   95:  typeof
+   96:  eq
+   97:  if_false8 136
+   99:  get_var_ref0 0: e
+  100:  get_field $page
+  105:  get_field $dom
+  110:  get_field2 scrollToElement
+  115:  get_loc2 2: s
+  116:  object
+  117:  push_i8 -20
+  119:  define_field offset
+  124:  push_0 0
+  125:  lnot
+  126:  define_field animated
+  131:  call_method 2
+  134:  goto8 206
+  136:  get_var_ref0 0: e
+  137:  get_field $refs
+  142:  get_field videoScroller
+  147:  dup
+  148:  if_false8 206
+  150:  drop
+  151:  push_atom_value function
+  156:  get_var_ref0 0: e
+  157:  get_field $refs
+  162:  get_field videoScroller
+  167:  get_field scrollToElement
+  172:  typeof
+  173:  eq
+  174:  dup
+  175:  if_false8 206
+  177:  drop
+  178:  get_var_ref0 0: e
+  179:  get_field $refs
+  184:  get_field videoScroller
+  189:  get_field2 scrollToElement
+  194:  get_loc2 2: s
+  195:  object
+  196:  push_0 0
+  197:  lnot
+  198:  define_field animated
+  203:  call_method 2
+  206:  drop
+  207:  drop
+  208:  return_undef
+  209:  put_loc3 3: t
+  210:  catch 217
+  215:  drop
+  216:  return_undef
+  217:  throw
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: i local:loc1 var
+  stack_size: 3
+  opcodes:
+    0:  get_var setTimeout
+    5:  get_var_ref0 0: i
+    6:  push_i8 60
+    8:  call2 2
+    9:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_arg0 0: t
+    3:  dup
+    4:  if_false8 63
+    6:  drop
+    7:  get_arg0 0: t
+    8:  get_field path
+   13:  dup
+   14:  if_false8 63
+   16:  drop
+   17:  get_loc0 0: this
+   18:  get_arg0 0: t
+   19:  get_field path
+   24:  put_field selectedVideoPath
+   29:  get_loc0 0: this
+   30:  get_field searchKeyword
+   35:  dup
+   36:  if_false8 47
+   38:  drop
+   39:  get_loc0 0: this
+   40:  push_empty_string
+   41:  insert2
+   42:  put_field searchKeyword
+   47:  drop
+   48:  get_loc0 0: this
+   49:  get_field2 scrollToVideoByPath
+   54:  get_arg0 0: t
+   55:  get_field path
+   60:  call_method 1
+   63:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_arg0 0: t
+    4:  get_field value
+    9:  dup
+   10:  if_true8 64
+   12:  drop
+   13:  get_arg0 0: t
+   14:  get_field target
+   19:  dup
+   20:  if_false8 34
+   22:  drop
+   23:  get_arg0 0: t
+   24:  get_field target
+   29:  get_field value
+   34:  dup
+   35:  if_true8 64
+   37:  drop
+   38:  get_arg0 0: t
+   39:  get_field detail
+   44:  dup
+   45:  if_false8 59
+   47:  drop
+   48:  get_arg0 0: t
+   49:  get_field detail
+   54:  get_field value
+   59:  dup
+   60:  if_true8 64
+   62:  drop
+   63:  push_empty_string
+   64:  put_field searchKeyword
+   69:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var e
+    1: catch t [level:4 next:-1]
+    2: catch t [level:6 next:-1]
+    3: var this
+  closure vars:
+    0: t parent:loc0 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  catch 175
+    7:  null
+    8:  put_loc0 0: e
+    9:  catch 21
+   14:  get_var_ref_check 0: t
+   17:  put_loc0 0: e
+   18:  drop
+   19:  goto8 31
+   21:  put_loc1 1: t
+   22:  catch 30
+   27:  drop
+   28:  goto8 31
+   30:  throw
+   31:  get_loc0 0: e
+   32:  dup
+   33:  if_true8 58
+   35:  drop
+   36:  push_atom_value undefined
+   41:  get_var_undef bridge
+   46:  typeof
+   47:  eq
+   48:  dup
+   49:  if_true8 58
+   51:  drop
+   52:  get_var bridge
+   57:  set_loc0 0: e
+   58:  drop
+   59:  get_loc0 0: e
+   60:  dup
+   61:  if_false8 171
+   63:  drop
+   64:  get_loc3 3: this
+   65:  get_loc0 0: e
+   66:  put_field bridge
+   71:  get_loc3 3: this
+   72:  get_loc0 0: e
+   73:  get_field Shell
+   78:  dup
+   79:  if_true8 108
+   81:  drop
+   82:  get_loc0 0: e
+   83:  get_field default
+   88:  dup
+   89:  if_false8 103
+   91:  drop
+   92:  get_loc0 0: e
+   93:  get_field default
+   98:  get_field Shell
+  103:  dup
+  104:  if_true8 108
+  106:  drop
+  107:  get_loc0 0: e
+  108:  put_field shell
+  113:  get_loc0 0: e
+  114:  get_field Fetch
+  119:  dup
+  120:  if_false8 142
+  122:  drop
+  123:  get_loc3 3: this
+  124:  get_var wrapSugarFetch
+  129:  get_loc0 0: e
+  130:  get_field Fetch
+  135:  call1 1
+  136:  insert2
+  137:  put_field Fetch
+  142:  drop
+  143:  get_loc3 3: this
+  144:  get_loc0 0: e
+  145:  get_field Datas
+  150:  dup
+  151:  if_true8 165
+  153:  drop
+  154:  get_loc0 0: e
+  155:  get_field Dbase
+  160:  dup
+  161:  if_true8 165
+  163:  drop
+  164:  null
+  165:  insert2
+  166:  put_field Dbase
+  171:  drop
+  172:  drop
+  173:  goto8 185
+  175:  put_loc2 2: t
+  176:  catch 184
+  181:  drop
+  182:  goto8 185
+  184:  throw
+  185:  get_loc3 3: this
+  186:  get_field2 ensureDeviceMac
+  191:  push_0 0
+  192:  lnot
+  193:  call_method 1
+  196:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var i
+    3: var a
+    4: catch t [level:5 next:-1]
+    5: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc8 5: this
+    3:  catch 190
+    8:  get_loc8 5: this
+   10:  get_field shell
+   15:  lnot
+   16:  dup
+   17:  if_true8 39
+   19:  drop
+   20:  push_atom_value function
+   25:  get_loc8 5: this
+   27:  get_field shell
+   32:  get_field getScreenSize
+   37:  typeof
+   38:  neq
+   39:  if_false8 43
+   41:  drop
+   42:  return_undef
+   43:  get_loc8 5: this
+   45:  get_field shell
+   50:  get_field2 getScreenSize
+   55:  call_method 0
+   58:  set_loc0 0: t
+   59:  lnot
+   60:  if_false8 64
+   62:  drop
+   63:  return_undef
+   64:  get_var parseInt
+   69:  get_loc0 0: t
+   70:  get_field width
+   75:  push_i8 10
+   77:  call2 2
+   78:  put_loc1 1: e
+   79:  get_var parseInt
+   84:  get_loc0 0: t
+   85:  get_field height
+   90:  push_i8 10
+   92:  call2 2
+   93:  put_loc2 2: i
+   94:  get_var parseInt
+   99:  get_loc0 0: t
+  100:  get_field rotation
+  105:  push_i8 10
+  107:  call2 2
+  108:  put_loc3 3: a
+  109:  get_var isNaN
+  114:  get_loc1 1: e
+  115:  call1 1
+  116:  lnot
+  117:  dup
+  118:  if_false8 137
+  120:  drop
+  121:  get_loc1 1: e
+  122:  push_0 0
+  123:  gt
+  124:  dup
+  125:  if_false8 137
+  127:  drop
+  128:  get_loc8 5: this
+  130:  get_loc1 1: e
+  131:  insert2
+  132:  put_field screenWidth
+  137:  drop
+  138:  get_var isNaN
+  143:  get_loc2 2: i
+  144:  call1 1
+  145:  lnot
+  146:  dup
+  147:  if_false8 166
+  149:  drop
+  150:  get_loc2 2: i
+  151:  push_0 0
+  152:  gt
+  153:  dup
+  154:  if_false8 166
+  156:  drop
+  157:  get_loc8 5: this
+  159:  get_loc2 2: i
+  160:  insert2
+  161:  put_field screenHeight
+  166:  drop
+  167:  get_var isNaN
+  172:  get_loc3 3: a
+  173:  call1 1
+  174:  dup
+  175:  if_true8 187
+  177:  drop
+  178:  get_loc8 5: this
+  180:  get_loc3 3: a
+  181:  insert2
+  182:  put_field screenRotation
+  187:  drop
+  188:  drop
+  189:  return_undef
+  190:  put_loc8 4: t
+  192:  catch 199
+  197:  drop
+  198:  return_undef
+  199:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: catch t [level:4 next:-1]
+    3: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  get_field Dbase
+    8:  if_false8 122
+   10:  catch 113
+   15:  get_loc3 3: this
+   16:  get_field Dbase
+   21:  get_field2 read
+   26:  push_atom_value onion_last_paths
+   31:  call_method 1
+   34:  set_loc0 0: t
+   35:  dup
+   36:  if_false8 65
+   38:  drop
+   39:  get_var Array
+   44:  get_field2 isArray
+   49:  get_loc0 0: t
+   50:  call_method 1
+   53:  dup
+   54:  if_false8 65
+   56:  drop
+   57:  get_loc3 3: this
+   58:  get_loc0 0: t
+   59:  insert2
+   60:  put_field selectedPaths
+   65:  drop
+   66:  get_loc3 3: this
+   67:  get_field Dbase
+   72:  get_field2 read
+   77:  push_atom_value onion_last_watched
+   82:  call_method 1
+   85:  set_loc1 1: e
+   86:  dup
+   87:  if_false8 110
+   89:  drop
+   90:  push_atom_value object
+   95:  get_loc1 1: e
+   96:  typeof
+   97:  eq
+   98:  dup
+   99:  if_false8 110
+  101:  drop
+  102:  get_loc3 3: this
+  103:  get_loc1 1: e
+  104:  insert2
+  105:  put_field lastWatchedMap
+  110:  drop
+  111:  drop
+  112:  return_undef
+  113:  put_loc2 2: t
+  114:  catch 121
+  119:  drop
+  120:  return_undef
+  121:  throw
+  122:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:4 next:-1]
+    1: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field Dbase
+    8:  if_false8 78
+   10:  catch 69
+   15:  get_loc1 1: this
+   16:  get_field Dbase
+   21:  get_field2 write
+   26:  push_atom_value onion_last_paths
+   31:  get_loc1 1: this
+   32:  get_field selectedPaths
+   37:  call_method 2
+   40:  drop
+   41:  get_loc1 1: this
+   42:  get_field Dbase
+   47:  get_field2 write
+   52:  push_atom_value onion_last_watched
+   57:  get_loc1 1: this
+   58:  get_field lastWatchedMap
+   63:  call_method 2
+   66:  drop
+   67:  drop
+   68:  return_undef
+   69:  put_loc0 0: t
+   70:  catch 77
+   75:  drop
+   76:  return_undef
+   77:  throw
+   78:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field selectedPaths
+    8:  get_field2 join
+   13:  push_atom_value "/"
+   18:  call_method 1
+   21:  put_loc0 0: e
+   22:  get_loc1 1: this
+   23:  get_field lastWatchedMap
+   28:  get_loc0 0: e
+   29:  get_array_el
+   30:  get_arg0 0: t
+   31:  get_field path
+   36:  strict_eq
+   37:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: catch t [level:4 next:-1]
+    2: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field Dbase
+    8:  if_false8 74
+   10:  catch 65
+   15:  get_loc2 2: this
+   16:  get_field Dbase
+   21:  get_field2 read
+   26:  push_atom_value onion_credentials
+   31:  call_method 1
+   34:  set_loc0 0: t
+   35:  dup
+   36:  if_false8 62
+   38:  drop
+   39:  get_loc0 0: t
+   40:  get_field token
+   45:  dup
+   46:  if_false8 62
+   48:  drop
+   49:  get_loc2 2: this
+   50:  get_loc0 0: t
+   51:  get_field token
+   56:  insert2
+   57:  put_field token
+   62:  drop
+   63:  drop
+   64:  return_undef
+   65:  put_loc1 1: t
+   66:  catch 73
+   71:  drop
+   72:  return_undef
+   73:  throw
+   74:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:4 next:-1]
+    1: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field Dbase
+    8:  if_false8 58
+   10:  catch 49
+   15:  get_loc1 1: this
+   16:  get_field Dbase
+   21:  get_field2 write
+   26:  push_atom_value onion_credentials
+   31:  object
+   32:  get_loc1 1: this
+   33:  get_field token
+   38:  define_field token
+   43:  call_method 2
+   46:  drop
+   47:  drop
+   48:  return_undef
+   49:  put_loc0 0: t
+   50:  catch 57
+   55:  drop
+   56:  return_undef
+   57:  throw
+   58:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_field text
+    6:  if_false8 33
+    8:  push_atom_value function
+   13:  get_arg0 0: t
+   14:  get_field text
+   19:  typeof
+   20:  eq
+   21:  if_false8 33
+   23:  get_arg0 0: t
+   24:  get_field2 text
+   29:  call_method 0
+   32:  return
+   33:  get_arg0 0: t
+   34:  get_field body
+   39:  dup
+   40:  if_true8 54
+   42:  drop
+   43:  get_arg0 0: t
+   44:  get_field _body
+   49:  dup
+   50:  if_true8 54
+   52:  drop
+   53:  push_empty_string
+   54:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+  stack_size: 5
+  opcodes:
+    0:  get_var String
+    5:  get_arg0 0: t
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  push_empty_string
+   11:  call1 1
+   12:  set_loc0 0: e
+   13:  get_length
+   14:  push_i8 14
+   16:  lte
+   17:  if_false8 21
+   19:  get_loc0 0: e
+   20:  return
+   21:  get_loc0 0: e
+   22:  get_field2 substring
+   27:  push_0 0
+   28:  push_4 4
+   29:  call_method 2
+   32:  push_atom_value "..."
+   37:  add
+   38:  get_loc0 0: e
+   39:  get_field2 substring
+   44:  get_loc0 0: e
+   45:  get_length
+   46:  push_4 4
+   47:  sub
+   48:  call_method 1
+   51:  add
+   52:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+  stack_size: 4
+  opcodes:
+    0:  get_var String
+    5:  get_arg0 0: t
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  push_empty_string
+   11:  call1 1
+   12:  get_field2 trim
+   17:  call_method 0
+   20:  get_field2 toUpperCase
+   25:  call_method 0
+   28:  get_field2 replace
+   33:  push_const8 0: 1"[^A-Z0-9]"
+   35:  push_const8 1: 1"\u0001\u0001\u0000\u001f\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0015\u0003\u0000\u0000\u0000/\u0000:\u0000@\u0000[\u0000\u00ff\u00ff\u000c\u0000\n"
+   37:  regexp
+   38:  push_empty_string
+   39:  call_method 2
+   42:  put_loc0 0: e
+   43:  push_i8 12
+   45:  get_loc0 0: e
+   46:  get_length
+   47:  strict_neq
+   48:  if_false8 52
+   50:  get_loc0 0: e
+   51:  return
+   52:  get_loc0 0: e
+   53:  get_field2 replace
+   58:  push_const8 2: 1"(.{2})(?=.)"
+   60:  push_const8 3: 1"\u0001\u0002\u0000.\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u000b\u0001\u001c\u0002\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0003\n\u000c\u0001\u0017\u0002\u0000\u0000\u0000\u0003\n\u000c\u0000\n"
+   62:  regexp
+   63:  push_atom_value "$1:"
+   68:  call_method 2
+   71:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  put_loc0 0: e
+    4:  get_var Promise
+    9:  dup
+   10:  fclosure8 0: [bytecode <null>]
+   12:  call_constructor 1
+   15:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: i
+  locals:
+    0: var a
+    1: catch a [level:5 next:-1]
+  closure vars:
+    0: e local:loc0 var
+    1: t local:arg0 var
+  stack_size: 5
+  opcodes:
+    0:  catch 141
+    5:  get_var_ref0 0: e
+    6:  get_field deviceMac
+   11:  if_false8 25
+   13:  get_arg0 0: i
+   14:  get_var_ref0 0: e
+   15:  get_field deviceMac
+   20:  call1 1
+   21:  drop
+   22:  undefined
+   23:  nip
+   24:  return
+   25:  get_var_ref0 0: e
+   26:  get_field shell
+   31:  lnot
+   32:  dup
+   33:  if_true8 54
+   35:  drop
+   36:  push_atom_value function
+   41:  get_var_ref0 0: e
+   42:  get_field shell
+   47:  get_field getWlan0Address
+   52:  typeof
+   53:  neq
+   54:  if_false8 81
+   56:  get_var_ref1 1: t
+   57:  dup
+   58:  if_true8 73
+   60:  drop
+   61:  get_var_ref0 0: e
+   62:  push_atom_value "\u00e5\u00bd\u0093\u00e5\u0089\u008d\u00e8\u00ae\u00be\u00e5\u00a4\u0087\u00e6\u009a\u0082\u00e4\u00b8\u008d\u00e6\u0094\u00af\u00e6\u008c\u0081\u00e8\u00af\u00bb\u00e5\u008f\u0096 MAC"
+   67:  insert2
+   68:  put_field authTipText
+   73:  drop
+   74:  get_arg0 0: i
+   75:  push_empty_string
+   76:  call1 1
+   77:  drop
+   78:  undefined
+   79:  nip
+   80:  return
+   81:  get_var_ref0 0: e
+   82:  get_field2 normalizeMac
+   87:  get_var_ref0 0: e
+   88:  get_field shell
+   93:  get_field2 getWlan0Address
+   98:  call_method 0
+  101:  call_method 1
+  104:  put_loc0 0: a
+  105:  get_var_ref0 0: e
+  106:  get_loc0 0: a
+  107:  put_field deviceMac
+  112:  get_loc0 0: a
+  113:  dup
+  114:  if_true8 134
+  116:  drop
+  117:  get_var_ref1 1: t
+  118:  dup
+  119:  if_true8 134
+  121:  drop
+  122:  get_var_ref0 0: e
+  123:  push_atom_value "\u00e6\u0097\u00a0\u00e6\u00b3\u0095\u00e8\u008e\u00b7\u00e5\u008f\u0096\u00e8\u00ae\u00be\u00e5\u00a4\u0087 MAC"
+  128:  insert2
+  129:  put_field authTipText
+  134:  drop
+  135:  get_arg0 0: i
+  136:  get_loc0 0: a
+  137:  call1 1
+  138:  drop
+  139:  drop
+  140:  return_undef
+  141:  put_loc1 1: a
+  142:  catch 171
+  147:  get_var_ref1 1: t
+  148:  dup
+  149:  if_true8 164
+  151:  drop
+  152:  get_var_ref0 0: e
+  153:  push_atom_value "\u00e8\u00af\u00bb\u00e5\u008f\u0096\u00e8\u00ae\u00be\u00e5\u00a4\u0087 MAC \u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  158:  insert2
+  159:  put_field authTipText
+  164:  drop
+  165:  get_arg0 0: i
+  166:  push_empty_string
+  167:  call1 1
+  168:  drop
+  169:  drop
+  170:  return_undef
+  171:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_arg0 0: t
+    3:  lnot
+    4:  if_false8 43
+    6:  get_loc0 0: this
+    7:  push_1 1
+    8:  lnot
+    9:  put_field isValidated
+   14:  get_loc0 0: this
+   15:  push_0 0
+   16:  put_field remainingDays
+   21:  get_loc0 0: this
+   22:  push_empty_string
+   23:  put_field expiresAt
+   28:  get_loc0 0: this
+   29:  push_empty_string
+   30:  put_field statusCode
+   35:  get_loc0 0: this
+   36:  push_empty_string
+   37:  put_field statusMessage
+   42:  return_undef
+   43:  get_loc0 0: this
+   44:  get_arg0 0: t
+   45:  get_field status
+   50:  dup
+   51:  if_true8 55
+   53:  drop
+   54:  push_empty_string
+   55:  put_field statusCode
+   60:  get_loc0 0: this
+   61:  get_arg0 0: t
+   62:  get_field message
+   67:  dup
+   68:  if_true8 72
+   70:  drop
+   71:  push_empty_string
+   72:  put_field statusMessage
+   77:  get_loc0 0: this
+   78:  get_var parseInt
+   83:  get_arg0 0: t
+   84:  get_field remaining_days
+   89:  push_i8 10
+   91:  call2 2
+   92:  dup
+   93:  if_true8 97
+   95:  drop
+   96:  push_0 0
+   97:  put_field remainingDays
+  102:  get_loc0 0: this
+  103:  get_arg0 0: t
+  104:  get_field expires_at
+  109:  dup
+  110:  if_true8 114
+  112:  drop
+  113:  push_empty_string
+  114:  put_field expiresAt
+  119:  get_loc0 0: this
+  120:  push_atom_value activated
+  125:  get_arg0 0: t
+  126:  get_field status
+  131:  strict_neq
+  132:  dup
+  133:  if_true8 156
+  135:  drop
+  136:  get_arg0 0: t
+  137:  get_field valid
+  142:  lnot
+  143:  dup
+  144:  if_true8 156
+  146:  drop
+  147:  push_1 1
+  148:  lnot
+  149:  get_arg0 0: t
+  150:  get_field mac_matched
+  155:  strict_eq
+  156:  lnot
+  157:  put_field isValidated
+  162:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field Fetch
+    8:  get_field2 fetch
+   13:  get_arg0 0: t
+   14:  get_arg1 1: e
+   15:  dup
+   16:  if_true8 37
+   18:  drop
+   19:  object
+   20:  push_atom_value GET
+   25:  define_field method
+   30:  push_i8 10
+   32:  define_field timeout
+   37:  call_method 2
+   40:  get_field2 then
+   45:  fclosure8 0: [bytecode <null>]
+   47:  tail_call_method 1
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+  closure vars:
+    0: this local:loc0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  get_field2 resText
+    6:  get_arg0 0: t
+    7:  call_method 1
+   10:  put_loc0 0: e
+   11:  object
+   12:  get_arg0 0: t
+   13:  define_field res
+   18:  push_atom_value string
+   23:  get_loc0 0: e
+   24:  typeof
+   25:  eq
+   26:  if_false8 44
+   28:  get_var JSON
+   33:  get_field2 parse
+   38:  get_loc0 0: e
+   39:  call_method 1
+   42:  goto8 45
+   44:  get_loc0 0: e
+   45:  define_field data
+   50:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  closure vars:
+    0: s parent:loc4 var
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_var_ref0 0: s
+    3:  get_loc1 1: this
+    4:  get_field token
+    9:  dup
+   10:  if_true8 14
+   12:  drop
+   13:  push_empty_string
+   14:  call1 1
+   15:  await
+   16:  put_loc0 0: t
+   17:  null
+   18:  get_loc0 0: t
+   19:  strict_neq
+   20:  dup
+   21:  if_false8 60
+   23:  drop
+   24:  get_loc1 1: this
+   25:  get_var String
+   30:  get_loc0 0: t
+   31:  dup
+   32:  if_true8 36
+   34:  drop
+   35:  push_empty_string
+   36:  call1 1
+   37:  get_field2 trim
+   42:  call_method 0
+   45:  put_field token
+   50:  get_loc1 1: this
+   51:  get_field2 applyStatus
+   56:  null
+   57:  call_method 1
+   60:  drop
+   61:  undefined
+   62:  return_async
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:4 next:-1]
+    1: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  push_1 1
+    4:  lnot
+    5:  put_field isValidated
+   10:  get_loc1 1: this
+   11:  array_from 0
+   14:  put_field selectedPaths
+   19:  get_loc1 1: this
+   20:  push_empty_string
+   21:  put_field token
+   26:  get_loc1 1: this
+   27:  get_field2 applyStatus
+   32:  null
+   33:  call_method 1
+   36:  drop
+   37:  get_loc1 1: this
+   38:  get_field Dbase
+   43:  if_false8 123
+   45:  catch 114
+   50:  push_atom_value function
+   55:  get_loc1 1: this
+   56:  get_field Dbase
+   61:  get_field remove
+   66:  typeof
+   67:  eq
+   68:  if_false8 91
+   70:  get_loc1 1: this
+   71:  get_field Dbase
+   76:  get_field2 remove
+   81:  push_atom_value onion_credentials
+   86:  call_method 1
+   89:  goto8 111
+   91:  get_loc1 1: this
+   92:  get_field Dbase
+   97:  get_field2 write
+  102:  push_atom_value onion_credentials
+  107:  null
+  108:  call_method 2
+  111:  drop
+  112:  drop
+  113:  return_undef
+  114:  put_loc0 0: t
+  115:  catch 122
+  120:  drop
+  121:  return_undef
+  122:  throw
+  123:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_0 0
+    4:  lnot
+    5:  put_field showAuthModal
+   10:  get_loc0 0: this
+   11:  push_empty_string
+   12:  put_field authTipText
+   17:  get_loc0 0: this
+   18:  get_field2 ensureDeviceMac
+   23:  push_0 0
+   24:  lnot
+   25:  call_method 1
+   28:  drop
+   29:  get_loc0 0: this
+   30:  get_field token
+   35:  dup
+   36:  if_false8 50
+   38:  drop
+   39:  get_loc0 0: this
+   40:  get_field2 refreshActivationStatus
+   45:  push_0 0
+   46:  lnot
+   47:  call_method 1
+   50:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_1 1
+    4:  lnot
+    5:  put_field showAuthModal
+   10:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field Fetch
+    8:  if_false8 93
+   10:  get_loc0 0: this
+   11:  get_field serverUrl
+   16:  if_false8 48
+   18:  get_loc0 0: this
+   19:  get_field token
+   24:  if_false8 48
+   26:  get_loc0 0: this
+   27:  get_field2 ensureDeviceMac
+   32:  push_0 0
+   33:  lnot
+   34:  call_method 1
+   37:  get_field2 then
+   42:  fclosure8 0: [bytecode <null>]
+   44:  call_method 1
+   47:  return
+   48:  get_loc0 0: this
+   49:  get_field2 applyStatus
+   54:  null
+   55:  call_method 1
+   58:  drop
+   59:  get_arg0 0: t
+   60:  dup
+   61:  if_true8 76
+   63:  drop
+   64:  get_loc0 0: this
+   65:  push_atom_value "\u00e8\u00af\u00b7\u00e8\u00be\u0093\u00e5\u0085\u00a5\u00e6\u00bf\u0080\u00e6\u00b4\u00bb\u00e7\u00a0\u0081"
+   70:  insert2
+   71:  put_field authTipText
+   76:  drop
+   77:  get_var Promise
+   82:  get_field2 resolve
+   87:  push_1 1
+   88:  lnot
+   89:  call_method 1
+   92:  return
+   93:  get_arg0 0: t
+   94:  dup
+   95:  if_true8 110
+   97:  drop
+   98:  get_loc0 0: this
+   99:  push_atom_value "\u00e7\u008e\u00af\u00e5\u00a2\u0083\u00e6\u009c\u00aa\u00e5\u0087\u0086\u00e5\u00a4\u0087\u00e5\u00a5\u00bd"
+  104:  insert2
+  105:  put_field authTipText
+  110:  drop
+  111:  get_var Promise
+  116:  get_field2 resolve
+  121:  push_1 1
+  122:  lnot
+  123:  call_method 1
+  126:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: var i
+  closure vars:
+    0: this local:loc0 var
+    1: t local:arg0 var
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  push_0 0
+    2:  lnot
+    3:  put_field isVerifying
+    8:  get_var_ref1 1: t
+    9:  dup
+   10:  if_true8 25
+   12:  drop
+   13:  get_var_ref0 0: this
+   14:  push_atom_value "\u00e6\u009f\u00a5\u00e8\u00af\u00a2\u00e7\u008a\u00b6\u00e6\u0080\u0081\u00e4\u00b8\u00ad..."
+   19:  insert2
+   20:  put_field authTipText
+   25:  drop
+   26:  get_var_ref0 0: this
+   27:  get_field serverUrl
+   32:  push_atom_value "/api/token/check?key="
+   37:  add
+   38:  get_var encodeURIComponent
+   43:  get_var_ref0 0: this
+   44:  get_field token
+   49:  call1 1
+   50:  add
+   51:  put_loc0 0: i
+   52:  get_arg0 0: e
+   53:  dup
+   54:  if_false8 73
+   56:  drop
+   57:  get_loc0 0: i
+   58:  push_atom_value "&mac="
+   63:  get_var encodeURIComponent
+   68:  get_arg0 0: e
+   69:  call1 1
+   70:  add
+   71:  add
+   72:  set_loc0 0: i
+   73:  drop
+   74:  get_var_ref0 0: this
+   75:  get_field2 fetchJson
+   80:  get_loc0 0: i
+   81:  object
+   82:  push_atom_value GET
+   87:  define_field method
+   92:  push_i8 10
+   94:  define_field timeout
+   99:  call_method 2
+  102:  get_field2 then
+  107:  fclosure8 0: [bytecode <null>]
+  109:  call_method 1
+  112:  get_field2 catch
+  117:  fclosure8 1: [bytecode <null>]
+  119:  tail_call_method 1
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: <null>
+  locals:
+    0: var e
+    1: var i
+  closure vars:
+    0: this parent:loc0 var
+    1: t parent:arg1 var
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: "<null>"
+    1:  to_object
+    2:  dup
+    3:  get_field res
+    8:  put_loc0 0: e
+    9:  dup
+   10:  get_field data
+   15:  put_loc1 1: i
+   16:  drop
+   17:  get_var_ref0 0: this
+   18:  push_1 1
+   19:  lnot
+   20:  put_field isVerifying
+   25:  get_loc0 0: e
+   26:  get_field ok
+   31:  if_false8 90
+   33:  get_var_ref0 0: this
+   34:  get_field2 applyStatus
+   39:  get_loc1 1: i
+   40:  call_method 1
+   43:  drop
+   44:  get_var_ref1 1: t
+   45:  dup
+   46:  if_true8 80
+   48:  drop
+   49:  get_var_ref0 0: this
+   50:  get_loc1 1: i
+   51:  if_false8 69
+   53:  get_loc1 1: i
+   54:  get_field message
+   59:  if_false8 69
+   61:  get_loc1 1: i
+   62:  get_field message
+   67:  goto8 74
+   69:  push_atom_value "\u00e7\u008a\u00b6\u00e6\u0080\u0081\u00e5\u00b7\u00b2\u00e6\u009b\u00b4\u00e6\u0096\u00b0"
+   74:  insert2
+   75:  put_field authTipText
+   80:  drop
+   81:  get_var_ref0 0: this
+   82:  get_field isValidated
+   87:  lnot
+   88:  lnot
+   89:  return
+   90:  get_var_ref1 1: t
+   91:  dup
+   92:  if_true8 114
+   94:  drop
+   95:  get_var_ref0 0: this
+   96:  push_atom_value "HTTP "
+  101:  get_loc0 0: e
+  102:  get_field status
+  107:  add
+  108:  insert2
+  109:  put_field authTipText
+  114:  drop
+  115:  push_1 1
+  116:  lnot
+  117:  return
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: this parent:loc0 var
+    1: t parent:arg1 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  push_1 1
+    2:  lnot
+    3:  put_field isVerifying
+    8:  get_var_ref1 1: t
+    9:  dup
+   10:  if_true8 37
+   12:  drop
+   13:  get_var_ref0 0: this
+   14:  get_arg0 0: e
+   15:  get_field message
+   20:  dup
+   21:  if_true8 31
+   23:  drop
+   24:  get_var String
+   29:  get_arg0 0: e
+   30:  call1 1
+   31:  insert2
+   32:  put_field authTipText
+   37:  drop
+   38:  push_1 1
+   39:  lnot
+   40:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field Fetch
+    8:  if_false8 61
+   10:  get_loc0 0: this
+   11:  get_field serverUrl
+   16:  if_false8 48
+   18:  get_loc0 0: this
+   19:  get_field token
+   24:  if_false8 48
+   26:  get_loc0 0: this
+   27:  get_field2 ensureDeviceMac
+   32:  push_1 1
+   33:  lnot
+   34:  call_method 1
+   37:  get_field2 then
+   42:  fclosure8 0: [bytecode <null>]
+   44:  call_method 1
+   47:  return_undef
+   48:  get_loc0 0: this
+   49:  push_atom_value "\u00e8\u00af\u00b7\u00e8\u00be\u0093\u00e5\u0085\u00a5\u00e6\u00bf\u0080\u00e6\u00b4\u00bb\u00e7\u00a0\u0081"
+   54:  insert2
+   55:  put_field authTipText
+   60:  return_undef
+   61:  get_loc0 0: this
+   62:  push_atom_value "\u00e7\u008e\u00af\u00e5\u00a2\u0083\u00e6\u009c\u00aa\u00e5\u0087\u0086\u00e5\u00a4\u0087\u00e5\u00a5\u00bd"
+   67:  insert2
+   68:  put_field authTipText
+   73:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: this local:loc0 var
+  stack_size: 8
+  opcodes:
+    0:  get_arg0 0: t
+    1:  dup
+    2:  if_false 138
+    7:  drop
+    8:  get_var_ref0 0: this
+    9:  push_0 0
+   10:  lnot
+   11:  put_field isVerifying
+   16:  get_var_ref0 0: this
+   17:  push_atom_value "\u00e6\u00bf\u0080\u00e6\u00b4\u00bb\u00e4\u00b8\u00ad..."
+   22:  put_field authTipText
+   27:  get_var_ref0 0: this
+   28:  get_field2 fetchJson
+   33:  get_var_ref0 0: this
+   34:  get_field serverUrl
+   39:  push_atom_value "/api/token/activate"
+   44:  add
+   45:  object
+   46:  push_atom_value POST
+   51:  define_field method
+   56:  push_i8 10
+   58:  define_field timeout
+   63:  object
+   64:  push_atom_value "application/json"
+   69:  define_field "Content-Type"
+   74:  define_field headers
+   79:  get_var JSON
+   84:  get_field2 stringify
+   89:  object
+   90:  get_var_ref0 0: this
+   91:  get_field token
+   96:  define_field key
+  101:  get_arg0 0: t
+  102:  define_field mac
+  107:  call_method 1
+  110:  define_field body
+  115:  call_method 2
+  118:  get_field2 then
+  123:  fclosure8 0: [bytecode <null>]
+  125:  call_method 1
+  128:  get_field2 catch
+  133:  fclosure8 1: [bytecode <null>]
+  135:  call_method 1
+  138:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: <null>
+  locals:
+    0: var t
+    1: var e
+    2: var i
+  closure vars:
+    0: this parent:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: "<null>"
+    1:  to_object
+    2:  dup
+    3:  get_field res
+    8:  put_loc0 0: t
+    9:  dup
+   10:  get_field data
+   15:  put_loc1 1: e
+   16:  drop
+   17:  get_var_ref0 0: this
+   18:  push_1 1
+   19:  lnot
+   20:  put_field isVerifying
+   25:  get_loc0 0: t
+   26:  get_field ok
+   31:  if_false8 87
+   33:  get_loc1 1: e
+   34:  if_false8 87
+   36:  get_loc1 1: e
+   37:  get_field success
+   42:  if_false8 87
+   44:  get_var_ref0 0: this
+   45:  get_field2 applyStatus
+   50:  get_loc1 1: e
+   51:  call_method 1
+   54:  drop
+   55:  get_var_ref0 0: this
+   56:  get_field2 saveAuthInfo
+   61:  call_method 0
+   64:  drop
+   65:  get_var_ref0 0: this
+   66:  get_loc1 1: e
+   67:  get_field message
+   72:  dup
+   73:  if_true8 81
+   75:  drop
+   76:  push_atom_value "\u00e6\u00bf\u0080\u00e6\u00b4\u00bb\u00e6\u0088\u0090\u00e5\u008a\u009f"
+   81:  put_field authTipText
+   86:  return_undef
+   87:  get_loc1 1: e
+   88:  if_false8 126
+   90:  get_loc1 1: e
+   91:  get_field detail
+   96:  dup
+   97:  if_true8 106
+   99:  drop
+  100:  get_loc1 1: e
+  101:  get_field message
+  106:  if_false8 126
+  108:  get_loc1 1: e
+  109:  get_field detail
+  114:  dup
+  115:  if_true8 138
+  117:  drop
+  118:  get_loc1 1: e
+  119:  get_field message
+  124:  goto8 138
+  126:  push_atom_value "HTTP "
+  131:  get_loc0 0: t
+  132:  get_field status
+  137:  add
+  138:  put_loc2 2: i
+  139:  get_var_ref0 0: this
+  140:  get_field2 applyStatus
+  145:  get_loc1 1: e
+  146:  call_method 1
+  149:  drop
+  150:  get_var_ref0 0: this
+  151:  get_loc2 2: i
+  152:  put_field authTipText
+  157:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: this parent:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  push_1 1
+    2:  lnot
+    3:  put_field isVerifying
+    8:  get_var_ref0 0: this
+    9:  get_arg0 0: t
+   10:  get_field message
+   15:  dup
+   16:  if_true8 26
+   18:  drop
+   19:  get_var String
+   24:  get_arg0 0: t
+   25:  call1 1
+   26:  put_field authTipText
+   31:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_atom_value "\u00e8\u00b4\u00ad\u00e4\u00b9\u00b0\u00e9\u0093\u00be\u00e6\u008e\u00a5\u00ef\u00bc\u009ahttps://www.afdian.com/item/cf5e037e6cb911f"
+    8:  put_field authTipText
+   13:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field token
+    8:  if_false8 32
+   10:  get_loc0 0: this
+   11:  get_field2 ensureDeviceMac
+   16:  push_1 1
+   17:  lnot
+   18:  call_method 1
+   21:  get_field2 then
+   26:  fclosure8 0: [bytecode <null>]
+   28:  call_method 1
+   31:  return
+   32:  get_loc0 0: this
+   33:  push_0 0
+   34:  lnot
+   35:  put_field showAuthModal
+   40:  get_loc0 0: this
+   41:  push_atom_value "\u00e8\u00af\u00b7\u00e8\u00be\u0093\u00e5\u0085\u00a5\u00e6\u00bf\u0080\u00e6\u00b4\u00bb\u00e7\u00a0\u0081\u00e5\u0090\u008e\u00e5\u0086\u008d\u00e6\u0092\u00ad\u00e6\u0094\u00be"
+   46:  put_field authTipText
+   51:  get_var Promise
+   56:  get_field2 resolve
+   61:  push_1 1
+   62:  lnot
+   63:  call_method 1
+   66:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: this local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: t
+    1:  if_false8 25
+    3:  get_var_ref0 0: this
+    4:  get_field2 refreshActivationStatus
+    9:  push_0 0
+   10:  lnot
+   11:  call_method 1
+   14:  get_field2 then
+   19:  fclosure8 0: [bytecode <null>]
+   21:  call_method 1
+   24:  return
+   25:  get_var_ref0 0: this
+   26:  push_0 0
+   27:  lnot
+   28:  put_field showAuthModal
+   33:  push_1 1
+   34:  lnot
+   35:  return
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: this parent:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: t
+    1:  lnot
+    2:  lnot
+    3:  dup
+    4:  if_true8 38
+    6:  drop
+    7:  get_var_ref0 0: this
+    8:  push_0 0
+    9:  lnot
+   10:  put_field showAuthModal
+   15:  get_var_ref0 0: this
+   16:  get_var_ref0 0: this
+   17:  get_field statusMessage
+   22:  dup
+   23:  if_true8 31
+   25:  drop
+   26:  push_atom_value "\u00e5\u00bd\u0093\u00e5\u0089\u008d\u00e6\u00bf\u0080\u00e6\u00b4\u00bb\u00e7\u00a0\u0081\u00e4\u00b8\u008d\u00e5\u008f\u00af\u00e6\u0092\u00ad\u00e6\u0094\u00be"
+   31:  put_field authTipText
+   36:  push_1 1
+   37:  lnot
+   38:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 activateAndSaveKey
+    8:  call_method 0
+   11:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 refreshActivationStatus
+    8:  get_arg0 0: t
+    9:  tail_call_method 1
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  push_0 0
+    4:  lnot
+    5:  put_field showCascader
+   10:  push_0 0
+   11:  put_loc0 0: t
+   12:  get_loc0 0: t
+   13:  push_4 4
+   14:  lt
+   15:  if_false8 51
+   17:  get_loc1 1: this
+   18:  get_field tempSelected
+   23:  get_field2 splice
+   28:  get_loc0 0: t
+   29:  push_1 1
+   30:  get_loc1 1: this
+   31:  get_field selectedPaths
+   36:  get_loc0 0: t
+   37:  get_array_el
+   38:  dup
+   39:  if_true8 43
+   41:  drop
+   42:  push_empty_string
+   43:  call_method 3
+   46:  drop
+   47:  inc_loc 0: t
+   49:  goto8 12
+   51:  push_0 0
+   52:  get_loc1 1: this
+   53:  get_field optionsLevel0
+   58:  get_length
+   59:  strict_eq
+   60:  dup
+   61:  if_false8 75
+   63:  drop
+   64:  get_loc1 1: this
+   65:  get_field2 loadLevelOptions
+   70:  push_0 0
+   71:  push_empty_string
+   72:  call_method 2
+   75:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_1 1
+    4:  lnot
+    5:  put_field showCascader
+   10:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: var i
+    1: var a
+    2: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field tempSelected
+    8:  get_field2 splice
+   13:  get_arg0 0: t
+   14:  push_1 1
+   15:  get_arg1 1: e
+   16:  call_method 3
+   19:  drop
+   20:  get_var console
+   25:  get_field2 log
+   30:  push_atom_value "selectTempLevel - tempSelected after splice:"
+   35:  get_var JSON
+   40:  get_field2 stringify
+   45:  get_loc2 2: this
+   46:  get_field tempSelected
+   51:  call_method 1
+   54:  call_method 2
+   57:  drop
+   58:  get_arg0 0: t
+   59:  push_1 1
+   60:  add
+   61:  put_loc0 0: i
+   62:  get_loc0 0: i
+   63:  push_4 4
+   64:  lt
+   65:  if_false8 143
+   67:  get_loc2 2: this
+   68:  get_field tempSelected
+   73:  get_field2 splice
+   78:  get_loc0 0: i
+   79:  push_1 1
+   80:  push_empty_string
+   81:  call_method 3
+   84:  drop
+   85:  push_1 1
+   86:  get_loc0 0: i
+   87:  strict_eq
+   88:  dup
+   89:  if_false8 102
+   91:  drop
+   92:  get_loc2 2: this
+   93:  array_from 0
+   96:  insert2
+   97:  put_field optionsLevel1
+  102:  drop
+  103:  push_2 2
+  104:  get_loc0 0: i
+  105:  strict_eq
+  106:  dup
+  107:  if_false8 120
+  109:  drop
+  110:  get_loc2 2: this
+  111:  array_from 0
+  114:  insert2
+  115:  put_field optionsLevel2
+  120:  drop
+  121:  push_3 3
+  122:  get_loc0 0: i
+  123:  strict_eq
+  124:  dup
+  125:  if_false8 138
+  127:  drop
+  128:  get_loc2 2: this
+  129:  array_from 0
+  132:  insert2
+  133:  put_field optionsLevel3
+  138:  drop
+  139:  inc_loc 0: i
+  141:  goto8 62
+  143:  get_arg0 0: t
+  144:  push_3 3
+  145:  lt
+  146:  if_false8 215
+  148:  get_loc2 2: this
+  149:  get_field tempSelected
+  154:  get_field2 slice
+  159:  push_0 0
+  160:  get_arg0 0: t
+  161:  push_1 1
+  162:  add
+  163:  call_method 2
+  166:  get_field2 join
+  171:  push_atom_value "/"
+  176:  call_method 1
+  179:  put_loc1 1: a
+  180:  get_var console
+  185:  get_field2 log
+  190:  push_atom_value "selectTempLevel - currentPath for next level:"
+  195:  get_loc1 1: a
+  196:  call_method 2
+  199:  drop
+  200:  get_loc2 2: this
+  201:  get_field2 loadLevelOptions
+  206:  get_arg0 0: t
+  207:  push_1 1
+  208:  add
+  209:  get_loc1 1: a
+  210:  call_method 2
+  213:  drop
+  214:  return_undef
+  215:  get_loc2 2: this
+  216:  get_field2 confirmCascader
+  221:  call_method 0
+  224:  drop
+  225:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_loc0 0: this
+    4:  get_field tempSelected
+    9:  get_field2 filter
+   14:  get_var Boolean
+   19:  call_method 1
+   22:  put_field selectedPaths
+   27:  get_loc0 0: this
+   28:  get_field2 savePreferences
+   33:  call_method 0
+   36:  drop
+   37:  get_loc0 0: this
+   38:  push_1 1
+   39:  lnot
+   40:  put_field showCascader
+   45:  get_loc0 0: this
+   46:  get_field2 loadVideos
+   51:  call_method 0
+   54:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: var i
+    1: var a
+    2: var s
+    3: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_var console
+    7:  get_field2 log
+   12:  push_atom_value "loadLevelOptions - called with levelIndex:"
+   17:  get_arg0 0: t
+   18:  push_atom_value "parentPath:"
+   23:  get_arg1 1: e
+   24:  call_method 4
+   27:  drop
+   28:  get_loc3 3: this
+   29:  get_field Fetch
+   34:  if_false 195
+   39:  get_loc3 3: this
+   40:  push_0 0
+   41:  lnot
+   42:  put_field isLoading
+   47:  get_arg1 1: e
+   48:  get_field2 replace
+   53:  push_const8 0: 1"^\\/+|\\/+$"
+   55:  push_const8 1: 1"\u0001\u0001\u0000F\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0009\u001b\u0000\u0000\u0000\u0005\u001c\u0004\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0001/\u0000\n\u0007\u0016\u0000\u0000\u0000\u001c\u0004\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0001/\u0000\n\u0006\u000c\u0000\n"
+   57:  regexp
+   58:  push_empty_string
+   59:  call_method 2
+   62:  set_loc0 0: i
+   63:  if_false8 104
+   65:  get_loc0 0: i
+   66:  get_field2 split
+   71:  push_atom_value "/"
+   76:  call_method 1
+   79:  get_field2 map
+   84:  fclosure8 2: [bytecode <null>]
+   86:  call_method 1
+   89:  get_field2 join
+   94:  push_atom_value "/"
+   99:  call_method 1
+  102:  goto8 105
+  104:  push_empty_string
+  105:  put_loc1 1: a
+  106:  get_loc3 3: this
+  107:  get_field serverUrl
+  112:  push_atom_value "/api/folders/"
+  117:  add
+  118:  get_loc1 1: a
+  119:  add
+  120:  put_loc2 2: s
+  121:  get_var console
+  126:  get_field2 log
+  131:  push_atom_value "loadLevelOptions - requesting URL:"
+  136:  get_loc2 2: s
+  137:  call_method 2
+  140:  drop
+  141:  get_loc3 3: this
+  142:  get_field Fetch
+  147:  get_field2 fetch
+  152:  get_loc2 2: s
+  153:  object
+  154:  push_atom_value GET
+  159:  define_field method
+  164:  push_i8 10
+  166:  define_field timeout
+  171:  call_method 2
+  174:  get_field2 then
+  179:  fclosure8 3: [bytecode <null>]
+  181:  call_method 1
+  184:  get_field2 catch
+  189:  fclosure8 4: [bytecode <null>]
+  191:  call_method 1
+  194:  drop
+  195:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  get_var encodeURIComponent
+    5:  get_arg0 0: t
+    6:  tail_call 1
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: var i
+    1: var a
+    2: var s
+  closure vars:
+    0: this local:loc3 var
+    1: t local:arg0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  push_1 1
+    2:  lnot
+    3:  put_field isLoading
+    8:  get_arg0 0: e
+    9:  get_field ok
+   14:  if_false 149
+   19:  get_var_ref0 0: this
+   20:  get_field2 resText
+   25:  get_arg0 0: e
+   26:  call_method 1
+   29:  put_loc0 0: i
+   30:  push_atom_value string
+   35:  get_loc0 0: i
+   36:  typeof
+   37:  eq
+   38:  if_false8 56
+   40:  get_var JSON
+   45:  get_field2 parse
+   50:  get_loc0 0: i
+   51:  call_method 1
+   54:  goto8 57
+   56:  get_loc0 0: i
+   57:  set_loc1 1: a
+   58:  if_false8 149
+   60:  get_loc1 1: a
+   61:  get_field items
+   66:  if_false8 149
+   68:  get_loc1 1: a
+   69:  get_field items
+   74:  get_field2 filter
+   79:  fclosure8 0: [bytecode <null>]
+   81:  call_method 1
+   84:  put_loc2 2: s
+   85:  push_0 0
+   86:  get_var_ref1 1: t
+   87:  strict_eq
+   88:  dup
+   89:  if_false8 100
+   91:  drop
+   92:  get_var_ref0 0: this
+   93:  get_loc2 2: s
+   94:  insert2
+   95:  put_field optionsLevel0
+  100:  drop
+  101:  push_1 1
+  102:  get_var_ref1 1: t
+  103:  strict_eq
+  104:  dup
+  105:  if_false8 116
+  107:  drop
+  108:  get_var_ref0 0: this
+  109:  get_loc2 2: s
+  110:  insert2
+  111:  put_field optionsLevel1
+  116:  drop
+  117:  push_2 2
+  118:  get_var_ref1 1: t
+  119:  strict_eq
+  120:  dup
+  121:  if_false8 132
+  123:  drop
+  124:  get_var_ref0 0: this
+  125:  get_loc2 2: s
+  126:  insert2
+  127:  put_field optionsLevel2
+  132:  drop
+  133:  push_3 3
+  134:  get_var_ref1 1: t
+  135:  strict_eq
+  136:  dup
+  137:  if_false8 148
+  139:  drop
+  140:  get_var_ref0 0: this
+  141:  get_loc2 2: s
+  142:  insert2
+  143:  put_field optionsLevel3
+  148:  drop
+  149:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 1
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_field is_dir
+    6:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: this local:loc3 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  push_1 1
+    2:  lnot
+    3:  put_field isLoading
+    8:  get_var_ref0 0: this
+    9:  get_arg0 0: t
+   10:  get_field message
+   15:  dup
+   16:  if_true8 26
+   18:  drop
+   19:  get_var String
+   24:  get_arg0 0: t
+   25:  call1 1
+   26:  put_field tipText
+   31:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var i
+    3: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  get_field Fetch
+    8:  if_false 204
+   13:  push_0 0
+   14:  get_loc3 3: this
+   15:  get_field selectedPaths
+   20:  get_length
+   21:  strict_neq
+   22:  if_false 204
+   27:  get_loc3 3: this
+   28:  push_0 0
+   29:  lnot
+   30:  put_field isLoading
+   35:  get_loc3 3: this
+   36:  push_empty_string
+   37:  put_field tipText
+   42:  get_loc3 3: this
+   43:  array_from 0
+   46:  put_field videos
+   51:  get_loc3 3: this
+   52:  push_empty_string
+   53:  put_field selectedVideoPath
+   58:  get_loc3 3: this
+   59:  get_field selectedPaths
+   64:  get_field2 join
+   69:  push_atom_value "/"
+   74:  call_method 1
+   77:  get_field2 replace
+   82:  push_const8 0: 1"^\\/+|\\/+$"
+   84:  push_const8 1: 1"\u0001\u0001\u0000F\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0009\u001b\u0000\u0000\u0000\u0005\u001c\u0004\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0001/\u0000\n\u0007\u0016\u0000\u0000\u0000\u001c\u0004\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0001/\u0000\n\u0006\u000c\u0000\n"
+   86:  regexp
+   87:  push_empty_string
+   88:  call_method 2
+   91:  set_loc0 0: t
+   92:  if_false8 133
+   94:  get_loc0 0: t
+   95:  get_field2 split
+  100:  push_atom_value "/"
+  105:  call_method 1
+  108:  get_field2 map
+  113:  fclosure8 2: [bytecode <null>]
+  115:  call_method 1
+  118:  get_field2 join
+  123:  push_atom_value "/"
+  128:  call_method 1
+  131:  goto8 134
+  133:  push_empty_string
+  134:  put_loc1 1: e
+  135:  get_loc3 3: this
+  136:  get_field serverUrl
+  141:  push_atom_value "/api/folders/"
+  146:  add
+  147:  get_loc1 1: e
+  148:  add
+  149:  put_loc2 2: i
+  150:  get_loc3 3: this
+  151:  get_field Fetch
+  156:  get_field2 fetch
+  161:  get_loc2 2: i
+  162:  object
+  163:  push_atom_value GET
+  168:  define_field method
+  173:  push_i8 10
+  175:  define_field timeout
+  180:  call_method 2
+  183:  get_field2 then
+  188:  fclosure8 3: [bytecode <null>]
+  190:  call_method 1
+  193:  get_field2 catch
+  198:  fclosure8 4: [bytecode <null>]
+  200:  call_method 1
+  203:  drop
+  204:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  get_var encodeURIComponent
+    5:  get_arg0 0: t
+    6:  tail_call 1
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var i
+    2: var a
+    3: var s
+  closure vars:
+    0: this local:loc3 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  push_1 1
+    2:  lnot
+    3:  put_field isLoading
+    8:  get_arg0 0: t
+    9:  get_field ok
+   14:  if_false 220
+   19:  get_var_ref0 0: this
+   20:  get_field2 resText
+   25:  get_arg0 0: t
+   26:  call_method 1
+   29:  put_loc0 0: e
+   30:  push_atom_value string
+   35:  get_loc0 0: e
+   36:  typeof
+   37:  eq
+   38:  if_false8 56
+   40:  get_var JSON
+   45:  get_field2 parse
+   50:  get_loc0 0: e
+   51:  call_method 1
+   54:  goto8 57
+   56:  get_loc0 0: e
+   57:  set_loc1 1: i
+   58:  if_false 238
+   63:  get_loc1 1: i
+   64:  get_field items
+   69:  if_false 238
+   74:  get_var_ref0 0: this
+   75:  get_loc1 1: i
+   76:  get_field items
+   81:  get_field2 filter
+   86:  fclosure8 0: [bytecode <null>]
+   88:  call_method 1
+   91:  put_field videos
+   96:  get_var_ref0 0: this
+   97:  get_field selectedPaths
+  102:  get_field2 join
+  107:  push_atom_value "/"
+  112:  call_method 1
+  115:  put_loc2 2: a
+  116:  get_var_ref0 0: this
+  117:  get_field lastWatchedMap
+  122:  if_false8 144
+  124:  get_var_ref0 0: this
+  125:  get_field lastWatchedMap
+  130:  get_loc2 2: a
+  131:  get_array_el
+  132:  if_false8 144
+  134:  get_var_ref0 0: this
+  135:  get_field lastWatchedMap
+  140:  get_loc2 2: a
+  141:  get_array_el
+  142:  goto8 145
+  144:  push_empty_string
+  145:  set_loc3 3: s
+  146:  if_false8 158
+  148:  get_var_ref0 0: this
+  149:  get_loc3 3: s
+  150:  insert2
+  151:  put_field selectedVideoPath
+  156:  goto8 208
+  158:  get_var_ref0 0: this
+  159:  get_field videos
+  164:  get_length
+  165:  push_0 0
+  166:  gt
+  167:  dup
+  168:  if_false8 208
+  170:  drop
+  171:  get_var_ref0 0: this
+  172:  get_field videos
+  177:  push_0 0
+  178:  get_array_el
+  179:  get_field path
+  184:  dup
+  185:  if_false8 208
+  187:  drop
+  188:  get_var_ref0 0: this
+  189:  get_var_ref0 0: this
+  190:  get_field videos
+  195:  push_0 0
+  196:  get_array_el
+  197:  get_field path
+  202:  insert2
+  203:  put_field selectedVideoPath
+  208:  drop
+  209:  get_var_ref0 0: this
+  210:  get_field2 scrollToLastWatchedIfAny
+  215:  call_method 0
+  218:  drop
+  219:  return_undef
+  220:  get_var_ref0 0: this
+  221:  push_atom_value "\u00e5\u008a\u00a0\u00e8\u00bd\u00bd\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5: HTTP "
+  226:  get_arg0 0: t
+  227:  get_field status
+  232:  add
+  233:  put_field tipText
+  238:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 4
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_field is_dir
+    6:  lnot
+    7:  dup
+    8:  if_false8 30
+   10:  drop
+   11:  get_arg0 0: t
+   12:  get_field name
+   17:  get_field2 match
+   22:  push_const8 0: 1"\\.(mp4|webm|ogg|mov)$"
+   24:  push_const8 1: 1"\u0002\u0002\u0000]\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001.\u0000\u000b\u0001\u00097\u0000\u0000\u0000\u0009$\u0000\u0000\u0000\u0009\u000e\u0000\u0000\u0000\u0001M\u0000\u0001P\u0000\u00014\u0000\u0007\u000c\u0000\u0000\u0000\u0001W\u0000\u0001E\u0000\u0001B\u0000\u0001M\u0000\u0007\u0009\u0000\u0000\u0000\u0001O\u0000\u0001G\u0000\u0001G\u0000\u0007\u0009\u0000\u0000\u0000\u0001M\u0000\u0001O\u0000\u0001V\u0000\u000c\u0001\u0006\u000c\u0000\n"
+   26:  regexp
+   27:  call_method 1
+   30:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: this local:loc3 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  push_1 1
+    2:  lnot
+    3:  put_field isLoading
+    8:  get_var_ref0 0: this
+    9:  get_arg0 0: t
+   10:  get_field message
+   15:  dup
+   16:  if_true8 26
+   18:  drop
+   19:  get_var String
+   24:  get_arg0 0: t
+   25:  call1 1
+   26:  put_field tipText
+   31:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field gridCols
+    8:  dup
+    9:  if_true8 13
+   11:  drop
+   12:  push_3 3
+   13:  put_loc0 0: e
+   14:  object
+   15:  get_arg0 0: t
+   16:  get_loc0 0: e
+   17:  mod
+   18:  get_loc0 0: e
+   19:  push_1 1
+   20:  sub
+   21:  strict_neq
+   22:  if_false8 31
+   24:  push_atom_value "12px"
+   29:  goto8 36
+   31:  push_atom_value "0px"
+   36:  define_field marginRight
+   41:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:4 next:-1]
+    1: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field Dbase
+    8:  if_false8 47
+   10:  catch 38
+   15:  get_loc1 1: this
+   16:  get_field Dbase
+   21:  get_field2 write
+   26:  push_atom_value bili_player_context
+   31:  null
+   32:  call_method 2
+   35:  drop
+   36:  drop
+   37:  return_undef
+   38:  put_loc0 0: t
+   39:  catch 46
+   44:  drop
+   45:  return_undef
+   46:  throw
+   47:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: var i
+    1: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  push_atom_value undefined
+    7:  get_var_undef $falcon
+   12:  typeof
+   13:  neq
+   14:  if_false8 120
+   16:  get_var $falcon
+   21:  if_false8 120
+   23:  push_atom_value function
+   28:  get_var $falcon
+   33:  get_field navTo
+   38:  typeof
+   39:  eq
+   40:  if_false8 120
+   42:  get_arg0 0: t
+   43:  if_false8 61
+   45:  get_arg0 0: t
+   46:  get_field name
+   51:  if_false8 61
+   53:  get_arg0 0: t
+   54:  get_field name
+   59:  goto8 62
+   61:  push_empty_string
+   62:  get_field2 replace
+   67:  push_const8 0: 1"\\.[^/.]+$"
+   69:  push_const8 1: 1"\u0000\u0001\u00001\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001.\u0000\u001c\u000c\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0002\u0000\u0000\u0000-\u00000\u0000\u00ff\u00ff\n\u0006\u000c\u0000\n"
+   71:  regexp
+   72:  push_empty_string
+   73:  call_method 2
+   76:  put_loc0 0: i
+   77:  get_loc1 1: this
+   78:  get_field2 clearPlayerContext
+   83:  call_method 0
+   86:  drop
+   87:  get_var $falcon
+   92:  get_field2 navTo
+   97:  push_atom_value tools_video
+  102:  object
+  103:  get_arg1 1: e
+  104:  define_field path
+  109:  get_loc0 0: i
+  110:  define_field title
+  115:  call_method 2
+  118:  drop
+  119:  return_undef
+  120:  get_loc1 1: this
+  121:  push_atom_value "\u00e6\u0092\u00ad\u00e6\u0094\u00be\u00e5\u0099\u00a8\u00e6\u009c\u00aa\u00e5\u0087\u0086\u00e5\u00a4\u0087\u00e5\u00a5\u00bd ($falcon undefined)"
+  126:  put_field tipText
+  131:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_arg0 0: t
+    3:  lnot
+    4:  dup
+    5:  if_true8 15
+    7:  drop
+    8:  get_arg0 0: t
+    9:  get_field path
+   14:  lnot
+   15:  if_false8 23
+   17:  push_atom_value "https://img.icons8.com/color/96/video.png"
+   22:  return
+   23:  get_arg0 0: t
+   24:  get_field path
+   29:  get_field2 replace
+   34:  push_const8 0: 1"^\\/+|\\/+$"
+   36:  push_const8 1: 1"\u0001\u0001\u0000F\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0009\u001b\u0000\u0000\u0000\u0005\u001c\u0004\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0001/\u0000\n\u0007\u0016\u0000\u0000\u0000\u001c\u0004\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0001/\u0000\n\u0006\u000c\u0000\n"
+   38:  regexp
+   39:  push_empty_string
+   40:  call_method 2
+   43:  get_field2 split
+   48:  push_atom_value "/"
+   53:  call_method 1
+   56:  get_field2 map
+   61:  fclosure8 2: [bytecode <null>]
+   63:  call_method 1
+   66:  get_field2 join
+   71:  push_atom_value "/"
+   76:  call_method 1
+   79:  put_loc0 0: e
+   80:  get_loc1 1: this
+   81:  get_field serverUrl
+   86:  push_atom_value "/api/preview/"
+   91:  add
+   92:  get_loc0 0: e
+   93:  add
+   94:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  get_var encodeURIComponent
+    5:  get_arg0 0: t
+    6:  tail_call 1
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_arg0 0: t
+    3:  if_false8 33
+    5:  get_arg0 0: t
+    6:  get_field path
+   11:  if_false8 33
+   13:  get_loc0 0: this
+   14:  get_field2 ensureActivatedForPlayback
+   19:  call_method 0
+   22:  get_field2 then
+   27:  fclosure8 0: [bytecode <null>]
+   29:  call_method 1
+   32:  return_undef
+   33:  get_loc0 0: this
+   34:  push_atom_value "\u00e8\u00a7\u0086\u00e9\u00a2\u0091\u00e4\u00bf\u00a1\u00e6\u0081\u00af\u00e4\u00b8\u008d\u00e5\u00ae\u008c\u00e6\u0095\u00b4"
+   39:  insert2
+   40:  put_field tipText
+   45:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: var i
+    1: var a
+    2: var s
+  closure vars:
+    0: this local:loc0 var
+    1: t local:arg0 var
+  stack_size: 5
+  opcodes:
+    0:  get_arg0 0: e
+    1:  if_false 199
+    6:  get_var_ref0 0: this
+    7:  get_field selectedPaths
+   12:  get_field2 join
+   17:  push_atom_value "/"
+   22:  call_method 1
+   25:  put_loc0 0: i
+   26:  get_var_ref0 0: this
+   27:  get_var Object
+   32:  get_field2 assign
+   37:  object
+   38:  get_var_ref0 0: this
+   39:  get_field lastWatchedMap
+   44:  call_method 2
+   47:  put_field lastWatchedMap
+   52:  get_var_ref0 0: this
+   53:  get_field lastWatchedMap
+   58:  get_loc0 0: i
+   59:  to_propkey2
+   60:  get_var_ref1 1: t
+   61:  get_field path
+   66:  put_array_el
+   67:  get_var_ref0 0: this
+   68:  get_field2 savePreferences
+   73:  call_method 0
+   76:  drop
+   77:  get_var_ref1 1: t
+   78:  get_field path
+   83:  get_field2 replace
+   88:  push_const8 0: 1"^\\/+|\\/+$"
+   90:  push_const8 1: 1"\u0001\u0001\u0000F\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0009\u001b\u0000\u0000\u0000\u0005\u001c\u0004\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0001/\u0000\n\u0007\u0016\u0000\u0000\u0000\u001c\u0004\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0001/\u0000\n\u0006\u000c\u0000\n"
+   92:  regexp
+   93:  push_empty_string
+   94:  call_method 2
+   97:  get_field2 split
+  102:  push_atom_value "/"
+  107:  call_method 1
+  110:  get_field2 map
+  115:  fclosure8 2: [bytecode <null>]
+  117:  call_method 1
+  120:  get_field2 join
+  125:  push_atom_value "/"
+  130:  call_method 1
+  133:  put_loc1 1: a
+  134:  get_var_ref0 0: this
+  135:  get_field serverUrl
+  140:  push_atom_value "/api/video/"
+  145:  add
+  146:  get_loc1 1: a
+  147:  add
+  148:  push_atom_value "?key="
+  153:  add
+  154:  get_var encodeURIComponent
+  159:  get_var_ref0 0: this
+  160:  get_field token
+  165:  call1 1
+  166:  add
+  167:  push_atom_value "&mac="
+  172:  add
+  173:  get_var encodeURIComponent
+  178:  get_var_ref0 0: this
+  179:  get_field deviceMac
+  184:  call1 1
+  185:  add
+  186:  put_loc2 2: s
+  187:  get_var_ref0 0: this
+  188:  get_field2 openPlayerWithCallback
+  193:  get_var_ref1 1: t
+  194:  get_loc2 2: s
+  195:  call_method 2
+  198:  drop
+  199:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  get_var encodeURIComponent
+    5:  get_arg0 0: t
+    6:  tail_call 1
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var i
+    3: var this
+  closure vars:
+    0: n parent:loc6 var
+  stack_size: 34
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  set_loc0 0: t
+    4:  get_field $createElement
+    9:  put_loc1 1: e
+   10:  get_loc0 0: t
+   11:  get_field _self
+   16:  get_field _c
+   21:  dup
+   22:  if_true8 26
+   24:  drop
+   25:  get_loc1 1: e
+   26:  set_loc2 2: i
+   27:  push_atom_value div
+   32:  object
+   33:  push_atom_value "onion-page"
+   38:  array_from 1
+   41:  define_field staticClass
+   46:  get_loc0 0: t
+   47:  get_field showSplash
+   52:  if_false 243
+   57:  get_loc2 2: i
+   58:  push_atom_value div
+   63:  object
+   64:  push_atom_value "splash-screen"
+   69:  array_from 1
+   72:  define_field staticClass
+   77:  object
+   78:  get_loc0 0: t
+   79:  get_field splashFading
+   84:  define_field "splash-fade-out"
+   89:  define_field class
+   94:  get_loc2 2: i
+   95:  push_atom_value div
+  100:  object
+  101:  push_atom_value "splash-bg"
+  106:  array_from 1
+  109:  define_field staticClass
+  114:  object
+  115:  get_loc0 0: t
+  116:  get_field splashBgAnimating
+  121:  define_field "splash-bg-anim"
+  126:  define_field class
+  131:  call2 2
+  132:  get_loc2 2: i
+  133:  push_atom_value div
+  138:  object
+  139:  push_atom_value "splash-icon-wrapper"
+  144:  array_from 1
+  147:  define_field staticClass
+  152:  object
+  153:  get_loc0 0: t
+  154:  get_field splashAnimating
+  159:  define_field "splash-icon-anim-opacity"
+  164:  define_field class
+  169:  get_loc2 2: i
+  170:  push_atom_value image
+  175:  object
+  176:  push_atom_value "splash-icon"
+  181:  array_from 1
+  184:  define_field staticClass
+  189:  object
+  190:  get_loc0 0: t
+  191:  get_field splashAnimating
+  196:  define_field "splash-icon-anim-scale"
+  201:  define_field class
+  206:  object
+  207:  push_atom_value "images/63444f21b411ef898454bcc88b7f63c2.png"
+  212:  define_field src
+  217:  push_atom_value aspectFit
+  222:  define_field mode
+  227:  define_field attrs
+  232:  call2 2
+  233:  array_from 1
+  236:  call3 3
+  237:  array_from 2
+  240:  call3 3
+  241:  goto8 252
+  243:  get_loc0 0: t
+  244:  get_field2 _e
+  249:  call_method 0
+  252:  get_loc2 2: i
+  253:  push_atom_value div
+  258:  object
+  259:  push_atom_value "main-layout"
+  264:  array_from 1
+  267:  define_field staticClass
+  272:  get_loc2 2: i
+  273:  push_atom_value div
+  278:  object
+  279:  push_atom_value sidebar
+  284:  array_from 1
+  287:  define_field staticClass
+  292:  get_loc2 2: i
+  293:  push_atom_value div
+  298:  object
+  299:  push_atom_value "sidebar-header"
+  304:  array_from 1
+  307:  define_field staticClass
+  312:  object
+  313:  get_loc0 0: t
+  314:  get_field openCascader
+  319:  define_field click
+  324:  get_loc0 0: t
+  325:  get_field openCascader
+  330:  define_field tap
+  335:  define_field on
+  340:  get_loc0 0: t
+  341:  get_field selectedPaths
+  346:  get_length
+  347:  push_0 0
+  348:  gt
+  349:  if_false 541
+  354:  get_loc2 2: i
+  355:  push_atom_value text
+  360:  object
+  361:  push_atom_value "sidebar-title"
+  366:  array_from 1
+  369:  define_field staticClass
+  374:  get_loc0 0: t
+  375:  get_field2 _v
+  380:  get_loc0 0: t
+  381:  get_field2 _s
+  386:  get_loc0 0: t
+  387:  get_field headerPathFirst
+  392:  call_method 1
+  395:  call_method 1
+  398:  array_from 1
+  401:  call3 3
+  402:  get_loc2 2: i
+  403:  push_atom_value image
+  408:  object
+  409:  push_atom_value "header-arrow"
+  414:  array_from 1
+  417:  define_field staticClass
+  422:  object
+  423:  get_var_ref0 0: n
+  424:  define_field src
+  429:  push_atom_value aspectFit
+  434:  define_field mode
+  439:  define_field attrs
+  444:  call2 2
+  445:  get_loc2 2: i
+  446:  push_atom_value text
+  451:  object
+  452:  push_atom_value "sidebar-title-last"
+  457:  array_from 1
+  460:  define_field staticClass
+  465:  get_loc0 0: t
+  466:  get_field2 _v
+  471:  get_loc0 0: t
+  472:  get_field2 _s
+  477:  get_loc0 0: t
+  478:  get_field headerPathLast
+  483:  call_method 1
+  486:  call_method 1
+  489:  array_from 1
+  492:  call3 3
+  493:  get_loc2 2: i
+  494:  push_atom_value image
+  499:  object
+  500:  push_atom_value "header-arrow"
+  505:  array_from 1
+  508:  define_field staticClass
+  513:  object
+  514:  get_var_ref0 0: n
+  515:  define_field src
+  520:  push_atom_value aspectFit
+  525:  define_field mode
+  530:  define_field attrs
+  535:  call2 2
+  536:  array_from 4
+  539:  goto8 625
+  541:  get_loc2 2: i
+  542:  push_atom_value text
+  547:  object
+  548:  push_atom_value "sidebar-title"
+  553:  array_from 1
+  556:  define_field staticClass
+  561:  get_loc0 0: t
+  562:  get_field2 _v
+  567:  push_atom_value "\u00e6\u0095\u0099\u00e6\u009d\u0090\u00e5\u0088\u0087\u00e6\u008d\u00a2"
+  572:  call_method 1
+  575:  array_from 1
+  578:  call3 3
+  579:  get_loc2 2: i
+  580:  push_atom_value image
+  585:  object
+  586:  push_atom_value "header-arrow"
+  591:  array_from 1
+  594:  define_field staticClass
+  599:  object
+  600:  get_var_ref0 0: n
+  601:  define_field src
+  606:  push_atom_value aspectFit
+  611:  define_field mode
+  616:  define_field attrs
+  621:  call2 2
+  622:  array_from 2
+  625:  array_from 1
+  628:  push_2 2
+  629:  call 4
+  632:  get_loc2 2: i
+  633:  push_atom_value scroller
+  638:  object
+  639:  push_atom_value "sidebar-video-list"
+  644:  array_from 1
+  647:  define_field staticClass
+  652:  object
+  653:  push_atom_value false
+  658:  define_field showScrollbar
+  663:  define_field attrs
+  668:  push_0 0
+  669:  get_loc0 0: t
+  670:  get_field selectedPaths
+  675:  get_length
+  676:  strict_eq
+  677:  if_false8 744
+  679:  get_loc2 2: i
+  680:  push_atom_value div
+  685:  object
+  686:  push_atom_value "sv-empty"
+  691:  array_from 1
+  694:  define_field staticClass
+  699:  get_loc2 2: i
+  700:  push_atom_value text
+  705:  object
+  706:  push_atom_value "sv-empty-txt"
+  711:  array_from 1
+  714:  define_field staticClass
+  719:  get_loc0 0: t
+  720:  get_field2 _v
+  725:  push_atom_value "\u00e8\u00af\u00b7\u00e5\u0085\u0088\u00e9\u0080\u0089\u00e6\u008b\u00a9\u00e7\u009b\u00ae\u00e5\u00bd\u0095"
+  730:  call_method 1
+  733:  array_from 1
+  736:  call3 3
+  737:  array_from 1
+  740:  call3 3
+  741:  goto16 983
+  744:  get_loc0 0: t
+  745:  get_field isLoading
+  750:  if_false8 817
+  752:  get_loc2 2: i
+  753:  push_atom_value div
+  758:  object
+  759:  push_atom_value "sv-empty"
+  764:  array_from 1
+  767:  define_field staticClass
+  772:  get_loc2 2: i
+  773:  push_atom_value text
+  778:  object
+  779:  push_atom_value "sv-empty-txt"
+  784:  array_from 1
+  787:  define_field staticClass
+  792:  get_loc0 0: t
+  793:  get_field2 _v
+  798:  push_atom_value "\u00e5\u008a\u00a0\u00e8\u00bd\u00bd\u00e4\u00b8\u00ad..."
+  803:  call_method 1
+  806:  array_from 1
+  809:  call3 3
+  810:  array_from 1
+  813:  call3 3
+  814:  goto16 983
+  817:  get_loc0 0: t
+  818:  get_field tipText
+  823:  if_false8 899
+  825:  get_loc2 2: i
+  826:  push_atom_value div
+  831:  object
+  832:  push_atom_value "sv-empty"
+  837:  array_from 1
+  840:  define_field staticClass
+  845:  get_loc2 2: i
+  846:  push_atom_value text
+  851:  object
+  852:  push_atom_value "sv-empty-txt"
+  857:  array_from 1
+  860:  define_field staticClass
+  865:  get_loc0 0: t
+  866:  get_field2 _v
+  871:  get_loc0 0: t
+  872:  get_field2 _s
+  877:  get_loc0 0: t
+  878:  get_field tipText
+  883:  call_method 1
+  886:  call_method 1
+  889:  array_from 1
+  892:  call3 3
+  893:  array_from 1
+  896:  call3 3
+  897:  goto8 983
+  899:  push_0 0
+  900:  get_loc0 0: t
+  901:  get_field videos
+  906:  get_length
+  907:  strict_eq
+  908:  if_false8 974
+  910:  get_loc2 2: i
+  911:  push_atom_value div
+  916:  object
+  917:  push_atom_value "sv-empty"
+  922:  array_from 1
+  925:  define_field staticClass
+  930:  get_loc2 2: i
+  931:  push_atom_value text
+  936:  object
+  937:  push_atom_value "sv-empty-txt"
+  942:  array_from 1
+  945:  define_field staticClass
+  950:  get_loc0 0: t
+  951:  get_field2 _v
+  956:  push_atom_value "\u00e8\u00af\u00a5\u00e7\u009b\u00ae\u00e5\u00bd\u0095\u00e6\u009a\u0082\u00e6\u0097\u00a0\u00e8\u00a7\u0086\u00e9\u00a2\u0091"
+  961:  call_method 1
+  964:  array_from 1
+  967:  call3 3
+  968:  array_from 1
+  971:  call3 3
+  972:  goto8 983
+  974:  get_loc0 0: t
+  975:  get_field2 _e
+  980:  call_method 0
+  983:  get_loc0 0: t
+  984:  get_field2 _l
+  989:  get_loc0 0: t
+  990:  get_field videos
+  995:  fclosure8 0: [bytecode <null>]
+  997:  call_method 2
+ 1000:  array_from 2
+ 1003:  push_2 2
+ 1004:  call 4
+ 1007:  array_from 2
+ 1010:  call3 3
+ 1011:  get_loc2 2: i
+ 1012:  push_atom_value div
+ 1017:  object
+ 1018:  push_atom_value "content-area"
+ 1023:  array_from 1
+ 1026:  define_field staticClass
+ 1031:  get_loc2 2: i
+ 1032:  push_atom_value div
+ 1037:  object
+ 1038:  push_atom_value "content-header"
+ 1043:  array_from 1
+ 1046:  define_field staticClass
+ 1051:  get_loc2 2: i
+ 1052:  push_atom_value div
+ 1057:  object
+ 1058:  push_atom_value "search-box"
+ 1063:  array_from 1
+ 1066:  define_field staticClass
+ 1071:  get_loc2 2: i
+ 1072:  push_atom_value input
+ 1077:  object
+ 1078:  push_atom_value "search-input"
+ 1083:  array_from 1
+ 1086:  define_field staticClass
+ 1091:  object
+ 1092:  push_atom_value text
+ 1097:  define_field type
+ 1102:  push_atom_value "\u00e6\u0090\u009c\u00e7\u00b4\u00a2\u00e8\u00a7\u0086\u00e9\u00a2\u0091..."
+ 1107:  define_field placeholder
+ 1112:  get_loc0 0: t
+ 1113:  get_field searchKeyword
+ 1118:  define_field value
+ 1123:  define_field attrs
+ 1128:  object
+ 1129:  get_loc0 0: t
+ 1130:  get_field onSearchInput
+ 1135:  define_field input
+ 1140:  define_field on
+ 1145:  call2 2
+ 1146:  array_from 1
+ 1149:  call3 3
+ 1150:  get_loc2 2: i
+ 1151:  push_atom_value div
+ 1156:  object
+ 1157:  push_atom_value "auth-btn"
+ 1162:  array_from 1
+ 1165:  define_field staticClass
+ 1170:  object
+ 1171:  get_loc0 0: t
+ 1172:  get_field openAuthModal
+ 1177:  define_field click
+ 1182:  get_loc0 0: t
+ 1183:  get_field openAuthModal
+ 1188:  define_field tap
+ 1193:  define_field on
+ 1198:  get_loc2 2: i
+ 1199:  push_atom_value text
+ 1204:  object
+ 1205:  push_atom_value "auth-btn-txt"
+ 1210:  array_from 1
+ 1213:  define_field staticClass
+ 1218:  get_loc0 0: t
+ 1219:  get_field2 _v
+ 1224:  push_atom_value "\u00e8\u00ae\u00a2\u00e9\u0098\u0085\u00e8\u00ae\u00a1\u00e5\u0088\u0092"
+ 1229:  call_method 1
+ 1232:  array_from 1
+ 1235:  call3 3
+ 1236:  array_from 1
+ 1239:  call3 3
+ 1240:  array_from 2
+ 1243:  call3 3
+ 1244:  get_loc2 2: i
+ 1245:  push_atom_value scroller
+ 1250:  object
+ 1251:  push_atom_value videoScroller
+ 1256:  define_field ref
+ 1261:  push_atom_value "video-scroller"
+ 1266:  array_from 1
+ 1269:  define_field staticClass
+ 1274:  object
+ 1275:  push_atom_value false
+ 1280:  define_field showScrollbar
+ 1285:  push_const8 1: 1"30"
+ 1287:  define_field overScroll
+ 1292:  push_const8 2: 1"30"
+ 1294:  define_field overFling
+ 1299:  define_field attrs
+ 1304:  get_loc0 0: t
+ 1305:  get_field2 _l
+ 1310:  get_loc0 0: t
+ 1311:  get_field videoRows
+ 1316:  fclosure8 3: [bytecode <null>]
+ 1318:  call_method 2
+ 1321:  push_0 0
+ 1322:  get_loc0 0: t
+ 1323:  get_field videos
+ 1328:  get_length
+ 1329:  strict_neq
+ 1330:  dup
+ 1331:  if_true8 1340
+ 1333:  drop
+ 1334:  get_loc0 0: t
+ 1335:  get_field isLoading
+ 1340:  if_false8 1353
+ 1342:  get_loc0 0: t
+ 1343:  get_field2 _e
+ 1348:  call_method 0
+ 1351:  goto8 1415
+ 1353:  get_loc2 2: i
+ 1354:  push_atom_value div
+ 1359:  object
+ 1360:  push_atom_value "empty-box"
+ 1365:  array_from 1
+ 1368:  define_field staticClass
+ 1373:  get_loc2 2: i
+ 1374:  push_atom_value text
+ 1379:  object
+ 1380:  push_atom_value "empty-txt"
+ 1385:  array_from 1
+ 1388:  define_field staticClass
+ 1393:  get_loc0 0: t
+ 1394:  get_field2 _v
+ 1399:  push_atom_value "\u00e6\u009a\u0082\u00e6\u0097\u00a0\u00e8\u00a7\u0086\u00e9\u00a2\u0091\u00ef\u00bc\u008c\u00e8\u00af\u00b7\u00e5\u009c\u00a8\u00e5\u00b7\u00a6\u00e4\u00be\u00a7\u00e9\u0080\u0089\u00e6\u008b\u00a9\u00e7\u009b\u00ae\u00e5\u00bd\u0095"
+ 1404:  call_method 1
+ 1407:  array_from 1
+ 1410:  call3 3
+ 1411:  array_from 1
+ 1414:  call3 3
+ 1415:  array_from 2
+ 1418:  push_2 2
+ 1419:  call 4
+ 1422:  array_from 2
+ 1425:  call3 3
+ 1426:  array_from 2
+ 1429:  call3 3
+ 1430:  get_loc0 0: t
+ 1431:  get_field showCascader
+ 1436:  if_false 2179
+ 1441:  get_loc2 2: i
+ 1442:  push_atom_value div
+ 1447:  object
+ 1448:  push_atom_value "modal-overlay"
+ 1453:  array_from 1
+ 1456:  define_field staticClass
+ 1461:  object
+ 1462:  get_loc0 0: t
+ 1463:  get_field closeCascader
+ 1468:  define_field click
+ 1473:  get_loc0 0: t
+ 1474:  get_field closeCascader
+ 1479:  define_field tap
+ 1484:  define_field on
+ 1489:  get_loc2 2: i
+ 1490:  push_atom_value div
+ 1495:  object
+ 1496:  push_atom_value "cascader-card"
+ 1501:  array_from 1
+ 1504:  define_field staticClass
+ 1509:  object
+ 1510:  fclosure8 4: [bytecode <null>]
+ 1512:  set_name click
+ 1517:  define_field click
+ 1522:  fclosure8 5: [bytecode <null>]
+ 1524:  set_name tap
+ 1529:  define_field tap
+ 1534:  define_field on
+ 1539:  get_loc2 2: i
+ 1540:  push_atom_value div
+ 1545:  object
+ 1546:  push_atom_value "cascader-cols"
+ 1551:  array_from 1
+ 1554:  define_field staticClass
+ 1559:  get_loc2 2: i
+ 1560:  push_atom_value scroller
+ 1565:  object
+ 1566:  push_atom_value "cascader-col"
+ 1571:  array_from 1
+ 1574:  define_field staticClass
+ 1579:  object
+ 1580:  push_atom_value "11.1%"
+ 1585:  define_field width
+ 1590:  define_field staticStyle
+ 1595:  get_loc0 0: t
+ 1596:  get_field2 _l
+ 1601:  get_loc0 0: t
+ 1602:  get_field optionsLevel0
+ 1607:  fclosure8 6: [bytecode <null>]
+ 1609:  call_method 2
+ 1612:  push_0 0
+ 1613:  get_loc0 0: t
+ 1614:  get_field optionsLevel0
+ 1619:  get_length
+ 1620:  strict_eq
+ 1621:  if_false8 1687
+ 1623:  get_loc2 2: i
+ 1624:  push_atom_value div
+ 1629:  object
+ 1630:  push_atom_value "cascader-empty"
+ 1635:  array_from 1
+ 1638:  define_field staticClass
+ 1643:  get_loc2 2: i
+ 1644:  push_atom_value text
+ 1649:  object
+ 1650:  push_atom_value "c-empty-txt"
+ 1655:  array_from 1
+ 1658:  define_field staticClass
+ 1663:  get_loc0 0: t
+ 1664:  get_field2 _v
+ 1669:  push_atom_value "\u00e5\u008a\u00a0\u00e8\u00bd\u00bd\u00e4\u00b8\u00ad..."
+ 1674:  call_method 1
+ 1677:  array_from 1
+ 1680:  call3 3
+ 1681:  array_from 1
+ 1684:  call3 3
+ 1685:  goto8 1696
+ 1687:  get_loc0 0: t
+ 1688:  get_field2 _e
+ 1693:  call_method 0
+ 1696:  array_from 2
+ 1699:  push_2 2
+ 1700:  call 4
+ 1703:  get_loc2 2: i
+ 1704:  push_atom_value scroller
+ 1709:  object
+ 1710:  push_atom_value "cascader-col"
+ 1715:  array_from 1
+ 1718:  define_field staticClass
+ 1723:  object
+ 1724:  push_atom_value "11.1%"
+ 1729:  define_field width
+ 1734:  define_field staticStyle
+ 1739:  get_loc0 0: t
+ 1740:  get_field2 _l
+ 1745:  get_loc0 0: t
+ 1746:  get_field optionsLevel1
+ 1751:  fclosure8 7: [bytecode <null>]
+ 1753:  call_method 2
+ 1756:  push_0 0
+ 1757:  get_loc0 0: t
+ 1758:  get_field optionsLevel1
+ 1763:  get_length
+ 1764:  strict_eq
+ 1765:  if_false8 1841
+ 1767:  get_loc0 0: t
+ 1768:  get_field tempSelected
+ 1773:  push_0 0
+ 1774:  get_array_el
+ 1775:  if_false8 1841
+ 1777:  get_loc2 2: i
+ 1778:  push_atom_value div
+ 1783:  object
+ 1784:  push_atom_value "cascader-empty"
+ 1789:  array_from 1
+ 1792:  define_field staticClass
+ 1797:  get_loc2 2: i
+ 1798:  push_atom_value text
+ 1803:  object
+ 1804:  push_atom_value "c-empty-txt"
+ 1809:  array_from 1
+ 1812:  define_field staticClass
+ 1817:  get_loc0 0: t
+ 1818:  get_field2 _v
+ 1823:  push_atom_value "\u00e5\u008a\u00a0\u00e8\u00bd\u00bd\u00e4\u00b8\u00ad..."
+ 1828:  call_method 1
+ 1831:  array_from 1
+ 1834:  call3 3
+ 1835:  array_from 1
+ 1838:  call3 3
+ 1839:  goto8 1850
+ 1841:  get_loc0 0: t
+ 1842:  get_field2 _e
+ 1847:  call_method 0
+ 1850:  array_from 2
+ 1853:  push_2 2
+ 1854:  call 4
+ 1857:  get_loc2 2: i
+ 1858:  push_atom_value scroller
+ 1863:  object
+ 1864:  push_atom_value "cascader-col"
+ 1869:  array_from 1
+ 1872:  define_field staticClass
+ 1877:  object
+ 1878:  push_atom_value "22.2%"
+ 1883:  define_field width
+ 1888:  define_field staticStyle
+ 1893:  get_loc0 0: t
+ 1894:  get_field2 _l
+ 1899:  get_loc0 0: t
+ 1900:  get_field optionsLevel2
+ 1905:  fclosure8 8: [bytecode <null>]
+ 1907:  call_method 2
+ 1910:  push_0 0
+ 1911:  get_loc0 0: t
+ 1912:  get_field optionsLevel2
+ 1917:  get_length
+ 1918:  strict_eq
+ 1919:  if_false8 1995
+ 1921:  get_loc0 0: t
+ 1922:  get_field tempSelected
+ 1927:  push_1 1
+ 1928:  get_array_el
+ 1929:  if_false8 1995
+ 1931:  get_loc2 2: i
+ 1932:  push_atom_value div
+ 1937:  object
+ 1938:  push_atom_value "cascader-empty"
+ 1943:  array_from 1
+ 1946:  define_field staticClass
+ 1951:  get_loc2 2: i
+ 1952:  push_atom_value text
+ 1957:  object
+ 1958:  push_atom_value "c-empty-txt"
+ 1963:  array_from 1
+ 1966:  define_field staticClass
+ 1971:  get_loc0 0: t
+ 1972:  get_field2 _v
+ 1977:  push_atom_value "\u00e5\u008a\u00a0\u00e8\u00bd\u00bd\u00e4\u00b8\u00ad..."
+ 1982:  call_method 1
+ 1985:  array_from 1
+ 1988:  call3 3
+ 1989:  array_from 1
+ 1992:  call3 3
+ 1993:  goto8 2004
+ 1995:  get_loc0 0: t
+ 1996:  get_field2 _e
+ 2001:  call_method 0
+ 2004:  array_from 2
+ 2007:  push_2 2
+ 2008:  call 4
+ 2011:  get_loc2 2: i
+ 2012:  push_atom_value scroller
+ 2017:  object
+ 2018:  push_atom_value "cascader-col"
+ 2023:  array_from 1
+ 2026:  define_field staticClass
+ 2031:  object
+ 2032:  push_atom_value "55.6%"
+ 2037:  define_field width
+ 2042:  define_field staticStyle
+ 2047:  get_loc0 0: t
+ 2048:  get_field2 _l
+ 2053:  get_loc0 0: t
+ 2054:  get_field optionsLevel3
+ 2059:  fclosure8 9: [bytecode <null>]
+ 2061:  call_method 2
+ 2064:  push_0 0
+ 2065:  get_loc0 0: t
+ 2066:  get_field optionsLevel3
+ 2071:  get_length
+ 2072:  strict_eq
+ 2073:  if_false8 2149
+ 2075:  get_loc0 0: t
+ 2076:  get_field tempSelected
+ 2081:  push_2 2
+ 2082:  get_array_el
+ 2083:  if_false8 2149
+ 2085:  get_loc2 2: i
+ 2086:  push_atom_value div
+ 2091:  object
+ 2092:  push_atom_value "cascader-empty"
+ 2097:  array_from 1
+ 2100:  define_field staticClass
+ 2105:  get_loc2 2: i
+ 2106:  push_atom_value text
+ 2111:  object
+ 2112:  push_atom_value "c-empty-txt"
+ 2117:  array_from 1
+ 2120:  define_field staticClass
+ 2125:  get_loc0 0: t
+ 2126:  get_field2 _v
+ 2131:  push_atom_value "\u00e5\u008a\u00a0\u00e8\u00bd\u00bd\u00e4\u00b8\u00ad..."
+ 2136:  call_method 1
+ 2139:  array_from 1
+ 2142:  call3 3
+ 2143:  array_from 1
+ 2146:  call3 3
+ 2147:  goto8 2158
+ 2149:  get_loc0 0: t
+ 2150:  get_field2 _e
+ 2155:  call_method 0
+ 2158:  array_from 2
+ 2161:  push_2 2
+ 2162:  call 4
+ 2165:  array_from 4
+ 2168:  call3 3
+ 2169:  array_from 1
+ 2172:  call3 3
+ 2173:  array_from 1
+ 2176:  call3 3
+ 2177:  goto8 2188
+ 2179:  get_loc0 0: t
+ 2180:  get_field2 _e
+ 2185:  call_method 0
+ 2188:  get_loc0 0: t
+ 2189:  get_field showAuthModal
+ 2194:  if_false 3049
+ 2199:  get_loc2 2: i
+ 2200:  push_atom_value div
+ 2205:  object
+ 2206:  push_atom_value "modal-overlay"
+ 2211:  array_from 1
+ 2214:  define_field staticClass
+ 2219:  object
+ 2220:  get_loc0 0: t
+ 2221:  get_field closeAuthModal
+ 2226:  define_field click
+ 2231:  get_loc0 0: t
+ 2232:  get_field closeAuthModal
+ 2237:  define_field tap
+ 2242:  define_field on
+ 2247:  get_loc2 2: i
+ 2248:  push_atom_value div
+ 2253:  object
+ 2254:  push_atom_value "auth-modal"
+ 2259:  array_from 1
+ 2262:  define_field staticClass
+ 2267:  object
+ 2268:  fclosure8 10: [bytecode <null>]
+ 2270:  set_name click
+ 2275:  define_field click
+ 2280:  fclosure8 11: [bytecode <null>]
+ 2282:  set_name tap
+ 2287:  define_field tap
+ 2292:  define_field on
+ 2297:  get_loc2 2: i
+ 2298:  push_atom_value div
+ 2303:  object
+ 2304:  push_atom_value "auth-modal-left"
+ 2309:  array_from 1
+ 2312:  define_field staticClass
+ 2317:  get_loc2 2: i
+ 2318:  push_atom_value image
+ 2323:  object
+ 2324:  push_atom_value "auth-qrcode"
+ 2329:  array_from 1
+ 2332:  define_field staticClass
+ 2337:  object
+ 2338:  push_atom_value "images/b84fabb2c3eab8d0710b1d1a4769c75a.png"
+ 2343:  define_field src
+ 2348:  push_atom_value aspectFit
+ 2353:  define_field mode
+ 2358:  define_field attrs
+ 2363:  call2 2
+ 2364:  array_from 1
+ 2367:  call3 3
+ 2368:  get_loc2 2: i
+ 2369:  push_atom_value div
+ 2374:  object
+ 2375:  push_atom_value "auth-modal-right"
+ 2380:  array_from 1
+ 2383:  define_field staticClass
+ 2388:  get_loc2 2: i
+ 2389:  push_atom_value div
+ 2394:  object
+ 2395:  push_atom_value "auth-status-box"
+ 2400:  array_from 1
+ 2403:  define_field staticClass
+ 2408:  get_loc2 2: i
+ 2409:  push_atom_value text
+ 2414:  object
+ 2415:  push_atom_value "auth-status-main"
+ 2420:  array_from 1
+ 2423:  define_field staticClass
+ 2428:  get_loc0 0: t
+ 2429:  get_field2 _v
+ 2434:  get_loc0 0: t
+ 2435:  get_field2 _s
+ 2440:  get_loc0 0: t
+ 2441:  get_field subscriptionStatusText
+ 2446:  dup
+ 2447:  if_true8 2455
+ 2449:  drop
+ 2450:  push_atom_value "\u00e6\u009c\u00aa\u00e9\u0085\u008d\u00e7\u00bd\u00ae\u00e6\u00bf\u0080\u00e6\u00b4\u00bb\u00e7\u00a0\u0081"
+ 2455:  call_method 1
+ 2458:  call_method 1
+ 2461:  array_from 1
+ 2464:  call3 3
+ 2465:  get_loc0 0: t
+ 2466:  get_field subscriptionExpireText
+ 2471:  if_false8 2523
+ 2473:  get_loc2 2: i
+ 2474:  push_atom_value text
+ 2479:  object
+ 2480:  push_atom_value "auth-status-sub"
+ 2485:  array_from 1
+ 2488:  define_field staticClass
+ 2493:  get_loc0 0: t
+ 2494:  get_field2 _v
+ 2499:  get_loc0 0: t
+ 2500:  get_field2 _s
+ 2505:  get_loc0 0: t
+ 2506:  get_field subscriptionExpireText
+ 2511:  call_method 1
+ 2514:  call_method 1
+ 2517:  array_from 1
+ 2520:  call3 3
+ 2521:  goto8 2532
+ 2523:  get_loc0 0: t
+ 2524:  get_field2 _e
+ 2529:  call_method 0
+ 2532:  array_from 2
+ 2535:  call3 3
+ 2536:  get_loc2 2: i
+ 2537:  push_atom_value div
+ 2542:  object
+ 2543:  push_atom_value "auth-input-box"
+ 2548:  array_from 1
+ 2551:  define_field staticClass
+ 2556:  get_loc2 2: i
+ 2557:  push_atom_value text
+ 2562:  object
+ 2563:  push_atom_value "auth-label"
+ 2568:  array_from 1
+ 2571:  define_field staticClass
+ 2576:  get_loc0 0: t
+ 2577:  get_field2 _v
+ 2582:  push_atom_value "\u00e6\u00bf\u0080\u00e6\u00b4\u00bb\u00e7\u00a0\u0081"
+ 2587:  call_method 1
+ 2590:  array_from 1
+ 2593:  call3 3
+ 2594:  get_loc2 2: i
+ 2595:  push_atom_value div
+ 2600:  object
+ 2601:  push_atom_value "auth-input"
+ 2606:  array_from 1
+ 2609:  define_field staticClass
+ 2614:  object
+ 2615:  get_loc0 0: t
+ 2616:  get_field openTokenKeyboard
+ 2621:  define_field click
+ 2626:  get_loc0 0: t
+ 2627:  get_field openTokenKeyboard
+ 2632:  define_field tap
+ 2637:  define_field on
+ 2642:  get_loc2 2: i
+ 2643:  push_atom_value text
+ 2648:  object
+ 2649:  push_atom_value "auth-input-txt"
+ 2654:  array_from 1
+ 2657:  define_field staticClass
+ 2662:  object
+ 2663:  get_loc0 0: t
+ 2664:  get_field token
+ 2669:  lnot
+ 2670:  define_field "auth-placeholder"
+ 2675:  define_field class
+ 2680:  get_loc0 0: t
+ 2681:  get_field2 _v
+ 2686:  get_loc0 0: t
+ 2687:  get_field2 _s
+ 2692:  get_loc0 0: t
+ 2693:  get_field token
+ 2698:  if_false8 2717
+ 2700:  get_loc0 0: t
+ 2701:  get_field2 maskToken
+ 2706:  get_loc0 0: t
+ 2707:  get_field token
+ 2712:  call_method 1
+ 2715:  goto8 2722
+ 2717:  push_atom_value "\u00e7\u0082\u00b9\u00e5\u0087\u00bb\u00e8\u00be\u0093\u00e5\u0085\u00a5\u00e6\u00bf\u0080\u00e6\u00b4\u00bb\u00e7\u00a0\u0081"
+ 2722:  call_method 1
+ 2725:  call_method 1
+ 2728:  array_from 1
+ 2731:  call3 3
+ 2732:  array_from 1
+ 2735:  call3 3
+ 2736:  array_from 2
+ 2739:  call3 3
+ 2740:  get_loc0 0: t
+ 2741:  get_field authTipText
+ 2746:  if_false8 2798
+ 2748:  get_loc2 2: i
+ 2749:  push_atom_value text
+ 2754:  object
+ 2755:  push_atom_value "auth-tip"
+ 2760:  array_from 1
+ 2763:  define_field staticClass
+ 2768:  get_loc0 0: t
+ 2769:  get_field2 _v
+ 2774:  get_loc0 0: t
+ 2775:  get_field2 _s
+ 2780:  get_loc0 0: t
+ 2781:  get_field authTipText
+ 2786:  call_method 1
+ 2789:  call_method 1
+ 2792:  array_from 1
+ 2795:  call3 3
+ 2796:  goto8 2807
+ 2798:  get_loc0 0: t
+ 2799:  get_field2 _e
+ 2804:  call_method 0
+ 2807:  get_loc2 2: i
+ 2808:  push_atom_value div
+ 2813:  object
+ 2814:  push_atom_value "auth-actions"
+ 2819:  array_from 1
+ 2822:  define_field staticClass
+ 2827:  get_loc2 2: i
+ 2828:  push_atom_value div
+ 2833:  object
+ 2834:  push_atom_value "auth-btn-cancel"
+ 2839:  array_from 1
+ 2842:  define_field staticClass
+ 2847:  object
+ 2848:  get_loc0 0: t
+ 2849:  get_field closeAuthModal
+ 2854:  define_field click
+ 2859:  get_loc0 0: t
+ 2860:  get_field closeAuthModal
+ 2865:  define_field tap
+ 2870:  define_field on
+ 2875:  get_loc2 2: i
+ 2876:  push_atom_value text
+ 2881:  object
+ 2882:  push_atom_value "auth-btn-txt-cancel"
+ 2887:  array_from 1
+ 2890:  define_field staticClass
+ 2895:  get_loc0 0: t
+ 2896:  get_field2 _v
+ 2901:  push_atom_value "\u00e5\u008f\u0096\u00e6\u00b6\u0088"
+ 2906:  call_method 1
+ 2909:  array_from 1
+ 2912:  call3 3
+ 2913:  array_from 1
+ 2916:  call3 3
+ 2917:  get_loc2 2: i
+ 2918:  push_atom_value div
+ 2923:  object
+ 2924:  push_atom_value "auth-btn-save"
+ 2929:  array_from 1
+ 2932:  define_field staticClass
+ 2937:  object
+ 2938:  get_loc0 0: t
+ 2939:  get_field activateAndSaveKey
+ 2944:  define_field click
+ 2949:  get_loc0 0: t
+ 2950:  get_field activateAndSaveKey
+ 2955:  define_field tap
+ 2960:  define_field on
+ 2965:  get_loc2 2: i
+ 2966:  push_atom_value text
+ 2971:  object
+ 2972:  push_atom_value "auth-btn-txt-save"
+ 2977:  array_from 1
+ 2980:  define_field staticClass
+ 2985:  get_loc0 0: t
+ 2986:  get_field2 _v
+ 2991:  get_loc0 0: t
+ 2992:  get_field2 _s
+ 2997:  get_loc0 0: t
+ 2998:  get_field isVerifying
+ 3003:  if_false8 3012
+ 3005:  push_atom_value "\u00e6\u00bf\u0080\u00e6\u00b4\u00bb\u00e4\u00b8\u00ad..."
+ 3010:  goto8 3017
+ 3012:  push_atom_value "\u00e6\u00bf\u0080\u00e6\u00b4\u00bb\u00e5\u00b9\u00b6\u00e4\u00bf\u009d\u00e5\u00ad\u0098"
+ 3017:  call_method 1
+ 3020:  call_method 1
+ 3023:  array_from 1
+ 3026:  call3 3
+ 3027:  array_from 1
+ 3030:  call3 3
+ 3031:  array_from 2
+ 3034:  call3 3
+ 3035:  array_from 4
+ 3038:  call3 3
+ 3039:  array_from 2
+ 3042:  call3 3
+ 3043:  array_from 1
+ 3046:  call3 3
+ 3047:  goto8 3058
+ 3049:  get_loc0 0: t
+ 3050:  get_field2 _e
+ 3055:  call_method 0
+ 3058:  array_from 4
+ 3061:  tail_call 3
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: e a
+  closure vars:
+    0: t local:loc0 var
+    1: i local:loc2 var
+  stack_size: 13
+  opcodes:
+    0:  get_var_ref1 1: i
+    1:  push_atom_value div
+    6:  object
+    7:  get_arg0 0: e
+    8:  get_field path
+   13:  dup
+   14:  if_true8 18
+   16:  drop
+   17:  get_arg1 1: a
+   18:  define_field key
+   23:  push_atom_value "sv-item"
+   28:  array_from 1
+   31:  define_field staticClass
+   36:  object
+   37:  get_var_ref0 0: t
+   38:  get_field selectedVideoPath
+   43:  get_arg0 0: e
+   44:  get_field path
+   49:  strict_eq
+   50:  define_field "sv-item-active"
+   55:  define_field class
+   60:  object
+   61:  fclosure8 0: [bytecode <null>]
+   63:  set_name click
+   68:  define_field click
+   73:  fclosure8 1: [bytecode <null>]
+   75:  set_name tap
+   80:  define_field tap
+   85:  define_field on
+   90:  get_var_ref1 1: i
+   91:  push_atom_value text
+   96:  object
+   97:  push_atom_value "sv-txt"
+  102:  array_from 1
+  105:  define_field staticClass
+  110:  object
+  111:  get_var_ref0 0: t
+  112:  get_field selectedVideoPath
+  117:  get_arg0 0: e
+  118:  get_field path
+  123:  strict_eq
+  124:  define_field "sv-txt-active"
+  129:  define_field class
+  134:  get_var_ref0 0: t
+  135:  get_field2 _v
+  140:  get_var_ref0 0: t
+  141:  get_field2 _s
+  146:  get_var_ref0 0: t
+  147:  get_field2 fullVideoName
+  152:  get_arg0 0: e
+  153:  get_field name
+  158:  call_method 1
+  161:  call_method 1
+  164:  call_method 1
+  167:  array_from 1
+  170:  call3 3
+  171:  array_from 1
+  174:  tail_call 3
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: i
+  closure vars:
+    0: t parent:loc0 var
+    1: e local:arg0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 selectSidebarVideo
+    6:  get_var_ref1 1: e
+    7:  tail_call_method 1
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: i
+  closure vars:
+    0: t parent:loc0 var
+    1: e local:arg0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 selectSidebarVideo
+    6:  get_var_ref1 1: e
+    7:  tail_call_method 1
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: e a
+  closure vars:
+    0: t local:loc0 var
+    1: i local:loc2 var
+  stack_size: 12
+  opcodes:
+    0:  get_var_ref1 1: i
+    1:  push_atom_value div
+    6:  object
+    7:  get_arg1 1: a
+    8:  define_field key
+   13:  push_atom_value vrow
+   18:  array_from 1
+   21:  define_field staticClass
+   26:  get_var_ref0 0: t
+   27:  get_field2 _l
+   32:  get_arg0 0: e
+   33:  fclosure8 0: [bytecode <null>]
+   35:  call_method 2
+   38:  get_arg0 0: e
+   39:  get_length
+   40:  push_2 2
+   41:  lte
+   42:  if_false8 88
+   44:  get_var_ref1 1: i
+   45:  push_atom_value div
+   50:  object
+   51:  push_atom_value vc
+   56:  push_atom_value vph
+   61:  array_from 2
+   64:  define_field staticClass
+   69:  get_var_ref0 0: t
+   70:  get_field2 cardBoxStyle
+   75:  get_arg0 0: e
+   76:  get_length
+   77:  call_method 1
+   80:  define_field style
+   85:  call2 2
+   86:  goto8 97
+   88:  get_var_ref0 0: t
+   89:  get_field2 _e
+   94:  call_method 0
+   97:  get_arg0 0: e
+   98:  get_length
+   99:  push_1 1
+  100:  lte
+  101:  if_false8 149
+  103:  get_var_ref1 1: i
+  104:  push_atom_value div
+  109:  object
+  110:  push_atom_value vc
+  115:  push_atom_value vph
+  120:  array_from 2
+  123:  define_field staticClass
+  128:  get_var_ref0 0: t
+  129:  get_field2 cardBoxStyle
+  134:  get_arg0 0: e
+  135:  get_length
+  136:  push_1 1
+  137:  add
+  138:  call_method 1
+  141:  define_field style
+  146:  call2 2
+  147:  goto8 158
+  149:  get_var_ref0 0: t
+  150:  get_field2 _e
+  155:  call_method 0
+  158:  array_from 3
+  161:  push_2 2
+  162:  tail_call 4
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: e a
+  closure vars:
+    0: t parent:loc0 var
+    1: i parent:loc1 var
+  stack_size: 17
+  opcodes:
+    0:  get_var_ref1 1: i
+    1:  push_atom_value div
+    6:  object
+    7:  get_arg1 1: a
+    8:  define_field key
+   13:  get_var_ref0 0: t
+   14:  get_field2 videoRefKey
+   19:  get_arg0 0: e
+   20:  call_method 1
+   23:  define_field ref
+   28:  push_0 0
+   29:  lnot
+   30:  define_field refInFor
+   35:  push_atom_value vc
+   40:  array_from 1
+   43:  define_field staticClass
+   48:  get_var_ref0 0: t
+   49:  get_field2 cardBoxStyle
+   54:  get_arg1 1: a
+   55:  call_method 1
+   58:  define_field style
+   63:  object
+   64:  fclosure8 0: [bytecode <null>]
+   66:  set_name click
+   71:  define_field click
+   76:  fclosure8 1: [bytecode <null>]
+   78:  set_name tap
+   83:  define_field tap
+   88:  define_field on
+   93:  get_var_ref1 1: i
+   94:  push_atom_value div
+   99:  object
+  100:  push_atom_value "vi-box"
+  105:  array_from 1
+  108:  define_field staticClass
+  113:  get_var_ref1 1: i
+  114:  push_atom_value image
+  119:  object
+  120:  push_atom_value vi
+  125:  array_from 1
+  128:  define_field staticClass
+  133:  object
+  134:  get_var_ref0 0: t
+  135:  get_field viHeight
+  140:  push_atom_value px
+  145:  add
+  146:  define_field height
+  151:  define_field style
+  156:  object
+  157:  get_var_ref0 0: t
+  158:  get_field2 previewUrl
+  163:  get_arg0 0: e
+  164:  call_method 1
+  167:  define_field src
+  172:  push_atom_value aspectFill
+  177:  define_field mode
+  182:  define_field attrs
+  187:  call2 2
+  188:  get_var_ref0 0: t
+  189:  get_field2 isLastWatched
+  194:  get_arg0 0: e
+  195:  call_method 1
+  198:  if_false8 264
+  200:  get_var_ref1 1: i
+  201:  push_atom_value div
+  206:  object
+  207:  push_atom_value "last-watched-badge"
+  212:  array_from 1
+  215:  define_field staticClass
+  220:  get_var_ref1 1: i
+  221:  push_atom_value text
+  226:  object
+  227:  push_atom_value "badge-txt"
+  232:  array_from 1
+  235:  define_field staticClass
+  240:  get_var_ref0 0: t
+  241:  get_field2 _v
+  246:  push_atom_value "\u00e4\u00b8\u008a\u00e6\u00ac\u00a1\u00e5\u00ad\u00a6\u00e5\u0088\u00b0"
+  251:  call_method 1
+  254:  array_from 1
+  257:  call3 3
+  258:  array_from 1
+  261:  call3 3
+  262:  goto8 273
+  264:  get_var_ref0 0: t
+  265:  get_field2 _e
+  270:  call_method 0
+  273:  array_from 2
+  276:  call3 3
+  277:  get_var_ref1 1: i
+  278:  push_atom_value div
+  283:  object
+  284:  push_atom_value vb
+  289:  array_from 1
+  292:  define_field staticClass
+  297:  get_var_ref1 1: i
+  298:  push_atom_value text
+  303:  object
+  304:  push_atom_value vt
+  309:  array_from 1
+  312:  define_field staticClass
+  317:  get_var_ref0 0: t
+  318:  get_field2 _v
+  323:  get_var_ref0 0: t
+  324:  get_field2 _s
+  329:  get_var_ref0 0: t
+  330:  get_field2 formatVideoName
+  335:  get_arg0 0: e
+  336:  get_field name
+  341:  call_method 1
+  344:  call_method 1
+  347:  call_method 1
+  350:  array_from 1
+  353:  call3 3
+  354:  array_from 1
+  357:  call3 3
+  358:  array_from 2
+  361:  tail_call 3
+
+
+/* ===== function depth=4 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: i
+  closure vars:
+    0: t parent:loc0 var
+    1: e local:arg0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 playVideo
+    6:  get_var_ref1 1: e
+    7:  tail_call_method 1
+
+
+/* ===== function depth=4 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: i
+  closure vars:
+    0: t parent:loc0 var
+    1: e local:arg0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 playVideo
+    6:  get_var_ref1 1: e
+    7:  tail_call_method 1
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_field2 stopPropagation
+    6:  call_method 0
+    9:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_field2 stopPropagation
+    6:  call_method 0
+    9:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: e a
+  closure vars:
+    0: t local:loc0 var
+    1: i local:loc2 var
+  stack_size: 11
+  opcodes:
+    0:  get_var_ref1 1: i
+    1:  push_atom_value div
+    6:  object
+    7:  get_arg1 1: a
+    8:  define_field key
+   13:  push_atom_value "cascader-item"
+   18:  array_from 1
+   21:  define_field staticClass
+   26:  object
+   27:  get_var_ref0 0: t
+   28:  get_field tempSelected
+   33:  push_0 0
+   34:  get_array_el
+   35:  get_arg0 0: e
+   36:  get_field name
+   41:  strict_eq
+   42:  define_field "item-active"
+   47:  define_field class
+   52:  object
+   53:  fclosure8 0: [bytecode <null>]
+   55:  set_name click
+   60:  define_field click
+   65:  fclosure8 1: [bytecode <null>]
+   67:  set_name tap
+   72:  define_field tap
+   77:  define_field on
+   82:  get_var_ref1 1: i
+   83:  push_atom_value text
+   88:  object
+   89:  push_atom_value "item-txt"
+   94:  array_from 1
+   97:  define_field staticClass
+  102:  object
+  103:  get_var_ref0 0: t
+  104:  get_field tempSelected
+  109:  push_0 0
+  110:  get_array_el
+  111:  get_arg0 0: e
+  112:  get_field name
+  117:  strict_eq
+  118:  define_field "txt-active"
+  123:  define_field class
+  128:  get_var_ref0 0: t
+  129:  get_field2 _v
+  134:  get_var_ref0 0: t
+  135:  get_field2 _s
+  140:  get_arg0 0: e
+  141:  get_field name
+  146:  call_method 1
+  149:  call_method 1
+  152:  array_from 1
+  155:  call3 3
+  156:  array_from 1
+  159:  tail_call 3
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: i
+  closure vars:
+    0: t parent:loc0 var
+    1: e local:arg0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 selectTempLevel
+    6:  push_0 0
+    7:  get_var_ref1 1: e
+    8:  get_field name
+   13:  tail_call_method 2
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: i
+  closure vars:
+    0: t parent:loc0 var
+    1: e local:arg0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 selectTempLevel
+    6:  push_0 0
+    7:  get_var_ref1 1: e
+    8:  get_field name
+   13:  tail_call_method 2
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: e a
+  closure vars:
+    0: t local:loc0 var
+    1: i local:loc2 var
+  stack_size: 11
+  opcodes:
+    0:  get_var_ref1 1: i
+    1:  push_atom_value div
+    6:  object
+    7:  get_arg1 1: a
+    8:  define_field key
+   13:  push_atom_value "cascader-item"
+   18:  array_from 1
+   21:  define_field staticClass
+   26:  object
+   27:  get_var_ref0 0: t
+   28:  get_field tempSelected
+   33:  push_1 1
+   34:  get_array_el
+   35:  get_arg0 0: e
+   36:  get_field name
+   41:  strict_eq
+   42:  define_field "item-active"
+   47:  define_field class
+   52:  object
+   53:  fclosure8 0: [bytecode <null>]
+   55:  set_name click
+   60:  define_field click
+   65:  fclosure8 1: [bytecode <null>]
+   67:  set_name tap
+   72:  define_field tap
+   77:  define_field on
+   82:  get_var_ref1 1: i
+   83:  push_atom_value text
+   88:  object
+   89:  push_atom_value "item-txt"
+   94:  array_from 1
+   97:  define_field staticClass
+  102:  object
+  103:  get_var_ref0 0: t
+  104:  get_field tempSelected
+  109:  push_1 1
+  110:  get_array_el
+  111:  get_arg0 0: e
+  112:  get_field name
+  117:  strict_eq
+  118:  define_field "txt-active"
+  123:  define_field class
+  128:  get_var_ref0 0: t
+  129:  get_field2 _v
+  134:  get_var_ref0 0: t
+  135:  get_field2 _s
+  140:  get_arg0 0: e
+  141:  get_field name
+  146:  call_method 1
+  149:  call_method 1
+  152:  array_from 1
+  155:  call3 3
+  156:  array_from 1
+  159:  tail_call 3
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: i
+  closure vars:
+    0: t parent:loc0 var
+    1: e local:arg0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 selectTempLevel
+    6:  push_1 1
+    7:  get_var_ref1 1: e
+    8:  get_field name
+   13:  tail_call_method 2
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: i
+  closure vars:
+    0: t parent:loc0 var
+    1: e local:arg0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 selectTempLevel
+    6:  push_1 1
+    7:  get_var_ref1 1: e
+    8:  get_field name
+   13:  tail_call_method 2
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: e a
+  closure vars:
+    0: t local:loc0 var
+    1: i local:loc2 var
+  stack_size: 11
+  opcodes:
+    0:  get_var_ref1 1: i
+    1:  push_atom_value div
+    6:  object
+    7:  get_arg1 1: a
+    8:  define_field key
+   13:  push_atom_value "cascader-item"
+   18:  array_from 1
+   21:  define_field staticClass
+   26:  object
+   27:  get_var_ref0 0: t
+   28:  get_field tempSelected
+   33:  push_2 2
+   34:  get_array_el
+   35:  get_arg0 0: e
+   36:  get_field name
+   41:  strict_eq
+   42:  define_field "item-active"
+   47:  define_field class
+   52:  object
+   53:  fclosure8 0: [bytecode <null>]
+   55:  set_name click
+   60:  define_field click
+   65:  fclosure8 1: [bytecode <null>]
+   67:  set_name tap
+   72:  define_field tap
+   77:  define_field on
+   82:  get_var_ref1 1: i
+   83:  push_atom_value text
+   88:  object
+   89:  push_atom_value "item-txt"
+   94:  array_from 1
+   97:  define_field staticClass
+  102:  object
+  103:  get_var_ref0 0: t
+  104:  get_field tempSelected
+  109:  push_2 2
+  110:  get_array_el
+  111:  get_arg0 0: e
+  112:  get_field name
+  117:  strict_eq
+  118:  define_field "txt-active"
+  123:  define_field class
+  128:  get_var_ref0 0: t
+  129:  get_field2 _v
+  134:  get_var_ref0 0: t
+  135:  get_field2 _s
+  140:  get_arg0 0: e
+  141:  get_field name
+  146:  call_method 1
+  149:  call_method 1
+  152:  array_from 1
+  155:  call3 3
+  156:  array_from 1
+  159:  tail_call 3
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: i
+  closure vars:
+    0: t parent:loc0 var
+    1: e local:arg0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 selectTempLevel
+    6:  push_2 2
+    7:  get_var_ref1 1: e
+    8:  get_field name
+   13:  tail_call_method 2
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: i
+  closure vars:
+    0: t parent:loc0 var
+    1: e local:arg0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 selectTempLevel
+    6:  push_2 2
+    7:  get_var_ref1 1: e
+    8:  get_field name
+   13:  tail_call_method 2
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: e a
+  closure vars:
+    0: t local:loc0 var
+    1: i local:loc2 var
+  stack_size: 11
+  opcodes:
+    0:  get_var_ref1 1: i
+    1:  push_atom_value div
+    6:  object
+    7:  get_arg1 1: a
+    8:  define_field key
+   13:  push_atom_value "cascader-item"
+   18:  array_from 1
+   21:  define_field staticClass
+   26:  object
+   27:  get_var_ref0 0: t
+   28:  get_field tempSelected
+   33:  push_3 3
+   34:  get_array_el
+   35:  get_arg0 0: e
+   36:  get_field name
+   41:  strict_eq
+   42:  define_field "item-active"
+   47:  define_field class
+   52:  object
+   53:  fclosure8 0: [bytecode <null>]
+   55:  set_name click
+   60:  define_field click
+   65:  fclosure8 1: [bytecode <null>]
+   67:  set_name tap
+   72:  define_field tap
+   77:  define_field on
+   82:  get_var_ref1 1: i
+   83:  push_atom_value text
+   88:  object
+   89:  push_atom_value "item-txt"
+   94:  array_from 1
+   97:  define_field staticClass
+  102:  object
+  103:  get_var_ref0 0: t
+  104:  get_field tempSelected
+  109:  push_3 3
+  110:  get_array_el
+  111:  get_arg0 0: e
+  112:  get_field name
+  117:  strict_eq
+  118:  define_field "txt-active"
+  123:  define_field class
+  128:  get_var_ref0 0: t
+  129:  get_field2 _v
+  134:  get_var_ref0 0: t
+  135:  get_field2 _s
+  140:  get_arg0 0: e
+  141:  get_field name
+  146:  call_method 1
+  149:  call_method 1
+  152:  array_from 1
+  155:  call3 3
+  156:  array_from 1
+  159:  tail_call 3
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: i
+  closure vars:
+    0: t parent:loc0 var
+    1: e local:arg0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 selectTempLevel
+    6:  push_3 3
+    7:  get_var_ref1 1: e
+    8:  get_field name
+   13:  tail_call_method 2
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: i
+  closure vars:
+    0: t parent:loc0 var
+    1: e local:arg0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 selectTempLevel
+    6:  push_3 3
+    7:  get_var_ref1 1: e
+    8:  get_field name
+   13:  tail_call_method 2
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_field2 stopPropagation
+    6:  call_method 0
+    9:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_onion.js:1 source_len=0 */
+apps_onion.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_field2 stopPropagation
+    6:  call_method 0
+    9:  return_undef
+

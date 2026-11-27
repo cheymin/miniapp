@@ -35,7 +35,20 @@ const gallery = defineComponent({
             root: '/userdisk',
             images: [] as string[],
             loading: false,
+            cellW: 176,
+            cellH: 96,
         };
+    },
+
+    computed: {
+        rows() {
+            const result: { path: string; index: number }[][] = [];
+            const items = this.images.map((path, index) => ({ path, index }));
+            for (let i = 0; i < items.length; i += 3) {
+                result.push(items.slice(i, i + 3));
+            }
+            return result;
+        },
     },
 
     mounted() {

@@ -1,0 +1,11 @@
+
+# ---- render function 157 ----
+<text.modal-title>
+  "<核心设置>"
+<text.modal-label>
+  "<砂糖云账号>"
+
+# ---- render function 188 ----
+<div.side-expand-btn>
+  <text.hdr-btn-t>
+    "<=>"

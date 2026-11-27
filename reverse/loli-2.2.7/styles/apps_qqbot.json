@@ -1,0 +1,12 @@
+{
+  "redirect": {
+    "flex": 1,
+    "justifyContent": "center",
+    "alignItems": "center",
+    "backgroundColor": "#101827"
+  },
+  "redirect-text": {
+    "color": "#cbd5e1",
+    "fontSize": "22px"
+  }
+}

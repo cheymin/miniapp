@@ -1,0 +1,479 @@
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+}
+
+.video-hole {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.danmaku-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: <expr>;
+    overflow: hidden;
+}
+
+.danmaku-item {
+    position: absolute;
+    font-weight: bold;
+    lines: 1;
+    text-overflow: clip;
+}
+
+.danmaku-badge {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
+    padding-top: 2px;
+    padding-right: 8px;
+    padding-bottom: 2px;
+    padding-left: 8px;
+    z-index: <expr>;
+}
+
+.danmaku-badge-txt {
+    color: #FF6699;
+    font-size: 10px;
+}
+
+.end-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(15,15,15,0.9);
+    z-index: <expr>;
+}
+
+.end-scroller {
+    flex: <expr>;
+    padding-left: 16px;
+    padding-top: 6px;
+    height: 90%;
+}
+
+.end-cols {
+    flex-direction: row;
+}
+
+.end-col {
+    flex-direction: column;
+    margin-right: 10px;
+}
+
+.end-card {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    height: 45%;
+}
+
+.end-cover {
+    width: 150px;
+    height: 100%;
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.06);
+    flex-shrink: 0;
+}
+
+.end-meta {
+    width: 180px;
+    padding-left: 12px;
+    justify-content: center;
+}
+
+.end-card-title {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    lines: 2;
+    text-overflow: ellipsis;
+    margin-bottom: 2px;
+}
+
+.end-card-author {
+    color: rgba(255,255,255,0.4);
+    font-size: 12px;
+    lines: 1;
+    text-overflow: ellipsis;
+}
+
+.end-bottom {
+    flex: 1;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.end-txt-dim {
+    color: rgba(255,255,255,0.4);
+    font-size: 14px;
+    margin-right: 28px;
+}
+
+.end-txt-white {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: <expr>;
+}
+
+.loading-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: <expr>;
+}
+
+.loading-content {
+    width: 120px;
+    height: 90px;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-spinner {
+    width: 24px;
+    height: 24px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-top-color: rgba(0,0,0,0);
+    border-radius: 12px;
+    animation-name: spindata-v-32d93e1a;
+    animation-duration: 800;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.loading-text {
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.error-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.55);
+    z-index: <expr>;
+    padding-left: 18px;
+    padding-right: 18px;
+}
+
+.error-content {
+    width: 100%;
+    height: 75%;
+    background-color: rgba(0,0,0,0.92);
+    border-radius: 12px;
+    padding-top: 14px;
+    padding-right: 14px;
+    padding-bottom: 14px;
+    padding-left: 14px;
+}
+
+.error-title {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.error-scroller {
+    flex: 1;
+    width: 100%;
+}
+
+.error-text {
+    color: rgba(255,255,255,0.85);
+    font-size: 11px;
+    line-height: 16px;
+    lines: 0;
+    font-family: monospace;
+}
+
+.error-actions {
+    height: 44px;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.error-btn-wrap {
+    min-width: 84px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 8px;
+    border-radius: 8px;
+    background-color: rgba(255,255,255,0.06);
+    pointer-events: auto;
+}
+
+.error-btn {
+    color: #FF6699;
+    font-size: 14px;
+    padding-left: 14px;
+    padding-right: 14px;
+    pointer-events: none;
+}
+
+.page-picker-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.6);
+    z-index: <expr>;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.page-picker-content {
+    width: 100%;
+    max-height: 70%;
+    background-color: rgba(0,0,0,0.95);
+    border-radius: 12px;
+    padding-top: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+}
+
+.page-picker-title {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.page-picker-scroller {
+    flex: 1;
+    width: 100%;
+    max-height: 400px;
+}
+
+.page-picker-item {
+    width: 100%;
+    padding-top: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    margin-bottom: 8px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 8px;
+}
+
+.page-picker-item-text {
+    color: #ffffff;
+    font-size: 14px;
+    lines: 1;
+    text-overflow: ellipsis;
+}
+
+.page-picker-close {
+    width: 100%;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.page-picker-close-text {
+    color: #FF6699;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.tap-area {
+    position: absolute;
+    top: 60px;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    z-index: <expr>;
+}
+
+.top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0));
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+    z-index: <expr>;
+}
+
+.top-left {
+    width: 40px;
+    height: 60px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 14px;
+    flex-shrink: 0;
+}
+
+.icon-wrapper {
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.video-title {
+    color: #ffffff;
+    font-size: 15px;
+    flex: 1;
+    text-align: left;
+    lines: 1;
+    text-overflow: ellipsis;
+    margin-left: 8px;
+    margin-right: 10px;
+}
+
+.top-right {
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+    padding-right: 18px;
+    flex-shrink: 0;
+}
+
+.jump-buttons {
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+    margin-right: 10px;
+}
+
+.jump-btn {
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0);
+    margin-left: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.jump-text {
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.action-btn {
+    height: 60px;
+    padding-left: 12px;
+    padding-right: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-text {
+    font-size: 14px;
+}
+
+.bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-image: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+    flex-direction: row;
+    align-items: center;
+    z-index: <expr>;
+    padding-bottom: 10px;
+}
+
+.play-btn {
+    width: 55px;
+    height: 50px;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 18px;
+    margin-right: 0;
+}
+
+.play-icon-img {
+    width: 24px;
+    height: 24px;
+}
+
+.time-current {
+    width: 42px;
+    color: #dddddd;
+    font-size: 12px;
+    text-align: center;
+    margin-left: 4px;
+    margin-right: 6px;
+}
+
+.time-total {
+    width: 68px;
+    color: #dddddd;
+    font-size: 12px;
+    text-align: center;
+    margin-left: 5px;
+    padding-right: 18px;
+}
+
+.video-seekbar {
+    flex: 1;
+    height: 40px;
+}

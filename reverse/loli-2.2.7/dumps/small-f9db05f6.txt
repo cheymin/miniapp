@@ -1,0 +1,19 @@
+
+/* ===== function depth=0 ===== */
+/* debug: small-f9db05f6.js:1 source_len=0 */
+small-f9db05f6.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: a local:loc0 var
+    1: d local:loc1 var
+    2: e local:loc2 var
+  stack_size: 1
+  opcodes:
+    0:  push_atom_value "images/8c987dd8471527135403a75efdae2448.png"
+    5:  put_var_ref0 0: a
+    6:  push_atom_value "images/ccfd94c6db38641fbf0e72c4db00c67a.png"
+   11:  put_var_ref1 1: d
+   12:  push_atom_value "images/d51e116b8aa07add8cea0ce521d0d6e7.png"
+   17:  put_var_ref2 2: e
+   18:  return_undef
+

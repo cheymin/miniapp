@@ -1,0 +1,2940 @@
+
+/* ===== function depth=0 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: t parent:loc0 const
+    1: e local:loc0 var
+    2: i local:loc1 var
+    3: s local:loc2 const
+  stack_size: 7
+  opcodes:
+    0:  object
+    1:  push_atom_value widthtest
+    6:  define_field name
+   11:  fclosure8 0: [bytecode <null>]
+   13:  set_name data
+   18:  define_field data
+   23:  object
+   24:  fclosure8 1: [bytecode <null>]
+   26:  define_method kbLayout,4
+   32:  fclosure8 2: [bytecode <null>]
+   34:  define_method testDeviation,4
+   40:  fclosure8 3: [bytecode <null>]
+   42:  define_method unitOffset,4
+   48:  fclosure8 4: [bytecode <null>]
+   50:  define_method charWidthDirect,4
+   56:  fclosure8 5: [bytecode <null>]
+   58:  define_method charWidthRatio,4
+   64:  fclosure8 6: [bytecode <null>]
+   66:  define_method columnsDirect,4
+   72:  fclosure8 7: [bytecode <null>]
+   74:  define_method columnsRatio,4
+   80:  fclosure8 8: [bytecode <null>]
+   82:  define_method kbVerdict,4
+   88:  fclosure8 9: [bytecode <null>]
+   90:  define_method propFull,4
+   96:  fclosure8 10: [bytecode <null>]
+   98:  define_method naiveLeft,4
+  104:  fclosure8 11: [bytecode <null>]
+  106:  define_method propLeft,4
+  112:  fclosure8 12: [bytecode <null>]
+  114:  define_method naiveErr,4
+  120:  fclosure8 13: [bytecode <null>]
+  122:  define_method propErr,4
+  128:  fclosure8 14: [bytecode <null>]
+  130:  define_method biliVerdict,4
+  136:  define_field computed
+  141:  fclosure8 15: [bytecode <null>]
+  143:  define_method mounted,4
+  149:  object
+  150:  fclosure8 16: [bytecode <null>]
+  152:  define_method initShell,4
+  158:  fclosure8 17: [bytecode <null>]
+  160:  define_method initEnv,4
+  166:  fclosure8 18: [bytecode <null>]
+  168:  define_method measureAll,4
+  174:  fclosure8 19: [bytecode <null>]
+  176:  define_method readPhys,4
+  182:  fclosure8 20: [bytecode <null>]
+  184:  define_method measureRects,4
+  190:  fclosure8 21: [bytecode <null>]
+  192:  define_method setTestW,4
+  198:  fclosure8 22: [bytecode <null>]
+  200:  set_name fmt
+  205:  define_field fmt
+  210:  fclosure8 23: [bytecode <null>]
+  212:  define_method goBack,4
+  218:  define_field methods
+  223:  put_var_ref1 1: e
+  224:  fclosure8 24: [bytecode <null>]
+  226:  set_name i
+  231:  set_var_ref2 2: i
+  232:  push_0 0
+  233:  lnot
+  234:  put_field _withStripped
+  239:  get_var_ref1 1: e
+  240:  put_var_ref3 3: s
+  241:  get_var_ref_check 3: s
+  244:  get_var_ref2 2: i
+  245:  put_field render
+  250:  get_var_ref_check 3: s
+  253:  fclosure8 25: [bytecode <null>]
+  255:  array_from 1
+  258:  put_field staticRenderFns
+  263:  get_var_ref_check 3: s
+  266:  push_0 0
+  267:  lnot
+  268:  put_field _compiled
+  273:  get_var_ref_check 3: s
+  276:  push_atom_value "data-v-d9111402"
+  281:  put_field _scopeId
+  286:  get_var_ref_check 3: s
+  289:  object
+  290:  put_field themes
+  295:  get_var_ref_check 3: s
+  298:  get_var Object
+  303:  get_field2 assign
+  308:  object
+  309:  object
+  310:  object
+  311:  push_atom_value "#0d0f13"
+  316:  define_field backgroundColor
+  321:  push_atom_value "100%"
+  326:  define_field width
+  331:  push_atom_value "100%"
+  336:  define_field height
+  341:  define_field wrapper
+  346:  object
+  347:  push_atom_value "40px"
+  352:  define_field height
+  357:  push_atom_value row
+  362:  define_field flexDirection
+  367:  push_atom_value center
+  372:  define_field alignItems
+  377:  push_atom_value "10px"
+  382:  define_field paddingLeft
+  387:  push_atom_value "10px"
+  392:  define_field paddingRight
+  397:  push_atom_value "1px"
+  402:  define_field borderBottomWidth
+  407:  push_atom_value "#23262c"
+  412:  define_field borderBottomColor
+  417:  define_field header
+  422:  object
+  423:  push_1 1
+  424:  define_field flex
+  429:  push_atom_value "#f3f4f6"
+  434:  define_field color
+  439:  push_atom_value "16px"
+  444:  define_field fontSize
+  449:  push_const8 26: 1"600"
+  451:  define_field fontWeight
+  456:  push_atom_value center
+  461:  define_field textAlign
+  466:  define_field "hdr-title"
+  471:  object
+  472:  push_atom_value "5px"
+  477:  define_field paddingTop
+  482:  push_atom_value "10px"
+  487:  define_field paddingRight
+  492:  push_atom_value "5px"
+  497:  define_field paddingBottom
+  502:  push_atom_value "10px"
+  507:  define_field paddingLeft
+  512:  define_field "hdr-btn"
+  517:  object
+  518:  push_atom_value "#6ea8ff"
+  523:  define_field color
+  528:  push_atom_value "13px"
+  533:  define_field fontSize
+  538:  define_field "hdr-btn-txt"
+  543:  object
+  544:  push_1 1
+  545:  define_field flex
+  550:  push_atom_value row
+  555:  define_field flexDirection
+  560:  define_field body
+  565:  object
+  566:  push_1 1
+  567:  define_field flex
+  572:  push_atom_value "8px"
+  577:  define_field paddingTop
+  582:  push_atom_value "8px"
+  587:  define_field paddingRight
+  592:  push_atom_value "8px"
+  597:  define_field paddingBottom
+  602:  push_atom_value "8px"
+  607:  define_field paddingLeft
+  612:  define_field col
+  617:  object
+  618:  push_atom_value "#8f949d"
+  623:  define_field color
+  628:  push_atom_value "12px"
+  633:  define_field fontSize
+  638:  push_const8 27: 1"600"
+  640:  define_field fontWeight
+  645:  push_atom_value "4px"
+  650:  define_field marginBottom
+  655:  define_field "sec-title"
+  660:  object
+  661:  push_atom_value "10px"
+  666:  define_field marginTop
+  671:  define_field mt10
+  676:  object
+  677:  push_atom_value "6px"
+  682:  define_field marginTop
+  687:  define_field mt6
+  692:  object
+  693:  push_atom_value "#d6dae1"
+  698:  define_field color
+  703:  push_atom_value "12px"
+  708:  define_field fontSize
+  713:  push_atom_value "18px"
+  718:  define_field lineHeight
+  723:  define_field kv
+  728:  object
+  729:  push_atom_value "#6dd58c"
+  734:  define_field color
+  739:  define_field hl
+  744:  object
+  745:  push_atom_value "#f2b8b5"
+  750:  define_field color
+  755:  define_field warn
+  760:  object
+  761:  push_atom_value "#6b7280"
+  766:  define_field color
+  771:  push_atom_value "11px"
+  776:  define_field fontSize
+  781:  define_field dim
+  786:  object
+  787:  push_atom_value row
+  792:  define_field flexDirection
+  797:  define_field row
+  802:  object
+  803:  push_atom_value "52px"
+  808:  define_field width
+  813:  push_atom_value "26px"
+  818:  define_field height
+  823:  push_atom_value "#2c3036"
+  828:  define_field backgroundColor
+  833:  push_atom_value "6px"
+  838:  define_field borderRadius
+  843:  push_atom_value center
+  848:  define_field justifyContent
+  853:  push_atom_value center
+  858:  define_field alignItems
+  863:  push_atom_value "6px"
+  868:  define_field marginRight
+  873:  define_field "act-btn"
+  878:  object
+  879:  push_atom_value "#f3f4f6"
+  884:  define_field color
+  889:  push_atom_value "12px"
+  894:  define_field fontSize
+  899:  define_field "act-txt"
+  904:  object
+  905:  push_atom_value "118px"
+  910:  define_field height
+  915:  push_atom_value "1px"
+  920:  define_field borderTopWidth
+  925:  push_atom_value "#23262c"
+  930:  define_field borderTopColor
+  935:  push_atom_value "6px"
+  940:  define_field paddingTop
+  945:  push_atom_value "10px"
+  950:  define_field paddingRight
+  955:  push_atom_value "6px"
+  960:  define_field paddingBottom
+  965:  push_atom_value "10px"
+  970:  define_field paddingLeft
+  975:  push_atom_value column
+  980:  define_field flexDirection
+  985:  define_field mocks
+  990:  object
+  991:  push_atom_value "56px"
+  996:  define_field height
+ 1001:  push_atom_value column
+ 1006:  define_field flexDirection
+ 1011:  define_field "mock-kb"
+ 1016:  object
+ 1017:  push_1 1
+ 1018:  define_field flex
+ 1023:  push_atom_value column
+ 1028:  define_field flexDirection
+ 1033:  define_field "mock-bili"
+ 1038:  object
+ 1039:  push_atom_value "#6b7280"
+ 1044:  define_field color
+ 1049:  push_atom_value "10px"
+ 1054:  define_field fontSize
+ 1059:  define_field "mock-label"
+ 1064:  object
+ 1065:  push_atom_value "#ffffff"
+ 1070:  define_field color
+ 1075:  push_atom_value "11px"
+ 1080:  define_field fontSize
+ 1085:  define_field "mock-label2"
+ 1090:  object
+ 1091:  push_1 1
+ 1092:  define_field flex
+ 1097:  push_atom_value "2px"
+ 1102:  define_field marginTop
+ 1107:  push_atom_value "10px"
+ 1112:  define_field marginRight
+ 1117:  push_atom_value "6px"
+ 1122:  define_field marginBottom
+ 1127:  push_atom_value "10px"
+ 1132:  define_field marginLeft
+ 1137:  push_atom_value "#000000"
+ 1142:  define_field backgroundColor
+ 1147:  push_atom_value "6px"
+ 1152:  define_field borderRadius
+ 1157:  define_field "kb-screen"
+ 1162:  object
+ 1163:  push_atom_value "2px"
+ 1168:  define_field paddingTop
+ 1173:  push_atom_value "6px"
+ 1178:  define_field paddingRight
+ 1183:  push_atom_value "2px"
+ 1188:  define_field paddingBottom
+ 1193:  push_atom_value "6px"
+ 1198:  define_field paddingLeft
+ 1203:  push_atom_value column
+ 1208:  define_field flexDirection
+ 1213:  push_atom_value "100%"
+ 1218:  define_field minHeight
+ 1223:  push_atom_value center
+ 1228:  define_field justifyContent
+ 1233:  define_field "kb-inner"
+ 1238:  object
+ 1239:  push_1 1
+ 1240:  define_field flex
+ 1245:  push_atom_value row
+ 1250:  define_field flexDirection
+ 1255:  push_atom_value "2px"
+ 1260:  define_field marginTop
+ 1265:  define_field "dt-row"
+ 1270:  object
+ 1271:  push_1 1
+ 1272:  define_field flex
+ 1277:  push_atom_value "#2f6fe4"
+ 1282:  define_field backgroundColor
+ 1287:  push_atom_value center
+ 1292:  define_field justifyContent
+ 1297:  push_atom_value center
+ 1302:  define_field alignItems
+ 1307:  define_field "dt-left"
+ 1312:  object
+ 1313:  push_atom_value "280px"
+ 1318:  define_field width
+ 1323:  push_atom_value "#7a3ff2"
+ 1328:  define_field backgroundColor
+ 1333:  push_atom_value center
+ 1338:  define_field justifyContent
+ 1343:  push_atom_value center
+ 1348:  define_field alignItems
+ 1353:  define_field "dt-right"
+ 1358:  object
+ 1359:  push_atom_value absolute
+ 1364:  define_field position
+ 1369:  push_atom_value "0px"
+ 1374:  define_field top
+ 1379:  push_atom_value "0px"
+ 1384:  define_field left
+ 1389:  push_atom_value "100%"
+ 1394:  define_field width
+ 1399:  push_atom_value "8px"
+ 1404:  define_field height
+ 1409:  push_0 0
+ 1410:  define_field opacity
+ 1415:  define_field "probe-root"
+ 1420:  object
+ 1421:  push_atom_value absolute
+ 1426:  define_field position
+ 1431:  push_atom_value "8px"
+ 1436:  define_field top
+ 1441:  push_atom_value "0px"
+ 1446:  define_field left
+ 1451:  push_atom_value "6px"
+ 1456:  define_field height
+ 1461:  push_0 0
+ 1462:  define_field opacity
+ 1467:  push_atom_value "#ff0000"
+ 1472:  define_field backgroundColor
+ 1477:  define_field "probe-box"
+ 1482:  object
+ 1483:  push_atom_value absolute
+ 1488:  define_field position
+ 1493:  push_atom_value "0px"
+ 1498:  define_field top
+ 1503:  push_atom_value "0px"
+ 1508:  define_field left
+ 1513:  push_atom_value "16px"
+ 1518:  define_field fontSize
+ 1523:  push_atom_value monospace
+ 1528:  define_field fontFamily
+ 1533:  push_0 0
+ 1534:  define_field opacity
+ 1539:  define_field "probe-line"
+ 1544:  call_method 2
+ 1547:  put_field style
+ 1552:  get_var_ref_check 3: s
+ 1555:  push_atom_value "src/pages/apps/widthtest.vue"
+ 1560:  put_field __file
+ 1565:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  stack_size: 3
+  opcodes:
+    0:  object
+    1:  object
+    2:  push_0 0
+    3:  define_field deviceWidth
+    8:  push_0 0
+    9:  define_field deviceHeight
+   14:  push_0 0
+   15:  define_field scale
+   20:  push_0 0
+   21:  define_field dpr
+   26:  define_field env
+   31:  object
+   32:  push_0 0
+   33:  define_field w
+   38:  push_0 0
+   39:  define_field h
+   44:  push_minus1 -1
+   45:  define_field rotation
+   50:  define_field phys
+   55:  push_1 1
+   56:  lnot
+   57:  define_field shellAvail
+   62:  object
+   63:  push_0 0
+   64:  define_field width
+   69:  push_0 0
+   70:  define_field height
+   75:  define_field rootRect
+   80:  push_i8 100
+   82:  define_field testW
+   87:  push_0 0
+   88:  define_field testBoxW
+   93:  push_0 0
+   94:  define_field kbLineW
+   99:  push_0 0
+  100:  define_field kbInnerW
+  105:  push_0 0
+  106:  define_field dtLeftW
+  111:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var i
+    3: var this
+  stack_size: 7
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_var Math
+    7:  get_field2 max
+   12:  push_1 1
+   13:  get_var Number
+   18:  get_loc3 3: this
+   19:  get_field phys
+   24:  get_field w
+   29:  call1 1
+   30:  dup
+   31:  if_true8 37
+   33:  drop
+   34:  push_i16 960
+   37:  call_method 2
+   40:  put_loc0 0: t
+   41:  get_var Math
+   46:  get_field2 round
+   51:  push_const8 0: 0.38
+   53:  get_loc0 0: t
+   54:  mul
+   55:  call_method 1
+   58:  put_loc1 1: e
+   59:  get_var Math
+   64:  get_field2 max
+   69:  push_i16 220
+   72:  get_var Math
+   77:  get_field2 min
+   82:  push_i16 380
+   85:  get_loc1 1: e
+   86:  call_method 2
+   89:  call_method 2
+   92:  set_loc1 1: e
+   93:  get_loc0 0: t
+   94:  push_i16 240
+   97:  sub
+   98:  gte
+   99:  dup
+  100:  if_false8 125
+  102:  drop
+  103:  get_var Math
+  108:  get_field2 max
+  113:  push_i16 180
+  116:  get_loc0 0: t
+  117:  push_i16 240
+  120:  sub
+  121:  call_method 2
+  124:  set_loc1 1: e
+  125:  drop
+  126:  push_i16 960
+  129:  get_loc0 0: t
+  130:  div
+  131:  put_loc2 2: i
+  132:  object
+  133:  get_loc0 0: t
+  134:  define_field screenWidth
+  139:  get_loc1 1: e
+  140:  define_field leftWidth
+  145:  get_var Math
+  150:  get_field2 round
+  155:  get_loc1 1: e
+  156:  get_loc2 2: i
+  157:  mul
+  158:  call_method 1
+  161:  define_field styleLeftWidth
+  166:  get_loc0 0: t
+  167:  push_i16 760
+  170:  lt
+  171:  define_field compact
+  176:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field testBoxW
+    8:  if_false8 43
+   10:  get_var Math
+   15:  get_field2 round
+   20:  push_i8 10
+   22:  get_loc0 0: this
+   23:  get_field testBoxW
+   28:  get_loc0 0: this
+   29:  get_field testW
+   34:  sub
+   35:  mul
+   36:  call_method 1
+   39:  push_i8 10
+   41:  div
+   42:  return
+   43:  push_atom_value "-"
+   48:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field phys
+    8:  get_field w
+   13:  if_false8 71
+   15:  get_loc0 0: this
+   16:  get_field rootRect
+   21:  get_field width
+   26:  if_false8 71
+   28:  get_var Math
+   33:  get_field2 round
+   38:  push_i8 10
+   40:  get_loc0 0: this
+   41:  get_field phys
+   46:  get_field w
+   51:  get_loc0 0: this
+   52:  get_field rootRect
+   57:  get_field width
+   62:  sub
+   63:  mul
+   64:  call_method 1
+   67:  push_i8 10
+   69:  div
+   70:  return
+   71:  push_atom_value "-"
+   76:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field kbLineW
+    8:  if_false8 39
+   10:  get_var Math
+   15:  get_field2 round
+   20:  get_loc0 0: this
+   21:  get_field kbLineW
+   26:  push_i8 20
+   28:  div
+   29:  push_i8 100
+   31:  mul
+   32:  call_method 1
+   35:  push_i8 100
+   37:  div
+   38:  return
+   39:  push_0 0
+   40:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field kbLineW
+    8:  lnot
+    9:  dup
+   10:  if_true8 20
+   12:  drop
+   13:  get_loc1 1: this
+   14:  get_field kbInnerW
+   19:  lnot
+   20:  if_false8 24
+   22:  push_0 0
+   23:  return
+   24:  get_var Math
+   29:  get_field2 max
+   34:  push_1 1
+   35:  get_loc1 1: this
+   36:  get_field kbLayout
+   41:  get_field styleLeftWidth
+   46:  push_i8 20
+   48:  sub
+   49:  call_method 2
+   52:  put_loc0 0: t
+   53:  get_var Math
+   58:  get_field2 round
+   63:  get_loc1 1: this
+   64:  get_field kbLineW
+   69:  get_loc1 1: this
+   70:  get_field kbInnerW
+   75:  div
+   76:  get_loc0 0: t
+   77:  mul
+   78:  push_i8 20
+   80:  div
+   81:  push_i8 100
+   83:  mul
+   84:  call_method 1
+   87:  push_i8 100
+   89:  div
+   90:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 8
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_var Math
+    7:  get_field2 max
+   12:  push_i8 8
+   14:  get_var Math
+   19:  get_field2 floor
+   24:  get_loc0 0: this
+   25:  get_field kbLayout
+   30:  get_field styleLeftWidth
+   35:  push_i8 32
+   37:  sub
+   38:  get_loc0 0: this
+   39:  get_field charWidthDirect
+   44:  dup
+   45:  if_true8 50
+   47:  drop
+   48:  push_const8 0: 12.8
+   50:  div
+   51:  call_method 1
+   54:  tail_call_method 2
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 8
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_var Math
+    7:  get_field2 max
+   12:  push_i8 8
+   14:  get_var Math
+   19:  get_field2 floor
+   24:  get_loc0 0: this
+   25:  get_field kbLayout
+   30:  get_field styleLeftWidth
+   35:  push_i8 32
+   37:  sub
+   38:  get_loc0 0: this
+   39:  get_field charWidthRatio
+   44:  dup
+   45:  if_true8 50
+   47:  drop
+   48:  push_const8 0: 12.8
+   50:  div
+   51:  call_method 1
+   54:  tail_call_method 2
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field charWidthDirect
+    8:  lnot
+    9:  dup
+   10:  if_true8 20
+   12:  drop
+   13:  get_loc1 1: this
+   14:  get_field charWidthRatio
+   19:  lnot
+   20:  if_false8 28
+   22:  push_atom_value "\u00e5\u00be\u0085\u00e6\u00b5\u008b\u00e9\u0087\u008f\u00e2\u0080\u00a6"
+   27:  return
+   28:  get_var Math
+   33:  get_field2 abs
+   38:  get_loc1 1: this
+   39:  get_field charWidthDirect
+   44:  get_loc1 1: this
+   45:  get_field charWidthRatio
+   50:  sub
+   51:  call_method 1
+   54:  set_loc0 0: t
+   55:  push_const8 0: 0.05
+   57:  lt
+   58:  if_false8 66
+   60:  push_atom_value "\u00e5\u0088\u00a4\u00e5\u00ae\u009a: \u00e4\u00b8\u0080\u00e8\u0087\u00b4 \u00e2\u0086\u0092 \u00e6\u00af\u0094\u00e5\u0080\u00bc\u00e6\u00b3\u0095\u00e6\u009c\u0089\u00e6\u0095\u0088\u00ef\u00bc\u008c\u00e5\u009d\u0090\u00e6\u00a0\u0087=\u00e8\u00ae\u00be\u00e8\u00ae\u00a1px"
+   65:  return
+   66:  push_atom_value "\u00e5\u0088\u00a4\u00e5\u00ae\u009a: \u00e5\u00b7\u00ae "
+   71:  get_var Math
+   76:  get_field2 round
+   81:  push_i8 100
+   83:  get_loc0 0: t
+   84:  mul
+   85:  call_method 1
+   88:  push_i8 100
+   90:  div
+   91:  add
+   92:  push_atom_value "px \u00e2\u0086\u0092 \u00e9\u009c\u0080\u00e6\u008e\u0092\u00e6\u009f\u00a5"
+   97:  add
+   98:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field phys
+    8:  get_field w
+   13:  dup
+   14:  if_true8 22
+   16:  drop
+   17:  push_atom_value "-"
+   22:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field phys
+    8:  get_field w
+   13:  if_false8 31
+   15:  get_loc0 0: this
+   16:  get_field phys
+   21:  get_field w
+   26:  push_i16 280
+   29:  sub
+   30:  return
+   31:  push_atom_value "-"
+   36:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field phys
+    8:  get_field w
+   13:  if_false8 60
+   15:  get_loc0 0: this
+   16:  get_field phys
+   21:  get_field w
+   26:  get_var Math
+   31:  get_field2 round
+   36:  push_i16 280
+   39:  get_loc0 0: this
+   40:  get_field phys
+   45:  get_field w
+   50:  mul
+   51:  push_i16 936
+   54:  div
+   55:  call_method 1
+   58:  sub
+   59:  return
+   60:  push_atom_value "-"
+   65:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field dtLeftW
+    8:  if_false8 65
+   10:  get_loc0 0: this
+   11:  get_field phys
+   16:  get_field w
+   21:  if_false8 65
+   23:  get_var Math
+   28:  get_field2 round
+   33:  push_i8 10
+   35:  get_loc0 0: this
+   36:  get_field phys
+   41:  get_field w
+   46:  push_i16 280
+   49:  sub
+   50:  get_loc0 0: this
+   51:  get_field dtLeftW
+   56:  sub
+   57:  mul
+   58:  call_method 1
+   61:  push_i8 10
+   63:  div
+   64:  return
+   65:  push_atom_value "-"
+   70:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field dtLeftW
+    8:  lnot
+    9:  dup
+   10:  if_true8 25
+   12:  drop
+   13:  get_loc1 1: this
+   14:  get_field phys
+   19:  get_field w
+   24:  lnot
+   25:  if_false8 33
+   27:  push_atom_value "-"
+   32:  return
+   33:  get_loc1 1: this
+   34:  get_field phys
+   39:  get_field w
+   44:  get_var Math
+   49:  get_field2 round
+   54:  push_i16 280
+   57:  get_loc1 1: this
+   58:  get_field phys
+   63:  get_field w
+   68:  mul
+   69:  push_i16 936
+   72:  div
+   73:  call_method 1
+   76:  sub
+   77:  put_loc0 0: t
+   78:  get_var Math
+   83:  get_field2 round
+   88:  push_i8 10
+   90:  get_loc0 0: t
+   91:  get_loc1 1: this
+   92:  get_field dtLeftW
+   97:  sub
+   98:  mul
+   99:  call_method 1
+  102:  push_i8 10
+  104:  div
+  105:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field dtLeftW
+    8:  lnot
+    9:  dup
+   10:  if_true8 25
+   12:  drop
+   13:  get_loc2 2: this
+   14:  get_field phys
+   19:  get_field w
+   24:  lnot
+   25:  if_false8 33
+   27:  push_atom_value "\u00e5\u00be\u0085\u00e6\u00b5\u008b\u00e9\u0087\u008f\u00e2\u0080\u00a6"
+   32:  return
+   33:  get_var Math
+   38:  get_field2 abs
+   43:  get_var Number
+   48:  get_loc2 2: this
+   49:  get_field naiveErr
+   54:  call1 1
+   55:  dup
+   56:  if_true8 60
+   58:  drop
+   59:  push_0 0
+   60:  call_method 1
+   63:  put_loc0 0: t
+   64:  get_var Math
+   69:  get_field2 abs
+   74:  get_var Number
+   79:  get_loc2 2: this
+   80:  get_field propErr
+   85:  call1 1
+   86:  dup
+   87:  if_true8 91
+   89:  drop
+   90:  push_0 0
+   91:  call_method 1
+   94:  put_loc1 1: e
+   95:  get_loc0 0: t
+   96:  push_1 1
+   97:  lt
+   98:  if_false8 111
+  100:  get_loc1 1: e
+  101:  push_1 1
+  102:  lt
+  103:  if_false8 111
+  105:  push_atom_value "\u00e5\u0088\u00a4\u00e5\u00ae\u009a: \u00e4\u00b8\u00a4\u00e5\u00bc\u008f\u00e2\u0089\u0088\u00e5\u00ae\u009e\u00e6\u00b5\u008b\u00ef\u00bc\u0088\u00e6\u00ad\u00a4\u00e6\u009c\u00ba\u00e7\u0089\u00a9\u00e7\u0090\u0086=\u00e8\u00a7\u0086\u00e5\u008f\u00a3\u00ef\u00bc\u0089"
+  110:  return
+  111:  get_loc1 1: e
+  112:  get_loc0 0: t
+  113:  lt
+  114:  if_false8 122
+  116:  push_atom_value "\u00e5\u0088\u00a4\u00e5\u00ae\u009a: \u00e6\u00af\u0094\u00e4\u00be\u008b\u00e5\u00bc\u008f\u00e6\u009b\u00b4\u00e5\u0087\u0086\u00ef\u00bc\u008c\u00e4\u00bd\u0086\u00e5\u00ae\u009e\u00e6\u00b5\u008b(embedLeftWidth)\u00e4\u00bb\u008d\u00e6\u009c\u0080\u00e5\u008f\u00af"
+  121:  return
+  122:  push_atom_value "\u00e5\u0088\u00a4\u00e5\u00ae\u009a: w\u00e2\u0088\u0092280 \u00e6\u009b\u00b4\u00e5\u0087\u0086\u00ef\u00bc\u0088\u00e5\u00bc\u0082\u00e5\u00b8\u00b8\u00ef\u00bc\u008c\u00e6\u00b3\u00a8\u00e6\u0084\u008f\u00e6\u008e\u0092\u00e6\u009f\u00a5\u00ef\u00bc\u0089"
+  127:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field2 initShell
+    8:  call_method 0
+   11:  drop
+   12:  get_loc1 1: this
+   13:  get_field2 initEnv
+   18:  call_method 0
+   21:  drop
+   22:  get_loc1 1: this
+   23:  put_loc0 0: t
+   24:  get_var setTimeout
+   29:  fclosure8 0: [bytecode <null>]
+   31:  push_i16 300
+   34:  call2 2
+   35:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 measureAll
+    6:  call_method 0
+    9:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var e
+    1: catch t [level:4 next:-1]
+    2: catch t [level:6 next:-1]
+    3: var this
+  closure vars:
+    0: t parent:loc0 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  catch 120
+    7:  null
+    8:  put_loc0 0: e
+    9:  catch 21
+   14:  get_var_ref_check 0: t
+   17:  put_loc0 0: e
+   18:  drop
+   19:  goto8 31
+   21:  put_loc1 1: t
+   22:  catch 30
+   27:  drop
+   28:  goto8 31
+   30:  throw
+   31:  get_loc0 0: e
+   32:  dup
+   33:  if_true8 58
+   35:  drop
+   36:  push_atom_value undefined
+   41:  get_var_undef bridge
+   46:  typeof
+   47:  eq
+   48:  dup
+   49:  if_true8 58
+   51:  drop
+   52:  get_var bridge
+   57:  set_loc0 0: e
+   58:  drop
+   59:  get_loc0 0: e
+   60:  dup
+   61:  if_false8 117
+   63:  drop
+   64:  get_loc0 0: e
+   65:  get_field Shell
+   70:  dup
+   71:  if_false8 117
+   73:  drop
+   74:  push_atom_value function
+   79:  get_loc0 0: e
+   80:  get_field Shell
+   85:  get_field getScreenSize
+   90:  typeof
+   91:  eq
+   92:  dup
+   93:  if_false8 117
+   95:  drop
+   96:  get_loc3 3: this
+   97:  get_loc0 0: e
+   98:  get_field Shell
+  103:  put_field shell
+  108:  get_loc3 3: this
+  109:  push_0 0
+  110:  lnot
+  111:  insert2
+  112:  put_field shellAvail
+  117:  drop
+  118:  drop
+  119:  return_undef
+  120:  put_loc2 2: t
+  121:  catch 136
+  126:  get_loc3 3: this
+  127:  push_1 1
+  128:  lnot
+  129:  put_field shellAvail
+  134:  drop
+  135:  return_undef
+  136:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: catch t [level:5 next:-1]
+    2: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  catch 179
+    7:  push_atom_value undefined
+   12:  get_var_undef weex
+   17:  typeof
+   18:  neq
+   19:  if_false 177
+   24:  get_var weex
+   29:  get_field config
+   34:  if_false 177
+   39:  get_var weex
+   44:  get_field config
+   49:  get_field env
+   54:  if_false8 177
+   56:  get_var weex
+   61:  get_field config
+   66:  get_field env
+   71:  put_loc0 0: t
+   72:  get_loc2 2: this
+   73:  object
+   74:  get_var Number
+   79:  get_loc0 0: t
+   80:  get_field deviceWidth
+   85:  call1 1
+   86:  dup
+   87:  if_true8 91
+   89:  drop
+   90:  push_0 0
+   91:  define_field deviceWidth
+   96:  get_var Number
+  101:  get_loc0 0: t
+  102:  get_field deviceHeight
+  107:  call1 1
+  108:  dup
+  109:  if_true8 113
+  111:  drop
+  112:  push_0 0
+  113:  define_field deviceHeight
+  118:  get_var Number
+  123:  get_loc0 0: t
+  124:  get_field scale
+  129:  call1 1
+  130:  dup
+  131:  if_true8 135
+  133:  drop
+  134:  push_0 0
+  135:  define_field scale
+  140:  get_var Number
+  145:  get_loc0 0: t
+  146:  get_field devicePixelRatio
+  151:  dup
+  152:  if_true8 161
+  154:  drop
+  155:  get_loc0 0: t
+  156:  get_field dpr
+  161:  call1 1
+  162:  dup
+  163:  if_true8 167
+  165:  drop
+  166:  push_0 0
+  167:  define_field dpr
+  172:  put_field env
+  177:  drop
+  178:  return_undef
+  179:  put_loc1 1: t
+  180:  catch 187
+  185:  drop
+  186:  return_undef
+  187:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 readPhys
+    8:  call_method 0
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field2 measureRects
+   18:  call_method 0
+   21:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var i
+    3: var s
+    4: var a
+    5: catch t [level:8 next:-1]
+    6: var this
+  stack_size: 7
+  opcodes:
+    0:  push_this
+    1:  put_loc8 6: this
+    3:  get_loc8 6: this
+    5:  get_field shellAvail
+   10:  if_false 211
+   15:  catch 201
+   20:  get_loc8 6: this
+   22:  get_field shell
+   27:  get_field2 getScreenSize
+   32:  call_method 0
+   35:  set_loc0 0: t
+   36:  if_false 199
+   41:  get_loc0 0: t
+   42:  get_field width
+   47:  if_false 199
+   52:  get_loc0 0: t
+   53:  get_field height
+   58:  if_false 199
+   63:  get_var Number
+   68:  get_loc0 0: t
+   69:  get_field width
+   74:  call1 1
+   75:  dup
+   76:  if_true8 80
+   78:  drop
+   79:  push_0 0
+   80:  put_loc1 1: e
+   81:  get_var Number
+   86:  get_loc0 0: t
+   87:  get_field height
+   92:  call1 1
+   93:  dup
+   94:  if_true8 98
+   96:  drop
+   97:  push_0 0
+   98:  put_loc2 2: i
+   99:  get_var Number
+  104:  get_loc0 0: t
+  105:  get_field rotation
+  110:  call1 1
+  111:  dup
+  112:  if_true8 116
+  114:  drop
+  115:  push_0 0
+  116:  put_loc3 3: s
+  117:  push_i8 90
+  119:  get_loc3 3: s
+  120:  strict_eq
+  121:  dup
+  122:  if_true8 130
+  124:  drop
+  125:  push_i16 270
+  128:  get_loc3 3: s
+  129:  strict_eq
+  130:  if_false8 145
+  132:  get_loc1 1: e
+  133:  get_loc2 2: i
+  134:  lt
+  135:  if_false8 145
+  137:  get_loc1 1: e
+  138:  put_loc8 4: a
+  140:  get_loc2 2: i
+  141:  put_loc1 1: e
+  142:  get_loc8 4: a
+  144:  put_loc2 2: i
+  145:  get_loc8 6: this
+  147:  object
+  148:  get_var Math
+  153:  get_field2 max
+  158:  get_loc1 1: e
+  159:  get_loc2 2: i
+  160:  call_method 2
+  163:  define_field w
+  168:  get_var Math
+  173:  get_field2 min
+  178:  get_loc1 1: e
+  179:  get_loc2 2: i
+  180:  call_method 2
+  183:  define_field h
+  188:  get_loc3 3: s
+  189:  define_field rotation
+  194:  put_field phys
+  199:  drop
+  200:  return_undef
+  201:  put_loc8 5: t
+  203:  catch 210
+  208:  drop
+  209:  return_undef
+  210:  throw
+  211:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var i
+    3: catch t [level:4 next:-1]
+    4: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc8 4: this
+    3:  get_loc8 4: this
+    5:  put_loc0 0: t
+    6:  catch 122
+   11:  push_atom_value undefined
+   16:  get_var_undef weex
+   21:  typeof
+   22:  neq
+   23:  if_false8 45
+   25:  get_var weex
+   30:  get_field2 requireModule
+   35:  push_atom_value dom
+   40:  call_method 1
+   43:  goto8 46
+   45:  null
+   46:  set_loc1 1: e
+   47:  lnot
+   48:  dup
+   49:  if_true8 59
+   51:  drop
+   52:  get_loc1 1: e
+   53:  get_field getComponentRect
+   58:  lnot
+   59:  if_false8 63
+   61:  drop
+   62:  return_undef
+   63:  fclosure8 0: [bytecode <null>]
+   65:  set_name i
+   70:  set_loc2 2: i
+   71:  push_atom_value rootProbe
+   76:  fclosure8 1: [bytecode <null>]
+   78:  call2 2
+   79:  drop
+   80:  get_loc2 2: i
+   81:  push_atom_value testBox
+   86:  fclosure8 2: [bytecode <null>]
+   88:  call2 2
+   89:  drop
+   90:  get_loc2 2: i
+   91:  push_atom_value measureLine
+   96:  fclosure8 3: [bytecode <null>]
+   98:  call2 2
+   99:  drop
+  100:  get_loc2 2: i
+  101:  push_atom_value kbInner
+  106:  fclosure8 4: [bytecode <null>]
+  108:  call2 2
+  109:  drop
+  110:  get_loc2 2: i
+  111:  push_atom_value dtLeftProbe
+  116:  fclosure8 5: [bytecode <null>]
+  118:  call2 2
+  119:  drop
+  120:  drop
+  121:  return_undef
+  122:  put_loc3 3: t
+  123:  catch 130
+  128:  drop
+  129:  return_undef
+  130:  throw
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  args: i s
+  closure vars:
+    0: t local:loc0 var
+    1: e local:loc1 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field $refs
+    6:  get_arg0 0: i
+    7:  get_array_el
+    8:  dup
+    9:  if_false8 31
+   11:  drop
+   12:  get_var_ref1 1: e
+   13:  get_field2 getComponentRect
+   18:  get_var_ref0 0: t
+   19:  get_field $refs
+   24:  get_arg0 0: i
+   25:  get_array_el
+   26:  fclosure8 0: [bytecode <null>]
+   28:  call_method 2
+   31:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: s local:arg1 var
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: t
+    1:  dup
+    2:  if_false8 33
+    4:  drop
+    5:  get_arg0 0: t
+    6:  get_field result
+   11:  dup
+   12:  if_false8 33
+   14:  drop
+   15:  get_arg0 0: t
+   16:  get_field size
+   21:  dup
+   22:  if_false8 33
+   24:  drop
+   25:  get_var_ref0 0: s
+   26:  get_arg0 0: t
+   27:  get_field size
+   32:  call1 1
+   33:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 6
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  object
+    2:  get_var Math
+    7:  get_field2 round
+   12:  push_i8 10
+   14:  get_arg0 0: e
+   15:  get_field width
+   20:  mul
+   21:  call_method 1
+   24:  push_i8 10
+   26:  div
+   27:  define_field width
+   32:  get_var Math
+   37:  get_field2 round
+   42:  push_i8 10
+   44:  get_arg0 0: e
+   45:  get_field height
+   50:  mul
+   51:  call_method 1
+   54:  push_i8 10
+   56:  div
+   57:  define_field height
+   62:  put_field rootRect
+   67:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_var Math
+    6:  get_field2 round
+   11:  push_i8 10
+   13:  get_arg0 0: e
+   14:  get_field width
+   19:  mul
+   20:  call_method 1
+   23:  push_i8 10
+   25:  div
+   26:  put_field testBoxW
+   31:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_var Math
+    6:  get_field2 round
+   11:  push_i8 100
+   13:  get_arg0 0: e
+   14:  get_field width
+   19:  mul
+   20:  call_method 1
+   23:  push_i8 100
+   25:  div
+   26:  put_field kbLineW
+   31:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_var Math
+    6:  get_field2 round
+   11:  push_i8 10
+   13:  get_arg0 0: e
+   14:  get_field width
+   19:  mul
+   20:  call_method 1
+   23:  push_i8 10
+   25:  div
+   26:  put_field kbInnerW
+   31:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_var Math
+    6:  get_field2 round
+   11:  push_i8 10
+   13:  get_arg0 0: e
+   14:  get_field width
+   19:  mul
+   20:  call_method 1
+   23:  push_i8 10
+   25:  div
+   26:  put_field dtLeftW
+   31:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_arg0 0: t
+    4:  put_field testW
+    9:  get_loc1 1: this
+   10:  put_loc0 0: e
+   11:  get_var setTimeout
+   16:  fclosure8 0: [bytecode <null>]
+   18:  push_i8 120
+   20:  call2 2
+   21:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: e local:loc0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: e
+    1:  get_field2 measureRects
+    6:  call_method 0
+    9:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  push_atom_value "-"
+    5:  get_arg0 0: t
+    6:  strict_eq
+    7:  dup
+    8:  if_true8 14
+   10:  drop
+   11:  null
+   12:  get_arg0 0: t
+   13:  eq
+   14:  if_false8 22
+   16:  push_atom_value "-"
+   21:  return
+   22:  get_var String
+   27:  get_arg0 0: t
+   28:  call1 1
+   29:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  stack_size: 5
+  opcodes:
+    0:  push_atom_value undefined
+    5:  get_var_undef $falcon
+   10:  typeof
+   11:  neq
+   12:  dup
+   13:  if_false8 75
+   15:  drop
+   16:  get_var $falcon
+   21:  dup
+   22:  if_false8 75
+   24:  drop
+   25:  push_atom_value function
+   30:  get_var $falcon
+   35:  get_field navTo
+   40:  typeof
+   41:  eq
+   42:  dup
+   43:  if_false8 75
+   45:  drop
+   46:  get_var $falcon
+   51:  get_field2 navTo
+   56:  push_atom_value desktop
+   61:  object
+   62:  push_atom_value apps_widthtest
+   67:  define_field from
+   72:  call_method 2
+   75:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var i
+    3: var this
+  stack_size: 36
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  set_loc0 0: t
+    4:  get_field $createElement
+    9:  put_loc1 1: e
+   10:  get_loc0 0: t
+   11:  get_field _self
+   16:  get_field _c
+   21:  dup
+   22:  if_true8 26
+   24:  drop
+   25:  get_loc1 1: e
+   26:  set_loc2 2: i
+   27:  push_atom_value div
+   32:  object
+   33:  push_atom_value wrapper
+   38:  array_from 1
+   41:  define_field staticClass
+   46:  get_loc2 2: i
+   47:  push_atom_value div
+   52:  object
+   53:  push_atom_value header
+   58:  array_from 1
+   61:  define_field staticClass
+   66:  get_loc2 2: i
+   67:  push_atom_value div
+   72:  object
+   73:  push_atom_value "hdr-btn"
+   78:  array_from 1
+   81:  define_field staticClass
+   86:  object
+   87:  get_loc0 0: t
+   88:  get_field goBack
+   93:  define_field click
+   98:  define_field on
+  103:  get_loc2 2: i
+  104:  push_atom_value text
+  109:  object
+  110:  push_atom_value "hdr-btn-txt"
+  115:  array_from 1
+  118:  define_field staticClass
+  123:  get_loc0 0: t
+  124:  get_field2 _v
+  129:  push_atom_value "\u00e2\u0086\u0090 \u00e8\u00bf\u0094\u00e5\u009b\u009e"
+  134:  call_method 1
+  137:  array_from 1
+  140:  call3 3
+  141:  array_from 1
+  144:  call3 3
+  145:  get_loc2 2: i
+  146:  push_atom_value text
+  151:  object
+  152:  push_atom_value "hdr-title"
+  157:  array_from 1
+  160:  define_field staticClass
+  165:  get_loc0 0: t
+  166:  get_field2 _v
+  171:  push_atom_value "\u00e5\u00ae\u00bd\u00e5\u00ba\u00a6\u00e8\u00ae\u00a1\u00e7\u00ae\u0097\u00e5\u00ae\u009e\u00e9\u00aa\u008c\u00e5\u009c\u00ba"
+  176:  call_method 1
+  179:  array_from 1
+  182:  call3 3
+  183:  get_loc2 2: i
+  184:  push_atom_value div
+  189:  object
+  190:  push_atom_value "hdr-btn"
+  195:  array_from 1
+  198:  define_field staticClass
+  203:  object
+  204:  get_loc0 0: t
+  205:  get_field measureAll
+  210:  define_field click
+  215:  define_field on
+  220:  get_loc2 2: i
+  221:  push_atom_value text
+  226:  object
+  227:  push_atom_value "hdr-btn-txt"
+  232:  array_from 1
+  235:  define_field staticClass
+  240:  get_loc0 0: t
+  241:  get_field2 _v
+  246:  push_atom_value "\u00e9\u0087\u008d\u00e6\u0096\u00b0\u00e6\u00b5\u008b\u00e9\u0087\u008f"
+  251:  call_method 1
+  254:  array_from 1
+  257:  call3 3
+  258:  array_from 1
+  261:  call3 3
+  262:  array_from 3
+  265:  call3 3
+  266:  get_loc2 2: i
+  267:  push_atom_value div
+  272:  object
+  273:  push_atom_value body
+  278:  array_from 1
+  281:  define_field staticClass
+  286:  get_loc2 2: i
+  287:  push_atom_value scroller
+  292:  object
+  293:  push_atom_value col
+  298:  array_from 1
+  301:  define_field staticClass
+  306:  get_loc2 2: i
+  307:  push_atom_value text
+  312:  object
+  313:  push_atom_value "sec-title"
+  318:  array_from 1
+  321:  define_field staticClass
+  326:  get_loc0 0: t
+  327:  get_field2 _v
+  332:  push_atom_value "\u00e2\u0091\u00a0 \u00e6\u009d\u00a5\u00e6\u00ba\u0090\u00e5\u008e\u009f\u00e5\u00a7\u008b\u00e5\u0080\u00bc"
+  337:  call_method 1
+  340:  array_from 1
+  343:  call3 3
+  344:  get_loc2 2: i
+  345:  push_atom_value text
+  350:  object
+  351:  push_atom_value kv
+  356:  array_from 1
+  359:  define_field staticClass
+  364:  get_loc0 0: t
+  365:  get_field2 _v
+  370:  push_atom_value "weex\u00e8\u00ae\u00be\u00e8\u00ae\u00a1: "
+  375:  get_loc0 0: t
+  376:  get_field2 _s
+  381:  get_loc0 0: t
+  382:  get_field2 fmt
+  387:  get_loc0 0: t
+  388:  get_field env
+  393:  get_field deviceWidth
+  398:  call_method 1
+  401:  call_method 1
+  404:  add
+  405:  push_atom_value " x "
+  410:  add
+  411:  get_loc0 0: t
+  412:  get_field2 _s
+  417:  get_loc0 0: t
+  418:  get_field2 fmt
+  423:  get_loc0 0: t
+  424:  get_field env
+  429:  get_field deviceHeight
+  434:  call_method 1
+  437:  call_method 1
+  440:  add
+  441:  call_method 1
+  444:  array_from 1
+  447:  call3 3
+  448:  get_loc2 2: i
+  449:  push_atom_value text
+  454:  object
+  455:  push_atom_value kv
+  460:  array_from 1
+  463:  define_field staticClass
+  468:  get_loc0 0: t
+  469:  get_field2 _v
+  474:  push_atom_value "env.scale: "
+  479:  get_loc0 0: t
+  480:  get_field2 _s
+  485:  get_loc0 0: t
+  486:  get_field2 fmt
+  491:  get_loc0 0: t
+  492:  get_field env
+  497:  get_field scale
+  502:  call_method 1
+  505:  call_method 1
+  508:  add
+  509:  push_atom_value "  dpr: "
+  514:  add
+  515:  get_loc0 0: t
+  516:  get_field2 _s
+  521:  get_loc0 0: t
+  522:  get_field2 fmt
+  527:  get_loc0 0: t
+  528:  get_field env
+  533:  get_field dpr
+  538:  call_method 1
+  541:  call_method 1
+  544:  add
+  545:  call_method 1
+  548:  array_from 1
+  551:  call3 3
+  552:  get_loc2 2: i
+  553:  push_atom_value text
+  558:  object
+  559:  push_atom_value kv
+  564:  array_from 1
+  567:  define_field staticClass
+  572:  get_loc0 0: t
+  573:  get_field2 _v
+  578:  push_atom_value "\u00e7\u0089\u00a9\u00e7\u0090\u0086Shell: "
+  583:  get_loc0 0: t
+  584:  get_field2 _s
+  589:  get_loc0 0: t
+  590:  get_field2 fmt
+  595:  get_loc0 0: t
+  596:  get_field phys
+  601:  get_field w
+  606:  call_method 1
+  609:  call_method 1
+  612:  add
+  613:  push_atom_value " x "
+  618:  add
+  619:  get_loc0 0: t
+  620:  get_field2 _s
+  625:  get_loc0 0: t
+  626:  get_field2 fmt
+  631:  get_loc0 0: t
+  632:  get_field phys
+  637:  get_field h
+  642:  call_method 1
+  645:  call_method 1
+  648:  add
+  649:  push_atom_value " rot="
+  654:  add
+  655:  get_loc0 0: t
+  656:  get_field2 _s
+  661:  get_loc0 0: t
+  662:  get_field2 fmt
+  667:  get_loc0 0: t
+  668:  get_field phys
+  673:  get_field rotation
+  678:  call_method 1
+  681:  call_method 1
+  684:  add
+  685:  call_method 1
+  688:  array_from 1
+  691:  call3 3
+  692:  get_loc2 2: i
+  693:  push_atom_value text
+  698:  object
+  699:  push_atom_value kv
+  704:  array_from 1
+  707:  define_field staticClass
+  712:  get_loc0 0: t
+  713:  get_field2 _v
+  718:  push_atom_value "\u00e8\u00a7\u0086\u00e5\u008f\u00a3\u00e5\u00ae\u009e\u00e6\u00b5\u008b(\u00e6\u00a0\u00b9): "
+  723:  get_loc0 0: t
+  724:  get_field2 _s
+  729:  get_loc0 0: t
+  730:  get_field2 fmt
+  735:  get_loc0 0: t
+  736:  get_field rootRect
+  741:  get_field width
+  746:  call_method 1
+  749:  call_method 1
+  752:  add
+  753:  call_method 1
+  756:  array_from 1
+  759:  call3 3
+  760:  get_loc2 2: i
+  761:  push_atom_value text
+  766:  object
+  767:  push_atom_value kv
+  772:  push_atom_value hl
+  777:  array_from 2
+  780:  define_field staticClass
+  785:  get_loc0 0: t
+  786:  get_field2 _v
+  791:  push_atom_value "\u00e7\u0089\u00a9\u00e7\u0090\u0086\u00e2\u0088\u0092\u00e8\u00a7\u0086\u00e5\u008f\u00a3\u00e5\u0081\u008f\u00e5\u00b7\u00ae: "
+  796:  get_loc0 0: t
+  797:  get_field2 _s
+  802:  get_loc0 0: t
+  803:  get_field2 fmt
+  808:  get_loc0 0: t
+  809:  get_field unitOffset
+  814:  call_method 1
+  817:  call_method 1
+  820:  add
+  821:  call_method 1
+  824:  array_from 1
+  827:  call3 3
+  828:  get_loc0 0: t
+  829:  get_field shellAvail
+  834:  if_false8 847
+  836:  get_loc0 0: t
+  837:  get_field2 _e
+  842:  call_method 0
+  845:  goto8 885
+  847:  get_loc2 2: i
+  848:  push_atom_value text
+  853:  object
+  854:  push_atom_value kv
+  859:  array_from 1
+  862:  define_field staticClass
+  867:  get_loc0 0: t
+  868:  get_field2 _v
+  873:  push_atom_value "\u00ef\u00bc\u0088Shell \u00e4\u00b8\u008d\u00e5\u008f\u00af\u00e7\u0094\u00a8\u00ef\u00bc\u008c\u00e7\u0089\u00a9\u00e7\u0090\u0086\u00e8\u00a1\u008c\u00e6\u0097\u00a0\u00e6\u0095\u0088\u00ef\u00bc\u0089"
+  878:  call_method 1
+  881:  array_from 1
+  884:  call3 3
+  885:  get_loc2 2: i
+  886:  push_atom_value text
+  891:  object
+  892:  push_atom_value "sec-title"
+  897:  push_atom_value mt10
+  902:  array_from 2
+  905:  define_field staticClass
+  910:  get_loc0 0: t
+  911:  get_field2 _v
+  916:  push_atom_value "\u00e2\u0091\u00a1 \u00e5\u008d\u0095\u00e4\u00bd\u008d\u00e6\u00a0\u00a1\u00e5\u0087\u0086\u00ef\u00bc\u0088\u00e5\u00a3\u00b0\u00e6\u0098\u008e vs \u00e5\u00ae\u009e\u00e6\u00b5\u008b\u00ef\u00bc\u0089"
+  921:  call_method 1
+  924:  array_from 1
+  927:  call3 3
+  928:  get_loc2 2: i
+  929:  push_atom_value text
+  934:  object
+  935:  push_atom_value kv
+  940:  array_from 1
+  943:  define_field staticClass
+  948:  get_loc0 0: t
+  949:  get_field2 _v
+  954:  push_atom_value "\u00e6\u00b5\u008b\u00e8\u00af\u0095\u00e7\u009b\u0092\u00e5\u00a3\u00b0\u00e6\u0098\u008e "
+  959:  get_loc0 0: t
+  960:  get_field2 _s
+  965:  get_loc0 0: t
+  966:  get_field testW
+  971:  call_method 1
+  974:  add
+  975:  push_atom_value "px \u00e2\u0086\u0092 \u00e5\u00ae\u009e\u00e6\u00b5\u008b "
+  980:  add
+  981:  get_loc0 0: t
+  982:  get_field2 _s
+  987:  get_loc0 0: t
+  988:  get_field2 fmt
+  993:  get_loc0 0: t
+  994:  get_field testBoxW
+  999:  call_method 1
+ 1002:  call_method 1
+ 1005:  add
+ 1006:  call_method 1
+ 1009:  array_from 1
+ 1012:  call3 3
+ 1013:  get_loc2 2: i
+ 1014:  push_atom_value text
+ 1019:  object
+ 1020:  push_atom_value kv
+ 1025:  array_from 1
+ 1028:  define_field staticClass
+ 1033:  push_0 0
+ 1034:  get_loc0 0: t
+ 1035:  get_field testDeviation
+ 1040:  strict_eq
+ 1041:  dup
+ 1042:  if_true8 1054
+ 1044:  drop
+ 1045:  push_const8 0: 1"0"
+ 1047:  get_loc0 0: t
+ 1048:  get_field testDeviation
+ 1053:  strict_eq
+ 1054:  if_false8 1063
+ 1056:  push_atom_value hl
+ 1061:  goto8 1068
+ 1063:  push_atom_value warn
+ 1068:  define_field class
+ 1073:  get_loc0 0: t
+ 1074:  get_field2 _v
+ 1079:  push_atom_value "\u00e5\u0081\u008f\u00e5\u00b7\u00ae: "
+ 1084:  get_loc0 0: t
+ 1085:  get_field2 _s
+ 1090:  get_loc0 0: t
+ 1091:  get_field2 fmt
+ 1096:  get_loc0 0: t
+ 1097:  get_field testDeviation
+ 1102:  call_method 1
+ 1105:  call_method 1
+ 1108:  add
+ 1109:  push_atom_value px
+ 1114:  add
+ 1115:  call_method 1
+ 1118:  array_from 1
+ 1121:  call3 3
+ 1122:  get_loc2 2: i
+ 1123:  push_atom_value text
+ 1128:  object
+ 1129:  push_atom_value kv
+ 1134:  array_from 1
+ 1137:  define_field staticClass
+ 1142:  get_loc0 0: t
+ 1143:  get_field2 _v
+ 1148:  push_atom_value "\u00e5\u0081\u008f\u00e5\u00b7\u00ae=0 \u00e2\u0086\u0092 getComponentRect \u00e6\u0098\u00af\u00e8\u00ae\u00be\u00e8\u00ae\u00a1\u00e5\u009d\u0090\u00e6\u00a0\u0087"
+ 1153:  call_method 1
+ 1156:  array_from 1
+ 1159:  call3 3
+ 1160:  get_loc2 2: i
+ 1161:  push_atom_value div
+ 1166:  object
+ 1167:  push_atom_value row
+ 1172:  push_atom_value mt6
+ 1177:  array_from 2
+ 1180:  define_field staticClass
+ 1185:  get_loc2 2: i
+ 1186:  push_atom_value div
+ 1191:  object
+ 1192:  push_atom_value "act-btn"
+ 1197:  array_from 1
+ 1200:  define_field staticClass
+ 1205:  object
+ 1206:  fclosure8 1: [bytecode <null>]
+ 1208:  set_name click
+ 1213:  define_field click
+ 1218:  define_field on
+ 1223:  get_loc2 2: i
+ 1224:  push_atom_value text
+ 1229:  object
+ 1230:  push_atom_value "act-txt"
+ 1235:  array_from 1
+ 1238:  define_field staticClass
+ 1243:  get_loc0 0: t
+ 1244:  get_field2 _v
+ 1249:  push_const8 2: 1"50"
+ 1251:  call_method 1
+ 1254:  array_from 1
+ 1257:  call3 3
+ 1258:  array_from 1
+ 1261:  call3 3
+ 1262:  get_loc2 2: i
+ 1263:  push_atom_value div
+ 1268:  object
+ 1269:  push_atom_value "act-btn"
+ 1274:  array_from 1
+ 1277:  define_field staticClass
+ 1282:  object
+ 1283:  fclosure8 3: [bytecode <null>]
+ 1285:  set_name click
+ 1290:  define_field click
+ 1295:  define_field on
+ 1300:  get_loc2 2: i
+ 1301:  push_atom_value text
+ 1306:  object
+ 1307:  push_atom_value "act-txt"
+ 1312:  array_from 1
+ 1315:  define_field staticClass
+ 1320:  get_loc0 0: t
+ 1321:  get_field2 _v
+ 1326:  push_const8 4: 1"100"
+ 1328:  call_method 1
+ 1331:  array_from 1
+ 1334:  call3 3
+ 1335:  array_from 1
+ 1338:  call3 3
+ 1339:  get_loc2 2: i
+ 1340:  push_atom_value div
+ 1345:  object
+ 1346:  push_atom_value "act-btn"
+ 1351:  array_from 1
+ 1354:  define_field staticClass
+ 1359:  object
+ 1360:  fclosure8 5: [bytecode <null>]
+ 1362:  set_name click
+ 1367:  define_field click
+ 1372:  define_field on
+ 1377:  get_loc2 2: i
+ 1378:  push_atom_value text
+ 1383:  object
+ 1384:  push_atom_value "act-txt"
+ 1389:  array_from 1
+ 1392:  define_field staticClass
+ 1397:  get_loc0 0: t
+ 1398:  get_field2 _v
+ 1403:  push_const8 6: 1"200"
+ 1405:  call_method 1
+ 1408:  array_from 1
+ 1411:  call3 3
+ 1412:  array_from 1
+ 1415:  call3 3
+ 1416:  get_loc2 2: i
+ 1417:  push_atom_value div
+ 1422:  object
+ 1423:  push_atom_value "act-btn"
+ 1428:  array_from 1
+ 1431:  define_field staticClass
+ 1436:  object
+ 1437:  fclosure8 7: [bytecode <null>]
+ 1439:  set_name click
+ 1444:  define_field click
+ 1449:  define_field on
+ 1454:  get_loc2 2: i
+ 1455:  push_atom_value text
+ 1460:  object
+ 1461:  push_atom_value "act-txt"
+ 1466:  array_from 1
+ 1469:  define_field staticClass
+ 1474:  get_loc0 0: t
+ 1475:  get_field2 _v
+ 1480:  push_const8 8: 1"300"
+ 1482:  call_method 1
+ 1485:  array_from 1
+ 1488:  call3 3
+ 1489:  array_from 1
+ 1492:  call3 3
+ 1493:  array_from 4
+ 1496:  call3 3
+ 1497:  array_from 12
+ 1500:  call3 3
+ 1501:  get_loc2 2: i
+ 1502:  push_atom_value scroller
+ 1507:  object
+ 1508:  push_atom_value col
+ 1513:  array_from 1
+ 1516:  define_field staticClass
+ 1521:  get_loc2 2: i
+ 1522:  push_atom_value text
+ 1527:  object
+ 1528:  push_atom_value "sec-title"
+ 1533:  array_from 1
+ 1536:  define_field staticClass
+ 1541:  get_loc0 0: t
+ 1542:  get_field2 _v
+ 1547:  push_atom_value "\u00e2\u0091\u00a2 keyboard \u00e5\u00ad\u0097\u00e7\u00ac\u00a6\u00e5\u00ae\u00bd\u00e5\u00ba\u00a6\u00e9\u00aa\u008c\u00e8\u00af\u0081"
+ 1552:  call_method 1
+ 1555:  array_from 1
+ 1558:  call3 3
+ 1559:  get_loc2 2: i
+ 1560:  push_atom_value text
+ 1565:  object
+ 1566:  push_atom_value kv
+ 1571:  array_from 1
+ 1574:  define_field staticClass
+ 1579:  get_loc0 0: t
+ 1580:  get_field2 _v
+ 1585:  push_atom_value "kb.screenWidth: "
+ 1590:  get_loc0 0: t
+ 1591:  get_field2 _s
+ 1596:  get_loc0 0: t
+ 1597:  get_field2 fmt
+ 1602:  get_loc0 0: t
+ 1603:  get_field kbLayout
+ 1608:  get_field screenWidth
+ 1613:  call_method 1
+ 1616:  call_method 1
+ 1619:  add
+ 1620:  get_loc0 0: t
+ 1621:  get_field2 _s
+ 1626:  get_loc0 0: t
+ 1627:  get_field kbLayout
+ 1632:  get_field compact
+ 1637:  if_false8 1646
+ 1639:  push_atom_value " (compact)"
+ 1644:  goto8 1647
+ 1646:  push_empty_string
+ 1647:  call_method 1
+ 1650:  add
+ 1651:  call_method 1
+ 1654:  array_from 1
+ 1657:  call3 3
+ 1658:  get_loc2 2: i
+ 1659:  push_atom_value text
+ 1664:  object
+ 1665:  push_atom_value kv
+ 1670:  array_from 1
+ 1673:  define_field staticClass
+ 1678:  get_loc0 0: t
+ 1679:  get_field2 _v
+ 1684:  push_atom_value "leftWidth: "
+ 1689:  get_loc0 0: t
+ 1690:  get_field2 _s
+ 1695:  get_loc0 0: t
+ 1696:  get_field2 fmt
+ 1701:  get_loc0 0: t
+ 1702:  get_field kbLayout
+ 1707:  get_field leftWidth
+ 1712:  call_method 1
+ 1715:  call_method 1
+ 1718:  add
+ 1719:  push_atom_value " \u00e2\u0086\u0092 styleLeftWidth: "
+ 1724:  add
+ 1725:  get_loc0 0: t
+ 1726:  get_field2 _s
+ 1731:  get_loc0 0: t
+ 1732:  get_field2 fmt
+ 1737:  get_loc0 0: t
+ 1738:  get_field kbLayout
+ 1743:  get_field styleLeftWidth
+ 1748:  call_method 1
+ 1751:  call_method 1
+ 1754:  add
+ 1755:  call_method 1
+ 1758:  array_from 1
+ 1761:  call3 3
+ 1762:  get_loc2 2: i
+ 1763:  push_atom_value text
+ 1768:  object
+ 1769:  push_atom_value kv
+ 1774:  array_from 1
+ 1777:  define_field staticClass
+ 1782:  get_loc0 0: t
+ 1783:  get_field2 _v
+ 1788:  push_atom_value "\u00e6\u00b5\u008b\u00e9\u0087\u008f\u00e8\u00a1\u008c20\u00c3\u0097'0' \u00e5\u00ae\u009e\u00e6\u00b5\u008b: "
+ 1793:  get_loc0 0: t
+ 1794:  get_field2 _s
+ 1799:  get_loc0 0: t
+ 1800:  get_field2 fmt
+ 1805:  get_loc0 0: t
+ 1806:  get_field kbLineW
+ 1811:  call_method 1
+ 1814:  call_method 1
+ 1817:  add
+ 1818:  call_method 1
+ 1821:  array_from 1
+ 1824:  call3 3
+ 1825:  get_loc2 2: i
+ 1826:  push_atom_value text
+ 1831:  object
+ 1832:  push_atom_value kv
+ 1837:  array_from 1
+ 1840:  define_field staticClass
+ 1845:  get_loc0 0: t
+ 1846:  get_field2 _v
+ 1851:  push_atom_value "display-inner \u00e5\u00ae\u009e\u00e6\u00b5\u008b: "
+ 1856:  get_loc0 0: t
+ 1857:  get_field2 _s
+ 1862:  get_loc0 0: t
+ 1863:  get_field2 fmt
+ 1868:  get_loc0 0: t
+ 1869:  get_field kbInnerW
+ 1874:  call_method 1
+ 1877:  call_method 1
+ 1880:  add
+ 1881:  push_atom_value "\u00ef\u00bc\u0088\u00e9\u00a2\u0084\u00e6\u009c\u009f "
+ 1886:  add
+ 1887:  get_loc0 0: t
+ 1888:  get_field2 _s
+ 1893:  get_loc0 0: t
+ 1894:  get_field2 fmt
+ 1899:  get_loc0 0: t
+ 1900:  get_field kbLayout
+ 1905:  get_field styleLeftWidth
+ 1910:  push_i8 20
+ 1912:  sub
+ 1913:  call_method 1
+ 1916:  call_method 1
+ 1919:  add
+ 1920:  push_atom_value "\u00ef\u00bc\u0089"
+ 1925:  add
+ 1926:  call_method 1
+ 1929:  array_from 1
+ 1932:  call3 3
+ 1933:  get_loc2 2: i
+ 1934:  push_atom_value text
+ 1939:  object
+ 1940:  push_atom_value "sec-title"
+ 1945:  push_atom_value mt10
+ 1950:  array_from 2
+ 1953:  define_field staticClass
+ 1958:  get_loc0 0: t
+ 1959:  get_field2 _v
+ 1964:  push_atom_value "charWidth \u00e4\u00b8\u00a4\u00e7\u00a7\u008d\u00e7\u00ae\u0097\u00e6\u00b3\u0095"
+ 1969:  call_method 1
+ 1972:  array_from 1
+ 1975:  call3 3
+ 1976:  get_loc2 2: i
+ 1977:  push_atom_value text
+ 1982:  object
+ 1983:  push_atom_value kv
+ 1988:  array_from 1
+ 1991:  define_field staticClass
+ 1996:  get_loc0 0: t
+ 1997:  get_field2 _v
+ 2002:  push_atom_value "\u00e7\u009b\u00b4\u00e9\u0099\u00a4\u00e6\u00b3\u0095(\u00e8\u00a1\u008c\u00e5\u00ae\u00bd/20): "
+ 2007:  get_loc0 0: t
+ 2008:  get_field2 _s
+ 2013:  get_loc0 0: t
+ 2014:  get_field2 fmt
+ 2019:  get_loc0 0: t
+ 2020:  get_field charWidthDirect
+ 2025:  call_method 1
+ 2028:  call_method 1
+ 2031:  add
+ 2032:  call_method 1
+ 2035:  array_from 1
+ 2038:  call3 3
+ 2039:  get_loc2 2: i
+ 2040:  push_atom_value text
+ 2045:  object
+ 2046:  push_atom_value kv
+ 2051:  push_atom_value hl
+ 2056:  array_from 2
+ 2059:  define_field staticClass
+ 2064:  get_loc0 0: t
+ 2065:  get_field2 _v
+ 2070:  push_atom_value "\u00e6\u00af\u0094\u00e5\u0080\u00bc\u00e6\u00b3\u0095(keyboard\u00e7\u008e\u00b0\u00e7\u0094\u00a8): "
+ 2075:  get_loc0 0: t
+ 2076:  get_field2 _s
+ 2081:  get_loc0 0: t
+ 2082:  get_field2 fmt
+ 2087:  get_loc0 0: t
+ 2088:  get_field charWidthRatio
+ 2093:  call_method 1
+ 2096:  call_method 1
+ 2099:  add
+ 2100:  call_method 1
+ 2103:  array_from 1
+ 2106:  call3 3
+ 2107:  get_loc2 2: i
+ 2108:  push_atom_value text
+ 2113:  object
+ 2114:  push_atom_value kv
+ 2119:  array_from 1
+ 2122:  define_field staticClass
+ 2127:  get_loc0 0: t
+ 2128:  get_field2 _v
+ 2133:  push_atom_value "\u00e5\u0088\u0097\u00e6\u0095\u00b0 \u00e7\u009b\u00b4\u00e9\u0099\u00a4: "
+ 2138:  get_loc0 0: t
+ 2139:  get_field2 _s
+ 2144:  get_loc0 0: t
+ 2145:  get_field2 fmt
+ 2150:  get_loc0 0: t
+ 2151:  get_field columnsDirect
+ 2156:  call_method 1
+ 2159:  call_method 1
+ 2162:  add
+ 2163:  push_atom_value " / \u00e6\u00af\u0094\u00e5\u0080\u00bc: "
+ 2168:  add
+ 2169:  get_loc0 0: t
+ 2170:  get_field2 _s
+ 2175:  get_loc0 0: t
+ 2176:  get_field2 fmt
+ 2181:  get_loc0 0: t
+ 2182:  get_field columnsRatio
+ 2187:  call_method 1
+ 2190:  call_method 1
+ 2193:  add
+ 2194:  call_method 1
+ 2197:  array_from 1
+ 2200:  call3 3
+ 2201:  get_loc2 2: i
+ 2202:  push_atom_value text
+ 2207:  object
+ 2208:  push_atom_value kv
+ 2213:  push_atom_value hl
+ 2218:  array_from 2
+ 2221:  define_field staticClass
+ 2226:  get_loc0 0: t
+ 2227:  get_field2 _v
+ 2232:  get_loc0 0: t
+ 2233:  get_field2 _s
+ 2238:  get_loc0 0: t
+ 2239:  get_field kbVerdict
+ 2244:  call_method 1
+ 2247:  call_method 1
+ 2250:  array_from 1
+ 2253:  call3 3
+ 2254:  array_from 10
+ 2257:  call3 3
+ 2258:  get_loc2 2: i
+ 2259:  push_atom_value scroller
+ 2264:  object
+ 2265:  push_atom_value col
+ 2270:  array_from 1
+ 2273:  define_field staticClass
+ 2278:  get_loc2 2: i
+ 2279:  push_atom_value text
+ 2284:  object
+ 2285:  push_atom_value "sec-title"
+ 2290:  array_from 1
+ 2293:  define_field staticClass
+ 2298:  get_loc0 0: t
+ 2299:  get_field2 _v
+ 2304:  push_atom_value "\u00e2\u0091\u00a3 bilis \u00e5\u0086\u0085\u00e5\u00b5\u008c\u00e6\u0092\u00ad\u00e6\u0094\u00be\u00e5\u0099\u00a8\u00e5\u00ae\u00bd\u00e5\u00ba\u00a6"
+ 2309:  call_method 1
+ 2312:  array_from 1
+ 2315:  call3 3
+ 2316:  get_loc2 2: i
+ 2317:  push_atom_value text
+ 2322:  object
+ 2323:  push_atom_value kv
+ 2328:  array_from 1
+ 2331:  define_field staticClass
+ 2336:  get_loc0 0: t
+ 2337:  get_field2 _v
+ 2342:  push_atom_value "bilis.screenWidth(\u00e7\u0089\u00a9\u00e7\u0090\u0086): "
+ 2347:  get_loc0 0: t
+ 2348:  get_field2 _s
+ 2353:  get_loc0 0: t
+ 2354:  get_field2 fmt
+ 2359:  get_loc0 0: t
+ 2360:  get_field phys
+ 2365:  get_field w
+ 2370:  call_method 1
+ 2373:  call_method 1
+ 2376:  add
+ 2377:  call_method 1
+ 2380:  array_from 1
+ 2383:  call3 3
+ 2384:  get_loc2 2: i
+ 2385:  push_atom_value text
+ 2390:  object
+ 2391:  push_atom_value kv
+ 2396:  array_from 1
+ 2399:  define_field staticClass
+ 2404:  get_loc0 0: t
+ 2405:  get_field2 _v
+ 2410:  push_atom_value "A. \u00e5\u0085\u00a8\u00e5\u00b1\u008f: "
+ 2415:  get_loc0 0: t
+ 2416:  get_field2 _s
+ 2421:  get_loc0 0: t
+ 2422:  get_field2 fmt
+ 2427:  get_loc0 0: t
+ 2428:  get_field propFull
+ 2433:  call_method 1
+ 2436:  call_method 1
+ 2439:  add
+ 2440:  call_method 1
+ 2443:  array_from 1
+ 2446:  call3 3
+ 2447:  get_loc2 2: i
+ 2448:  push_atom_value text
+ 2453:  object
+ 2454:  push_atom_value kv
+ 2459:  array_from 1
+ 2462:  define_field staticClass
+ 2467:  get_loc0 0: t
+ 2468:  get_field2 _v
+ 2473:  push_atom_value "B. w\u00e2\u0088\u0092280(\u00e6\u009c\u00b4\u00e7\u00b4\u00a0): "
+ 2478:  get_loc0 0: t
+ 2479:  get_field2 _s
+ 2484:  get_loc0 0: t
+ 2485:  get_field2 fmt
+ 2490:  get_loc0 0: t
+ 2491:  get_field naiveLeft
+ 2496:  call_method 1
+ 2499:  call_method 1
+ 2502:  add
+ 2503:  call_method 1
+ 2506:  array_from 1
+ 2509:  call3 3
+ 2510:  get_loc2 2: i
+ 2511:  push_atom_value text
+ 2516:  object
+ 2517:  push_atom_value kv
+ 2522:  array_from 1
+ 2525:  define_field staticClass
+ 2530:  get_loc0 0: t
+ 2531:  get_field2 _v
+ 2536:  push_atom_value "C. \u00e6\u00af\u0094\u00e4\u00be\u008b\u00e5\u00bc\u008f(\u00e2\u0088\u0092280/936\u00c3\u0097w): "
+ 2541:  get_loc0 0: t
+ 2542:  get_field2 _s
+ 2547:  get_loc0 0: t
+ 2548:  get_field2 fmt
+ 2553:  get_loc0 0: t
+ 2554:  get_field propLeft
+ 2559:  call_method 1
+ 2562:  call_method 1
+ 2565:  add
+ 2566:  call_method 1
+ 2569:  array_from 1
+ 2572:  call3 3
+ 2573:  get_loc2 2: i
+ 2574:  push_atom_value text
+ 2579:  object
+ 2580:  push_atom_value kv
+ 2585:  array_from 1
+ 2588:  define_field staticClass
+ 2593:  get_loc0 0: t
+ 2594:  get_field2 _v
+ 2599:  push_atom_value "D. \u00e5\u00ae\u009e\u00e6\u00b5\u008bdt-left\u00e6\u00a8\u00a1\u00e6\u008b\u009f: "
+ 2604:  get_loc0 0: t
+ 2605:  get_field2 _s
+ 2610:  get_loc0 0: t
+ 2611:  get_field2 fmt
+ 2616:  get_loc0 0: t
+ 2617:  get_field dtLeftW
+ 2622:  call_method 1
+ 2625:  call_method 1
+ 2628:  add
+ 2629:  call_method 1
+ 2632:  array_from 1
+ 2635:  call3 3
+ 2636:  get_loc2 2: i
+ 2637:  push_atom_value text
+ 2642:  object
+ 2643:  push_atom_value kv
+ 2648:  array_from 1
+ 2651:  define_field staticClass
+ 2656:  get_loc0 0: t
+ 2657:  get_field2 _v
+ 2662:  push_atom_value "\u00e8\u00af\u00af\u00e5\u00b7\u00ae B: "
+ 2667:  get_loc0 0: t
+ 2668:  get_field2 _s
+ 2673:  get_loc0 0: t
+ 2674:  get_field2 fmt
+ 2679:  get_loc0 0: t
+ 2680:  get_field naiveErr
+ 2685:  call_method 1
+ 2688:  call_method 1
+ 2691:  add
+ 2692:  push_atom_value "  C: "
+ 2697:  add
+ 2698:  get_loc0 0: t
+ 2699:  get_field2 _s
+ 2704:  get_loc0 0: t
+ 2705:  get_field2 fmt
+ 2710:  get_loc0 0: t
+ 2711:  get_field propErr
+ 2716:  call_method 1
+ 2719:  call_method 1
+ 2722:  add
+ 2723:  call_method 1
+ 2726:  array_from 1
+ 2729:  call3 3
+ 2730:  get_loc2 2: i
+ 2731:  push_atom_value text
+ 2736:  object
+ 2737:  push_atom_value kv
+ 2742:  push_atom_value hl
+ 2747:  array_from 2
+ 2750:  define_field staticClass
+ 2755:  get_loc0 0: t
+ 2756:  get_field2 _v
+ 2761:  get_loc0 0: t
+ 2762:  get_field2 _s
+ 2767:  get_loc0 0: t
+ 2768:  get_field biliVerdict
+ 2773:  call_method 1
+ 2776:  call_method 1
+ 2779:  array_from 1
+ 2782:  call3 3
+ 2783:  get_loc2 2: i
+ 2784:  push_atom_value text
+ 2789:  object
+ 2790:  push_atom_value kv
+ 2795:  push_atom_value dim
+ 2800:  array_from 2
+ 2803:  define_field staticClass
+ 2808:  get_loc0 0: t
+ 2809:  get_field2 _v
+ 2814:  push_atom_value "\u00e7\u0089\u00a9\u00e7\u0090\u0086\u00e2\u0088\u0092\u00e8\u00a7\u0086\u00e5\u008f\u00a3="
+ 2819:  get_loc0 0: t
+ 2820:  get_field2 _s
+ 2825:  get_loc0 0: t
+ 2826:  get_field2 fmt
+ 2831:  get_loc0 0: t
+ 2832:  get_field unitOffset
+ 2837:  call_method 1
+ 2840:  call_method 1
+ 2843:  add
+ 2844:  push_atom_value " \u00e2\u0086\u0092 B \u00e6\u0081\u0092\u00e5\u00a4\u00a7\u00e5\u0090\u008c\u00e6\u00a0\u00b7\u00e6\u0095\u00b0\u00e5\u0080\u00bc"
+ 2849:  add
+ 2850:  call_method 1
+ 2853:  array_from 1
+ 2856:  call3 3
+ 2857:  array_from 9
+ 2860:  call3 3
+ 2861:  array_from 3
+ 2864:  call3 3
+ 2865:  get_loc2 2: i
+ 2866:  push_atom_value div
+ 2871:  object
+ 2872:  push_atom_value mocks
+ 2877:  array_from 1
+ 2880:  define_field staticClass
+ 2885:  get_loc2 2: i
+ 2886:  push_atom_value div
+ 2891:  object
+ 2892:  push_atom_value "mock-kb"
+ 2897:  array_from 1
+ 2900:  define_field staticClass
+ 2905:  object
+ 2906:  get_loc0 0: t
+ 2907:  get_field kbLayout
+ 2912:  get_field styleLeftWidth
+ 2917:  push_atom_value px
+ 2922:  add
+ 2923:  define_field width
+ 2928:  define_field style
+ 2933:  get_loc2 2: i
+ 2934:  push_atom_value text
+ 2939:  object
+ 2940:  push_atom_value "mock-label"
+ 2945:  array_from 1
+ 2948:  define_field staticClass
+ 2953:  get_loc0 0: t
+ 2954:  get_field2 _v
+ 2959:  push_atom_value "KB\u00e6\u00a8\u00a1\u00e6\u008b\u009f \u00e5\u00ae\u00bd="
+ 2964:  get_loc0 0: t
+ 2965:  get_field2 _s
+ 2970:  get_loc0 0: t
+ 2971:  get_field kbLayout
+ 2976:  get_field styleLeftWidth
+ 2981:  call_method 1
+ 2984:  add
+ 2985:  push_atom_value px
+ 2990:  add
+ 2991:  call_method 1
+ 2994:  array_from 1
+ 2997:  call3 3
+ 2998:  get_loc2 2: i
+ 2999:  push_atom_value div
+ 3004:  object
+ 3005:  push_atom_value "kb-screen"
+ 3010:  array_from 1
+ 3013:  define_field staticClass
+ 3018:  get_loc2 2: i
+ 3019:  push_atom_value div
+ 3024:  object
+ 3025:  push_atom_value kbInner
+ 3030:  define_field ref
+ 3035:  push_atom_value "kb-inner"
+ 3040:  array_from 1
+ 3043:  define_field staticClass
+ 3048:  get_loc2 2: i
+ 3049:  push_atom_value text
+ 3054:  object
+ 3055:  push_atom_value "mock-label2"
+ 3060:  array_from 1
+ 3063:  define_field staticClass
+ 3068:  get_loc0 0: t
+ 3069:  get_field2 _v
+ 3074:  push_atom_value "display-inner"
+ 3079:  call_method 1
+ 3082:  array_from 1
+ 3085:  call3 3
+ 3086:  array_from 1
+ 3089:  call3 3
+ 3090:  array_from 1
+ 3093:  call3 3
+ 3094:  array_from 2
+ 3097:  call3 3
+ 3098:  get_loc2 2: i
+ 3099:  push_atom_value div
+ 3104:  object
+ 3105:  push_atom_value "mock-bili"
+ 3110:  array_from 1
+ 3113:  define_field staticClass
+ 3118:  get_loc2 2: i
+ 3119:  push_atom_value text
+ 3124:  object
+ 3125:  push_atom_value "mock-label"
+ 3130:  array_from 1
+ 3133:  define_field staticClass
+ 3138:  get_loc0 0: t
+ 3139:  get_field2 _v
+ 3144:  push_atom_value "B\u00e7\u00ab\u0099\u00e8\u00af\u00a6\u00e6\u0083\u0085\u00e8\u00a1\u008c\u00e6\u00a8\u00a1\u00e6\u008b\u009f\u00ef\u00bc\u0088\u00e5\u00b7\u00a6flex:1 / \u00e5\u008f\u00b3280px \u00e5\u009b\u00ba\u00e5\u00ae\u009a\u00ef\u00bc\u0089"
+ 3149:  call_method 1
+ 3152:  array_from 1
+ 3155:  call3 3
+ 3156:  get_loc2 2: i
+ 3157:  push_atom_value div
+ 3162:  object
+ 3163:  push_atom_value "dt-row"
+ 3168:  array_from 1
+ 3171:  define_field staticClass
+ 3176:  get_loc2 2: i
+ 3177:  push_atom_value div
+ 3182:  object
+ 3183:  push_atom_value dtLeftProbe
+ 3188:  define_field ref
+ 3193:  push_atom_value "dt-left"
+ 3198:  array_from 1
+ 3201:  define_field staticClass
+ 3206:  get_loc2 2: i
+ 3207:  push_atom_value text
+ 3212:  object
+ 3213:  push_atom_value "mock-label2"
+ 3218:  array_from 1
+ 3221:  define_field staticClass
+ 3226:  get_loc0 0: t
+ 3227:  get_field2 _v
+ 3232:  push_atom_value "dt-left"
+ 3237:  call_method 1
+ 3240:  array_from 1
+ 3243:  call3 3
+ 3244:  array_from 1
+ 3247:  call3 3
+ 3248:  get_loc0 0: t
+ 3249:  get_field2 _m
+ 3254:  push_0 0
+ 3255:  call_method 1
+ 3258:  array_from 2
+ 3261:  call3 3
+ 3262:  array_from 2
+ 3265:  call3 3
+ 3266:  array_from 2
+ 3269:  call3 3
+ 3270:  get_loc2 2: i
+ 3271:  push_atom_value div
+ 3276:  object
+ 3277:  push_atom_value rootProbe
+ 3282:  define_field ref
+ 3287:  push_atom_value "probe-root"
+ 3292:  array_from 1
+ 3295:  define_field staticClass
+ 3300:  call2 2
+ 3301:  get_loc2 2: i
+ 3302:  push_atom_value div
+ 3307:  object
+ 3308:  push_atom_value testBox
+ 3313:  define_field ref
+ 3318:  push_atom_value "probe-box"
+ 3323:  array_from 1
+ 3326:  define_field staticClass
+ 3331:  object
+ 3332:  get_loc0 0: t
+ 3333:  get_field testW
+ 3338:  push_atom_value px
+ 3343:  add
+ 3344:  define_field width
+ 3349:  define_field style
+ 3354:  call2 2
+ 3355:  get_loc2 2: i
+ 3356:  push_atom_value text
+ 3361:  object
+ 3362:  push_atom_value measureLine
+ 3367:  define_field ref
+ 3372:  push_atom_value "probe-line"
+ 3377:  array_from 1
+ 3380:  define_field staticClass
+ 3385:  get_loc0 0: t
+ 3386:  get_field2 _v
+ 3391:  push_atom_value "00000000000000000000"
+ 3396:  call_method 1
+ 3399:  array_from 1
+ 3402:  call3 3
+ 3403:  array_from 6
+ 3406:  tail_call 3
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 setTestW
+    6:  push_i8 50
+    8:  tail_call_method 1
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 setTestW
+    6:  push_i8 100
+    8:  tail_call_method 1
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 setTestW
+    6:  push_i16 200
+    9:  tail_call_method 1
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 setTestW
+    6:  push_i16 300
+    9:  tail_call_method 1
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_widthtest.js:1 source_len=0 */
+apps_widthtest.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var i
+    3: var this
+  stack_size: 9
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  set_loc0 0: t
+    4:  get_field $createElement
+    9:  put_loc1 1: e
+   10:  get_loc0 0: t
+   11:  get_field _self
+   16:  get_field _c
+   21:  dup
+   22:  if_true8 26
+   24:  drop
+   25:  get_loc1 1: e
+   26:  set_loc2 2: i
+   27:  push_atom_value div
+   32:  object
+   33:  push_atom_value "dt-right"
+   38:  array_from 1
+   41:  define_field staticClass
+   46:  get_loc2 2: i
+   47:  push_atom_value text
+   52:  object
+   53:  push_atom_value "mock-label2"
+   58:  array_from 1
+   61:  define_field staticClass
+   66:  get_loc0 0: t
+   67:  get_field2 _v
+   72:  push_atom_value "\u00e5\u008f\u00b3\u00e6\u00a0\u008f280"
+   77:  call_method 1
+   80:  array_from 1
+   83:  call3 3
+   84:  array_from 1
+   87:  tail_call 3
+

@@ -1,0 +1,7 @@
+
+# ---- render function 250 ----
+
+# ---- render function 310 ----
+<div.sys-title-row>
+  <text.sys-title>
+    "<LoliAPP>"

@@ -1,0 +1,4829 @@
+
+/* ===== function depth=0 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: t parent:loc0 const
+    1: e parent:loc1 const
+    2: i parent:loc2 const
+    3: r parent:loc3 const
+    4: s parent:loc4 const
+    5: a parent:loc5 const
+    6: o local:loc0 const
+    7: h local:loc1 const
+    8: n local:loc2 const
+    9: l local:loc3 const
+   10: c local:loc4 const
+   11: d local:loc5 const
+   12: p local:loc6 const
+   13: u local:loc7 const
+   14: g local:loc8 const
+   15: m local:loc9 const
+   16: f local:loc10 const
+   17: b local:loc11 const
+   18: v local:loc12 var
+   19: w local:loc13 var
+   20: y local:loc14 const
+  stack_size: 8
+  opcodes:
+    0:  push_atom_value "/dev/video29"
+    5:  put_var_ref 6: o
+    8:  push_atom_value "/dev/video30"
+   13:  put_var_ref 7: h
+   16:  push_atom_value "/userdisk/Pictures"
+   21:  put_var_ref 8: n
+   24:  get_var_ref_check 8: n
+   27:  put_var_ref 9: l
+   30:  push_i16 1920
+   33:  put_var_ref 10: c
+   36:  push_i16 1080
+   39:  put_var_ref 11: d
+   42:  push_atom_value "setsar=1"
+   47:  push_atom_value "transpose=1,setsar=1"
+   52:  push_atom_value "hflip,vflip,setsar=1"
+   57:  push_atom_value "transpose=2,setsar=1"
+   62:  array_from 4
+   65:  put_var_ref 12: p
+   68:  push_atom_value "\u00e6\u00ad\u00a3"
+   73:  push_atom_value "\u00e5\u008f\u00b3"
+   78:  push_atom_value "\u00e5\u0080\u0092"
+   83:  push_atom_value "\u00e5\u00b7\u00a6"
+   88:  array_from 4
+   91:  put_var_ref 13: u
+   94:  push_atom_value "/tmp/loli_cam.hb"
+   99:  put_var_ref 14: g
+  102:  push_atom_value "/tmp/loli_cam_prev.pid"
+  107:  put_var_ref 15: m
+  110:  push_atom_value "/tmp/loli_cam_rec.pid"
+  115:  put_var_ref 16: f
+  118:  push_atom_value "/data/loli_cam_shot"
+  123:  put_var_ref 17: b
+  126:  object
+  127:  object
+  128:  object
+  129:  get_var Boolean
+  134:  define_field type
+  139:  push_1 1
+  140:  lnot
+  141:  define_field default
+  146:  define_field floating
+  151:  object
+  152:  get_var Object
+  157:  define_field type
+  162:  fclosure8 0: [bytecode <null>]
+  164:  set_name default
+  169:  define_field default
+  174:  define_field pageData
+  179:  object
+  180:  get_var Object
+  185:  define_field type
+  190:  null
+  191:  define_field default
+  196:  define_field pageBridge
+  201:  define_field props
+  206:  fclosure8 1: [bytecode <null>]
+  208:  set_name data
+  213:  define_field data
+  218:  fclosure8 2: [bytecode <null>]
+  220:  define_method created,4
+  226:  fclosure8 3: [bytecode <null>]
+  228:  define_method mounted,4
+  234:  fclosure8 4: [bytecode <null>]
+  236:  define_method beforeDestroy,4
+  242:  object
+  243:  fclosure8 5: [bytecode <null>]
+  245:  define_method initBridge,4
+  251:  fclosure8 6: [bytecode <null>]
+  253:  define_method getRenderRectangleParam,4
+  259:  fclosure8 7: [bytecode <null>]
+  261:  set_name getRotationParam
+  266:  define_field getRotationParam
+  271:  fclosure8 8: [bytecode <null>]
+  273:  define_method parseSelectionRect,4
+  279:  fclosure8 9: [bytecode <null>]
+  281:  define_method buildCentered16By9Crop,4
+  287:  fclosure8 10: [bytecode <null>]
+  289:  define_method applyCropForDevice,4
+  295:  fclosure8 11: [bytecode <null>]
+  297:  define_method sweepGstProcesses,4
+  303:  fclosure8 12: [bytecode <null>]
+  305:  define_method markCamFg,4
+  311:  fclosure8 13: [bytecode <null>]
+  313:  define_method startDualkeyPoll,4
+  319:  fclosure8 14: [bytecode <null>]
+  321:  define_method stopDualkeyPoll,4
+  327:  fclosure8 15: [bytecode <null>]
+  329:  define_method pollDualkeyShot,4
+  335:  fclosure8 16: [bytecode <null>]
+  337:  define_method camWriteHeartbeat,4
+  343:  fclosure8 17: [bytecode <null>]
+  345:  define_method startCamHeartbeat,4
+  351:  fclosure8 18: [bytecode <null>]
+  353:  define_method stopCamHeartbeat,4
+  359:  fclosure8 19: [bytecode <null>]
+  361:  define_method spawnCamWatchdog,4
+  367:  fclosure8 20: [bytecode <null>]
+  369:  define_method startPreview,4
+  375:  fclosure8 21: [bytecode <null>]
+  377:  define_method getRenderRectObject,4
+  383:  fclosure8 22: [bytecode <null>]
+  385:  define_method getRecordFileName,4
+  391:  fclosure8 23: [bytecode <null>]
+  393:  define_method formatRecordDuration,4
+  399:  fclosure8 24: [bytecode <null>]
+  401:  define_method updateRecordElapsed,4
+  407:  fclosure8 25: [bytecode <null>]
+  409:  define_method startRecordTimer,4
+  415:  fclosure8 26: [bytecode <null>]
+  417:  define_method clearRecordTimer,4
+  423:  fclosure8 27: [bytecode <null>]
+  425:  define_method toggleRecording,4
+  431:  fclosure8 28: [bytecode <null>]
+  433:  define_method startRecording,4
+  439:  fclosure8 29: [bytecode <null>]
+  441:  define_method stopRecording,4
+  447:  fclosure8 30: [bytecode <null>]
+  449:  define_method takePhoto,4
+  455:  fclosure8 31: [bytecode <null>]
+  457:  define_method afterCapture,4
+  463:  fclosure8 32: [bytecode <null>]
+  465:  define_method finishStandaloneCamera,4
+  471:  fclosure8 33: [bytecode <null>]
+  473:  define_method getLoadOption,4
+  479:  fclosure8 34: [bytecode <null>]
+  481:  define_method execCmd,4
+  487:  fclosure8 35: [bytecode <null>]
+  489:  set_name normalizeOutput
+  494:  define_field normalizeOutput
+  499:  fclosure8 36: [bytecode <null>]
+  501:  define_method stopPreview,4
+  507:  fclosure8 37: [bytecode <null>]
+  509:  define_method cleanupCameraProcesses,4
+  515:  fclosure8 38: [bytecode <null>]
+  517:  define_method kickScanDaemonShell,4
+  523:  fclosure8 39: [bytecode <null>]
+  525:  define_method checkStorage,4
+  531:  fclosure8 40: [bytecode <null>]
+  533:  define_method ensureDirectory,4
+  539:  fclosure8 41: [bytecode <null>]
+  541:  define_method getTimestampParts,4
+  547:  fclosure8 42: [bytecode <null>]
+  549:  define_method getCaptureRotationFilter,4
+  555:  fclosure8 43: [bytecode <null>]
+  557:  define_method getCaptureRotationLabel,4
+  563:  fclosure8 44: [bytecode <null>]
+  565:  define_method cycleCaptureRotation,4
+  571:  fclosure8 45: [bytecode <null>]
+  573:  set_name sanitizeDeviceId
+  578:  define_field sanitizeDeviceId
+  583:  fclosure8 46: [bytecode <null>]
+  585:  define_method loadDeviceId,4
+  591:  fclosure8 47: [bytecode <null>]
+  593:  define_method toast,4
+  599:  fclosure8 48: [bytecode <null>]
+  601:  define_method showInfo,4
+  607:  fclosure8 49: [bytecode <null>]
+  609:  define_method showError,4
+  615:  fclosure8 50: [bytecode <null>]
+  617:  define_method onShow,4
+  623:  fclosure8 51: [bytecode <null>]
+  625:  define_method onHide,4
+  631:  fclosure8 52: [bytecode <null>]
+  633:  define_method onUnload,4
+  639:  define_field methods
+  644:  put_var_ref 18: v
+  647:  fclosure8 53: [bytecode <null>]
+  649:  set_name w
+  654:  set_var_ref 19: w
+  657:  push_0 0
+  658:  lnot
+  659:  put_field _withStripped
+  664:  get_var_ref 18: v
+  667:  put_var_ref 20: y
+  670:  get_var_ref_check 20: y
+  673:  get_var_ref 19: w
+  676:  put_field render
+  681:  get_var_ref_check 20: y
+  684:  array_from 0
+  687:  put_field staticRenderFns
+  692:  get_var_ref_check 20: y
+  695:  push_0 0
+  696:  lnot
+  697:  put_field _compiled
+  702:  get_var_ref_check 20: y
+  705:  push_atom_value "data-v-520e1046"
+  710:  put_field _scopeId
+  715:  get_var_ref_check 20: y
+  718:  object
+  719:  put_field themes
+  724:  get_var_ref_check 20: y
+  727:  get_var Object
+  732:  get_field2 assign
+  737:  object
+  738:  object
+  739:  object
+  740:  push_atom_value absolute
+  745:  define_field position
+  750:  push_0 0
+  751:  define_field top
+  756:  push_0 0
+  757:  define_field left
+  762:  push_atom_value "100%"
+  767:  define_field width
+  772:  push_atom_value "100%"
+  777:  define_field height
+  782:  push_atom_value "#000000"
+  787:  define_field backgroundColor
+  792:  define_field "camera-container"
+  797:  object
+  798:  push_atom_value absolute
+  803:  define_field position
+  808:  push_0 0
+  809:  define_field left
+  814:  push_0 0
+  815:  define_field top
+  820:  push_atom_value "100%"
+  825:  define_field width
+  830:  push_atom_value "100%"
+  835:  define_field height
+  840:  push_atom_value "rgba(0,0,0,0)"
+  845:  define_field backgroundColor
+  850:  define_field "camera-hole"
+  855:  object
+  856:  push_atom_value absolute
+  861:  define_field position
+  866:  push_0 0
+  867:  define_field top
+  872:  push_0 0
+  873:  define_field left
+  878:  push_atom_value "100%"
+  883:  define_field width
+  888:  push_atom_value "100%"
+  893:  define_field height
+  898:  push_atom_value "#000000"
+  903:  define_field backgroundColor
+  908:  push_5 5
+  909:  define_field zIndex
+  914:  push_const8 54: 0.8
+  916:  define_field opacity
+  921:  define_field "flash-overlay"
+  926:  object
+  927:  push_atom_value absolute
+  932:  define_field position
+  937:  push_0 0
+  938:  define_field top
+  943:  push_0 0
+  944:  define_field right
+  949:  push_atom_value "100px"
+  954:  define_field width
+  959:  push_atom_value "100%"
+  964:  define_field height
+  969:  push_atom_value column
+  974:  define_field flexDirection
+  979:  push_atom_value center
+  984:  define_field justifyContent
+  989:  push_atom_value center
+  994:  define_field alignItems
+  999:  push_atom_value "rgba(0,0,0,0.3)"
+ 1004:  define_field backgroundColor
+ 1009:  push_i8 10
+ 1011:  define_field zIndex
+ 1016:  define_field "controls-area"
+ 1021:  object
+ 1022:  push_atom_value "70px"
+ 1027:  define_field width
+ 1032:  push_atom_value "70px"
+ 1037:  define_field height
+ 1042:  push_atom_value "18px"
+ 1047:  define_field marginTop
+ 1052:  push_atom_value center
+ 1057:  define_field justifyContent
+ 1062:  push_atom_value center
+ 1067:  define_field alignItems
+ 1072:  define_field "btn-shutter-wrapper"
+ 1077:  object
+ 1078:  push_atom_value "70px"
+ 1083:  define_field width
+ 1088:  push_atom_value "36px"
+ 1093:  define_field height
+ 1098:  push_atom_value "12px"
+ 1103:  define_field marginTop
+ 1108:  push_atom_value center
+ 1113:  define_field justifyContent
+ 1118:  push_atom_value center
+ 1123:  define_field alignItems
+ 1128:  push_atom_value "1px"
+ 1133:  define_field borderWidth
+ 1138:  push_atom_value solid
+ 1143:  define_field borderStyle
+ 1148:  push_atom_value "rgba(255,255,255,0.7)"
+ 1153:  define_field borderColor
+ 1158:  push_atom_value "18px"
+ 1163:  define_field borderRadius
+ 1168:  push_atom_value "rgba(255,255,255,0.08)"
+ 1173:  define_field backgroundColor
+ 1178:  define_field "btn-rotate-wrapper"
+ 1183:  object
+ 1184:  push_atom_value "#ffffff"
+ 1189:  define_field color
+ 1194:  push_atom_value "14px"
+ 1199:  define_field fontSize
+ 1204:  push_atom_value center
+ 1209:  define_field textAlign
+ 1214:  define_field "btn-rotate-label"
+ 1219:  object
+ 1220:  push_atom_value "#999999"
+ 1225:  define_field color
+ 1230:  define_field "btn-rotate-label-disabled"
+ 1235:  object
+ 1236:  push_atom_value "70px"
+ 1241:  define_field width
+ 1246:  push_atom_value center
+ 1251:  define_field justifyContent
+ 1256:  push_atom_value center
+ 1261:  define_field alignItems
+ 1266:  define_field "btn-record-wrapper"
+ 1271:  object
+ 1272:  push_atom_value "54px"
+ 1277:  define_field width
+ 1282:  push_atom_value "54px"
+ 1287:  define_field height
+ 1292:  push_atom_value "27px"
+ 1297:  define_field borderRadius
+ 1302:  push_atom_value "3px"
+ 1307:  define_field borderWidth
+ 1312:  push_atom_value solid
+ 1317:  define_field borderStyle
+ 1322:  push_atom_value "#ff4d4f"
+ 1327:  define_field borderColor
+ 1332:  push_atom_value center
+ 1337:  define_field justifyContent
+ 1342:  push_atom_value center
+ 1347:  define_field alignItems
+ 1352:  push_atom_value "rgba(255,77,79,0.1)"
+ 1357:  define_field backgroundColor
+ 1362:  define_field "btn-record-outer"
+ 1367:  object
+ 1368:  push_atom_value "34px"
+ 1373:  define_field width
+ 1378:  push_atom_value "34px"
+ 1383:  define_field height
+ 1388:  push_atom_value "17px"
+ 1393:  define_field borderRadius
+ 1398:  push_atom_value "#ff4d4f"
+ 1403:  define_field backgroundColor
+ 1408:  define_field "btn-record-inner"
+ 1413:  object
+ 1414:  push_atom_value "#ffffff"
+ 1419:  define_field borderColor
+ 1424:  push_atom_value "rgba(255,77,79,0.25)"
+ 1429:  define_field backgroundColor
+ 1434:  define_field "btn-recording"
+ 1439:  object
+ 1440:  push_atom_value "20px"
+ 1445:  define_field width
+ 1450:  push_atom_value "20px"
+ 1455:  define_field height
+ 1460:  push_atom_value "4px"
+ 1465:  define_field borderRadius
+ 1470:  define_field "btn-record-stop"
+ 1475:  object
+ 1476:  push_atom_value "8px"
+ 1481:  define_field marginTop
+ 1486:  push_atom_value "#ffffff"
+ 1491:  define_field color
+ 1496:  push_atom_value "12px"
+ 1501:  define_field fontSize
+ 1506:  push_atom_value center
+ 1511:  define_field textAlign
+ 1516:  define_field "record-label"
+ 1521:  object
+ 1522:  push_atom_value "4px"
+ 1527:  define_field marginTop
+ 1532:  push_atom_value "#ffb3b4"
+ 1537:  define_field color
+ 1542:  push_atom_value "11px"
+ 1547:  define_field fontSize
+ 1552:  push_atom_value center
+ 1557:  define_field textAlign
+ 1562:  define_field "record-time"
+ 1567:  object
+ 1568:  push_atom_value "70px"
+ 1573:  define_field width
+ 1578:  push_atom_value "70px"
+ 1583:  define_field height
+ 1588:  push_atom_value "35px"
+ 1593:  define_field borderRadius
+ 1598:  push_atom_value "3px"
+ 1603:  define_field borderWidth
+ 1608:  push_atom_value solid
+ 1613:  define_field borderStyle
+ 1618:  push_atom_value "#FFFFFF"
+ 1623:  define_field borderColor
+ 1628:  push_atom_value center
+ 1633:  define_field justifyContent
+ 1638:  push_atom_value center
+ 1643:  define_field alignItems
+ 1648:  push_atom_value "rgba(0,0,0,0)"
+ 1653:  define_field backgroundColor
+ 1658:  push_atom_value transform
+ 1663:  define_field transitionProperty
+ 1668:  push_i16 200
+ 1671:  define_field transitionDuration
+ 1676:  push_atom_value "ease-out"
+ 1681:  define_field transitionTimingFunction
+ 1686:  define_field "btn-shutter-outer"
+ 1691:  object
+ 1692:  object
+ 1693:  push_atom_value transform
+ 1698:  define_field property
+ 1703:  push_i16 200
+ 1706:  define_field duration
+ 1711:  push_atom_value "ease-out"
+ 1716:  define_field timingFunction
+ 1721:  define_field "btn-shutter-outer"
+ 1726:  define_field "@TRANSITION"
+ 1731:  object
+ 1732:  push_atom_value "scale(0.85)"
+ 1737:  define_field transform
+ 1742:  define_field "btn-shutter-active"
+ 1747:  object
+ 1748:  push_atom_value "50px"
+ 1753:  define_field width
+ 1758:  push_atom_value "50px"
+ 1763:  define_field height
+ 1768:  push_atom_value "25px"
+ 1773:  define_field borderRadius
+ 1778:  push_atom_value "#FFFFFF"
+ 1783:  define_field backgroundColor
+ 1788:  define_field "btn-shutter-inner"
+ 1793:  object
+ 1794:  push_atom_value "#666666"
+ 1799:  define_field borderColor
+ 1804:  define_field "btn-shutter-outer-disabled"
+ 1809:  object
+ 1810:  push_atom_value "#666666"
+ 1815:  define_field backgroundColor
+ 1820:  define_field "btn-shutter-inner-disabled"
+ 1825:  object
+ 1826:  push_atom_value "#666666"
+ 1831:  define_field borderColor
+ 1836:  push_atom_value "rgba(102,102,102,0.15)"
+ 1841:  define_field backgroundColor
+ 1846:  define_field "btn-record-outer-disabled"
+ 1851:  object
+ 1852:  push_atom_value "#666666"
+ 1857:  define_field backgroundColor
+ 1862:  define_field "btn-record-inner-disabled"
+ 1867:  object
+ 1868:  push_atom_value "#666666"
+ 1873:  define_field backgroundColor
+ 1878:  define_field "btn-record-stop-disabled"
+ 1883:  call_method 2
+ 1886:  put_field style
+ 1891:  get_var_ref_check 20: y
+ 1894:  push_atom_value "src/pages/tools/camera.vue"
+ 1899:  put_field __file
+ 1904:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  stack_size: 1
+  opcodes:
+    0:  object
+    1:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  stack_size: 2
+  opcodes:
+    0:  object
+    1:  null
+    2:  define_field previewPid
+    7:  null
+    8:  define_field recordPid
+   13:  push_empty_string
+   14:  define_field recordPath
+   19:  push_1 1
+   20:  lnot
+   21:  define_field isPreviewing
+   26:  push_1 1
+   27:  lnot
+   28:  define_field isRecording
+   33:  push_0 0
+   34:  define_field recordElapsedMs
+   39:  push_0 0
+   40:  define_field recordStartedAt
+   45:  null
+   46:  define_field recordTimer
+   51:  push_1 1
+   52:  lnot
+   53:  define_field bridgeReady
+   58:  push_1 1
+   59:  lnot
+   60:  define_field isCapturing
+   65:  push_1 1
+   66:  lnot
+   67:  define_field showFlash
+   72:  push_1 1
+   73:  lnot
+   74:  define_field isAnimating
+   79:  push_0 0
+   80:  define_field captureRotationIndex
+   85:  null
+   86:  define_field modal
+   91:  null
+   92:  define_field shell
+   97:  null
+   98:  define_field cam
+  103:  push_atom_value UNKNOWN
+  108:  define_field deviceId
+  113:  push_1 1
+  114:  lnot
+  115:  define_field deviceIdLoaded
+  120:  push_i16 280
+  123:  define_field physW
+  128:  push_i16 936
+  131:  define_field physH
+  136:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:3 next:-1]
+    1: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  catch 33
+    7:  get_loc1 1: this
+    8:  get_var weex
+   13:  get_field2 requireModule
+   18:  push_atom_value modal
+   23:  call_method 1
+   26:  put_field modal
+   31:  drop
+   32:  return_undef
+   33:  put_loc0 0: t
+   34:  catch 41
+   39:  drop
+   40:  return_undef
+   41:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: e parent:loc1 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_1 1
+    4:  lnot
+    5:  put_field _previewStarting
+   10:  get_loc0 0: this
+   11:  push_1 1
+   12:  lnot
+   13:  put_field _pageDead
+   18:  get_loc0 0: this
+   19:  push_1 1
+   20:  lnot
+   21:  put_field _pageHidden
+   26:  get_loc0 0: this
+   27:  get_var_ref_check 0: e
+   30:  fclosure8 0: [bytecode <null>]
+   32:  push_i16 500
+   35:  call2 2
+   36:  put_field _mountedTimer
+   41:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: this local:loc0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  null
+    2:  put_field _mountedTimer
+    7:  get_var_ref0 0: this
+    8:  get_field2 initBridge
+   13:  call_method 0
+   16:  drop
+   17:  get_var_ref0 0: this
+   18:  get_field2 startPreview
+   23:  call_method 0
+   26:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: i parent:loc2 const
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_0 0
+    4:  lnot
+    5:  put_field _pageDead
+   10:  get_loc0 0: this
+   11:  get_field2 finishStandaloneCamera
+   16:  null
+   17:  call_method 1
+   20:  drop
+   21:  get_loc0 0: this
+   22:  get_field2 stopDualkeyPoll
+   27:  call_method 0
+   30:  drop
+   31:  get_loc0 0: this
+   32:  get_field _mountedTimer
+   37:  dup
+   38:  if_false8 60
+   40:  drop
+   41:  get_var_ref_check 0: i
+   44:  get_loc0 0: this
+   45:  get_field _mountedTimer
+   50:  call1 1
+   51:  drop
+   52:  get_loc0 0: this
+   53:  null
+   54:  insert2
+   55:  put_field _mountedTimer
+   60:  drop
+   61:  get_loc0 0: this
+   62:  get_field2 cleanupCameraProcesses
+   67:  call_method 0
+   70:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: let e [level:2 next:-1]
+    1: catch t [level:5 next:0]
+    2: const t [level:8 next:0]
+    3: let t [level:10 next:2]
+    4: catch t [level:11 next:-1]
+    5: var this
+  closure vars:
+    0: t parent:loc0 const
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc8 5: this
+    3:  catch 507
+    8:  set_loc_uninitialized 0: e
+   11:  get_loc8 5: this
+   13:  get_field pageBridge
+   18:  dup
+   19:  if_true8 23
+   21:  drop
+   22:  null
+   23:  put_loc0 0: e
+   24:  get_loc_check 0: e
+   27:  lnot
+   28:  if_false8 56
+   30:  catch 46
+   35:  get_var_ref_check 0: t
+   38:  dup
+   39:  put_loc_check 0: e
+   42:  drop
+   43:  drop
+   44:  goto8 56
+   46:  put_loc1 1: t
+   47:  catch 55
+   52:  drop
+   53:  goto8 56
+   55:  throw
+   56:  get_loc_check 0: e
+   59:  dup
+   60:  if_true8 88
+   62:  drop
+   63:  push_atom_value undefined
+   68:  get_var_undef bridge
+   73:  typeof
+   74:  eq
+   75:  dup
+   76:  if_true8 88
+   78:  drop
+   79:  get_var bridge
+   84:  dup
+   85:  put_loc_check 0: e
+   88:  drop
+   89:  get_loc_check 0: e
+   92:  if_false 505
+   97:  set_loc_uninitialized 2: t
+  100:  get_loc8 5: this
+  102:  get_loc_check 0: e
+  105:  get_field Shell
+  110:  dup
+  111:  if_true8 146
+  113:  drop
+  114:  get_loc_check 0: e
+  117:  get_field default
+  122:  dup
+  123:  if_false8 139
+  125:  drop
+  126:  get_loc_check 0: e
+  129:  get_field default
+  134:  get_field Shell
+  139:  dup
+  140:  if_true8 146
+  142:  drop
+  143:  get_loc_check 0: e
+  146:  put_field shell
+  151:  get_loc_check 0: e
+  154:  get_field Camera
+  159:  dup
+  160:  if_true8 193
+  162:  drop
+  163:  get_loc_check 0: e
+  166:  get_field default
+  171:  dup
+  172:  if_false8 188
+  174:  drop
+  175:  get_loc_check 0: e
+  178:  get_field default
+  183:  get_field Camera
+  188:  dup
+  189:  if_true8 193
+  191:  drop
+  192:  null
+  193:  put_loc2 2: t
+  194:  get_loc_check 2: t
+  197:  dup
+  198:  if_false8 212
+  200:  drop
+  201:  get_loc8 5: this
+  203:  get_loc_check 2: t
+  206:  insert2
+  207:  put_field cam
+  212:  drop
+  213:  get_loc8 5: this
+  215:  get_field cam
+  220:  lnot
+  221:  dup
+  222:  if_false8 297
+  224:  drop
+  225:  push_atom_value undefined
+  230:  get_var_undef $falcon
+  235:  typeof
+  236:  neq
+  237:  dup
+  238:  if_false8 297
+  240:  drop
+  241:  get_var $falcon
+  246:  get_field jsapi
+  251:  dup
+  252:  if_false8 297
+  254:  drop
+  255:  get_var $falcon
+  260:  get_field jsapi
+  265:  get_field Camera
+  270:  dup
+  271:  if_false8 297
+  273:  drop
+  274:  get_loc8 5: this
+  276:  get_var $falcon
+  281:  get_field jsapi
+  286:  get_field Camera
+  291:  insert2
+  292:  put_field cam
+  297:  drop
+  298:  get_loc8 5: this
+  300:  get_field shell
+  305:  if_false 505
+  310:  get_loc8 5: this
+  312:  get_field shell
+  317:  get_field exec
+  322:  if_false 505
+  327:  set_loc_uninitialized 3: t
+  330:  get_loc8 5: this
+  332:  push_0 0
+  333:  lnot
+  334:  put_field bridgeReady
+  339:  get_loc8 5: this
+  341:  get_field _pageHidden
+  346:  dup
+  347:  if_true8 372
+  349:  drop
+  350:  get_loc8 5: this
+  352:  get_field2 markCamFg
+  357:  push_1 1
+  358:  call_method 1
+  361:  drop
+  362:  get_loc8 5: this
+  364:  get_field2 startDualkeyPoll
+  369:  call_method 0
+  372:  drop
+  373:  get_loc8 5: this
+  375:  get_field shell
+  380:  get_field2 getScreenSize
+  385:  call_method 0
+  388:  put_loc3 3: t
+  389:  get_loc_check 3: t
+  392:  dup
+  393:  if_false8 493
+  395:  drop
+  396:  get_loc_check 3: t
+  399:  get_field width
+  404:  dup
+  405:  if_false8 493
+  407:  drop
+  408:  get_loc_check 3: t
+  411:  get_field height
+  416:  dup
+  417:  if_false8 493
+  419:  drop
+  420:  get_loc8 5: this
+  422:  get_var Math
+  427:  get_field2 min
+  432:  get_loc_check 3: t
+  435:  get_field width
+  440:  get_loc_check 3: t
+  443:  get_field height
+  448:  call_method 2
+  451:  put_field physW
+  456:  get_loc8 5: this
+  458:  get_var Math
+  463:  get_field2 max
+  468:  get_loc_check 3: t
+  471:  get_field width
+  476:  get_loc_check 3: t
+  479:  get_field height
+  484:  call_method 2
+  487:  insert2
+  488:  put_field physH
+  493:  drop
+  494:  get_loc8 5: this
+  496:  get_field2 loadDeviceId
+  501:  call_method 0
+  504:  drop
+  505:  drop
+  506:  return_undef
+  507:  put_loc8 4: t
+  509:  catch 535
+  514:  get_var console
+  519:  get_field2 error
+  524:  push_atom_value "Bridge init failed"
+  529:  call_method 1
+  532:  drop
+  533:  drop
+  534:  return_undef
+  535:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+    1: const e [level:1 next:0]
+    2: let i [level:1 next:1]
+    3: let r [level:1 next:2]
+    4: let s [level:1 next:3]
+    5: let a [level:1 next:4]
+    6: var this
+  stack_size: 10
+  opcodes:
+    0:  push_this
+    1:  put_loc8 6: this
+    3:  set_loc_uninitialized 5: a
+    6:  set_loc_uninitialized 4: s
+    9:  set_loc_uninitialized 3: r
+   12:  set_loc_uninitialized 2: i
+   15:  set_loc_uninitialized 1: e
+   18:  set_loc_uninitialized 0: t
+   21:  get_loc8 6: this
+   23:  get_field physW
+   28:  put_loc0 0: t
+   29:  get_loc8 6: this
+   31:  get_field physH
+   36:  put_loc1 1: e
+   37:  undefined
+   38:  put_loc2 2: i
+   39:  undefined
+   40:  put_loc3 3: r
+   41:  undefined
+   42:  put_loc8 4: s
+   44:  undefined
+   45:  put_loc8 5: a
+   47:  get_var Math
+   52:  get_field2 abs
+   57:  get_loc_check 1: e
+   60:  push_i16 960
+   63:  sub
+   64:  call_method 1
+   67:  push_i8 10
+   69:  lt
+   70:  if_false8 129
+   72:  get_var Math
+   77:  get_field2 abs
+   82:  get_loc_check 0: t
+   85:  push_i16 266
+   88:  sub
+   89:  call_method 1
+   92:  push_i8 10
+   94:  lt
+   95:  if_false8 129
+   97:  push_i8 108
+   99:  dup
+  100:  put_loc_check 2: i
+  103:  drop
+  104:  push_i16 244
+  107:  dup
+  108:  put_loc_check 3: r
+  111:  drop
+  112:  push_i16 266
+  115:  dup
+  116:  put_loc_check 4: s
+  119:  drop
+  120:  push_i16 472
+  123:  dup
+  124:  put_loc_check 5: a
+  127:  goto8 198
+  129:  get_loc_check 0: t
+  132:  dup
+  133:  put_loc_check 4: s
+  136:  drop
+  137:  get_var Math
+  142:  get_field2 round
+  147:  get_loc_check 0: t
+  150:  push_i16 640
+  153:  push_i16 360
+  156:  div
+  157:  mul
+  158:  call_method 1
+  161:  dup
+  162:  put_loc_check 5: a
+  165:  drop
+  166:  push_0 0
+  167:  dup
+  168:  put_loc_check 2: i
+  171:  drop
+  172:  get_var Math
+  177:  get_field2 round
+  182:  get_loc_check 1: e
+  185:  get_loc_check 5: a
+  188:  sub
+  189:  push_2 2
+  190:  div
+  191:  call_method 1
+  194:  dup
+  195:  put_loc_check 3: r
+  198:  drop
+  199:  get_loc_check 2: i
+  202:  push_1 1
+  203:  sar
+  204:  push_1 1
+  205:  shl
+  206:  dup
+  207:  put_loc_check 2: i
+  210:  drop
+  211:  get_loc_check 3: r
+  214:  push_1 1
+  215:  sar
+  216:  push_1 1
+  217:  shl
+  218:  dup
+  219:  put_loc_check 3: r
+  222:  drop
+  223:  get_loc_check 4: s
+  226:  push_1 1
+  227:  sar
+  228:  push_1 1
+  229:  shl
+  230:  dup
+  231:  put_loc_check 4: s
+  234:  drop
+  235:  get_loc_check 5: a
+  238:  push_1 1
+  239:  sar
+  240:  push_1 1
+  241:  shl
+  242:  dup
+  243:  put_loc_check 5: a
+  246:  drop
+  247:  push_atom_value "render-rectangle=\"<"
+  252:  get_field2 concat
+  257:  get_loc_check 2: i
+  260:  push_atom_value ","
+  265:  get_loc_check 3: r
+  268:  push_atom_value ","
+  273:  get_loc_check 4: s
+  276:  push_atom_value ","
+  281:  get_loc_check 5: a
+  284:  push_atom_value ">\""
+  289:  tail_call_method 8
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  stack_size: 1
+  opcodes:
+    0:  push_atom_value "videoflip video-direction=90l qos=false"
+    5:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:1 next:-1]
+  stack_size: 4
+  opcodes:
+    0:  set_loc_uninitialized 0: e
+    3:  get_var String
+    8:  get_arg0 0: t
+    9:  dup
+   10:  if_true8 14
+   12:  drop
+   13:  push_empty_string
+   14:  call1 1
+   15:  get_field2 match
+   20:  push_const8 0: 1"Left\\s+(\\d+),\\s*Top\\s+(\\d+),\\s*Width\\s+(\\d+),\\s*Height\\s+(\\d+)"
+   22:  push_const8 1: 1"\u0002\u0005\u0000n\u0002\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001L\u0000\u0001E\u0000\u0001F\u0000\u0001T\u0000\u001c,\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u000b\u0001\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u000c\u0001\u0001,\u0000\u001c,\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u0001T\u0000\u0001O\u0000\u0001P\u0000\u001c,\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u000b\u0002\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u000c\u0002\u0001,\u0000\u001c,\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u0001W\u0000\u0001I\u0000\u0001D\u0000\u0001T\u0000\u0001H\u0000\u001c,\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u000b\u0003\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u000c\u0003\u0001,\u0000\u001c,\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u0001H\u0000\u0001E\u0000\u0001I\u0000\u0001G\u0000\u0001H\u0000\u0001T\u0000\u001c,\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u000b\u0004\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u000c\u0004\u000c\u0000\n"
+   24:  regexp
+   25:  call_method 1
+   28:  put_loc0 0: e
+   29:  get_loc_check 0: e
+   32:  if_false8 128
+   34:  object
+   35:  get_var parseInt
+   40:  get_loc_check 0: e
+   43:  push_1 1
+   44:  get_array_el
+   45:  push_i8 10
+   47:  call2 2
+   48:  dup
+   49:  if_true8 53
+   51:  drop
+   52:  push_0 0
+   53:  define_field left
+   58:  get_var parseInt
+   63:  get_loc_check 0: e
+   66:  push_2 2
+   67:  get_array_el
+   68:  push_i8 10
+   70:  call2 2
+   71:  dup
+   72:  if_true8 76
+   74:  drop
+   75:  push_0 0
+   76:  define_field top
+   81:  get_var parseInt
+   86:  get_loc_check 0: e
+   89:  push_3 3
+   90:  get_array_el
+   91:  push_i8 10
+   93:  call2 2
+   94:  dup
+   95:  if_true8 99
+   97:  drop
+   98:  push_0 0
+   99:  define_field width
+  104:  get_var parseInt
+  109:  get_loc_check 0: e
+  112:  push_4 4
+  113:  get_array_el
+  114:  push_i8 10
+  116:  call2 2
+  117:  dup
+  118:  if_true8 122
+  120:  drop
+  121:  push_0 0
+  122:  define_field height
+  127:  return
+  128:  null
+  129:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: let e [level:1 next:-1]
+    1: let i [level:1 next:0]
+    2: let r [level:1 next:1]
+    3: let s [level:1 next:2]
+  stack_size: 5
+  opcodes:
+    0:  set_loc_uninitialized 3: s
+    3:  set_loc_uninitialized 2: r
+    6:  set_loc_uninitialized 1: i
+    9:  set_loc_uninitialized 0: e
+   12:  get_arg0 0: t
+   13:  lnot
+   14:  dup
+   15:  if_true8 36
+   17:  drop
+   18:  get_arg0 0: t
+   19:  get_field width
+   24:  lnot
+   25:  dup
+   26:  if_true8 36
+   28:  drop
+   29:  get_arg0 0: t
+   30:  get_field height
+   35:  lnot
+   36:  if_false8 40
+   38:  null
+   39:  return
+   40:  get_arg0 0: t
+   41:  get_field width
+   46:  put_loc0 0: e
+   47:  get_var Math
+   52:  get_field2 floor
+   57:  push_i8 9
+   59:  get_loc_check 0: e
+   62:  mul
+   63:  push_i8 16
+   65:  div
+   66:  call_method 1
+   69:  put_loc1 1: i
+   70:  get_arg0 0: t
+   71:  get_field left
+   76:  dup
+   77:  if_true8 81
+   79:  drop
+   80:  push_0 0
+   81:  put_loc2 2: r
+   82:  get_arg0 0: t
+   83:  get_field top
+   88:  dup
+   89:  if_true8 93
+   91:  drop
+   92:  push_0 0
+   93:  get_var Math
+   98:  get_field2 floor
+  103:  get_arg0 0: t
+  104:  get_field height
+  109:  get_loc_check 1: i
+  112:  sub
+  113:  push_2 2
+  114:  div
+  115:  call_method 1
+  118:  add
+  119:  put_loc3 3: s
+  120:  get_loc_check 1: i
+  123:  get_arg0 0: t
+  124:  get_field height
+  129:  gt
+  130:  dup
+  131:  if_false8 229
+  133:  drop
+  134:  get_arg0 0: t
+  135:  get_field height
+  140:  dup
+  141:  put_loc_check 1: i
+  144:  drop
+  145:  get_var Math
+  150:  get_field2 floor
+  155:  push_i8 16
+  157:  get_loc_check 1: i
+  160:  mul
+  161:  push_i8 9
+  163:  div
+  164:  call_method 1
+  167:  dup
+  168:  put_loc_check 0: e
+  171:  drop
+  172:  get_arg0 0: t
+  173:  get_field left
+  178:  dup
+  179:  if_true8 183
+  181:  drop
+  182:  push_0 0
+  183:  get_var Math
+  188:  get_field2 floor
+  193:  get_arg0 0: t
+  194:  get_field width
+  199:  get_loc_check 0: e
+  202:  sub
+  203:  push_2 2
+  204:  div
+  205:  call_method 1
+  208:  add
+  209:  dup
+  210:  put_loc_check 2: r
+  213:  drop
+  214:  get_arg0 0: t
+  215:  get_field top
+  220:  dup
+  221:  if_true8 225
+  223:  drop
+  224:  push_0 0
+  225:  dup
+  226:  put_loc_check 3: s
+  229:  drop
+  230:  get_loc_check 2: r
+  233:  push_1 1
+  234:  sar
+  235:  push_1 1
+  236:  shl
+  237:  dup
+  238:  put_loc_check 2: r
+  241:  drop
+  242:  get_loc_check 3: s
+  245:  push_1 1
+  246:  sar
+  247:  push_1 1
+  248:  shl
+  249:  dup
+  250:  put_loc_check 3: s
+  253:  drop
+  254:  get_loc_check 0: e
+  257:  push_1 1
+  258:  sar
+  259:  push_1 1
+  260:  shl
+  261:  dup
+  262:  put_loc_check 0: e
+  265:  drop
+  266:  get_loc_check 1: i
+  269:  push_1 1
+  270:  sar
+  271:  push_1 1
+  272:  shl
+  273:  dup
+  274:  put_loc_check 1: i
+  277:  drop
+  278:  object
+  279:  get_loc_check 2: r
+  282:  define_field left
+  287:  get_loc_check 3: s
+  290:  define_field top
+  295:  get_loc_check 0: e
+  298:  define_field width
+  303:  get_loc_check 1: i
+  306:  define_field height
+  311:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:1 next:-1]
+    1: const i [level:1 next:0]
+    2: const r [level:1 next:1]
+    3: var this
+  stack_size: 13
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  set_loc_uninitialized 2: r
+    5:  set_loc_uninitialized 1: i
+    8:  set_loc_uninitialized 0: e
+   11:  get_loc3 3: this
+   12:  get_field2 execCmd
+   17:  push_atom_value "v4l2-ctl -d "
+   22:  get_field2 concat
+   27:  get_arg0 0: t
+   28:  push_atom_value " --get-selection=target=crop_bounds"
+   33:  call_method 2
+   36:  call_method 1
+   39:  await
+   40:  put_loc0 0: e
+   41:  get_loc3 3: this
+   42:  get_field2 parseSelectionRect
+   47:  get_loc_check 0: e
+   50:  call_method 1
+   53:  put_loc1 1: i
+   54:  get_loc3 3: this
+   55:  get_field2 buildCentered16By9Crop
+   60:  get_loc_check 1: i
+   63:  call_method 1
+   66:  put_loc2 2: r
+   67:  get_loc_check 2: r
+   70:  lnot
+   71:  if_false8 88
+   73:  get_var Error
+   78:  dup
+   79:  push_atom_value "crop-bounds-unavailable"
+   84:  call_constructor 1
+   87:  throw
+   88:  get_loc3 3: this
+   89:  get_field2 execCmd
+   94:  push_atom_value "v4l2-ctl -d "
+   99:  get_field2 concat
+  104:  get_arg0 0: t
+  105:  push_atom_value " --set-crop top="
+  110:  get_loc_check 2: r
+  113:  get_field top
+  118:  push_atom_value ",left="
+  123:  get_loc_check 2: r
+  126:  get_field left
+  131:  push_atom_value ",width="
+  136:  get_loc_check 2: r
+  139:  get_field width
+  144:  push_atom_value ",height="
+  149:  get_loc_check 2: r
+  152:  get_field height
+  157:  call_method 9
+  160:  call_method 1
+  163:  await
+  164:  drop
+  165:  get_loc_check 2: r
+  168:  return_async
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: catch t [level:4 next:-1]
+    1: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field shell
+    8:  if_false8 67
+   10:  get_loc1 1: this
+   11:  get_field shell
+   16:  get_field exec
+   21:  if_false8 67
+   23:  catch 58
+   28:  get_loc1 1: this
+   29:  get_field shell
+   34:  get_field2 exec
+   39:  push_atom_value "for f in /proc/[0-9]*/cmdline; do p=$(echo $f | cut -d/ -f3); [ \"$p\" = \"$$\" ] && continue; c=$(tr '\\0' ' ' < $f 2>/dev/null); case \"$c\" in *gst-launch*'"
+   44:  get_arg0 0: t
+   45:  add
+   46:  push_atom_value "'*) kill -9 $p 2>/dev/null;; esac; done; echo ok"
+   51:  add
+   52:  call_method 1
+   55:  drop
+   56:  drop
+   57:  return_undef
+   58:  put_loc0 0: t
+   59:  catch 66
+   64:  drop
+   65:  return_undef
+   66:  throw
+   67:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: catch t [level:4 next:-1]
+    1: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field shell
+    8:  if_false8 73
+   10:  get_loc1 1: this
+   11:  get_field shell
+   16:  get_field exec
+   21:  if_false8 73
+   23:  catch 64
+   28:  get_loc1 1: this
+   29:  get_field shell
+   34:  get_field2 exec
+   39:  push_atom_value "echo "
+   44:  get_arg0 0: t
+   45:  if_false8 50
+   47:  push_1 1
+   48:  goto8 51
+   50:  push_0 0
+   51:  add
+   52:  push_atom_value " > /data/loli_cam_fg"
+   57:  add
+   58:  call_method 1
+   61:  drop
+   62:  drop
+   63:  return_undef
+   64:  put_loc0 0: t
+   65:  catch 72
+   70:  drop
+   71:  return_undef
+   72:  throw
+   73:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  closure vars:
+    0: r parent:loc3 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field _dkTimer
+    8:  lnot
+    9:  if_false8 28
+   11:  get_loc1 1: this
+   12:  put_loc0 0: t
+   13:  get_loc1 1: this
+   14:  get_var_ref_check 0: r
+   17:  fclosure8 0: [bytecode <null>]
+   19:  push_i16 800
+   22:  call2 2
+   23:  put_field _dkTimer
+   28:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 pollDualkeyShot
+    6:  call_method 0
+    9:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: s parent:loc4 const
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field _dkTimer
+    8:  dup
+    9:  if_false8 31
+   11:  drop
+   12:  get_var_ref_check 0: s
+   15:  get_loc0 0: this
+   16:  get_field _dkTimer
+   21:  call1 1
+   22:  drop
+   23:  get_loc0 0: this
+   24:  null
+   25:  insert2
+   26:  put_field _dkTimer
+   31:  drop
+   32:  get_loc0 0: this
+   33:  get_field2 markCamFg
+   38:  push_0 0
+   39:  call_method 1
+   42:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: catch t [level:4 next:-1]
+    2: var this
+  closure vars:
+    0: b parent:loc17 const
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field _pageDead
+    8:  lnot
+    9:  if_false 197
+   14:  get_loc2 2: this
+   15:  get_field _pageHidden
+   20:  lnot
+   21:  if_false 197
+   26:  get_loc2 2: this
+   27:  get_field2 getLoadOption
+   32:  push_atom_value camReq
+   37:  push_empty_string
+   38:  call_method 2
+   41:  lnot
+   42:  if_false 197
+   47:  get_loc2 2: this
+   48:  get_field bridgeReady
+   53:  if_false 197
+   58:  get_loc2 2: this
+   59:  get_field shell
+   64:  if_false 197
+   69:  get_loc2 2: this
+   70:  get_field shell
+   75:  get_field exec
+   80:  if_false8 197
+   82:  catch 188
+   87:  get_loc2 2: this
+   88:  get_field shell
+   93:  get_field2 exec
+   98:  push_atom_value "c=$(cat "
+  103:  get_var_ref_check 0: b
+  106:  add
+  107:  push_atom_value " 2>/dev/null); [ -n \"$c\" ] && rm -f "
+  112:  add
+  113:  get_var_ref_check 0: b
+  116:  add
+  117:  push_atom_value "; echo \"$c\""
+  122:  add
+  123:  call_method 1
+  126:  put_loc0 0: t
+  127:  push_minus1 -1
+  128:  get_var String
+  133:  get_loc0 0: t
+  134:  if_false8 154
+  136:  push_atom_value object
+  141:  get_loc0 0: t
+  142:  typeof
+  143:  eq
+  144:  if_false8 154
+  146:  get_loc0 0: t
+  147:  get_field output
+  152:  goto8 155
+  154:  get_loc0 0: t
+  155:  dup
+  156:  if_true8 160
+  158:  drop
+  159:  push_empty_string
+  160:  call1 1
+  161:  get_field2 indexOf
+  166:  push_const8 0: 1"1"
+  168:  call_method 1
+  171:  strict_neq
+  172:  dup
+  173:  if_false8 185
+  175:  drop
+  176:  get_loc2 2: this
+  177:  get_field2 takePhoto
+  182:  call_method 0
+  185:  drop
+  186:  drop
+  187:  return_undef
+  188:  put_loc1 1: t
+  189:  catch 196
+  194:  drop
+  195:  return_undef
+  196:  throw
+  197:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:4 next:-1]
+    1: var this
+  closure vars:
+    0: g parent:loc14 const
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field shell
+    8:  if_false8 63
+   10:  get_loc1 1: this
+   11:  get_field shell
+   16:  get_field exec
+   21:  if_false8 63
+   23:  catch 54
+   28:  get_loc1 1: this
+   29:  get_field shell
+   34:  get_field2 exec
+   39:  push_atom_value "date +%s > "
+   44:  get_var_ref_check 0: g
+   47:  add
+   48:  call_method 1
+   51:  drop
+   52:  drop
+   53:  return_undef
+   54:  put_loc0 0: t
+   55:  catch 62
+   60:  drop
+   61:  return_undef
+   62:  throw
+   63:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  closure vars:
+    0: r parent:loc3 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field _camHbTimer
+    8:  lnot
+    9:  if_false8 38
+   11:  get_loc1 1: this
+   12:  get_field2 camWriteHeartbeat
+   17:  call_method 0
+   20:  drop
+   21:  get_loc1 1: this
+   22:  put_loc0 0: t
+   23:  get_loc1 1: this
+   24:  get_var_ref_check 0: r
+   27:  fclosure8 0: [bytecode <null>]
+   29:  push_i16 2000
+   32:  call2 2
+   33:  put_field _camHbTimer
+   38:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 camWriteHeartbeat
+    6:  call_method 0
+    9:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:4 next:-1]
+    1: var this
+  closure vars:
+    0: s parent:loc4 const
+    1: g parent:loc14 const
+    2: m parent:loc15 const
+    3: f parent:loc16 const
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field _camHbTimer
+    8:  dup
+    9:  if_false8 31
+   11:  drop
+   12:  get_var_ref_check 0: s
+   15:  get_loc1 1: this
+   16:  get_field _camHbTimer
+   21:  call1 1
+   22:  drop
+   23:  get_loc1 1: this
+   24:  null
+   25:  insert2
+   26:  put_field _camHbTimer
+   31:  drop
+   32:  get_loc1 1: this
+   33:  get_field shell
+   38:  if_false8 113
+   40:  get_loc1 1: this
+   41:  get_field shell
+   46:  get_field exec
+   51:  if_false8 113
+   53:  catch 104
+   58:  get_loc1 1: this
+   59:  get_field shell
+   64:  get_field2 exec
+   69:  push_atom_value "rm -f "
+   74:  get_var_ref_check 1: g
+   77:  add
+   78:  push_atom_value " "
+   83:  add
+   84:  get_var_ref_check 2: m
+   87:  add
+   88:  push_atom_value " "
+   93:  add
+   94:  get_var_ref_check 3: f
+   97:  add
+   98:  call_method 1
+  101:  drop
+  102:  drop
+  103:  return_undef
+  104:  put_loc0 0: t
+  105:  catch 112
+  110:  drop
+  111:  return_undef
+  112:  throw
+  113:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: var i
+    1: var r
+    2: catch t [level:7 next:-1]
+    3: var this
+  closure vars:
+    0: g parent:loc14 const
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  get_field shell
+    8:  if_false 140
+   13:  get_loc3 3: this
+   14:  get_field shell
+   19:  get_field exec
+   24:  if_false8 140
+   26:  get_var parseInt
+   31:  get_arg0 0: t
+   32:  push_i8 10
+   34:  call2 2
+   35:  set_loc0 0: i
+   36:  if_false8 140
+   38:  get_loc0 0: i
+   39:  push_1 1
+   40:  lte
+   41:  lnot
+   42:  if_false8 140
+   44:  push_atom_value "P="
+   49:  get_loc0 0: i
+   50:  add
+   51:  push_atom_value "; while kill -0 $P 2>/dev/null; do tr \"\\0\" \" \" < /proc/$P/cmdline 2>/dev/null | grep -q gst-launch || break; N=$(date +%s); H=$(cat "
+   56:  add
+   57:  get_var_ref_check 0: g
+   60:  add
+   61:  push_atom_value " 2>/dev/null || echo 0); if [ $((N-H)) -gt 8 ]; then "
+   66:  add
+   67:  push_atom_value rec
+   72:  get_arg1 1: e
+   73:  strict_eq
+   74:  if_false8 83
+   76:  push_atom_value "kill -INT $P 2>/dev/null; sleep 3; kill -9 $P 2>/dev/null"
+   81:  goto8 88
+   83:  push_atom_value "kill -9 $P 2>/dev/null"
+   88:  add
+   89:  push_atom_value "; break; fi; sleep 3; done"
+   94:  add
+   95:  put_loc1 1: r
+   96:  catch 131
+  101:  get_loc3 3: this
+  102:  get_field shell
+  107:  get_field2 exec
+  112:  push_atom_value "setsid sh -c '"
+  117:  get_loc1 1: r
+  118:  add
+  119:  push_atom_value "' >/dev/null 2>&1 < /dev/null &"
+  124:  add
+  125:  call_method 1
+  128:  drop
+  129:  drop
+  130:  return_undef
+  131:  put_loc2 2: t
+  132:  catch 139
+  137:  drop
+  138:  return_undef
+  139:  throw
+  140:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:6 next:4]
+    1: catch t [level:8 next:4]
+    2: const t [level:4 next:-1]
+    3: const e [level:4 next:2]
+    4: const i [level:4 next:3]
+    5: const t [level:11 next:4]
+    6: const e [level:11 next:5]
+    7: catch t [level:15 next:6]
+    8: catch t [level:17 next:4]
+    9: var this
+  closure vars:
+    0: h parent:loc7 const
+    1: m parent:loc15 const
+  stack_size: 11
+  opcodes:
+    0:  push_this
+    1:  put_loc8 9: this
+    3:  get_loc8 9: this
+    5:  get_field _pageDead
+   10:  lnot
+   11:  if_false 693
+   16:  get_loc8 9: this
+   18:  get_field _pageHidden
+   23:  lnot
+   24:  if_false 693
+   29:  get_loc8 9: this
+   31:  get_field isPreviewing
+   36:  lnot
+   37:  if_false 693
+   42:  get_loc8 9: this
+   44:  get_field _previewStarting
+   49:  lnot
+   50:  if_false 693
+   55:  get_loc8 9: this
+   57:  get_field bridgeReady
+   62:  if_false 693
+   67:  get_loc8 9: this
+   69:  push_0 0
+   70:  lnot
+   71:  put_field _previewStarting
+   76:  catch 677
+   81:  set_loc_uninitialized 4: i
+   84:  set_loc_uninitialized 3: e
+   87:  set_loc_uninitialized 2: t
+   90:  get_loc8 9: this
+   92:  get_field cam
+   97:  if_false 316
+  102:  catch 287
+  107:  set_loc_uninitialized 0: t
+  110:  push_1 1
+  111:  lnot
+  112:  get_loc8 9: this
+  114:  get_field cam
+  119:  get_field2 setCrop
+  124:  object
+  125:  get_var_ref_check 0: h
+  128:  define_field device
+  133:  call_method 1
+  136:  strict_eq
+  137:  dup
+  138:  if_false8 155
+  140:  drop
+  141:  get_loc8 9: this
+  143:  get_field2 applyCropForDevice
+  148:  get_var_ref_check 0: h
+  151:  call_method 1
+  154:  await
+  155:  drop
+  156:  get_loc8 9: this
+  158:  get_field2 getRenderRectObject
+  163:  call_method 0
+  166:  put_loc0 0: t
+  167:  get_loc8 9: this
+  169:  get_field cam
+  174:  get_field2 openPreview
+  179:  object
+  180:  get_var_ref_check 0: h
+  183:  define_field device
+  188:  push_0 0
+  189:  define_field rotation
+  194:  get_loc_check 0: t
+  197:  define_field rect
+  202:  push_i16 640
+  205:  define_field width
+  210:  push_i16 360
+  213:  define_field height
+  218:  call_method 1
+  221:  if_false8 284
+  223:  get_loc8 9: this
+  225:  push_0 0
+  226:  lnot
+  227:  put_field isPreviewing
+  232:  get_loc8 9: this
+  234:  push_minus1 -1
+  235:  put_field previewPid
+  240:  get_loc8 9: this
+  242:  get_field _pageDead
+  247:  dup
+  248:  if_true8 258
+  250:  drop
+  251:  get_loc8 9: this
+  253:  get_field _pageHidden
+  258:  dup
+  259:  if_false8 274
+  261:  drop
+  262:  get_loc8 9: this
+  264:  get_field2 stopPreview
+  269:  push_0 0
+  270:  lnot
+  271:  call_method 1
+  274:  drop
+  275:  undefined
+  276:  nip
+  277:  nip
+  278:  gosub 683
+  283:  return_async
+  284:  drop
+  285:  goto8 316
+  287:  put_loc1 1: t
+  288:  catch 315
+  293:  get_var console
+  298:  get_field2 error
+  303:  push_atom_value "native preview failed, fallback to shell"
+  308:  call_method 1
+  311:  drop
+  312:  drop
+  313:  goto8 316
+  315:  throw
+  316:  get_loc8 9: this
+  318:  get_field2 applyCropForDevice
+  323:  get_var_ref_check 0: h
+  326:  call_method 1
+  329:  await
+  330:  drop
+  331:  get_loc8 9: this
+  333:  get_field2 sweepGstProcesses
+  338:  get_var_ref_check 0: h
+  341:  call_method 1
+  344:  drop
+  345:  get_loc8 9: this
+  347:  get_field2 getRenderRectangleParam
+  352:  call_method 0
+  355:  put_loc2 2: t
+  356:  get_loc8 9: this
+  358:  get_field2 getRotationParam
+  363:  call_method 0
+  366:  put_loc3 3: e
+  367:  push_atom_value "gst-launch-1.0 v4l2src device="
+  372:  get_field2 concat
+  377:  get_var_ref_check 0: h
+  380:  push_atom_value " ! video/x-raw,width=640,height=360,framerate=30/1,pixel-aspect-ratio=1/1 ! "
+  385:  get_loc_check 3: e
+  388:  push_atom_value " ! videoscale ! "
+  393:  push_atom_value "video/x-raw,width=360,height=640,pixel-aspect-ratio=1/1"
+  398:  push_atom_value " ! kmssink plane-id=75 sync=false driver-name=rockchip force-aspect-ratio=true "
+  403:  get_loc_check 2: t
+  406:  push_atom_value " > /userdata/applog/gst_preview.log 2>&1 & echo $!"
+  411:  call_method 8
+  414:  put_loc8 4: i
+  416:  catch 640
+  421:  set_loc_uninitialized 6: e
+  424:  set_loc_uninitialized 5: t
+  427:  get_loc8 9: this
+  429:  get_field2 execCmd
+  434:  get_loc_check 4: i
+  437:  call_method 1
+  440:  await
+  441:  put_loc8 5: t
+  443:  get_var String
+  448:  get_loc_check 5: t
+  451:  call1 1
+  452:  get_field2 trim
+  457:  call_method 0
+  460:  put_loc8 6: e
+  462:  get_loc_check 6: e
+  465:  if_false 637
+  470:  get_var isNaN
+  475:  get_var parseInt
+  480:  get_loc_check 6: e
+  483:  call1 1
+  484:  call1 1
+  485:  lnot
+  486:  if_false 637
+  491:  get_loc8 9: this
+  493:  get_loc_check 6: e
+  496:  put_field previewPid
+  501:  get_loc8 9: this
+  503:  push_0 0
+  504:  lnot
+  505:  put_field isPreviewing
+  510:  catch 561
+  515:  get_loc8 9: this
+  517:  get_field shell
+  522:  get_field2 exec
+  527:  push_atom_value "printf %s "
+  532:  get_var parseInt
+  537:  get_loc_check 6: e
+  540:  push_i8 10
+  542:  call2 2
+  543:  add
+  544:  push_atom_value " > "
+  549:  add
+  550:  get_var_ref_check 1: m
+  553:  add
+  554:  call_method 1
+  557:  drop
+  558:  drop
+  559:  goto8 572
+  561:  put_loc8 7: t
+  563:  catch 571
+  568:  drop
+  569:  goto8 572
+  571:  throw
+  572:  get_loc8 9: this
+  574:  get_field2 startCamHeartbeat
+  579:  call_method 0
+  582:  drop
+  583:  get_loc8 9: this
+  585:  get_field2 spawnCamWatchdog
+  590:  get_loc_check 6: e
+  593:  push_atom_value prev
+  598:  call_method 2
+  601:  drop
+  602:  get_loc8 9: this
+  604:  get_field _pageDead
+  609:  dup
+  610:  if_true8 620
+  612:  drop
+  613:  get_loc8 9: this
+  615:  get_field _pageHidden
+  620:  dup
+  621:  if_false8 636
+  623:  drop
+  624:  get_loc8 9: this
+  626:  get_field2 stopPreview
+  631:  push_0 0
+  632:  lnot
+  633:  call_method 1
+  636:  drop
+  637:  drop
+  638:  goto8 667
+  640:  put_loc8 8: t
+  642:  catch 666
+  647:  get_loc8 9: this
+  649:  get_field2 showError
+  654:  push_atom_value "\u00e9\u00a2\u0084\u00e8\u00a7\u0088\u00e5\u0090\u00af\u00e5\u008a\u00a8\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  659:  call_method 1
+  662:  drop
+  663:  drop
+  664:  goto8 667
+  666:  throw
+  667:  drop
+  668:  undefined
+  669:  gosub 683
+  674:  drop
+  675:  goto8 693
+  677:  gosub 683
+  682:  throw
+  683:  get_loc8 9: this
+  685:  push_1 1
+  686:  lnot
+  687:  put_field _previewStarting
+  692:  ret
+  693:  undefined
+  694:  return_async
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  set_loc_uninitialized 0: t
+    5:  get_loc1 1: this
+    6:  get_field2 getRenderRectangleParam
+   11:  call_method 0
+   14:  get_field2 match
+   19:  push_const8 0: 1"<(\\d+),(\\d+),(\\d+),(\\d+)>"
+   21:  push_const8 1: 1"\u0000\u0005\u0000\u0093\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001<\u0000\u000b\u0001\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u000c\u0001\u0001,\u0000\u000b\u0002\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u000c\u0002\u0001,\u0000\u000b\u0003\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u000c\u0003\u0001,\u0000\u000b\u0004\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u000c\u0004\u0001>\u0000\u000c\u0000\n"
+   23:  regexp
+   24:  call_method 1
+   27:  put_loc0 0: t
+   28:  get_loc_check 0: t
+   31:  if_false8 79
+   33:  object
+   34:  get_loc_check 0: t
+   37:  push_1 1
+   38:  get_array_el
+   39:  plus
+   40:  define_field x
+   45:  get_loc_check 0: t
+   48:  push_2 2
+   49:  get_array_el
+   50:  plus
+   51:  define_field y
+   56:  get_loc_check 0: t
+   59:  push_3 3
+   60:  get_array_el
+   61:  plus
+   62:  define_field w
+   67:  get_loc_check 0: t
+   70:  push_4 4
+   71:  get_array_el
+   72:  plus
+   73:  define_field h
+   78:  return
+   79:  object
+   80:  push_0 0
+   81:  define_field x
+   86:  push_0 0
+   87:  define_field y
+   92:  push_i16 266
+   95:  define_field w
+  100:  push_i16 472
+  103:  define_field h
+  108:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+    1: const e [level:1 next:0]
+    2: const i [level:1 next:1]
+    3: var this
+  stack_size: 10
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  set_loc_uninitialized 2: i
+    5:  set_loc_uninitialized 1: e
+    8:  set_loc_uninitialized 0: t
+   11:  undefined
+   12:  dup
+   13:  is_undefined
+   14:  if_true8 41
+   16:  to_object
+   17:  dup
+   18:  get_field date
+   23:  put_loc0 0: t
+   24:  dup
+   25:  get_field time
+   30:  put_loc1 1: e
+   31:  dup
+   32:  get_field ms
+   37:  put_loc2 2: i
+   38:  drop
+   39:  goto8 53
+   41:  drop
+   42:  get_loc3 3: this
+   43:  get_field2 getTimestampParts
+   48:  call_method 0
+   51:  goto8 16
+   53:  push_atom_value VID_
+   58:  get_field2 concat
+   63:  get_loc_check 0: t
+   66:  push_atom_value _
+   71:  get_loc_check 1: e
+   74:  push_atom_value _
+   79:  get_loc_check 2: i
+   82:  push_atom_value _1_
+   87:  get_loc3 3: this
+   88:  get_field deviceId
+   93:  push_atom_value ".avi"
+   98:  tail_call_method 8
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:1 next:-1]
+    1: const i [level:1 next:0]
+    2: const r [level:1 next:1]
+    3: const s [level:1 next:2]
+  stack_size: 10
+  opcodes:
+    0:  set_loc_uninitialized 3: s
+    3:  set_loc_uninitialized 2: r
+    6:  set_loc_uninitialized 1: i
+    9:  set_loc_uninitialized 0: e
+   12:  get_var Math
+   17:  get_field2 max
+   22:  get_var Math
+   27:  get_field2 floor
+   32:  get_var Number
+   37:  get_arg0 0: t
+   38:  call1 1
+   39:  dup
+   40:  if_true8 44
+   42:  drop
+   43:  push_0 0
+   44:  push_i16 1000
+   47:  div
+   48:  call_method 1
+   51:  push_0 0
+   52:  call_method 2
+   55:  put_loc0 0: e
+   56:  get_var Math
+   61:  get_field2 floor
+   66:  get_loc_check 0: e
+   69:  push_i16 3600
+   72:  div
+   73:  call_method 1
+   76:  put_loc1 1: i
+   77:  get_var Math
+   82:  get_field2 floor
+   87:  get_loc_check 0: e
+   90:  push_i16 3600
+   93:  mod
+   94:  push_i8 60
+   96:  div
+   97:  call_method 1
+  100:  put_loc2 2: r
+  101:  get_loc_check 0: e
+  104:  push_i8 60
+  106:  mod
+  107:  put_loc3 3: s
+  108:  get_loc_check 1: i
+  111:  push_0 0
+  112:  gt
+  113:  if_false8 195
+  115:  push_empty_string
+  116:  get_field2 concat
+  121:  get_var String
+  126:  get_loc_check 1: i
+  129:  call1 1
+  130:  get_field2 padStart
+  135:  push_2 2
+  136:  push_const8 0: 1"0"
+  138:  call_method 2
+  141:  push_atom_value ":"
+  146:  get_var String
+  151:  get_loc_check 2: r
+  154:  call1 1
+  155:  get_field2 padStart
+  160:  push_2 2
+  161:  push_const8 1: 1"0"
+  163:  call_method 2
+  166:  push_atom_value ":"
+  171:  get_var String
+  176:  get_loc_check 3: s
+  179:  call1 1
+  180:  get_field2 padStart
+  185:  push_2 2
+  186:  push_const8 2: 1"0"
+  188:  call_method 2
+  191:  call_method 5
+  194:  return
+  195:  push_empty_string
+  196:  get_field2 concat
+  201:  get_var String
+  206:  get_loc_check 2: r
+  209:  call1 1
+  210:  get_field2 padStart
+  215:  push_2 2
+  216:  push_const8 3: 1"0"
+  218:  call_method 2
+  221:  push_atom_value ":"
+  226:  get_var String
+  231:  get_loc_check 3: s
+  234:  call1 1
+  235:  get_field2 padStart
+  240:  push_2 2
+  241:  push_const8 4: 1"0"
+  243:  call_method 2
+  246:  call_method 3
+  249:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field recordStartedAt
+    8:  if_false8 52
+   10:  get_loc0 0: this
+   11:  get_var Math
+   16:  get_field2 max
+   21:  get_var Date
+   26:  get_field2 now
+   31:  call_method 0
+   34:  get_loc0 0: this
+   35:  get_field recordStartedAt
+   40:  sub
+   41:  push_0 0
+   42:  call_method 2
+   45:  insert2
+   46:  put_field recordElapsedMs
+   51:  return_undef
+   52:  get_loc0 0: this
+   53:  push_0 0
+   54:  insert2
+   55:  put_field recordElapsedMs
+   60:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: r parent:loc3 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 clearRecordTimer
+    8:  call_method 0
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_var Date
+   18:  get_field2 now
+   23:  call_method 0
+   26:  put_field recordStartedAt
+   31:  get_loc0 0: this
+   32:  get_field2 updateRecordElapsed
+   37:  call_method 0
+   40:  drop
+   41:  get_loc0 0: this
+   42:  get_var_ref_check 0: r
+   45:  fclosure8 0: [bytecode <null>]
+   47:  push_i16 500
+   50:  call2 2
+   51:  put_field recordTimer
+   56:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: this local:loc0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  get_field2 updateRecordElapsed
+    6:  call_method 0
+    9:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: s parent:loc4 const
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field recordTimer
+    8:  dup
+    9:  if_false8 31
+   11:  drop
+   12:  get_var_ref_check 0: s
+   15:  get_loc0 0: this
+   16:  get_field recordTimer
+   21:  call1 1
+   22:  drop
+   23:  get_loc0 0: this
+   24:  null
+   25:  insert2
+   26:  put_field recordTimer
+   31:  drop
+   32:  get_loc0 0: this
+   33:  push_0 0
+   34:  put_field recordStartedAt
+   39:  get_loc0 0: this
+   40:  push_0 0
+   41:  put_field recordElapsedMs
+   46:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field isRecording
+    8:  if_false8 22
+   10:  get_loc0 0: this
+   11:  get_field2 stopRecording
+   16:  call_method 0
+   19:  await
+   20:  goto8 32
+   22:  get_loc0 0: this
+   23:  get_field2 startRecording
+   28:  call_method 0
+   31:  await
+   32:  drop
+   33:  undefined
+   34:  return_async
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:3 next:-1]
+    1: catch t [level:8 next:4]
+    2: const e [level:3 next:0]
+    3: const i [level:3 next:2]
+    4: const r [level:3 next:3]
+    5: catch t [level:13 next:4]
+    6: catch t [level:15 next:-1]
+    7: var this
+  closure vars:
+    0: l parent:loc9 const
+    1: o parent:loc6 const
+    2: f parent:loc16 const
+  stack_size: 9
+  opcodes:
+    0:  push_this
+    1:  put_loc8 7: this
+    3:  get_loc8 7: this
+    5:  get_field isRecording
+   10:  lnot
+   11:  if_false 693
+   16:  get_loc8 7: this
+   18:  get_field isCapturing
+   23:  lnot
+   24:  if_false 693
+   29:  catch 630
+   34:  set_loc_uninitialized 4: r
+   37:  set_loc_uninitialized 3: i
+   40:  set_loc_uninitialized 2: e
+   43:  set_loc_uninitialized 0: t
+   46:  get_loc8 7: this
+   48:  get_field2 ensureDirectory
+   53:  get_var_ref_check 0: l
+   56:  call_method 1
+   59:  await
+   60:  drop
+   61:  get_loc8 7: this
+   63:  get_field2 checkStorage
+   68:  push_i16 200
+   71:  get_var_ref_check 0: l
+   74:  call_method 2
+   77:  await
+   78:  lnot
+   79:  if_false8 100
+   81:  get_loc8 7: this
+   83:  get_field2 showError
+   88:  push_atom_value "\u00e5\u00bd\u0095\u00e5\u0083\u008f\u00e5\u00ad\u0098\u00e5\u0082\u00a8\u00e7\u00a9\u00ba\u00e9\u0097\u00b4\u00e4\u00b8\u008d\u00e8\u00b6\u00b3"
+   93:  call_method 1
+   96:  drop
+   97:  undefined
+   98:  nip
+   99:  return_async
+  100:  get_loc8 7: this
+  102:  get_field2 loadDeviceId
+  107:  call_method 0
+  110:  await
+  111:  drop
+  112:  push_empty_string
+  113:  get_field2 concat
+  118:  get_var_ref_check 0: l
+  121:  push_atom_value "/"
+  126:  get_loc8 7: this
+  128:  get_field2 getRecordFileName
+  133:  call_method 0
+  136:  call_method 3
+  139:  put_loc0 0: t
+  140:  get_loc8 7: this
+  142:  get_field cam
+  147:  if_false 350
+  152:  catch 321
+  157:  push_1 1
+  158:  lnot
+  159:  get_loc8 7: this
+  161:  get_field cam
+  166:  get_field2 setCrop
+  171:  object
+  172:  get_var_ref_check 1: o
+  175:  define_field device
+  180:  call_method 1
+  183:  strict_eq
+  184:  dup
+  185:  if_false8 202
+  187:  drop
+  188:  get_loc8 7: this
+  190:  get_field2 applyCropForDevice
+  195:  get_var_ref_check 1: o
+  198:  call_method 1
+  201:  await
+  202:  drop
+  203:  get_loc8 7: this
+  205:  get_field cam
+  210:  get_field2 startRecord
+  215:  object
+  216:  get_var_ref_check 1: o
+  219:  define_field device
+  224:  get_loc_check 0: t
+  227:  define_field file
+  232:  push_i16 1280
+  235:  define_field width
+  240:  push_i16 720
+  243:  define_field height
+  248:  push_i8 30
+  250:  define_field fps
+  255:  call_method 1
+  258:  if_false8 318
+  260:  get_loc8 7: this
+  262:  push_minus1 -1
+  263:  put_field recordPid
+  268:  get_loc8 7: this
+  270:  get_loc_check 0: t
+  273:  put_field recordPath
+  278:  get_loc8 7: this
+  280:  push_0 0
+  281:  lnot
+  282:  put_field isRecording
+  287:  get_loc8 7: this
+  289:  get_field2 startRecordTimer
+  294:  call_method 0
+  297:  drop
+  298:  get_loc8 7: this
+  300:  get_field2 showInfo
+  305:  push_atom_value "\u00e5\u00bc\u0080\u00e5\u00a7\u008b\u00e5\u00bd\u0095\u00e5\u0083\u008f"
+  310:  call_method 1
+  313:  drop
+  314:  undefined
+  315:  nip
+  316:  nip
+  317:  return_async
+  318:  drop
+  319:  goto8 350
+  321:  put_loc1 1: t
+  322:  catch 349
+  327:  get_var console
+  332:  get_field2 error
+  337:  push_atom_value "native record failed, fallback to shell"
+  342:  call_method 1
+  345:  drop
+  346:  drop
+  347:  goto8 350
+  349:  throw
+  350:  get_loc8 7: this
+  352:  get_field2 applyCropForDevice
+  357:  get_var_ref_check 1: o
+  360:  call_method 1
+  363:  await
+  364:  drop
+  365:  push_atom_value "gst-launch-1.0 -e v4l2src device="
+  370:  get_field2 concat
+  375:  get_var_ref_check 1: o
+  378:  push_atom_value " ! "
+  383:  push_atom_value "video/x-raw,format=NV12,width=1280,height=720,framerate=30/1,pixel-aspect-ratio=1/1"
+  388:  push_atom_value " ! jpegenc ! avimux ! filesink location=\""
+  393:  get_loc_check 0: t
+  396:  push_atom_value "\" > /userdata/applog/gst_record.log 2>&1 & echo $!"
+  401:  call_method 6
+  404:  put_loc2 2: e
+  405:  get_loc8 7: this
+  407:  get_field2 execCmd
+  412:  get_loc_check 2: e
+  415:  call_method 1
+  418:  await
+  419:  put_loc3 3: i
+  420:  get_var String
+  425:  get_loc_check 3: i
+  428:  call1 1
+  429:  get_field2 trim
+  434:  call_method 0
+  437:  put_loc8 4: r
+  439:  get_loc_check 4: r
+  442:  lnot
+  443:  dup
+  444:  if_true8 462
+  446:  drop
+  447:  get_var isNaN
+  452:  get_var parseInt
+  457:  get_loc_check 4: r
+  460:  call1 1
+  461:  call1 1
+  462:  if_false8 479
+  464:  get_var Error
+  469:  dup
+  470:  push_atom_value "record-pid-invalid"
+  475:  call_constructor 1
+  478:  throw
+  479:  get_loc8 7: this
+  481:  get_loc_check 4: r
+  484:  put_field recordPid
+  489:  get_loc8 7: this
+  491:  get_loc_check 0: t
+  494:  put_field recordPath
+  499:  get_loc8 7: this
+  501:  push_0 0
+  502:  lnot
+  503:  put_field isRecording
+  508:  catch 559
+  513:  get_loc8 7: this
+  515:  get_field shell
+  520:  get_field2 exec
+  525:  push_atom_value "printf %s "
+  530:  get_var parseInt
+  535:  get_loc_check 4: r
+  538:  push_i8 10
+  540:  call2 2
+  541:  add
+  542:  push_atom_value " > "
+  547:  add
+  548:  get_var_ref_check 2: f
+  551:  add
+  552:  call_method 1
+  555:  drop
+  556:  drop
+  557:  goto8 570
+  559:  put_loc8 5: t
+  561:  catch 569
+  566:  drop
+  567:  goto8 570
+  569:  throw
+  570:  get_loc8 7: this
+  572:  get_field2 startCamHeartbeat
+  577:  call_method 0
+  580:  drop
+  581:  get_loc8 7: this
+  583:  get_field2 spawnCamWatchdog
+  588:  get_loc_check 4: r
+  591:  push_atom_value rec
+  596:  call_method 2
+  599:  drop
+  600:  get_loc8 7: this
+  602:  get_field2 startRecordTimer
+  607:  call_method 0
+  610:  drop
+  611:  get_loc8 7: this
+  613:  get_field2 showInfo
+  618:  push_atom_value "\u00e5\u00bc\u0080\u00e5\u00a7\u008b\u00e5\u00bd\u0095\u00e5\u0083\u008f"
+  623:  call_method 1
+  626:  drop
+  627:  drop
+  628:  goto8 693
+  630:  put_loc8 6: t
+  632:  catch 692
+  637:  get_loc8 7: this
+  639:  null
+  640:  put_field recordPid
+  645:  get_loc8 7: this
+  647:  push_empty_string
+  648:  put_field recordPath
+  653:  get_loc8 7: this
+  655:  push_1 1
+  656:  lnot
+  657:  put_field isRecording
+  662:  get_loc8 7: this
+  664:  get_field2 clearRecordTimer
+  669:  call_method 0
+  672:  drop
+  673:  get_loc8 7: this
+  675:  get_field2 showError
+  680:  push_atom_value "\u00e5\u00bd\u0095\u00e5\u0083\u008f\u00e5\u0090\u00af\u00e5\u008a\u00a8\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  685:  call_method 1
+  688:  drop
+  689:  drop
+  690:  goto8 693
+  692:  throw
+  693:  undefined
+  694:  return_async
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+    1: const e [level:1 next:0]
+    2: const t [level:5 next:1]
+    3: catch t [level:7 next:1]
+    4: catch t [level:12 next:1]
+    5: catch t [level:15 next:1]
+    6: var this
+  closure vars:
+    0: f parent:loc16 const
+  stack_size: 15
+  opcodes:
+    0:  push_this
+    1:  put_loc8 6: this
+    3:  set_loc_uninitialized 1: e
+    6:  set_loc_uninitialized 0: t
+    9:  get_loc8 6: this
+   11:  get_field recordPid
+   16:  lnot
+   17:  if_false8 21
+   19:  undefined
+   20:  return_async
+   21:  get_loc8 6: this
+   23:  get_field recordPid
+   28:  put_loc0 0: t
+   29:  get_loc8 6: this
+   31:  get_field recordPath
+   36:  put_loc1 1: e
+   37:  get_loc8 6: this
+   39:  null
+   40:  put_field recordPid
+   45:  get_loc8 6: this
+   47:  push_empty_string
+   48:  put_field recordPath
+   53:  get_loc8 6: this
+   55:  push_1 1
+   56:  lnot
+   57:  put_field isRecording
+   62:  get_loc8 6: this
+   64:  get_field2 clearRecordTimer
+   69:  call_method 0
+   72:  drop
+   73:  get_loc8 6: this
+   75:  get_field cam
+   80:  if_false 211
+   85:  push_minus1 -1
+   86:  get_loc_check 0: t
+   89:  strict_eq
+   90:  if_false8 211
+   92:  catch 163
+   97:  set_loc_uninitialized 2: t
+  100:  get_loc8 6: this
+  102:  get_field cam
+  107:  get_field2 stopRecord
+  112:  call_method 0
+  115:  put_loc2 2: t
+  116:  get_loc_check 2: t
+  119:  if_false8 160
+  121:  get_loc_check 2: t
+  124:  get_field ok
+  129:  if_false8 160
+  131:  get_loc_check 2: t
+  134:  get_field path
+  139:  if_false8 160
+  141:  get_loc8 6: this
+  143:  get_field2 showInfo
+  148:  push_atom_value "\u00e5\u00bd\u0095\u00e5\u0083\u008f\u00e5\u00b7\u00b2\u00e4\u00bf\u009d\u00e5\u00ad\u0098"
+  153:  call_method 1
+  156:  drop
+  157:  undefined
+  158:  nip
+  159:  return_async
+  160:  drop
+  161:  goto8 192
+  163:  put_loc3 3: t
+  164:  catch 191
+  169:  get_var console
+  174:  get_field2 error
+  179:  push_atom_value "native stopRecord failed"
+  184:  call_method 1
+  187:  drop
+  188:  drop
+  189:  goto8 192
+  191:  throw
+  192:  get_loc8 6: this
+  194:  get_field2 showError
+  199:  push_atom_value "\u00e5\u00bd\u0095\u00e5\u0083\u008f\u00e5\u0081\u009c\u00e6\u00ad\u00a2\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  204:  call_method 1
+  207:  drop
+  208:  goto16 433
+  211:  catch 244
+  216:  get_loc8 6: this
+  218:  get_field shell
+  223:  get_field2 exec
+  228:  push_atom_value "rm -f "
+  233:  get_var_ref_check 0: f
+  236:  add
+  237:  call_method 1
+  240:  drop
+  241:  drop
+  242:  goto8 255
+  244:  put_loc8 4: t
+  246:  catch 254
+  251:  drop
+  252:  goto8 255
+  254:  throw
+  255:  get_loc8 6: this
+  257:  get_field isPreviewing
+  262:  dup
+  263:  if_true8 276
+  265:  drop
+  266:  get_loc8 6: this
+  268:  get_field2 stopCamHeartbeat
+  273:  call_method 0
+  276:  drop
+  277:  catch 406
+  282:  get_loc8 6: this
+  284:  get_field2 execCmd
+  289:  push_atom_value "sh -c 'kill -INT "
+  294:  get_field2 concat
+  299:  get_loc_check 0: t
+  302:  push_atom_value " 2>/dev/null || true; for i in 1 2 3 4 5; do kill -0 "
+  307:  get_loc_check 0: t
+  310:  push_atom_value " 2>/dev/null || exit 0; sleep 1; done; kill -TERM "
+  315:  get_loc_check 0: t
+  318:  push_atom_value " 2>/dev/null || true; for i in 1 2 3; do kill -0 "
+  323:  get_loc_check 0: t
+  326:  push_atom_value " 2>/dev/null || exit 0; sleep 1; done; kill -9 "
+  331:  get_loc_check 0: t
+  334:  push_atom_value " 2>/dev/null || true'"
+  339:  call_method 10
+  342:  call_method 1
+  345:  await
+  346:  drop
+  347:  get_loc_check 1: e
+  350:  dup
+  351:  if_false8 386
+  353:  drop
+  354:  get_loc8 6: this
+  356:  get_field2 execCmd
+  361:  push_atom_value "ls -l \""
+  366:  get_field2 concat
+  371:  get_loc_check 1: e
+  374:  push_atom_value "\""
+  379:  call_method 2
+  382:  call_method 1
+  385:  await
+  386:  drop
+  387:  get_loc8 6: this
+  389:  get_field2 showInfo
+  394:  push_atom_value "\u00e5\u00bd\u0095\u00e5\u0083\u008f\u00e5\u00b7\u00b2\u00e4\u00bf\u009d\u00e5\u00ad\u0098"
+  399:  call_method 1
+  402:  drop
+  403:  drop
+  404:  goto8 433
+  406:  put_loc8 5: t
+  408:  catch 432
+  413:  get_loc8 6: this
+  415:  get_field2 showError
+  420:  push_atom_value "\u00e5\u00bd\u0095\u00e5\u0083\u008f\u00e5\u0081\u009c\u00e6\u00ad\u00a2\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  425:  call_method 1
+  428:  drop
+  429:  drop
+  430:  goto8 433
+  432:  throw
+  433:  undefined
+  434:  return_async
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:4 next:-1]
+    1: const e [level:4 next:0]
+    2: const i [level:4 next:1]
+    3: const r [level:4 next:2]
+    4: const s [level:4 next:3]
+    5: catch t [level:9 next:7]
+    6: const a [level:4 next:4]
+    7: const h [level:4 next:6]
+    8: catch t [level:12 next:-1]
+    9: var this
+  closure vars:
+    0: e parent:loc1 const
+    1: n parent:loc8 const
+    2: o parent:loc6 const
+    3: c parent:loc10 const
+    4: d parent:loc11 const
+  stack_size: 11
+  opcodes:
+    0:  push_this
+    1:  put_loc8 9: this
+    3:  get_loc8 9: this
+    5:  get_field isCapturing
+   10:  lnot
+   11:  if_false 625
+   16:  get_loc8 9: this
+   18:  get_field isRecording
+   23:  lnot
+   24:  if_false 625
+   29:  get_loc8 9: this
+   31:  push_0 0
+   32:  lnot
+   33:  put_field isCapturing
+   38:  get_loc8 9: this
+   40:  push_0 0
+   41:  lnot
+   42:  put_field isAnimating
+   47:  get_loc8 9: this
+   49:  push_0 0
+   50:  lnot
+   51:  put_field showFlash
+   56:  get_var_ref_check 0: e
+   59:  fclosure8 0: [bytecode <null>]
+   61:  push_i16 200
+   64:  call2 2
+   65:  drop
+   66:  get_var_ref_check 0: e
+   69:  fclosure8 1: [bytecode <null>]
+   71:  push_i8 100
+   73:  call2 2
+   74:  drop
+   75:  catch 576
+   80:  set_loc_uninitialized 7: h
+   83:  set_loc_uninitialized 6: a
+   86:  set_loc_uninitialized 4: s
+   89:  set_loc_uninitialized 3: r
+   92:  set_loc_uninitialized 2: i
+   95:  set_loc_uninitialized 1: e
+   98:  set_loc_uninitialized 0: t
+  101:  get_loc8 9: this
+  103:  get_field2 ensureDirectory
+  108:  get_var_ref_check 1: n
+  111:  call_method 1
+  114:  await
+  115:  drop
+  116:  get_loc8 9: this
+  118:  get_field2 checkStorage
+  123:  call_method 0
+  126:  await
+  127:  lnot
+  128:  if_false8 138
+  130:  drop
+  131:  undefined
+  132:  gosub 615
+  137:  return_async
+  138:  get_loc8 9: this
+  140:  get_field2 loadDeviceId
+  145:  call_method 0
+  148:  await
+  149:  drop
+  150:  undefined
+  151:  dup
+  152:  is_undefined
+  153:  if_true8 180
+  155:  to_object
+  156:  dup
+  157:  get_field date
+  162:  put_loc0 0: t
+  163:  dup
+  164:  get_field time
+  169:  put_loc1 1: e
+  170:  dup
+  171:  get_field ms
+  176:  put_loc2 2: i
+  177:  drop
+  178:  goto8 193
+  180:  drop
+  181:  get_loc8 9: this
+  183:  get_field2 getTimestampParts
+  188:  call_method 0
+  191:  goto8 155
+  193:  push_atom_value IMG_
+  198:  get_field2 concat
+  203:  get_loc_check 0: t
+  206:  push_atom_value _
+  211:  get_loc_check 1: e
+  214:  push_atom_value _
+  219:  get_loc_check 2: i
+  222:  push_atom_value _1_
+  227:  get_loc8 9: this
+  229:  get_field deviceId
+  234:  push_atom_value ".JPG"
+  239:  call_method 8
+  242:  put_loc3 3: r
+  243:  push_empty_string
+  244:  get_field2 concat
+  249:  get_var_ref_check 1: n
+  252:  push_atom_value "/"
+  257:  get_loc_check 3: r
+  260:  call_method 3
+  263:  put_loc8 4: s
+  265:  get_loc8 9: this
+  267:  get_field cam
+  272:  if_false 446
+  277:  catch 416
+  282:  push_1 1
+  283:  lnot
+  284:  get_loc8 9: this
+  286:  get_field cam
+  291:  get_field2 setCrop
+  296:  object
+  297:  get_var_ref_check 2: o
+  300:  define_field device
+  305:  call_method 1
+  308:  strict_eq
+  309:  dup
+  310:  if_false8 327
+  312:  drop
+  313:  get_loc8 9: this
+  315:  get_field2 applyCropForDevice
+  320:  get_var_ref_check 2: o
+  323:  call_method 1
+  326:  await
+  327:  drop
+  328:  get_loc8 9: this
+  330:  get_field cam
+  335:  get_field2 capture
+  340:  object
+  341:  get_var_ref_check 2: o
+  344:  define_field device
+  349:  get_loc_check 4: s
+  352:  define_field file
+  357:  get_var_ref_check 3: c
+  360:  define_field width
+  365:  get_var_ref_check 4: d
+  368:  define_field height
+  373:  get_loc8 9: this
+  375:  get_field captureRotationIndex
+  380:  define_field rotation
+  385:  call_method 1
+  388:  if_false8 413
+  390:  get_loc8 9: this
+  392:  get_field2 afterCapture
+  397:  get_loc_check 4: s
+  400:  call_method 1
+  403:  drop
+  404:  undefined
+  405:  nip
+  406:  nip
+  407:  gosub 615
+  412:  return_async
+  413:  drop
+  414:  goto8 446
+  416:  put_loc8 5: t
+  418:  catch 445
+  423:  get_var console
+  428:  get_field2 error
+  433:  push_atom_value "native capture failed, fallback to shell"
+  438:  call_method 1
+  441:  drop
+  442:  drop
+  443:  goto8 446
+  445:  throw
+  446:  get_loc8 9: this
+  448:  get_field2 applyCropForDevice
+  453:  get_var_ref_check 2: o
+  456:  call_method 1
+  459:  await
+  460:  drop
+  461:  push_atom_value "v4l2-ctl -d "
+  466:  get_field2 concat
+  471:  get_var_ref_check 2: o
+  474:  push_atom_value " --silent --set-fmt-video=width=1920,height=1080,pixelformat=UYVY --stream-skip=1 --stream-mmap=1 --stream-poll --stream-count=1 --stream-to=/tmp/gc.yuv"
+  479:  call_method 2
+  482:  put_loc8 6: a
+  484:  get_loc8 9: this
+  486:  get_field2 execCmd
+  491:  get_loc_check 6: a
+  494:  call_method 1
+  497:  await
+  498:  drop
+  499:  push_atom_value "ffmpeg -y -f rawvideo -video_size 1920x1080 -pixel_format uyvy422 -i /tmp/gc.yuv -vf \""
+  504:  get_field2 concat
+  509:  get_loc8 9: this
+  511:  get_field2 getCaptureRotationFilter
+  516:  call_method 0
+  519:  push_atom_value "\" -frames:v 1 -q:v 2 \""
+  524:  get_loc_check 4: s
+  527:  push_atom_value "\""
+  532:  call_method 4
+  535:  put_loc8 7: h
+  537:  get_loc8 9: this
+  539:  get_field2 execCmd
+  544:  get_loc_check 7: h
+  547:  call_method 1
+  550:  await
+  551:  drop
+  552:  get_loc8 9: this
+  554:  get_field2 afterCapture
+  559:  get_loc_check 4: s
+  562:  call_method 1
+  565:  drop
+  566:  drop
+  567:  undefined
+  568:  gosub 615
+  573:  drop
+  574:  goto8 625
+  576:  put_loc8 8: t
+  578:  catch 609
+  583:  get_loc8 9: this
+  585:  get_field2 showError
+  590:  push_atom_value "\u00e6\u008b\u008d\u00e7\u0085\u00a7\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  595:  call_method 1
+  598:  drop
+  599:  drop
+  600:  undefined
+  601:  gosub 615
+  606:  drop
+  607:  goto8 625
+  609:  gosub 615
+  614:  throw
+  615:  get_loc8 9: this
+  617:  push_1 1
+  618:  lnot
+  619:  put_field isCapturing
+  624:  ret
+  625:  undefined
+  626:  return_async
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: this local:loc9 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  push_1 1
+    2:  lnot
+    3:  put_field isAnimating
+    8:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: this local:loc9 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  push_1 1
+    2:  lnot
+    3:  put_field showFlash
+    8:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:1 next:-1]
+    1: catch t [level:6 next:0]
+    2: catch t [level:9 next:0]
+    3: var this
+  stack_size: 7
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  set_loc_uninitialized 0: e
+    5:  get_loc3 3: this
+    6:  get_field2 finishStandaloneCamera
+   11:  get_arg0 0: t
+   12:  call_method 1
+   15:  if_false8 18
+   17:  return_undef
+   18:  get_loc3 3: this
+   19:  get_field2 getLoadOption
+   24:  push_atom_value camReq
+   29:  push_empty_string
+   30:  call_method 2
+   33:  put_loc0 0: e
+   34:  get_loc_check 0: e
+   37:  if_false 193
+   42:  catch 120
+   47:  push_atom_value undefined
+   52:  get_var_undef $falcon
+   57:  typeof
+   58:  neq
+   59:  dup
+   60:  if_false8 116
+   62:  drop
+   63:  get_var $falcon
+   68:  get_field trigger
+   73:  dup
+   74:  if_false8 116
+   76:  drop
+   77:  get_var $falcon
+   82:  get_field2 trigger
+   87:  push_atom_value tools_camera
+   92:  object
+   93:  get_arg0 0: t
+   94:  define_field path
+   99:  get_var String
+  104:  get_loc_check 0: e
+  107:  call1 1
+  108:  define_field camReq
+  113:  call_method 2
+  116:  drop
+  117:  drop
+  118:  goto8 130
+  120:  put_loc1 1: t
+  121:  catch 129
+  126:  drop
+  127:  goto8 130
+  129:  throw
+  130:  catch 184
+  135:  get_loc3 3: this
+  136:  get_field $page
+  141:  dup
+  142:  if_false8 181
+  144:  drop
+  145:  push_atom_value function
+  150:  get_loc3 3: this
+  151:  get_field $page
+  156:  get_field finish
+  161:  typeof
+  162:  eq
+  163:  dup
+  164:  if_false8 181
+  166:  drop
+  167:  get_loc3 3: this
+  168:  get_field $page
+  173:  get_field2 finish
+  178:  call_method 0
+  181:  drop
+  182:  drop
+  183:  return_undef
+  184:  put_loc2 2: t
+  185:  catch 192
+  190:  drop
+  191:  return_undef
+  192:  throw
+  193:  get_loc3 3: this
+  194:  get_field2 showInfo
+  199:  push_atom_value "\u00e7\u0085\u00a7\u00e7\u0089\u0087\u00e5\u00b7\u00b2\u00e4\u00bf\u009d\u00e5\u00ad\u0098"
+  204:  call_method 1
+  207:  drop
+  208:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: const i [level:1 next:-1]
+    1: let r [level:1 next:0]
+    2: catch t [level:6 next:1]
+    3: var this
+  closure vars:
+    0: t parent:loc0 const
+    1: a parent:loc5 const
+  stack_size: 7
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  set_loc_uninitialized 1: r
+    5:  set_loc_uninitialized 0: i
+    8:  get_loc3 3: this
+    9:  get_field2 getLoadOption
+   14:  push_atom_value hostReq
+   19:  push_empty_string
+   20:  call_method 2
+   23:  put_loc0 0: i
+   24:  get_loc_check 0: i
+   27:  lnot
+   28:  if_false8 33
+   30:  push_1 1
+   31:  lnot
+   32:  return
+   33:  get_loc3 3: this
+   34:  get_field _hostFinishedReq
+   39:  get_loc_check 0: i
+   42:  strict_eq
+   43:  if_false8 48
+   45:  push_0 0
+   46:  lnot
+   47:  return
+   48:  get_loc3 3: this
+   49:  get_loc_check 0: i
+   52:  put_field _hostFinishedReq
+   57:  get_loc3 3: this
+   58:  get_field floating
+   63:  if_false8 110
+   65:  get_loc3 3: this
+   66:  get_field2 $emit
+   71:  push_atom_value done
+   76:  object
+   77:  get_loc_check 0: i
+   80:  define_field req
+   85:  get_arg0 0: e
+   86:  dup
+   87:  if_true8 91
+   89:  drop
+   90:  null
+   91:  define_field value
+   96:  get_arg0 0: e
+   97:  lnot
+   98:  define_field cancelled
+  103:  call_method 2
+  106:  drop
+  107:  push_0 0
+  108:  lnot
+  109:  return
+  110:  null
+  111:  put_loc1 1: r
+  112:  catch 128
+  117:  get_var_ref_check 0: t
+  120:  dup
+  121:  put_loc_check 1: r
+  124:  drop
+  125:  drop
+  126:  goto8 138
+  128:  put_loc2 2: t
+  129:  catch 137
+  134:  drop
+  135:  goto8 138
+  137:  throw
+  138:  get_var_ref_check 1: a
+  141:  get_loc_check 1: r
+  144:  get_loc_check 0: i
+  147:  get_loc3 3: this
+  148:  get_field2 getLoadOption
+  153:  push_atom_value hostCaller
+  158:  push_empty_string
+  159:  call_method 2
+  162:  get_arg0 0: e
+  163:  call 4
+  166:  get_field2 then
+  171:  fclosure8 0: [bytecode <null>]
+  173:  call_method 1
+  176:  drop
+  177:  push_0 0
+  178:  lnot
+  179:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: this local:loc3 var
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: t
+    1:  dup
+    2:  if_true8 26
+    4:  drop
+    5:  get_var_ref0 0: this
+    6:  push_empty_string
+    7:  put_field _hostFinishedReq
+   12:  get_var_ref0 0: this
+   13:  get_field2 showError
+   18:  push_atom_value "\u00e5\u009b\u009e\u00e4\u00bc\u00a0\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5\u00ef\u00bc\u008c\u00e8\u00af\u00b7\u00e9\u0087\u008d\u00e8\u00af\u0095"
+   23:  call_method 1
+   26:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: var i
+    1: catch t [level:4 next:-1]
+    2: catch t [level:7 next:-1]
+    3: catch t [level:10 next:-1]
+    4: catch t [level:13 next:-1]
+    5: var r
+    6: var s
+    7: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc8 7: this
+    3:  get_loc8 7: this
+    5:  get_field floating
+   10:  if_false8 37
+   12:  undefined
+   13:  get_loc8 7: this
+   15:  get_field pageData
+   20:  get_arg0 0: t
+   21:  get_array_el
+   22:  strict_eq
+   23:  if_false8 27
+   25:  get_arg1 1: e
+   26:  return
+   27:  get_loc8 7: this
+   29:  get_field pageData
+   34:  get_arg0 0: t
+   35:  get_array_el
+   36:  return
+   37:  array_from 0
+   40:  put_loc0 0: i
+   41:  catch 98
+   46:  get_loc8 7: this
+   48:  get_field $page
+   53:  dup
+   54:  if_false8 94
+   56:  drop
+   57:  get_loc8 7: this
+   59:  get_field $page
+   64:  get_field options
+   69:  dup
+   70:  if_false8 94
+   72:  drop
+   73:  get_loc0 0: i
+   74:  get_field2 push
+   79:  get_loc8 7: this
+   81:  get_field $page
+   86:  get_field options
+   91:  call_method 1
+   94:  drop
+   95:  drop
+   96:  goto8 108
+   98:  put_loc1 1: t
+   99:  catch 107
+  104:  drop
+  105:  goto8 108
+  107:  throw
+  108:  catch 165
+  113:  get_loc8 7: this
+  115:  get_field $page
+  120:  dup
+  121:  if_false8 161
+  123:  drop
+  124:  get_loc8 7: this
+  126:  get_field $page
+  131:  get_field loadOptions
+  136:  dup
+  137:  if_false8 161
+  139:  drop
+  140:  get_loc0 0: i
+  141:  get_field2 push
+  146:  get_loc8 7: this
+  148:  get_field $page
+  153:  get_field loadOptions
+  158:  call_method 1
+  161:  drop
+  162:  drop
+  163:  goto8 175
+  165:  put_loc2 2: t
+  166:  catch 174
+  171:  drop
+  172:  goto8 175
+  174:  throw
+  175:  catch 232
+  180:  get_loc8 7: this
+  182:  get_field $page
+  187:  dup
+  188:  if_false8 228
+  190:  drop
+  191:  get_loc8 7: this
+  193:  get_field $page
+  198:  get_field newOptions
+  203:  dup
+  204:  if_false8 228
+  206:  drop
+  207:  get_loc0 0: i
+  208:  get_field2 push
+  213:  get_loc8 7: this
+  215:  get_field $page
+  220:  get_field newOptions
+  225:  call_method 1
+  228:  drop
+  229:  drop
+  230:  goto8 242
+  232:  put_loc3 3: t
+  233:  catch 241
+  238:  drop
+  239:  goto8 242
+  241:  throw
+  242:  catch 299
+  247:  get_loc8 7: this
+  249:  get_field $route
+  254:  dup
+  255:  if_false8 295
+  257:  drop
+  258:  get_loc8 7: this
+  260:  get_field $route
+  265:  get_field query
+  270:  dup
+  271:  if_false8 295
+  273:  drop
+  274:  get_loc0 0: i
+  275:  get_field2 push
+  280:  get_loc8 7: this
+  282:  get_field $route
+  287:  get_field query
+  292:  call_method 1
+  295:  drop
+  296:  drop
+  297:  goto8 310
+  299:  put_loc8 4: t
+  301:  catch 309
+  306:  drop
+  307:  goto8 310
+  309:  throw
+  310:  push_0 0
+  311:  put_loc8 5: r
+  313:  get_loc8 5: r
+  315:  get_loc0 0: i
+  316:  get_length
+  317:  lt
+  318:  if_false8 370
+  320:  get_loc0 0: i
+  321:  get_loc8 5: r
+  323:  get_array_el
+  324:  if_false8 334
+  326:  get_loc0 0: i
+  327:  get_loc8 5: r
+  329:  get_array_el
+  330:  get_arg0 0: t
+  331:  get_array_el
+  332:  goto8 335
+  334:  undefined
+  335:  put_loc8 6: s
+  337:  null
+  338:  get_loc8 6: s
+  340:  neq
+  341:  if_false8 366
+  343:  push_empty_string
+  344:  get_var String
+  349:  get_loc8 6: s
+  351:  call1 1
+  352:  get_field2 trim
+  357:  call_method 0
+  360:  strict_neq
+  361:  if_false8 366
+  363:  get_loc8 6: s
+  365:  return
+  366:  inc_loc 5: r
+  368:  goto8 313
+  370:  get_arg1 1: e
+  371:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:1 next:-1]
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  set_loc_uninitialized 0: e
+    5:  get_loc1 1: this
+    6:  get_field bridgeReady
+   11:  lnot
+   12:  dup
+   13:  if_true8 39
+   15:  drop
+   16:  get_loc1 1: this
+   17:  get_field shell
+   22:  lnot
+   23:  dup
+   24:  if_true8 39
+   26:  drop
+   27:  get_loc1 1: this
+   28:  get_field shell
+   33:  get_field exec
+   38:  lnot
+   39:  if_false8 56
+   41:  get_var Error
+   46:  dup
+   47:  push_atom_value "Shell not ready"
+   52:  call_constructor 1
+   55:  throw
+   56:  get_loc1 1: this
+   57:  get_field shell
+   62:  get_field2 exec
+   67:  get_arg0 0: t
+   68:  call_method 1
+   71:  put_loc0 0: e
+   72:  get_loc1 1: this
+   73:  get_field2 normalizeOutput
+   78:  get_loc_check 0: e
+   81:  if_false8 106
+   83:  push_atom_value function
+   88:  get_loc_check 0: e
+   91:  get_field then
+   96:  typeof
+   97:  eq
+   98:  if_false8 106
+  100:  get_loc_check 0: e
+  103:  await
+  104:  goto8 109
+  106:  get_loc_check 0: e
+  109:  call_method 1
+  112:  return_async
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  null
+    1:  get_arg0 0: t
+    2:  eq
+    3:  if_false8 7
+    5:  push_empty_string
+    6:  return
+    7:  push_atom_value object
+   12:  get_arg0 0: t
+   13:  typeof
+   14:  eq
+   15:  if_false8 39
+   17:  push_atom_value string
+   22:  get_arg0 0: t
+   23:  get_field output
+   28:  typeof
+   29:  eq
+   30:  if_false8 39
+   32:  get_arg0 0: t
+   33:  get_field output
+   38:  return
+   39:  get_var String
+   44:  get_arg0 0: t
+   45:  call1 1
+   46:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:1 next:-1]
+    1: catch t [level:5 next:0]
+    2: catch t [level:10 next:0]
+    3: catch t [level:13 next:0]
+    4: var this
+  closure vars:
+    0: m parent:loc15 const
+    1: h parent:loc7 const
+  stack_size: 7
+  opcodes:
+    0:  push_this
+    1:  put_loc8 4: this
+    3:  set_loc_uninitialized 0: e
+    6:  get_loc8 4: this
+    8:  get_field previewPid
+   13:  put_loc0 0: e
+   14:  get_loc8 4: this
+   16:  null
+   17:  put_field previewPid
+   22:  get_loc8 4: this
+   24:  push_1 1
+   25:  lnot
+   26:  put_field isPreviewing
+   31:  get_loc8 4: this
+   33:  get_field cam
+   38:  if_false8 106
+   40:  push_minus1 -1
+   41:  get_loc_check 0: e
+   44:  strict_eq
+   45:  if_false8 106
+   47:  catch 71
+   52:  get_loc8 4: this
+   54:  get_field cam
+   59:  get_field2 closePreview
+   64:  call_method 0
+   67:  drop
+   68:  drop
+   69:  goto8 81
+   71:  put_loc1 1: t
+   72:  catch 80
+   77:  drop
+   78:  goto8 81
+   80:  throw
+   81:  get_loc8 4: this
+   83:  get_field isRecording
+   88:  dup
+   89:  if_true8 102
+   91:  drop
+   92:  get_loc8 4: this
+   94:  get_field2 stopCamHeartbeat
+   99:  call_method 0
+  102:  drop
+  103:  goto16 277
+  106:  get_loc8 4: this
+  108:  get_field shell
+  113:  if_false 277
+  118:  get_loc8 4: this
+  120:  get_field shell
+  125:  get_field exec
+  130:  if_false 277
+  135:  catch 168
+  140:  get_loc8 4: this
+  142:  get_field shell
+  147:  get_field2 exec
+  152:  push_atom_value "rm -f "
+  157:  get_var_ref_check 0: m
+  160:  add
+  161:  call_method 1
+  164:  drop
+  165:  drop
+  166:  goto8 178
+  168:  put_loc2 2: t
+  169:  catch 177
+  174:  drop
+  175:  goto8 178
+  177:  throw
+  178:  get_loc8 4: this
+  180:  get_field isRecording
+  185:  dup
+  186:  if_true8 199
+  188:  drop
+  189:  get_loc8 4: this
+  191:  get_field2 stopCamHeartbeat
+  196:  call_method 0
+  199:  drop
+  200:  catch 267
+  205:  get_loc_check 0: e
+  208:  dup
+  209:  if_false8 244
+  211:  drop
+  212:  get_loc8 4: this
+  214:  get_field2 execCmd
+  219:  push_atom_value "kill -9 "
+  224:  get_field2 concat
+  229:  get_loc_check 0: e
+  232:  push_atom_value " 2>/dev/null; echo ok"
+  237:  call_method 2
+  240:  call_method 1
+  243:  await
+  244:  drop
+  245:  get_arg0 0: t
+  246:  dup
+  247:  if_false8 263
+  249:  drop
+  250:  get_loc8 4: this
+  252:  get_field2 sweepGstProcesses
+  257:  get_var_ref_check 1: h
+  260:  call_method 1
+  263:  drop
+  264:  drop
+  265:  goto8 277
+  267:  put_loc3 3: t
+  268:  catch 276
+  273:  drop
+  274:  goto8 277
+  276:  throw
+  277:  undefined
+  278:  return_async
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: let t [level:1 next:-1]
+    1: catch t [level:4 next:0]
+    2: const t [level:7 next:0]
+    3: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  set_loc_uninitialized 0: t
+    5:  get_loc3 3: this
+    6:  get_field2 clearRecordTimer
+   11:  call_method 0
+   14:  drop
+   15:  push_1 1
+   16:  lnot
+   17:  put_loc0 0: t
+   18:  get_loc3 3: this
+   19:  get_field cam
+   24:  if_false8 79
+   26:  get_loc3 3: this
+   27:  get_field cam
+   32:  get_field releaseAll
+   37:  if_false8 79
+   39:  catch 69
+   44:  get_loc3 3: this
+   45:  get_field cam
+   50:  get_field2 releaseAll
+   55:  call_method 0
+   58:  drop
+   59:  push_0 0
+   60:  lnot
+   61:  dup
+   62:  put_loc_check 0: t
+   65:  drop
+   66:  drop
+   67:  goto8 79
+   69:  put_loc1 1: t
+   70:  catch 78
+   75:  drop
+   76:  goto8 79
+   78:  throw
+   79:  get_loc_check 0: t
+   82:  if_false8 157
+   84:  set_loc_uninitialized 2: t
+   87:  get_loc3 3: this
+   88:  get_field recordPid
+   93:  lnot
+   94:  lnot
+   95:  put_loc2 2: t
+   96:  get_loc3 3: this
+   97:  null
+   98:  put_field recordPid
+  103:  get_loc3 3: this
+  104:  push_empty_string
+  105:  put_field recordPath
+  110:  get_loc3 3: this
+  111:  push_1 1
+  112:  lnot
+  113:  put_field isRecording
+  118:  get_loc3 3: this
+  119:  null
+  120:  put_field previewPid
+  125:  get_loc3 3: this
+  126:  push_1 1
+  127:  lnot
+  128:  put_field isPreviewing
+  133:  get_loc_check 2: t
+  136:  dup
+  137:  if_false8 154
+  139:  drop
+  140:  get_loc3 3: this
+  141:  get_field2 showInfo
+  146:  push_atom_value "\u00e5\u00bd\u0095\u00e5\u0083\u008f\u00e5\u00b7\u00b2\u00e4\u00bf\u009d\u00e5\u00ad\u0098"
+  151:  call_method 1
+  154:  drop
+  155:  goto8 199
+  157:  get_loc3 3: this
+  158:  get_field2 stopRecording
+  163:  call_method 0
+  166:  get_field2 catch
+  171:  fclosure8 0: [bytecode <null>]
+  173:  call_method 1
+  176:  drop
+  177:  get_loc3 3: this
+  178:  get_field2 stopPreview
+  183:  push_0 0
+  184:  lnot
+  185:  call_method 1
+  188:  get_field2 catch
+  193:  fclosure8 1: [bytecode <null>]
+  195:  call_method 1
+  198:  drop
+  199:  get_loc3 3: this
+  200:  get_field2 stopCamHeartbeat
+  205:  call_method 0
+  208:  drop
+  209:  get_loc_check 0: t
+  212:  dup
+  213:  if_true8 235
+  215:  drop
+  216:  get_loc3 3: this
+  217:  get_field2 kickScanDaemonShell
+  222:  call_method 0
+  225:  get_field2 catch
+  230:  fclosure8 2: [bytecode <null>]
+  232:  call_method 1
+  235:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  stack_size: 0
+  opcodes:
+    0:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  stack_size: 0
+  opcodes:
+    0:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  stack_size: 0
+  opcodes:
+    0:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field shell
+    8:  dup
+    9:  if_false8 42
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field shell
+   18:  get_field exec
+   23:  dup
+   24:  if_false8 42
+   26:  drop
+   27:  get_loc0 0: this
+   28:  get_field2 execCmd
+   33:  push_atom_value "sleep 1; for p in /proc/[0-9]*; do pid=${p#/proc/}; c=$(tr \"\\0\" \" \" < $p/cmdline 2>/dev/null); case \"$c\" in \"/usr/bin/CaptureFrame\"*) kill $pid;; esac; done; echo kick-done"
+   38:  call_method 1
+   41:  await
+   42:  drop
+   43:  undefined
+   44:  return_async
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: const i [level:2 next:-1]
+    1: catch t [level:3 next:-1]
+    2: var this
+  closure vars:
+    0: n parent:loc8 const
+  stack_size: 7
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_arg0 0: t
+    3:  is_undefined
+    4:  if_false8 9
+    6:  push_i8 50
+    8:  put_arg0 0: t
+    9:  get_arg1 1: e
+   10:  is_undefined
+   11:  if_false8 17
+   13:  get_var_ref_check 0: n
+   16:  put_arg1 1: e
+   17:  catch 68
+   22:  set_loc_uninitialized 0: i
+   25:  get_loc2 2: this
+   26:  get_field2 execCmd
+   31:  push_atom_value "df -m "
+   36:  get_field2 concat
+   41:  get_arg1 1: e
+   42:  push_atom_value " 2>/dev/null | awk 'NR==2 {print $4}' || df -m /userdisk | awk 'NR==2 {print $4}'"
+   47:  call_method 2
+   50:  call_method 1
+   53:  await
+   54:  put_loc0 0: i
+   55:  get_var parseInt
+   60:  get_loc_check 0: i
+   63:  call1 1
+   64:  get_arg0 0: t
+   65:  gte
+   66:  nip
+   67:  return_async
+   68:  put_loc1 1: t
+   69:  catch 78
+   74:  push_1 1
+   75:  lnot
+   76:  nip
+   77:  return_async
+   78:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 execCmd
+    8:  push_atom_value "mkdir -p \""
+   13:  get_field2 concat
+   18:  get_arg0 0: t
+   19:  push_atom_value "\""
+   24:  call_method 2
+   27:  call_method 1
+   30:  await
+   31:  drop
+   32:  undefined
+   33:  return_async
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+  stack_size: 9
+  opcodes:
+    0:  set_loc_uninitialized 0: t
+    3:  get_var Date
+    8:  dup
+    9:  call_constructor 0
+   12:  put_loc0 0: t
+   13:  object
+   14:  push_empty_string
+   15:  get_field2 concat
+   20:  get_loc_check 0: t
+   23:  get_field2 getFullYear
+   28:  call_method 0
+   31:  get_var String
+   36:  get_loc_check 0: t
+   39:  get_field2 getMonth
+   44:  call_method 0
+   47:  push_1 1
+   48:  add
+   49:  call1 1
+   50:  get_field2 padStart
+   55:  push_2 2
+   56:  push_const8 0: 1"0"
+   58:  call_method 2
+   61:  get_var String
+   66:  get_loc_check 0: t
+   69:  get_field2 getDate
+   74:  call_method 0
+   77:  call1 1
+   78:  get_field2 padStart
+   83:  push_2 2
+   84:  push_const8 1: 1"0"
+   86:  call_method 2
+   89:  call_method 3
+   92:  define_field date
+   97:  push_empty_string
+   98:  get_field2 concat
+  103:  get_var String
+  108:  get_loc_check 0: t
+  111:  get_field2 getHours
+  116:  call_method 0
+  119:  call1 1
+  120:  get_field2 padStart
+  125:  push_2 2
+  126:  push_const8 2: 1"0"
+  128:  call_method 2
+  131:  get_var String
+  136:  get_loc_check 0: t
+  139:  get_field2 getMinutes
+  144:  call_method 0
+  147:  call1 1
+  148:  get_field2 padStart
+  153:  push_2 2
+  154:  push_const8 3: 1"0"
+  156:  call_method 2
+  159:  get_var String
+  164:  get_loc_check 0: t
+  167:  get_field2 getSeconds
+  172:  call_method 0
+  175:  call1 1
+  176:  get_field2 padStart
+  181:  push_2 2
+  182:  push_const8 4: 1"0"
+  184:  call_method 2
+  187:  call_method 3
+  190:  define_field time
+  195:  get_var String
+  200:  get_loc_check 0: t
+  203:  get_field2 getMilliseconds
+  208:  call_method 0
+  211:  call1 1
+  212:  get_field2 padStart
+  217:  push_3 3
+  218:  push_const8 5: 1"0"
+  220:  call_method 2
+  223:  define_field ms
+  228:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: p parent:loc12 const
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_var_ref_check 0: p
+    5:  get_loc0 0: this
+    6:  get_field captureRotationIndex
+   11:  get_array_el
+   12:  dup
+   13:  if_true8 21
+   15:  drop
+   16:  get_var_ref_check 0: p
+   19:  push_0 0
+   20:  get_array_el
+   21:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: u parent:loc13 const
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_var_ref_check 0: u
+    5:  get_loc0 0: this
+    6:  get_field captureRotationIndex
+   11:  get_array_el
+   12:  dup
+   13:  if_true8 21
+   15:  drop
+   16:  get_var_ref_check 0: u
+   19:  push_0 0
+   20:  get_array_el
+   21:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: p parent:loc12 const
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field isCapturing
+    8:  dup
+    9:  if_true8 72
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field isRecording
+   18:  dup
+   19:  if_true8 72
+   21:  drop
+   22:  get_loc0 0: this
+   23:  get_loc0 0: this
+   24:  get_field captureRotationIndex
+   29:  push_1 1
+   30:  add
+   31:  get_var_ref_check 0: p
+   34:  get_length
+   35:  mod
+   36:  put_field captureRotationIndex
+   41:  get_loc0 0: this
+   42:  get_field2 showInfo
+   47:  push_atom_value "\u00e6\u0088\u0090\u00e7\u0089\u0087\u00e6\u0096\u00b9\u00e5\u0090\u0091: "
+   52:  get_field2 concat
+   57:  get_loc0 0: this
+   58:  get_field2 getCaptureRotationLabel
+   63:  call_method 0
+   66:  call_method 1
+   69:  call_method 1
+   72:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 4
+  opcodes:
+    0:  get_var String
+    5:  get_arg0 0: t
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  push_empty_string
+   11:  call1 1
+   12:  get_field2 trim
+   17:  call_method 0
+   20:  get_field2 replace
+   25:  push_const8 0: 1"[^0-9A-Za-z]"
+   27:  push_const8 1: 1"\u0001\u0001\u0000#\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0015\u0004\u0000\u0000\u0000/\u0000:\u0000@\u0000[\u0000`\u0000{\u0000\u00ff\u00ff\u000c\u0000\n"
+   29:  regexp
+   30:  push_empty_string
+   31:  call_method 2
+   34:  get_field2 toUpperCase
+   39:  tail_call_method 0
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+    1: let e [level:4 next:0]
+    2: const i [level:5 next:1]
+    3: const r [level:5 next:2]
+    4: catch t [level:7 next:1]
+    5: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc8 5: this
+    3:  set_loc_uninitialized 0: t
+    6:  get_loc8 5: this
+    8:  get_field deviceIdLoaded
+   13:  if_false8 17
+   15:  undefined
+   16:  return_async
+   17:  get_loc8 5: this
+   19:  push_0 0
+   20:  lnot
+   21:  put_field deviceIdLoaded
+   26:  get_loc8 5: this
+   28:  get_field bridgeReady
+   33:  lnot
+   34:  if_false8 38
+   36:  undefined
+   37:  return_async
+   38:  push_atom_value "cat /proc/device-tree/serial-number 2>/dev/null"
+   43:  push_atom_value "cat /proc/cpuinfo 2>/dev/null | awk -F': ' '/Serial/ {print $2; exit}'"
+   48:  push_atom_value "cat /etc/machine-id 2>/dev/null"
+   53:  array_from 3
+   56:  put_loc0 0: t
+   57:  set_loc_uninitialized 1: e
+   60:  push_0 0
+   61:  put_loc1 1: e
+   62:  get_loc_check 1: e
+   65:  get_loc_check 0: t
+   68:  get_length
+   69:  lt
+   70:  if_false8 158
+   72:  catch 137
+   77:  set_loc_uninitialized 3: r
+   80:  set_loc_uninitialized 2: i
+   83:  get_loc8 5: this
+   85:  get_field2 execCmd
+   90:  get_loc_check 0: t
+   93:  get_loc_check 1: e
+   96:  get_array_el
+   97:  call_method 1
+  100:  await
+  101:  put_loc2 2: i
+  102:  get_loc8 5: this
+  104:  get_field2 sanitizeDeviceId
+  109:  get_loc_check 2: i
+  112:  call_method 1
+  115:  put_loc3 3: r
+  116:  get_loc_check 3: r
+  119:  if_false8 134
+  121:  get_loc8 5: this
+  123:  get_loc_check 3: r
+  126:  put_field deviceId
+  131:  undefined
+  132:  nip
+  133:  return_async
+  134:  drop
+  135:  goto8 148
+  137:  put_loc8 4: t
+  139:  catch 147
+  144:  drop
+  145:  goto8 148
+  147:  throw
+  148:  get_loc_check 1: e
+  151:  post_inc
+  152:  put_loc_check 1: e
+  155:  drop
+  156:  goto8 62
+  158:  undefined
+  159:  return_async
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field modal
+    8:  dup
+    9:  if_false8 40
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field modal
+   18:  get_field2 toast
+   23:  object
+   24:  get_arg0 0: t
+   25:  define_field message
+   30:  push_const8 0: 1.5
+   32:  define_field duration
+   37:  call_method 1
+   40:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 toast
+    8:  get_arg0 0: t
+    9:  call_method 1
+   12:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 toast
+    8:  push_atom_value "\u00e9\u0094\u0099\u00e8\u00af\u00af: "
+   13:  get_arg0 0: t
+   14:  add
+   15:  call_method 1
+   18:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_1 1
+    4:  lnot
+    5:  put_field _pageHidden
+   10:  get_loc0 0: this
+   11:  get_field2 markCamFg
+   16:  push_1 1
+   17:  call_method 1
+   20:  drop
+   21:  get_loc0 0: this
+   22:  get_field2 startDualkeyPoll
+   27:  call_method 0
+   30:  drop
+   31:  get_loc0 0: this
+   32:  get_field isPreviewing
+   37:  dup
+   38:  if_true8 50
+   40:  drop
+   41:  get_loc0 0: this
+   42:  get_field2 startPreview
+   47:  call_method 0
+   50:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: i parent:loc2 const
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 finishStandaloneCamera
+    8:  null
+    9:  call_method 1
+   12:  drop
+   13:  get_loc0 0: this
+   14:  push_0 0
+   15:  lnot
+   16:  put_field _pageHidden
+   21:  get_loc0 0: this
+   22:  get_field2 stopDualkeyPoll
+   27:  call_method 0
+   30:  drop
+   31:  get_loc0 0: this
+   32:  get_field _mountedTimer
+   37:  dup
+   38:  if_false8 60
+   40:  drop
+   41:  get_var_ref_check 0: i
+   44:  get_loc0 0: this
+   45:  get_field _mountedTimer
+   50:  call1 1
+   51:  drop
+   52:  get_loc0 0: this
+   53:  null
+   54:  insert2
+   55:  put_field _mountedTimer
+   60:  drop
+   61:  get_loc0 0: this
+   62:  get_field2 cleanupCameraProcesses
+   67:  call_method 0
+   70:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: i parent:loc2 const
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 finishStandaloneCamera
+    8:  null
+    9:  call_method 1
+   12:  drop
+   13:  get_loc0 0: this
+   14:  push_0 0
+   15:  lnot
+   16:  put_field _pageDead
+   21:  get_loc0 0: this
+   22:  get_field2 stopDualkeyPoll
+   27:  call_method 0
+   30:  drop
+   31:  get_loc0 0: this
+   32:  get_field _mountedTimer
+   37:  dup
+   38:  if_false8 60
+   40:  drop
+   41:  get_var_ref_check 0: i
+   44:  get_loc0 0: this
+   45:  get_field _mountedTimer
+   50:  call1 1
+   51:  drop
+   52:  get_loc0 0: this
+   53:  null
+   54:  insert2
+   55:  put_field _mountedTimer
+   60:  drop
+   61:  get_loc0 0: this
+   62:  get_field2 cleanupCameraProcesses
+   67:  call_method 0
+   70:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_camera.js:1 source_len=0 */
+tools_camera.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var i
+    3: var this
+  stack_size: 23
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  set_loc0 0: t
+    4:  get_field $createElement
+    9:  put_loc1 1: e
+   10:  get_loc0 0: t
+   11:  get_field _self
+   16:  get_field _c
+   21:  dup
+   22:  if_true8 26
+   24:  drop
+   25:  get_loc1 1: e
+   26:  set_loc2 2: i
+   27:  push_atom_value div
+   32:  object
+   33:  push_atom_value "camera-container"
+   38:  array_from 1
+   41:  define_field staticClass
+   46:  get_loc2 2: i
+   47:  push_atom_value hole
+   52:  object
+   53:  push_atom_value "camera-hole"
+   58:  array_from 1
+   61:  define_field staticClass
+   66:  call2 2
+   67:  get_loc0 0: t
+   68:  get_field showFlash
+   73:  if_false8 98
+   75:  get_loc2 2: i
+   76:  push_atom_value div
+   81:  object
+   82:  push_atom_value "flash-overlay"
+   87:  array_from 1
+   90:  define_field staticClass
+   95:  call2 2
+   96:  goto8 107
+   98:  get_loc0 0: t
+   99:  get_field2 _e
+  104:  call_method 0
+  107:  get_loc2 2: i
+  108:  push_atom_value div
+  113:  object
+  114:  push_atom_value "controls-area"
+  119:  array_from 1
+  122:  define_field staticClass
+  127:  get_loc0 0: t
+  128:  get_field floating
+  133:  if_false8 147
+  135:  get_loc0 0: t
+  136:  get_field2 _e
+  141:  call_method 0
+  144:  goto16 454
+  147:  get_loc2 2: i
+  148:  push_atom_value div
+  153:  object
+  154:  push_atom_value "btn-record-wrapper"
+  159:  get_loc0 0: t
+  160:  get_field isCapturing
+  165:  if_false8 174
+  167:  push_atom_value "btn-disabled"
+  172:  goto8 175
+  174:  push_empty_string
+  175:  array_from 2
+  178:  define_field class
+  183:  object
+  184:  get_loc0 0: t
+  185:  get_field toggleRecording
+  190:  define_field click
+  195:  define_field on
+  200:  get_loc2 2: i
+  201:  push_atom_value div
+  206:  object
+  207:  push_atom_value "btn-record-outer"
+  212:  object
+  213:  get_loc0 0: t
+  214:  get_field isRecording
+  219:  define_field "btn-recording"
+  224:  get_loc0 0: t
+  225:  get_field isCapturing
+  230:  define_field "btn-record-outer-disabled"
+  235:  array_from 2
+  238:  define_field class
+  243:  get_loc2 2: i
+  244:  push_atom_value div
+  249:  object
+  250:  push_atom_value "btn-record-inner"
+  255:  object
+  256:  get_loc0 0: t
+  257:  get_field isRecording
+  262:  define_field "btn-record-stop"
+  267:  get_loc0 0: t
+  268:  get_field isCapturing
+  273:  define_field "btn-record-inner-disabled"
+  278:  get_loc0 0: t
+  279:  get_field isCapturing
+  284:  dup
+  285:  if_false8 294
+  287:  drop
+  288:  get_loc0 0: t
+  289:  get_field isRecording
+  294:  define_field "btn-record-stop-disabled"
+  299:  array_from 2
+  302:  define_field class
+  307:  call2 2
+  308:  array_from 1
+  311:  call3 3
+  312:  get_loc2 2: i
+  313:  push_atom_value text
+  318:  object
+  319:  push_atom_value "record-label"
+  324:  array_from 1
+  327:  define_field staticClass
+  332:  get_loc0 0: t
+  333:  get_field2 _v
+  338:  get_loc0 0: t
+  339:  get_field2 _s
+  344:  get_loc0 0: t
+  345:  get_field isRecording
+  350:  if_false8 359
+  352:  push_atom_value "\u00e5\u0081\u009c\u00e6\u00ad\u00a2"
+  357:  goto8 364
+  359:  push_atom_value "\u00e5\u00bd\u0095\u00e5\u0083\u008f"
+  364:  call_method 1
+  367:  call_method 1
+  370:  array_from 1
+  373:  call3 3
+  374:  get_loc0 0: t
+  375:  get_field isRecording
+  380:  if_false8 441
+  382:  get_loc2 2: i
+  383:  push_atom_value text
+  388:  object
+  389:  push_atom_value "record-time"
+  394:  array_from 1
+  397:  define_field staticClass
+  402:  get_loc0 0: t
+  403:  get_field2 _v
+  408:  get_loc0 0: t
+  409:  get_field2 _s
+  414:  get_loc0 0: t
+  415:  get_field2 formatRecordDuration
+  420:  get_loc0 0: t
+  421:  get_field recordElapsedMs
+  426:  call_method 1
+  429:  call_method 1
+  432:  call_method 1
+  435:  array_from 1
+  438:  call3 3
+  439:  goto8 450
+  441:  get_loc0 0: t
+  442:  get_field2 _e
+  447:  call_method 0
+  450:  array_from 3
+  453:  call3 3
+  454:  get_loc2 2: i
+  455:  push_atom_value div
+  460:  object
+  461:  push_atom_value "btn-shutter-wrapper"
+  466:  get_loc0 0: t
+  467:  get_field isCapturing
+  472:  dup
+  473:  if_true8 482
+  475:  drop
+  476:  get_loc0 0: t
+  477:  get_field isRecording
+  482:  if_false8 491
+  484:  push_atom_value "btn-disabled"
+  489:  goto8 492
+  491:  push_empty_string
+  492:  array_from 2
+  495:  define_field class
+  500:  object
+  501:  get_loc0 0: t
+  502:  get_field takePhoto
+  507:  define_field click
+  512:  define_field on
+  517:  get_loc2 2: i
+  518:  push_atom_value div
+  523:  object
+  524:  push_atom_value "btn-shutter-outer"
+  529:  object
+  530:  get_loc0 0: t
+  531:  get_field isAnimating
+  536:  define_field "btn-shutter-active"
+  541:  get_loc0 0: t
+  542:  get_field isCapturing
+  547:  dup
+  548:  if_true8 557
+  550:  drop
+  551:  get_loc0 0: t
+  552:  get_field isRecording
+  557:  define_field "btn-shutter-outer-disabled"
+  562:  array_from 2
+  565:  define_field class
+  570:  get_loc2 2: i
+  571:  push_atom_value div
+  576:  object
+  577:  push_atom_value "btn-shutter-inner"
+  582:  object
+  583:  get_loc0 0: t
+  584:  get_field isCapturing
+  589:  dup
+  590:  if_true8 599
+  592:  drop
+  593:  get_loc0 0: t
+  594:  get_field isRecording
+  599:  define_field "btn-shutter-inner-disabled"
+  604:  array_from 2
+  607:  define_field class
+  612:  call2 2
+  613:  array_from 1
+  616:  call3 3
+  617:  array_from 1
+  620:  call3 3
+  621:  get_loc2 2: i
+  622:  push_atom_value div
+  627:  object
+  628:  push_atom_value "btn-rotate-wrapper"
+  633:  get_loc0 0: t
+  634:  get_field isCapturing
+  639:  dup
+  640:  if_true8 649
+  642:  drop
+  643:  get_loc0 0: t
+  644:  get_field isRecording
+  649:  if_false8 658
+  651:  push_atom_value "btn-disabled"
+  656:  goto8 659
+  658:  push_empty_string
+  659:  array_from 2
+  662:  define_field class
+  667:  object
+  668:  get_loc0 0: t
+  669:  get_field cycleCaptureRotation
+  674:  define_field click
+  679:  define_field on
+  684:  get_loc2 2: i
+  685:  push_atom_value text
+  690:  object
+  691:  push_atom_value "btn-rotate-label"
+  696:  object
+  697:  get_loc0 0: t
+  698:  get_field isCapturing
+  703:  dup
+  704:  if_true8 713
+  706:  drop
+  707:  get_loc0 0: t
+  708:  get_field isRecording
+  713:  define_field "btn-rotate-label-disabled"
+  718:  array_from 2
+  721:  define_field class
+  726:  get_loc0 0: t
+  727:  get_field2 _v
+  732:  get_loc0 0: t
+  733:  get_field2 _s
+  738:  get_loc0 0: t
+  739:  get_field2 getCaptureRotationLabel
+  744:  call_method 0
+  747:  call_method 1
+  750:  call_method 1
+  753:  array_from 1
+  756:  call3 3
+  757:  array_from 1
+  760:  call3 3
+  761:  array_from 3
+  764:  call3 3
+  765:  array_from 3
+  768:  push_1 1
+  769:  tail_call 4
+

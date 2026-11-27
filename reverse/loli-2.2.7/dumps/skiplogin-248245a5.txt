@@ -1,0 +1,529 @@
+
+/* ===== function depth=0 ===== */
+/* debug: skiplogin-248245a5.js:1 source_len=0 */
+skiplogin-248245a5.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: a parent:loc0 const
+    1: s local:loc0 const
+    2: t local:loc1 const
+    3: l local:loc2 const
+    4: u local:loc3 const
+    5: e local:loc4 var
+    6: o local:loc5 var
+    7: n local:loc6 var
+    8: r local:loc7 var
+    9: c local:loc8 var
+  stack_size: 2
+  opcodes:
+    0:  fclosure8 0: [bytecode e]
+    2:  put_var_ref 5: e
+    5:  fclosure8 1: [bytecode o]
+    7:  put_var_ref 6: o
+   10:  fclosure8 2: [bytecode n]
+   12:  put_var_ref 7: n
+   15:  fclosure8 3: [bytecode r]
+   17:  put_var_ref 8: r
+   20:  fclosure8 4: [bytecode c]
+   22:  put_var_ref 9: c
+   25:  push_atom_value "/userdisk/skip_re/skip_login.sh"
+   30:  put_var_ref1 1: s
+   31:  get_var_ref_check 0: a
+   34:  push_atom_value "/myhosts"
+   39:  add
+   40:  put_var_ref2 2: t
+   41:  push_atom_value "/userdisk/myhosts"
+   46:  put_var_ref3 3: l
+   47:  push_atom_value "grep -q \" /etc/hosts \" /proc/mounts"
+   52:  put_var_ref 4: u
+   55:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: skiplogin-248245a5.js:1 source_len=0 */
+skiplogin-248245a5.js:1: function: e
+  mode: strict
+  args: a s
+  locals:
+    0: var t
+    1: catch a [level:4 next:-1]
+  stack_size: 4
+  opcodes:
+    0:  get_arg0 0: a
+    1:  lnot
+    2:  dup
+    3:  if_true8 19
+    5:  drop
+    6:  push_atom_value function
+   11:  get_arg0 0: a
+   12:  get_field exec
+   17:  typeof
+   18:  neq
+   19:  if_false8 23
+   21:  push_empty_string
+   22:  return
+   23:  catch 74
+   28:  get_arg0 0: a
+   29:  get_field2 exec
+   34:  get_arg1 1: s
+   35:  call_method 1
+   38:  put_loc0 0: t
+   39:  get_var String
+   44:  get_loc0 0: t
+   45:  if_false8 65
+   47:  push_atom_value object
+   52:  get_loc0 0: t
+   53:  typeof
+   54:  eq
+   55:  if_false8 65
+   57:  get_loc0 0: t
+   58:  get_field output
+   63:  goto8 66
+   65:  get_loc0 0: t
+   66:  dup
+   67:  if_true8 71
+   69:  drop
+   70:  push_empty_string
+   71:  call1 1
+   72:  nip
+   73:  return
+   74:  put_loc1 1: a
+   75:  catch 83
+   80:  push_empty_string
+   81:  nip
+   82:  return
+   83:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: skiplogin-248245a5.js:1 source_len=0 */
+skiplogin-248245a5.js:1: function: o
+  mode: strict
+  args: a s
+  locals:
+    0: catch a [level:4 next:-1]
+  stack_size: 4
+  opcodes:
+    0:  get_arg0 0: a
+    1:  lnot
+    2:  if_false8 6
+    4:  null
+    5:  return
+    6:  catch 23
+   11:  get_arg0 0: a
+   12:  get_field2 read
+   17:  get_arg1 1: s
+   18:  call_method 1
+   21:  nip
+   22:  return
+   23:  put_loc0 0: a
+   24:  catch 32
+   29:  null
+   30:  nip
+   31:  return
+   32:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: skiplogin-248245a5.js:1 source_len=0 */
+skiplogin-248245a5.js:1: function: n
+  mode: strict
+  args: a n
+  locals:
+    0: var r
+    1: var c
+    2: var i
+    3: var h
+    4: var d
+  closure vars:
+    0: o parent:loc6 var
+    1: t parent:loc2 const
+    2: l parent:loc3 const
+    3: u parent:loc4 const
+    4: s parent:loc1 const
+    5: e parent:loc5 var
+  stack_size: 5
+  opcodes:
+    0:  get_arg0 0: a
+    1:  if_false 411
+    6:  get_var_ref0 0: o
+    7:  get_arg1 1: n
+    8:  push_atom_value sys_adaptation_configs
+   13:  call2 2
+   14:  dup
+   15:  if_true8 19
+   17:  drop
+   18:  object
+   19:  put_loc0 0: r
+   20:  get_var parseInt
+   25:  get_var_ref0 0: o
+   26:  get_arg1 1: n
+   27:  push_atom_value sys_bt_quality_startup
+   32:  call2 2
+   33:  push_i8 10
+   35:  call2 2
+   36:  put_loc1 1: c
+   37:  array_from 0
+   40:  put_loc2 2: i
+   41:  get_loc0 0: r
+   42:  get_field disableSystemWhitelist
+   47:  dup
+   48:  if_false8 107
+   50:  drop
+   51:  get_loc2 2: i
+   52:  get_field2 push
+   57:  push_atom_value "H="
+   62:  get_var_ref_check 1: t
+   65:  add
+   66:  call_method 1
+   69:  drop
+   70:  get_loc2 2: i
+   71:  get_field2 push
+   76:  push_atom_value "[ -f \"$H\" ] || H="
+   81:  get_var_ref_check 2: l
+   84:  add
+   85:  call_method 1
+   88:  drop
+   89:  get_loc2 2: i
+   90:  get_field2 push
+   95:  get_var_ref_check 3: u
+   98:  push_atom_value " || { [ -f \"$H\" ] && mount --bind \"$H\" /etc/hosts; }"
+  103:  add
+  104:  call_method 1
+  107:  drop
+  108:  get_loc0 0: r
+  109:  get_field adbSkipPassword
+  114:  dup
+  115:  if_false8 132
+  117:  drop
+  118:  get_loc2 2: i
+  119:  get_field2 push
+  124:  push_atom_value "touch /tmp/.adb_auth_verified"
+  129:  call_method 1
+  132:  drop
+  133:  get_var isNaN
+  138:  get_loc1 1: c
+  139:  call1 1
+  140:  lnot
+  141:  dup
+  142:  if_false 285
+  147:  drop
+  148:  get_loc1 1: c
+  149:  push_0 0
+  150:  gte
+  151:  dup
+  152:  if_false 285
+  157:  drop
+  158:  get_loc2 2: i
+  159:  get_field2 push
+  164:  push_atom_value "mkdir -p /data/local/bluealsa_custom && chmod 700 /data/local/bluealsa_custom"
+  169:  call_method 1
+  172:  drop
+  173:  get_loc2 2: i
+  174:  get_field2 push
+  179:  push_atom_value "umount /usr/bin/bluealsa 2>/dev/null"
+  184:  call_method 1
+  187:  drop
+  188:  get_loc2 2: i
+  189:  get_field2 push
+  194:  push_atom_value "cp /usr/bin/bluealsa /data/local/bluealsa_custom/bluealsa_orig 2>/dev/null"
+  199:  call_method 1
+  202:  drop
+  203:  get_loc2 2: i
+  204:  get_field2 push
+  209:  push_atom_value "chmod 755 /data/local/bluealsa_custom/bluealsa_orig"
+  214:  call_method 1
+  217:  drop
+  218:  get_loc2 2: i
+  219:  get_field2 push
+  224:  push_atom_value "printf \"%s\\n%s\\n\" \"#!/bin/sh\" \"exec /data/local/bluealsa_custom/bluealsa_orig --profile=a2dp-source --profile=hfp-ag --a2dp-volume --sbc-quality="
+  229:  get_loc1 1: c
+  230:  add
+  231:  push_atom_value "\" > /data/local/bluealsa_custom/bluealsa_proxy"
+  236:  add
+  237:  call_method 1
+  240:  drop
+  241:  get_loc2 2: i
+  242:  get_field2 push
+  247:  push_atom_value "chmod 755 /data/local/bluealsa_custom/bluealsa_proxy"
+  252:  call_method 1
+  255:  drop
+  256:  get_loc2 2: i
+  257:  get_field2 push
+  262:  push_atom_value "mount --bind /data/local/bluealsa_custom/bluealsa_proxy /usr/bin/bluealsa"
+  267:  call_method 1
+  270:  drop
+  271:  get_loc2 2: i
+  272:  get_field2 push
+  277:  push_atom_value "killall -9 bluealsa bluealsa_orig 2>/dev/null"
+  282:  call_method 1
+  285:  drop
+  286:  push_0 0
+  287:  get_loc2 2: i
+  288:  get_length
+  289:  strict_neq
+  290:  if_false8 390
+  292:  push_atom_value "#!/bin/sh\n"
+  297:  get_loc2 2: i
+  298:  get_field2 join
+  303:  push_atom_value "\n"
+  308:  call_method 1
+  311:  add
+  312:  push_atom_value "\n"
+  317:  add
+  318:  put_loc3 3: h
+  319:  get_var_ref_check 4: s
+  322:  push_atom_value ".tmp"
+  327:  add
+  328:  put_loc8 4: d
+  330:  get_var_ref 5: e
+  333:  get_arg0 0: a
+  334:  push_atom_value "sh -c 'mkdir -p /userdisk/skip_re && echo \""
+  339:  fclosure8 0: [bytecode <null>]
+  341:  get_loc3 3: h
+  342:  call1 1
+  343:  add
+  344:  push_atom_value "\" | base64 -d > "
+  349:  add
+  350:  get_loc8 4: d
+  352:  add
+  353:  push_atom_value " && chmod +x "
+  358:  add
+  359:  get_loc8 4: d
+  361:  add
+  362:  push_atom_value " && mv -f "
+  367:  add
+  368:  get_loc8 4: d
+  370:  add
+  371:  push_atom_value " "
+  376:  add
+  377:  get_var_ref_check 4: s
+  380:  add
+  381:  push_atom_value "'"
+  386:  add
+  387:  call2 2
+  388:  drop
+  389:  return_undef
+  390:  get_var_ref 5: e
+  393:  get_arg0 0: a
+  394:  push_atom_value "sh -c 'rm -f "
+  399:  get_var_ref_check 4: s
+  402:  add
+  403:  push_atom_value "'"
+  408:  add
+  409:  call2 2
+  410:  drop
+  411:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: skiplogin-248245a5.js:1 source_len=0 */
+skiplogin-248245a5.js:1: function: <null>
+  mode: strict
+  args: a
+  locals:
+    0: var s
+    1: var t
+    2: var l
+    3: var u
+  stack_size: 6
+  opcodes:
+    0:  push_atom_value "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+    5:  put_loc0 0: s
+    6:  push_empty_string
+    7:  put_loc1 1: t
+    8:  push_0 0
+    9:  put_loc2 2: l
+   10:  get_loc2 2: l
+   11:  get_arg0 0: a
+   12:  get_length
+   13:  lt
+   14:  if_false 170
+   19:  push_i16 255
+   22:  get_arg0 0: a
+   23:  get_field2 charCodeAt
+   28:  get_loc2 2: l
+   29:  call_method 1
+   32:  and
+   33:  push_i8 16
+   35:  shl
+   36:  get_loc2 2: l
+   37:  push_1 1
+   38:  add
+   39:  get_arg0 0: a
+   40:  get_length
+   41:  lt
+   42:  if_false8 62
+   44:  push_i16 255
+   47:  get_arg0 0: a
+   48:  get_field2 charCodeAt
+   53:  get_loc2 2: l
+   54:  push_1 1
+   55:  add
+   56:  call_method 1
+   59:  and
+   60:  goto8 63
+   62:  push_0 0
+   63:  push_i8 8
+   65:  shl
+   66:  or
+   67:  get_loc2 2: l
+   68:  push_2 2
+   69:  add
+   70:  get_arg0 0: a
+   71:  get_length
+   72:  lt
+   73:  if_false8 93
+   75:  push_i16 255
+   78:  get_arg0 0: a
+   79:  get_field2 charCodeAt
+   84:  get_loc2 2: l
+   85:  push_2 2
+   86:  add
+   87:  call_method 1
+   90:  and
+   91:  goto8 94
+   93:  push_0 0
+   94:  or
+   95:  put_loc3 3: u
+   96:  get_loc1 1: t
+   97:  get_loc0 0: s
+   98:  get_loc3 3: u
+   99:  push_i8 18
+  101:  sar
+  102:  push_i8 63
+  104:  and
+  105:  get_array_el
+  106:  get_loc0 0: s
+  107:  get_loc3 3: u
+  108:  push_i8 12
+  110:  sar
+  111:  push_i8 63
+  113:  and
+  114:  get_array_el
+  115:  add
+  116:  get_loc2 2: l
+  117:  push_1 1
+  118:  add
+  119:  get_arg0 0: a
+  120:  get_length
+  121:  lt
+  122:  if_false8 134
+  124:  get_loc0 0: s
+  125:  get_loc3 3: u
+  126:  push_6 6
+  127:  sar
+  128:  push_i8 63
+  130:  and
+  131:  get_array_el
+  132:  goto8 139
+  134:  push_atom_value "="
+  139:  add
+  140:  get_loc2 2: l
+  141:  push_2 2
+  142:  add
+  143:  get_arg0 0: a
+  144:  get_length
+  145:  lt
+  146:  if_false8 156
+  148:  get_loc0 0: s
+  149:  push_i8 63
+  151:  get_loc3 3: u
+  152:  and
+  153:  get_array_el
+  154:  goto8 161
+  156:  push_atom_value "="
+  161:  add
+  162:  add
+  163:  put_loc1 1: t
+  164:  push_3 3
+  165:  add_loc 2: l
+  167:  goto16 10
+  170:  get_loc1 1: t
+  171:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: skiplogin-248245a5.js:1 source_len=0 */
+skiplogin-248245a5.js:1: function: r
+  mode: strict
+  args: s
+  closure vars:
+    0: e parent:loc5 var
+    1: a parent:loc0 const
+    2: t parent:loc2 const
+    3: l parent:loc3 const
+    4: u parent:loc4 const
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: e
+    1:  get_arg0 0: s
+    2:  push_atom_value "sh -c 'mkdir -p "
+    7:  get_var_ref_check 1: a
+   10:  add
+   11:  push_atom_value "; if [ ! -f "
+   16:  add
+   17:  get_var_ref_check 2: t
+   20:  add
+   21:  push_atom_value " ] && [ -f "
+   26:  add
+   27:  get_var_ref_check 3: l
+   30:  add
+   31:  push_atom_value " ]; then cp "
+   36:  add
+   37:  get_var_ref_check 3: l
+   40:  add
+   41:  push_atom_value " "
+   46:  add
+   47:  get_var_ref_check 2: t
+   50:  add
+   51:  push_atom_value "; fi; "
+   56:  add
+   57:  get_var_ref_check 4: u
+   60:  add
+   61:  push_atom_value " || cp /etc/hosts "
+   66:  add
+   67:  get_var_ref_check 2: t
+   70:  add
+   71:  push_atom_value "; grep -q \"api-overmind.youdao.com\" "
+   76:  add
+   77:  get_var_ref_check 2: t
+   80:  add
+   81:  push_atom_value " || echo \"127.0.0.1 api-overmind.youdao.com\" >> "
+   86:  add
+   87:  get_var_ref_check 2: t
+   90:  add
+   91:  push_atom_value "; "
+   96:  add
+   97:  get_var_ref_check 4: u
+  100:  add
+  101:  push_atom_value " || mount --bind "
+  106:  add
+  107:  get_var_ref_check 2: t
+  110:  add
+  111:  push_atom_value " /etc/hosts'"
+  116:  add
+  117:  call2 2
+  118:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: skiplogin-248245a5.js:1 source_len=0 */
+skiplogin-248245a5.js:1: function: c
+  mode: strict
+  args: a
+  closure vars:
+    0: e parent:loc5 var
+    1: u parent:loc4 const
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: e
+    1:  get_arg0 0: a
+    2:  push_atom_value "sh -c 'n=0; while "
+    7:  get_var_ref_check 1: u
+   10:  add
+   11:  push_atom_value " && [ $n -lt 5 ]; do umount /etc/hosts 2>/dev/null || umount -l /etc/hosts; n=$((n+1)); done'"
+   16:  add
+   17:  call2 2
+   18:  return_undef
+

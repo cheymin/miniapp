@@ -1,0 +1,45 @@
+
+# ---- render function 194 ----
+<div.side-rail>
+  <div.rail-btn>
+    <text.rail-btn-txt>
+      "<下>"
+  <div.rail-btn.rail-btn-mid>
+    <text.rail-btn-txt>
+      "<搜>"
+  <div.rail-btn.rail-btn-queue>
+    <text.rail-btn-txt>
+      "<播>"
+<div.top-tabs>
+  <div.top-tab>
+    <text.top-tab-txt>
+      "<本地>"
+  <div.top-tab>
+    <text.top-tab-txt>
+      "<歌单>"
+  <div.top-tab>
+    <text.top-tab-txt>
+      "<我的>"
+  <div.top-tab>
+    <text.top-tab-txt>
+      "<每日推荐>"
+  <div.top-tab>
+    <text.top-tab-txt>
+      "<热榜>"
+<div.pl-view>
+  <div.empty>
+    <text.empty-txt>
+      "<还没有本地歌单>"
+    <text.empty-sub>
+      "<点击右上角「新建歌单」创建>"
+<div.modal-overlay>
+  <div.modal-content>
+    <text.modal-title>
+      "<<add>>"
+    <div.modal-close-btn>
+      <text.btn-txt>
+        "<新建歌单并加入>"
+    <div.modal-close-btn>
+      <text.btn-txt>
+        "<取消>"
+<text.modal-title>

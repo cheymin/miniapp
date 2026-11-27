@@ -1,4 +1,5 @@
-// 按 Loli desktop 的结构复刻：顶部状态栏 + 时钟/版本卡片 + 通知卡片 + 全部应用页。
+// 按 LoliAPP 2.2.7 desktop.vue 的字节码与样式表复刻。
+// 页面 0 = 消息 + 时钟，页面 1 = 横向应用列表 + 版本卡片。
 @import url('../../styles/section.less');
 
 .home {
@@ -23,265 +24,74 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-}
-
-.page-home {
+    justify-content: center;
+    align-items: center;
     background-color: #000000;
 }
 
-.page-apps {
-    background-color: #080213;
-}
-
-/* 顶部状态栏 */
-.safe-top-bar {
-    position: absolute;
-    left: 14px;
-    right: 14px;
-    top: 6px;
-    height: 18px;
-    z-index: 20;
+/* 第一页：消息 + 时钟 */
+.screen2-container {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
 }
 
-.safe-time-box {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-}
-
-.safe-time {
-    font-size: 15px;
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.92);
-}
-
-.safe-date {
-    margin-left: 6px;
-    font-size: 11px;
-    color: rgba(255, 255, 255, 0.45);
-}
-
-.safe-top-right {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.safe-next-class {
-    padding: 2px 10px;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.14);
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 11px;
-}
-
-.safe-exit-btn {
-    margin-left: 10px;
-    font-size: 11px;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* 时钟与版本卡片 */
-.home-main {
-    position: absolute;
-    left: 14px;
-    right: 14px;
-    top: 26px;
-    height: 92px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.calculator-card {
-    width: 196px;
-    height: 78px;
-    border-radius: 22px;
-    background-color: #7c3aed;
-    padding: 9px 14px;
-}
-
-.calculator-inner {
-    display: flex;
-    flex-direction: column;
-}
-
-.sys-title-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.sys-title {
-    font-size: 15px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.pro-badge {
-    margin-left: 6px;
-    padding: 1px 6px;
-    border-radius: 7px;
-    background-color: #ffe9b0;
-}
-
-.pro-badge-txt {
-    font-size: 9px;
-    font-weight: bold;
-    color: #4a1d96;
-}
-
-.sys-version {
-    margin-top: 3px;
-    font-size: 10px;
-    color: rgba(255, 255, 255, 0.72);
-}
-
-.btn-update {
-    margin-top: 5px;
-    width: 64px;
-    height: 18px;
-    line-height: 16px;
-    text-align: center;
-    border-width: 1px;
-    border-color: rgba(255, 255, 255, 0.5);
-    border-radius: 9px;
-    font-size: 10px;
-    color: #ffffff;
-}
-
-.clock-section {
-    flex: 1;
-    height: 92px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.clock-widget {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-.time-text {
-    font-size: 56px;
-    line-height: 58px;
-    font-weight: bold;
-    color: #e9d5ff;
-    letter-spacing: 1px;
-}
-
-.date-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.date-text {
-    font-size: 11px;
-    color: #c4b5fd;
-    letter-spacing: 1px;
-}
-
-.account-status-row {
-    margin-top: 2px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.account-status-avatar {
-    width: 18px;
-    height: 18px;
-    border-radius: 9px;
-    background-color: rgba(139, 92, 246, 0.35);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.account-status-avatar-txt {
-    font-size: 9px;
-    font-weight: bold;
-    color: #e9d5ff;
-}
-
-.account-status-info {
-    margin-left: 5px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.account-status-name {
-    font-size: 10px;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.account-status-money {
-    margin-left: 6px;
-    font-size: 10px;
-    color: #ff9f0a;
-}
-
-/* 桌面通知/快捷卡片 */
 .messages-section {
-    position: absolute;
-    left: 14px;
-    right: 14px;
-    top: 120px;
-    height: 36px;
-    z-index: 10;
+    flex: 1;
+    height: 100%;
+    margin-left: 30px;
+    padding-top: 20px;
 }
 
 .msg-list {
-    height: 36px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    height: 100%;
 }
 
 .msg-item {
-    width: 48%;
-    height: 36px;
-    padding: 4px 6px;
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.05);
+    padding: 16px;
+    margin-bottom: 12px;
+    background-color: #1a1b1f;
+    border-radius: 22px;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
 .msg-icon-box {
-    width: 24px;
-    height: 24px;
-    border-radius: 7px;
-    background-color: #7c3aed;
+    width: 44px;
+    height: 44px;
+    border-radius: 22px;
+    margin-right: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.msg-icon-apps {
+    background-color: #7c3aed;
+}
+
+.msg-icon-settings {
+    background-color: #c4663f;
+}
+
+.msg-icon-update {
+    background-color: #1f7ad4;
+}
+
 .msg-icon-txt {
-    font-size: 11px;
+    font-size: 18px;
     font-weight: bold;
     color: #ffffff;
 }
 
 .msg-content {
     flex: 1;
-    margin-left: 6px;
-    display: flex;
-    flex-direction: column;
 }
 
 .msg-title-row {
+    margin-bottom: 4px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -289,66 +99,181 @@
 }
 
 .msg-title {
-    font-size: 10px;
+    font-size: 16px;
     font-weight: bold;
-    color: #ffffff;
+    color: #e3e3e3;
 }
 
 .msg-time {
-    font-size: 9px;
-    color: #8f95b2;
+    font-size: 12px;
+    color: #8e918f;
 }
 
 .msg-desc {
-    margin-top: 1px;
-    font-size: 9px;
-    color: #7d839e;
+    font-size: 13px;
+    color: #8e918f;
     lines: 1;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-/* 全部应用页 */
-.apps-head {
-    position: absolute;
-    left: 14px;
-    right: 14px;
-    top: 26px;
-    height: 16px;
+.clock-section {
+    flex: 1;
+    height: 100%;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock-widget {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.time-text {
+    font-size: 96px;
+    line-height: 100px;
+    font-weight: 200;
+    color: #eaddff;
+    text-align: right;
+}
+
+.date-row {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.date-text {
+    font-size: 22px;
+    color: #8e918f;
+    letter-spacing: 1px;
+    text-align: right;
+}
+
+.account-status-row {
+    margin-top: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.account-status-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    margin-right: 8px;
+    background-color: rgba(139, 92, 246, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account-status-avatar-txt {
+    font-size: 13px;
+    font-weight: bold;
+    color: #e9d5ff;
+}
+
+.account-status-name {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #8e918f;
+}
+
+.account-status-money {
+    font-size: 18px;
+    color: #fbbf24;
+}
+
+/* 第二页：横向应用列表 */
+.apps-h-scroller {
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+}
+
+.h-app-list {
+    height: 100%;
+    padding: 0 30px;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.apps-title {
-    font-size: 14px;
+.calculator-card {
+    width: 200px;
+    height: 200px;
+    margin-right: 50px;
+    padding: 4px;
+    background-color: #7c3aed;
+    border-radius: 28px;
+}
+
+.calculator-inner {
+    flex: 1;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.sys-title-row {
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sys-title {
+    font-size: 24px;
     font-weight: bold;
     color: #ffffff;
 }
 
-.apps-sub {
-    margin-left: 6px;
-    font-size: 10px;
-    color: #6b7088;
+.pro-badge {
+    margin-left: 8px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background-color: #ffe9b0;
 }
 
-.screen2-container {
-    position: absolute;
-    left: 8px;
-    right: 8px;
-    top: 46px;
-    height: 106px;
+.pro-badge-txt {
+    font-size: 12px;
+    font-weight: bold;
+    color: #4a1d96;
 }
 
-.apps-grid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.sys-version {
+    margin-bottom: 24px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
 }
 
-.app-item {
-    width: 20%;
-    height: 53px;
+.btn-update {
+    padding: 9px 22px;
+    border-radius: 24px;
+    background-color: rgba(255, 255, 255, 0.22);
+}
+
+.btn-update-txt {
+    font-size: 13px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.h-app-item {
+    width: 140px;
+    height: 180px;
+    margin-right: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -356,23 +281,29 @@
 }
 
 .app-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 10px;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 12px;
+    border-radius: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.app-img {
+    width: 64px;
+    height: 64px;
+}
+
 .app-glyph {
-    font-size: 12px;
+    font-size: 40px;
     font-weight: bold;
     color: #ffffff;
 }
 
-.app-img {
-    width: 26px;
-    height: 26px;
+.app-label {
+    font-size: 14px;
+    color: #e3e3e3;
 }
 
 .theme-ai {
@@ -411,10 +342,13 @@
     background-color: #5b2436;
 }
 
-.app-name {
-    margin-top: 2px;
-    font-size: 9px;
-    color: #d6d9e8;
+.page-back {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    z-index: 30;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 /* 圆点 */
@@ -423,6 +357,7 @@
     left: 0;
     right: 0;
     bottom: 3px;
+    z-index: 30;
     display: flex;
     flex-direction: row;
     justify-content: center;

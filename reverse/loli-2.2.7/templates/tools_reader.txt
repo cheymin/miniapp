@@ -1,0 +1,32 @@
+
+# ---- render function 131 ----
+<div.controls-close-mask>
+<div.sep>
+
+# ---- render function 145 ----
+<div.toggle-copy>
+  <text.toggle-title>
+    "<滑动翻页>"
+  <text.toggle-desc>
+    "<左右滑动切换上一页或下一页>"
+
+# ---- render function 146 ----
+<div.toggle-copy>
+  <text.toggle-title>
+    "<自动翻页>"
+  <text.toggle-desc>
+    "<按设定速度自动切换到下一页>"
+
+# ---- render function 147 ----
+<div.toggle-copy>
+  <text.toggle-title>
+    "<滑动翻页>"
+  <text.toggle-desc>
+    "<开启后支持左右滑动切换章节>"
+
+# ---- render function 148 ----
+<div.toggle-copy>
+  <text.toggle-title>
+    "<自动翻页>"
+  <text.toggle-desc>
+    "<开启后按设定间隔自动翻页>"

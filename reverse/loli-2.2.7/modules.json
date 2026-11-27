@@ -1,0 +1,272 @@
+[
+  {
+    "module": "app",
+    "functions": 56,
+    "atoms": 251,
+    "dump_bytes": 75730
+  },
+  {
+    "module": "appdata-98dd73a0",
+    "functions": 1,
+    "atoms": 7,
+    "dump_bytes": 448
+  },
+  {
+    "module": "apps_assis",
+    "functions": 4,
+    "atoms": 45,
+    "dump_bytes": 4452
+  },
+  {
+    "module": "apps_bilis",
+    "functions": 841,
+    "atoms": 2367,
+    "dump_bytes": 1570663
+  },
+  {
+    "module": "apps_chats",
+    "functions": 189,
+    "atoms": 804,
+    "dump_bytes": 426400
+  },
+  {
+    "module": "apps_chaty",
+    "functions": 331,
+    "atoms": 1440,
+    "dump_bytes": 636161
+  },
+  {
+    "module": "apps_foods",
+    "functions": 133,
+    "atoms": 687,
+    "dump_bytes": 269669
+  },
+  {
+    "module": "apps_music",
+    "functions": 239,
+    "atoms": 1032,
+    "dump_bytes": 448104
+  },
+  {
+    "module": "apps_novel",
+    "functions": 204,
+    "atoms": 724,
+    "dump_bytes": 324436
+  },
+  {
+    "module": "apps_onion",
+    "functions": 119,
+    "atoms": 485,
+    "dump_bytes": 173319
+  },
+  {
+    "module": "apps_qqbot",
+    "functions": 4,
+    "atoms": 45,
+    "dump_bytes": 4452
+  },
+  {
+    "module": "apps_rccws",
+    "functions": 4,
+    "atoms": 45,
+    "dump_bytes": 4452
+  },
+  {
+    "module": "apps_shop",
+    "functions": 110,
+    "atoms": 534,
+    "dump_bytes": 226536
+  },
+  {
+    "module": "apps_timetable",
+    "functions": 51,
+    "atoms": 419,
+    "dump_bytes": 111840
+  },
+  {
+    "module": "apps_tools",
+    "functions": 314,
+    "atoms": 1321,
+    "dump_bytes": 541125
+  },
+  {
+    "module": "apps_webui",
+    "functions": 34,
+    "atoms": 316,
+    "dump_bytes": 84463
+  },
+  {
+    "module": "apps_widthtest",
+    "functions": 40,
+    "atoms": 262,
+    "dump_bytes": 70925
+  },
+  {
+    "module": "back-497c3cc6",
+    "functions": 1,
+    "atoms": 8,
+    "dump_bytes": 558
+  },
+  {
+    "module": "base-c5a492b5",
+    "functions": 84,
+    "atoms": 368,
+    "dump_bytes": 132005
+  },
+  {
+    "module": "bf-e0dac52c",
+    "functions": 1,
+    "atoms": 8,
+    "dump_bytes": 554
+  },
+  {
+    "module": "chaty-08559ac7",
+    "functions": 302,
+    "atoms": 880,
+    "dump_bytes": 664705
+  },
+  {
+    "module": "desktop",
+    "functions": 311,
+    "atoms": 1636,
+    "dump_bytes": 664476
+  },
+  {
+    "module": "dualkey-73fdac50",
+    "functions": 5,
+    "atoms": 124,
+    "dump_bytes": 16352
+  },
+  {
+    "module": "host-tool-result-990120f5",
+    "functions": 2,
+    "atoms": 23,
+    "dump_bytes": 3667
+  },
+  {
+    "module": "index",
+    "functions": 103,
+    "atoms": 298,
+    "dump_bytes": 152657
+  },
+  {
+    "module": "media-control-8e10c1c2",
+    "functions": 5,
+    "atoms": 26,
+    "dump_bytes": 4581
+  },
+  {
+    "module": "other-7ba6c1d4",
+    "functions": 61,
+    "atoms": 328,
+    "dump_bytes": 142787
+  },
+  {
+    "module": "playlist-6777586f",
+    "functions": 32,
+    "atoms": 169,
+    "dump_bytes": 45998
+  },
+  {
+    "module": "runtime-timers-09d92488",
+    "functions": 10,
+    "atoms": 37,
+    "dump_bytes": 11007
+  },
+  {
+    "module": "safemod",
+    "functions": 138,
+    "atoms": 1063,
+    "dump_bytes": 294469
+  },
+  {
+    "module": "skiplogin-248245a5",
+    "functions": 7,
+    "atoms": 68,
+    "dump_bytes": 12006
+  },
+  {
+    "module": "small-f9db05f6",
+    "functions": 1,
+    "atoms": 9,
+    "dump_bytes": 560
+  },
+  {
+    "module": "timetable-484f1cd0",
+    "functions": 8,
+    "atoms": 100,
+    "dump_bytes": 25498
+  },
+  {
+    "module": "tools0-81f13b47",
+    "functions": 127,
+    "atoms": 443,
+    "dump_bytes": 235228
+  },
+  {
+    "module": "tools_amrinstall",
+    "functions": 38,
+    "atoms": 397,
+    "dump_bytes": 102416
+  },
+  {
+    "module": "tools_camera",
+    "functions": 65,
+    "atoms": 397,
+    "dump_bytes": 117372
+  },
+  {
+    "module": "tools_files",
+    "functions": 212,
+    "atoms": 844,
+    "dump_bytes": 333653
+  },
+  {
+    "module": "tools_fmpeg",
+    "functions": 48,
+    "atoms": 316,
+    "dump_bytes": 83315
+  },
+  {
+    "module": "tools_gallery",
+    "functions": 151,
+    "atoms": 670,
+    "dump_bytes": 282509
+  },
+  {
+    "module": "tools_keyboard",
+    "functions": 452,
+    "atoms": 1987,
+    "dump_bytes": 768357
+  },
+  {
+    "module": "tools_reader",
+    "functions": 149,
+    "atoms": 815,
+    "dump_bytes": 337105
+  },
+  {
+    "module": "tools_settings",
+    "functions": 205,
+    "atoms": 1129,
+    "dump_bytes": 517155
+  },
+  {
+    "module": "tools_shell",
+    "functions": 198,
+    "atoms": 863,
+    "dump_bytes": 344860
+  },
+  {
+    "module": "tools_video",
+    "functions": 169,
+    "atoms": 781,
+    "dump_bytes": 364389
+  },
+  {
+    "module": "upstreams-f2b4e729",
+    "functions": 3,
+    "atoms": 5,
+    "dump_bytes": 784
+  }
+]

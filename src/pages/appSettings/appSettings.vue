@@ -19,87 +19,181 @@
 
 <template>
     <div>
-        <scroller class="container settings" scroll-direction="vertical" :show-scrollbar="true">
-            <div class="group">
-                <text class="group-title">安全</text>
-                <div class="card">
-                    <div class="row" @click="editPassword">
-                        <div class="row-icon icon-lock"><text class="row-icon-text">锁</text></div>
-                        <div class="row-main">
-                            <text class="row-title">应用锁</text>
-                            <text class="row-desc">{{ hasPassword ? '已开启，启动时需要密码' : '未设置启动密码' }}</text>
-                        </div>
-                        <text class="row-action">{{ hasPassword ? '修改' : '设置' }}</text>
+        <div class="root">
+            <scroller class="sidebar" scroll-direction="vertical" :show-scrollbar="false">
+                <div class="sidebar-content">
+                    <text class="header-title">设置</text>
+
+                    <div class="search-bar" @click="editSearch">
+                        <text class="search-icon">⌕</text>
+                        <text class="search-text">{{ searchText || '搜索软件设置项' }}</text>
                     </div>
-                    <div v-if="hasPassword" class="row row-line" @click="clearPassword">
-                        <div class="row-icon icon-danger"><text class="row-icon-text">清</text></div>
-                        <div class="row-main">
-                            <text class="row-title">清除密码</text>
-                            <text class="row-desc">关闭应用锁</text>
+
+                    <div class="account-card" @click="openUpdate">
+                        <div class="account-row">
+                            <div class="account-avatar-placeholder">
+                                <text class="avatar-placeholder-text">C</text>
+                            </div>
+                            <div class="account-info">
+                                <text class="account-name">Cheymin Pen</text>
+                                <text class="account-hint">本地模式 · v{{ version }}</text>
+                            </div>
+                            <text class="arrow">›</text>
                         </div>
-                        <text class="row-action">清除</text>
+                    </div>
+
+                    <div class="card">
+                        <div v-for="(tab, index) in visibleTabs" :key="tab.key"
+                            :class="'item' + (activeTab === tab.key ? ' item-disabled' : '')"
+                            @click="activeTab = tab.key">
+                            <div class="icon-box">
+                                <text class="item-title">{{ tab.glyph }}</text>
+                            </div>
+                            <div class="item-body">
+                                <text class="item-title">{{ tab.name }}</text>
+                                <text class="item-subtitle">{{ tab.desc }}</text>
+                            </div>
+                            <text class="arrow">›</text>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </scroller>
 
-            <div class="group">
-                <text class="group-title">键盘</text>
-                <div class="card">
-                    <div class="row" @click="clearKeyboard">
-                        <div class="row-icon icon-key"><text class="row-icon-text">键</text></div>
-                        <div class="row-main">
-                            <text class="row-title">清除输入学习</text>
-                            <text class="row-desc">已记录 {{ learnedCount }} 个词，清除后候选恢复默认</text>
+            <scroller class="main-panel" scroll-direction="vertical" :show-scrollbar="true">
+                <div class="main-content">
+                    <div v-if="activeTab === 'update'" class="page">
+                        <div class="update-header">
+                            <text class="app-brand">Cheymin Pen</text>
+                            <text class="app-version">版本 v{{ version }} · QuickJS 20200705</text>
                         </div>
-                        <text class="row-action">清除</text>
+                        <div class="card">
+                            <div class="item" @click="openUpdate">
+                                <div class="item-body">
+                                    <text class="item-title">检查更新</text>
+                                    <text class="item-subtitle">从官网获取最新安装包</text>
+                                </div>
+                                <div class="update-status">
+                                    <text class="status-txt">当前已是最新</text>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="item" @click="openUpdate">
+                                <div class="item-body">
+                                    <text class="item-title">操作日志</text>
+                                    <text class="item-subtitle">系统反馈记录</text>
+                                </div>
+                                <text class="arrow">›</text>
+                            </div>
+                        </div>
+                        <text class="section-title">软件版本</text>
+                        <div class="card">
+                            <div class="item">
+                                <div class="item-body">
+                                    <text class="item-title">版本号</text>
+                                </div>
+                                <text class="status-text">v{{ version }}</text>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div v-else-if="activeTab === 'data'" class="page">
+                        <text class="section-title">本地存储与缓存</text>
+                        <div class="card">
+                            <div class="item" @click="clearCache">
+                                <div class="item-body">
+                                    <text class="item-title">清理播放缓存</text>
+                                    <text class="item-subtitle">删除临时抽帧与旧版缓存</text>
+                                </div>
+                                <text class="arrow">›</text>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="item" @click="clearKeyboard">
+                                <div class="item-body">
+                                    <text class="item-title">清除输入学习</text>
+                                    <text class="item-subtitle">已记录 {{ learnedCount }} 个词，清除后候选恢复默认</text>
+                                </div>
+                                <text class="arrow">›</text>
+                            </div>
+                        </div>
+                        <text class="section-title">数据管理</text>
+                        <div class="card">
+                            <div class="item" @click="openAiSettings">
+                                <div class="item-body">
+                                    <text class="item-title">AI 模型与接口</text>
+                                    <text class="item-subtitle">API 密钥、基础 URL、模型参数</text>
+                                </div>
+                                <text class="arrow">›</text>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div v-else-if="activeTab === 'prefs'" class="page">
+                        <text class="section-title">偏好设置</text>
+                        <div class="card">
+                            <div class="item" @click="editPassword">
+                                <div class="item-body">
+                                    <text class="item-title">应用锁</text>
+                                    <text class="item-subtitle">{{ hasPassword ? '已开启，启动时需要密码' : '未设置启动密码' }}</text>
+                                </div>
+                                <div :class="'toggle ' + (hasPassword ? 'toggle-on' : '')"
+                                    :style="{ backgroundColor: hasPassword ? '#7c3aed' : '#232428' }">
+                                    <div class="toggle-thumb"
+                                        :style="{ transform: 'translateX(' + (hasPassword ? '18px' : '0px') + ')' }">
+                                    </div>
+                                </div>
+                            </div>
+                            <div v-if="hasPassword" class="divider"></div>
+                            <div v-if="hasPassword" class="item" @click="clearPassword">
+                                <div class="item-body">
+                                    <text class="item-title">清除密码</text>
+                                    <text class="item-subtitle">关闭应用锁</text>
+                                </div>
+                                <text class="arrow">›</text>
+                            </div>
+                        </div>
+                        <text class="section-title">键盘</text>
+                        <div class="card">
+                            <div class="item" @click="clearKeyboard">
+                                <div class="item-body">
+                                    <text class="item-title">输入学习</text>
+                                    <text class="item-subtitle">已记录 {{ learnedCount }} 个词</text>
+                                </div>
+                                <text class="arrow">›</text>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div v-else class="page">
+                        <text class="section-title">关于</text>
+                        <div class="card">
+                            <div class="item">
+                                <div class="item-body">
+                                    <text class="item-title">Cheymin Pen</text>
+                                    <text class="item-subtitle">工具箱 · 笔上桌面 v{{ version }}</text>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="item" @click="openUpdate">
+                                <div class="item-body">
+                                    <text class="item-title">检查更新</text>
+                                </div>
+                                <text class="arrow">›</text>
+                            </div>
+                        </div>
+                        <text class="section-title">鸣谢</text>
+                        <div class="card">
+                            <div v-for="(credit, index) in credits" :key="credit.name" class="item">
+                                <div class="item-body">
+                                    <text class="item-title">{{ credit.name }}</text>
+                                    <text class="item-subtitle">{{ credit.role }}</text>
+                                </div>
+                                <text v-if="index === 0" class="badge-text badge">致谢</text>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="group">
-                <text class="group-title">AI 助手</text>
-                <div class="card">
-                    <div class="row" @click="openAiSettings">
-                        <div class="row-icon icon-ai"><text class="row-icon-text">AI</text></div>
-                        <div class="row-main">
-                            <text class="row-title">模型与接口</text>
-                            <text class="row-desc">API 密钥、基础 URL、模型参数</text>
-                        </div>
-                        <text class="row-action">›</text>
-                    </div>
-                </div>
-            </div>
-
-            <div class="group">
-                <text class="group-title">存储</text>
-                <div class="card">
-                    <div class="row" @click="clearCache">
-                        <div class="row-icon icon-cache"><text class="row-icon-text">清</text></div>
-                        <div class="row-main">
-                            <text class="row-title">清理播放缓存</text>
-                            <text class="row-desc">删除临时抽帧与旧版缓存</text>
-                        </div>
-                        <text class="row-action">清理</text>
-                    </div>
-                </div>
-            </div>
-
-            <div class="group">
-                <text class="group-title">关于</text>
-                <div class="card">
-                    <div class="row">
-                        <div class="row-icon icon-info"><text class="row-icon-text">版</text></div>
-                        <div class="row-main">
-                            <text class="row-title">Cheymin Pen</text>
-                            <text class="row-desc">版本 v{{ version }}</text>
-                        </div>
-                        <text class="row-action" @click="openUpdate">检查更新</text>
-                    </div>
-                </div>
-            </div>
-
-            <text class="footer-hint">设置只保存在本机，不会上传。</text>
-        </scroller>
+            </scroller>
+        </div>
         <ToastMessage />
     </div>
 </template>

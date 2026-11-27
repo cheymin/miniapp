@@ -19,23 +19,37 @@
 
 <template>
     <div>
-        <div class="container gallery">
-            <div class="gallery-head">
-                <text class="gallery-back" @click="goBack">返回</text>
-                <text class="gallery-path" @click="editPath">{{ root }}</text>
-                <text class="gallery-count">{{ loading ? '扫描中…' : images.length + ' 张' }}</text>
-                <text class="gallery-refresh" @click="scan">刷新</text>
+        <div class="app">
+            <div class="g-top">
+                <text class="g-back" @click="goBack">‹ 返回</text>
+                <text class="g-path" @click="editPath">{{ root }}</text>
+                <text class="g-count">{{ loading ? '扫描中…' : images.length + ' 张' }}</text>
             </div>
 
-            <scroller class="gallery-scroll" scroll-direction="vertical" :show-scrollbar="true">
-                <div class="gallery-grid">
-                    <div v-for="(item, index) in images" :key="item" class="gallery-cell" @click="openImage(index)">
-                        <image class="gallery-thumb" :src="item" :width="102" :height="62" resize="cover" />
-                        <text class="gallery-name">{{ shortName(item) }}</text>
+            <scroller class="grid-scroller" scroll-direction="vertical" :show-scrollbar="false">
+                <div class="grid">
+                    <div v-for="(row, rowIndex) in rows" :key="rowIndex" class="grid-row">
+                        <div v-for="item in row" :key="item.path" class="grid-cell"
+                            :style="{ width: cellW + 'px', height: cellH + 'px', marginRight: '4px' }"
+                            @click="openImage(item.index)">
+                            <image class="thumb" :src="item.path" :width="cellW" :height="cellH" resize="cover" />
+                        </div>
+                    </div>
+
+                    <div class="list-footer">
+                        <text class="footer-text">{{ images.length ? '没有更多了' : '没有找到图片' }}</text>
                     </div>
                 </div>
-                <text v-if="!loading && !images.length" class="gallery-empty">没有找到图片，点击路径换一个目录</text>
+
+                <div v-if="!loading && !images.length" class="empty">
+                    <text class="empty-text">相册为空</text>
+                    <text class="empty-sub">点击上方路径切换目录</text>
+                </div>
             </scroller>
+
+            <div class="floating-cancel" @click="editPath">
+                <text class="footer-text">目录</text>
+            </div>
         </div>
         <ToastMessage />
     </div>

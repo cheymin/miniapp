@@ -35,7 +35,33 @@ const appSettings = defineComponent({
             hasPassword: false,
             version: APP_VERSION,
             learnedCount: 0,
+            activeTab: 'update',
+            searchText: '',
+            tabs: [
+                { key: 'update', name: '软件版本', desc: '检查更新与操作日志', glyph: '版' },
+                { key: 'data', name: '数据管理', desc: '本地存储与缓存', glyph: '数' },
+                { key: 'prefs', name: '偏好设置', desc: '应用锁与键盘', glyph: '偏' },
+                { key: 'about', name: '关于与鸣谢', desc: '版本信息与致谢名单', glyph: '关' },
+            ],
+            credits: [
+                { name: '雪球的小源', role: '赞助资金 k+' },
+                { name: '李子', role: 'LoliAPP 创始人 & 主力开发' },
+                { name: '洛神赋', role: 'Cvi & Rka 深度适配与长期维护' },
+                { name: '小爱', role: '文件搜索、视频播放自适应屏幕' },
+                { name: '四夕', role: '网易云贡献值 / 哔哩贡献者' },
+                { name: '喵！', role: '旋转竖屏阅读器、双指缩放' },
+            ],
         };
+    },
+
+    computed: {
+        visibleTabs() {
+            const query = this.searchText.trim().toLowerCase();
+            if (!query) { return this.tabs; }
+            return this.tabs.filter((tab: any) =>
+                tab.name.toLowerCase().includes(query) ||
+                tab.desc.toLowerCase().includes(query));
+        },
     },
 
     mounted() {
@@ -44,6 +70,18 @@ const appSettings = defineComponent({
     },
 
     methods: {
+        editSearch() {
+            openSystemInput(
+                () => this.searchText,
+                (value) => {
+                    this.searchText = value.trim();
+                    if (this.visibleTabs.length) {
+                        this.activeTab = this.visibleTabs[0].key;
+                    }
+                }
+            );
+        },
+
         async refreshPasswordState() {
             this.hasPassword = !!(await loadPassword());
         },

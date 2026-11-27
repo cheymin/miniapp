@@ -1,0 +1,68 @@
+    0	skiplogin-248245a5.js
+    1	./appdata-98dd73a0.js
+    2	d
+    3	e
+    4	r
+    5	A
+    6	a
+    7	s
+    8	t
+    9	l
+   10	u
+   11	o
+   12	n
+   13	c
+   14	/userdisk/skip_re/skip_login.sh
+   15	/myhosts
+   16	/userdisk/myhosts
+   17	grep -q " /etc/hosts " /proc/mounts
+   18	output
+   19	read
+   20	i
+   21	h
+   22	sys_adaptation_configs
+   23	parseInt
+   24	sys_bt_quality_startup
+   25	disableSystemWhitelist
+   26	push
+   27	H=
+   28	[ -f "$H" ] || H=
+   29	 || { [ -f "$H" ] && mount --bind "$H" /etc/hosts; }
+   30	adbSkipPassword
+   31	touch /tmp/.adb_auth_verified
+   32	isNaN
+   33	mkdir -p /data/local/bluealsa_custom && chmod 700 /data/local/bluealsa_custom
+   34	umount /usr/bin/bluealsa 2>/dev/null
+   35	cp /usr/bin/bluealsa /data/local/bluealsa_custom/bluealsa_orig 2>/dev/null
+   36	chmod 755 /data/local/bluealsa_custom/bluealsa_orig
+   37	printf "%s\n%s\n" "#!/bin/sh" "exec /data/local/bluealsa_custom/bluealsa_orig --profile=a2dp-source --profile=hfp-ag --a2dp-volume --sbc-quality=
+   38	" > /data/local/bluealsa_custom/bluealsa_proxy
+   39	chmod 755 /data/local/bluealsa_custom/bluealsa_proxy
+   40	mount --bind /data/local/bluealsa_custom/bluealsa_proxy /usr/bin/bluealsa
+   41	killall -9 bluealsa bluealsa_orig 2>/dev/null
+   42	#!/bin/sh\n
+   43	\n
+   44	.tmp
+   45	sh -c 'mkdir -p /userdisk/skip_re && echo "
+   46	" | base64 -d > 
+   47	 && chmod +x 
+   48	 && mv -f 
+   49	 
+   50	'
+   51	sh -c 'rm -f 
+   52	ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+   53	charCodeAt
+   54	=
+   55	sh -c 'mkdir -p 
+   56	; if [ ! -f 
+   57	 ] && [ -f 
+   58	 ]; then cp 
+   59	; fi; 
+   60	 || cp /etc/hosts 
+   61	; grep -q "api-overmind.youdao.com" 
+   62	 || echo "127.0.0.1 api-overmind.youdao.com" >> 
+   63	; 
+   64	 || mount --bind 
+   65	 /etc/hosts'
+   66	sh -c 'n=0; while 
+   67	 && [ $n -lt 5 ]; do umount /etc/hosts 2>/dev/null || umount -l /etc/hosts; n=$((n+1)); done'

@@ -1,0 +1,262 @@
+    0	apps_widthtest.js
+    1	bridge
+    2	t
+    3	e
+    4	i
+    5	s
+    6	widthtest
+    7	data
+    8	kbLayout
+    9	testDeviation
+   10	unitOffset
+   11	charWidthDirect
+   12	charWidthRatio
+   13	columnsDirect
+   14	columnsRatio
+   15	kbVerdict
+   16	propFull
+   17	naiveLeft
+   18	propLeft
+   19	naiveErr
+   20	propErr
+   21	biliVerdict
+   22	computed
+   23	mounted
+   24	initShell
+   25	initEnv
+   26	measureAll
+   27	readPhys
+   28	measureRects
+   29	setTestW
+   30	fmt
+   31	goBack
+   32	methods
+   33	_withStripped
+   34	render
+   35	staticRenderFns
+   36	_compiled
+   37	data-v-d9111402
+   38	_scopeId
+   39	themes
+   40	assign
+   41	#0d0f13
+   42	backgroundColor
+   43	100%
+   44	width
+   45	height
+   46	wrapper
+   47	40px
+   48	row
+   49	flexDirection
+   50	center
+   51	alignItems
+   52	10px
+   53	paddingLeft
+   54	paddingRight
+   55	1px
+   56	borderBottomWidth
+   57	#23262c
+   58	borderBottomColor
+   59	header
+   60	flex
+   61	#f3f4f6
+   62	color
+   63	16px
+   64	fontSize
+   65	fontWeight
+   66	textAlign
+   67	hdr-title
+   68	5px
+   69	paddingTop
+   70	paddingBottom
+   71	hdr-btn
+   72	#6ea8ff
+   73	13px
+   74	hdr-btn-txt
+   75	body
+   76	8px
+   77	col
+   78	#8f949d
+   79	12px
+   80	4px
+   81	marginBottom
+   82	sec-title
+   83	marginTop
+   84	mt10
+   85	6px
+   86	mt6
+   87	#d6dae1
+   88	18px
+   89	lineHeight
+   90	kv
+   91	#6dd58c
+   92	hl
+   93	#f2b8b5
+   94	warn
+   95	#6b7280
+   96	11px
+   97	dim
+   98	52px
+   99	26px
+  100	#2c3036
+  101	borderRadius
+  102	justifyContent
+  103	marginRight
+  104	act-btn
+  105	act-txt
+  106	118px
+  107	borderTopWidth
+  108	borderTopColor
+  109	column
+  110	mocks
+  111	56px
+  112	mock-kb
+  113	mock-bili
+  114	mock-label
+  115	#ffffff
+  116	mock-label2
+  117	2px
+  118	marginLeft
+  119	#000000
+  120	kb-screen
+  121	minHeight
+  122	kb-inner
+  123	dt-row
+  124	#2f6fe4
+  125	dt-left
+  126	280px
+  127	#7a3ff2
+  128	dt-right
+  129	absolute
+  130	position
+  131	0px
+  132	top
+  133	left
+  134	opacity
+  135	probe-root
+  136	#ff0000
+  137	probe-box
+  138	monospace
+  139	fontFamily
+  140	probe-line
+  141	style
+  142	src/pages/apps/widthtest.vue
+  143	__file
+  144	deviceWidth
+  145	deviceHeight
+  146	scale
+  147	dpr
+  148	env
+  149	w
+  150	h
+  151	rotation
+  152	phys
+  153	shellAvail
+  154	rootRect
+  155	testW
+  156	testBoxW
+  157	kbLineW
+  158	kbInnerW
+  159	dtLeftW
+  160	max
+  161	round
+  162	min
+  163	screenWidth
+  164	leftWidth
+  165	styleLeftWidth
+  166	compact
+  167	-
+  168	floor
+  169	待测量…
+  170	abs
+  171	判定: 一致 → 比值法有效，坐标=设计px
+  172	判定: 差 
+  173	px → 需排查
+  174	判定: 两式≈实测（此机物理=视口）
+  175	判定: 比例式更准，但实测(embedLeftWidth)仍最可靠
+  176	判定: w−280 更准（异常，注意排查）
+  177	setTimeout
+  178	Shell
+  179	getScreenSize
+  180	shell
+  181	weex
+  182	config
+  183	devicePixelRatio
+  184	a
+  185	requireModule
+  186	dom
+  187	getComponentRect
+  188	rootProbe
+  189	testBox
+  190	measureLine
+  191	kbInner
+  192	dtLeftProbe
+  193	$refs
+  194	result
+  195	size
+  196	$falcon
+  197	navTo
+  198	desktop
+  199	apps_widthtest
+  200	$createElement
+  201	_self
+  202	_c
+  203	div
+  204	staticClass
+  205	click
+  206	on
+  207	text
+  208	_v
+  209	← 返回
+  210	宽度计算实验场
+  211	重新测量
+  212	scroller
+  213	① 来源原始值
+  214	weex设计: 
+  215	_s
+  216	 x 
+  217	env.scale: 
+  218	  dpr: 
+  219	物理Shell: 
+  220	 rot=
+  221	视口实测(根): 
+  222	物理−视口偏差: 
+  223	_e
+  224	（Shell 不可用，物理行无效）
+  225	② 单位校准（声明 vs 实测）
+  226	测试盒声明 
+  227	px → 实测 
+  228	偏差: 
+  229	px
+  230	偏差=0 → getComponentRect 是设计坐标
+  231	③ keyboard 字符宽度验证
+  232	kb.screenWidth: 
+  233	 (compact)
+  234	leftWidth: 
+  235	 → styleLeftWidth: 
+  236	测量行20×'0' 实测: 
+  237	display-inner 实测: 
+  238	（预期 
+  239	）
+  240	charWidth 两种算法
+  241	直除法(行宽/20): 
+  242	比值法(keyboard现用): 
+  243	列数 直除: 
+  244	 / 比值: 
+  245	④ bilis 内嵌播放器宽度
+  246	bilis.screenWidth(物理): 
+  247	A. 全屏: 
+  248	B. w−280(朴素): 
+  249	C. 比例式(−280/936×w): 
+  250	D. 实测dt-left模拟: 
+  251	误差 B: 
+  252	  C: 
+  253	物理−视口=
+  254	 → B 恒大同样数值
+  255	KB模拟 宽=
+  256	ref
+  257	display-inner
+  258	B站详情行模拟（左flex:1 / 右280px 固定）
+  259	_m
+  260	00000000000000000000
+  261	右栏280
