@@ -1,0 +1,2965 @@
+
+/* ===== function depth=0 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: t parent:loc0 const
+    1: i parent:loc1 const
+    2: s parent:loc2 const
+    3: a parent:loc3 const
+    4: e parent:loc4 const
+    5: n parent:loc5 const
+    6: o parent:loc6 const
+    7: c parent:loc7 const
+    8: r parent:loc8 const
+    9: l parent:loc9 const
+   10: d parent:loc10 const
+   11: h parent:loc11 const
+   12: p parent:loc12 const
+   13: u parent:loc13 const
+   14: f parent:loc14 const
+   15: b parent:loc15 const
+   16: g parent:loc16 const
+   17: _ parent:loc17 const
+   18: x parent:loc18 const
+   19: v parent:loc19 const
+   20: m parent:loc20 const
+   21: T parent:loc21 const
+   22: q parent:loc22 const
+   23: y parent:loc23 const
+   24: C parent:loc24 const
+   25: D parent:loc25 const
+   26: k parent:loc26 const
+   27: S local:loc0 const
+   28: w local:loc1 var
+   29: I local:loc2 var
+   30: U local:loc3 const
+  stack_size: 7
+  opcodes:
+    0:  get_var_ref_check 26: k
+    3:  object
+    4:  object
+    5:  push_atom_value ob_entry_diag
+   10:  define_field store
+   15:  define_field keys
+   20:  object
+   21:  push_i8 12
+   23:  define_field store
+   28:  define_field limits
+   33:  call1 1
+   34:  put_var_ref 27: S
+   37:  object
+   38:  push_atom_value qqbot_entry
+   43:  define_field name
+   48:  fclosure8 0: [bytecode <null>]
+   50:  set_name data
+   55:  define_field data
+   60:  fclosure8 1: [bytecode <null>]
+   62:  set_name mounted
+   67:  define_field mounted
+   72:  fclosure8 2: [bytecode <null>]
+   74:  set_name onShow
+   79:  define_field onShow
+   84:  fclosure8 3: [bytecode <null>]
+   86:  set_name activated
+   91:  define_field activated
+   96:  fclosure8 4: [bytecode <null>]
+   98:  set_name onHide
+  103:  define_field onHide
+  108:  object
+  109:  fclosure8 5: [bytecode <null>]
+  111:  set_name toast
+  116:  define_field toast
+  121:  fclosure8 6: [bytecode <null>]
+  123:  set_name recordEntryDiag
+  128:  define_field recordEntryDiag
+  133:  fclosure8 7: [bytecode <null>]
+  135:  set_name flushEntryDiag
+  140:  define_field flushEntryDiag
+  145:  fclosure8 8: [bytecode <null>]
+  147:  set_name armEscape
+  152:  define_field armEscape
+  157:  fclosure8 9: [bytecode <null>]
+  159:  set_name retryNav
+  164:  define_field retryNav
+  169:  fclosure8 10: [bytecode <null>]
+  171:  set_name logout
+  176:  define_field logout
+  181:  fclosure8 11: [bytecode <null>]
+  183:  set_name goDesktop
+  188:  define_field goDesktop
+  193:  fclosure8 12: [bytecode <null>]
+  195:  set_name navTo
+  200:  define_field navTo
+  205:  fclosure8 13: [bytecode <null>]
+  207:  define_method bootstrap,4
+  213:  fclosure8 14: [bytecode <null>]
+  215:  set_name deviceCredential
+  220:  define_field deviceCredential
+  225:  fclosure8 15: [bytecode <null>]
+  227:  set_name verifyInBackground
+  232:  define_field verifyInBackground
+  237:  fclosure8 16: [bytecode <null>]
+  239:  set_name accountToken
+  244:  define_field accountToken
+  249:  fclosure8 17: [bytecode <null>]
+  251:  set_name enterAccount
+  256:  define_field enterAccount
+  261:  fclosure8 18: [bytecode <null>]
+  263:  set_name openShop
+  268:  define_field openShop
+  273:  fclosure8 19: [bytecode <null>]
+  275:  set_name fail
+  280:  define_field fail
+  285:  define_field methods
+  290:  put_var_ref 28: w
+  293:  fclosure8 20: [bytecode <null>]
+  295:  set_name I
+  300:  set_var_ref 29: I
+  303:  push_0 0
+  304:  lnot
+  305:  put_field _withStripped
+  310:  get_var_ref 28: w
+  313:  put_var_ref 30: U
+  316:  get_var_ref_check 30: U
+  319:  get_var_ref 29: I
+  322:  put_field render
+  327:  get_var_ref_check 30: U
+  330:  array_from 0
+  333:  put_field staticRenderFns
+  338:  get_var_ref_check 30: U
+  341:  push_0 0
+  342:  lnot
+  343:  put_field _compiled
+  348:  get_var_ref_check 30: U
+  351:  push_atom_value "data-v-135855f1"
+  356:  put_field _scopeId
+  361:  get_var_ref_check 30: U
+  364:  object
+  365:  put_field themes
+  370:  get_var_ref_check 30: U
+  373:  get_var Object
+  378:  get_field2 assign
+  383:  object
+  384:  object
+  385:  object
+  386:  push_1 1
+  387:  define_field flex
+  392:  push_atom_value "#1c1c1e"
+  397:  define_field backgroundColor
+  402:  push_atom_value "16px"
+  407:  define_field paddingTop
+  412:  push_atom_value "20px"
+  417:  define_field paddingRight
+  422:  push_atom_value "16px"
+  427:  define_field paddingBottom
+  432:  push_atom_value "20px"
+  437:  define_field paddingLeft
+  442:  push_atom_value "#f3f4f6"
+  447:  define_field color
+  452:  define_field page
+  457:  object
+  458:  push_atom_value row
+  463:  define_field flexDirection
+  468:  push_atom_value center
+  473:  define_field alignItems
+  478:  push_atom_value "space-between"
+  483:  define_field justifyContent
+  488:  push_atom_value "44px"
+  493:  define_field height
+  498:  define_field top
+  503:  object
+  504:  push_atom_value row
+  509:  define_field flexDirection
+  514:  push_atom_value center
+  519:  define_field alignItems
+  524:  define_field "top-actions"
+  529:  object
+  530:  push_atom_value "#f3f4f6"
+  535:  define_field color
+  540:  push_atom_value "20px"
+  545:  define_field fontSize
+  550:  push_atom_value bold
+  555:  define_field fontWeight
+  560:  define_field title
+  565:  object
+  566:  push_atom_value "30px"
+  571:  define_field height
+  576:  push_atom_value "12px"
+  581:  define_field paddingLeft
+  586:  push_atom_value "12px"
+  591:  define_field paddingRight
+  596:  push_atom_value "8px"
+  601:  define_field borderRadius
+  606:  push_atom_value "#2c2c2e"
+  611:  define_field backgroundColor
+  616:  push_atom_value center
+  621:  define_field justifyContent
+  626:  push_atom_value center
+  631:  define_field alignItems
+  636:  define_field "top-btn"
+  641:  object
+  642:  push_atom_value "#f3f4f6"
+  647:  define_field color
+  652:  push_atom_value "12px"
+  657:  define_field fontSize
+  662:  define_field "top-btn-txt"
+  667:  object
+  668:  push_1 1
+  669:  define_field flex
+  674:  push_atom_value "6px"
+  679:  define_field paddingTop
+  684:  define_field body
+  689:  object
+  690:  push_atom_value "18px"
+  695:  define_field paddingTop
+  700:  push_atom_value "18px"
+  705:  define_field paddingRight
+  710:  push_atom_value "18px"
+  715:  define_field paddingBottom
+  720:  push_atom_value "18px"
+  725:  define_field paddingLeft
+  730:  push_atom_value "14px"
+  735:  define_field borderRadius
+  740:  push_atom_value "#2c2c2e"
+  745:  define_field backgroundColor
+  750:  define_field card
+  755:  object
+  756:  push_atom_value "#ffffff"
+  761:  define_field color
+  766:  push_atom_value "18px"
+  771:  define_field fontSize
+  776:  push_atom_value bold
+  781:  define_field fontWeight
+  786:  define_field "card-title"
+  791:  object
+  792:  push_atom_value "8px"
+  797:  define_field marginTop
+  802:  push_atom_value "#f3f4f6"
+  807:  define_field color
+  812:  push_atom_value "13px"
+  817:  define_field fontSize
+  822:  push_atom_value "19px"
+  827:  define_field lineHeight
+  832:  define_field "card-sub"
+  837:  object
+  838:  push_atom_value "6px"
+  843:  define_field marginTop
+  848:  push_atom_value "#34c759"
+  853:  define_field color
+  858:  push_atom_value "12px"
+  863:  define_field fontSize
+  868:  define_field "card-line"
+  873:  object
+  874:  push_atom_value row
+  879:  define_field flexDirection
+  884:  push_atom_value "14px"
+  889:  define_field marginTop
+  894:  define_field row
+  899:  object
+  900:  push_atom_value "34px"
+  905:  define_field height
+  910:  push_atom_value "8px"
+  915:  define_field marginRight
+  920:  push_atom_value "14px"
+  925:  define_field paddingLeft
+  930:  push_atom_value "14px"
+  935:  define_field paddingRight
+  940:  push_atom_value "9px"
+  945:  define_field borderRadius
+  950:  push_atom_value "#3a3a3c"
+  955:  define_field backgroundColor
+  960:  push_atom_value center
+  965:  define_field justifyContent
+  970:  push_atom_value center
+  975:  define_field alignItems
+  980:  define_field btn
+  985:  object
+  986:  push_atom_value "#0a84ff"
+  991:  define_field backgroundColor
+  996:  define_field "btn-primary"
+ 1001:  object
+ 1002:  push_atom_value "#ffffff"
+ 1007:  define_field color
+ 1012:  push_atom_value "13px"
+ 1017:  define_field fontSize
+ 1022:  push_const8 21: 1"600"
+ 1024:  define_field fontWeight
+ 1029:  define_field "btn-txt"
+ 1034:  object
+ 1035:  push_atom_value "12px"
+ 1040:  define_field marginTop
+ 1045:  push_atom_value "#c7c7cc"
+ 1050:  define_field color
+ 1055:  push_atom_value "11px"
+ 1060:  define_field fontSize
+ 1065:  push_atom_value "16px"
+ 1070:  define_field lineHeight
+ 1075:  define_field hint
+ 1080:  object
+ 1081:  push_atom_value "10px"
+ 1086:  define_field marginTop
+ 1091:  define_field "acct-list"
+ 1096:  object
+ 1097:  push_atom_value row
+ 1102:  define_field flexDirection
+ 1107:  push_atom_value center
+ 1112:  define_field alignItems
+ 1117:  push_atom_value "space-between"
+ 1122:  define_field justifyContent
+ 1127:  push_atom_value "40px"
+ 1132:  define_field height
+ 1137:  push_atom_value "8px"
+ 1142:  define_field marginBottom
+ 1147:  push_atom_value "14px"
+ 1152:  define_field paddingLeft
+ 1157:  push_atom_value "14px"
+ 1162:  define_field paddingRight
+ 1167:  push_atom_value "10px"
+ 1172:  define_field borderRadius
+ 1177:  push_atom_value "#2c2c2e"
+ 1182:  define_field backgroundColor
+ 1187:  define_field "acct-item"
+ 1192:  object
+ 1193:  push_atom_value "#ffffff"
+ 1198:  define_field color
+ 1203:  push_atom_value "15px"
+ 1208:  define_field fontSize
+ 1213:  push_const8 22: 1"600"
+ 1215:  define_field fontWeight
+ 1220:  define_field "acct-qq"
+ 1225:  object
+ 1226:  push_atom_value "#f3f4f6"
+ 1231:  define_field color
+ 1236:  push_atom_value "12px"
+ 1241:  define_field fontSize
+ 1246:  define_field "acct-nick"
+ 1251:  object
+ 1252:  push_const8 23: 0.75
+ 1254:  define_field opacity
+ 1259:  define_field "btn-press"
+ 1264:  object
+ 1265:  push_const8 24: 0.65
+ 1267:  define_field opacity
+ 1272:  define_field "top-btn-press"
+ 1277:  object
+ 1278:  push_const8 25: 0.7
+ 1280:  define_field opacity
+ 1285:  define_field "acct-item-press"
+ 1290:  object
+ 1291:  push_atom_value "#f2f2f7"
+ 1296:  define_field backgroundColor
+ 1301:  push_atom_value "#3a3a3c"
+ 1306:  define_field color
+ 1311:  define_field "page-l"
+ 1316:  object
+ 1317:  push_atom_value "#3a3a3c"
+ 1322:  define_field color
+ 1327:  define_field "title-l"
+ 1332:  object
+ 1333:  push_atom_value "#ffffff"
+ 1338:  define_field backgroundColor
+ 1343:  define_field "top-btn-l"
+ 1348:  object
+ 1349:  push_atom_value "#3a3a3c"
+ 1354:  define_field color
+ 1359:  define_field "top-btn-txt-l"
+ 1364:  object
+ 1365:  push_atom_value "#ffffff"
+ 1370:  define_field backgroundColor
+ 1375:  define_field "card-l"
+ 1380:  object
+ 1381:  push_atom_value "#1c1c1e"
+ 1386:  define_field color
+ 1391:  define_field "card-title-l"
+ 1396:  object
+ 1397:  push_atom_value "#3a3a3c"
+ 1402:  define_field color
+ 1407:  define_field "card-sub-l"
+ 1412:  object
+ 1413:  push_atom_value "#34c759"
+ 1418:  define_field color
+ 1423:  define_field "card-line-l"
+ 1428:  object
+ 1429:  push_atom_value "#ffffff"
+ 1434:  define_field backgroundColor
+ 1439:  define_field "btn-l"
+ 1444:  object
+ 1445:  push_atom_value "#007aff"
+ 1450:  define_field backgroundColor
+ 1455:  define_field "btn-primary-l"
+ 1460:  object
+ 1461:  push_atom_value "#1c1c1e"
+ 1466:  define_field color
+ 1471:  define_field "btn-txt-l"
+ 1476:  object
+ 1477:  push_atom_value "#636366"
+ 1482:  define_field color
+ 1487:  define_field "hint-l"
+ 1492:  object
+ 1493:  push_atom_value "#ffffff"
+ 1498:  define_field backgroundColor
+ 1503:  define_field "acct-item-l"
+ 1508:  object
+ 1509:  push_atom_value "#1c1c1e"
+ 1514:  define_field color
+ 1519:  define_field "acct-qq-l"
+ 1524:  object
+ 1525:  push_atom_value "#3a3a3c"
+ 1530:  define_field color
+ 1535:  define_field "acct-nick-l"
+ 1540:  call_method 2
+ 1543:  put_field style
+ 1548:  get_var_ref_check 30: U
+ 1551:  push_atom_value "src/pages/apps/qqbot/entry.vue"
+ 1556:  put_field __file
+ 1561:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  stack_size: 2
+  opcodes:
+    0:  object
+    1:  null
+    2:  define_field Fetch
+    7:  null
+    8:  define_field Dbase
+   13:  null
+   14:  define_field Shell
+   19:  null
+   20:  define_field Modal
+   25:  push_empty_string
+   26:  define_field baseUrl
+   31:  push_1 1
+   32:  lnot
+   33:  define_field busy
+   38:  push_1 1
+   39:  lnot
+   40:  define_field failed
+   45:  push_1 1
+   46:  lnot
+   47:  define_field slowHint
+   52:  push_1 1
+   53:  lnot
+   54:  define_field hidden
+   59:  push_empty_string
+   60:  define_field navTarget
+   65:  push_empty_string
+   66:  define_field navLabel
+   71:  array_from 0
+   74:  define_field accounts
+   79:  push_1 1
+   80:  lnot
+   81:  define_field picked
+   86:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e6\u00a3\u0080\u00e6\u009f\u00a5\u00e8\u00b4\u00a6\u00e5\u008f\u00b7\u00e7\u008a\u00b6\u00e6\u0080\u0081"
+   91:  define_field stateText
+   96:  push_empty_string
+   97:  define_field detailText
+  102:  push_empty_string
+  103:  define_field accountQq
+  108:  push_empty_string
+  109:  define_field expireText
+  114:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  put_loc0 0: t
+    4:  get_loc1 1: this
+    5:  get_field2 recordEntryDiag
+   10:  push_atom_value mount
+   15:  object
+   16:  call_method 2
+   19:  drop
+   20:  get_var setTimeout
+   25:  fclosure8 0: [bytecode <null>]
+   27:  push_i16 300
+   30:  call2 2
+   31:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 bootstrap
+    6:  call_method 0
+    9:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 recordEntryDiag
+    8:  push_atom_value show
+   13:  object
+   14:  get_loc0 0: this
+   15:  get_field busy
+   20:  define_field busy
+   25:  call_method 2
+   28:  drop
+   29:  get_loc0 0: this
+   30:  push_1 1
+   31:  lnot
+   32:  put_field hidden
+   37:  get_loc0 0: this
+   38:  push_1 1
+   39:  lnot
+   40:  put_field slowHint
+   45:  get_loc0 0: this
+   46:  push_1 1
+   47:  lnot
+   48:  put_field picked
+   53:  get_loc0 0: this
+   54:  get_field2 bootstrap
+   59:  call_method 0
+   62:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 recordEntryDiag
+    8:  push_atom_value activated
+   13:  object
+   14:  get_loc0 0: this
+   15:  get_field busy
+   20:  define_field busy
+   25:  call_method 2
+   28:  drop
+   29:  get_loc0 0: this
+   30:  push_1 1
+   31:  lnot
+   32:  put_field hidden
+   37:  get_loc0 0: this
+   38:  push_1 1
+   39:  lnot
+   40:  put_field slowHint
+   45:  get_loc0 0: this
+   46:  push_1 1
+   47:  lnot
+   48:  put_field picked
+   53:  get_loc0 0: this
+   54:  get_field2 bootstrap
+   59:  call_method 0
+   62:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_0 0
+    4:  lnot
+    5:  put_field hidden
+   10:  get_loc0 0: this
+   11:  push_1 1
+   12:  lnot
+   13:  put_field slowHint
+   18:  get_loc0 0: this
+   19:  get_field2 recordEntryDiag
+   24:  push_atom_value hide
+   29:  object
+   30:  call_method 2
+   33:  drop
+   34:  get_loc0 0: this
+   35:  get_field2 flushEntryDiag
+   40:  call_method 0
+   43:  drop
+   44:  get_loc0 0: this
+   45:  get_field _escapeTimer
+   50:  dup
+   51:  if_false8 75
+   53:  drop
+   54:  get_var clearTimeout
+   59:  get_loc0 0: this
+   60:  get_field _escapeTimer
+   65:  call1 1
+   66:  drop
+   67:  get_loc0 0: this
+   68:  null
+   69:  insert2
+   70:  put_field _escapeTimer
+   75:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  args: i
+  locals:
+    0: var this
+  closure vars:
+    0: t parent:loc0 const
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_var_ref_check 0: t
+    5:  get_loc0 0: this
+    6:  get_field Modal
+   11:  get_arg0 0: i
+   12:  call2 2
+   13:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  args: t i
+  locals:
+    0: var this
+  closure vars:
+    0: S parent:loc27 const
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_var_ref_check 0: S
+    5:  get_field2 pushStore
+   10:  get_loc0 0: this
+   11:  get_field Dbase
+   16:  dup
+   17:  if_true8 21
+   19:  drop
+   20:  null
+   21:  get_arg0 0: t
+   22:  get_arg1 1: i
+   23:  call_method 3
+   26:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  closure vars:
+    0: S parent:loc27 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field Dbase
+    8:  put_loc0 0: t
+    9:  get_var_ref_check 0: S
+   12:  get_field2 flush
+   17:  get_loc0 0: t
+   18:  if_false8 33
+   20:  get_loc0 0: t
+   21:  get_field __bixiaInner
+   26:  dup
+   27:  if_true8 34
+   29:  drop
+   30:  get_loc0 0: t
+   31:  goto8 34
+   33:  null
+   34:  tail_call_method 1
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var i
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_var String
+    8:  get_arg0 0: t
+    9:  dup
+   10:  if_true8 18
+   12:  drop
+   13:  push_atom_value apps_qqbot_deploy
+   18:  call1 1
+   19:  put_field navTarget
+   24:  get_loc1 1: this
+   25:  object
+   26:  push_atom_value "\u00e8\u00bf\u009b\u00e5\u0085\u00a5\u00e8\u0081\u008a\u00e5\u00a4\u00a9"
+   31:  define_field apps_qqbot
+   36:  push_atom_value "\u00e5\u008e\u00bb\u00e5\u00a4\u0084\u00e7\u0090\u0086\u00e8\u00bf\u0090\u00e8\u00a1\u008c\u00e7\u008e\u00af\u00e5\u00a2\u0083"
+   41:  define_field apps_qqbot_deploy
+   46:  push_atom_value "\u00e5\u008e\u00bb\u00e7\u0099\u00bb\u00e5\u00bd\u0095"
+   51:  define_field apps_qqbot_login
+   56:  push_atom_value "\u00e8\u00b4\u00ad\u00e4\u00b9\u00b0 / \u00e7\u00bb\u00ad\u00e8\u00b4\u00b9"
+   61:  define_field apps_qqbot_shop
+   66:  push_atom_value "\u00e9\u0080\u0089\u00e6\u008b\u00a9\u00e6\u008e\u00a5\u00e5\u0085\u00a5\u00e6\u0096\u00b9\u00e5\u00bc\u008f"
+   71:  define_field apps_qqbot_mode
+   76:  push_atom_value "\u00e9\u0085\u008d\u00e7\u00bd\u00ae\u00e8\u0087\u00aa\u00e6\u009c\u0089\u00e6\u008e\u00a5\u00e5\u0085\u00a5"
+   81:  define_field apps_qqbot_custom
+   86:  get_loc1 1: this
+   87:  get_field navTarget
+   92:  get_array_el
+   93:  dup
+   94:  if_true8 102
+   96:  drop
+   97:  push_atom_value "\u00e7\u00bb\u00a7\u00e7\u00bb\u00ad"
+  102:  put_field navLabel
+  107:  get_loc1 1: this
+  108:  put_loc0 0: i
+  109:  get_loc1 1: this
+  110:  get_field _escapeTimer
+  115:  dup
+  116:  if_false8 140
+  118:  drop
+  119:  get_var clearTimeout
+  124:  get_loc1 1: this
+  125:  get_field _escapeTimer
+  130:  call1 1
+  131:  drop
+  132:  get_loc1 1: this
+  133:  null
+  134:  insert2
+  135:  put_field _escapeTimer
+  140:  drop
+  141:  get_loc1 1: this
+  142:  get_var setTimeout
+  147:  fclosure8 0: [bytecode <null>]
+  149:  push_i16 5000
+  152:  call2 2
+  153:  put_field _escapeTimer
+  158:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: i local:loc0 var
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: i
+    1:  null
+    2:  put_field _escapeTimer
+    7:  get_var_ref0 0: i
+    8:  get_field hidden
+   13:  dup
+   14:  if_true8 51
+   16:  drop
+   17:  get_var_ref0 0: i
+   18:  push_0 0
+   19:  lnot
+   20:  put_field slowHint
+   25:  get_var_ref0 0: i
+   26:  get_field2 recordEntryDiag
+   31:  push_atom_value escape_shown
+   36:  object
+   37:  get_var_ref0 0: i
+   38:  get_field navTarget
+   43:  define_field target
+   48:  call_method 2
+   51:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_1 1
+    4:  lnot
+    5:  put_field slowHint
+   10:  get_loc0 0: this
+   11:  get_field2 navTo
+   16:  get_loc0 0: this
+   17:  get_field navTarget
+   22:  dup
+   23:  if_true8 31
+   25:  drop
+   26:  push_atom_value apps_qqbot_deploy
+   31:  call_method 1
+   34:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: i parent:loc1 const
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_var_ref_check 0: i
+    5:  get_loc0 0: this
+    6:  call1 1
+    7:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  stack_size: 3
+  opcodes:
+    0:  push_atom_value undefined
+    5:  get_var_undef $falcon
+   10:  typeof
+   11:  neq
+   12:  dup
+   13:  if_false8 64
+   15:  drop
+   16:  get_var $falcon
+   21:  dup
+   22:  if_false8 64
+   24:  drop
+   25:  push_atom_value function
+   30:  get_var $falcon
+   35:  get_field navTo
+   40:  typeof
+   41:  eq
+   42:  dup
+   43:  if_false8 64
+   45:  drop
+   46:  get_var $falcon
+   51:  get_field2 navTo
+   56:  push_atom_value desktop
+   61:  call_method 1
+   64:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var i
+    1: var s
+    2: catch i [level:5 next:-1]
+    3: var this
+  stack_size: 8
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  get_field2 armEscape
+    8:  get_arg0 0: t
+    9:  call_method 1
+   12:  drop
+   13:  push_atom_value undefined
+   18:  get_var_undef $falcon
+   23:  typeof
+   24:  neq
+   25:  if_false 227
+   30:  get_var $falcon
+   35:  if_false 227
+   40:  push_atom_value function
+   45:  get_var $falcon
+   50:  get_field navTo
+   55:  typeof
+   56:  eq
+   57:  if_false 227
+   62:  push_1 1
+   63:  lnot
+   64:  put_loc0 0: i
+   65:  catch 156
+   70:  get_var $falcon
+   75:  get_field2 navTo
+   80:  get_arg0 0: t
+   81:  object
+   82:  push_atom_value apps_qqbot_entry
+   87:  define_field from
+   92:  call_method 2
+   95:  put_loc1 1: s
+   96:  push_1 1
+   97:  lnot
+   98:  get_loc1 1: s
+   99:  strict_neq
+  100:  put_loc0 0: i
+  101:  get_loc3 3: this
+  102:  get_field2 recordEntryDiag
+  107:  push_atom_value nav
+  112:  object
+  113:  get_var String
+  118:  get_arg0 0: t
+  119:  call1 1
+  120:  define_field route
+  125:  get_var String
+  130:  undefined
+  131:  get_loc1 1: s
+  132:  strict_eq
+  133:  if_false8 142
+  135:  push_atom_value undefined
+  140:  goto8 143
+  142:  get_loc1 1: s
+  143:  call1 1
+  144:  define_field returned
+  149:  call_method 2
+  152:  drop
+  153:  drop
+  154:  goto8 221
+  156:  put_loc2 2: i
+  157:  catch 220
+  162:  get_loc3 3: this
+  163:  get_field2 recordEntryDiag
+  168:  push_atom_value nav_error
+  173:  object
+  174:  get_var String
+  179:  get_arg0 0: t
+  180:  call1 1
+  181:  define_field route
+  186:  get_var String
+  191:  get_loc2 2: i
+  192:  dup
+  193:  if_false8 202
+  195:  drop
+  196:  get_loc2 2: i
+  197:  get_field message
+  202:  dup
+  203:  if_true8 207
+  205:  drop
+  206:  get_loc2 2: i
+  207:  call1 1
+  208:  define_field message
+  213:  call_method 2
+  216:  drop
+  217:  drop
+  218:  goto8 221
+  220:  throw
+  221:  get_loc0 0: i
+  222:  if_false8 255
+  224:  push_0 0
+  225:  lnot
+  226:  return
+  227:  get_loc3 3: this
+  228:  get_field2 recordEntryDiag
+  233:  push_atom_value nav_missing
+  238:  object
+  239:  get_var String
+  244:  get_arg0 0: t
+  245:  call1 1
+  246:  define_field route
+  251:  call_method 2
+  254:  drop
+  255:  get_loc3 3: this
+  256:  get_field2 toast
+  261:  push_atom_value "\u00e6\u0097\u00a0\u00e6\u00b3\u0095\u00e8\u00b7\u00b3\u00e8\u00bd\u00ac\u00e9\u00a1\u00b5\u00e9\u009d\u00a2"
+  266:  call_method 1
+  269:  drop
+  270:  push_1 1
+  271:  lnot
+  272:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var i
+    2: var C
+    3: var D
+    4: var k
+    5: var S
+    6: var w
+    7: var I
+    8: var U
+    9: var E
+   10: var Q
+   11: var A
+   12: var z
+   13: var R
+   14: catch t [level:11 next:-1]
+   15: catch t [level:18 next:-1]
+   16: catch t [level:22 next:-1]
+   17: var H
+   18: catch t [level:24 next:-1]
+   19: var this
+  closure vars:
+    0: s parent:loc2 const
+    1: a parent:loc3 const
+    2: e parent:loc4 const
+    3: n parent:loc5 const
+    4: o parent:loc6 const
+    5: c parent:loc7 const
+    6: r parent:loc8 const
+    7: y parent:loc23 const
+    8: l parent:loc9 const
+    9: d parent:loc10 const
+   10: h parent:loc11 const
+   11: p parent:loc12 const
+   12: u parent:loc13 const
+   13: f parent:loc14 const
+   14: q parent:loc22 const
+   15: b parent:loc15 const
+   16: g parent:loc16 const
+   17: _ parent:loc17 const
+   18: x parent:loc18 const
+   19: v parent:loc19 const
+   20: m parent:loc20 const
+   21: T parent:loc21 const
+  stack_size: 11
+  opcodes:
+    0:  push_this
+    1:  put_loc8 19: this
+    3:  get_loc8 19: this
+    5:  get_field busy
+   10:  if_false8 24
+   12:  get_loc8 19: this
+   14:  push_0 0
+   15:  lnot
+   16:  put_field bootAgain
+   21:  goto16 1910
+   24:  get_loc8 19: this
+   26:  push_1 1
+   27:  lnot
+   28:  put_field bootAgain
+   33:  get_loc8 19: this
+   35:  push_0 0
+   36:  lnot
+   37:  put_field busy
+   42:  get_loc8 19: this
+   44:  push_1 1
+   45:  lnot
+   46:  put_field failed
+   51:  get_loc8 19: this
+   53:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e8\u00bf\u009e\u00e6\u008e\u00a5\u00e8\u0087\u00aa\u00e6\u009c\u0089\u00e6\u009c\u008d\u00e5\u008a\u00a1\u00e5\u0099\u00a8"
+   58:  put_field stateText
+   63:  get_loc8 19: this
+   65:  push_empty_string
+   66:  put_field detailText
+   71:  catch 1808
+   76:  get_var_ref_check 0: s
+   79:  push_atom_value undefined
+   84:  get_var_undef $falcon
+   89:  typeof
+   90:  neq
+   91:  dup
+   92:  if_false8 100
+   94:  drop
+   95:  get_var $falcon
+  100:  dup
+  101:  if_true8 106
+  103:  drop
+  104:  get_loc8 19: this
+  106:  call1 1
+  107:  set_loc0 0: t
+  108:  lnot
+  109:  dup
+  110:  if_true8 120
+  112:  drop
+  113:  get_loc0 0: t
+  114:  get_field Fetch
+  119:  lnot
+  120:  if_false8 146
+  122:  get_loc8 19: this
+  124:  get_field2 fail
+  129:  push_atom_value "\u00e5\u00ae\u00bf\u00e4\u00b8\u00bb\u00e7\u00bd\u0091\u00e7\u00bb\u009c\u00e6\u00a8\u00a1\u00e5\u009d\u0097\u00e4\u00b8\u008d\u00e5\u008f\u00af\u00e7\u0094\u00a8"
+  134:  call_method 1
+  137:  drop
+  138:  undefined
+  139:  nip
+  140:  gosub 1869
+  145:  return_async
+  146:  get_loc0 0: t
+  147:  get_field hydrate
+  152:  dup
+  153:  if_false8 199
+  155:  drop
+  156:  get_loc0 0: t
+  157:  get_field2 hydrate
+  162:  get_var_ref_check 1: a
+  165:  get_var_ref_check 2: e
+  168:  get_var_ref_check 3: n
+  171:  push_atom_value ob_ws_config
+  176:  get_var_ref_check 4: o
+  179:  get_var_ref_check 5: c
+  182:  push_atom_value ob_account_snapshot
+  187:  push_atom_value ob_entry_diag
+  192:  array_from 8
+  195:  call_method 1
+  198:  await
+  199:  drop
+  200:  get_loc8 19: this
+  202:  get_loc0 0: t
+  203:  get_field Fetch
+  208:  put_field Fetch
+  213:  get_loc8 19: this
+  215:  get_loc0 0: t
+  216:  get_field Dbase
+  221:  put_field Dbase
+  226:  get_loc8 19: this
+  228:  get_loc0 0: t
+  229:  get_field Shell
+  234:  put_field Shell
+  239:  get_loc8 19: this
+  241:  get_loc0 0: t
+  242:  get_field Modal
+  247:  put_field Modal
+  252:  get_loc8 19: this
+  254:  get_field2 flushEntryDiag
+  259:  call_method 0
+  262:  drop
+  263:  get_loc8 19: this
+  265:  get_var_ref_check 6: r
+  268:  get_loc8 19: this
+  270:  get_field Dbase
+  275:  call1 1
+  276:  put_field baseUrl
+  281:  get_var_ref_check 7: y
+  284:  get_loc8 19: this
+  286:  get_field Dbase
+  291:  call1 1
+  292:  put_loc1 1: i
+  293:  get_loc8 19: this
+  295:  get_field2 recordEntryDiag
+  300:  push_atom_value accounts
+  305:  object
+  306:  get_loc1 1: i
+  307:  get_length
+  308:  define_field count
+  313:  get_loc8 19: this
+  315:  get_field picked
+  320:  define_field picked
+  325:  call_method 2
+  328:  drop
+  329:  get_loc1 1: i
+  330:  get_length
+  331:  push_2 2
+  332:  gte
+  333:  if_false8 385
+  335:  get_loc8 19: this
+  337:  get_field picked
+  342:  lnot
+  343:  if_false8 385
+  345:  get_loc8 19: this
+  347:  get_loc1 1: i
+  348:  put_field accounts
+  353:  get_loc8 19: this
+  355:  push_atom_value "\u00e8\u00af\u00b7\u00e9\u0080\u0089\u00e6\u008b\u00a9\u00e8\u00a6\u0081\u00e8\u00bf\u009b\u00e5\u0085\u00a5\u00e7\u009a\u0084\u00e8\u00b4\u00a6\u00e5\u008f\u00b7"
+  360:  put_field stateText
+  365:  get_loc8 19: this
+  367:  push_atom_value "\u00e6\u00af\u008f\u00e4\u00b8\u00aa QQ \u00e7\u009a\u0084\u00e5\u008e\u0086\u00e5\u008f\u00b2\u00e3\u0080\u0081\u00e6\u009c\u00aa\u00e8\u00af\u00bb\u00e4\u00b8\u008e\u00e5\u00ae\u009e\u00e4\u00be\u008b\u00e5\u0090\u0084\u00e8\u0087\u00aa\u00e7\u008b\u00ac\u00e7\u00ab\u008b"
+  372:  put_field detailText
+  377:  undefined
+  378:  nip
+  379:  gosub 1869
+  384:  return_async
+  385:  get_loc8 19: this
+  387:  array_from 0
+  390:  put_field accounts
+  395:  get_var_ref_check 8: l
+  398:  get_loc8 19: this
+  400:  get_field Dbase
+  405:  get_var_ref_check 1: a
+  408:  call2 2
+  409:  dup
+  410:  if_true8 414
+  412:  drop
+  413:  object
+  414:  put_loc2 2: C
+  415:  get_var_ref_check 9: d
+  418:  get_loc8 19: this
+  420:  get_field Dbase
+  425:  call1 1
+  426:  put_loc3 3: D
+  427:  get_loc8 19: this
+  429:  get_field2 deviceCredential
+  434:  call_method 0
+  437:  put_loc8 4: k
+  439:  get_var String
+  444:  get_loc2 2: C
+  445:  get_field bootstrapToken
+  450:  dup
+  451:  if_true8 455
+  453:  drop
+  454:  push_empty_string
+  455:  call1 1
+  456:  put_loc8 5: S
+  458:  get_var_ref_check 10: h
+  461:  object
+  462:  get_loc3 3: D
+  463:  define_field session
+  468:  get_loc2 2: C
+  469:  define_field identity
+  474:  get_loc8 4: k
+  476:  define_field deviceToken
+  481:  get_loc8 5: S
+  483:  define_field bootstrapToken
+  488:  call1 1
+  489:  if_false8 539
+  491:  get_loc8 19: this
+  493:  push_atom_value "\u00e8\u00af\u00b7\u00e5\u0085\u0088\u00e7\u0099\u00bb\u00e5\u00bd\u0095\u00e8\u00b4\u00a6\u00e5\u008f\u00b7"
+  498:  put_field stateText
+  503:  get_loc8 19: this
+  505:  push_atom_value "\u00e7\u0099\u00bb\u00e5\u00bd\u0095\u00e6\u0088\u0090\u00e5\u008a\u009f\u00e5\u0090\u008e\u00e4\u00bc\u009a\u00e8\u0087\u00aa\u00e5\u008a\u00a8\u00e7\u0099\u00bb\u00e8\u00ae\u00b0\u00e5\u00bd\u0093\u00e5\u0089\u008d\u00e8\u00ae\u00be\u00e5\u00a4\u0087\u00e5\u00b9\u00b6\u00e7\u00bb\u00a7\u00e7\u00bb\u00ad"
+  510:  put_field detailText
+  515:  get_loc8 19: this
+  517:  get_field2 navTo
+  522:  push_atom_value apps_qqbot_login
+  527:  call_method 1
+  530:  drop
+  531:  undefined
+  532:  nip
+  533:  gosub 1869
+  538:  return_async
+  539:  get_var_ref_check 11: p
+  542:  object
+  543:  get_var Boolean
+  548:  get_var_ref_check 8: l
+  551:  get_loc8 19: this
+  553:  get_field Dbase
+  558:  get_var_ref_check 5: c
+  561:  call2 2
+  562:  call1 1
+  563:  define_field hasCustomChannel
+  568:  get_var Boolean
+  573:  get_var String
+  578:  get_loc2 2: C
+  579:  get_field instanceId
+  584:  dup
+  585:  if_true8 589
+  587:  drop
+  588:  push_empty_string
+  589:  call1 1
+  590:  call1 1
+  591:  define_field hasOfficialInstance
+  596:  get_var_ref_check 8: l
+  599:  get_loc8 19: this
+  601:  get_field Dbase
+  606:  get_var_ref_check 4: o
+  609:  call2 2
+  610:  define_field modeChoice
+  615:  call1 1
+  616:  set_loc8 6: w
+  618:  if_false8 661
+  620:  get_loc8 19: this
+  622:  push_atom_value "\u00e8\u00af\u00b7\u00e9\u0080\u0089\u00e6\u008b\u00a9\u00e6\u008e\u00a5\u00e5\u0085\u00a5\u00e6\u0096\u00b9\u00e5\u00bc\u008f"
+  627:  put_field stateText
+  632:  get_loc8 19: this
+  634:  push_empty_string
+  635:  put_field detailText
+  640:  get_loc8 19: this
+  642:  get_field2 navTo
+  647:  get_loc8 6: w
+  649:  call_method 1
+  652:  drop
+  653:  undefined
+  654:  nip
+  655:  gosub 1869
+  660:  return_async
+  661:  get_var String
+  666:  get_loc3 3: D
+  667:  dup
+  668:  if_false8 677
+  670:  drop
+  671:  get_loc3 3: D
+  672:  get_field deviceId
+  677:  dup
+  678:  if_true8 692
+  680:  drop
+  681:  get_loc2 2: C
+  682:  get_field deviceId
+  687:  dup
+  688:  if_true8 692
+  690:  drop
+  691:  push_empty_string
+  692:  call1 1
+  693:  put_loc8 7: I
+  695:  get_var_ref_check 12: u
+  698:  object
+  699:  get_loc8 19: this
+  701:  get_field Fetch
+  706:  define_field fetchModule
+  711:  get_loc8 19: this
+  713:  get_field baseUrl
+  718:  define_field baseUrl
+  723:  get_loc8 4: k
+  725:  define_field deviceToken
+  730:  get_loc8 19: this
+  732:  get_field2 accountToken
+  737:  call_method 0
+  740:  define_field token
+  745:  get_var_ref_check 13: f
+  748:  object
+  749:  get_loc8 19: this
+  751:  get_field Dbase
+  756:  define_field dbase
+  761:  get_loc8 19: this
+  763:  get_field Shell
+  768:  define_field shell
+  773:  get_loc8 19: this
+  775:  get_field Fetch
+  780:  define_field fetchModule
+  785:  get_loc8 19: this
+  787:  get_field baseUrl
+  792:  define_field baseUrl
+  797:  call1 1
+  798:  define_field onCredentialStale
+  803:  call1 1
+  804:  put_loc8 8: U
+  806:  get_var_ref_check 8: l
+  809:  get_loc8 19: this
+  811:  get_field Dbase
+  816:  push_atom_value ob_account_snapshot
+  821:  call2 2
+  822:  dup
+  823:  if_true8 827
+  825:  drop
+  826:  object
+  827:  put_loc8 9: E
+  829:  get_var String
+  834:  get_loc8 9: E
+  836:  get_field instanceId
+  841:  dup
+  842:  if_true8 846
+  844:  drop
+  845:  push_empty_string
+  846:  call1 1
+  847:  put_loc8 10: Q
+  849:  get_var_ref_check 14: q
+  852:  object
+  853:  get_loc3 3: D
+  854:  define_field session
+  859:  get_loc8 9: E
+  861:  define_field snapshot
+  866:  get_var Date
+  871:  get_field2 now
+  876:  call_method 0
+  879:  define_field now
+  884:  call1 1
+  885:  put_loc8 11: A
+  887:  get_loc8 19: this
+  889:  get_field2 recordEntryDiag
+  894:  push_atom_value decide
+  899:  object
+  900:  get_var String
+  905:  get_loc8 6: w
+  907:  dup
+  908:  if_true8 912
+  910:  drop
+  911:  push_empty_string
+  912:  call1 1
+  913:  define_field modeRoute
+  918:  get_var Boolean
+  923:  get_loc3 3: D
+  924:  dup
+  925:  if_false8 944
+  927:  drop
+  928:  get_loc3 3: D
+  929:  get_field accountId
+  934:  dup
+  935:  if_true8 944
+  937:  drop
+  938:  get_loc3 3: D
+  939:  get_field qqUin
+  944:  call1 1
+  945:  define_field hasSession
+  950:  get_var String
+  955:  get_loc2 2: C
+  956:  get_field instanceId
+  961:  dup
+  962:  if_true8 966
+  964:  drop
+  965:  push_empty_string
+  966:  call1 1
+  967:  define_field identityInstanceId
+  972:  get_loc8 10: Q
+  974:  define_field snapshotInstanceId
+  979:  get_var String
+  984:  get_loc8 9: E
+  986:  get_field authorized
+  991:  call1 1
+  992:  define_field snapshotAuthorized
+  997:  get_loc8 11: A
+  999:  define_field cachedOk
+ 1004:  call_method 2
+ 1007:  drop
+ 1008:  get_loc8 11: A
+ 1010:  if_false8 1084
+ 1012:  get_loc8 19: this
+ 1014:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e8\u00bf\u009b\u00e5\u0085\u00a5\u00e8\u0081\u008a\u00e5\u00a4\u00a9\u00e2\u0080\u00a6"
+ 1019:  put_field stateText
+ 1024:  get_loc8 19: this
+ 1026:  push_atom_value "\u00e5\u0090\u008e\u00e5\u008f\u00b0\u00e6\u00a0\u00a1\u00e9\u00aa\u008c\u00e8\u00b4\u00a6\u00e5\u008f\u00b7\u00e4\u00b8\u008e\u00e4\u00bc\u009a\u00e5\u0091\u0098\u00e7\u008a\u00b6\u00e6\u0080\u0081"
+ 1031:  put_field detailText
+ 1036:  get_loc8 19: this
+ 1038:  push_1 1
+ 1039:  lnot
+ 1040:  put_field hidden
+ 1045:  get_loc8 19: this
+ 1047:  get_field2 navTo
+ 1052:  push_atom_value apps_qqbot
+ 1057:  call_method 1
+ 1060:  drop
+ 1061:  get_loc8 19: this
+ 1063:  get_field2 verifyInBackground
+ 1068:  get_loc8 8: U
+ 1070:  get_loc8 7: I
+ 1072:  call_method 2
+ 1075:  drop
+ 1076:  undefined
+ 1077:  nip
+ 1078:  gosub 1869
+ 1083:  return_async
+ 1084:  null
+ 1085:  put_loc8 12: z
+ 1087:  null
+ 1088:  put_loc8 13: R
+ 1090:  catch 1111
+ 1095:  get_loc8 8: U
+ 1097:  get_field2 accountMe
+ 1102:  call_method 0
+ 1105:  await
+ 1106:  put_loc8 12: z
+ 1108:  drop
+ 1109:  goto8 1200
+ 1111:  put_loc8 14: t
+ 1113:  catch 1199
+ 1118:  fclosure8 0: [bytecode <null>]
+ 1120:  get_loc8 14: t
+ 1122:  call1 1
+ 1123:  if_false8 1196
+ 1125:  get_loc8 19: this
+ 1127:  push_atom_value "\u00e8\u00af\u00b7\u00e9\u0087\u008d\u00e6\u0096\u00b0\u00e7\u0099\u00bb\u00e5\u00bd\u0095\u00e8\u00b4\u00a6\u00e5\u008f\u00b7"
+ 1132:  put_field stateText
+ 1137:  get_loc8 19: this
+ 1139:  get_loc8 14: t
+ 1141:  if_false8 1161
+ 1143:  get_loc8 14: t
+ 1145:  get_field message
+ 1150:  if_false8 1161
+ 1152:  get_loc8 14: t
+ 1154:  get_field message
+ 1159:  goto8 1166
+ 1161:  push_atom_value "\u00e8\u00b4\u00a6\u00e5\u008f\u00b7\u00e4\u00bc\u009a\u00e8\u00af\u009d\u00e5\u00b7\u00b2\u00e5\u00a4\u00b1\u00e6\u0095\u0088"
+ 1166:  put_field detailText
+ 1171:  get_loc8 19: this
+ 1173:  get_field2 navTo
+ 1178:  push_atom_value apps_qqbot_login
+ 1183:  call_method 1
+ 1186:  drop
+ 1187:  undefined
+ 1188:  nip
+ 1189:  nip
+ 1190:  gosub 1869
+ 1195:  return_async
+ 1196:  get_loc8 14: t
+ 1198:  throw
+ 1199:  throw
+ 1200:  get_loc8 12: z
+ 1202:  if_false 1482
+ 1207:  get_loc8 19: this
+ 1209:  get_loc8 12: z
+ 1211:  get_field account
+ 1216:  dup
+ 1217:  if_false8 1232
+ 1219:  drop
+ 1220:  get_loc8 12: z
+ 1222:  get_field account
+ 1227:  get_field qqUin
+ 1232:  dup
+ 1233:  if_true8 1237
+ 1235:  drop
+ 1236:  push_empty_string
+ 1237:  put_field accountQq
+ 1242:  get_loc8 19: this
+ 1244:  get_loc8 12: z
+ 1246:  get_field subscription
+ 1251:  if_false8 1285
+ 1253:  get_loc8 12: z
+ 1255:  get_field subscription
+ 1260:  get_field authorized
+ 1265:  if_false8 1285
+ 1267:  get_var_ref_check 15: b
+ 1270:  get_loc8 12: z
+ 1272:  get_field subscription
+ 1277:  get_field expiresAt
+ 1282:  call1 1
+ 1283:  goto8 1286
+ 1285:  push_empty_string
+ 1286:  put_field expireText
+ 1291:  get_var_ref_check 16: g
+ 1294:  get_loc8 19: this
+ 1296:  get_field Dbase
+ 1301:  object
+ 1302:  get_loc8 19: this
+ 1304:  get_field accountQq
+ 1309:  define_field qqUin
+ 1314:  get_loc8 12: z
+ 1316:  get_field account
+ 1321:  dup
+ 1322:  if_false8 1337
+ 1324:  drop
+ 1325:  get_loc8 12: z
+ 1327:  get_field account
+ 1332:  get_field nickname
+ 1337:  dup
+ 1338:  if_true8 1342
+ 1340:  drop
+ 1341:  push_empty_string
+ 1342:  define_field nickname
+ 1347:  get_loc8 12: z
+ 1349:  get_field account
+ 1354:  dup
+ 1355:  if_false8 1370
+ 1357:  drop
+ 1358:  get_loc8 12: z
+ 1360:  get_field account
+ 1365:  get_field id
+ 1370:  dup
+ 1371:  if_true8 1375
+ 1373:  drop
+ 1374:  push_empty_string
+ 1375:  define_field accountId
+ 1380:  get_loc8 7: I
+ 1382:  define_field deviceId
+ 1387:  get_loc8 19: this
+ 1389:  get_field baseUrl
+ 1394:  define_field baseUrl
+ 1399:  call2 2
+ 1400:  drop
+ 1401:  catch 1432
+ 1406:  get_loc8 8: U
+ 1408:  get_field2 instanceStatus
+ 1413:  call_method 0
+ 1416:  await
+ 1417:  get_field instance
+ 1422:  dup
+ 1423:  if_true8 1427
+ 1425:  drop
+ 1426:  null
+ 1427:  put_loc8 13: R
+ 1429:  drop
+ 1430:  goto8 1446
+ 1432:  put_loc8 15: t
+ 1434:  catch 1445
+ 1439:  null
+ 1440:  put_loc8 13: R
+ 1442:  drop
+ 1443:  goto8 1446
+ 1445:  throw
+ 1446:  get_loc8 13: R
+ 1448:  dup
+ 1449:  if_false8 1481
+ 1451:  drop
+ 1452:  get_loc8 13: R
+ 1454:  get_field id
+ 1459:  dup
+ 1460:  if_false8 1481
+ 1462:  drop
+ 1463:  get_var_ref_check 17: _
+ 1466:  get_loc8 19: this
+ 1468:  get_field Dbase
+ 1473:  get_loc8 13: R
+ 1475:  get_field id
+ 1480:  call2 2
+ 1481:  drop
+ 1482:  catch 1656
+ 1487:  get_var_ref_check 18: x
+ 1490:  get_loc8 19: this
+ 1492:  get_field Dbase
+ 1497:  push_atom_value ob_account_snapshot
+ 1502:  object
+ 1503:  get_loc8 19: this
+ 1505:  get_field accountQq
+ 1510:  dup
+ 1511:  if_true8 1515
+ 1513:  drop
+ 1514:  push_empty_string
+ 1515:  define_field qqUin
+ 1520:  get_var Boolean
+ 1525:  get_loc8 12: z
+ 1527:  dup
+ 1528:  if_false8 1554
+ 1530:  drop
+ 1531:  get_loc8 12: z
+ 1533:  get_field subscription
+ 1538:  dup
+ 1539:  if_false8 1554
+ 1541:  drop
+ 1542:  get_loc8 12: z
+ 1544:  get_field subscription
+ 1549:  get_field authorized
+ 1554:  call1 1
+ 1555:  define_field authorized
+ 1560:  get_var Number
+ 1565:  get_loc8 12: z
+ 1567:  dup
+ 1568:  if_false8 1594
+ 1570:  drop
+ 1571:  get_loc8 12: z
+ 1573:  get_field subscription
+ 1578:  dup
+ 1579:  if_false8 1594
+ 1581:  drop
+ 1582:  get_loc8 12: z
+ 1584:  get_field subscription
+ 1589:  get_field expiresAt
+ 1594:  dup
+ 1595:  if_true8 1599
+ 1597:  drop
+ 1598:  push_0 0
+ 1599:  call1 1
+ 1600:  dup
+ 1601:  if_true8 1605
+ 1603:  drop
+ 1604:  push_0 0
+ 1605:  define_field expiresAt
+ 1610:  get_loc8 13: R
+ 1612:  dup
+ 1613:  if_false8 1623
+ 1615:  drop
+ 1616:  get_loc8 13: R
+ 1618:  get_field id
+ 1623:  dup
+ 1624:  if_true8 1628
+ 1626:  drop
+ 1627:  push_empty_string
+ 1628:  define_field instanceId
+ 1633:  get_var Date
+ 1638:  get_field2 now
+ 1643:  call_method 0
+ 1646:  define_field updatedAt
+ 1651:  call3 3
+ 1652:  drop
+ 1653:  drop
+ 1654:  goto8 1667
+ 1656:  put_loc8 16: t
+ 1658:  catch 1666
+ 1663:  drop
+ 1664:  goto8 1667
+ 1666:  throw
+ 1667:  get_var_ref_check 19: v
+ 1670:  object
+ 1671:  get_loc8 12: z
+ 1673:  dup
+ 1674:  if_false8 1684
+ 1676:  drop
+ 1677:  get_loc8 12: z
+ 1679:  get_field account
+ 1684:  dup
+ 1685:  if_true8 1689
+ 1687:  drop
+ 1688:  null
+ 1689:  define_field account
+ 1694:  get_loc8 12: z
+ 1696:  dup
+ 1697:  if_false8 1707
+ 1699:  drop
+ 1700:  get_loc8 12: z
+ 1702:  get_field subscription
+ 1707:  dup
+ 1708:  if_true8 1712
+ 1710:  drop
+ 1711:  null
+ 1712:  define_field subscription
+ 1717:  get_loc8 13: R
+ 1719:  define_field instance
+ 1724:  call1 1
+ 1725:  put_loc8 17: H
+ 1727:  get_loc8 19: this
+ 1729:  get_var_ref_check 20: m
+ 1732:  get_loc8 17: H
+ 1734:  call1 1
+ 1735:  put_field stateText
+ 1740:  get_loc8 19: this
+ 1742:  push_atom_value open_chat
+ 1747:  get_loc8 17: H
+ 1749:  get_field action
+ 1754:  strict_eq
+ 1755:  if_false8 1764
+ 1757:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e8\u00bf\u009b\u00e5\u0085\u00a5\u00e8\u0081\u008a\u00e5\u00a4\u00a9\u00e2\u0080\u00a6"
+ 1762:  goto8 1775
+ 1764:  get_var_ref_check 21: T
+ 1767:  get_loc8 17: H
+ 1769:  get_field state
+ 1774:  call1 1
+ 1775:  put_field detailText
+ 1780:  get_loc8 19: this
+ 1782:  get_field2 navTo
+ 1787:  get_loc8 17: H
+ 1789:  get_field route
+ 1794:  call_method 1
+ 1797:  drop
+ 1798:  drop
+ 1799:  undefined
+ 1800:  gosub 1869
+ 1805:  drop
+ 1806:  goto8 1910
+ 1808:  put_loc8 18: t
+ 1810:  catch 1863
+ 1815:  get_loc8 19: this
+ 1817:  get_field2 fail
+ 1822:  get_loc8 18: t
+ 1824:  if_false8 1844
+ 1826:  get_loc8 18: t
+ 1828:  get_field message
+ 1833:  if_false8 1844
+ 1835:  get_loc8 18: t
+ 1837:  get_field message
+ 1842:  goto8 1849
+ 1844:  push_atom_value "\u00e8\u00bf\u009e\u00e6\u008e\u00a5\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+ 1849:  call_method 1
+ 1852:  drop
+ 1853:  drop
+ 1854:  undefined
+ 1855:  gosub 1869
+ 1860:  drop
+ 1861:  goto8 1910
+ 1863:  gosub 1869
+ 1868:  throw
+ 1869:  get_loc8 19: this
+ 1871:  push_1 1
+ 1872:  lnot
+ 1873:  put_field busy
+ 1878:  get_loc8 19: this
+ 1880:  get_field bootAgain
+ 1885:  dup
+ 1886:  if_false8 1908
+ 1888:  drop
+ 1889:  get_loc8 19: this
+ 1891:  push_1 1
+ 1892:  lnot
+ 1893:  put_field bootAgain
+ 1898:  get_loc8 19: this
+ 1900:  get_field2 bootstrap
+ 1905:  call_method 0
+ 1908:  drop
+ 1909:  ret
+ 1910:  undefined
+ 1911:  return_async
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var i
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: t
+    1:  dup
+    2:  if_false8 11
+    4:  drop
+    5:  get_arg0 0: t
+    6:  get_field code
+   11:  put_loc0 0: i
+   12:  push_atom_value ACCOUNT_REQUIRED
+   17:  get_loc0 0: i
+   18:  strict_eq
+   19:  dup
+   20:  if_true8 30
+   22:  drop
+   23:  push_atom_value ACCOUNT_NOT_CONFIGURED
+   28:  get_loc0 0: i
+   29:  strict_eq
+   30:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: l parent:loc9 const
+    1: e parent:loc4 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_var String
+    7:  get_var_ref_check 0: l
+   10:  get_loc0 0: this
+   11:  get_field Dbase
+   16:  get_var_ref_check 1: e
+   19:  call2 2
+   20:  dup
+   21:  if_true8 25
+   23:  drop
+   24:  push_empty_string
+   25:  tail_call 1
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  args: t i
+  locals:
+    0: var s
+    1: var this
+  closure vars:
+    0: _ parent:loc17 const
+    1: x parent:loc18 const
+    2: v parent:loc19 const
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  put_loc0 0: s
+    4:  get_var setTimeout
+    9:  fclosure8 0: [bytecode <null>]
+   11:  push_0 0
+   12:  call2 2
+   13:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var i
+    1: var a
+    2: catch t [level:4 next:-1]
+    3: var e
+    4: catch t [level:7 next:-1]
+    5: var n
+    6: catch t [level:9 next:-1]
+    7: catch t [level:13 next:6]
+  closure vars:
+    0: t local:arg0 var
+    1: _ parent:loc0 const
+    2: s local:loc0 var
+    3: x parent:loc1 const
+    4: v parent:loc2 const
+  stack_size: 9
+  opcodes:
+    0:  catch 458
+    5:  get_var_ref0 0: t
+    6:  get_field2 accountMe
+   11:  call_method 0
+   14:  await
+   15:  put_loc0 0: i
+   16:  null
+   17:  put_loc1 1: a
+   18:  catch 47
+   23:  get_var_ref0 0: t
+   24:  get_field2 instanceStatus
+   29:  call_method 0
+   32:  await
+   33:  get_field instance
+   38:  dup
+   39:  if_true8 43
+   41:  drop
+   42:  null
+   43:  put_loc1 1: a
+   44:  drop
+   45:  goto8 57
+   47:  put_loc2 2: t
+   48:  catch 56
+   53:  drop
+   54:  goto8 57
+   56:  throw
+   57:  get_loc1 1: a
+   58:  dup
+   59:  if_false8 88
+   61:  drop
+   62:  get_loc1 1: a
+   63:  get_field id
+   68:  dup
+   69:  if_false8 88
+   71:  drop
+   72:  get_var_ref_check 1: _
+   75:  get_var_ref2 2: s
+   76:  get_field Dbase
+   81:  get_loc1 1: a
+   82:  get_field id
+   87:  call2 2
+   88:  drop
+   89:  get_loc0 0: i
+   90:  dup
+   91:  if_false8 100
+   93:  drop
+   94:  get_loc0 0: i
+   95:  get_field subscription
+  100:  dup
+  101:  if_true8 105
+  103:  drop
+  104:  object
+  105:  put_loc3 3: e
+  106:  catch 250
+  111:  get_var_ref_check 3: x
+  114:  get_var_ref2 2: s
+  115:  get_field Dbase
+  120:  push_atom_value ob_account_snapshot
+  125:  object
+  126:  get_loc0 0: i
+  127:  dup
+  128:  if_false8 152
+  130:  drop
+  131:  get_loc0 0: i
+  132:  get_field account
+  137:  dup
+  138:  if_false8 152
+  140:  drop
+  141:  get_loc0 0: i
+  142:  get_field account
+  147:  get_field qqUin
+  152:  dup
+  153:  if_true8 157
+  155:  drop
+  156:  push_empty_string
+  157:  define_field qqUin
+  162:  get_var Boolean
+  167:  get_loc3 3: e
+  168:  get_field authorized
+  173:  call1 1
+  174:  define_field authorized
+  179:  get_var Number
+  184:  get_loc3 3: e
+  185:  get_field expiresAt
+  190:  dup
+  191:  if_true8 195
+  193:  drop
+  194:  push_0 0
+  195:  call1 1
+  196:  dup
+  197:  if_true8 201
+  199:  drop
+  200:  push_0 0
+  201:  define_field expiresAt
+  206:  get_loc1 1: a
+  207:  dup
+  208:  if_false8 217
+  210:  drop
+  211:  get_loc1 1: a
+  212:  get_field id
+  217:  dup
+  218:  if_true8 222
+  220:  drop
+  221:  push_empty_string
+  222:  define_field instanceId
+  227:  get_var Date
+  232:  get_field2 now
+  237:  call_method 0
+  240:  define_field updatedAt
+  245:  call3 3
+  246:  drop
+  247:  drop
+  248:  goto8 261
+  250:  put_loc8 4: t
+  252:  catch 260
+  257:  drop
+  258:  goto8 261
+  260:  throw
+  261:  get_var_ref_check 4: v
+  264:  object
+  265:  get_loc0 0: i
+  266:  dup
+  267:  if_false8 276
+  269:  drop
+  270:  get_loc0 0: i
+  271:  get_field account
+  276:  dup
+  277:  if_true8 281
+  279:  drop
+  280:  null
+  281:  define_field account
+  286:  get_loc3 3: e
+  287:  define_field subscription
+  292:  get_loc1 1: a
+  293:  define_field instance
+  298:  call1 1
+  299:  put_loc8 5: n
+  301:  get_var_ref2 2: s
+  302:  get_field2 recordEntryDiag
+  307:  push_atom_value bg
+  312:  object
+  313:  get_var String
+  318:  get_loc8 5: n
+  320:  get_field route
+  325:  dup
+  326:  if_true8 330
+  328:  drop
+  329:  push_empty_string
+  330:  call1 1
+  331:  define_field route
+  336:  get_var String
+  341:  get_loc8 5: n
+  343:  get_field action
+  348:  dup
+  349:  if_true8 353
+  351:  drop
+  352:  push_empty_string
+  353:  call1 1
+  354:  define_field action
+  359:  get_var String
+  364:  get_loc8 5: n
+  366:  get_field state
+  371:  dup
+  372:  if_true8 376
+  374:  drop
+  375:  push_empty_string
+  376:  call1 1
+  377:  define_field state
+  382:  call_method 2
+  385:  drop
+  386:  push_atom_value apps_qqbot_login
+  391:  get_loc8 5: n
+  393:  get_field route
+  398:  strict_neq
+  399:  dup
+  400:  if_false8 433
+  402:  drop
+  403:  push_atom_value apps_qqbot_shop
+  408:  get_loc8 5: n
+  410:  get_field route
+  415:  strict_neq
+  416:  dup
+  417:  if_false8 433
+  419:  drop
+  420:  push_atom_value apps_qqbot_deploy
+  425:  get_loc8 5: n
+  427:  get_field route
+  432:  strict_neq
+  433:  dup
+  434:  if_true8 453
+  436:  drop
+  437:  get_var_ref2 2: s
+  438:  get_field2 navTo
+  443:  get_loc8 5: n
+  445:  get_field route
+  450:  call_method 1
+  453:  drop
+  454:  drop
+  455:  goto16 612
+  458:  put_loc8 6: t
+  460:  catch 611
+  465:  get_var_ref2 2: s
+  466:  get_field2 recordEntryDiag
+  471:  push_atom_value bg_error
+  476:  object
+  477:  get_var String
+  482:  get_loc8 6: t
+  484:  dup
+  485:  if_false8 495
+  487:  drop
+  488:  get_loc8 6: t
+  490:  get_field message
+  495:  dup
+  496:  if_true8 501
+  498:  drop
+  499:  get_loc8 6: t
+  501:  call1 1
+  502:  define_field message
+  507:  get_var String
+  512:  get_loc8 6: t
+  514:  dup
+  515:  if_false8 525
+  517:  drop
+  518:  get_loc8 6: t
+  520:  get_field code
+  525:  dup
+  526:  if_true8 530
+  528:  drop
+  529:  push_empty_string
+  530:  call1 1
+  531:  define_field code
+  536:  call_method 2
+  539:  drop
+  540:  catch 565
+  545:  get_var_ref_check 3: x
+  548:  get_var_ref2 2: s
+  549:  get_field Dbase
+  554:  push_atom_value ob_account_snapshot
+  559:  null
+  560:  call3 3
+  561:  drop
+  562:  drop
+  563:  goto8 576
+  565:  put_loc8 7: t
+  567:  catch 575
+  572:  drop
+  573:  goto8 576
+  575:  throw
+  576:  get_var_ref2 2: s
+  577:  get_field2 fail
+  582:  get_loc8 6: t
+  584:  dup
+  585:  if_false8 595
+  587:  drop
+  588:  get_loc8 6: t
+  590:  get_field message
+  595:  dup
+  596:  if_true8 604
+  598:  drop
+  599:  push_atom_value "\u00e5\u0090\u008e\u00e5\u008f\u00b0\u00e6\u00a0\u00a1\u00e9\u00aa\u008c\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5\u00ef\u00bc\u008c\u00e8\u00af\u00b7\u00e6\u00a3\u0080\u00e6\u009f\u00a5\u00e7\u00bd\u0091\u00e7\u00bb\u009c\u00e5\u0090\u008e\u00e9\u0087\u008d\u00e8\u00af\u0095"
+  604:  call_method 1
+  607:  drop
+  608:  drop
+  609:  goto8 612
+  611:  throw
+  612:  undefined
+  613:  return_async
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  closure vars:
+    0: l parent:loc9 const
+    1: n parent:loc5 const
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_var_ref_check 0: l
+    5:  get_loc1 1: this
+    6:  get_field Dbase
+   11:  get_var_ref_check 1: n
+   14:  call2 2
+   15:  set_loc0 0: t
+   16:  if_false8 39
+   18:  get_loc0 0: t
+   19:  get_field sessionToken
+   24:  if_false8 39
+   26:  get_var String
+   31:  get_loc0 0: t
+   32:  get_field sessionToken
+   37:  call1 1
+   38:  return
+   39:  push_empty_string
+   40:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var i
+    1: var s
+    2: var e
+    3: catch t [level:7 next:-1]
+    4: catch t [level:10 next:-1]
+    5: var this
+  closure vars:
+    0: l parent:loc9 const
+    1: a parent:loc3 const
+    2: C parent:loc24 const
+    3: D parent:loc25 const
+    4: g parent:loc16 const
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc8 5: this
+    3:  get_var String
+    8:  get_arg0 0: t
+    9:  dup
+   10:  if_false8 19
+   12:  drop
+   13:  get_arg0 0: t
+   14:  get_field qqUin
+   19:  dup
+   20:  if_true8 24
+   22:  drop
+   23:  push_empty_string
+   24:  call1 1
+   25:  get_field2 trim
+   30:  call_method 0
+   33:  set_loc0 0: i
+   34:  if_false 356
+   39:  get_loc8 5: this
+   41:  get_field Dbase
+   46:  if_false 356
+   51:  get_var_ref_check 0: l
+   54:  get_loc8 5: this
+   56:  get_field Dbase
+   61:  get_var_ref_check 1: a
+   64:  call2 2
+   65:  dup
+   66:  if_true8 70
+   68:  drop
+   69:  object
+   70:  put_loc1 1: s
+   71:  get_loc8 5: this
+   73:  push_0 0
+   74:  lnot
+   75:  put_field picked
+   80:  get_loc8 5: this
+   82:  get_field2 recordEntryDiag
+   87:  push_atom_value pick
+   92:  object
+   93:  get_loc0 0: i
+   94:  define_field qqUin
+   99:  call_method 2
+  102:  drop
+  103:  get_var_ref_check 2: C
+  106:  get_loc8 5: this
+  108:  get_field Dbase
+  113:  call1 1
+  114:  set_loc2 2: e
+  115:  if_false8 203
+  117:  get_loc2 2: e
+  118:  get_loc0 0: i
+  119:  strict_neq
+  120:  if_false8 203
+  122:  catch 152
+  127:  get_loc8 5: this
+  129:  get_field Dbase
+  134:  get_field2 write
+  139:  push_atom_value ob_ws_config
+  144:  null
+  145:  call_method 2
+  148:  drop
+  149:  drop
+  150:  goto8 162
+  152:  put_loc3 3: t
+  153:  catch 161
+  158:  drop
+  159:  goto8 162
+  161:  throw
+  162:  catch 192
+  167:  get_loc8 5: this
+  169:  get_field Dbase
+  174:  get_field2 write
+  179:  push_atom_value ob_account_snapshot
+  184:  null
+  185:  call_method 2
+  188:  drop
+  189:  drop
+  190:  goto8 203
+  192:  put_loc8 4: t
+  194:  catch 202
+  199:  drop
+  200:  goto8 203
+  202:  throw
+  203:  get_var_ref_check 3: D
+  206:  get_loc8 5: this
+  208:  get_field Dbase
+  213:  get_loc0 0: i
+  214:  call2 2
+  215:  drop
+  216:  get_var_ref_check 4: g
+  219:  get_loc8 5: this
+  221:  get_field Dbase
+  226:  object
+  227:  get_loc0 0: i
+  228:  define_field qqUin
+  233:  get_var String
+  238:  get_arg0 0: t
+  239:  get_field nickname
+  244:  dup
+  245:  if_true8 249
+  247:  drop
+  248:  push_empty_string
+  249:  call1 1
+  250:  define_field nickname
+  255:  get_var String
+  260:  get_arg0 0: t
+  261:  get_field accountId
+  266:  dup
+  267:  if_true8 271
+  269:  drop
+  270:  push_empty_string
+  271:  call1 1
+  272:  define_field accountId
+  277:  get_var String
+  282:  get_arg0 0: t
+  283:  get_field sessionToken
+  288:  dup
+  289:  if_true8 293
+  291:  drop
+  292:  push_empty_string
+  293:  call1 1
+  294:  define_field sessionToken
+  299:  get_var String
+  304:  get_arg0 0: t
+  305:  get_field deviceId
+  310:  dup
+  311:  if_true8 325
+  313:  drop
+  314:  get_loc1 1: s
+  315:  get_field deviceId
+  320:  dup
+  321:  if_true8 325
+  323:  drop
+  324:  push_empty_string
+  325:  call1 1
+  326:  define_field deviceId
+  331:  get_loc8 5: this
+  333:  get_field baseUrl
+  338:  define_field baseUrl
+  343:  call2 2
+  344:  drop
+  345:  get_loc8 5: this
+  347:  get_field2 bootstrap
+  352:  call_method 0
+  355:  drop
+  356:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 navTo
+    8:  push_atom_value apps_qqbot_shop
+   13:  call_method 1
+   16:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_0 0
+    4:  lnot
+    5:  put_field failed
+   10:  get_loc0 0: this
+   11:  push_1 1
+   12:  lnot
+   13:  put_field slowHint
+   18:  get_loc0 0: this
+   19:  get_field _escapeTimer
+   24:  dup
+   25:  if_false8 49
+   27:  drop
+   28:  get_var clearTimeout
+   33:  get_loc0 0: this
+   34:  get_field _escapeTimer
+   39:  call1 1
+   40:  drop
+   41:  get_loc0 0: this
+   42:  null
+   43:  insert2
+   44:  put_field _escapeTimer
+   49:  drop
+   50:  get_loc0 0: this
+   51:  push_atom_value "\u00e6\u009a\u0082\u00e6\u0097\u00b6\u00e6\u0097\u00a0\u00e6\u00b3\u0095\u00e8\u00bf\u009b\u00e5\u0085\u00a5 QQ"
+   56:  put_field stateText
+   61:  get_loc0 0: this
+   62:  get_arg0 0: t
+   63:  dup
+   64:  if_true8 72
+   66:  drop
+   67:  push_atom_value "\u00e8\u00af\u00b7\u00e7\u00a8\u008d\u00e5\u0090\u008e\u00e9\u0087\u008d\u00e8\u00af\u0095"
+   72:  put_field detailText
+   77:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var i
+    2: var s
+    3: var this
+  stack_size: 29
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  set_loc0 0: t
+    4:  get_field $createElement
+    9:  put_loc1 1: i
+   10:  get_loc0 0: t
+   11:  get_field _self
+   16:  get_field _c
+   21:  dup
+   22:  if_true8 26
+   24:  drop
+   25:  get_loc1 1: i
+   26:  set_loc2 2: s
+   27:  push_atom_value div
+   32:  object
+   33:  push_atom_value page
+   38:  array_from 1
+   41:  define_field staticClass
+   46:  get_loc2 2: s
+   47:  push_atom_value div
+   52:  object
+   53:  push_atom_value top
+   58:  array_from 1
+   61:  define_field staticClass
+   66:  get_loc2 2: s
+   67:  push_atom_value text
+   72:  object
+   73:  push_atom_value title
+   78:  array_from 1
+   81:  define_field staticClass
+   86:  get_loc0 0: t
+   87:  get_field2 _v
+   92:  push_atom_value "\u00e7\u00ac\u0094\u00e4\u00b8\u008a QQ"
+   97:  call_method 1
+  100:  array_from 1
+  103:  call3 3
+  104:  get_loc2 2: s
+  105:  push_atom_value div
+  110:  object
+  111:  push_atom_value "top-actions"
+  116:  array_from 1
+  119:  define_field staticClass
+  124:  get_loc2 2: s
+  125:  push_atom_value div
+  130:  object
+  131:  push_atom_value "top-btn"
+  136:  array_from 1
+  139:  define_field staticClass
+  144:  object
+  145:  get_loc0 0: t
+  146:  get_field logout
+  151:  define_field click
+  156:  define_field on
+  161:  get_loc2 2: s
+  162:  push_atom_value text
+  167:  object
+  168:  push_atom_value "top-btn-txt"
+  173:  array_from 1
+  176:  define_field staticClass
+  181:  get_loc0 0: t
+  182:  get_field2 _v
+  187:  push_atom_value "\u00e9\u0080\u0080\u00e5\u0087\u00ba\u00e7\u0099\u00bb\u00e5\u00bd\u0095"
+  192:  call_method 1
+  195:  array_from 1
+  198:  call3 3
+  199:  array_from 1
+  202:  call3 3
+  203:  get_loc2 2: s
+  204:  push_atom_value div
+  209:  object
+  210:  push_atom_value "top-btn"
+  215:  array_from 1
+  218:  define_field staticClass
+  223:  object
+  224:  get_loc0 0: t
+  225:  get_field goDesktop
+  230:  define_field click
+  235:  define_field on
+  240:  get_loc2 2: s
+  241:  push_atom_value text
+  246:  object
+  247:  push_atom_value "top-btn-txt"
+  252:  array_from 1
+  255:  define_field staticClass
+  260:  get_loc0 0: t
+  261:  get_field2 _v
+  266:  push_atom_value "\u00e8\u00bf\u0094\u00e5\u009b\u009e\u00e6\u00a1\u008c\u00e9\u009d\u00a2"
+  271:  call_method 1
+  274:  array_from 1
+  277:  call3 3
+  278:  array_from 1
+  281:  call3 3
+  282:  array_from 2
+  285:  call3 3
+  286:  array_from 2
+  289:  call3 3
+  290:  get_loc2 2: s
+  291:  push_atom_value div
+  296:  object
+  297:  push_atom_value body
+  302:  array_from 1
+  305:  define_field staticClass
+  310:  get_loc2 2: s
+  311:  push_atom_value div
+  316:  object
+  317:  push_atom_value card
+  322:  array_from 1
+  325:  define_field staticClass
+  330:  get_loc2 2: s
+  331:  push_atom_value text
+  336:  object
+  337:  push_atom_value "card-title"
+  342:  array_from 1
+  345:  define_field staticClass
+  350:  get_loc0 0: t
+  351:  get_field2 _v
+  356:  get_loc0 0: t
+  357:  get_field2 _s
+  362:  get_loc0 0: t
+  363:  get_field stateText
+  368:  call_method 1
+  371:  call_method 1
+  374:  array_from 1
+  377:  call3 3
+  378:  get_loc2 2: s
+  379:  push_atom_value text
+  384:  object
+  385:  push_atom_value "card-sub"
+  390:  array_from 1
+  393:  define_field staticClass
+  398:  get_loc0 0: t
+  399:  get_field2 _v
+  404:  get_loc0 0: t
+  405:  get_field2 _s
+  410:  get_loc0 0: t
+  411:  get_field detailText
+  416:  call_method 1
+  419:  call_method 1
+  422:  array_from 1
+  425:  call3 3
+  426:  get_loc0 0: t
+  427:  get_field accountQq
+  432:  if_false8 490
+  434:  get_loc2 2: s
+  435:  push_atom_value text
+  440:  object
+  441:  push_atom_value "card-line"
+  446:  array_from 1
+  449:  define_field staticClass
+  454:  get_loc0 0: t
+  455:  get_field2 _v
+  460:  push_atom_value "\u00e8\u00b4\u00a6\u00e5\u008f\u00b7 QQ "
+  465:  get_loc0 0: t
+  466:  get_field2 _s
+  471:  get_loc0 0: t
+  472:  get_field accountQq
+  477:  call_method 1
+  480:  add
+  481:  call_method 1
+  484:  array_from 1
+  487:  call3 3
+  488:  goto8 499
+  490:  get_loc0 0: t
+  491:  get_field2 _e
+  496:  call_method 0
+  499:  get_loc0 0: t
+  500:  get_field expireText
+  505:  if_false8 563
+  507:  get_loc2 2: s
+  508:  push_atom_value text
+  513:  object
+  514:  push_atom_value "card-line"
+  519:  array_from 1
+  522:  define_field staticClass
+  527:  get_loc0 0: t
+  528:  get_field2 _v
+  533:  push_atom_value "\u00e4\u00bc\u009a\u00e5\u0091\u0098\u00e5\u0088\u00b0\u00e6\u009c\u009f "
+  538:  get_loc0 0: t
+  539:  get_field2 _s
+  544:  get_loc0 0: t
+  545:  get_field expireText
+  550:  call_method 1
+  553:  add
+  554:  call_method 1
+  557:  array_from 1
+  560:  call3 3
+  561:  goto8 572
+  563:  get_loc0 0: t
+  564:  get_field2 _e
+  569:  call_method 0
+  572:  get_loc0 0: t
+  573:  get_field failed
+  578:  if_false 772
+  583:  get_loc2 2: s
+  584:  push_atom_value div
+  589:  object
+  590:  push_atom_value row
+  595:  array_from 1
+  598:  define_field staticClass
+  603:  get_loc2 2: s
+  604:  push_atom_value div
+  609:  object
+  610:  push_atom_value btn
+  615:  push_atom_value "btn-primary"
+  620:  array_from 2
+  623:  define_field staticClass
+  628:  object
+  629:  get_loc0 0: t
+  630:  get_field bootstrap
+  635:  define_field click
+  640:  define_field on
+  645:  get_loc2 2: s
+  646:  push_atom_value text
+  651:  object
+  652:  push_atom_value "btn-txt"
+  657:  array_from 1
+  660:  define_field staticClass
+  665:  get_loc0 0: t
+  666:  get_field2 _v
+  671:  push_atom_value "\u00e9\u0087\u008d\u00e8\u00af\u0095"
+  676:  call_method 1
+  679:  array_from 1
+  682:  call3 3
+  683:  array_from 1
+  686:  call3 3
+  687:  get_loc2 2: s
+  688:  push_atom_value div
+  693:  object
+  694:  push_atom_value btn
+  699:  array_from 1
+  702:  define_field staticClass
+  707:  object
+  708:  get_loc0 0: t
+  709:  get_field openShop
+  714:  define_field click
+  719:  define_field on
+  724:  get_loc2 2: s
+  725:  push_atom_value text
+  730:  object
+  731:  push_atom_value "btn-txt"
+  736:  array_from 1
+  739:  define_field staticClass
+  744:  get_loc0 0: t
+  745:  get_field2 _v
+  750:  push_atom_value "\u00e8\u00b4\u00ad\u00e4\u00b9\u00b0 / \u00e7\u00bb\u00ad\u00e8\u00b4\u00b9"
+  755:  call_method 1
+  758:  array_from 1
+  761:  call3 3
+  762:  array_from 1
+  765:  call3 3
+  766:  array_from 2
+  769:  call3 3
+  770:  goto8 781
+  772:  get_loc0 0: t
+  773:  get_field2 _e
+  778:  call_method 0
+  781:  get_loc2 2: s
+  782:  push_atom_value div
+  787:  object
+  788:  push_atom_value row
+  793:  array_from 1
+  796:  define_field staticClass
+  801:  get_loc0 0: t
+  802:  get_field slowHint
+  807:  if_false8 905
+  809:  get_loc2 2: s
+  810:  push_atom_value div
+  815:  object
+  816:  push_atom_value btn
+  821:  push_atom_value "btn-primary"
+  826:  array_from 2
+  829:  define_field staticClass
+  834:  object
+  835:  get_loc0 0: t
+  836:  get_field retryNav
+  841:  define_field click
+  846:  define_field on
+  851:  get_loc2 2: s
+  852:  push_atom_value text
+  857:  object
+  858:  push_atom_value "btn-txt"
+  863:  array_from 1
+  866:  define_field staticClass
+  871:  get_loc0 0: t
+  872:  get_field2 _v
+  877:  get_loc0 0: t
+  878:  get_field2 _s
+  883:  get_loc0 0: t
+  884:  get_field navLabel
+  889:  call_method 1
+  892:  call_method 1
+  895:  array_from 1
+  898:  call3 3
+  899:  array_from 1
+  902:  call3 3
+  903:  goto8 914
+  905:  get_loc0 0: t
+  906:  get_field2 _e
+  911:  call_method 0
+  914:  get_loc0 0: t
+  915:  get_field failed
+  920:  if_false8 933
+  922:  get_loc0 0: t
+  923:  get_field2 _e
+  928:  call_method 0
+  931:  goto8 1030
+  933:  get_loc2 2: s
+  934:  push_atom_value div
+  939:  object
+  940:  push_atom_value btn
+  945:  array_from 1
+  948:  define_field staticClass
+  953:  object
+  954:  get_loc0 0: t
+  955:  get_field slowHint
+  960:  lnot
+  961:  define_field "btn-primary"
+  966:  define_field class
+  971:  object
+  972:  get_loc0 0: t
+  973:  get_field bootstrap
+  978:  define_field click
+  983:  define_field on
+  988:  get_loc2 2: s
+  989:  push_atom_value text
+  994:  object
+  995:  push_atom_value "btn-txt"
+ 1000:  array_from 1
+ 1003:  define_field staticClass
+ 1008:  get_loc0 0: t
+ 1009:  get_field2 _v
+ 1014:  push_atom_value "\u00e9\u0087\u008d\u00e6\u0096\u00b0\u00e6\u00a3\u0080\u00e6\u009f\u00a5"
+ 1019:  call_method 1
+ 1022:  array_from 1
+ 1025:  call3 3
+ 1026:  array_from 1
+ 1029:  call3 3
+ 1030:  array_from 2
+ 1033:  call3 3
+ 1034:  get_loc0 0: t
+ 1035:  get_field slowHint
+ 1040:  if_false8 1082
+ 1042:  get_loc2 2: s
+ 1043:  push_atom_value text
+ 1048:  object
+ 1049:  push_atom_value "card-sub"
+ 1054:  array_from 1
+ 1057:  define_field staticClass
+ 1062:  get_loc0 0: t
+ 1063:  get_field2 _v
+ 1068:  push_atom_value "\u00e7\u00ad\u0089\u00e5\u00a4\u00aa\u00e4\u00b9\u0085\u00e6\u00b2\u00a1\u00e5\u008f\u008d\u00e5\u00ba\u0094\u00e4\u00ba\u0086\u00ef\u00bc\u008c\u00e7\u0082\u00b9\u00e4\u00b8\u008a\u00e9\u009d\u00a2\u00e6\u008c\u0089\u00e9\u0092\u00ae\u00e7\u00bb\u00a7\u00e7\u00bb\u00ad\u00e3\u0080\u0082"
+ 1073:  call_method 1
+ 1076:  array_from 1
+ 1079:  call3 3
+ 1080:  goto8 1091
+ 1082:  get_loc0 0: t
+ 1083:  get_field2 _e
+ 1088:  call_method 0
+ 1091:  array_from 7
+ 1094:  call3 3
+ 1095:  get_loc0 0: t
+ 1096:  get_field accounts
+ 1101:  get_length
+ 1102:  push_2 2
+ 1103:  gte
+ 1104:  if_false 1259
+ 1109:  get_loc2 2: s
+ 1110:  push_atom_value div
+ 1115:  object
+ 1116:  push_atom_value "acct-list"
+ 1121:  array_from 1
+ 1124:  define_field staticClass
+ 1129:  get_loc0 0: t
+ 1130:  get_field2 _l
+ 1135:  get_loc0 0: t
+ 1136:  get_field accounts
+ 1141:  fclosure8 0: [bytecode <null>]
+ 1143:  call_method 2
+ 1146:  get_loc2 2: s
+ 1147:  push_atom_value div
+ 1152:  object
+ 1153:  push_atom_value row
+ 1158:  array_from 1
+ 1161:  define_field staticClass
+ 1166:  get_loc2 2: s
+ 1167:  push_atom_value div
+ 1172:  object
+ 1173:  push_atom_value btn
+ 1178:  array_from 1
+ 1181:  define_field staticClass
+ 1186:  object
+ 1187:  fclosure8 1: [bytecode <null>]
+ 1189:  set_name click
+ 1194:  define_field click
+ 1199:  define_field on
+ 1204:  get_loc2 2: s
+ 1205:  push_atom_value text
+ 1210:  object
+ 1211:  push_atom_value "btn-txt"
+ 1216:  array_from 1
+ 1219:  define_field staticClass
+ 1224:  get_loc0 0: t
+ 1225:  get_field2 _v
+ 1230:  push_atom_value "\u00ef\u00bc\u008b \u00e6\u00b7\u00bb\u00e5\u008a\u00a0\u00e8\u00b4\u00a6\u00e5\u008f\u00b7"
+ 1235:  call_method 1
+ 1238:  array_from 1
+ 1241:  call3 3
+ 1242:  array_from 1
+ 1245:  call3 3
+ 1246:  array_from 1
+ 1249:  call3 3
+ 1250:  array_from 2
+ 1253:  push_2 2
+ 1254:  call 4
+ 1257:  goto8 1268
+ 1259:  get_loc0 0: t
+ 1260:  get_field2 _e
+ 1265:  call_method 0
+ 1268:  get_loc2 2: s
+ 1269:  push_atom_value text
+ 1274:  object
+ 1275:  push_atom_value hint
+ 1280:  array_from 1
+ 1283:  define_field staticClass
+ 1288:  get_loc0 0: t
+ 1289:  get_field2 _v
+ 1294:  push_atom_value "\u00e7\u00ac\u0094\u00e4\u00b8\u008a QQ \u00e5\u008f\u00aa\u00e8\u00bf\u009e\u00e6\u008e\u00a5\u00e8\u0087\u00aa\u00e6\u009c\u0089\u00e6\u009c\u008d\u00e5\u008a\u00a1\u00e5\u0099\u00a8\u00ef\u00bc\u009b\u00e6\u0089\u008b\u00e6\u009c\u00ba\u00e7\u00ab\u00af\u00e5\u008f\u00af\u00e6\u0089\u0093\u00e5\u00bc\u0080\u00e7\u0094\u00a8"
+ 1299:  call_method 1
+ 1302:  array_from 1
+ 1305:  call3 3
+ 1306:  array_from 3
+ 1309:  call3 3
+ 1310:  array_from 2
+ 1313:  tail_call 3
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  args: i
+  closure vars:
+    0: t local:loc0 var
+    1: s local:loc2 var
+  stack_size: 13
+  opcodes:
+    0:  get_var_ref1 1: s
+    1:  push_atom_value div
+    6:  object
+    7:  get_arg0 0: i
+    8:  get_field qqUin
+   13:  define_field key
+   18:  push_atom_value "acct-item"
+   23:  array_from 1
+   26:  define_field staticClass
+   31:  object
+   32:  fclosure8 0: [bytecode <null>]
+   34:  set_name click
+   39:  define_field click
+   44:  define_field on
+   49:  get_var_ref1 1: s
+   50:  push_atom_value text
+   55:  object
+   56:  push_atom_value "acct-qq"
+   61:  array_from 1
+   64:  define_field staticClass
+   69:  get_var_ref0 0: t
+   70:  get_field2 _v
+   75:  push_atom_value "QQ "
+   80:  get_var_ref0 0: t
+   81:  get_field2 _s
+   86:  get_arg0 0: i
+   87:  get_field qqUin
+   92:  call_method 1
+   95:  add
+   96:  call_method 1
+   99:  array_from 1
+  102:  call3 3
+  103:  get_var_ref1 1: s
+  104:  push_atom_value text
+  109:  object
+  110:  push_atom_value "acct-nick"
+  115:  array_from 1
+  118:  define_field staticClass
+  123:  get_var_ref0 0: t
+  124:  get_field2 _v
+  129:  get_var_ref0 0: t
+  130:  get_field2 _s
+  135:  get_arg0 0: i
+  136:  get_field nickname
+  141:  dup
+  142:  if_true8 150
+  144:  drop
+  145:  push_atom_value "\u00ef\u00bc\u0088\u00e6\u009c\u00aa\u00e8\u00ae\u00be\u00e7\u00bd\u00ae\u00e6\u0098\u00b5\u00e7\u00a7\u00b0\u00ef\u00bc\u0089"
+  150:  call_method 1
+  153:  call_method 1
+  156:  array_from 1
+  159:  call3 3
+  160:  array_from 2
+  163:  tail_call 3
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  args: s
+  closure vars:
+    0: t parent:loc0 var
+    1: i local:arg0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 enterAccount
+    6:  get_var_ref1 1: i
+    7:  tail_call_method 1
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_qqbot_entry.js:1 source_len=0 */
+apps_qqbot_entry.js:1: function: <null>
+  mode: strict
+  args: i
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 navTo
+    6:  push_atom_value apps_qqbot_login
+   11:  tail_call_method 1
+

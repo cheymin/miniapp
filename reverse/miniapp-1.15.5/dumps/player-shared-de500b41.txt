@@ -1,0 +1,298 @@
+
+/* ===== function depth=0 ===== */
+/* debug: player-shared-de500b41.js:1 source_len=0 */
+player-shared-de500b41.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: a parent:loc0 const
+    1: e local:loc0 var
+    2: t local:loc1 var
+    3: i local:loc2 var
+    4: s local:loc3 const
+  stack_size: 3
+  opcodes:
+    0:  push_atom_value "images/f1a897fca01545e432a2b096c9623b9b.png"
+    5:  put_var_ref1 1: e
+    6:  push_atom_value "images/26962fcceb109c7b33d79eb63b346d7d.png"
+   11:  put_var_ref2 2: t
+   12:  push_atom_value "images/fa331f913337fa41c1203deb15ab342e.png"
+   17:  put_var_ref3 3: i
+   18:  object
+   19:  object
+   20:  fclosure8 0: [bytecode <null>]
+   22:  define_method isBiliVideoUrl,4
+   28:  fclosure8 1: [bytecode <null>]
+   30:  define_method cyclePlaybackRate,4
+   36:  fclosure8 2: [bytecode <null>]
+   38:  define_method applyPlaybackRate,4
+   44:  fclosure8 3: [bytecode <null>]
+   46:  define_method scheduleHideControls,4
+   52:  fclosure8 4: [bytecode <null>]
+   54:  define_method formatTime,4
+   60:  define_field methods
+   65:  put_var_ref 4: s
+   68:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: player-shared-de500b41.js:1 source_len=0 */
+player-shared-de500b41.js:1: function: <null>
+  mode: strict
+  args: a
+  locals:
+    0: var e
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: a
+    1:  lnot
+    2:  dup
+    3:  if_true8 14
+    5:  drop
+    6:  push_atom_value string
+   11:  get_arg0 0: a
+   12:  typeof
+   13:  neq
+   14:  if_false8 19
+   16:  push_1 1
+   17:  lnot
+   18:  return
+   19:  get_arg0 0: a
+   20:  get_field2 toLowerCase
+   25:  call_method 0
+   28:  set_loc0 0: e
+   29:  get_field2 indexOf
+   34:  push_atom_value "bilibili.com"
+   39:  call_method 1
+   42:  push_0 0
+   43:  gte
+   44:  dup
+   45:  if_true8 164
+   47:  drop
+   48:  get_loc0 0: e
+   49:  get_field2 indexOf
+   54:  push_atom_value "bilivideo.com"
+   59:  call_method 1
+   62:  push_0 0
+   63:  gte
+   64:  dup
+   65:  if_true8 164
+   67:  drop
+   68:  get_loc0 0: e
+   69:  get_field2 indexOf
+   74:  push_atom_value "akamaized.net"
+   79:  call_method 1
+   82:  push_0 0
+   83:  gte
+   84:  dup
+   85:  if_true8 164
+   87:  drop
+   88:  get_loc0 0: e
+   89:  get_field2 indexOf
+   94:  push_atom_value "mountaintoys.cn"
+   99:  call_method 1
+  102:  push_0 0
+  103:  gte
+  104:  dup
+  105:  if_true8 164
+  107:  drop
+  108:  get_loc0 0: e
+  109:  get_field2 indexOf
+  114:  push_atom_value "hdslb.com"
+  119:  call_method 1
+  122:  push_0 0
+  123:  gte
+  124:  dup
+  125:  if_true8 164
+  127:  drop
+  128:  get_loc0 0: e
+  129:  get_field2 indexOf
+  134:  push_atom_value "os=mcdn"
+  139:  call_method 1
+  142:  push_0 0
+  143:  gte
+  144:  dup
+  145:  if_true8 164
+  147:  drop
+  148:  get_loc0 0: e
+  149:  get_field2 indexOf
+  154:  push_atom_value "bvc=vod"
+  159:  call_method 1
+  162:  push_0 0
+  163:  gte
+  164:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: player-shared-de500b41.js:1 source_len=0 */
+player-shared-de500b41.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 playbackRateIndex
+    8:  inc
+    9:  put_field playbackRateIndex
+   14:  get_loc0 0: this
+   15:  get_field playbackRateIndex
+   20:  get_loc0 0: this
+   21:  get_field playbackRates
+   26:  get_length
+   27:  gte
+   28:  dup
+   29:  if_false8 40
+   31:  drop
+   32:  get_loc0 0: this
+   33:  push_0 0
+   34:  insert2
+   35:  put_field playbackRateIndex
+   40:  drop
+   41:  get_loc0 0: this
+   42:  get_field2 applyPlaybackRate
+   47:  call_method 0
+   50:  drop
+   51:  get_loc0 0: this
+   52:  get_field2 scheduleHideControls
+   57:  call_method 0
+   60:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: player-shared-de500b41.js:1 source_len=0 */
+player-shared-de500b41.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch e [level:4 next:-1]
+    1: var this
+  closure vars:
+    0: a parent:loc0 const
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field player
+    8:  if_false8 104
+   10:  push_atom_value function
+   15:  get_loc1 1: this
+   16:  get_field player
+   21:  get_field setPlaybackRate
+   26:  typeof
+   27:  eq
+   28:  if_false8 104
+   30:  catch 65
+   35:  get_loc1 1: this
+   36:  get_field player
+   41:  get_field2 setPlaybackRate
+   46:  get_loc1 1: this
+   47:  get_field playbackRates
+   52:  get_loc1 1: this
+   53:  get_field playbackRateIndex
+   58:  get_array_el
+   59:  call_method 1
+   62:  drop
+   63:  drop
+   64:  return_undef
+   65:  put_loc0 0: e
+   66:  catch 103
+   71:  get_var_ref_check 0: a
+   74:  push_atom_value player
+   79:  push_atom_value "setPlaybackRate \u00e5\u00a4\u00b1\u00e8\u00b4\u00a5 rate="
+   84:  get_loc1 1: this
+   85:  get_field playbackRates
+   90:  get_loc1 1: this
+   91:  get_field playbackRateIndex
+   96:  get_array_el
+   97:  add
+   98:  get_loc0 0: e
+   99:  call3 3
+  100:  drop
+  101:  drop
+  102:  return_undef
+  103:  throw
+  104:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: player-shared-de500b41.js:1 source_len=0 */
+player-shared-de500b41.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field hideTimer
+    8:  dup
+    9:  if_false8 33
+   11:  drop
+   12:  get_var clearTimeout
+   17:  get_loc0 0: this
+   18:  get_field hideTimer
+   23:  call1 1
+   24:  drop
+   25:  get_loc0 0: this
+   26:  null
+   27:  insert2
+   28:  put_field hideTimer
+   33:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: player-shared-de500b41.js:1 source_len=0 */
+player-shared-de500b41.js:1: function: <null>
+  mode: strict
+  args: a
+  locals:
+    0: var e
+    1: var t
+  stack_size: 4
+  opcodes:
+    0:  get_var Math
+    5:  get_field2 floor
+   10:  get_arg0 0: a
+   11:  dup
+   12:  if_true8 16
+   14:  drop
+   15:  push_0 0
+   16:  push_i16 1000
+   19:  div
+   20:  call_method 1
+   23:  put_loc0 0: e
+   24:  get_var Math
+   29:  get_field2 floor
+   34:  get_loc0 0: e
+   35:  push_i8 60
+   37:  div
+   38:  call_method 1
+   41:  set_loc1 1: t
+   42:  push_i8 10
+   44:  lt
+   45:  if_false8 53
+   47:  push_const8 0: 1"0"
+   49:  get_loc1 1: t
+   50:  add
+   51:  goto8 54
+   53:  get_loc1 1: t
+   54:  push_atom_value ":"
+   59:  add
+   60:  get_loc0 0: e
+   61:  push_i8 60
+   63:  mod
+   64:  set_loc0 0: e
+   65:  push_i8 10
+   67:  lt
+   68:  if_false8 76
+   70:  push_const8 1: 1"0"
+   72:  get_loc0 0: e
+   73:  add
+   74:  goto8 77
+   76:  get_loc0 0: e
+   77:  add
+   78:  return
+

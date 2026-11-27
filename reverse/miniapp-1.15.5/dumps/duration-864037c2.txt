@@ -1,0 +1,151 @@
+
+/* ===== function depth=0 ===== */
+/* debug: duration-864037c2.js:1 source_len=0 */
+duration-864037c2.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: n local:loc0 var
+    1: t local:loc1 var
+  stack_size: 1
+  opcodes:
+    0:  fclosure8 0: [bytecode n]
+    2:  put_var_ref0 0: n
+    3:  fclosure8 1: [bytecode t]
+    5:  put_var_ref1 1: t
+    6:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: duration-864037c2.js:1 source_len=0 */
+duration-864037c2.js:1: function: n
+  mode: strict
+  args: n
+  locals:
+    0: const t [level:1 next:-1]
+  stack_size: 3
+  opcodes:
+    0:  set_loc_uninitialized 0: t
+    3:  get_var Number
+    8:  get_arg0 0: n
+    9:  dup
+   10:  if_true8 14
+   12:  drop
+   13:  push_0 0
+   14:  call1 1
+   15:  put_loc0 0: t
+   16:  get_var isFinite
+   21:  get_loc_check 0: t
+   24:  call1 1
+   25:  lnot
+   26:  dup
+   27:  if_true8 35
+   29:  drop
+   30:  get_loc_check 0: t
+   33:  push_0 0
+   34:  lte
+   35:  if_false8 39
+   37:  push_0 0
+   38:  return
+   39:  get_loc_check 0: t
+   42:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: duration-864037c2.js:1 source_len=0 */
+duration-864037c2.js:1: function: t
+  mode: strict
+  args: t r
+  locals:
+    0: const r [level:3 next:-1]
+  closure vars:
+    0: n parent:loc0 var
+  stack_size: 5
+  opcodes:
+    0:  get_arg1 1: r
+    1:  dup
+    2:  push_atom_value s
+    7:  strict_eq
+    8:  if_false8 16
+   10:  fclosure8 0: [bytecode <null>]
+   12:  get_arg0 0: t
+   13:  tail_call 1
+   16:  dup
+   17:  push_atom_value auto
+   22:  strict_eq
+   23:  if_false8 88
+   25:  set_loc_uninitialized 0: r
+   28:  get_var_ref0 0: n
+   29:  get_arg0 0: t
+   30:  call1 1
+   31:  put_loc0 0: r
+   32:  get_loc_check 0: r
+   35:  push_0 0
+   36:  lte
+   37:  if_false8 41
+   39:  push_0 0
+   40:  return
+   41:  get_loc_check 0: r
+   44:  push_i16 3600
+   47:  gte
+   48:  if_false8 67
+   50:  get_var Math
+   55:  get_field2 round
+   60:  get_loc_check 0: r
+   63:  call_method 1
+   66:  return
+   67:  get_var Math
+   72:  get_field2 round
+   77:  push_i16 1000
+   80:  get_loc_check 0: r
+   83:  mul
+   84:  call_method 1
+   87:  return
+   88:  fclosure8 1: [bytecode <null>]
+   90:  get_arg0 0: t
+   91:  tail_call 1
+
+
+/* ===== function depth=2 ===== */
+/* debug: duration-864037c2.js:1 source_len=0 */
+duration-864037c2.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const r [level:1 next:-1]
+  closure vars:
+    0: n parent:loc0 var
+  stack_size: 4
+  opcodes:
+    0:  set_loc_uninitialized 0: r
+    3:  get_var_ref0 0: n
+    4:  get_arg0 0: t
+    5:  call1 1
+    6:  put_loc0 0: r
+    7:  get_loc_check 0: r
+   10:  push_0 0
+   11:  lte
+   12:  if_false8 16
+   14:  push_0 0
+   15:  return
+   16:  get_var Math
+   21:  get_field2 round
+   26:  push_i16 1000
+   29:  get_loc_check 0: r
+   32:  mul
+   33:  call_method 1
+   36:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: duration-864037c2.js:1 source_len=0 */
+duration-864037c2.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: n parent:loc0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: n
+    1:  get_arg0 0: t
+    2:  tail_call 1
+

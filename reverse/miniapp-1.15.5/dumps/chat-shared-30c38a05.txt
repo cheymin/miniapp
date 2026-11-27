@@ -1,0 +1,3521 @@
+
+/* ===== function depth=0 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: t parent:loc0 const
+    1: e local:loc0 var
+    2: s local:loc1 var
+    3: i local:loc2 var
+    4: r local:loc3 var
+    5: n local:loc4 var
+    6: a local:loc5 var
+    7: h local:loc6 var
+    8: l local:loc7 var
+    9: o local:loc8 var
+   10: u local:loc9 var
+   11: p local:loc10 var
+   12: c local:loc11 var
+   13: g local:loc12 var
+   14: f local:loc13 var
+   15: d local:loc14 var
+   16: m local:loc15 var
+   17: v local:loc16 const
+  stack_size: 3
+  opcodes:
+    0:  fclosure8 0: [bytecode e]
+    2:  put_var_ref1 1: e
+    3:  fclosure8 1: [bytecode s]
+    5:  put_var_ref2 2: s
+    6:  fclosure8 2: [bytecode i]
+    8:  put_var_ref3 3: i
+    9:  fclosure8 3: [bytecode r]
+   11:  put_var_ref 4: r
+   14:  fclosure8 4: [bytecode n]
+   16:  put_var_ref 5: n
+   19:  fclosure8 5: [bytecode a]
+   21:  put_var_ref 6: a
+   24:  fclosure8 6: [bytecode h]
+   26:  put_var_ref 7: h
+   29:  fclosure8 7: [bytecode l]
+   31:  put_var_ref 8: l
+   34:  fclosure8 8: [bytecode o]
+   36:  put_var_ref 9: o
+   39:  fclosure8 9: [bytecode u]
+   41:  put_var_ref 10: u
+   44:  fclosure8 10: [bytecode p]
+   46:  put_var_ref 11: p
+   49:  fclosure8 11: [bytecode c]
+   51:  put_var_ref 12: c
+   54:  fclosure8 12: [bytecode g]
+   56:  put_var_ref 13: g
+   59:  fclosure8 13: [bytecode f]
+   61:  put_var_ref 14: f
+   64:  fclosure8 14: [bytecode d]
+   66:  put_var_ref 15: d
+   69:  fclosure8 15: [bytecode m]
+   71:  put_var_ref 16: m
+   74:  object
+   75:  object
+   76:  fclosure8 16: [bytecode <null>]
+   78:  set_name copyMessage
+   83:  define_field copyMessage
+   88:  fclosure8 17: [bytecode <null>]
+   90:  set_name clearInput
+   95:  define_field clearInput
+  100:  fclosure8 18: [bytecode <null>]
+  102:  set_name touchChat
+  107:  define_field touchChat
+  112:  fclosure8 19: [bytecode <null>]
+  114:  set_name maybeRenameChat
+  119:  define_field maybeRenameChat
+  124:  fclosure8 20: [bytecode <null>]
+  126:  set_name estimateReasoningTokens
+  131:  define_field estimateReasoningTokens
+  136:  fclosure8 21: [bytecode <null>]
+  138:  set_name formatThinkingTokens
+  143:  define_field formatThinkingTokens
+  148:  fclosure8 22: [bytecode <null>]
+  150:  set_name formatThinkingDuration
+  155:  define_field formatThinkingDuration
+  160:  fclosure8 23: [bytecode <null>]
+  162:  set_name getParsedMessageBlocks
+  167:  define_field getParsedMessageBlocks
+  172:  fclosure8 24: [bytecode <null>]
+  174:  set_name getLatexRenderKey
+  179:  define_field getLatexRenderKey
+  184:  fclosure8 25: [bytecode <null>]
+  186:  set_name openLink
+  191:  define_field openLink
+  196:  fclosure8 26: [bytecode <null>]
+  198:  set_name scheduleSave
+  203:  define_field scheduleSave
+  208:  fclosure8 27: [bytecode <null>]
+  210:  set_name canSend
+  215:  define_field canSend
+  220:  fclosure8 28: [bytecode <null>]
+  222:  set_name canRegenerate
+  227:  define_field canRegenerate
+  232:  fclosure8 29: [bytecode <null>]
+  234:  set_name removePendingImage
+  239:  define_field removePendingImage
+  244:  fclosure8 30: [bytecode <null>]
+  246:  set_name editMessage
+  251:  define_field editMessage
+  256:  fclosure8 31: [bytecode <null>]
+  258:  set_name saveAsPreset
+  263:  define_field saveAsPreset
+  268:  fclosure8 32: [bytecode <null>]
+  270:  set_name isCurrentChat
+  275:  define_field isCurrentChat
+  280:  fclosure8 33: [bytecode <null>]
+  282:  set_name quickSend
+  287:  define_field quickSend
+  292:  define_field methods
+  297:  put_var_ref 17: v
+  300:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: e
+  mode: strict
+  args: t
+  stack_size: 3
+  opcodes:
+    0:  object
+    1:  push_atom_value line
+    6:  define_field type
+   11:  push_atom_value paragraph
+   16:  define_field variant
+   21:  get_arg0 0: t
+   22:  dup
+   23:  if_true8 31
+   25:  drop
+   26:  push_atom_value assistant
+   31:  define_field role
+   36:  push_empty_string
+   37:  define_field prefix
+   42:  object
+   43:  push_atom_value text
+   48:  define_field type
+   53:  push_empty_string
+   54:  define_field text
+   59:  array_from 1
+   62:  define_field segments
+   67:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: s
+  mode: strict
+  args: t
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: t
+    1:  lnot
+    2:  dup
+    3:  if_true8 14
+    5:  drop
+    6:  push_atom_value string
+   11:  get_arg0 0: t
+   12:  typeof
+   13:  neq
+   14:  lnot
+   15:  dup
+   16:  if_false8 55
+   18:  drop
+   19:  push_const8 0: 1"^https?:\\/\\/.+\\.(png|jpe?g|gif|webp|bmp)(\\?.*)?$"
+   21:  push_const8 1: 1"\u0002\u0003\u0000\u00e5\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u0001H\u0000\u0001T\u0000\u0001T\u0000\u0001P\u0000\u001c\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001S\u0000\n\u0001:\u0000\u0001/\u0000\u0001/\u0000\u001c\u0002\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0003\n\u0001.\u0000\u000b\u0001\u0009_\u0000\u0000\u0000\u0009I\u0000\u0000\u0000\u00096\u0000\u0000\u0000\u0009\u000e\u0000\u0000\u0000\u0001P\u0000\u0001N\u0000\u0001G\u0000\u0007\u001e\u0000\u0000\u0000\u0001J\u0000\u0001P\u0000\u001c\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001E\u0000\n\u0001G\u0000\u0007\u0009\u0000\u0000\u0000\u0001G\u0000\u0001I\u0000\u0001F\u0000\u0007\u000c\u0000\u0000\u0000\u0001W\u0000\u0001E\u0000\u0001B\u0000\u0001P\u0000\u0007\u0009\u0000\u0000\u0000\u0001B\u0000\u0001M\u0000\u0001P\u0000\u000c\u0001\u000d\u0002\u0002\u0009\u001a\u0000\u0000\u0000\u000b\u0002\u0001?\u0000\u001c\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0003\n\u000c\u0002\u0006\u000c\u0000\n"
+   23:  regexp
+   24:  get_field2 test
+   29:  get_arg0 0: t
+   30:  call_method 1
+   33:  lnot
+   34:  lnot
+   35:  dup
+   36:  if_true8 55
+   38:  drop
+   39:  push_const8 2: 1"^file:\\/\\/.+\\.(png|jpe?g|gif|webp|bmp)$"
+   41:  push_const8 3: 1"\u0002\u0002\u0000\u00ae\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u0001F\u0000\u0001I\u0000\u0001L\u0000\u0001E\u0000\u0001:\u0000\u0001/\u0000\u0001/\u0000\u001c\u0002\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0003\n\u0001.\u0000\u000b\u0001\u0009_\u0000\u0000\u0000\u0009I\u0000\u0000\u0000\u00096\u0000\u0000\u0000\u0009\u000e\u0000\u0000\u0000\u0001P\u0000\u0001N\u0000\u0001G\u0000\u0007\u001e\u0000\u0000\u0000\u0001J\u0000\u0001P\u0000\u001c\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001E\u0000\n\u0001G\u0000\u0007\u0009\u0000\u0000\u0000\u0001G\u0000\u0001I\u0000\u0001F\u0000\u0007\u000c\u0000\u0000\u0000\u0001W\u0000\u0001E\u0000\u0001B\u0000\u0001P\u0000\u0007\u0009\u0000\u0000\u0000\u0001B\u0000\u0001M\u0000\u0001P\u0000\u000c\u0001\u0006\u000c\u0000\n"
+   43:  regexp
+   44:  get_field2 test
+   49:  get_arg0 0: t
+   50:  call_method 1
+   53:  lnot
+   54:  lnot
+   55:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: i
+  mode: strict
+  args: t
+  locals:
+    0: var e
+  stack_size: 3
+  opcodes:
+    0:  get_var String
+    5:  get_arg0 0: t
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  push_empty_string
+   11:  call1 1
+   12:  get_field2 trim
+   17:  call_method 0
+   20:  set_loc0 0: e
+   21:  lnot
+   22:  lnot
+   23:  dup
+   24:  if_false8 41
+   26:  drop
+   27:  push_const8 0: 1"\\\\[a-zA-Z]+|[_^{}]|=|\\+|-|\\*|\\/|<|>"
+   29:  push_const8 1: 1"\u0000\u0001\u0000\u00a4\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0009\u008c\u0000\u0000\u0000\u0009\u007f\u0000\u0000\u0000\u0009r\u0000\u0000\u0000\u0009e\u0000\u0000\u0000\u0009X\u0000\u0000\u0000\u0009K\u0000\u0000\u0000\u0009>\u0000\u0000\u0000\u0009%\u0000\u0000\u0000\u0001\\\u0000\u001c\u000c\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0002\u0000A\u0000Z\u0000a\u0000z\u0000\n\u0007\u000f\u0000\u0000\u0000\u0015\u0003\u0000^\u0000_\u0000{\u0000{\u0000}\u0000}\u0000\u0007\u0003\u0000\u0000\u0000\u0001=\u0000\u0007\u0003\u0000\u0000\u0000\u0001+\u0000\u0007\u0003\u0000\u0000\u0000\u0001-\u0000\u0007\u0003\u0000\u0000\u0000\u0001*\u0000\u0007\u0003\u0000\u0000\u0000\u0001/\u0000\u0007\u0003\u0000\u0000\u0000\u0001<\u0000\u0007\u0003\u0000\u0000\u0000\u0001>\u0000\u000c\u0000\n"
+   31:  regexp
+   32:  get_field2 test
+   37:  get_loc0 0: e
+   38:  call_method 1
+   41:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: r
+  mode: strict
+  args: t
+  locals:
+    0: var e
+  stack_size: 3
+  opcodes:
+    0:  get_var String
+    5:  get_arg0 0: t
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  push_empty_string
+   11:  call1 1
+   12:  get_field2 trim
+   17:  call_method 0
+   20:  set_loc0 0: e
+   21:  lnot
+   22:  lnot
+   23:  dup
+   24:  if_false8 83
+   26:  drop
+   27:  push_const8 0: 1"^[0-9]$"
+   29:  push_const8 1: 1"\u0000\u0001\u0000\u0019\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u0015\u0001\u00000\u00009\u0000\u0006\u000c\u0000\n"
+   31:  regexp
+   32:  get_field2 test
+   37:  get_loc0 0: e
+   38:  call_method 1
+   41:  lnot
+   42:  lnot
+   43:  dup
+   44:  if_true8 83
+   46:  drop
+   47:  push_const8 2: 1"^[a-zA-Z]$"
+   49:  push_const8 3: 1"\u0000\u0001\u0000\u001d\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u0015\u0002\u0000A\u0000Z\u0000a\u0000z\u0000\u0006\u000c\u0000\n"
+   51:  regexp
+   52:  get_field2 test
+   57:  get_loc0 0: e
+   58:  call_method 1
+   61:  lnot
+   62:  lnot
+   63:  dup
+   64:  if_true8 83
+   66:  drop
+   67:  push_const8 4: 1"^[a-zA-Z]{2,3}$"
+   69:  push_const8 5: 1"\u0000\u0001\u0000/\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u001c\u000c\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0003\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0015\u0002\u0000A\u0000Z\u0000a\u0000z\u0000\n\u0006\u000c\u0000\n"
+   71:  regexp
+   72:  get_field2 test
+   77:  get_loc0 0: e
+   78:  call_method 1
+   81:  lnot
+   82:  lnot
+   83:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: n
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var s
+    2: var i
+    3: var r
+    4: var n
+  stack_size: 7
+  opcodes:
+    0:  get_var String
+    5:  get_arg0 0: t
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  push_empty_string
+   11:  call1 1
+   12:  put_loc1 1: s
+   13:  array_from 0
+   16:  put_loc2 2: i
+   17:  push_const8 0: 1"\\*\\*\\*([^\\n]+?)\\*\\*\\*|~~([^\\n]+?)~~|==([^\\n]+?)==|\\*\\*([^\\n]+?)\\*\\*|\\*([^\\n]+?)\\*"
+   19:  push_const8 1: 1"\u0001\u0006\u0000\u00d8\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0009\u00a9\u0000\u0000\u0000\u0009\u007f\u0000\u0000\u0000\u0009U\u0000\u0000\u0000\u0009+\u0000\u0000\u0000\u0001*\u0000\u0001*\u0000\u0001*\u0000\u000b\u0001\u0015\u0002\u0000\u0000\u0000\u0009\u0000\u000b\u0000\u00ff\u00ff\u0009\u00f0\u00ff\u00ff\u00ff\u000c\u0001\u0001*\u0000\u0001*\u0000\u0001*\u0000\u0007 \u0000\u0000\u0000\u0001~\u0000\u0001~\u0000\u000b\u0002\u0015\u0002\u0000\u0000\u0000\u0009\u0000\u000b\u0000\u00ff\u00ff\u0009\u00f0\u00ff\u00ff\u00ff\u000c\u0002\u0001~\u0000\u0001~\u0000\u0007 \u0000\u0000\u0000\u0001=\u0000\u0001=\u0000\u000b\u0003\u0015\u0002\u0000\u0000\u0000\u0009\u0000\u000b\u0000\u00ff\u00ff\u0009\u00f0\u00ff\u00ff\u00ff\u000c\u0003\u0001=\u0000\u0001=\u0000\u0007 \u0000\u0000\u0000\u0001*\u0000\u0001*\u0000\u000b\u0004\u0015\u0002\u0000\u0000\u0000\u0009\u0000\u000b\u0000\u00ff\u00ff\u0009\u00f0\u00ff\u00ff\u00ff\u000c\u0004\u0001*\u0000\u0001*\u0000\u0007\u001a\u0000\u0000\u0000\u0001*\u0000\u000b\u0005\u0015\u0002\u0000\u0000\u0000\u0009\u0000\u000b\u0000\u00ff\u00ff\u0009\u00f0\u00ff\u00ff\u00ff\u000c\u0005\u0001*\u0000\u000c\u0000\n"
+   21:  regexp
+   22:  put_loc3 3: r
+   23:  push_0 0
+   24:  put_loc8 4: n
+   26:  get_loc3 3: r
+   27:  get_field2 exec
+   32:  get_loc1 1: s
+   33:  call_method 1
+   36:  set_loc0 0: e
+   37:  if_false 286
+   42:  get_loc0 0: e
+   43:  get_field index
+   48:  get_loc8 4: n
+   50:  gt
+   51:  dup
+   52:  if_false8 97
+   54:  drop
+   55:  get_loc2 2: i
+   56:  get_field2 push
+   61:  object
+   62:  push_atom_value text
+   67:  define_field type
+   72:  get_loc1 1: s
+   73:  get_field2 slice
+   78:  get_loc8 4: n
+   80:  get_loc0 0: e
+   81:  get_field index
+   86:  call_method 2
+   89:  define_field text
+   94:  call_method 1
+   97:  drop
+   98:  get_loc0 0: e
+   99:  push_1 1
+  100:  get_array_el
+  101:  if_false8 134
+  103:  get_loc2 2: i
+  104:  get_field2 push
+  109:  object
+  110:  push_atom_value bold_italic
+  115:  define_field type
+  120:  get_loc0 0: e
+  121:  push_1 1
+  122:  get_array_el
+  123:  define_field text
+  128:  call_method 1
+  131:  goto16 274
+  134:  get_loc0 0: e
+  135:  push_2 2
+  136:  get_array_el
+  137:  if_false8 169
+  139:  get_loc2 2: i
+  140:  get_field2 push
+  145:  object
+  146:  push_atom_value strike
+  151:  define_field type
+  156:  get_loc0 0: e
+  157:  push_2 2
+  158:  get_array_el
+  159:  define_field text
+  164:  call_method 1
+  167:  goto8 274
+  169:  get_loc0 0: e
+  170:  push_3 3
+  171:  get_array_el
+  172:  if_false8 204
+  174:  get_loc2 2: i
+  175:  get_field2 push
+  180:  object
+  181:  push_atom_value mark
+  186:  define_field type
+  191:  get_loc0 0: e
+  192:  push_3 3
+  193:  get_array_el
+  194:  define_field text
+  199:  call_method 1
+  202:  goto8 274
+  204:  get_loc0 0: e
+  205:  push_4 4
+  206:  get_array_el
+  207:  if_false8 239
+  209:  get_loc2 2: i
+  210:  get_field2 push
+  215:  object
+  216:  push_atom_value bold
+  221:  define_field type
+  226:  get_loc0 0: e
+  227:  push_4 4
+  228:  get_array_el
+  229:  define_field text
+  234:  call_method 1
+  237:  goto8 274
+  239:  get_loc0 0: e
+  240:  push_5 5
+  241:  get_array_el
+  242:  dup
+  243:  if_false8 274
+  245:  drop
+  246:  get_loc2 2: i
+  247:  get_field2 push
+  252:  object
+  253:  push_atom_value italic
+  258:  define_field type
+  263:  get_loc0 0: e
+  264:  push_5 5
+  265:  get_array_el
+  266:  define_field text
+  271:  call_method 1
+  274:  drop
+  275:  get_loc3 3: r
+  276:  get_field lastIndex
+  281:  put_loc8 4: n
+  283:  goto16 26
+  286:  get_loc8 4: n
+  288:  get_loc1 1: s
+  289:  get_length
+  290:  lt
+  291:  dup
+  292:  if_false8 331
+  294:  drop
+  295:  get_loc2 2: i
+  296:  get_field2 push
+  301:  object
+  302:  push_atom_value text
+  307:  define_field type
+  312:  get_loc1 1: s
+  313:  get_field2 slice
+  318:  get_loc8 4: n
+  320:  call_method 1
+  323:  define_field text
+  328:  call_method 1
+  331:  drop
+  332:  push_0 0
+  333:  get_loc2 2: i
+  334:  get_length
+  335:  strict_eq
+  336:  dup
+  337:  if_false8 366
+  339:  drop
+  340:  get_loc2 2: i
+  341:  get_field2 push
+  346:  object
+  347:  push_atom_value text
+  352:  define_field type
+  357:  get_loc1 1: s
+  358:  define_field text
+  363:  call_method 1
+  366:  drop
+  367:  get_loc2 2: i
+  368:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: a
+  mode: strict
+  args: t e
+  locals:
+    0: var a
+    1: var h
+    2: var l
+    3: var o
+    4: var u
+    5: var p
+  closure vars:
+    0: s parent:loc2 var
+    1: n parent:loc5 var
+    2: i parent:loc3 var
+    3: r parent:loc4 var
+  stack_size: 7
+  opcodes:
+    0:  get_var String
+    5:  get_arg0 0: t
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  push_empty_string
+   11:  call1 1
+   12:  put_loc1 1: h
+   13:  array_from 0
+   16:  put_loc2 2: l
+   17:  push_const8 0: 1"\\\\\\(([\\s\\S]+?)\\\\\\)|!\\[([^\\]]*)\\]\\(([^)]+)\\)|\\[([^\\]]+)\\]\\(([^)]+)\\)|\\$([^\\$\\n]+?)\\$|`([^`\\n]+?)`"
+   19:  push_const8 1: 1"\u0001\u0008\u0000/\u0001\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0009\u00fc\u0000\u0000\u0000\u0009\u00d4\u0000\u0000\u0000\u0009|\u0000\u0000\u0000\u0009!\u0000\u0000\u0000\u0001\\\u0000\u0001(\u0000\u000b\u0001\u0015\u0001\u0000\u0000\u0000\u00ff\u00ff\u0009\u00f4\u00ff\u00ff\u00ff\u000c\u0001\u0001\\\u0000\u0001)\u0000\u0007Q\u0000\u0000\u0000\u0001!\u0000\u0001[\u0000\u000b\u0002\u001c\u000c\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0002\u0000\u0000\u0000\\\u0000^\u0000\u00ff\u00ff\n\u000c\u0002\u0001]\u0000\u0001(\u0000\u000b\u0003\u001c\u000c\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0002\u0000\u0000\u0000(\u0000*\u0000\u00ff\u00ff\n\u000c\u0003\u0001)\u0000\u0007N\u0000\u0000\u0000\u0001[\u0000\u000b\u0004\u001c\u000c\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0002\u0000\u0000\u0000\\\u0000^\u0000\u00ff\u00ff\n\u000c\u0004\u0001]\u0000\u0001(\u0000\u000b\u0005\u001c\u000c\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0002\u0000\u0000\u0000(\u0000*\u0000\u00ff\u00ff\n\u000c\u0005\u0001)\u0000\u0007\u001e\u0000\u0000\u0000\u0001$\u0000\u000b\u0006\u0015\u0003\u0000\u0000\u0000\u0009\u0000\u000b\u0000#\u0000%\u0000\u00ff\u00ff\u0009\u00ec\u00ff\u00ff\u00ff\u000c\u0006\u0001$\u0000\u0007\u001e\u0000\u0000\u0000\u0001`\u0000\u000b\u0007\u0015\u0003\u0000\u0000\u0000\u0009\u0000\u000b\u0000_\u0000a\u0000\u00ff\u00ff\u0009\u00ec\u00ff\u00ff\u00ff\u000c\u0007\u0001`\u0000\u000c\u0000\n"
+   21:  regexp
+   22:  put_loc3 3: o
+   23:  push_0 0
+   24:  put_loc8 4: u
+   26:  get_loc3 3: o
+   27:  get_field2 exec
+   32:  get_loc1 1: h
+   33:  call_method 1
+   36:  set_loc0 0: a
+   37:  if_false 443
+   42:  get_loc0 0: a
+   43:  get_field index
+   48:  get_loc8 4: u
+   50:  gt
+   51:  dup
+   52:  if_false8 84
+   54:  drop
+   55:  get_loc2 2: l
+   56:  get_field2 concat
+   61:  get_var_ref1 1: n
+   62:  get_loc1 1: h
+   63:  get_field2 slice
+   68:  get_loc8 4: u
+   70:  get_loc0 0: a
+   71:  get_field index
+   76:  call_method 2
+   79:  call1 1
+   80:  call_method 1
+   83:  set_loc2 2: l
+   84:  drop
+   85:  get_loc0 0: a
+   86:  push_1 1
+   87:  get_array_el
+   88:  if_false8 185
+   90:  get_arg1 1: e
+   91:  if_false8 141
+   93:  get_loc2 2: l
+   94:  get_field2 push
+   99:  object
+  100:  push_atom_value latex
+  105:  define_field type
+  110:  get_loc0 0: a
+  111:  push_1 1
+  112:  get_array_el
+  113:  get_field2 trim
+  118:  call_method 0
+  121:  define_field value
+  126:  push_atom_value inline
+  131:  define_field display
+  136:  call_method 1
+  139:  goto8 181
+  141:  get_loc2 2: l
+  142:  get_field2 push
+  147:  object
+  148:  push_atom_value text
+  153:  define_field type
+  158:  push_atom_value "\\("
+  163:  get_loc0 0: a
+  164:  push_1 1
+  165:  get_array_el
+  166:  add
+  167:  push_atom_value "\\)"
+  172:  add
+  173:  define_field text
+  178:  call_method 1
+  181:  drop
+  182:  goto16 432
+  185:  undefined
+  186:  get_loc0 0: a
+  187:  push_2 2
+  188:  get_array_el
+  189:  strict_neq
+  190:  if_false8 229
+  192:  get_loc0 0: a
+  193:  push_3 3
+  194:  get_array_el
+  195:  if_false8 229
+  197:  get_loc2 2: l
+  198:  get_field2 push
+  203:  object
+  204:  push_atom_value image_url
+  209:  define_field type
+  214:  get_loc0 0: a
+  215:  push_3 3
+  216:  get_array_el
+  217:  define_field url
+  222:  call_method 1
+  225:  drop
+  226:  goto16 432
+  229:  get_loc0 0: a
+  230:  push_4 4
+  231:  get_array_el
+  232:  if_false8 279
+  234:  get_loc0 0: a
+  235:  push_5 5
+  236:  get_array_el
+  237:  if_false8 279
+  239:  get_loc2 2: l
+  240:  get_field2 push
+  245:  object
+  246:  push_atom_value link
+  251:  define_field type
+  256:  get_loc0 0: a
+  257:  push_4 4
+  258:  get_array_el
+  259:  define_field text
+  264:  get_loc0 0: a
+  265:  push_5 5
+  266:  get_array_el
+  267:  define_field url
+  272:  call_method 1
+  275:  drop
+  276:  goto16 432
+  279:  get_loc0 0: a
+  280:  push_6 6
+  281:  get_array_el
+  282:  if_false8 396
+  284:  get_loc0 0: a
+  285:  push_6 6
+  286:  get_array_el
+  287:  get_field2 trim
+  292:  call_method 0
+  295:  put_loc8 5: p
+  297:  get_arg1 1: e
+  298:  if_false8 353
+  300:  get_var_ref2 2: i
+  301:  get_loc8 5: p
+  303:  call1 1
+  304:  dup
+  305:  if_true8 312
+  307:  drop
+  308:  get_var_ref3 3: r
+  309:  get_loc8 5: p
+  311:  call1 1
+  312:  if_false8 353
+  314:  get_loc2 2: l
+  315:  get_field2 push
+  320:  object
+  321:  push_atom_value latex
+  326:  define_field type
+  331:  get_loc8 5: p
+  333:  define_field value
+  338:  push_atom_value inline
+  343:  define_field display
+  348:  call_method 1
+  351:  goto8 393
+  353:  get_loc2 2: l
+  354:  get_field2 push
+  359:  object
+  360:  push_atom_value text
+  365:  define_field type
+  370:  push_atom_value $
+  375:  get_loc0 0: a
+  376:  push_6 6
+  377:  get_array_el
+  378:  add
+  379:  push_atom_value $
+  384:  add
+  385:  define_field text
+  390:  call_method 1
+  393:  drop
+  394:  goto8 432
+  396:  get_loc0 0: a
+  397:  push_7 7
+  398:  get_array_el
+  399:  dup
+  400:  if_false8 431
+  402:  drop
+  403:  get_loc2 2: l
+  404:  get_field2 push
+  409:  object
+  410:  push_atom_value code
+  415:  define_field type
+  420:  get_loc0 0: a
+  421:  push_7 7
+  422:  get_array_el
+  423:  define_field text
+  428:  call_method 1
+  431:  drop
+  432:  get_loc3 3: o
+  433:  get_field lastIndex
+  438:  put_loc8 4: u
+  440:  goto16 26
+  443:  get_loc8 4: u
+  445:  get_loc1 1: h
+  446:  get_length
+  447:  lt
+  448:  dup
+  449:  if_false8 475
+  451:  drop
+  452:  get_loc2 2: l
+  453:  get_field2 concat
+  458:  get_var_ref1 1: n
+  459:  get_loc1 1: h
+  460:  get_field2 slice
+  465:  get_loc8 4: u
+  467:  call_method 1
+  470:  call1 1
+  471:  call_method 1
+  474:  set_loc2 2: l
+  475:  drop
+  476:  push_0 0
+  477:  fclosure8 2: [bytecode <null>]
+  479:  get_loc2 2: l
+  480:  call1 1
+  481:  set_loc2 2: l
+  482:  get_length
+  483:  strict_eq
+  484:  dup
+  485:  if_false8 514
+  487:  drop
+  488:  get_loc2 2: l
+  489:  get_field2 push
+  494:  object
+  495:  push_atom_value text
+  500:  define_field type
+  505:  get_loc1 1: h
+  506:  define_field text
+  511:  call_method 1
+  514:  drop
+  515:  get_loc2 2: l
+  516:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var i
+    2: var r
+    3: var n
+    4: var a
+    5: var h
+    6: var l
+    7: var o
+  closure vars:
+    0: s parent:loc0 var
+  stack_size: 7
+  opcodes:
+    0:  array_from 0
+    3:  put_loc0 0: e
+    4:  push_0 0
+    5:  put_loc1 1: i
+    6:  get_loc1 1: i
+    7:  get_arg0 0: t
+    8:  get_length
+    9:  lt
+   10:  if_false 336
+   15:  get_arg0 0: t
+   16:  get_loc1 1: i
+   17:  get_array_el
+   18:  set_loc2 2: r
+   19:  if_false 320
+   24:  push_atom_value text
+   29:  get_loc2 2: r
+   30:  get_field type
+   35:  strict_eq
+   36:  if_false 320
+   41:  get_loc2 2: r
+   42:  get_field text
+   47:  if_false 320
+   52:  push_const8 0: 1"(https?:\\/\\/[^\\s<>\"')\\]]+)"
+   54:  push_const8 1: 1"\u0001\u0002\u0000\u0097\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u000b\u0001\u0001h\u0000\u0001t\u0000\u0001t\u0000\u0001p\u0000\u001c\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001s\u0000\n\u0001:\u0000\u0001/\u0000\u0001/\u0000\u001cH\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0011\u0000\u0000\u0000\u0008\u0000\u000e\u0000\u001f\u0000!\u0000!\u0000#\u0000&\u0000(\u0000(\u0000*\u0000;\u0000=\u0000=\u0000?\u0000\\\u0000^\u0000\u009f\u0000\u00a1\u0000\u007f\u0016\u0081\u0016\u00ff\u001f\u000b ' * . 0 ^ ` \u00ff/\u00010\u00fe\u00fe\u0000\u00ff\u00ff\u00ff\n\u000c\u0001\u000c\u0000\n"
+   56:  regexp
+   57:  put_loc8 4: a
+   59:  push_0 0
+   60:  put_loc8 5: h
+   62:  push_1 1
+   63:  lnot
+   64:  put_loc8 6: l
+   66:  null
+   67:  get_loc8 4: a
+   69:  get_field2 exec
+   74:  get_loc2 2: r
+   75:  get_field text
+   80:  call_method 1
+   83:  set_loc3 3: n
+   84:  strict_neq
+   85:  if_false 246
+   90:  push_0 0
+   91:  lnot
+   92:  put_loc8 6: l
+   94:  get_loc3 3: n
+   95:  get_field index
+  100:  get_loc8 5: h
+  102:  gt
+  103:  dup
+  104:  if_false8 154
+  106:  drop
+  107:  get_loc0 0: e
+  108:  get_field2 push
+  113:  object
+  114:  push_atom_value text
+  119:  define_field type
+  124:  get_loc2 2: r
+  125:  get_field text
+  130:  get_field2 slice
+  135:  get_loc8 5: h
+  137:  get_loc3 3: n
+  138:  get_field index
+  143:  call_method 2
+  146:  define_field text
+  151:  call_method 1
+  154:  drop
+  155:  get_loc3 3: n
+  156:  push_1 1
+  157:  get_array_el
+  158:  put_loc8 7: o
+  160:  get_var_ref0 0: s
+  161:  get_loc8 7: o
+  163:  call1 1
+  164:  if_false8 195
+  166:  get_loc0 0: e
+  167:  get_field2 push
+  172:  object
+  173:  push_atom_value image_url
+  178:  define_field type
+  183:  get_loc8 7: o
+  185:  define_field url
+  190:  call_method 1
+  193:  goto8 229
+  195:  get_loc0 0: e
+  196:  get_field2 push
+  201:  object
+  202:  push_atom_value link
+  207:  define_field type
+  212:  get_loc8 7: o
+  214:  define_field text
+  219:  get_loc8 7: o
+  221:  define_field url
+  226:  call_method 1
+  229:  drop
+  230:  get_loc3 3: n
+  231:  get_field index
+  236:  get_loc3 3: n
+  237:  push_0 0
+  238:  get_array_el
+  239:  get_length
+  240:  add
+  241:  put_loc8 5: h
+  243:  goto16 66
+  246:  get_loc8 6: l
+  248:  if_false8 307
+  250:  get_loc8 5: h
+  252:  get_loc2 2: r
+  253:  get_field text
+  258:  get_length
+  259:  lt
+  260:  dup
+  261:  if_false8 317
+  263:  drop
+  264:  get_loc0 0: e
+  265:  get_field2 push
+  270:  object
+  271:  push_atom_value text
+  276:  define_field type
+  281:  get_loc2 2: r
+  282:  get_field text
+  287:  get_field2 slice
+  292:  get_loc8 5: h
+  294:  call_method 1
+  297:  define_field text
+  302:  call_method 1
+  305:  goto8 317
+  307:  get_loc0 0: e
+  308:  get_field2 push
+  313:  get_loc2 2: r
+  314:  call_method 1
+  317:  drop
+  318:  goto8 331
+  320:  get_loc0 0: e
+  321:  get_field2 push
+  326:  get_loc2 2: r
+  327:  call_method 1
+  330:  drop
+  331:  inc_loc 1: i
+  333:  goto16 6
+  336:  get_loc0 0: e
+  337:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: h
+  mode: strict
+  args: t e s i r n
+  locals:
+    0: var h
+    1: var l
+    2: var o
+    3: var u
+    4: var p
+  closure vars:
+    0: a parent:loc6 var
+  stack_size: 4
+  opcodes:
+    0:  array_from 0
+    3:  put_loc0 0: h
+    4:  get_var String
+    9:  get_arg2 2: s
+   10:  dup
+   11:  if_true8 15
+   13:  drop
+   14:  push_empty_string
+   15:  call1 1
+   16:  set_loc1 1: l
+   17:  get_field2 trim
+   22:  call_method 0
+   25:  set_loc2 2: o
+   26:  get_field2 match
+   31:  push_const8 0: 1"^\\$\\$([\\s\\S]+)\\$\\$$|^\\\\\\[([\\s\\S]+)\\\\\\]$"
+   33:  push_const8 1: 1"\u0000\u0003\u0000p\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u00090\u0000\u0000\u0000\u0005\u0001$\u0000\u0001$\u0000\u000b\u0001\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0001\u0000\u0000\u0000\u00ff\u00ff\n\u000c\u0001\u0001$\u0000\u0001$\u0000\u0006\u0007+\u0000\u0000\u0000\u0005\u0001\\\u0000\u0001[\u0000\u000b\u0002\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0001\u0000\u0000\u0000\u00ff\u00ff\n\u000c\u0002\u0001\\\u0000\u0001]\u0000\u0006\u000c\u0000\n"
+   35:  regexp
+   36:  call_method 1
+   39:  put_loc3 3: u
+   40:  get_arg 4: r
+   43:  if_false8 117
+   45:  get_loc3 3: u
+   46:  if_false8 117
+   48:  get_loc3 3: u
+   49:  push_1 1
+   50:  get_array_el
+   51:  dup
+   52:  if_true8 63
+   54:  drop
+   55:  get_loc3 3: u
+   56:  push_2 2
+   57:  get_array_el
+   58:  dup
+   59:  if_true8 63
+   61:  drop
+   62:  push_empty_string
+   63:  get_field2 trim
+   68:  call_method 0
+   71:  set_loc8 4: p
+   73:  dup
+   74:  if_false8 114
+   76:  drop
+   77:  get_loc0 0: h
+   78:  get_field2 push
+   83:  object
+   84:  push_atom_value latex
+   89:  define_field type
+   94:  get_loc8 4: p
+   96:  define_field value
+  101:  push_atom_value block
+  106:  define_field display
+  111:  call_method 1
+  114:  drop
+  115:  goto8 174
+  117:  get_arg 4: r
+  120:  if_false8 166
+  122:  fclosure8 2: [bytecode <null>]
+  124:  get_loc2 2: o
+  125:  call1 1
+  126:  if_false8 166
+  128:  get_loc0 0: h
+  129:  get_field2 push
+  134:  object
+  135:  push_atom_value latex
+  140:  define_field type
+  145:  get_loc2 2: o
+  146:  define_field value
+  151:  push_atom_value inline
+  156:  define_field display
+  161:  call_method 1
+  164:  goto8 173
+  166:  get_var_ref0 0: a
+  167:  get_loc1 1: l
+  168:  get_arg 4: r
+  171:  call2 2
+  172:  set_loc0 0: h
+  173:  drop
+  174:  object
+  175:  push_atom_value line
+  180:  define_field type
+  185:  get_arg0 0: t
+  186:  define_field role
+  191:  get_arg1 1: e
+  192:  dup
+  193:  if_true8 201
+  195:  drop
+  196:  push_atom_value paragraph
+  201:  define_field variant
+  206:  get_arg3 3: i
+  207:  dup
+  208:  if_true8 212
+  210:  drop
+  211:  push_empty_string
+  212:  define_field prefix
+  217:  get_loc0 0: h
+  218:  define_field segments
+  223:  get_arg 5: n
+  226:  dup
+  227:  if_true8 231
+  229:  drop
+  230:  push_0 0
+  231:  define_field indent
+  236:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var s
+    2: var i
+    3: var r
+    4: var n
+  stack_size: 4
+  opcodes:
+    0:  get_var String
+    5:  get_arg0 0: t
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  push_empty_string
+   11:  call1 1
+   12:  get_field2 trim
+   17:  call_method 0
+   20:  set_loc0 0: e
+   21:  lnot
+   22:  dup
+   23:  if_true8 31
+   25:  drop
+   26:  get_loc0 0: e
+   27:  get_length
+   28:  push_i8 120
+   30:  gt
+   31:  if_false8 36
+   33:  push_1 1
+   34:  lnot
+   35:  return
+   36:  push_const8 0: 1"[\\u3400-\\u9fff]"
+   38:  push_const8 1: 1"\u0000\u0001\u0000\u0017\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0015\u0001\u0000\u00004\u00ff\u009f\u000c\u0000\n"
+   40:  regexp
+   41:  get_field2 test
+   46:  get_loc0 0: e
+   47:  call_method 1
+   50:  if_false8 55
+   52:  push_1 1
+   53:  lnot
+   54:  return
+   55:  push_const8 2: 1"https?:\\/\\/"
+   57:  push_const8 3: 1"\u0002\u0001\u0000:\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001H\u0000\u0001T\u0000\u0001T\u0000\u0001P\u0000\u001c\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001S\u0000\n\u0001:\u0000\u0001/\u0000\u0001/\u0000\u000c\u0000\n"
+   59:  regexp
+   60:  get_field2 test
+   65:  get_loc0 0: e
+   66:  call_method 1
+   69:  if_false8 74
+   71:  push_1 1
+   72:  lnot
+   73:  return
+   74:  push_const8 4: 1"^[\\[]{2}[\\s\\S]*[\\]]{2}$"
+   76:  push_const8 5: 1"\u0000\u0001\u0000]\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u001c\u0008\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0015\u0001\u0000[\u0000[\u0000\n\u001c\u0008\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0001\u0000\u0000\u0000\u00ff\u00ff\n\u001c\u0008\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0015\u0001\u0000]\u0000]\u0000\n\u0006\u000c\u0000\n"
+   78:  regexp
+   79:  get_field2 test
+   84:  get_loc0 0: e
+   85:  call_method 1
+   88:  if_false8 110
+   90:  push_const8 6: 1"\\\\[a-zA-Z]+|[_^]|[=+\\-*\\/<>]"
+   92:  push_const8 7: 1"\u0000\u0001\u0000^\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u00096\u0000\u0000\u0000\u0009%\u0000\u0000\u0000\u0001\\\u0000\u001c\u000c\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0002\u0000A\u0000Z\u0000a\u0000z\u0000\n\u0007\u0007\u0000\u0000\u0000\u0015\u0001\u0000^\u0000_\u0000\u0007\u0013\u0000\u0000\u0000\u0015\u0004\u0000*\u0000+\u0000-\u0000-\u0000/\u0000/\u0000<\u0000>\u0000\u000c\u0000\n"
+   94:  regexp
+   95:  get_field2 test
+  100:  get_loc0 0: e
+  101:  call_method 1
+  104:  lnot
+  105:  if_false8 110
+  107:  push_1 1
+  108:  lnot
+  109:  return
+  110:  push_const8 8: 1"\\\\[a-zA-Z]+"
+  112:  push_const8 9: 1"\u0000\u0001\u00000\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001\\\u0000\u001c\u000c\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0002\u0000A\u0000Z\u0000a\u0000z\u0000\n\u000c\u0000\n"
+  114:  regexp
+  115:  get_field2 test
+  120:  get_loc0 0: e
+  121:  call_method 1
+  124:  put_loc1 1: s
+  125:  push_const8 10: 1"[_^]"
+  127:  push_const8 11: 1"\u0000\u0001\u0000\u0017\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0015\u0001\u0000^\u0000_\u0000\u000c\u0000\n"
+  129:  regexp
+  130:  get_field2 test
+  135:  get_loc0 0: e
+  136:  call_method 1
+  139:  put_loc2 2: i
+  140:  push_const8 12: 1"\\d\\s*[=+\\-*\\/<>]\\s*\\d|[A-Za-z]\\s*[=+\\-*\\/<>]\\s*[A-Za-z0-9\\\\]"
+  142:  push_const8 13: 1"\u0000\u0001\u0000`\u0001\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0009\u00a0\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\u001c,\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u0015\u0004\u0000*\u0000+\u0000-\u0000-\u0000/\u0000/\u0000<\u0000>\u0000\u001c,\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u0015\u0001\u00000\u00009\u0000\u0007\u00ab\u0000\u0000\u0000\u0015\u0002\u0000A\u0000Z\u0000a\u0000z\u0000\u001c,\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u0015\u0004\u0000*\u0000+\u0000-\u0000-\u0000/\u0000/\u0000<\u0000>\u0000\u001c,\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u0015\u0004\u00000\u00009\u0000A\u0000Z\u0000\\\u0000\\\u0000a\u0000z\u0000\u000c\u0000\n"
+  144:  regexp
+  145:  get_field2 test
+  150:  get_loc0 0: e
+  151:  call_method 1
+  154:  put_loc3 3: r
+  155:  push_const8 14: 1"\\{[^{}]+\\}"
+  157:  push_const8 15: 1"\u0000\u0001\u00007\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001{\u0000\u001c\u0010\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0003\u0000\u0000\u0000z\u0000|\u0000|\u0000~\u0000\u00ff\u00ff\n\u0001}\u0000\u000c\u0000\n"
+  159:  regexp
+  160:  get_field2 test
+  165:  get_loc0 0: e
+  166:  call_method 1
+  169:  put_loc8 4: n
+  171:  get_loc0 0: e
+  172:  get_field2 replace
+  177:  push_const8 16: 1"\\\\[a-zA-Z]+"
+  179:  push_const8 17: 1"\u0001\u0001\u00000\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001\\\u0000\u001c\u000c\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0002\u0000A\u0000Z\u0000a\u0000z\u0000\n\u000c\u0000\n"
+  181:  regexp
+  182:  push_atom_value " "
+  187:  call_method 2
+  190:  get_field2 match
+  195:  push_const8 18: 1"[A-Za-z]{2,}"
+  197:  push_const8 19: 1"\u0001\u0001\u0000-\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u001c\u000c\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0002\u0000A\u0000Z\u0000a\u0000z\u0000\n\u000c\u0000\n"
+  199:  regexp
+  200:  call_method 1
+  203:  dup
+  204:  if_true8 210
+  206:  drop
+  207:  array_from 0
+  210:  get_length
+  211:  push_6 6
+  212:  gt
+  213:  dup
+  214:  if_false8 231
+  216:  drop
+  217:  get_loc1 1: s
+  218:  lnot
+  219:  dup
+  220:  if_false8 231
+  222:  drop
+  223:  get_loc2 2: i
+  224:  lnot
+  225:  dup
+  226:  if_false8 231
+  228:  drop
+  229:  get_loc3 3: r
+  230:  lnot
+  231:  dup
+  232:  if_true8 272
+  234:  drop
+  235:  get_loc1 1: s
+  236:  lnot
+  237:  dup
+  238:  if_false8 272
+  240:  drop
+  241:  get_loc2 2: i
+  242:  lnot
+  243:  dup
+  244:  if_false8 272
+  246:  drop
+  247:  get_loc3 3: r
+  248:  lnot
+  249:  dup
+  250:  if_false8 272
+  252:  drop
+  253:  get_loc8 4: n
+  255:  lnot
+  256:  dup
+  257:  if_true8 272
+  259:  drop
+  260:  get_loc1 1: s
+  261:  dup
+  262:  if_true8 271
+  264:  drop
+  265:  get_loc2 2: i
+  266:  dup
+  267:  if_true8 271
+  269:  drop
+  270:  get_loc3 3: r
+  271:  lnot
+  272:  lnot
+  273:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: l
+  mode: strict
+  args: t
+  locals:
+    0: var e
+  stack_size: 4
+  opcodes:
+    0:  get_var String
+    5:  get_arg0 0: t
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  push_empty_string
+   11:  call1 1
+   12:  get_field2 trim
+   17:  call_method 0
+   20:  set_loc0 0: e
+   21:  get_field2 replace
+   26:  push_const8 0: 1"^[\\s*_~`$]+|[\\s*_~`$]+$"
+   28:  push_const8 1: 1"\u0001\u0001\u0000\u00b6\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0009S\u0000\u0000\u0000\u0005\u001c<\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u000e\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000$\u0000$\u0000*\u0000*\u0000_\u0000`\u0000~\u0000~\u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u0007N\u0000\u0000\u0000\u001c<\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u000e\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000$\u0000$\u0000*\u0000*\u0000_\u0000`\u0000~\u0000~\u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u0006\u000c\u0000\n"
+   30:  regexp
+   31:  push_empty_string
+   32:  call_method 2
+   35:  set_loc0 0: e
+   36:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: o
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var s
+    2: var i
+    3: var r
+  closure vars:
+    0: l parent:loc8 var
+  stack_size: 5
+  opcodes:
+    0:  get_var String
+    5:  get_arg0 0: t
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  push_empty_string
+   11:  call1 1
+   12:  get_field2 trim
+   17:  call_method 0
+   20:  put_loc0 0: e
+   21:  push_atom_value "|"
+   26:  get_loc0 0: e
+   27:  get_field2 charAt
+   32:  push_0 0
+   33:  call_method 1
+   36:  strict_eq
+   37:  dup
+   38:  if_false8 52
+   40:  drop
+   41:  get_loc0 0: e
+   42:  get_field2 slice
+   47:  push_1 1
+   48:  call_method 1
+   51:  set_loc0 0: e
+   52:  drop
+   53:  push_atom_value "|"
+   58:  get_loc0 0: e
+   59:  get_field2 charAt
+   64:  get_loc0 0: e
+   65:  get_length
+   66:  push_1 1
+   67:  sub
+   68:  call_method 1
+   71:  strict_eq
+   72:  dup
+   73:  if_false8 88
+   75:  drop
+   76:  get_loc0 0: e
+   77:  get_field2 slice
+   82:  push_0 0
+   83:  push_minus1 -1
+   84:  call_method 2
+   87:  set_loc0 0: e
+   88:  drop
+   89:  get_loc0 0: e
+   90:  get_field2 split
+   95:  push_atom_value "|"
+  100:  call_method 1
+  103:  put_loc1 1: s
+  104:  array_from 0
+  107:  put_loc2 2: i
+  108:  push_0 0
+  109:  put_loc3 3: r
+  110:  get_loc3 3: r
+  111:  get_loc1 1: s
+  112:  get_length
+  113:  lt
+  114:  if_false8 135
+  116:  get_loc2 2: i
+  117:  get_field2 push
+  122:  get_var_ref0 0: l
+  123:  get_loc1 1: s
+  124:  get_loc3 3: r
+  125:  get_array_el
+  126:  call1 1
+  127:  call_method 1
+  130:  drop
+  131:  inc_loc 3: r
+  133:  goto8 110
+  135:  get_loc2 2: i
+  136:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: u
+  mode: strict
+  args: t
+  locals:
+    0: var e
+  stack_size: 4
+  opcodes:
+    0:  get_arg0 0: t
+    1:  lnot
+    2:  dup
+    3:  if_true8 14
+    5:  drop
+    6:  push_atom_value string
+   11:  get_arg0 0: t
+   12:  typeof
+   13:  neq
+   14:  if_false8 19
+   16:  push_1 1
+   17:  lnot
+   18:  return
+   19:  get_arg0 0: t
+   20:  get_field2 trim
+   25:  call_method 0
+   28:  put_loc0 0: e
+   29:  push_minus1 -1
+   30:  get_loc0 0: e
+   31:  get_field2 indexOf
+   36:  push_atom_value "-"
+   41:  call_method 1
+   44:  strict_neq
+   45:  dup
+   46:  if_false8 63
+   48:  drop
+   49:  push_const8 0: 1"^\\|?[\\s:\\-|]+\\|[\\s:\\-|]*$"
+   51:  push_const8 1: 1"\u0000\u0001\u0000\u00bc\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u001c\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001|\u0000\n\u001c8\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u000d\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000-\u0000-\u0000:\u0000:\u0000|\u0000|\u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u0001|\u0000\u001c8\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u000d\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000-\u0000-\u0000:\u0000:\u0000|\u0000|\u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u0006\u000c\u0000\n"
+   53:  regexp
+   54:  get_field2 test
+   59:  get_loc0 0: e
+   60:  call_method 1
+   63:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: p
+  mode: strict
+  args: t e s i
+  locals:
+    0: var r
+    1: var n
+    2: var a
+    3: var h
+    4: var l
+  closure vars:
+    0: o parent:loc9 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: o
+    1:  get_arg1 1: e
+    2:  get_arg2 2: s
+    3:  get_array_el
+    4:  call1 1
+    5:  put_loc0 0: r
+    6:  array_from 0
+    9:  put_loc1 1: n
+   10:  get_arg2 2: s
+   11:  push_2 2
+   12:  add
+   13:  put_loc2 2: a
+   14:  get_loc2 2: a
+   15:  get_arg1 1: e
+   16:  get_length
+   17:  lt
+   18:  if_false8 72
+   20:  get_arg1 1: e
+   21:  get_loc2 2: a
+   22:  get_array_el
+   23:  get_field2 trim
+   28:  call_method 0
+   31:  set_loc3 3: h
+   32:  lnot
+   33:  dup
+   34:  if_true8 53
+   36:  drop
+   37:  push_atom_value "|"
+   42:  get_loc3 3: h
+   43:  get_field2 charAt
+   48:  push_0 0
+   49:  call_method 1
+   52:  strict_neq
+   53:  if_true8 72
+   55:  get_loc1 1: n
+   56:  get_field2 push
+   61:  get_var_ref0 0: o
+   62:  get_loc3 3: h
+   63:  call1 1
+   64:  call_method 1
+   67:  drop
+   68:  inc_loc 2: a
+   70:  goto8 14
+   72:  get_loc0 0: r
+   73:  array_from 1
+   76:  get_field2 concat
+   81:  get_loc1 1: n
+   82:  call_method 1
+   85:  put_loc8 4: l
+   87:  get_arg0 0: t
+   88:  get_field2 push
+   93:  object
+   94:  push_atom_value table
+   99:  define_field type
+  104:  get_arg3 3: i
+  105:  define_field role
+  110:  get_loc0 0: r
+  111:  define_field header
+  116:  get_loc1 1: n
+  117:  define_field rows
+  122:  get_loc8 4: l
+  124:  define_field allRows
+  129:  call_method 1
+  132:  drop
+  133:  get_loc2 2: a
+  134:  push_1 1
+  135:  sub
+  136:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: c
+  mode: strict
+  args: e i r n
+  locals:
+    0: var a
+    1: var l
+    2: var o
+    3: var c
+    4: var g
+    5: var f
+    6: var d
+    7: var m
+    8: var v
+    9: var x
+   10: var y
+   11: var _
+   12: var S
+   13: var $
+   14: var b
+   15: var k
+   16: var A
+  closure vars:
+    0: u parent:loc10 var
+    1: p parent:loc11 var
+    2: t parent:loc0 const
+    3: s parent:loc2 var
+    4: h parent:loc7 var
+  stack_size: 9
+  opcodes:
+    0:  get_var String
+    5:  get_arg1 1: i
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  push_empty_string
+   11:  call1 1
+   12:  get_field2 replace
+   17:  push_const8 0: 1"\\r\\n"
+   19:  push_const8 1: 1"\u0001\u0001\u0000\u0016\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001\u000d\u0000\u0001\n\u0000\u000c\u0000\n"
+   21:  regexp
+   22:  push_atom_value "\n"
+   27:  call_method 2
+   30:  get_field2 split
+   35:  push_atom_value "\n"
+   40:  call_method 1
+   43:  put_loc0 0: a
+   44:  push_0 0
+   45:  put_loc1 1: l
+   46:  get_loc1 1: l
+   47:  get_loc0 0: a
+   48:  get_length
+   49:  lt
+   50:  if_false 857
+   55:  get_loc0 0: a
+   56:  get_loc1 1: l
+   57:  get_array_el
+   58:  set_loc2 2: o
+   59:  get_field2 trim
+   64:  call_method 0
+   67:  set_loc3 3: c
+   68:  if_false 802
+   73:  push_atom_value "|"
+   78:  get_loc2 2: o
+   79:  get_field2 charAt
+   84:  push_0 0
+   85:  call_method 1
+   88:  strict_eq
+   89:  if_false8 120
+   91:  get_loc1 1: l
+   92:  push_1 1
+   93:  add
+   94:  get_loc0 0: a
+   95:  get_length
+   96:  lt
+   97:  if_false8 120
+   99:  get_var_ref0 0: u
+  100:  get_loc0 0: a
+  101:  get_loc1 1: l
+  102:  push_1 1
+  103:  add
+  104:  get_array_el
+  105:  call1 1
+  106:  if_false8 120
+  108:  get_var_ref1 1: p
+  109:  get_arg0 0: e
+  110:  get_loc0 0: a
+  111:  get_loc1 1: l
+  112:  get_arg3 3: n
+  113:  call 4
+  116:  put_loc1 1: l
+  117:  goto16 852
+  120:  push_const8 2: 1"^(-{3,}|\\*{3,}|_{3,})$"
+  122:  push_const8 3: 1"\u0000\u0002\u0000i\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u000b\u0001\u00099\u0000\u0000\u0000\u0009\u001a\u0000\u0000\u0000\u001c\u0004\u0000\u0000\u0000\u0003\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0001-\u0000\n\u0007\u0015\u0000\u0000\u0000\u001c\u0004\u0000\u0000\u0000\u0003\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0001*\u0000\n\u0007\u0015\u0000\u0000\u0000\u001c\u0004\u0000\u0000\u0000\u0003\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0001_\u0000\n\u000c\u0001\u0006\u000c\u0000\n"
+  124:  regexp
+  125:  get_field2 test
+  130:  get_loc3 3: c
+  131:  call_method 1
+  134:  if_false8 166
+  136:  get_arg0 0: e
+  137:  get_field2 push
+  142:  object
+  143:  push_atom_value hr
+  148:  define_field type
+  153:  get_arg3 3: n
+  154:  define_field role
+  159:  call_method 1
+  162:  drop
+  163:  goto16 852
+  166:  get_loc2 2: o
+  167:  get_field2 match
+  172:  push_const8 4: 1"^<image>([\\s\\S]*?)<\\/image>$"
+  174:  push_const8 5: 1"\u0000\u0002\u0000T\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u0001<\u0000\u0001i\u0000\u0001m\u0000\u0001a\u0000\u0001g\u0000\u0001e\u0000\u0001>\u0000\u000b\u0001\u0008\u000c\u0000\u0000\u0000\u0015\u0001\u0000\u0000\u0000\u00ff\u00ff\u0007\u00ef\u00ff\u00ff\u00ff\u000c\u0001\u0001<\u0000\u0001/\u0000\u0001i\u0000\u0001m\u0000\u0001a\u0000\u0001g\u0000\u0001e\u0000\u0001>\u0000\u0006\u000c\u0000\n"
+  176:  regexp
+  177:  call_method 1
+  180:  set_loc8 4: g
+  182:  if_false8 232
+  184:  get_arg0 0: e
+  185:  get_field2 push
+  190:  object
+  191:  push_atom_value image
+  196:  define_field type
+  201:  get_arg3 3: n
+  202:  define_field role
+  207:  get_var_ref_check 2: t
+  210:  get_loc8 4: g
+  212:  push_1 1
+  213:  get_array_el
+  214:  dup
+  215:  if_true8 219
+  217:  drop
+  218:  push_empty_string
+  219:  call1 1
+  220:  define_field src
+  225:  call_method 1
+  228:  drop
+  229:  goto16 852
+  232:  get_loc3 3: c
+  233:  get_field2 match
+  238:  push_const8 6: 1"^!\\[([^\\]]*)\\]\\(([^)]+)\\)$"
+  240:  push_const8 7: 1"\u0000\u0003\u0000c\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u0001!\u0000\u0001[\u0000\u000b\u0001\u001c\u000c\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0002\u0000\u0000\u0000\\\u0000^\u0000\u00ff\u00ff\n\u000c\u0001\u0001]\u0000\u0001(\u0000\u000b\u0002\u001c\u000c\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0002\u0000\u0000\u0000(\u0000*\u0000\u00ff\u00ff\n\u000c\u0002\u0001)\u0000\u0006\u000c\u0000\n"
+  242:  regexp
+  243:  call_method 1
+  246:  set_loc8 5: f
+  248:  if_false8 289
+  250:  get_arg0 0: e
+  251:  get_field2 push
+  256:  object
+  257:  push_atom_value image
+  262:  define_field type
+  267:  get_arg3 3: n
+  268:  define_field role
+  273:  get_loc8 5: f
+  275:  push_2 2
+  276:  get_array_el
+  277:  define_field src
+  282:  call_method 1
+  285:  drop
+  286:  goto16 852
+  289:  get_loc3 3: c
+  290:  get_field2 match
+  295:  push_const8 8: 1"^(https?:\\/\\/[^\\s]+)$"
+  297:  push_const8 9: 1"\u0000\u0002\u0000\u0081\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u000b\u0001\u0001h\u0000\u0001t\u0000\u0001t\u0000\u0001p\u0000\u001c\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001s\u0000\n\u0001:\u0000\u0001/\u0000\u0001/\u0000\u001c0\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u000b\u0000\u0000\u0000\u0008\u0000\u000e\u0000\u001f\u0000!\u0000\u009f\u0000\u00a1\u0000\u007f\u0016\u0081\u0016\u00ff\u001f\u000b ' * . 0 ^ ` \u00ff/\u00010\u00fe\u00fe\u0000\u00ff\u00ff\u00ff\n\u000c\u0001\u0006\u000c\u0000\n"
+  299:  regexp
+  300:  call_method 1
+  303:  set_loc8 6: d
+  305:  if_false8 354
+  307:  get_var_ref3 3: s
+  308:  get_loc8 6: d
+  310:  push_1 1
+  311:  get_array_el
+  312:  call1 1
+  313:  if_false8 354
+  315:  get_arg0 0: e
+  316:  get_field2 push
+  321:  object
+  322:  push_atom_value image
+  327:  define_field type
+  332:  get_arg3 3: n
+  333:  define_field role
+  338:  get_loc8 6: d
+  340:  push_1 1
+  341:  get_array_el
+  342:  define_field src
+  347:  call_method 1
+  350:  drop
+  351:  goto16 852
+  354:  get_loc3 3: c
+  355:  get_field2 match
+  360:  push_const8 10: 1"^(#{1,6})\\s+(.+)$"
+  362:  push_const8 11: 1"\u0000\u0003\u0000\u007f\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u000b\u0001\u001c\u0004\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0006\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001#\u0000\n\u000c\u0001\u001c,\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u000b\u0002\u001c\u0002\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0003\n\u000c\u0002\u0006\u000c\u0000\n"
+  364:  regexp
+  365:  call_method 1
+  368:  set_loc8 7: m
+  370:  if_false8 423
+  372:  get_loc8 7: m
+  374:  push_1 1
+  375:  get_array_el
+  376:  get_length
+  377:  set_loc8 8: v
+  379:  push_6 6
+  380:  gt
+  381:  dup
+  382:  if_false8 388
+  384:  drop
+  385:  push_6 6
+  386:  set_loc8 8: v
+  388:  drop
+  389:  get_arg0 0: e
+  390:  get_field2 push
+  395:  get_var_ref 4: h
+  398:  get_arg3 3: n
+  399:  push_atom_value heading
+  404:  get_loc8 8: v
+  406:  add
+  407:  get_loc8 7: m
+  409:  push_2 2
+  410:  get_array_el
+  411:  push_empty_string
+  412:  get_arg2 2: r
+  413:  call 5
+  416:  call_method 1
+  419:  drop
+  420:  goto16 852
+  423:  get_loc2 2: o
+  424:  get_field2 match
+  429:  push_const8 12: 1"^(\\s*)(>+)\\s?(.*)$"
+  431:  push_const8 13: 1"\u0000\u0004\u0000\u00c0\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u000b\u0001\u001c,\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u000c\u0001\u000b\u0002\u001c\u0004\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0001>\u0000\n\u000c\u0002\u001c,\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u000b\u0003\u001c\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0003\n\u000c\u0003\u0006\u000c\u0000\n"
+  433:  regexp
+  434:  call_method 1
+  437:  set_loc8 9: x
+  439:  if_false8 525
+  441:  get_var Math
+  446:  get_field2 floor
+  451:  get_loc8 9: x
+  453:  push_1 1
+  454:  get_array_el
+  455:  dup
+  456:  if_true8 460
+  458:  drop
+  459:  push_empty_string
+  460:  get_length
+  461:  push_2 2
+  462:  div
+  463:  call_method 1
+  466:  push_2 2
+  467:  get_var Math
+  472:  get_field2 max
+  477:  push_0 0
+  478:  get_loc8 9: x
+  480:  push_2 2
+  481:  get_array_el
+  482:  get_length
+  483:  push_1 1
+  484:  sub
+  485:  call_method 2
+  488:  mul
+  489:  add
+  490:  put_loc8 10: y
+  492:  get_arg0 0: e
+  493:  get_field2 push
+  498:  get_var_ref 4: h
+  501:  get_arg3 3: n
+  502:  push_atom_value quote
+  507:  get_loc8 9: x
+  509:  push_3 3
+  510:  get_array_el
+  511:  push_empty_string
+  512:  get_arg2 2: r
+  513:  get_loc8 10: y
+  515:  call 6
+  518:  call_method 1
+  521:  drop
+  522:  goto16 852
+  525:  get_loc2 2: o
+  526:  get_field2 match
+  531:  push_const8 14: 1"^(\\s*)[-*]\\s+(.+)$"
+  533:  push_const8 15: 1"\u0000\u0003\u0000\u00b2\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u000b\u0001\u001c,\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u000c\u0001\u0015\u0002\u0000*\u0000*\u0000-\u0000-\u0000\u001c,\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u000b\u0002\u001c\u0002\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0003\n\u000c\u0002\u0006\u000c\u0000\n"
+  535:  regexp
+  536:  call_method 1
+  539:  set_loc8 11: _
+  541:  if_false 694
+  546:  get_var Math
+  551:  get_field2 floor
+  556:  get_loc8 11: _
+  558:  push_1 1
+  559:  get_array_el
+  560:  get_length
+  561:  push_2 2
+  562:  div
+  563:  call_method 1
+  566:  put_loc8 12: S
+  568:  get_loc8 11: _
+  570:  push_2 2
+  571:  get_array_el
+  572:  get_field2 match
+  577:  push_const8 16: 1"^\\[([ xX])\\]\\s*(.*)$"
+  579:  push_const8 17: 1"\u0000\u0003\u0000\u007f\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u0001[\u0000\u000b\u0001\u0015\u0003\u0000 \u0000 \u0000X\u0000X\u0000x\u0000x\u0000\u000c\u0001\u0001]\u0000\u001c,\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u000b\u0002\u001c\u0002\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0003\n\u000c\u0002\u0006\u000c\u0000\n"
+  581:  regexp
+  582:  call_method 1
+  585:  set_loc8 13: $
+  587:  if_false8 657
+  589:  push_atom_value x
+  594:  get_loc8 13: $
+  596:  push_1 1
+  597:  get_array_el
+  598:  get_field2 toLowerCase
+  603:  call_method 0
+  606:  strict_eq
+  607:  put_loc8 14: b
+  609:  get_arg0 0: e
+  610:  get_field2 push
+  615:  get_var_ref 4: h
+  618:  get_arg3 3: n
+  619:  push_atom_value list
+  624:  get_loc8 13: $
+  626:  push_2 2
+  627:  get_array_el
+  628:  get_loc8 14: b
+  630:  if_false8 639
+  632:  push_atom_value "\u00e2\u0098\u0091 "
+  637:  goto8 644
+  639:  push_atom_value "\u00e2\u0098\u0090 "
+  644:  get_arg2 2: r
+  645:  get_loc8 12: S
+  647:  call 6
+  650:  call_method 1
+  653:  drop
+  654:  goto16 852
+  657:  get_arg0 0: e
+  658:  get_field2 push
+  663:  get_var_ref 4: h
+  666:  get_arg3 3: n
+  667:  push_atom_value list
+  672:  get_loc8 11: _
+  674:  push_2 2
+  675:  get_array_el
+  676:  push_atom_value "\u00e2\u0080\u00a2 "
+  681:  get_arg2 2: r
+  682:  get_loc8 12: S
+  684:  call 6
+  687:  call_method 1
+  690:  drop
+  691:  goto16 852
+  694:  get_loc2 2: o
+  695:  get_field2 match
+  700:  push_const8 18: 1"^(\\s*)(\\d+)\\.\\s+(.+)$"
+  702:  push_const8 19: 1"\u0000\u0004\u0000\u00c7\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u000b\u0001\u001c,\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u000c\u0001\u000b\u0002\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u000c\u0002\u0001.\u0000\u001c,\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u000b\u0003\u001c\u0002\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0003\n\u000c\u0003\u0006\u000c\u0000\n"
+  704:  regexp
+  705:  call_method 1
+  708:  set_loc8 15: k
+  710:  if_false8 775
+  712:  get_var Math
+  717:  get_field2 floor
+  722:  get_loc8 15: k
+  724:  push_1 1
+  725:  get_array_el
+  726:  get_length
+  727:  push_2 2
+  728:  div
+  729:  call_method 1
+  732:  put_loc8 16: A
+  734:  get_arg0 0: e
+  735:  get_field2 push
+  740:  get_var_ref 4: h
+  743:  get_arg3 3: n
+  744:  push_atom_value list
+  749:  get_loc8 15: k
+  751:  push_3 3
+  752:  get_array_el
+  753:  get_loc8 15: k
+  755:  push_2 2
+  756:  get_array_el
+  757:  push_atom_value ". "
+  762:  add
+  763:  get_arg2 2: r
+  764:  get_loc8 16: A
+  766:  call 6
+  769:  call_method 1
+  772:  drop
+  773:  goto8 852
+  775:  get_arg0 0: e
+  776:  get_field2 push
+  781:  get_var_ref 4: h
+  784:  get_arg3 3: n
+  785:  push_atom_value paragraph
+  790:  get_loc2 2: o
+  791:  push_empty_string
+  792:  get_arg2 2: r
+  793:  call 5
+  796:  call_method 1
+  799:  drop
+  800:  goto8 852
+  802:  get_arg0 0: e
+  803:  get_length
+  804:  push_0 0
+  805:  gt
+  806:  dup
+  807:  if_false8 851
+  809:  drop
+  810:  push_atom_value spacer
+  815:  get_arg0 0: e
+  816:  get_arg0 0: e
+  817:  get_length
+  818:  push_1 1
+  819:  sub
+  820:  get_array_el
+  821:  get_field type
+  826:  strict_neq
+  827:  dup
+  828:  if_false8 851
+  830:  drop
+  831:  get_arg0 0: e
+  832:  get_field2 push
+  837:  object
+  838:  push_atom_value spacer
+  843:  define_field type
+  848:  call_method 1
+  851:  drop
+  852:  inc_loc 1: l
+  854:  goto16 46
+  857:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: g
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var s
+    2: var i
+    3: var r
+    4: var n
+    5: var a
+  stack_size: 5
+  opcodes:
+    0:  get_var String
+    5:  get_arg0 0: t
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  push_empty_string
+   11:  call1 1
+   12:  get_field2 trim
+   17:  call_method 0
+   20:  get_field2 split
+   25:  push_atom_value "\n"
+   30:  call_method 1
+   33:  put_loc0 0: e
+   34:  array_from 0
+   37:  put_loc1 1: s
+   38:  array_from 0
+   41:  put_loc2 2: i
+   42:  push_0 0
+   43:  put_loc3 3: r
+   44:  get_loc3 3: r
+   45:  get_loc0 0: e
+   46:  get_length
+   47:  lt
+   48:  if_false8 130
+   50:  get_loc0 0: e
+   51:  get_loc3 3: r
+   52:  get_array_el
+   53:  get_field2 trim
+   58:  call_method 0
+   61:  set_loc8 4: n
+   63:  if_false8 126
+   65:  get_loc8 4: n
+   67:  get_field2 match
+   72:  push_const8 0: 1"^([A-Z])[\\.\u3001]\\s*(.+)$"
+   74:  push_const8 1: 1"\u0000\u0003\u0000|\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u000b\u0001\u0015\u0001\u0000A\u0000Z\u0000\u000c\u0001\u0015\u0002\u0000.\u0000.\u0000\u00010\u00010\u001c,\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u000b\u0002\u001c\u0002\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0003\n\u000c\u0002\u0006\u000c\u0000\n"
+   76:  regexp
+   77:  call_method 1
+   80:  set_loc8 5: a
+   82:  if_false8 114
+   84:  get_loc2 2: i
+   85:  get_field2 push
+   90:  object
+   91:  get_loc8 5: a
+   93:  push_1 1
+   94:  get_array_el
+   95:  define_field label
+  100:  get_loc8 5: a
+  102:  push_2 2
+  103:  get_array_el
+  104:  define_field text
+  109:  call_method 1
+  112:  goto8 125
+  114:  get_loc1 1: s
+  115:  get_field2 push
+  120:  get_loc8 4: n
+  122:  call_method 1
+  125:  drop
+  126:  inc_loc 3: r
+  128:  goto8 44
+  130:  object
+  131:  get_loc1 1: s
+  132:  get_field2 join
+  137:  push_atom_value "\n"
+  142:  call_method 1
+  145:  define_field question
+  150:  get_loc2 2: i
+  151:  define_field options
+  156:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: f
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var s
+    2: var i
+    3: var r
+    4: var n
+  stack_size: 4
+  opcodes:
+    0:  get_var String
+    5:  get_arg0 0: t
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  push_empty_string
+   11:  call1 1
+   12:  get_field2 trim
+   17:  call_method 0
+   20:  get_field2 split
+   25:  push_atom_value "\n"
+   30:  call_method 1
+   33:  put_loc0 0: e
+   34:  array_from 0
+   37:  put_loc1 1: s
+   38:  push_0 0
+   39:  put_loc2 2: i
+   40:  get_loc2 2: i
+   41:  get_loc0 0: e
+   42:  get_length
+   43:  lt
+   44:  if_false8 108
+   46:  get_loc0 0: e
+   47:  get_loc2 2: i
+   48:  get_array_el
+   49:  get_field2 trim
+   54:  call_method 0
+   57:  set_loc3 3: r
+   58:  if_false8 104
+   60:  get_loc3 3: r
+   61:  get_field2 match
+   66:  push_const8 0: 1"^[-*]\\s*(.+)$"
+   68:  push_const8 1: 1"\u0000\u0002\u0000q\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u0015\u0002\u0000*\u0000*\u0000-\u0000-\u0000\u001c,\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u000b\u0001\u001c\u0002\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0003\n\u000c\u0001\u0006\u000c\u0000\n"
+   70:  regexp
+   71:  call_method 1
+   74:  set_loc8 4: n
+   76:  if_false8 93
+   78:  get_loc1 1: s
+   79:  get_field2 push
+   84:  get_loc8 4: n
+   86:  push_1 1
+   87:  get_array_el
+   88:  call_method 1
+   91:  goto8 103
+   93:  get_loc1 1: s
+   94:  get_field2 push
+   99:  get_loc3 3: r
+  100:  call_method 1
+  103:  drop
+  104:  inc_loc 2: i
+  106:  goto8 40
+  108:  get_loc1 1: s
+  109:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: d
+  mode: strict
+  args: e s i r
+  locals:
+    0: var n
+    1: var a
+    2: var h
+    3: var l
+    4: var o
+  closure vars:
+    0: c parent:loc12 var
+    1: t parent:loc0 const
+    2: g parent:loc13 var
+    3: f parent:loc14 var
+  stack_size: 6
+  opcodes:
+    0:  get_var String
+    5:  get_arg1 1: s
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  push_empty_string
+   11:  call1 1
+   12:  put_loc1 1: a
+   13:  push_const8 0: 1"<image>([\\s\\S]*?)<\\/image>|```([a-zA-Z0-9_\\-\\+]+)?\\n?([\\s\\S]*?)```|~~~([a-zA-Z0-9_\\-\\+]*)\\n?([\\s\\S]*?)~~~|\\$\\$([\\s\\S]*?)\\$\\$|\\\\\\[([\\s\\S]*?)\\\\\\]|\\[MCQ\\]([\\s\\S]*?)\\[\\/MCQ\\]|\\[SUGGEST\\]([\\s\\S]*?)\\[\\/SUGGEST\\]"
+   15:  push_const8 1: 1"\u0001\n\u00006\u0002\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0009\u00d3\u0001\u0000\u0000\u0009\u0093\u0001\u0000\u0000\u0009h\u0001\u0000\u0000\u0009=\u0001\u0000\u0000\u0009\u00c6\u0000\u0000\u0000\u0009G\u0000\u0000\u0000\u0001<\u0000\u0001i\u0000\u0001m\u0000\u0001a\u0000\u0001g\u0000\u0001e\u0000\u0001>\u0000\u000b\u0001\u0008\u000c\u0000\u0000\u0000\u0015\u0001\u0000\u0000\u0000\u00ff\u00ff\u0007\u00ef\u00ff\u00ff\u00ff\u000c\u0001\u0001<\u0000\u0001/\u0000\u0001i\u0000\u0001m\u0000\u0001a\u0000\u0001g\u0000\u0001e\u0000\u0001>\u0000\u0007u\u0000\u0000\u0000\u0001`\u0000\u0001`\u0000\u0001`\u0000\u000d\u0002\u0002\u00091\u0000\u0000\u0000\u000b\u0002\u001c\u001c\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0006\u0000+\u0000+\u0000-\u0000-\u00000\u00009\u0000A\u0000Z\u0000_\u0000_\u0000a\u0000z\u0000\n\u000c\u0002\u001c\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001\n\u0000\n\u000b\u0003\u0008\u000c\u0000\u0000\u0000\u0015\u0001\u0000\u0000\u0000\u00ff\u00ff\u0007\u00ef\u00ff\u00ff\u00ff\u000c\u0003\u0001`\u0000\u0001`\u0000\u0001`\u0000\u0007m\u0000\u0000\u0000\u0001~\u0000\u0001~\u0000\u0001~\u0000\u000b\u0004\u001c\u001c\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0006\u0000+\u0000+\u0000-\u0000-\u00000\u00009\u0000A\u0000Z\u0000_\u0000_\u0000a\u0000z\u0000\n\u000c\u0004\u001c\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001\n\u0000\n\u000b\u0005\u0008\u000c\u0000\u0000\u0000\u0015\u0001\u0000\u0000\u0000\u00ff\u00ff\u0007\u00ef\u00ff\u00ff\u00ff\u000c\u0005\u0001~\u0000\u0001~\u0000\u0001~\u0000\u0007!\u0000\u0000\u0000\u0001$\u0000\u0001$\u0000\u000b\u0006\u0008\u000c\u0000\u0000\u0000\u0015\u0001\u0000\u0000\u0000\u00ff\u00ff\u0007\u00ef\u00ff\u00ff\u00ff\u000c\u0006\u0001$\u0000\u0001$\u0000\u0007!\u0000\u0000\u0000\u0001\\\u0000\u0001[\u0000\u000b\u0007\u0008\u000c\u0000\u0000\u0000\u0015\u0001\u0000\u0000\u0000\u00ff\u00ff\u0007\u00ef\u00ff\u00ff\u00ff\u000c\u0007\u0001\\\u0000\u0001]\u0000\u00076\u0000\u0000\u0000\u0001[\u0000\u0001M\u0000\u0001C\u0000\u0001Q\u0000\u0001]\u0000\u000b\u0008\u0008\u000c\u0000\u0000\u0000\u0015\u0001\u0000\u0000\u0000\u00ff\u00ff\u0007\u00ef\u00ff\u00ff\u00ff\u000c\u0008\u0001[\u0000\u0001/\u0000\u0001M\u0000\u0001C\u0000\u0001Q\u0000\u0001]\u0000\u0007N\u0000\u0000\u0000\u0001[\u0000\u0001S\u0000\u0001U\u0000\u0001G\u0000\u0001G\u0000\u0001E\u0000\u0001S\u0000\u0001T\u0000\u0001]\u0000\u000b\u0009\u0008\u000c\u0000\u0000\u0000\u0015\u0001\u0000\u0000\u0000\u00ff\u00ff\u0007\u00ef\u00ff\u00ff\u00ff\u000c\u0009\u0001[\u0000\u0001/\u0000\u0001S\u0000\u0001U\u0000\u0001G\u0000\u0001G\u0000\u0001E\u0000\u0001S\u0000\u0001T\u0000\u0001]\u0000\u000c\u0000\n"
+   17:  regexp
+   18:  put_loc2 2: h
+   19:  push_0 0
+   20:  put_loc3 3: l
+   21:  get_loc2 2: h
+   22:  get_field2 exec
+   27:  get_loc1 1: a
+   28:  call_method 1
+   31:  set_loc0 0: n
+   32:  if_false 502
+   37:  get_loc0 0: n
+   38:  get_field index
+   43:  get_loc3 3: l
+   44:  gt
+   45:  dup
+   46:  if_false8 72
+   48:  drop
+   49:  get_var_ref0 0: c
+   50:  get_arg0 0: e
+   51:  get_loc1 1: a
+   52:  get_field2 slice
+   57:  get_loc3 3: l
+   58:  get_loc0 0: n
+   59:  get_field index
+   64:  call_method 2
+   67:  get_arg2 2: i
+   68:  get_arg3 3: r
+   69:  call 4
+   72:  drop
+   73:  undefined
+   74:  get_loc0 0: n
+   75:  push_1 1
+   76:  get_array_el
+   77:  strict_neq
+   78:  if_false8 127
+   80:  get_arg0 0: e
+   81:  get_field2 push
+   86:  object
+   87:  push_atom_value image
+   92:  define_field type
+   97:  get_arg3 3: r
+   98:  define_field role
+  103:  get_var_ref_check 1: t
+  106:  get_loc0 0: n
+  107:  push_1 1
+  108:  get_array_el
+  109:  dup
+  110:  if_true8 114
+  112:  drop
+  113:  push_empty_string
+  114:  call1 1
+  115:  define_field src
+  120:  call_method 1
+  123:  drop
+  124:  goto16 492
+  127:  undefined
+  128:  get_loc0 0: n
+  129:  push_3 3
+  130:  get_array_el
+  131:  strict_neq
+  132:  if_false8 190
+  134:  get_arg0 0: e
+  135:  get_field2 push
+  140:  object
+  141:  push_atom_value code
+  146:  define_field type
+  151:  get_arg3 3: r
+  152:  define_field role
+  157:  get_loc0 0: n
+  158:  push_2 2
+  159:  get_array_el
+  160:  dup
+  161:  if_true8 165
+  163:  drop
+  164:  push_empty_string
+  165:  define_field lang
+  170:  get_loc0 0: n
+  171:  push_3 3
+  172:  get_array_el
+  173:  dup
+  174:  if_true8 178
+  176:  drop
+  177:  push_empty_string
+  178:  define_field text
+  183:  call_method 1
+  186:  drop
+  187:  goto16 492
+  190:  undefined
+  191:  get_loc0 0: n
+  192:  push_5 5
+  193:  get_array_el
+  194:  strict_neq
+  195:  if_false8 253
+  197:  get_arg0 0: e
+  198:  get_field2 push
+  203:  object
+  204:  push_atom_value code
+  209:  define_field type
+  214:  get_arg3 3: r
+  215:  define_field role
+  220:  get_loc0 0: n
+  221:  push_4 4
+  222:  get_array_el
+  223:  dup
+  224:  if_true8 228
+  226:  drop
+  227:  push_empty_string
+  228:  define_field lang
+  233:  get_loc0 0: n
+  234:  push_5 5
+  235:  get_array_el
+  236:  dup
+  237:  if_true8 241
+  239:  drop
+  240:  push_empty_string
+  241:  define_field text
+  246:  call_method 1
+  249:  drop
+  250:  goto16 492
+  253:  undefined
+  254:  get_loc0 0: n
+  255:  push_6 6
+  256:  get_array_el
+  257:  strict_neq
+  258:  if_false8 309
+  260:  get_arg2 2: i
+  261:  if_false8 309
+  263:  get_arg0 0: e
+  264:  get_field2 push
+  269:  object
+  270:  push_atom_value latex_block
+  275:  define_field type
+  280:  get_arg3 3: r
+  281:  define_field role
+  286:  get_loc0 0: n
+  287:  push_6 6
+  288:  get_array_el
+  289:  get_field2 trim
+  294:  call_method 0
+  297:  define_field value
+  302:  call_method 1
+  305:  drop
+  306:  goto16 492
+  309:  undefined
+  310:  get_loc0 0: n
+  311:  push_7 7
+  312:  get_array_el
+  313:  strict_neq
+  314:  if_false8 365
+  316:  get_arg2 2: i
+  317:  if_false8 365
+  319:  get_arg0 0: e
+  320:  get_field2 push
+  325:  object
+  326:  push_atom_value latex_block
+  331:  define_field type
+  336:  get_arg3 3: r
+  337:  define_field role
+  342:  get_loc0 0: n
+  343:  push_7 7
+  344:  get_array_el
+  345:  get_field2 trim
+  350:  call_method 0
+  353:  define_field value
+  358:  call_method 1
+  361:  drop
+  362:  goto16 492
+  365:  undefined
+  366:  get_loc0 0: n
+  367:  push_i8 8
+  369:  get_array_el
+  370:  strict_neq
+  371:  if_false8 434
+  373:  get_var_ref2 2: g
+  374:  get_loc0 0: n
+  375:  push_i8 8
+  377:  get_array_el
+  378:  call1 1
+  379:  put_loc8 4: o
+  381:  get_arg0 0: e
+  382:  get_field2 push
+  387:  object
+  388:  push_atom_value mcq
+  393:  define_field type
+  398:  get_arg3 3: r
+  399:  define_field role
+  404:  get_loc8 4: o
+  406:  get_field question
+  411:  define_field question
+  416:  get_loc8 4: o
+  418:  get_field options
+  423:  define_field options
+  428:  call_method 1
+  431:  drop
+  432:  goto8 492
+  434:  undefined
+  435:  get_loc0 0: n
+  436:  push_i8 9
+  438:  get_array_el
+  439:  strict_neq
+  440:  if_false8 481
+  442:  get_arg0 0: e
+  443:  get_field2 push
+  448:  object
+  449:  push_atom_value suggest
+  454:  define_field type
+  459:  get_arg3 3: r
+  460:  define_field role
+  465:  get_var_ref3 3: f
+  466:  get_loc0 0: n
+  467:  push_i8 9
+  469:  get_array_el
+  470:  call1 1
+  471:  define_field suggests
+  476:  call_method 1
+  479:  goto8 491
+  481:  get_var_ref0 0: c
+  482:  get_arg0 0: e
+  483:  get_loc0 0: n
+  484:  push_0 0
+  485:  get_array_el
+  486:  get_arg2 2: i
+  487:  get_arg3 3: r
+  488:  call 4
+  491:  drop
+  492:  get_loc2 2: h
+  493:  get_field lastIndex
+  498:  put_loc3 3: l
+  499:  goto16 21
+  502:  get_loc3 3: l
+  503:  get_loc1 1: a
+  504:  get_length
+  505:  lt
+  506:  dup
+  507:  if_false8 527
+  509:  drop
+  510:  get_var_ref0 0: c
+  511:  get_arg0 0: e
+  512:  get_loc1 1: a
+  513:  get_field2 slice
+  518:  get_loc3 3: l
+  519:  call_method 1
+  522:  get_arg2 2: i
+  523:  get_arg3 3: r
+  524:  call 4
+  527:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: m
+  mode: strict
+  args: t s
+  locals:
+    0: var i
+    1: var r
+    2: var n
+    3: var a
+    4: var h
+  closure vars:
+    0: e parent:loc1 var
+    1: d parent:loc15 var
+  stack_size: 5
+  opcodes:
+    0:  get_arg1 1: s
+    1:  dup
+    2:  if_true8 10
+    4:  drop
+    5:  push_atom_value assistant
+   10:  put_loc0 0: i
+   11:  get_arg0 0: t
+   12:  lnot
+   13:  if_false8 22
+   15:  get_var_ref0 0: e
+   16:  get_loc0 0: i
+   17:  call1 1
+   18:  array_from 1
+   21:  return
+   22:  get_var Array
+   27:  get_field2 isArray
+   32:  get_arg0 0: t
+   33:  call_method 1
+   36:  if_false 217
+   41:  array_from 0
+   44:  put_loc1 1: r
+   45:  push_0 0
+   46:  put_loc2 2: n
+   47:  get_loc2 2: n
+   48:  get_arg0 0: t
+   49:  get_length
+   50:  lt
+   51:  if_false 194
+   56:  get_arg0 0: t
+   57:  get_loc2 2: n
+   58:  get_array_el
+   59:  set_loc3 3: a
+   60:  if_false8 100
+   62:  push_atom_value text
+   67:  get_loc3 3: a
+   68:  get_field type
+   73:  strict_eq
+   74:  if_false8 100
+   76:  get_loc3 3: a
+   77:  get_field text
+   82:  if_false8 100
+   84:  get_var_ref1 1: d
+   85:  get_loc1 1: r
+   86:  get_loc3 3: a
+   87:  get_field text
+   92:  push_0 0
+   93:  lnot
+   94:  get_loc0 0: i
+   95:  call 4
+   98:  goto8 188
+  100:  get_loc3 3: a
+  101:  dup
+  102:  if_false8 188
+  104:  drop
+  105:  push_atom_value image_url
+  110:  get_loc3 3: a
+  111:  get_field type
+  116:  strict_eq
+  117:  dup
+  118:  if_false8 188
+  120:  drop
+  121:  get_loc3 3: a
+  122:  get_field image_url
+  127:  dup
+  128:  if_false8 188
+  130:  drop
+  131:  get_loc3 3: a
+  132:  get_field image_url
+  137:  get_field url
+  142:  dup
+  143:  if_false8 188
+  145:  drop
+  146:  get_loc1 1: r
+  147:  get_field2 push
+  152:  object
+  153:  push_atom_value image
+  158:  define_field type
+  163:  get_loc0 0: i
+  164:  define_field role
+  169:  get_loc3 3: a
+  170:  get_field image_url
+  175:  get_field url
+  180:  define_field src
+  185:  call_method 1
+  188:  drop
+  189:  inc_loc 2: n
+  191:  goto16 47
+  194:  push_0 0
+  195:  get_loc1 1: r
+  196:  get_length
+  197:  strict_eq
+  198:  dup
+  199:  if_false8 214
+  201:  drop
+  202:  get_loc1 1: r
+  203:  get_field2 push
+  208:  get_var_ref0 0: e
+  209:  get_loc0 0: i
+  210:  call1 1
+  211:  call_method 1
+  214:  drop
+  215:  get_loc1 1: r
+  216:  return
+  217:  array_from 0
+  220:  put_loc8 4: h
+  222:  get_var_ref1 1: d
+  223:  get_loc8 4: h
+  225:  get_var String
+  230:  get_arg0 0: t
+  231:  call1 1
+  232:  push_0 0
+  233:  lnot
+  234:  get_loc0 0: i
+  235:  call 4
+  238:  drop
+  239:  get_loc8 4: h
+  241:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var s
+    3: var i
+    4: catch t [level:7 next:-1]
+    5: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc8 5: this
+    3:  null
+    4:  get_loc8 5: this
+    6:  get_field selectedMsgIndex
+   11:  strict_neq
+   12:  if_false 233
+   17:  get_loc8 5: this
+   19:  get_field messages
+   24:  get_loc8 5: this
+   26:  get_field selectedMsgIndex
+   31:  get_array_el
+   32:  if_false 233
+   37:  get_loc8 5: this
+   39:  get_field2 getDisplayText
+   44:  get_loc8 5: this
+   46:  get_field messages
+   51:  get_loc8 5: this
+   53:  get_field selectedMsgIndex
+   58:  get_array_el
+   59:  call_method 1
+   62:  put_loc0 0: t
+   63:  catch 214
+   68:  get_loc8 5: this
+   70:  get_field Dbase
+   75:  if_false 211
+   80:  array_from 0
+   83:  put_loc1 1: e
+   84:  get_loc8 5: this
+   86:  get_field Dbase
+   91:  get_field2 read
+   96:  push_atom_value tools_clipboard_history
+  101:  call_method 1
+  104:  put_loc2 2: s
+  105:  get_var Array
+  110:  get_field2 isArray
+  115:  get_loc2 2: s
+  116:  call_method 1
+  119:  dup
+  120:  if_false8 125
+  122:  drop
+  123:  get_loc2 2: s
+  124:  set_loc1 1: e
+  125:  drop
+  126:  get_loc1 1: e
+  127:  get_field2 indexOf
+  132:  get_loc0 0: t
+  133:  call_method 1
+  136:  set_loc3 3: i
+  137:  push_0 0
+  138:  gte
+  139:  dup
+  140:  if_false8 154
+  142:  drop
+  143:  get_loc1 1: e
+  144:  get_field2 splice
+  149:  get_loc3 3: i
+  150:  push_1 1
+  151:  call_method 2
+  154:  drop
+  155:  get_loc1 1: e
+  156:  get_field2 unshift
+  161:  get_loc0 0: t
+  162:  call_method 1
+  165:  drop
+  166:  get_loc1 1: e
+  167:  get_length
+  168:  push_i8 50
+  170:  gt
+  171:  dup
+  172:  if_false8 188
+  174:  drop
+  175:  get_loc1 1: e
+  176:  get_field2 slice
+  181:  push_0 0
+  182:  push_i8 50
+  184:  call_method 2
+  187:  set_loc1 1: e
+  188:  drop
+  189:  get_loc8 5: this
+  191:  get_field Dbase
+  196:  get_field2 write
+  201:  push_atom_value tools_clipboard_history
+  206:  get_loc1 1: e
+  207:  call_method 2
+  210:  drop
+  211:  drop
+  212:  goto8 225
+  214:  put_loc8 4: t
+  216:  catch 224
+  221:  drop
+  222:  goto8 225
+  224:  throw
+  225:  get_loc8 5: this
+  227:  null
+  228:  put_field selectedMsgIndex
+  233:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_empty_string
+    4:  put_field inputText
+    9:  get_loc0 0: this
+   10:  array_from 0
+   13:  put_field pendingImages
+   18:  get_loc0 0: this
+   19:  null
+   20:  put_field editingIndex
+   25:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: var s
+    1: var i
+    2: var r
+    3: var n
+    4: var a
+    5: var this
+  stack_size: 7
+  opcodes:
+    0:  push_this
+    1:  put_loc8 5: this
+    3:  get_var String
+    8:  get_arg0 0: t
+    9:  call1 1
+   10:  put_loc0 0: s
+   11:  push_minus1 -1
+   12:  put_loc1 1: i
+   13:  push_0 0
+   14:  put_loc2 2: r
+   15:  get_loc2 2: r
+   16:  get_loc8 5: this
+   18:  get_field chatList
+   23:  get_length
+   24:  lt
+   25:  if_false8 59
+   27:  get_var String
+   32:  get_loc8 5: this
+   34:  get_field chatList
+   39:  get_loc2 2: r
+   40:  get_array_el
+   41:  get_field id
+   46:  call1 1
+   47:  get_loc0 0: s
+   48:  strict_eq
+   49:  if_false8 55
+   51:  get_loc2 2: r
+   52:  put_loc1 1: i
+   53:  goto8 59
+   55:  inc_loc 2: r
+   57:  goto8 15
+   59:  get_var Math
+   64:  get_field2 floor
+   69:  get_var Date
+   74:  get_field2 now
+   79:  call_method 0
+   82:  push_i16 1000
+   85:  div
+   86:  call_method 1
+   89:  put_loc3 3: n
+   90:  get_loc1 1: i
+   91:  push_0 0
+   92:  gte
+   93:  if_false8 191
+   95:  get_loc8 5: this
+   97:  get_field chatList
+  102:  get_loc1 1: i
+  103:  get_array_el
+  104:  put_loc8 4: a
+  106:  get_arg1 1: e
+  107:  dup
+  108:  if_false8 137
+  110:  drop
+  111:  get_loc8 4: a
+  113:  get_var String
+  118:  get_arg1 1: e
+  119:  call1 1
+  120:  get_field2 slice
+  125:  push_0 0
+  126:  push_i8 30
+  128:  call_method 2
+  131:  insert2
+  132:  put_field lastMsg
+  137:  drop
+  138:  get_loc8 4: a
+  140:  get_loc3 3: n
+  141:  put_field lastTime
+  146:  get_loc1 1: i
+  147:  push_0 0
+  148:  gt
+  149:  dup
+  150:  if_false8 188
+  152:  drop
+  153:  get_loc8 5: this
+  155:  get_field chatList
+  160:  get_field2 splice
+  165:  get_loc1 1: i
+  166:  push_1 1
+  167:  call_method 2
+  170:  drop
+  171:  get_loc8 5: this
+  173:  get_field chatList
+  178:  get_field2 unshift
+  183:  get_loc8 4: a
+  185:  call_method 1
+  188:  drop
+  189:  goto8 252
+  191:  get_loc8 5: this
+  193:  get_field chatList
+  198:  get_field2 unshift
+  203:  object
+  204:  get_loc0 0: s
+  205:  define_field id
+  210:  push_atom_value "\u00e5\u00af\u00b9\u00e8\u00af\u009d"
+  215:  define_field name
+  220:  get_arg1 1: e
+  221:  dup
+  222:  if_true8 226
+  224:  drop
+  225:  push_empty_string
+  226:  get_field2 slice
+  231:  push_0 0
+  232:  push_i8 30
+  234:  call_method 2
+  237:  define_field lastMsg
+  242:  get_loc3 3: n
+  243:  define_field lastTime
+  248:  call_method 1
+  251:  drop
+  252:  get_loc8 5: this
+  254:  get_loc8 5: this
+  256:  get_field chatList
+  261:  get_field2 slice
+  266:  call_method 0
+  269:  put_field chatList
+  274:  get_loc8 5: this
+  276:  get_field2 scheduleSave
+  281:  call_method 0
+  284:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var s
+    2: var i
+    3: var r
+    4: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc8 4: this
+    3:  get_var String
+    8:  get_loc8 4: this
+   10:  get_field currentChatId
+   15:  call1 1
+   16:  put_loc0 0: e
+   17:  push_0 0
+   18:  put_loc1 1: s
+   19:  get_loc1 1: s
+   20:  get_loc8 4: this
+   22:  get_field chatList
+   27:  get_length
+   28:  lt
+   29:  if_false 193
+   34:  get_var String
+   39:  get_loc8 4: this
+   41:  get_field chatList
+   46:  get_loc1 1: s
+   47:  get_array_el
+   48:  get_field id
+   53:  call1 1
+   54:  get_loc0 0: e
+   55:  strict_eq
+   56:  if_false 188
+   61:  get_loc8 4: this
+   63:  get_field chatList
+   68:  get_loc1 1: s
+   69:  get_array_el
+   70:  get_field name
+   75:  dup
+   76:  if_true8 80
+   78:  drop
+   79:  push_empty_string
+   80:  put_loc2 2: i
+   81:  push_0 0
+   82:  get_loc2 2: i
+   83:  get_field2 indexOf
+   88:  push_atom_value "\u00e5\u00af\u00b9\u00e8\u00af\u009d"
+   93:  call_method 1
+   96:  strict_eq
+   97:  dup
+   98:  if_true8 117
+  100:  drop
+  101:  push_0 0
+  102:  get_loc2 2: i
+  103:  get_field2 indexOf
+  108:  push_atom_value "\u00e6\u0096\u00b0\u00e5\u00af\u00b9\u00e8\u00af\u009d"
+  113:  call_method 1
+  116:  strict_eq
+  117:  if_false8 193
+  119:  get_arg0 0: t
+  120:  dup
+  121:  if_true8 125
+  123:  drop
+  124:  push_empty_string
+  125:  get_field2 trim
+  130:  call_method 0
+  133:  set_loc3 3: r
+  134:  get_length
+  135:  push_i8 14
+  137:  gt
+  138:  dup
+  139:  if_false8 161
+  141:  drop
+  142:  get_loc3 3: r
+  143:  get_field2 slice
+  148:  push_0 0
+  149:  push_i8 14
+  151:  call_method 2
+  154:  push_atom_value "..."
+  159:  add
+  160:  set_loc3 3: r
+  161:  drop
+  162:  get_loc3 3: r
+  163:  get_length
+  164:  push_0 0
+  165:  gt
+  166:  dup
+  167:  if_false8 186
+  169:  drop
+  170:  get_loc8 4: this
+  172:  get_field chatList
+  177:  get_loc1 1: s
+  178:  get_array_el
+  179:  get_loc3 3: r
+  180:  insert2
+  181:  put_field name
+  186:  drop
+  187:  return_undef
+  188:  inc_loc 1: s
+  190:  goto16 19
+  193:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var s
+    2: var i
+  stack_size: 8
+  opcodes:
+    0:  get_var String
+    5:  get_arg0 0: t
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  push_empty_string
+   11:  call1 1
+   12:  get_field2 replace
+   17:  push_const8 0: 1"\\s+"
+   19:  push_const8 1: 1"\u0001\u0001\u0000M\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u001c,\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u000c\u0000\n"
+   21:  regexp
+   22:  push_empty_string
+   23:  call_method 2
+   26:  set_loc0 0: e
+   27:  lnot
+   28:  if_false8 32
+   30:  push_0 0
+   31:  return
+   32:  get_loc0 0: e
+   33:  get_field2 match
+   38:  push_const8 2: 1"[\\u3400-\\u9fff]"
+   40:  push_const8 3: 1"\u0001\u0001\u0000\u0017\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0015\u0001\u0000\u00004\u00ff\u009f\u000c\u0000\n"
+   42:  regexp
+   43:  call_method 1
+   46:  dup
+   47:  if_true8 53
+   49:  drop
+   50:  array_from 0
+   53:  get_length
+   54:  put_loc1 1: s
+   55:  get_loc0 0: e
+   56:  get_length
+   57:  get_loc1 1: s
+   58:  sub
+   59:  put_loc2 2: i
+   60:  get_var Math
+   65:  get_field2 max
+   70:  push_1 1
+   71:  get_var Math
+   76:  get_field2 round
+   81:  get_loc1 1: s
+   82:  get_loc2 2: i
+   83:  push_4 4
+   84:  div
+   85:  add
+   86:  call_method 1
+   89:  tail_call_method 2
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+  stack_size: 5
+  opcodes:
+    0:  get_var Math
+    5:  get_field2 max
+   10:  push_0 0
+   11:  get_var Number
+   16:  get_arg0 0: t
+   17:  call1 1
+   18:  dup
+   19:  if_true8 23
+   21:  drop
+   22:  push_0 0
+   23:  call_method 2
+   26:  set_loc0 0: e
+   27:  push_i16 1000
+   30:  gte
+   31:  if_false8 64
+   33:  get_var Math
+   38:  get_field2 round
+   43:  get_loc0 0: e
+   44:  push_i16 1000
+   47:  div
+   48:  push_i8 10
+   50:  mul
+   51:  call_method 1
+   54:  push_i8 10
+   56:  div
+   57:  push_atom_value "k tokens"
+   62:  add
+   63:  return
+   64:  get_loc0 0: e
+   65:  push_atom_value " tokens"
+   70:  add
+   71:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var s
+    2: var i
+    3: var r
+  stack_size: 7
+  opcodes:
+    0:  get_var Math
+    5:  get_field2 max
+   10:  push_0 0
+   11:  get_var Math
+   16:  get_field2 floor
+   21:  get_var Number
+   26:  get_arg0 0: t
+   27:  call1 1
+   28:  dup
+   29:  if_true8 33
+   31:  drop
+   32:  push_0 0
+   33:  call_method 1
+   36:  call_method 2
+   39:  put_loc0 0: e
+   40:  get_var Math
+   45:  get_field2 floor
+   50:  get_loc0 0: e
+   51:  push_i16 3600
+   54:  div
+   55:  call_method 1
+   58:  put_loc1 1: s
+   59:  get_var Math
+   64:  get_field2 floor
+   69:  get_loc0 0: e
+   70:  push_i16 3600
+   73:  mod
+   74:  push_i8 60
+   76:  div
+   77:  call_method 1
+   80:  put_loc2 2: i
+   81:  get_loc0 0: e
+   82:  push_i8 60
+   84:  mod
+   85:  put_loc3 3: r
+   86:  get_loc1 1: s
+   87:  push_0 0
+   88:  gt
+   89:  if_false8 115
+   91:  get_loc1 1: s
+   92:  push_atom_value "h "
+   97:  add
+   98:  get_loc2 2: i
+   99:  add
+  100:  push_atom_value "m "
+  105:  add
+  106:  get_loc3 3: r
+  107:  add
+  108:  push_atom_value s
+  113:  add
+  114:  return
+  115:  get_loc2 2: i
+  116:  push_0 0
+  117:  gt
+  118:  if_false8 136
+  120:  get_loc2 2: i
+  121:  push_atom_value "m "
+  126:  add
+  127:  get_loc3 3: r
+  128:  add
+  129:  push_atom_value s
+  134:  add
+  135:  return
+  136:  get_loc3 3: r
+  137:  push_atom_value s
+  142:  add
+  143:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var s
+    2: var i
+    3: var r
+    4: var this
+  closure vars:
+    0: m parent:loc16 var
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc8 4: this
+    3:  get_arg0 0: t
+    4:  lnot
+    5:  if_false8 73
+    7:  object
+    8:  push_atom_value line
+   13:  define_field type
+   18:  push_atom_value paragraph
+   23:  define_field variant
+   28:  push_atom_value assistant
+   33:  define_field role
+   38:  push_empty_string
+   39:  define_field prefix
+   44:  object
+   45:  push_atom_value text
+   50:  define_field type
+   55:  push_empty_string
+   56:  define_field text
+   61:  array_from 1
+   64:  define_field segments
+   69:  array_from 1
+   72:  return
+   73:  get_arg0 0: t
+   74:  get_field role
+   79:  dup
+   80:  if_true8 88
+   82:  drop
+   83:  push_atom_value assistant
+   88:  put_loc0 0: e
+   89:  get_arg0 0: t
+   90:  get_field __parsedContentRef
+   95:  get_arg0 0: t
+   96:  get_field content
+  101:  strict_neq
+  102:  dup
+  103:  if_true8 131
+  105:  drop
+  106:  get_arg0 0: t
+  107:  get_field __parsedReasoningRef
+  112:  get_arg0 0: t
+  113:  get_field reasoning
+  118:  strict_neq
+  119:  dup
+  120:  if_true8 131
+  122:  drop
+  123:  get_arg0 0: t
+  124:  get_field __parsedRole
+  129:  get_loc0 0: e
+  130:  strict_neq
+  131:  lnot
+  132:  if_false8 149
+  134:  get_arg0 0: t
+  135:  get_field __parsedBlocks
+  140:  if_false8 149
+  142:  get_arg0 0: t
+  143:  get_field __parsedBlocks
+  148:  return
+  149:  get_loc8 4: this
+  151:  get_field isLoading
+  156:  dup
+  157:  if_false8 190
+  159:  drop
+  160:  null
+  161:  get_loc8 4: this
+  163:  get_field streamAssistantIndex
+  168:  strict_neq
+  169:  dup
+  170:  if_false8 190
+  172:  drop
+  173:  get_loc8 4: this
+  175:  get_field messages
+  180:  get_loc8 4: this
+  182:  get_field streamAssistantIndex
+  187:  get_array_el
+  188:  get_arg0 0: t
+  189:  strict_eq
+  190:  put_loc1 1: s
+  191:  get_var Date
+  196:  get_field2 now
+  201:  call_method 0
+  204:  put_loc2 2: i
+  205:  get_loc1 1: s
+  206:  if_false8 245
+  208:  get_arg0 0: t
+  209:  get_field __parsedBlocks
+  214:  if_false8 245
+  216:  get_arg0 0: t
+  217:  get_field __parsedAt
+  222:  if_false8 245
+  224:  get_loc2 2: i
+  225:  get_arg0 0: t
+  226:  get_field __parsedAt
+  231:  sub
+  232:  push_i16 180
+  235:  lt
+  236:  if_false8 245
+  238:  get_arg0 0: t
+  239:  get_field __parsedBlocks
+  244:  return
+  245:  get_var_ref0 0: m
+  246:  get_arg0 0: t
+  247:  get_field content
+  252:  get_loc0 0: e
+  253:  call2 2
+  254:  put_loc3 3: r
+  255:  get_arg0 0: t
+  256:  get_loc3 3: r
+  257:  put_field __parsedBlocks
+  262:  get_arg0 0: t
+  263:  get_arg0 0: t
+  264:  get_field content
+  269:  put_field __parsedContentRef
+  274:  get_arg0 0: t
+  275:  get_arg0 0: t
+  276:  get_field reasoning
+  281:  put_field __parsedReasoningRef
+  286:  get_arg0 0: t
+  287:  get_loc0 0: e
+  288:  put_field __parsedRole
+  293:  get_arg0 0: t
+  294:  get_loc2 2: i
+  295:  put_field __parsedAt
+  300:  get_loc3 3: r
+  301:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <null>
+  mode: strict
+  args: t e
+  stack_size: 4
+  opcodes:
+    0:  get_var String
+    5:  get_arg1 1: e
+    6:  dup
+    7:  if_true8 15
+    9:  drop
+   10:  push_atom_value inline
+   15:  call1 1
+   16:  push_atom_value ":"
+   21:  add
+   22:  get_var String
+   27:  get_arg0 0: t
+   28:  dup
+   29:  if_true8 33
+   31:  drop
+   32:  push_empty_string
+   33:  call1 1
+   34:  add
+   35:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var s
+    2: var i
+    3: catch t [level:7 next:-1]
+    4: var r
+    5: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc8 5: this
+    3:  get_arg0 0: t
+    4:  if_false 226
+    9:  catch 160
+   14:  get_loc8 5: this
+   16:  get_field Dbase
+   21:  if_false 157
+   26:  array_from 0
+   29:  put_loc0 0: e
+   30:  get_loc8 5: this
+   32:  get_field Dbase
+   37:  get_field2 read
+   42:  push_atom_value tools_clipboard_history
+   47:  call_method 1
+   50:  put_loc1 1: s
+   51:  get_var Array
+   56:  get_field2 isArray
+   61:  get_loc1 1: s
+   62:  call_method 1
+   65:  dup
+   66:  if_false8 71
+   68:  drop
+   69:  get_loc1 1: s
+   70:  set_loc0 0: e
+   71:  drop
+   72:  get_loc0 0: e
+   73:  get_field2 indexOf
+   78:  get_arg0 0: t
+   79:  call_method 1
+   82:  set_loc2 2: i
+   83:  push_0 0
+   84:  gte
+   85:  dup
+   86:  if_false8 100
+   88:  drop
+   89:  get_loc0 0: e
+   90:  get_field2 splice
+   95:  get_loc2 2: i
+   96:  push_1 1
+   97:  call_method 2
+  100:  drop
+  101:  get_loc0 0: e
+  102:  get_field2 unshift
+  107:  get_arg0 0: t
+  108:  call_method 1
+  111:  drop
+  112:  get_loc0 0: e
+  113:  get_length
+  114:  push_i8 50
+  116:  gt
+  117:  dup
+  118:  if_false8 134
+  120:  drop
+  121:  get_loc0 0: e
+  122:  get_field2 slice
+  127:  push_0 0
+  128:  push_i8 50
+  130:  call_method 2
+  133:  set_loc0 0: e
+  134:  drop
+  135:  get_loc8 5: this
+  137:  get_field Dbase
+  142:  get_field2 write
+  147:  push_atom_value tools_clipboard_history
+  152:  get_loc0 0: e
+  153:  call_method 2
+  156:  drop
+  157:  drop
+  158:  goto8 170
+  160:  put_loc3 3: t
+  161:  catch 169
+  166:  drop
+  167:  goto8 170
+  169:  throw
+  170:  get_loc8 5: this
+  172:  put_loc8 4: r
+  174:  get_loc8 5: this
+  176:  push_0 0
+  177:  lnot
+  178:  put_field linkToast
+  183:  get_loc8 5: this
+  185:  get_field _linkToastTimer
+  190:  dup
+  191:  if_false8 207
+  193:  drop
+  194:  get_var clearTimeout
+  199:  get_loc8 5: this
+  201:  get_field _linkToastTimer
+  206:  call1 1
+  207:  drop
+  208:  get_loc8 5: this
+  210:  get_var setTimeout
+  215:  fclosure8 0: [bytecode <null>]
+  217:  push_i16 1200
+  220:  call2 2
+  221:  put_field _linkToastTimer
+  226:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: r local:loc4 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: r
+    1:  push_1 1
+    2:  lnot
+    3:  put_field linkToast
+    8:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  set_loc0 0: t
+    4:  get_field saveTimer
+    9:  dup
+   10:  if_false8 25
+   12:  drop
+   13:  get_var clearTimeout
+   18:  get_loc0 0: t
+   19:  get_field saveTimer
+   24:  call1 1
+   25:  drop
+   26:  get_loc0 0: t
+   27:  get_var setTimeout
+   32:  fclosure8 0: [bytecode <null>]
+   34:  push_i16 300
+   37:  call2 2
+   38:  put_field saveTimer
+   43:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 saveData
+    6:  call_method 0
+    9:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field inputText
+    8:  get_field2 trim
+   13:  call_method 0
+   16:  get_length
+   17:  push_0 0
+   18:  gt
+   19:  dup
+   20:  if_true8 32
+   22:  drop
+   23:  get_loc0 0: this
+   24:  get_field pendingImages
+   29:  get_length
+   30:  push_0 0
+   31:  gt
+   32:  dup
+   33:  if_false8 43
+   35:  drop
+   36:  get_loc0 0: this
+   37:  get_field isLoading
+   42:  lnot
+   43:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field isLoading
+    8:  if_false8 13
+   10:  push_1 1
+   11:  lnot
+   12:  return
+   13:  get_loc1 1: this
+   14:  get_field messages
+   19:  get_length
+   20:  push_1 1
+   21:  sub
+   22:  put_loc0 0: t
+   23:  get_loc0 0: t
+   24:  push_0 0
+   25:  gte
+   26:  if_false8 66
+   28:  get_loc1 1: this
+   29:  get_field messages
+   34:  get_loc0 0: t
+   35:  get_array_el
+   36:  if_false8 62
+   38:  push_atom_value user
+   43:  get_loc1 1: this
+   44:  get_field messages
+   49:  get_loc0 0: t
+   50:  get_array_el
+   51:  get_field role
+   56:  strict_eq
+   57:  if_false8 62
+   59:  push_0 0
+   60:  lnot
+   61:  return
+   62:  dec_loc 0: t
+   64:  goto8 23
+   66:  push_1 1
+   67:  lnot
+   68:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field pendingImages
+    8:  get_field2 splice
+   13:  get_arg0 0: t
+   14:  push_1 1
+   15:  call_method 2
+   18:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field isLoading
+    8:  dup
+    9:  if_true8 52
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field messages
+   18:  get_arg0 0: t
+   19:  get_array_el
+   20:  dup
+   21:  if_false8 52
+   23:  drop
+   24:  get_loc0 0: this
+   25:  get_arg0 0: t
+   26:  put_field editingIndex
+   31:  get_loc0 0: this
+   32:  null
+   33:  put_field selectedMsgIndex
+   38:  get_loc0 0: this
+   39:  get_field2 openKeyboard
+   44:  push_atom_value edit
+   49:  call_method 1
+   52:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  null
+    3:  get_arg0 0: t
+    4:  strict_neq
+    5:  dup
+    6:  if_false8 42
+    8:  drop
+    9:  get_loc0 0: this
+   10:  get_field messages
+   15:  get_arg0 0: t
+   16:  get_array_el
+   17:  dup
+   18:  if_false8 42
+   20:  drop
+   21:  get_loc0 0: this
+   22:  get_arg0 0: t
+   23:  put_field editingIndex
+   28:  get_loc0 0: this
+   29:  get_field2 openKeyboard
+   34:  push_atom_value presetName
+   39:  call_method 1
+   42:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_arg0 0: t
+    3:  dup
+    4:  if_false8 32
+    6:  drop
+    7:  get_var String
+   12:  get_arg0 0: t
+   13:  get_field id
+   18:  call1 1
+   19:  get_var String
+   24:  get_loc0 0: this
+   25:  get_field currentChatId
+   30:  call1 1
+   31:  strict_eq
+   32:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: chat-shared-30c38a05.js:1 source_len=0 */
+chat-shared-30c38a05.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_arg0 0: t
+    4:  put_field inputText
+    9:  get_loc0 0: this
+   10:  get_field2 sendMessage
+   15:  call_method 0
+   18:  return_undef
+

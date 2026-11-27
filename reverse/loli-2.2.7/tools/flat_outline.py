@@ -27,13 +27,16 @@ def main():
             best = ops
     ops = best
     i = 0
+    idx = 0
     while i < len(ops):
         off, op = ops[i]
-        if op == 'get_loc2 2: i' and i + 1 < len(ops) and ops[i + 1][1].startswith('push_atom_value '):
+        # Any get_loc2 pushes the local createElement wrapper; the next atom is the tag.
+        if op.startswith('get_loc2') and i + 1 < len(ops) and ops[i + 1][1].startswith('push_atom_value '):
             tag = decode_atom(ops[i + 1][1][len('push_atom_value '):])
             if tag not in TAGS:
                 i += 1
                 continue
+            idx += 1
             cls = ''
             texts = []
             j = i + 2
@@ -48,10 +51,12 @@ def main():
                         val = decode_atom(ops[j - 1][1][len('push_atom_value '):])
                         if any('\u4e00' <= ch <= '\u9fff' for ch in val):
                             texts.append(val)
-                elif o.startswith('get_loc2 2: i'):
+                elif o.startswith('get_loc2') and j + 1 < len(ops) and \
+                        ops[j + 1][1].startswith('push_atom_value ') and \
+                        decode_atom(ops[j + 1][1][len('push_atom_value '):]) in TAGS:
                     break
                 j += 1
-            line = tag + ('.' + cls if cls else '')
+            line = '%4d  %s%s' % (idx, tag, ('.' + cls if cls else ''))
             if texts:
                 line += '  "' + ' / '.join(texts) + '"'
             print(line)

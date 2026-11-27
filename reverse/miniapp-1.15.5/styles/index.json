@@ -1,0 +1,52 @@
+{
+  "wrapper": {
+    "backgroundColor": "#05080F",
+    "width": "100%",
+    "height": "100%",
+    "flexDirection": "column"
+  },
+  "calculator-container": {
+    "flexDirection": "column",
+    "width": "100%",
+    "height": "100%"
+  },
+  "loading-container": {
+    "justifyContent": "center",
+    "alignItems": "center",
+    "width": "100%",
+    "height": "100%"
+  },
+  "loading": {
+    "fontSize": "10vh",
+    "color": "#e3e3e3"
+  },
+  "display": {
+    "width": "100%",
+    "height": "30vh",
+    "paddingTop": "1.5vh",
+    "paddingRight": "7vh",
+    "paddingBottom": 0,
+    "paddingLeft": "5vh",
+    "alignItems": "center",
+    "justifyContent": "space-between",
+    "flexDirection": "row"
+  },
+  "keyboard": {
+    "width": "100%",
+    "height": "70vh",
+    "flexDirection": "column"
+  },
+  "line": {
+    "flex": 1,
+    "flexDirection": "row"
+  },
+  "line-eq": {
+    "flexDirection": "row",
+    "width": "18.1818%",
+    "flexBasis": "18.1818%"
+  },
+  "display-text": {
+    "fontSize": "15vh",
+    "lines": 1
+  }
+}

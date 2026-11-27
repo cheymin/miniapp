@@ -1,0 +1,262 @@
+.camera-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+}
+
+.camera-hole {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+}
+
+.flash-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    z-index: <expr>;
+    opacity: 0.8;
+}
+
+.controls-area {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.3);
+    z-index: <expr>;
+}
+
+.btn-shutter-wrapper {
+    width: 70px;
+    height: 70px;
+    margin-top: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-rotate-wrapper {
+    width: 70px;
+    height: 36px;
+    margin-top: 12px;
+    justify-content: center;
+    align-items: center;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(255,255,255,0.7);
+    border-radius: 16px;
+    background-color: rgba(255,255,255,0.08);
+}
+
+.btn-rotate-label {
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+}
+
+.btn-rotate-label-disabled {
+    color: #f3f4f6;
+}
+
+.btn-record-wrapper {
+    width: 70px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-record-outer {
+    width: 54px;
+    height: 54px;
+    border-radius: 24px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #ff453a;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,77,79,0.1);
+}
+
+.btn-record-inner {
+    width: 34px;
+    height: 34px;
+    border-radius: 16px;
+    background-color: #ff453a;
+}
+
+.btn-recording {
+    border-color: #ffffff;
+    background-color: rgba(255,77,79,0.25);
+}
+
+.btn-record-stop {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.record-label {
+    margin-top: 8px;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+}
+
+.record-time {
+    margin-top: 4px;
+    color: #ffb3b4;
+    font-size: 11px;
+    text-align: center;
+}
+
+.btn-shutter-outer {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0);
+    transition-property: transform;
+    transition-duration: 200;
+    transition-timing-function: ease-out;
+}
+
+.btn-shutter-active {
+    transform: scale(0.85);
+}
+
+.btn-shutter-inner {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #FFFFFF;
+}
+
+.btn-shutter-outer-disabled {
+    border-color: #ffffff;
+}
+
+.btn-shutter-inner-disabled {
+    background-color: #ffffff;
+}
+
+.btn-rotate-wrapper-disabled {
+    width: 70px;
+    height: 36px;
+    margin-top: 12px;
+    justify-content: center;
+    align-items: center;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 16px;
+    border-color: rgba(102,102,102,0.8);
+    background-color: rgba(102,102,102,0.15);
+}
+
+.btn-record-outer-disabled {
+    border-color: #ffffff;
+    background-color: rgba(102,102,102,0.15);
+}
+
+.btn-record-inner-disabled {
+    background-color: #ffffff;
+}
+
+.btn-record-stop-disabled {
+    background-color: #ffffff;
+}
+
+.btn-record-wrapper-press {
+    opacity: 0.65;
+}
+
+.btn-shutter-wrapper-press {
+    opacity: 0.65;
+}
+
+.btn-rotate-wrapper-press {
+    opacity: 0.65;
+}
+
+.controls-area-l {
+    background-color: rgba(0,0,0,0.3);
+}
+
+.btn-rotate-wrapper-l {
+    color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.08);
+}
+
+.btn-rotate-label-l {
+    color: #1c1c1e;
+}
+
+.btn-rotate-label-disabled-l {
+    color: #3a3a3c;
+}
+
+.btn-record-outer-l {
+    color: #ff3b30;
+    background-color: rgba(255,77,79,0.18);
+}
+
+.btn-record-inner-l {
+    background-color: #ff3b30;
+}
+
+.btn-recording-l {
+    color: #1c1c1e;
+    background-color: rgba(255,77,79,0.25);
+    border-color: #1c1c1e;
+}
+
+.record-label-l {
+    color: #1c1c1e;
+}
+
+.record-time-l {
+    color: #140000;
+}
+
+.btn-shutter-outer-disabled-l {
+    color: #1c1c1e;
+    border-color: #1c1c1e;
+}
+
+.btn-shutter-inner-disabled-l {
+    background-color: #ffffff;
+}
+
+.btn-rotate-wrapper-disabled-l {
+    color: rgba(102,102,102,0.8);
+    background-color: rgba(102,102,102,0.18);
+}
+
+.btn-record-outer-disabled-l {
+    color: #1c1c1e;
+    background-color: rgba(102,102,102,0.18);
+    border-color: #1c1c1e;
+}
+
+.btn-record-stop-disabled-l {
+    background-color: #ffffff;
+}
+
+.btn-record-inner-disabled-l {
+    background-color: #ffffff;
+}

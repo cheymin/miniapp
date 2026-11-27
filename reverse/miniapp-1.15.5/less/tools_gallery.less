@@ -1,0 +1,546 @@
+.app {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+.grid-scroller {
+    flex: 1;
+}
+
+.grid {
+    width: 100%;
+}
+
+.grid-row {
+    flex-direction: row;
+    margin-bottom: 4px;
+}
+
+.grid-cell {
+    position: relative;
+    background-color: #1c1c1e;
+    overflow: hidden;
+}
+
+.list-footer {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.footer-text {
+    color: #c7c7cc;
+    font-size: 14px;
+}
+
+.camera-entry {
+    justify-content: center;
+    align-items: center;
+    background-color: #1f2230;
+    border-width: 1px;
+    border-color: rgba(255,255,255,0.08);
+}
+
+.camera-entry-icon {
+    color: #ffffff;
+    font-size: 26px;
+    line-height: 30px;
+    opacity: 0.9;
+}
+
+.camera-entry-text {
+    margin-top: 8px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.thumb {
+    background-color: #000000;
+}
+
+.video-thumb {
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.video-thumb-icon {
+    color: #ffffff;
+    font-size: 24px;
+    opacity: 0.9;
+}
+
+.video-thumb-name {
+    margin-top: 8px;
+    color: #c7c7cc;
+    font-size: 11px;
+    lines: 2;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.video-badge {
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    padding-left: 6px;
+    padding-right: 6px;
+    height: 18px;
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.video-badge-text {
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.video-duration {
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    min-width: 34px;
+    padding-left: 6px;
+    padding-right: 6px;
+    height: 18px;
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.video-duration-text {
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.98);
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-v-scroll {
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.preview-canvas {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.preview {
+    background-color: rgba(0,0,0,0);
+}
+
+.preview-controls {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 64px;
+    z-index: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.preview-controls-left {
+    left: 8px;
+    justify-content: flex-start;
+    padding-top: 14px;
+}
+
+.preview-controls-right {
+    right: 8px;
+}
+
+.zoom-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: #1c1c1e;
+}
+
+.action-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    background-color: #1c1c1e;
+}
+
+.close-btn {
+    background-color: #1c1c1e;
+}
+
+.select-btn {
+    background-color: #1c1c1e;
+}
+
+.delete-btn {
+    background-color: #1c1c1e;
+}
+
+.zoom-btn-press {
+    opacity: 0.6;
+}
+
+.action-btn-press {
+    opacity: 0.65;
+}
+
+.btn-icon {
+    width: 24px;
+    height: 24px;
+    opacity: 0.6;
+}
+
+.empty {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    right: 0;
+    align-items: center;
+}
+
+.video-card {
+    width: 280px;
+    background-color: #1c1c1e;
+    border-radius: 12px;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-card-thumb {
+    width: 280px;
+    height: 160px;
+    background-color: #000000;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.video-card-thumb-img {
+    width: 280px;
+    height: 160px;
+}
+
+.video-card-thumb-placeholder {
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 160px;
+}
+
+.video-card-thumb-icon {
+    color: #ffffff;
+    font-size: 48px;
+    opacity: 0.8;
+}
+
+.video-card-duration {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    height: 22px;
+    border-radius: 12px;
+    background-color: rgba(0,0,0,0.75);
+    justify-content: center;
+    align-items: center;
+}
+
+.video-card-duration-text {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.video-card-name {
+    width: 260px;
+    margin-top: 12px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    lines: 1;
+    text-overflow: ellipsis;
+}
+
+.video-card-actions {
+    width: 280px;
+    flex-direction: row;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    justify-content: center;
+}
+
+.video-card-btn {
+    width: 110px;
+    height: 40px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-card-btn-play {
+    background-color: #0a84ff;
+}
+
+.video-card-btn-delete {
+    background-color: #ff453a;
+    margin-left: 16px;
+}
+
+.video-card-btn-press {
+    opacity: 0.7;
+}
+
+.video-card-btn-text {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.empty-text {
+    color: #c7c7cc;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.empty-sub {
+    color: #636366;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.fab {
+    position: absolute;
+    right: -999px;
+    bottom: -999px;
+    width: 56px;
+    height: 56px;
+    border-radius: 28px;
+    background-color: #1c1c1e;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.fab-press {
+    opacity: 0.6;
+}
+
+.fab-icon {
+    width: 22px;
+    height: 22px;
+    opacity: 0.6;
+}
+
+.grid-cell-press {
+    opacity: 0.65;
+}
+
+.overlay-press {
+    opacity: 0.65;
+}
+
+.video-card-press {
+    opacity: 0.65;
+}
+
+.video-card-btn-play-press {
+    opacity: 0.65;
+}
+
+.video-card-btn-delete-press {
+    opacity: 0.65;
+}
+
+.preview-area-press {
+    opacity: 0.65;
+}
+
+.preview-canvas-press {
+    opacity: 0.65;
+}
+
+.select-btn-press {
+    opacity: 0.65;
+}
+
+.delete-btn-press {
+    opacity: 0.65;
+}
+
+.close-btn-press {
+    opacity: 0.65;
+}
+
+.app-l {
+    background-color: #ffffff;
+}
+
+.grid-cell-l {
+    background-color: #ffffff;
+}
+
+.footer-text-l {
+    color: #636366;
+}
+
+.camera-entry-l {
+    background-color: #c1c5d7;
+    color: rgba(0,0,0,0.08);
+}
+
+.camera-entry-icon-l {
+    color: #1c1c1e;
+}
+
+.camera-entry-text-l {
+    color: #1c1c1e;
+}
+
+.thumb-l {
+    background-color: #ffffff;
+}
+
+.video-thumb-l {
+    background-color: #ffffff;
+}
+
+.video-thumb-icon-l {
+    color: #1c1c1e;
+}
+
+.video-thumb-name-l {
+    color: #636366;
+}
+
+.video-badge-l {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.video-badge-text-l {
+    color: #1c1c1e;
+}
+
+.video-duration-l {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.video-duration-text-l {
+    color: #1c1c1e;
+}
+
+.overlay-l {
+    background-color: rgba(0,0,0,0.98);
+}
+
+.action-btn-l {
+    background-color: #ffffff;
+}
+
+.zoom-btn-l {
+    background-color: #ffffff;
+}
+
+.close-btn-l {
+    background-color: #ffffff;
+}
+
+.select-btn-l {
+    background-color: #ffffff;
+}
+
+.delete-btn-l {
+    background-color: #ffffff;
+}
+
+.video-card-l {
+    background-color: #f2f2f7;
+}
+
+.video-card-thumb-l {
+    background-color: #ffffff;
+}
+
+.video-card-thumb-icon-l {
+    color: #1c1c1e;
+}
+
+.video-card-duration-l {
+    background-color: rgba(0,0,0,0.75);
+}
+
+.video-card-duration-text-l {
+    color: #1c1c1e;
+}
+
+.video-card-name-l {
+    color: #1c1c1e;
+}
+
+.video-card-btn-play-l {
+    background-color: #007aff;
+}
+
+.video-card-btn-delete-l {
+    background-color: #ff3b30;
+}
+
+.video-card-btn-text-l {
+    color: #1c1c1e;
+}
+
+.empty-text-l {
+    color: #636366;
+}
+
+.empty-sub-l {
+    color: #aeaeb2;
+}
+
+.fab-l {
+    background-color: #ffffff;
+}

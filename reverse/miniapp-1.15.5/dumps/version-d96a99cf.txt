@@ -1,0 +1,20 @@
+
+/* ===== function depth=0 ===== */
+/* debug: version-d96a99cf.js:1 source_len=0 */
+version-d96a99cf.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: s local:loc0 const
+    1: a local:loc1 const
+    2: n local:loc2 const
+  stack_size: 1
+  opcodes:
+    0:  push_atom_value "1.15.5"
+    5:  put_var_ref0 0: s
+    6:  push_atom_value "202610071708"
+   11:  put_var_ref1 1: a
+   12:  push_0 0
+   13:  lnot
+   14:  put_var_ref2 2: n
+   15:  return_undef
+

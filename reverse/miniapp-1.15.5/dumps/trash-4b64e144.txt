@@ -1,0 +1,25 @@
+
+/* ===== function depth=0 ===== */
+/* debug: trash-4b64e144.js:1 source_len=0 */
+trash-4b64e144.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: a local:loc0 var
+    1: f local:loc1 var
+    2: e local:loc2 var
+    3: b local:loc3 var
+    4: g local:loc4 var
+  stack_size: 1
+  opcodes:
+    0:  push_atom_value "images/b059ed2229b186eb7ef6fe3dcf6a2124.png"
+    5:  put_var_ref0 0: a
+    6:  push_atom_value "images/3ffe06f89449fd54792ff3e97dc2fad2.png"
+   11:  put_var_ref1 1: f
+   12:  push_atom_value "images/ff41a7c7720f23ab013fb3b277a317d4.png"
+   17:  put_var_ref2 2: e
+   18:  push_atom_value "images/348d5bc6f4f5e11a9a3b8ba9ec80f1f8.png"
+   23:  put_var_ref3 3: b
+   24:  push_atom_value "images/5c228a583f28b0baa013ba718a7910eb.png"
+   29:  put_var_ref 4: g
+   32:  return_undef
+

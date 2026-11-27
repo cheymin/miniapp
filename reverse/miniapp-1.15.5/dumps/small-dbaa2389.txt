@@ -1,0 +1,19 @@
+
+/* ===== function depth=0 ===== */
+/* debug: small-dbaa2389.js:1 source_len=0 */
+small-dbaa2389.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: a local:loc0 var
+    1: d local:loc1 var
+    2: b local:loc2 var
+  stack_size: 1
+  opcodes:
+    0:  push_atom_value "images/b9b1657d1477a026d7ab28697f77e120.png"
+    5:  put_var_ref0 0: a
+    6:  push_atom_value "images/138a818d7c9e0d5514dee18a8b59dc3d.png"
+   11:  put_var_ref1 1: d
+   12:  push_atom_value "images/99bf110363b3546c62547b09d0888a4d.png"
+   17:  put_var_ref2 2: b
+   18:  return_undef
+

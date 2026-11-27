@@ -1,0 +1,16 @@
+
+/* ===== function depth=0 ===== */
+/* debug: copy-880b828f.js:1 source_len=0 */
+copy-880b828f.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: a local:loc0 var
+    1: e local:loc1 var
+  stack_size: 1
+  opcodes:
+    0:  push_atom_value "images/e645e4f065cca418d4398d6a929accc6.png"
+    5:  put_var_ref0 0: a
+    6:  push_atom_value "images/0fbe8fa75b43f4109ff0b7db26580909.png"
+   11:  put_var_ref1 1: e
+   12:  return_undef
+

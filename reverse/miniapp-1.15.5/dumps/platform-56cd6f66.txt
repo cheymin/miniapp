@@ -1,0 +1,686 @@
+
+/* ===== function depth=0 ===== */
+/* debug: platform-56cd6f66.js:1 source_len=0 */
+platform-56cd6f66.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: e local:loc0 const
+    1: a local:loc1 var
+    2: t local:loc2 var
+    3: n local:loc3 let
+    4: r local:loc4 var
+    5: s local:loc5 var
+    6: i local:loc6 var
+    7: u local:loc7 var
+    8: l local:loc8 var
+    9: c local:loc9 var
+   10: o local:loc10 var
+   11: f local:loc11 var
+   12: v local:loc12 var
+   13: y local:loc13 var
+   14: p local:loc14 var
+   15: m local:loc15 var
+  stack_size: 1
+  opcodes:
+    0:  fclosure8 0: [bytecode a]
+    2:  put_var_ref1 1: a
+    3:  fclosure8 1: [bytecode t]
+    5:  put_var_ref2 2: t
+    6:  fclosure8 2: [bytecode r]
+    8:  put_var_ref 4: r
+   11:  fclosure8 3: [bytecode s]
+   13:  put_var_ref 5: s
+   16:  fclosure8 4: [bytecode i]
+   18:  put_var_ref 6: i
+   21:  fclosure8 5: [bytecode u]
+   23:  put_var_ref 7: u
+   26:  fclosure8 6: [bytecode l]
+   28:  put_var_ref 8: l
+   31:  fclosure8 7: [bytecode c]
+   33:  put_var_ref 9: c
+   36:  fclosure8 8: [bytecode o]
+   38:  put_var_ref 10: o
+   41:  fclosure8 9: [bytecode f]
+   43:  put_var_ref 11: f
+   46:  fclosure8 10: [bytecode v]
+   48:  put_var_ref 12: v
+   51:  fclosure8 11: [bytecode y]
+   53:  put_var_ref 13: y
+   56:  fclosure8 12: [bytecode p]
+   58:  put_var_ref 14: p
+   61:  fclosure8 13: [bytecode m]
+   63:  put_var_ref 15: m
+   66:  push_atom_value cvia
+   71:  put_var_ref0 0: e
+   72:  null
+   73:  put_var_ref3 3: n
+   74:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: platform-56cd6f66.js:1 source_len=0 */
+platform-56cd6f66.js:1: function: a
+  mode: strict
+  args: e a
+  locals:
+    0: const t [level:1 next:-1]
+  stack_size: 5
+  opcodes:
+    0:  set_loc_uninitialized 0: t
+    3:  get_arg0 0: e
+    4:  lnot
+    5:  dup
+    6:  if_true8 11
+    8:  drop
+    9:  get_arg1 1: a
+   10:  lnot
+   11:  if_false8 16
+   13:  push_1 1
+   14:  lnot
+   15:  return
+   16:  get_var String
+   21:  get_arg0 0: e
+   22:  call1 1
+   23:  get_field2 toLowerCase
+   28:  call_method 0
+   31:  put_loc0 0: t
+   32:  get_var RegExp
+   37:  dup
+   38:  push_atom_value "(^|[^a-z0-9])"
+   43:  get_var String
+   48:  get_arg1 1: a
+   49:  call1 1
+   50:  get_field2 toLowerCase
+   55:  call_method 0
+   58:  add
+   59:  push_atom_value "([^a-z0-9]|$)"
+   64:  add
+   65:  call_constructor 1
+   68:  get_field2 test
+   73:  get_loc_check 0: t
+   76:  tail_call_method 1
+
+
+/* ===== function depth=1 ===== */
+/* debug: platform-56cd6f66.js:1 source_len=0 */
+platform-56cd6f66.js:1: function: t
+  mode: strict
+  closure vars:
+    0: r parent:loc4 var
+  stack_size: 1
+  opcodes:
+    0:  get_var_ref0 0: r
+    1:  call0 0
+    2:  get_field platform
+    7:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: platform-56cd6f66.js:1 source_len=0 */
+platform-56cd6f66.js:1: function: r
+  mode: strict
+  locals:
+    0: const a [level:1 next:-1]
+    1: const t [level:1 next:0]
+    2: const r [level:1 next:1]
+  closure vars:
+    0: n parent:loc3 let
+    1: e parent:loc0 const
+  stack_size: 3
+  opcodes:
+    0:  set_loc_uninitialized 2: r
+    3:  set_loc_uninitialized 1: t
+    6:  set_loc_uninitialized 0: a
+    9:  get_var_ref_check 0: n
+   12:  if_false8 18
+   14:  get_var_ref_check 0: n
+   17:  return
+   18:  push_1 1
+   19:  lnot
+   20:  put_loc0 0: a
+   21:  push_1 1
+   22:  lnot
+   23:  put_loc1 1: t
+   24:  push_0 0
+   25:  lnot
+   26:  put_loc2 2: r
+   27:  object
+   28:  get_var_ref_check 1: e
+   31:  define_field platform
+   36:  get_var_ref_check 1: e
+   39:  define_field buildTarget
+   44:  push_atom_value rka
+   49:  define_field upstreamPlatform
+   54:  push_atom_value rk
+   59:  define_field chipFamily
+   64:  get_loc_check 0: a
+   67:  define_field isRk
+   72:  get_loc_check 1: t
+   75:  define_field isCvi
+   80:  get_loc_check 2: r
+   83:  define_field isCvia
+   88:  get_loc_check 2: r
+   91:  define_field isRkA
+   96:  object
+   97:  push_atom_value logical
+  102:  define_field coordSpace
+  107:  push_0 0
+  108:  lnot
+  109:  define_field canvasExperiment
+  114:  get_loc_check 2: r
+  117:  define_field canvasDefault
+  122:  get_loc_check 2: r
+  125:  define_field systemPlayerDefault
+  130:  push_atom_value s
+  135:  define_field danmakuScale
+  140:  push_atom_value "alsa-ffmpeg"
+  145:  define_field nativeAudioEgress
+  150:  push_0 0
+  151:  lnot
+  152:  define_field audioTrackSplit
+  157:  push_0 0
+  158:  lnot
+  159:  define_field frameCounter
+  164:  get_loc_check 0: a
+  167:  define_field nativeHole
+  172:  get_loc_check 2: r
+  175:  define_field systemKeyboardDefault
+  180:  push_1 1
+  181:  lnot
+  182:  define_field rimeEngine
+  187:  define_field caps
+  192:  dup
+  193:  put_var_ref_check 0: n
+  196:  drop
+  197:  get_var_ref_check 0: n
+  200:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: platform-56cd6f66.js:1 source_len=0 */
+platform-56cd6f66.js:1: function: s
+  mode: strict
+  args: e
+  locals:
+    0: const a [level:1 next:-1]
+  closure vars:
+    0: r parent:loc4 var
+  stack_size: 2
+  opcodes:
+    0:  set_loc_uninitialized 0: a
+    3:  get_var_ref0 0: r
+    4:  call0 0
+    5:  get_field caps
+   10:  put_loc0 0: a
+   11:  get_loc_check 0: a
+   14:  get_field canvasExperiment
+   19:  lnot
+   20:  lnot
+   21:  dup
+   22:  if_false8 107
+   24:  drop
+   25:  get_arg0 0: e
+   26:  if_false8 99
+   28:  push_atom_value object
+   33:  get_arg0 0: e
+   34:  typeof
+   35:  eq
+   36:  if_false8 99
+   38:  push_1 1
+   39:  lnot
+   40:  get_arg0 0: e
+   41:  get_field rkaCanvasPlayer
+   46:  strict_neq
+   47:  dup
+   48:  if_false8 107
+   50:  drop
+   51:  push_1 1
+   52:  lnot
+   53:  get_arg0 0: e
+   54:  get_field useCanvasPlayer
+   59:  strict_neq
+   60:  dup
+   61:  if_false8 107
+   63:  drop
+   64:  push_0 0
+   65:  lnot
+   66:  get_arg0 0: e
+   67:  get_field rkaCanvasPlayer
+   72:  strict_eq
+   73:  dup
+   74:  if_true8 107
+   76:  drop
+   77:  push_0 0
+   78:  lnot
+   79:  get_arg0 0: e
+   80:  get_field useCanvasPlayer
+   85:  strict_eq
+   86:  dup
+   87:  if_true8 107
+   89:  drop
+   90:  get_loc_check 0: a
+   93:  get_field canvasDefault
+   98:  return
+   99:  get_loc_check 0: a
+  102:  get_field canvasDefault
+  107:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: platform-56cd6f66.js:1 source_len=0 */
+platform-56cd6f66.js:1: function: i
+  mode: strict
+  args: e
+  locals:
+    0: const a [level:1 next:-1]
+  closure vars:
+    0: r parent:loc4 var
+  stack_size: 2
+  opcodes:
+    0:  set_loc_uninitialized 0: a
+    3:  get_var_ref0 0: r
+    4:  call0 0
+    5:  get_field caps
+   10:  put_loc0 0: a
+   11:  get_arg0 0: e
+   12:  if_false8 64
+   14:  push_atom_value object
+   19:  get_arg0 0: e
+   20:  typeof
+   21:  eq
+   22:  if_false8 64
+   24:  undefined
+   25:  get_arg0 0: e
+   26:  get_field useSystemVideoPlayer
+   31:  strict_eq
+   32:  dup
+   33:  if_true8 44
+   35:  drop
+   36:  null
+   37:  get_arg0 0: e
+   38:  get_field useSystemVideoPlayer
+   43:  strict_eq
+   44:  if_false8 55
+   46:  get_loc_check 0: a
+   49:  get_field systemPlayerDefault
+   54:  return
+   55:  get_arg0 0: e
+   56:  get_field useSystemVideoPlayer
+   61:  lnot
+   62:  lnot
+   63:  return
+   64:  get_loc_check 0: a
+   67:  get_field systemPlayerDefault
+   72:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: platform-56cd6f66.js:1 source_len=0 */
+platform-56cd6f66.js:1: function: u
+  mode: strict
+  locals:
+    0: const e [level:1 next:-1]
+  closure vars:
+    0: r parent:loc4 var
+  stack_size: 2
+  opcodes:
+    0:  set_loc_uninitialized 0: e
+    3:  get_var_ref0 0: r
+    4:  call0 0
+    5:  get_field caps
+   10:  put_loc0 0: e
+   11:  object
+   12:  get_loc_check 0: e
+   15:  get_field systemPlayerDefault
+   20:  define_field useSystemVideoPlayer
+   25:  get_loc_check 0: e
+   28:  get_field canvasDefault
+   33:  define_field useCanvasPlayer
+   38:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: platform-56cd6f66.js:1 source_len=0 */
+platform-56cd6f66.js:1: function: l
+  mode: strict
+  args: e
+  locals:
+    0: const a [level:1 next:-1]
+    1: const t [level:1 next:0]
+  closure vars:
+    0: r parent:loc4 var
+  stack_size: 2
+  opcodes:
+    0:  set_loc_uninitialized 1: t
+    3:  set_loc_uninitialized 0: a
+    6:  get_var_ref0 0: r
+    7:  call0 0
+    8:  get_field caps
+   13:  put_loc0 0: a
+   14:  get_arg0 0: e
+   15:  lnot
+   16:  dup
+   17:  if_true8 28
+   19:  drop
+   20:  push_atom_value object
+   25:  get_arg0 0: e
+   26:  typeof
+   27:  neq
+   28:  if_false8 39
+   30:  get_loc_check 0: a
+   33:  get_field systemKeyboardDefault
+   38:  return
+   39:  get_arg0 0: e
+   40:  get_field nativeSoftKeyboard
+   45:  put_loc1 1: t
+   46:  null
+   47:  get_loc_check 1: t
+   50:  eq
+   51:  if_false8 62
+   53:  get_loc_check 0: a
+   56:  get_field systemKeyboardDefault
+   61:  return
+   62:  get_loc_check 1: t
+   65:  lnot
+   66:  lnot
+   67:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: platform-56cd6f66.js:1 source_len=0 */
+platform-56cd6f66.js:1: function: c
+  mode: strict
+  closure vars:
+    0: r parent:loc4 var
+  stack_size: 2
+  opcodes:
+    0:  push_1 1
+    1:  lnot
+    2:  get_var_ref0 0: r
+    3:  call0 0
+    4:  get_field caps
+    9:  get_field rimeEngine
+   14:  strict_neq
+   15:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: platform-56cd6f66.js:1 source_len=0 */
+platform-56cd6f66.js:1: function: o
+  mode: strict
+  args: e
+  closure vars:
+    0: r parent:loc4 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: r
+    1:  call0 0
+    2:  get_field caps
+    7:  get_field canvasExperiment
+   12:  lnot
+   13:  lnot
+   14:  dup
+   15:  if_false8 46
+   17:  drop
+   18:  get_arg0 0: e
+   19:  lnot
+   20:  dup
+   21:  if_true8 32
+   23:  drop
+   24:  push_atom_value object
+   29:  get_arg0 0: e
+   30:  typeof
+   31:  neq
+   32:  lnot
+   33:  dup
+   34:  if_false8 46
+   36:  drop
+   37:  push_0 0
+   38:  lnot
+   39:  get_arg0 0: e
+   40:  get_field experimentalCanvasPlayer
+   45:  strict_eq
+   46:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: platform-56cd6f66.js:1 source_len=0 */
+platform-56cd6f66.js:1: function: f
+  mode: strict
+  args: e
+  locals:
+    0: var a
+    1: var t
+  stack_size: 4
+  opcodes:
+    0:  get_var String
+    5:  null
+    6:  get_arg0 0: e
+    7:  eq
+    8:  if_false8 13
+   10:  push_empty_string
+   11:  goto8 14
+   13:  get_arg0 0: e
+   14:  call1 1
+   15:  get_field2 replace
+   20:  push_const8 0: 1"[^\\d.]"
+   22:  push_const8 1: 1"\u0001\u0001\u0000\u001f\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0015\u0003\u0000\u0000\u0000-\u0000/\u0000/\u0000:\u0000\u00ff\u00ff\u000c\u0000\n"
+   24:  regexp
+   25:  push_empty_string
+   26:  call_method 2
+   29:  get_field2 split
+   34:  push_atom_value "."
+   39:  call_method 1
+   42:  set_loc0 0: a
+   43:  get_loc0 0: a
+   44:  get_length
+   45:  push_1 1
+   46:  sub
+   47:  get_array_el
+   48:  set_loc1 1: t
+   49:  dup
+   50:  if_false8 73
+   52:  drop
+   53:  push_1 1
+   54:  get_loc1 1: t
+   55:  get_length
+   56:  strict_eq
+   57:  dup
+   58:  if_false8 73
+   60:  drop
+   61:  get_loc0 0: a
+   62:  get_loc0 0: a
+   63:  get_length
+   64:  push_1 1
+   65:  sub
+   66:  to_propkey2
+   67:  get_loc1 1: t
+   68:  push_const8 2: 1"0"
+   70:  add
+   71:  insert3
+   72:  put_array_el
+   73:  drop
+   74:  get_loc0 0: a
+   75:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: platform-56cd6f66.js:1 source_len=0 */
+platform-56cd6f66.js:1: function: v
+  mode: strict
+  args: e a
+  locals:
+    0: var t
+    1: var n
+    2: var r
+    3: var s
+    4: var i
+    5: var u
+  closure vars:
+    0: f parent:loc11 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: f
+    1:  get_arg0 0: e
+    2:  call1 1
+    3:  put_loc0 0: t
+    4:  get_var_ref0 0: f
+    5:  get_arg1 1: a
+    6:  call1 1
+    7:  put_loc1 1: n
+    8:  get_var Math
+   13:  get_field2 max
+   18:  get_loc0 0: t
+   19:  get_length
+   20:  get_loc1 1: n
+   21:  get_length
+   22:  call_method 2
+   25:  put_loc2 2: r
+   26:  push_0 0
+   27:  put_loc3 3: s
+   28:  get_loc3 3: s
+   29:  get_loc2 2: r
+   30:  lt
+   31:  if_false8 93
+   33:  get_var parseInt
+   38:  get_loc0 0: t
+   39:  get_loc3 3: s
+   40:  get_array_el
+   41:  dup
+   42:  if_true8 46
+   44:  drop
+   45:  push_0 0
+   46:  push_i8 10
+   48:  call2 2
+   49:  put_loc8 4: i
+   51:  get_var parseInt
+   56:  get_loc1 1: n
+   57:  get_loc3 3: s
+   58:  get_array_el
+   59:  dup
+   60:  if_true8 64
+   62:  drop
+   63:  push_0 0
+   64:  push_i8 10
+   66:  call2 2
+   67:  put_loc8 5: u
+   69:  get_loc8 4: i
+   71:  get_loc8 5: u
+   73:  gt
+   74:  if_false8 79
+   76:  push_0 0
+   77:  lnot
+   78:  return
+   79:  get_loc8 4: i
+   81:  get_loc8 5: u
+   83:  lt
+   84:  if_false8 89
+   86:  push_1 1
+   87:  lnot
+   88:  return
+   89:  inc_loc 3: s
+   91:  goto8 28
+   93:  push_1 1
+   94:  lnot
+   95:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: platform-56cd6f66.js:1 source_len=0 */
+platform-56cd6f66.js:1: function: y
+  mode: strict
+  args: e a
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: e
+    1:  if_false8 57
+    3:  push_atom_value cvi
+    8:  get_arg1 1: a
+    9:  strict_eq
+   10:  if_false8 24
+   12:  get_arg0 0: e
+   13:  get_field version_cvi
+   18:  dup
+   19:  if_true8 58
+   21:  drop
+   22:  null
+   23:  return
+   24:  push_atom_value cvia
+   29:  get_arg1 1: a
+   30:  strict_eq
+   31:  if_false8 45
+   33:  get_arg0 0: e
+   34:  get_field version_cvia
+   39:  dup
+   40:  if_true8 58
+   42:  drop
+   43:  null
+   44:  return
+   45:  get_arg0 0: e
+   46:  get_field version
+   51:  dup
+   52:  if_true8 58
+   54:  drop
+   55:  null
+   56:  return
+   57:  null
+   58:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: platform-56cd6f66.js:1 source_len=0 */
+platform-56cd6f66.js:1: function: p
+  mode: strict
+  args: e a
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: e
+    1:  lnot
+    2:  lnot
+    3:  dup
+    4:  if_false8 44
+    6:  drop
+    7:  push_atom_value cvi
+   12:  get_arg1 1: a
+   13:  strict_eq
+   14:  if_false8 25
+   16:  get_arg0 0: e
+   17:  get_field force_cvi
+   22:  lnot
+   23:  lnot
+   24:  return
+   25:  push_atom_value cvia
+   30:  get_arg1 1: a
+   31:  strict_eq
+   32:  dup
+   33:  if_false8 44
+   35:  drop
+   36:  get_arg0 0: e
+   37:  get_field force_cvia
+   42:  lnot
+   43:  lnot
+   44:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: platform-56cd6f66.js:1 source_len=0 */
+platform-56cd6f66.js:1: function: m
+  mode: strict
+  args: e
+  stack_size: 2
+  opcodes:
+    0:  push_atom_value cvia
+    5:  get_arg0 0: e
+    6:  strict_eq
+    7:  if_false8 15
+    9:  push_atom_value cvia_v
+   14:  return
+   15:  push_atom_value rk
+   20:  get_arg0 0: e
+   21:  strict_eq
+   22:  if_false8 30
+   24:  push_atom_value loli_v
+   29:  return
+   30:  push_atom_value cvi_v
+   35:  return
+

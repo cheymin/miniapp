@@ -1,0 +1,190 @@
+{
+  "page-scroll": {
+    "width": "100%",
+    "height": "100%",
+    "backgroundColor": "#0b1220"
+  },
+  "page": {
+    "width": "100%",
+    "minHeight": "100%",
+    "justifyContent": "center",
+    "alignItems": "center",
+    "paddingTop": "14px",
+    "paddingRight": "14px",
+    "paddingBottom": "14px",
+    "paddingLeft": "14px"
+  },
+  "card": {
+    "width": "100%",
+    "maxWidth": "820px",
+    "backgroundColor": "#121a2b",
+    "borderRadius": "12px",
+    "paddingTop": "16px",
+    "paddingRight": "16px",
+    "paddingBottom": "16px",
+    "paddingLeft": "16px"
+  },
+  "title": {
+    "color": "#ffffff",
+    "fontSize": "26px",
+    "fontWeight": "bold"
+  },
+  "status": {
+    "marginTop": "8px",
+    "color": "#c6d0e1",
+    "fontSize": "18px"
+  },
+  "progress-track": {
+    "width": "100%",
+    "height": "12px",
+    "backgroundColor": "#24314d",
+    "borderRadius": "999px",
+    "marginTop": "12px",
+    "overflow": "hidden"
+  },
+  "progress-fill": {
+    "height": "12px",
+    "backgroundColor": "#0a84ff",
+    "borderRadius": "999px"
+  },
+  "progress-text": {
+    "marginTop": "8px",
+    "color": "#9fb3d9",
+    "fontSize": "15px"
+  },
+  "warn-box": {
+    "marginTop": "12px",
+    "paddingTop": "12px",
+    "paddingRight": "12px",
+    "paddingBottom": "12px",
+    "paddingLeft": "12px",
+    "borderRadius": "12px",
+    "backgroundColor": "#2c1f0d"
+  },
+  "warn-title": {
+    "color": "#ffd37a",
+    "fontSize": "16px",
+    "fontWeight": "bold"
+  },
+  "warn-text": {
+    "marginTop": "4px",
+    "color": "#ffd37a",
+    "fontSize": "15px"
+  },
+  "log-box": {
+    "width": "100%",
+    "height": "220px",
+    "marginTop": "12px",
+    "paddingTop": "12px",
+    "paddingRight": "12px",
+    "paddingBottom": "12px",
+    "paddingLeft": "12px",
+    "backgroundColor": "#0a0f1a",
+    "borderRadius": "12px"
+  },
+  "log-line": {
+    "color": "#7fe3a1",
+    "fontSize": "14px",
+    "lineHeight": "22px"
+  },
+  "actions": {
+    "marginTop": "12px",
+    "flexDirection": "row",
+    "justifyContent": "flex-start"
+  },
+  "btn": {
+    "minWidth": "108px",
+    "height": "38px",
+    "borderRadius": "8px",
+    "justifyContent": "center",
+    "alignItems": "center",
+    "paddingTop": 0,
+    "paddingRight": "12px",
+    "paddingBottom": 0,
+    "paddingLeft": "12px",
+    "marginRight": "8px"
+  },
+  "btn-primary": {
+    "backgroundColor": "#2563eb"
+  },
+  "btn-secondary": {
+    "backgroundColor": "#334155"
+  },
+  "btn-reinstall": {
+    "backgroundColor": "#d97706"
+  },
+  "btn-danger": {
+    "backgroundColor": "#b42318"
+  },
+  "btn-text": {
+    "color": "#ffffff",
+    "fontSize": "15px",
+    "fontWeight": "bold"
+  },
+  "btn-press": {
+    "opacity": 0.65
+  },
+  "btn-primary-press": {
+    "opacity": 0.65
+  },
+  "btn-reinstall-press": {
+    "opacity": 0.65
+  },
+  "btn-secondary-press": {
+    "opacity": 0.65
+  },
+  "btn-danger-press": {
+    "opacity": 0.65
+  },
+  "page-scroll-l": {
+    "backgroundColor": "#e1e7f5"
+  },
+  "card-l": {
+    "backgroundColor": "#e2e8f3"
+  },
+  "title-l": {
+    "color": "#1c1c1e"
+  },
+  "status-l": {
+    "color": "#07090d"
+  },
+  "progress-track-l": {
+    "backgroundColor": "#b9c5df"
+  },
+  "progress-fill-l": {
+    "backgroundColor": "#007aff"
+  },
+  "progress-text-l": {
+    "color": "#06090f"
+  },
+  "warn-box-l": {
+    "backgroundColor": "#f6ece0"
+  },
+  "warn-title-l": {
+    "color": "#140e00"
+  },
+  "warn-text-l": {
+    "color": "#140e00"
+  },
+  "log-box-l": {
+    "backgroundColor": "#e2e7f4"
+  },
+  "log-line-l": {
+    "color": "#041108"
+  },
+  "btn-primary-l": {
+    "backgroundColor": "#020713"
+  },
+  "btn-secondary-l": {
+    "backgroundColor": "#bfcad9"
+  },
+  "btn-reinstall-l": {
+    "backgroundColor": "#f5a03d"
+  },
+  "btn-danger-l": {
+    "backgroundColor": "#e7564b"
+  },
+  "btn-text-l": {
+    "color": "#1c1c1e"
+  }
+}

@@ -1,0 +1,2510 @@
+
+/* ===== function depth=0 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: n local:loc0 var
+    1: t local:loc1 var
+    2: r local:loc2 var
+    3: e local:loc3 var
+    4: o local:loc4 var
+    5: u local:loc5 var
+    6: i local:loc6 var
+    7: c local:loc7 var
+    8: l local:loc8 var
+    9: f local:loc9 var
+   10: a local:loc10 var
+   11: s local:loc11 var
+   12: d local:loc12 var
+   13: g local:loc13 var
+   14: h local:loc14 var
+   15: y local:loc15 var
+   16: p local:loc16 var
+   17: b local:loc17 const
+   18: v local:loc18 const
+   19: w local:loc19 const
+   20: S local:loc20 const
+   21: _ local:loc21 const
+   22: j local:loc22 const
+   23: m local:loc23 const
+   24: x local:loc24 var
+   25: D local:loc25 var
+   26: E local:loc26 const
+   27: T local:loc27 const
+   28: C local:loc28 let
+   29: $ local:loc29 var
+   30: k local:loc30 var
+   31: H local:loc31 var
+   32: I local:loc32 var
+   33: X local:loc33 var
+   34: F local:loc34 var
+   35: J local:loc35 const
+   36: O local:loc36 var
+   37: R local:loc37 var
+   38: q local:loc38 var
+  stack_size: 2
+  opcodes:
+    0:  fclosure8 0: [bytecode o]
+    2:  put_var_ref 4: o
+    5:  fclosure8 1: [bytecode u]
+    7:  put_var_ref 5: u
+   10:  fclosure8 2: [bytecode i]
+   12:  put_var_ref 6: i
+   15:  fclosure8 3: [bytecode c]
+   17:  put_var_ref 7: c
+   20:  fclosure8 4: [bytecode l]
+   22:  put_var_ref 8: l
+   25:  fclosure8 5: [bytecode f]
+   27:  put_var_ref 9: f
+   30:  fclosure8 6: [bytecode a]
+   32:  put_var_ref 10: a
+   35:  fclosure8 7: [bytecode s]
+   37:  put_var_ref 11: s
+   40:  fclosure8 8: [bytecode g]
+   42:  put_var_ref 13: g
+   45:  fclosure8 9: [bytecode h]
+   47:  put_var_ref 14: h
+   50:  fclosure8 10: [bytecode y]
+   52:  put_var_ref 15: y
+   55:  fclosure8 11: [bytecode p]
+   57:  put_var_ref 16: p
+   60:  fclosure8 12: [bytecode x]
+   62:  put_var_ref 24: x
+   65:  fclosure8 13: [bytecode D]
+   67:  put_var_ref 25: D
+   70:  fclosure8 15: [bytecode $]
+   72:  put_var_ref 29: $
+   75:  fclosure8 16: [bytecode k]
+   77:  put_var_ref 30: k
+   80:  fclosure8 17: [bytecode H]
+   82:  put_var_ref 31: H
+   85:  fclosure8 18: [bytecode I]
+   87:  put_var_ref 32: I
+   90:  fclosure8 19: [bytecode X]
+   92:  put_var_ref 33: X
+   95:  fclosure8 20: [bytecode F]
+   97:  put_var_ref 34: F
+  100:  fclosure8 21: [bytecode O]
+  102:  put_var_ref 36: O
+  105:  fclosure8 22: [bytecode R]
+  107:  put_var_ref 37: R
+  110:  fclosure8 23: [bytecode q]
+  112:  put_var_ref 38: q
+  115:  null
+  116:  put_var_ref0 0: n
+  117:  null
+  118:  put_var_ref1 1: t
+  119:  null
+  120:  put_var_ref2 2: r
+  121:  null
+  122:  put_var_ref3 3: e
+  123:  null
+  124:  put_var_ref 12: d
+  127:  push_atom_value "[loli]"
+  132:  put_var_ref 17: b
+  135:  push_atom_value info
+  140:  put_var_ref 18: v
+  143:  push_atom_value "/userdata/applog/loli_cvi_dev.txt"
+  148:  put_var_ref 19: w
+  151:  push_i16 800
+  154:  put_var_ref 20: S
+  157:  push_i16 200
+  160:  put_var_ref 21: _
+  163:  push_i16 5000
+  166:  put_var_ref 22: j
+  169:  object
+  170:  push_0 0
+  171:  define_field debug
+  176:  push_1 1
+  177:  define_field info
+  182:  push_2 2
+  183:  define_field warn
+  188:  push_3 3
+  189:  define_field error
+  194:  put_var_ref 23: m
+  197:  fclosure8 14: [bytecode <null>]
+  199:  call0 0
+  200:  lnot
+  201:  drop
+  202:  object
+  203:  put_var_ref 26: E
+  206:  array_from 0
+  209:  put_var_ref 27: T
+  212:  null
+  213:  put_var_ref 28: C
+  216:  object
+  217:  push_atom_value info
+  222:  define_field log
+  227:  push_atom_value info
+  232:  define_field info
+  237:  push_atom_value warn
+  242:  define_field warn
+  247:  push_atom_value error
+  252:  define_field error
+  257:  push_atom_value debug
+  262:  define_field debug
+  267:  put_var_ref 35: J
+  270:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: o
+  mode: strict
+  args: n
+  stack_size: 1
+  opcodes:
+    0:  get_arg0 0: n
+    1:  if_false8 18
+    3:  get_arg0 0: n
+    4:  get_field default
+    9:  if_false8 18
+   11:  get_arg0 0: n
+   12:  get_field default
+   17:  return
+   18:  get_arg0 0: n
+   19:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: u
+  mode: strict
+  args: t
+  locals:
+    0: var r
+  closure vars:
+    0: n parent:loc0 var
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: t
+    1:  if_false8 7
+    3:  get_arg0 0: t
+    4:  put_var_ref0 0: n
+    5:  get_arg0 0: t
+    6:  return
+    7:  get_var_ref0 0: n
+    8:  if_false8 12
+   10:  get_var_ref0 0: n
+   11:  return
+   12:  fclosure8 0: [bytecode <null>]
+   14:  call0 0
+   15:  dup
+   16:  if_true8 22
+   18:  drop
+   19:  fclosure8 1: [bytecode <null>]
+   21:  call0 0
+   22:  set_loc0 0: r
+   23:  dup
+   24:  if_false8 29
+   26:  drop
+   27:  get_loc0 0: r
+   28:  set_var_ref0 0: n
+   29:  drop
+   30:  get_loc0 0: r
+   31:  dup
+   32:  if_true8 36
+   34:  drop
+   35:  null
+   36:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var n
+    1: catch n [level:6 next:-1]
+  stack_size: 3
+  opcodes:
+    0:  catch 39
+    5:  push_atom_value function
+   10:  get_var_undef require
+   15:  typeof
+   16:  eq
+   17:  if_false8 36
+   19:  get_var require
+   24:  push_atom_value bridge
+   29:  call1 1
+   30:  set_loc0 0: n
+   31:  if_false8 36
+   33:  get_loc0 0: n
+   34:  nip
+   35:  return
+   36:  drop
+   37:  goto8 49
+   39:  put_loc1 1: n
+   40:  catch 48
+   45:  drop
+   46:  goto8 49
+   48:  throw
+   49:  null
+   50:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch n [level:4 next:-1]
+    1: catch n [level:8 next:-1]
+    2: catch n [level:12 next:-1]
+  stack_size: 3
+  opcodes:
+    0:  catch 36
+    5:  push_atom_value undefined
+   10:  get_var_undef bridge
+   15:  typeof
+   16:  neq
+   17:  if_false8 33
+   19:  get_var bridge
+   24:  if_false8 33
+   26:  get_var bridge
+   31:  nip
+   32:  return
+   33:  drop
+   34:  goto8 46
+   36:  put_loc0 0: n
+   37:  catch 45
+   42:  drop
+   43:  goto8 46
+   45:  throw
+   46:  catch 92
+   51:  push_atom_value undefined
+   56:  get_var_undef globalThis
+   61:  typeof
+   62:  neq
+   63:  if_false8 89
+   65:  get_var globalThis
+   70:  get_field bridge
+   75:  if_false8 89
+   77:  get_var globalThis
+   82:  get_field bridge
+   87:  nip
+   88:  return
+   89:  drop
+   90:  goto8 102
+   92:  put_loc1 1: n
+   93:  catch 101
+   98:  drop
+   99:  goto8 102
+  101:  throw
+  102:  catch 155
+  107:  push_atom_value undefined
+  112:  get_var_undef $falcon
+  117:  typeof
+  118:  neq
+  119:  if_false8 152
+  121:  get_var $falcon
+  126:  if_false8 152
+  128:  get_var $falcon
+  133:  get_field bridge
+  138:  if_false8 152
+  140:  get_var $falcon
+  145:  get_field bridge
+  150:  nip
+  151:  return
+  152:  drop
+  153:  goto8 165
+  155:  put_loc2 2: n
+  156:  catch 164
+  161:  drop
+  162:  goto8 165
+  164:  throw
+  165:  null
+  166:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: i
+  mode: strict
+  args: o
+  closure vars:
+    0: n parent:loc0 var
+    1: t parent:loc1 var
+    2: r parent:loc2 var
+    3: e parent:loc3 var
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: o
+    1:  dup
+    2:  if_false8 13
+    4:  drop
+    5:  get_arg0 0: o
+    6:  put_var_ref0 0: n
+    7:  null
+    8:  put_var_ref1 1: t
+    9:  null
+   10:  put_var_ref2 2: r
+   11:  null
+   12:  set_var_ref3 3: e
+   13:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: c
+  mode: strict
+  closure vars:
+    0: n parent:loc0 var
+    1: t parent:loc1 var
+    2: r parent:loc2 var
+    3: e parent:loc3 var
+  stack_size: 1
+  opcodes:
+    0:  null
+    1:  put_var_ref0 0: n
+    2:  null
+    3:  put_var_ref1 1: t
+    4:  null
+    5:  put_var_ref2 2: r
+    6:  null
+    7:  put_var_ref3 3: e
+    8:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: l
+  mode: strict
+  args: n t
+  locals:
+    0: var r
+    1: var e
+  closure vars:
+    0: u parent:loc5 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: u
+    1:  undefined
+    2:  get_arg1 1: t
+    3:  strict_eq
+    4:  if_false8 9
+    6:  null
+    7:  goto8 10
+    9:  get_arg1 1: t
+   10:  call1 1
+   11:  set_loc0 0: r
+   12:  lnot
+   13:  dup
+   14:  if_true8 19
+   16:  drop
+   17:  get_arg0 0: n
+   18:  lnot
+   19:  if_false8 23
+   21:  null
+   22:  return
+   23:  get_loc0 0: r
+   24:  get_arg0 0: n
+   25:  get_array_el
+   26:  if_false8 32
+   28:  get_loc0 0: r
+   29:  get_arg0 0: n
+   30:  get_array_el
+   31:  return
+   32:  get_loc0 0: r
+   33:  get_field default
+   38:  set_loc1 1: e
+   39:  if_false8 50
+   41:  get_loc1 1: e
+   42:  get_arg0 0: n
+   43:  get_array_el
+   44:  if_false8 50
+   46:  get_loc1 1: e
+   47:  get_arg0 0: n
+   48:  get_array_el
+   49:  return
+   50:  null
+   51:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: f
+  mode: strict
+  args: n
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: n
+    1:  dup
+    2:  if_false8 61
+    4:  drop
+    5:  get_arg0 0: n
+    6:  get_field Datas
+   11:  dup
+   12:  if_true8 61
+   14:  drop
+   15:  get_arg0 0: n
+   16:  get_field Dbase
+   21:  dup
+   22:  if_true8 61
+   24:  drop
+   25:  get_arg0 0: n
+   26:  get_field default
+   31:  dup
+   32:  if_false8 61
+   34:  drop
+   35:  get_arg0 0: n
+   36:  get_field default
+   41:  get_field Datas
+   46:  dup
+   47:  if_true8 61
+   49:  drop
+   50:  get_arg0 0: n
+   51:  get_field default
+   56:  get_field Dbase
+   61:  dup
+   62:  if_true8 66
+   64:  drop
+   65:  null
+   66:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: a
+  mode: strict
+  args: n
+  locals:
+    0: var r
+  closure vars:
+    0: t parent:loc1 var
+    1: f parent:loc9 var
+    2: u parent:loc5 var
+    3: h parent:loc14 var
+  stack_size: 4
+  opcodes:
+    0:  undefined
+    1:  get_arg0 0: n
+    2:  strict_eq
+    3:  dup
+    4:  if_true8 9
+    6:  drop
+    7:  get_arg0 0: n
+    8:  lnot
+    9:  if_false8 33
+   11:  get_var_ref0 0: t
+   12:  if_false8 16
+   14:  get_var_ref0 0: t
+   15:  return
+   16:  get_var_ref1 1: f
+   17:  get_var_ref2 2: u
+   18:  null
+   19:  call1 1
+   20:  call1 1
+   21:  set_loc0 0: r
+   22:  dup
+   23:  if_false8 30
+   25:  drop
+   26:  get_var_ref3 3: h
+   27:  get_loc0 0: r
+   28:  call1 1
+   29:  set_var_ref0 0: t
+   30:  drop
+   31:  get_var_ref0 0: t
+   32:  return
+   33:  get_var_ref3 3: h
+   34:  get_var_ref1 1: f
+   35:  get_var_ref2 2: u
+   36:  get_arg0 0: n
+   37:  call1 1
+   38:  call1 1
+   39:  tail_call 1
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: s
+  mode: strict
+  args: n
+  locals:
+    0: var t
+    1: var r
+  closure vars:
+    0: u parent:loc5 var
+    1: o parent:loc4 var
+    2: h parent:loc14 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: u
+    1:  undefined
+    2:  get_arg0 0: n
+    3:  strict_eq
+    4:  if_false8 9
+    6:  null
+    7:  goto8 10
+    9:  get_arg0 0: n
+   10:  call1 1
+   11:  set_loc0 0: t
+   12:  lnot
+   13:  if_false8 17
+   15:  null
+   16:  return
+   17:  get_var_ref1 1: o
+   18:  get_loc0 0: t
+   19:  call1 1
+   20:  put_loc1 1: r
+   21:  get_var_ref2 2: h
+   22:  get_loc1 1: r
+   23:  get_field Datas
+   28:  dup
+   29:  if_true8 48
+   31:  drop
+   32:  get_loc1 1: r
+   33:  get_field Dbase
+   38:  dup
+   39:  if_true8 48
+   41:  drop
+   42:  get_loc1 1: r
+   43:  dup
+   44:  if_true8 48
+   46:  drop
+   47:  null
+   48:  tail_call 1
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: g
+  mode: strict
+  args: n
+  closure vars:
+    0: d parent:loc12 var
+  stack_size: 2
+  opcodes:
+    0:  push_atom_value function
+    5:  get_arg0 0: n
+    6:  typeof
+    7:  eq
+    8:  if_false8 13
+   10:  get_arg0 0: n
+   11:  goto8 14
+   13:  null
+   14:  put_var_ref0 0: d
+   15:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: h
+  mode: strict
+  args: n
+  locals:
+    0: var t
+    1: catch t [level:6 next:-1]
+    2: var r
+    3: catch n [level:10 next:-1]
+  closure vars:
+    0: d parent:loc12 var
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: n
+    1:  lnot
+    2:  if_false8 6
+    4:  get_arg0 0: n
+    5:  return
+    6:  get_arg0 0: n
+    7:  typeof
+    8:  put_loc0 0: t
+    9:  push_atom_value object
+   14:  get_loc0 0: t
+   15:  strict_neq
+   16:  if_false8 29
+   18:  push_atom_value function
+   23:  get_loc0 0: t
+   24:  strict_neq
+   25:  if_false8 29
+   27:  get_arg0 0: n
+   28:  return
+   29:  catch 48
+   34:  get_arg0 0: n
+   35:  get_field __loliStoreInstrumented
+   40:  if_false8 45
+   42:  get_arg0 0: n
+   43:  nip
+   44:  return
+   45:  drop
+   46:  goto8 58
+   48:  put_loc1 1: t
+   49:  catch 57
+   54:  get_arg0 0: n
+   55:  nip
+   56:  return
+   57:  throw
+   58:  fclosure8 0: [bytecode <null>]
+   60:  set_name r
+   65:  set_loc2 2: r
+   66:  push_atom_value read
+   71:  push_atom_value read
+   76:  call2 2
+   77:  drop
+   78:  get_loc2 2: r
+   79:  push_atom_value write
+   84:  push_atom_value write
+   89:  call2 2
+   90:  drop
+   91:  get_loc2 2: r
+   92:  push_atom_value remove
+   97:  push_atom_value remove
+  102:  call2 2
+  103:  drop
+  104:  catch 120
+  109:  get_arg0 0: n
+  110:  push_0 0
+  111:  lnot
+  112:  put_field __loliStoreInstrumented
+  117:  drop
+  118:  goto8 130
+  120:  put_loc3 3: n
+  121:  catch 129
+  126:  drop
+  127:  goto8 130
+  129:  throw
+  130:  get_arg0 0: n
+  131:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  args: t r
+  locals:
+    0: var e
+    1: catch n [level:3 next:-1]
+    2: catch n [level:8 next:-1]
+  closure vars:
+    0: d parent:loc0 var
+    1: n local:arg0 var
+  stack_size: 4
+  opcodes:
+    0:  catch 12
+    5:  get_var_ref1 1: n
+    6:  get_arg0 0: t
+    7:  get_array_el
+    8:  put_loc0 0: e
+    9:  drop
+   10:  goto8 21
+   12:  put_loc1 1: n
+   13:  catch 20
+   18:  drop
+   19:  return_undef
+   20:  throw
+   21:  push_atom_value function
+   26:  get_loc0 0: e
+   27:  typeof
+   28:  eq
+   29:  if_false8 53
+   31:  catch 44
+   36:  get_var_ref1 1: n
+   37:  get_arg0 0: t
+   38:  to_propkey2
+   39:  fclosure8 0: [bytecode <null>]
+   41:  put_array_el
+   42:  drop
+   43:  return_undef
+   44:  put_loc2 2: n
+   45:  catch 52
+   50:  drop
+   51:  return_undef
+   52:  throw
+   53:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch n [level:3 next:-1]
+    1: var arguments
+  closure vars:
+    0: d parent:loc0 var
+    1: e local:loc0 var
+    2: n parent:arg1 var
+    3: r local:arg1 var
+  stack_size: 6
+  opcodes:
+    0:  special_object 0
+    2:  put_loc1 1: arguments
+    3:  catch 21
+    8:  get_var_ref1 1: e
+    9:  get_field2 apply
+   14:  get_var_ref2 2: n
+   15:  get_loc1 1: arguments
+   16:  call_method 2
+   19:  nip
+   20:  return
+   21:  put_loc0 0: n
+   22:  catch 57
+   27:  fclosure8 0: [bytecode <null>]
+   29:  get_var_ref3 3: r
+   30:  push_atom_value "("
+   35:  add
+   36:  get_var String
+   41:  get_loc1 1: arguments
+   42:  push_0 0
+   43:  get_array_el
+   44:  call1 1
+   45:  add
+   46:  push_atom_value ")"
+   51:  add
+   52:  get_loc0 0: n
+   53:  call2 2
+   54:  drop
+   55:  get_loc0 0: n
+   56:  throw
+   57:  throw
+
+
+/* ===== function depth=4 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  args: n t
+  locals:
+    0: catch n [level:4 next:-1]
+  closure vars:
+    0: d parent:loc0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: d
+    1:  if_false8 24
+    3:  catch 15
+    8:  get_var_ref0 0: d
+    9:  get_arg0 0: n
+   10:  get_arg1 1: t
+   11:  call2 2
+   12:  drop
+   13:  drop
+   14:  return_undef
+   15:  put_loc0 0: n
+   16:  catch 23
+   21:  drop
+   22:  return_undef
+   23:  throw
+   24:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: y
+  mode: strict
+  args: n
+  locals:
+    0: var t
+  closure vars:
+    0: r parent:loc2 var
+    1: l parent:loc8 var
+  stack_size: 3
+  opcodes:
+    0:  undefined
+    1:  get_arg0 0: n
+    2:  strict_eq
+    3:  dup
+    4:  if_true8 9
+    6:  drop
+    7:  get_arg0 0: n
+    8:  lnot
+    9:  if_false8 34
+   11:  get_var_ref0 0: r
+   12:  if_false8 16
+   14:  get_var_ref0 0: r
+   15:  return
+   16:  get_var_ref1 1: l
+   17:  push_atom_value Shell
+   22:  null
+   23:  call2 2
+   24:  set_loc0 0: t
+   25:  dup
+   26:  if_false8 31
+   28:  drop
+   29:  get_loc0 0: t
+   30:  set_var_ref0 0: r
+   31:  drop
+   32:  get_loc0 0: t
+   33:  return
+   34:  get_var_ref1 1: l
+   35:  push_atom_value Shell
+   40:  get_arg0 0: n
+   41:  tail_call 2
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: p
+  mode: strict
+  args: n
+  locals:
+    0: var t
+  closure vars:
+    0: e parent:loc3 var
+    1: l parent:loc8 var
+  stack_size: 3
+  opcodes:
+    0:  undefined
+    1:  get_arg0 0: n
+    2:  strict_eq
+    3:  dup
+    4:  if_true8 9
+    6:  drop
+    7:  get_arg0 0: n
+    8:  lnot
+    9:  if_false8 34
+   11:  get_var_ref0 0: e
+   12:  if_false8 16
+   14:  get_var_ref0 0: e
+   15:  return
+   16:  get_var_ref1 1: l
+   17:  push_atom_value Fetch
+   22:  null
+   23:  call2 2
+   24:  set_loc0 0: t
+   25:  dup
+   26:  if_false8 31
+   28:  drop
+   29:  get_loc0 0: t
+   30:  set_var_ref0 0: e
+   31:  drop
+   32:  get_loc0 0: t
+   33:  return
+   34:  get_var_ref1 1: l
+   35:  push_atom_value Fetch
+   40:  get_arg0 0: n
+   41:  tail_call 2
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: x
+  mode: strict
+  args: n
+  locals:
+    0: catch n [level:10 next:-1]
+    1: catch n [level:13 next:-1]
+  closure vars:
+    0: D parent:loc25 var
+  stack_size: 5
+  opcodes:
+    0:  catch 129
+    5:  null
+    6:  get_arg0 0: n
+    7:  strict_eq
+    8:  if_false8 17
+   10:  push_atom_value null
+   15:  nip
+   16:  return
+   17:  undefined
+   18:  get_arg0 0: n
+   19:  strict_eq
+   20:  if_false8 29
+   22:  push_atom_value undefined
+   27:  nip
+   28:  return
+   29:  push_atom_value string
+   34:  get_arg0 0: n
+   35:  typeof
+   36:  eq
+   37:  if_false8 42
+   39:  get_arg0 0: n
+   40:  nip
+   41:  return
+   42:  push_atom_value function
+   47:  get_arg0 0: n
+   48:  typeof
+   49:  eq
+   50:  if_false8 59
+   52:  push_atom_value "[fn]"
+   57:  nip
+   58:  return
+   59:  get_arg0 0: n
+   60:  get_var Error
+   65:  instanceof
+   66:  if_false8 73
+   68:  get_var_ref0 0: D
+   69:  get_arg0 0: n
+   70:  call1 1
+   71:  nip
+   72:  return
+   73:  push_atom_value object
+   78:  get_arg0 0: n
+   79:  typeof
+   80:  eq
+   81:  if_false8 120
+   83:  catch 105
+   88:  get_var JSON
+   93:  get_field2 stringify
+   98:  get_arg0 0: n
+   99:  call_method 1
+  102:  nip
+  103:  nip
+  104:  return
+  105:  put_loc0 0: n
+  106:  catch 119
+  111:  push_atom_value "[object]"
+  116:  nip
+  117:  nip
+  118:  return
+  119:  throw
+  120:  get_var String
+  125:  get_arg0 0: n
+  126:  call1 1
+  127:  nip
+  128:  return
+  129:  put_loc1 1: n
+  130:  catch 142
+  135:  push_atom_value "[unprintable]"
+  140:  nip
+  141:  return
+  142:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: D
+  mode: strict
+  args: n
+  locals:
+    0: const t [level:2 next:-1]
+    1: const r [level:2 next:0]
+    2: catch n [level:4 next:-1]
+  stack_size: 5
+  opcodes:
+    0:  catch 103
+    5:  set_loc_uninitialized 1: r
+    8:  set_loc_uninitialized 0: t
+   11:  get_arg0 0: n
+   12:  lnot
+   13:  if_false8 24
+   15:  get_var String
+   20:  get_arg0 0: n
+   21:  call1 1
+   22:  nip
+   23:  return
+   24:  get_arg0 0: n
+   25:  get_field message
+   30:  dup
+   31:  if_true8 41
+   33:  drop
+   34:  get_var String
+   39:  get_arg0 0: n
+   40:  call1 1
+   41:  put_loc0 0: t
+   42:  get_arg0 0: n
+   43:  get_field stack
+   48:  if_false8 76
+   50:  get_var String
+   55:  get_arg0 0: n
+   56:  get_field stack
+   61:  call1 1
+   62:  get_field2 slice
+   67:  push_0 0
+   68:  push_i16 600
+   71:  call_method 2
+   74:  goto8 77
+   76:  push_empty_string
+   77:  put_loc1 1: r
+   78:  get_loc_check 1: r
+   81:  if_false8 98
+   83:  get_loc_check 0: t
+   86:  push_atom_value " || "
+   91:  add
+   92:  get_loc_check 1: r
+   95:  add
+   96:  goto8 101
+   98:  get_loc_check 0: t
+  101:  nip
+  102:  return
+  103:  put_loc2 2: n
+  104:  catch 116
+  109:  push_atom_value "[err-unprintable]"
+  114:  nip
+  115:  return
+  116:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const n [level:2 next:-1]
+    1: catch n [level:3 next:-1]
+  stack_size: 5
+  opcodes:
+    0:  catch 192
+    5:  set_loc_uninitialized 0: n
+    8:  push_atom_value undefined
+   13:  get_var_undef console
+   18:  typeof
+   19:  neq
+   20:  if_false8 29
+   22:  get_var console
+   27:  goto8 30
+   29:  null
+   30:  put_loc0 0: n
+   31:  get_loc_check 0: n
+   34:  if_false8 153
+   36:  object
+   37:  get_loc_check 0: n
+   40:  get_field error
+   45:  if_false8 68
+   47:  get_loc_check 0: n
+   50:  get_field error
+   55:  get_field2 bind
+   60:  get_loc_check 0: n
+   63:  call_method 1
+   66:  goto8 70
+   68:  fclosure8 0: [bytecode <null>]
+   70:  define_field error
+   75:  get_loc_check 0: n
+   78:  get_field warn
+   83:  if_false8 106
+   85:  get_loc_check 0: n
+   88:  get_field warn
+   93:  get_field2 bind
+   98:  get_loc_check 0: n
+  101:  call_method 1
+  104:  goto8 108
+  106:  fclosure8 1: [bytecode <null>]
+  108:  define_field warn
+  113:  get_loc_check 0: n
+  116:  get_field log
+  121:  if_false8 144
+  123:  get_loc_check 0: n
+  126:  get_field log
+  131:  get_field2 bind
+  136:  get_loc_check 0: n
+  139:  call_method 1
+  142:  goto8 146
+  144:  fclosure8 2: [bytecode <null>]
+  146:  define_field log
+  151:  goto8 190
+  153:  object
+  154:  fclosure8 3: [bytecode <null>]
+  156:  set_name error
+  161:  define_field error
+  166:  fclosure8 4: [bytecode <null>]
+  168:  set_name log
+  173:  define_field log
+  178:  fclosure8 5: [bytecode <null>]
+  180:  set_name warn
+  185:  define_field warn
+  190:  nip
+  191:  return
+  192:  put_loc1 1: n
+  193:  catch 237
+  198:  object
+  199:  fclosure8 6: [bytecode <null>]
+  201:  set_name error
+  206:  define_field error
+  211:  fclosure8 7: [bytecode <null>]
+  213:  set_name log
+  218:  define_field log
+  223:  fclosure8 8: [bytecode <null>]
+  225:  set_name warn
+  230:  define_field warn
+  235:  nip
+  236:  return
+  237:  throw
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  stack_size: 0
+  opcodes:
+    0:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  stack_size: 0
+  opcodes:
+    0:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  stack_size: 0
+  opcodes:
+    0:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  stack_size: 0
+  opcodes:
+    0:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  stack_size: 0
+  opcodes:
+    0:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  stack_size: 0
+  opcodes:
+    0:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  stack_size: 0
+  opcodes:
+    0:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  stack_size: 0
+  opcodes:
+    0:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  stack_size: 0
+  opcodes:
+    0:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: $
+  mode: strict
+  locals:
+    0: var n
+    1: catch n [level:3 next:-1]
+    2: var t
+    3: var r
+    4: catch n [level:10 next:-1]
+  closure vars:
+    0: l parent:loc8 var
+    1: C parent:loc28 let
+    2: T parent:loc27 const
+    3: w parent:loc19 const
+  stack_size: 5
+  opcodes:
+    0:  null
+    1:  dup
+    2:  put_var_ref_check 1: C
+    5:  drop
+    6:  catch 31
+   11:  get_var_ref_check 2: T
+   14:  get_field2 splice
+   19:  push_0 0
+   20:  get_var_ref_check 2: T
+   23:  get_length
+   24:  call_method 2
+   27:  put_loc0 0: n
+   28:  drop
+   29:  goto8 40
+   31:  put_loc1 1: n
+   32:  catch 39
+   37:  drop
+   38:  return_undef
+   39:  throw
+   40:  get_loc0 0: n
+   41:  get_length
+   42:  if_false8 134
+   44:  fclosure8 0: [bytecode <null>]
+   46:  call0 0
+   47:  set_loc2 2: t
+   48:  if_false8 134
+   50:  push_atom_value function
+   55:  get_loc2 2: t
+   56:  get_field exec
+   61:  typeof
+   62:  eq
+   63:  if_false8 134
+   65:  catch 124
+   70:  get_loc0 0: n
+   71:  get_field2 map
+   76:  fclosure8 1: [bytecode <null>]
+   78:  call_method 1
+   81:  get_field2 join
+   86:  push_atom_value " "
+   91:  call_method 1
+   94:  put_loc3 3: r
+   95:  get_loc2 2: t
+   96:  get_field2 exec
+  101:  push_atom_value "mkdir -p /userdata/applog; printf '%s\\n' "
+  106:  get_loc3 3: r
+  107:  add
+  108:  push_atom_value " >> "
+  113:  add
+  114:  get_var_ref_check 3: w
+  117:  add
+  118:  call_method 1
+  121:  drop
+  122:  drop
+  123:  return_undef
+  124:  put_loc8 4: n
+  126:  catch 133
+  131:  drop
+  132:  return_undef
+  133:  throw
+  134:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var n
+    1: catch n [level:3 next:-1]
+  closure vars:
+    0: l parent:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  catch 50
+    5:  get_var_ref0 0: l
+    6:  push_atom_value bridge
+   11:  call1 1
+   12:  set_loc0 0: n
+   13:  dup
+   14:  if_false8 48
+   16:  drop
+   17:  get_loc0 0: n
+   18:  get_field Shell
+   23:  dup
+   24:  if_true8 48
+   26:  drop
+   27:  get_loc0 0: n
+   28:  get_field default
+   33:  dup
+   34:  if_false8 48
+   36:  drop
+   37:  get_loc0 0: n
+   38:  get_field default
+   43:  get_field Shell
+   48:  nip
+   49:  return
+   50:  put_loc1 1: n
+   51:  catch 59
+   56:  null
+   57:  nip
+   58:  return
+   59:  throw
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  args: n
+  locals:
+    0: var t
+  stack_size: 4
+  opcodes:
+    0:  fclosure8 0: [bytecode <null>]
+    2:  call0 0
+    3:  push_atom_value " "
+    8:  add
+    9:  get_arg0 0: n
+   10:  add
+   11:  put_loc0 0: t
+   12:  get_var String
+   17:  null
+   18:  get_loc0 0: t
+   19:  eq
+   20:  if_false8 25
+   22:  push_empty_string
+   23:  goto8 26
+   25:  get_loc0 0: t
+   26:  call1 1
+   27:  get_field2 replace
+   32:  push_const8 1: 1"'"
+   34:  push_const8 2: 1"\u0001\u0001\u0000\u0013\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001'\u0000\u000c\u0000\n"
+   36:  regexp
+   37:  push_atom_value "'\\''"
+   42:  call_method 2
+   45:  get_field2 slice
+   50:  push_0 0
+   51:  push_i16 2000
+   54:  tail_call_method 2
+
+
+/* ===== function depth=3 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var n
+    1: var t
+  stack_size: 4
+  opcodes:
+    0:  fclosure8 0: [bytecode t]
+    2:  put_loc1 1: t
+    3:  get_var Date
+    8:  dup
+    9:  call_constructor 0
+   12:  set_loc0 0: n
+   13:  get_field2 getFullYear
+   18:  call_method 0
+   21:  push_atom_value "-"
+   26:  add
+   27:  get_loc1 1: t
+   28:  get_loc0 0: n
+   29:  get_field2 getMonth
+   34:  call_method 0
+   37:  push_1 1
+   38:  add
+   39:  call1 1
+   40:  add
+   41:  push_atom_value "-"
+   46:  add
+   47:  get_loc1 1: t
+   48:  get_loc0 0: n
+   49:  get_field2 getDate
+   54:  call_method 0
+   57:  call1 1
+   58:  add
+   59:  push_atom_value " "
+   64:  add
+   65:  get_loc1 1: t
+   66:  get_loc0 0: n
+   67:  get_field2 getHours
+   72:  call_method 0
+   75:  call1 1
+   76:  add
+   77:  push_atom_value ":"
+   82:  add
+   83:  get_loc1 1: t
+   84:  get_loc0 0: n
+   85:  get_field2 getMinutes
+   90:  call_method 0
+   93:  call1 1
+   94:  add
+   95:  push_atom_value ":"
+  100:  add
+  101:  get_loc1 1: t
+  102:  get_loc0 0: n
+  103:  get_field2 getSeconds
+  108:  call_method 0
+  111:  call1 1
+  112:  add
+  113:  return
+
+
+/* ===== function depth=4 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: t
+  mode: strict
+  args: n
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: n
+    1:  push_i8 10
+    3:  lt
+    4:  if_false8 10
+    6:  push_const8 0: 1"0"
+    8:  goto8 11
+   10:  push_empty_string
+   11:  get_arg0 0: n
+   12:  add
+   13:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: k
+  mode: strict
+  args: n t
+  locals:
+    0: const r [level:2 next:-1]
+    1: catch n [level:4 next:-1]
+  closure vars:
+    0: E parent:loc26 const
+    1: j parent:loc22 const
+    2: T parent:loc27 const
+    3: _ parent:loc21 const
+    4: C parent:loc28 let
+    5: $ parent:loc29 var
+    6: S parent:loc20 const
+    7: m parent:loc23 const
+    8: v parent:loc18 const
+    9: b parent:loc17 const
+  stack_size: 5
+  opcodes:
+    0:  catch 112
+    5:  set_loc_uninitialized 0: r
+    8:  undefined
+    9:  get_var_ref_check 7: m
+   12:  get_arg0 0: n
+   13:  get_array_el
+   14:  strict_eq
+   15:  if_false8 20
+   17:  push_1 1
+   18:  goto8 25
+   20:  get_var_ref_check 7: m
+   23:  get_arg0 0: n
+   24:  get_array_el
+   25:  get_var_ref_check 7: m
+   28:  get_var_ref_check 8: v
+   31:  get_array_el
+   32:  lt
+   33:  if_false8 37
+   35:  drop
+   36:  return_undef
+   37:  get_arg1 1: t
+   38:  if_false8 59
+   40:  push_0 0
+   41:  get_arg1 1: t
+   42:  get_field2 indexOf
+   47:  get_var_ref_check 9: b
+   50:  call_method 1
+   53:  strict_eq
+   54:  if_false8 59
+   56:  get_arg1 1: t
+   57:  goto8 70
+   59:  get_var_ref_check 9: b
+   62:  push_atom_value " "
+   67:  add
+   68:  get_arg1 1: t
+   69:  add
+   70:  put_loc0 0: r
+   71:  fclosure8 0: [bytecode <null>]
+   73:  get_arg0 0: n
+   74:  if_false8 104
+   76:  push_atom_value error
+   81:  get_arg0 0: n
+   82:  strict_neq
+   83:  if_false8 104
+   85:  get_loc_check 0: r
+   88:  push_atom_value "  <"
+   93:  add
+   94:  get_arg0 0: n
+   95:  add
+   96:  push_atom_value ">"
+  101:  add
+  102:  goto8 107
+  104:  get_loc_check 0: r
+  107:  call1 1
+  108:  lnot
+  109:  drop
+  110:  drop
+  111:  return_undef
+  112:  put_loc1 1: n
+  113:  catch 120
+  118:  drop
+  119:  return_undef
+  120:  throw
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  args: n
+  locals:
+    0: const t [level:2 next:-1]
+    1: const r [level:2 next:0]
+    2: const e [level:2 next:1]
+    3: let o [level:2 next:2]
+    4: const n [level:4 next:3]
+    5: const n [level:6 next:3]
+    6: catch n [level:8 next:-1]
+  closure vars:
+    0: E parent:loc0 const
+    1: j parent:loc1 const
+    2: T parent:loc2 const
+    3: _ parent:loc3 const
+    4: C parent:loc4 let
+    5: $ parent:loc5 var
+    6: S parent:loc6 const
+  stack_size: 5
+  opcodes:
+    0:  catch 208
+    5:  set_loc_uninitialized 3: o
+    8:  set_loc_uninitialized 2: e
+   11:  set_loc_uninitialized 1: r
+   14:  set_loc_uninitialized 0: t
+   17:  get_var Date
+   22:  get_field2 now
+   27:  call_method 0
+   30:  put_loc0 0: t
+   31:  get_arg0 0: n
+   32:  get_field2 slice
+   37:  push_0 0
+   38:  push_i16 160
+   41:  call_method 2
+   44:  put_loc1 1: r
+   45:  get_var_ref_check 0: E
+   48:  get_loc_check 1: r
+   51:  get_array_el
+   52:  put_loc2 2: e
+   53:  get_loc_check 2: e
+   56:  if_false8 73
+   58:  get_loc_check 0: t
+   61:  get_loc_check 2: e
+   64:  sub
+   65:  get_var_ref_check 1: j
+   68:  lt
+   69:  if_false8 73
+   71:  drop
+   72:  return_undef
+   73:  push_0 0
+   74:  put_loc3 3: o
+   75:  set_loc_uninitialized 4: n
+   78:  get_var_ref_check 0: E
+   81:  for_in_start
+   82:  goto8 94
+   84:  put_loc8 4: n
+   86:  get_loc_check 3: o
+   89:  post_inc
+   90:  put_loc_check 3: o
+   93:  drop
+   94:  for_in_next
+   95:  if_false8 84
+   97:  drop
+   98:  drop
+   99:  get_loc_check 3: o
+  102:  push_i16 300
+  105:  gt
+  106:  if_false8 132
+  108:  set_loc_uninitialized 5: n
+  111:  get_var_ref_check 0: E
+  114:  for_in_start
+  115:  goto8 127
+  117:  put_loc8 5: n
+  119:  get_var_ref_check 0: E
+  122:  get_loc_check 5: n
+  125:  delete
+  126:  drop
+  127:  for_in_next
+  128:  if_false8 117
+  130:  drop
+  131:  drop
+  132:  get_var_ref_check 0: E
+  135:  get_loc_check 1: r
+  138:  to_propkey2
+  139:  get_loc_check 0: t
+  142:  put_array_el
+  143:  get_var_ref_check 2: T
+  146:  get_field2 push
+  151:  get_arg0 0: n
+  152:  call_method 1
+  155:  drop
+  156:  get_var_ref_check 2: T
+  159:  get_length
+  160:  get_var_ref_check 3: _
+  163:  gt
+  164:  if_false8 180
+  166:  get_var_ref_check 2: T
+  169:  get_field2 shift
+  174:  call_method 0
+  177:  drop
+  178:  goto8 156
+  180:  null
+  181:  get_var_ref_check 4: C
+  184:  strict_eq
+  185:  dup
+  186:  if_false8 205
+  188:  drop
+  189:  get_var setTimeout
+  194:  get_var_ref 5: $
+  197:  get_var_ref_check 6: S
+  200:  call2 2
+  201:  dup
+  202:  put_var_ref_check 4: C
+  205:  drop
+  206:  drop
+  207:  return_undef
+  208:  put_loc8 6: n
+  210:  catch 217
+  215:  drop
+  216:  return_undef
+  217:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: H
+  mode: strict
+  args: n
+  locals:
+    0: const t [level:2 next:-1]
+    1: let n [level:3 next:0]
+    2: catch n [level:4 next:-1]
+    3: var arguments
+  closure vars:
+    0: b parent:loc17 const
+    1: x parent:loc24 var
+    2: k parent:loc30 var
+  stack_size: 6
+  opcodes:
+    0:  special_object 0
+    2:  put_loc3 3: arguments
+    3:  catch 99
+    8:  set_loc_uninitialized 0: t
+   11:  get_var_ref_check 0: b
+   14:  push_atom_value "["
+   19:  get_arg0 0: n
+   20:  add
+   21:  push_atom_value "]"
+   26:  add
+   27:  array_from 2
+   30:  put_loc0 0: t
+   31:  set_loc_uninitialized 1: n
+   34:  push_1 1
+   35:  put_loc1 1: n
+   36:  get_loc_check 1: n
+   39:  get_loc3 3: arguments
+   40:  get_length
+   41:  lt
+   42:  if_false8 73
+   44:  get_loc_check 0: t
+   47:  get_field2 push
+   52:  get_var_ref1 1: x
+   53:  get_loc3 3: arguments
+   54:  get_loc_check 1: n
+   57:  get_array_el
+   58:  call1 1
+   59:  call_method 1
+   62:  drop
+   63:  get_loc_check 1: n
+   66:  post_inc
+   67:  put_loc_check 1: n
+   70:  drop
+   71:  goto8 36
+   73:  get_var_ref2 2: k
+   74:  push_atom_value info
+   79:  get_loc_check 0: t
+   82:  get_field2 join
+   87:  push_atom_value " "
+   92:  call_method 1
+   95:  call2 2
+   96:  drop
+   97:  drop
+   98:  return_undef
+   99:  put_loc2 2: n
+  100:  catch 107
+  105:  drop
+  106:  return_undef
+  107:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: I
+  mode: strict
+  args: n
+  locals:
+    0: const t [level:2 next:-1]
+    1: let n [level:3 next:0]
+    2: catch n [level:4 next:-1]
+    3: var arguments
+  closure vars:
+    0: b parent:loc17 const
+    1: x parent:loc24 var
+    2: k parent:loc30 var
+  stack_size: 6
+  opcodes:
+    0:  special_object 0
+    2:  put_loc3 3: arguments
+    3:  catch 99
+    8:  set_loc_uninitialized 0: t
+   11:  get_var_ref_check 0: b
+   14:  push_atom_value "["
+   19:  get_arg0 0: n
+   20:  add
+   21:  push_atom_value "]"
+   26:  add
+   27:  array_from 2
+   30:  put_loc0 0: t
+   31:  set_loc_uninitialized 1: n
+   34:  push_1 1
+   35:  put_loc1 1: n
+   36:  get_loc_check 1: n
+   39:  get_loc3 3: arguments
+   40:  get_length
+   41:  lt
+   42:  if_false8 73
+   44:  get_loc_check 0: t
+   47:  get_field2 push
+   52:  get_var_ref1 1: x
+   53:  get_loc3 3: arguments
+   54:  get_loc_check 1: n
+   57:  get_array_el
+   58:  call1 1
+   59:  call_method 1
+   62:  drop
+   63:  get_loc_check 1: n
+   66:  post_inc
+   67:  put_loc_check 1: n
+   70:  drop
+   71:  goto8 36
+   73:  get_var_ref2 2: k
+   74:  push_atom_value debug
+   79:  get_loc_check 0: t
+   82:  get_field2 join
+   87:  push_atom_value " "
+   92:  call_method 1
+   95:  call2 2
+   96:  drop
+   97:  drop
+   98:  return_undef
+   99:  put_loc2 2: n
+  100:  catch 107
+  105:  drop
+  106:  return_undef
+  107:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: X
+  mode: strict
+  args: n
+  locals:
+    0: const t [level:2 next:-1]
+    1: let n [level:3 next:0]
+    2: catch n [level:4 next:-1]
+    3: var arguments
+  closure vars:
+    0: b parent:loc17 const
+    1: x parent:loc24 var
+    2: k parent:loc30 var
+  stack_size: 6
+  opcodes:
+    0:  special_object 0
+    2:  put_loc3 3: arguments
+    3:  catch 99
+    8:  set_loc_uninitialized 0: t
+   11:  get_var_ref_check 0: b
+   14:  push_atom_value "["
+   19:  get_arg0 0: n
+   20:  add
+   21:  push_atom_value "]"
+   26:  add
+   27:  array_from 2
+   30:  put_loc0 0: t
+   31:  set_loc_uninitialized 1: n
+   34:  push_1 1
+   35:  put_loc1 1: n
+   36:  get_loc_check 1: n
+   39:  get_loc3 3: arguments
+   40:  get_length
+   41:  lt
+   42:  if_false8 73
+   44:  get_loc_check 0: t
+   47:  get_field2 push
+   52:  get_var_ref1 1: x
+   53:  get_loc3 3: arguments
+   54:  get_loc_check 1: n
+   57:  get_array_el
+   58:  call1 1
+   59:  call_method 1
+   62:  drop
+   63:  get_loc_check 1: n
+   66:  post_inc
+   67:  put_loc_check 1: n
+   70:  drop
+   71:  goto8 36
+   73:  get_var_ref2 2: k
+   74:  push_atom_value warn
+   79:  get_loc_check 0: t
+   82:  get_field2 join
+   87:  push_atom_value " "
+   92:  call_method 1
+   95:  call2 2
+   96:  drop
+   97:  drop
+   98:  return_undef
+   99:  put_loc2 2: n
+  100:  catch 107
+  105:  drop
+  106:  return_undef
+  107:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: F
+  mode: strict
+  args: n t r
+  locals:
+    0: catch n [level:3 next:-1]
+  closure vars:
+    0: k parent:loc30 var
+    1: b parent:loc17 const
+    2: D parent:loc25 var
+  stack_size: 7
+  opcodes:
+    0:  catch 55
+    5:  get_var_ref0 0: k
+    6:  push_atom_value error
+   11:  get_var_ref_check 1: b
+   14:  push_atom_value "["
+   19:  add
+   20:  get_arg0 0: n
+   21:  add
+   22:  push_atom_value "] EXC "
+   27:  add
+   28:  get_var String
+   33:  get_arg1 1: t
+   34:  dup
+   35:  if_true8 39
+   37:  drop
+   38:  push_empty_string
+   39:  call1 1
+   40:  add
+   41:  push_atom_value " :: "
+   46:  add
+   47:  get_var_ref2 2: D
+   48:  get_arg2 2: r
+   49:  call1 1
+   50:  add
+   51:  call2 2
+   52:  drop
+   53:  drop
+   54:  return_undef
+   55:  put_loc0 0: n
+   56:  catch 63
+   61:  drop
+   62:  return_undef
+   63:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: O
+  mode: strict
+  locals:
+    0: const n [level:4 next:-1]
+    1: catch n [level:5 next:-1]
+  closure vars:
+    0: x parent:loc24 var
+    1: b parent:loc17 const
+    2: k parent:loc30 var
+    3: J parent:loc35 const
+  stack_size: 7
+  opcodes:
+    0:  catch 106
+    5:  push_atom_value undefined
+   10:  get_var_undef console
+   15:  typeof
+   16:  eq
+   17:  dup
+   18:  if_true8 31
+   20:  drop
+   21:  get_var console
+   26:  get_field __loliBridged
+   31:  if_false8 35
+   33:  drop
+   34:  return_undef
+   35:  get_var console
+   40:  push_0 0
+   41:  lnot
+   42:  put_field __loliBridged
+   47:  set_loc_uninitialized 0: n
+   50:  get_var_ref_check 3: J
+   53:  for_in_start
+   54:  goto8 99
+   56:  put_loc0 0: n
+   57:  push_atom_value function
+   62:  get_var console
+   67:  get_loc_check 0: n
+   70:  get_array_el
+   71:  typeof
+   72:  eq
+   73:  dup
+   74:  if_false8 98
+   76:  drop
+   77:  get_var console
+   82:  get_loc_check 0: n
+   85:  to_propkey2
+   86:  fclosure8 0: [bytecode <null>]
+   88:  get_var_ref_check 3: J
+   91:  get_loc_check 0: n
+   94:  get_array_el
+   95:  call1 1
+   96:  insert3
+   97:  put_array_el
+   98:  drop
+   99:  for_in_next
+  100:  if_false8 56
+  102:  drop
+  103:  drop
+  104:  drop
+  105:  return_undef
+  106:  put_loc1 1: n
+  107:  catch 114
+  112:  drop
+  113:  return_undef
+  114:  throw
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  args: n
+  closure vars:
+    0: x parent:loc0 var
+    1: b parent:loc1 const
+    2: k parent:loc2 var
+  stack_size: 1
+  opcodes:
+    0:  fclosure8 0: [bytecode <null>]
+    2:  return
+
+
+/* ===== function depth=3 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:2 next:-1]
+    1: let n [level:3 next:2]
+    2: const r [level:2 next:0]
+    3: catch n [level:4 next:-1]
+    4: var arguments
+  closure vars:
+    0: x parent:loc0 var
+    1: b parent:loc1 const
+    2: k parent:loc2 var
+    3: n local:arg0 var
+  stack_size: 6
+  opcodes:
+    0:  special_object 0
+    2:  put_loc8 4: arguments
+    4:  catch 147
+    9:  set_loc_uninitialized 2: r
+   12:  set_loc_uninitialized 0: t
+   15:  array_from 0
+   18:  put_loc0 0: t
+   19:  set_loc_uninitialized 1: n
+   22:  push_0 0
+   23:  put_loc1 1: n
+   24:  get_loc_check 1: n
+   27:  get_loc8 4: arguments
+   29:  get_length
+   30:  lt
+   31:  if_false8 63
+   33:  get_loc_check 0: t
+   36:  get_field2 push
+   41:  get_var_ref0 0: x
+   42:  get_loc8 4: arguments
+   44:  get_loc_check 1: n
+   47:  get_array_el
+   48:  call1 1
+   49:  call_method 1
+   52:  drop
+   53:  get_loc_check 1: n
+   56:  post_inc
+   57:  put_loc_check 1: n
+   60:  drop
+   61:  goto8 24
+   63:  get_loc_check 0: t
+   66:  get_field2 join
+   71:  push_atom_value " "
+   76:  call_method 1
+   79:  put_loc2 2: r
+   80:  push_0 0
+   81:  get_loc_check 2: r
+   84:  get_field2 indexOf
+   89:  get_var_ref_check 1: b
+   92:  call_method 1
+   95:  strict_eq
+   96:  if_false8 106
+   98:  get_var_ref2 2: k
+   99:  get_var_ref3 3: n
+  100:  get_loc_check 2: r
+  103:  call2 2
+  104:  goto8 144
+  106:  get_var_ref2 2: k
+  107:  get_var_ref3 3: n
+  108:  get_var_ref_check 1: b
+  111:  push_atom_value "[console:"
+  116:  add
+  117:  get_var_ref3 3: n
+  118:  add
+  119:  push_atom_value "]"
+  124:  add
+  125:  get_loc_check 2: r
+  128:  if_false8 141
+  130:  push_atom_value " "
+  135:  get_loc_check 2: r
+  138:  add
+  139:  goto8 142
+  141:  push_empty_string
+  142:  add
+  143:  call2 2
+  144:  drop
+  145:  drop
+  146:  return_undef
+  147:  put_loc3 3: n
+  148:  catch 155
+  153:  drop
+  154:  return_undef
+  155:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: R
+  mode: strict
+  locals:
+    0: const n [level:1 next:-1]
+    1: const t [level:4 next:0]
+    2: catch n [level:5 next:0]
+    3: catch n [level:8 next:0]
+  closure vars:
+    0: D parent:loc25 var
+    1: x parent:loc24 var
+    2: k parent:loc30 var
+    3: b parent:loc17 const
+    4: H parent:loc31 var
+  stack_size: 5
+  opcodes:
+    0:  set_loc_uninitialized 0: n
+    3:  fclosure8 0: [bytecode <null>]
+    5:  set_name n
+   10:  put_loc0 0: n
+   11:  catch 94
+   16:  push_atom_value undefined
+   21:  get_var_undef globalThis
+   26:  typeof
+   27:  neq
+   28:  if_false8 91
+   30:  set_loc_uninitialized 1: t
+   33:  get_var globalThis
+   38:  get_loc_check 0: n
+   41:  put_field onerror
+   46:  get_var globalThis
+   51:  get_field window
+   56:  put_loc1 1: t
+   57:  get_loc_check 1: t
+   60:  dup
+   61:  if_false8 90
+   63:  drop
+   64:  push_atom_value object
+   69:  get_loc_check 1: t
+   72:  typeof
+   73:  eq
+   74:  dup
+   75:  if_false8 90
+   77:  drop
+   78:  get_loc_check 1: t
+   81:  get_loc_check 0: n
+   84:  insert2
+   85:  put_field onerror
+   90:  drop
+   91:  drop
+   92:  goto8 104
+   94:  put_loc2 2: n
+   95:  catch 103
+  100:  drop
+  101:  goto8 104
+  103:  throw
+  104:  catch 200
+  109:  push_atom_value undefined
+  114:  get_var_undef process
+  119:  typeof
+  120:  neq
+  121:  dup
+  122:  if_false8 196
+  124:  drop
+  125:  get_var process
+  130:  dup
+  131:  if_false8 196
+  133:  drop
+  134:  push_atom_value function
+  139:  get_var process
+  144:  get_field on
+  149:  typeof
+  150:  eq
+  151:  dup
+  152:  if_false8 196
+  154:  drop
+  155:  get_var process
+  160:  get_field2 on
+  165:  push_atom_value uncaughtException
+  170:  fclosure8 1: [bytecode <null>]
+  172:  call_method 2
+  175:  drop
+  176:  get_var process
+  181:  get_field2 on
+  186:  push_atom_value unhandledRejection
+  191:  fclosure8 2: [bytecode <null>]
+  193:  call_method 2
+  196:  drop
+  197:  drop
+  198:  goto8 210
+  200:  put_loc3 3: n
+  201:  catch 209
+  206:  drop
+  207:  goto8 210
+  209:  throw
+  210:  get_var_ref 4: H
+  213:  push_atom_value global
+  218:  push_atom_value "error capture installed"
+  223:  call2 2
+  224:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  args: n t r e o
+  locals:
+    0: const u [level:2 next:-1]
+    1: catch n [level:3 next:-1]
+  closure vars:
+    0: D parent:loc0 var
+    1: x parent:loc1 var
+    2: k parent:loc2 var
+    3: b parent:loc3 const
+  stack_size: 6
+  opcodes:
+    0:  catch 82
+    5:  set_loc_uninitialized 0: u
+    8:  get_arg 4: o
+   11:  dup
+   12:  if_false8 20
+   14:  drop
+   15:  get_var_ref0 0: D
+   16:  get_arg 4: o
+   19:  call1 1
+   20:  dup
+   21:  if_true8 27
+   23:  drop
+   24:  get_var_ref1 1: x
+   25:  get_arg0 0: n
+   26:  call1 1
+   27:  put_loc0 0: u
+   28:  get_var_ref2 2: k
+   29:  push_atom_value error
+   34:  get_var_ref_check 3: b
+   37:  push_atom_value "[global] EXC uncaught :: "
+   42:  add
+   43:  get_loc_check 0: u
+   46:  add
+   47:  push_atom_value " @"
+   52:  add
+   53:  get_var_ref1 1: x
+   54:  get_arg1 1: t
+   55:  call1 1
+   56:  add
+   57:  push_atom_value ":"
+   62:  add
+   63:  get_var_ref1 1: x
+   64:  get_arg2 2: r
+   65:  call1 1
+   66:  add
+   67:  push_atom_value ":"
+   72:  add
+   73:  get_var_ref1 1: x
+   74:  get_arg3 3: e
+   75:  call1 1
+   76:  add
+   77:  call2 2
+   78:  drop
+   79:  drop
+   80:  goto8 92
+   82:  put_loc1 1: n
+   83:  catch 91
+   88:  drop
+   89:  goto8 92
+   91:  throw
+   92:  push_1 1
+   93:  lnot
+   94:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  args: n
+  locals:
+    0: catch n [level:3 next:-1]
+  closure vars:
+    0: k parent:loc2 var
+    1: b parent:loc3 const
+    2: D parent:loc0 var
+  stack_size: 6
+  opcodes:
+    0:  catch 28
+    5:  get_var_ref0 0: k
+    6:  push_atom_value error
+   11:  get_var_ref_check 1: b
+   14:  push_atom_value "[global] EXC uncaughtException :: "
+   19:  add
+   20:  get_var_ref2 2: D
+   21:  get_arg0 0: n
+   22:  call1 1
+   23:  add
+   24:  call2 2
+   25:  drop
+   26:  drop
+   27:  return_undef
+   28:  put_loc0 0: n
+   29:  catch 36
+   34:  drop
+   35:  return_undef
+   36:  throw
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  args: n
+  locals:
+    0: catch n [level:3 next:-1]
+  closure vars:
+    0: k parent:loc2 var
+    1: b parent:loc3 const
+    2: D parent:loc0 var
+  stack_size: 6
+  opcodes:
+    0:  catch 28
+    5:  get_var_ref0 0: k
+    6:  push_atom_value error
+   11:  get_var_ref_check 1: b
+   14:  push_atom_value "[global] EXC unhandledRejection :: "
+   19:  add
+   20:  get_var_ref2 2: D
+   21:  get_arg0 0: n
+   22:  call1 1
+   23:  add
+   24:  call2 2
+   25:  drop
+   26:  drop
+   27:  return_undef
+   28:  put_loc0 0: n
+   29:  catch 36
+   34:  drop
+   35:  return_undef
+   36:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: q
+  mode: strict
+  args: n
+  locals:
+    0: catch n [level:5 next:-1]
+    1: catch n [level:8 next:-1]
+  closure vars:
+    0: F parent:loc34 var
+    1: x parent:loc24 var
+    2: k parent:loc30 var
+    3: b parent:loc17 const
+    4: I parent:loc32 var
+    5: H parent:loc31 var
+  stack_size: 5
+  opcodes:
+    0:  get_arg0 0: n
+    1:  if_false 167
+    6:  get_arg0 0: n
+    7:  get_field __loliJsLogInstalled
+   12:  lnot
+   13:  if_false 167
+   18:  get_arg0 0: n
+   19:  push_0 0
+   20:  lnot
+   21:  put_field __loliJsLogInstalled
+   26:  catch 72
+   31:  get_arg0 0: n
+   32:  get_field config
+   37:  dup
+   38:  if_false8 68
+   40:  drop
+   41:  get_arg0 0: n
+   42:  get_field config
+   47:  fclosure8 0: [bytecode <null>]
+   49:  put_field errorHandler
+   54:  get_arg0 0: n
+   55:  get_field config
+   60:  fclosure8 1: [bytecode <null>]
+   62:  insert2
+   63:  put_field warnHandler
+   68:  drop
+   69:  drop
+   70:  goto8 82
+   72:  put_loc0 0: n
+   73:  catch 81
+   78:  drop
+   79:  goto8 82
+   81:  throw
+   82:  catch 142
+   87:  push_atom_value function
+   92:  get_arg0 0: n
+   93:  get_field mixin
+   98:  typeof
+   99:  eq
+  100:  dup
+  101:  if_false8 138
+  103:  drop
+  104:  get_arg0 0: n
+  105:  get_field2 mixin
+  110:  object
+  111:  fclosure8 2: [bytecode <null>]
+  113:  set_name errorCaptured
+  118:  define_field errorCaptured
+  123:  fclosure8 3: [bytecode <null>]
+  125:  set_name created
+  130:  define_field created
+  135:  call_method 1
+  138:  drop
+  139:  drop
+  140:  goto8 152
+  142:  put_loc1 1: n
+  143:  catch 151
+  148:  drop
+  149:  goto8 152
+  151:  throw
+  152:  get_var_ref 5: H
+  155:  push_atom_value vue
+  160:  push_atom_value "js log installed"
+  165:  call2 2
+  166:  drop
+  167:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  args: n t r
+  closure vars:
+    0: F parent:loc0 var
+    1: x parent:loc1 var
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: F
+    1:  push_atom_value vue
+    6:  push_atom_value "config.errorHandler "
+   11:  get_var_ref1 1: x
+   12:  get_arg2 2: r
+   13:  call1 1
+   14:  add
+   15:  get_arg0 0: n
+   16:  call3 3
+   17:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  args: n t r
+  closure vars:
+    0: k parent:loc2 var
+    1: b parent:loc3 const
+    2: x parent:loc1 var
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: k
+    1:  push_atom_value warn
+    6:  get_var_ref_check 1: b
+    9:  push_atom_value "[vue] WARN "
+   14:  add
+   15:  get_var_ref2 2: x
+   16:  get_arg0 0: n
+   17:  call1 1
+   18:  add
+   19:  push_atom_value " "
+   24:  add
+   25:  get_var_ref2 2: x
+   26:  get_arg2 2: r
+   27:  call1 1
+   28:  add
+   29:  call2 2
+   30:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  args: n t r
+  closure vars:
+    0: F parent:loc0 var
+    1: x parent:loc1 var
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: F
+    1:  push_atom_value vue
+    6:  push_atom_value "errorCaptured "
+   11:  get_var_ref1 1: x
+   12:  get_arg2 2: r
+   13:  call1 1
+   14:  add
+   15:  get_arg0 0: n
+   16:  call3 3
+   17:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: jslog-0a73e180.js:1 source_len=0 */
+jslog-0a73e180.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch n [level:3 next:-1]
+    1: var this
+  closure vars:
+    0: I parent:loc4 var
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  catch 52
+    7:  get_var_ref0 0: I
+    8:  push_atom_value vue
+   13:  push_atom_value created
+   18:  get_loc1 1: this
+   19:  get_field $options
+   24:  dup
+   25:  if_false8 39
+   27:  drop
+   28:  get_loc1 1: this
+   29:  get_field $options
+   34:  get_field name
+   39:  dup
+   40:  if_true8 48
+   42:  drop
+   43:  push_atom_value anonymous
+   48:  call3 3
+   49:  drop
+   50:  drop
+   51:  return_undef
+   52:  put_loc0 0: n
+   53:  catch 60
+   58:  drop
+   59:  return_undef
+   60:  throw
+

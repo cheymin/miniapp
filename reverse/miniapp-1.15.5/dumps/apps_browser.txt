@@ -1,0 +1,6845 @@
+
+/* ===== function depth=0 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: t parent:loc0 const
+    1: e parent:loc1 const
+    2: i parent:loc2 const
+    3: s parent:loc3 const
+    4: a parent:loc4 const
+    5: r parent:loc5 const
+    6: n local:loc0 let
+    7: l local:loc1 const
+    8: h local:loc2 const
+    9: o local:loc3 var
+   10: c local:loc4 var
+   11: u local:loc5 var
+   12: d local:loc6 var
+   13: p local:loc7 var
+   14: f local:loc8 var
+   15: g local:loc9 var
+   16: m local:loc10 const
+  stack_size: 7
+  opcodes:
+    0:  fclosure8 0: [bytecode o]
+    2:  put_var_ref 9: o
+    5:  fclosure8 1: [bytecode c]
+    7:  put_var_ref 10: c
+   10:  fclosure8 2: [bytecode u]
+   12:  put_var_ref 11: u
+   15:  fclosure8 3: [bytecode d]
+   17:  put_var_ref 12: d
+   20:  fclosure8 4: [bytecode p]
+   22:  put_var_ref 13: p
+   25:  null
+   26:  put_var_ref 6: n
+   29:  push_i16 160
+   32:  push_i16 700
+   35:  array_from 2
+   38:  put_var_ref 7: l
+   41:  push_atom_value "https://m.baidu.com/"
+   46:  put_var_ref 8: h
+   49:  object
+   50:  push_atom_value index
+   55:  define_field name
+   60:  fclosure8 5: [bytecode <null>]
+   62:  define_method data,4
+   68:  object
+   69:  fclosure8 6: [bytecode <null>]
+   71:  define_method displayUrl,4
+   77:  fclosure8 7: [bytecode <null>]
+   79:  define_method profileLabel,4
+   85:  fclosure8 8: [bytecode <null>]
+   87:  define_method canvasStyle,4
+   93:  define_field computed
+   98:  fclosure8 9: [bytecode <null>]
+  100:  define_method mounted,4
+  106:  fclosure8 10: [bytecode <null>]
+  108:  define_method beforeDestroy,4
+  114:  object
+  115:  fclosure8 11: [bytecode <null>]
+  117:  define_method initBridgePlayer,4
+  123:  fclosure8 12: [bytecode <null>]
+  125:  define_method ensureBrowserPlayer,4
+  131:  fclosure8 13: [bytecode <null>]
+  133:  define_method bindAppLifecycleEvents,4
+  139:  fclosure8 14: [bytecode <null>]
+  141:  define_method unbindAppLifecycleEvents,4
+  147:  fclosure8 15: [bytecode <null>]
+  149:  define_method readLaunchRequest,4
+  155:  fclosure8 16: [bytecode <null>]
+  157:  define_method applyFreshLaunchRequest,4
+  163:  fclosure8 17: [bytecode <null>]
+  165:  define_method startBrowserInit,4
+  171:  fclosure8 18: [bytecode <null>]
+  173:  define_method initBrowser,4
+  179:  fclosure8 19: [bytecode <null>]
+  181:  define_method rebindCanvasSurface,4
+  187:  fclosure8 20: [bytecode <null>]
+  189:  define_method scheduleResumeRecovery,4
+  195:  fclosure8 21: [bytecode <null>]
+  197:  define_method cancelResumeRecovery,4
+  203:  fclosure8 22: [bytecode <null>]
+  205:  set_name nextTick
+  210:  define_field nextTick
+  215:  fclosure8 23: [bytecode <null>]
+  217:  define_method resolveCanvasSize,4
+  223:  fclosure8 24: [bytecode <null>]
+  225:  define_method releaseBrowser,4
+  231:  fclosure8 25: [bytecode <null>]
+  233:  define_method drawFrameIfNeeded,4
+  239:  fclosure8 26: [bytecode <null>]
+  241:  define_method drawFrameFromEvent,4
+  247:  fclosure8 27: [bytecode <null>]
+  249:  define_method startDrawPump,4
+  255:  fclosure8 28: [bytecode <null>]
+  257:  define_method startStatePoller,4
+  263:  fclosure8 29: [bytecode <null>]
+  265:  define_method stopStatePoller,4
+  271:  fclosure8 30: [bytecode <null>]
+  273:  define_method stopDrawPump,4
+  279:  fclosure8 31: [bytecode <null>]
+  281:  define_method ensureBrowserRunning,4
+  287:  fclosure8 32: [bytecode <null>]
+  289:  define_method onShow,4
+  295:  fclosure8 33: [bytecode <null>]
+  297:  define_method onNewOptions,4
+  303:  fclosure8 34: [bytecode <null>]
+  305:  define_method onHide,4
+  311:  fclosure8 35: [bytecode <null>]
+  313:  define_method onUnload,4
+  319:  fclosure8 36: [bytecode <null>]
+  321:  define_method scheduleHideShutdown,4
+  327:  fclosure8 37: [bytecode <null>]
+  329:  define_method cancelHideShutdown,4
+  335:  fclosure8 38: [bytecode <null>]
+  337:  define_method recoverAfterExternalOverlay,4
+  343:  fclosure8 39: [bytecode <null>]
+  345:  define_method finishPendingOverlayRecovery,4
+  351:  fclosure8 40: [bytecode <null>]
+  353:  define_method applyPendingOverlayAction,4
+  359:  fclosure8 41: [bytecode <null>]
+  361:  define_method openUrlKeyboard,4
+  367:  fclosure8 42: [bytecode <null>]
+  369:  define_method handleCanvasClick,4
+  375:  fclosure8 43: [bytecode <null>]
+  377:  define_method handleCanvasTouchStart,4
+  383:  fclosure8 44: [bytecode <null>]
+  385:  define_method handleCanvasTouchMove,4
+  391:  fclosure8 45: [bytecode <null>]
+  393:  define_method handleCanvasTouchEnd,4
+  399:  fclosure8 46: [bytecode <null>]
+  401:  define_method handleCanvasTouchCancel,4
+  407:  fclosure8 47: [bytecode <null>]
+  409:  define_method handleCanvasLongPress,4
+  415:  fclosure8 48: [bytecode <null>]
+  417:  define_method scheduleTimeout,4
+  423:  fclosure8 49: [bytecode <null>]
+  425:  define_method clearScheduledTimeout,4
+  431:  fclosure8 50: [bytecode <null>]
+  433:  set_name hasNativeTouch
+  438:  define_field hasNativeTouch
+  443:  fclosure8 51: [bytecode <null>]
+  445:  define_method clampCanvasPoint,4
+  451:  fclosure8 52: [bytecode <null>]
+  453:  define_method queueNativeTouchMove,4
+  459:  fclosure8 53: [bytecode <null>]
+  461:  define_method queueScroll,4
+  467:  fclosure8 54: [bytecode <null>]
+  469:  define_method flushPendingScroll,4
+  475:  fclosure8 55: [bytecode <null>]
+  477:  define_method cancelScrollTimers,4
+  483:  fclosure8 56: [bytecode <null>]
+  485:  define_method readFrameCounter,4
+  491:  fclosure8 57: [bytecode <null>]
+  493:  define_method clearScrollProbeTimer,4
+  499:  fclosure8 58: [bytecode <null>]
+  501:  define_method armNativeScrollProbe,4
+  507:  fclosure8 59: [bytecode <null>]
+  509:  define_method recordTouchSample,4
+  515:  fclosure8 60: [bytecode <null>]
+  517:  define_method startFling,4
+  523:  fclosure8 61: [bytecode <null>]
+  525:  define_method sendScrollEnd,4
+  531:  fclosure8 62: [bytecode <null>]
+  533:  define_method sendScrollDelta,4
+  539:  fclosure8 63: [bytecode <null>]
+  541:  define_method cancelFling,4
+  547:  fclosure8 64: [bytecode <null>]
+  549:  define_method openPageTextKeyboard,4
+  555:  fclosure8 65: [bytecode <null>]
+  557:  define_method goBack,4
+  563:  fclosure8 66: [bytecode <null>]
+  565:  define_method goForward,4
+  571:  fclosure8 67: [bytecode <null>]
+  573:  define_method applyViewportProfile,4
+  579:  fclosure8 68: [bytecode <null>]
+  581:  define_method toggleViewportProfile,4
+  587:  fclosure8 69: [bytecode <null>]
+  589:  define_method reload,4
+  595:  fclosure8 70: [bytecode <null>]
+  597:  define_method stopLoading,4
+  603:  fclosure8 71: [bytecode <null>]
+  605:  define_method handleNativeState,4
+  611:  fclosure8 72: [bytecode <null>]
+  613:  define_method handleState,4
+  619:  fclosure8 73: [bytecode <null>]
+  621:  define_method handleError,4
+  627:  define_field methods
+  632:  put_var_ref 14: f
+  635:  fclosure8 74: [bytecode <null>]
+  637:  set_name g
+  642:  set_var_ref 15: g
+  645:  push_0 0
+  646:  lnot
+  647:  put_field _withStripped
+  652:  get_var_ref 14: f
+  655:  put_var_ref 16: m
+  658:  get_var_ref_check 16: m
+  661:  get_var_ref 15: g
+  664:  put_field render
+  669:  get_var_ref_check 16: m
+  672:  array_from 0
+  675:  put_field staticRenderFns
+  680:  get_var_ref_check 16: m
+  683:  push_0 0
+  684:  lnot
+  685:  put_field _compiled
+  690:  get_var_ref_check 16: m
+  693:  push_atom_value "data-v-654e9e28"
+  698:  put_field _scopeId
+  703:  get_var_ref_check 16: m
+  706:  object
+  707:  put_field themes
+  712:  get_var_ref_check 16: m
+  715:  get_var Object
+  720:  get_field2 assign
+  725:  object
+  726:  object
+  727:  object
+  728:  push_atom_value relative
+  733:  define_field position
+  738:  push_atom_value column
+  743:  define_field flexDirection
+  748:  push_atom_value "100%"
+  753:  define_field width
+  758:  push_atom_value "100%"
+  763:  define_field height
+  768:  push_atom_value "#101214"
+  773:  define_field backgroundColor
+  778:  define_field "browser-shell"
+  783:  object
+  784:  push_1 1
+  785:  define_field flex
+  790:  push_atom_value "100%"
+  795:  define_field width
+  800:  push_atom_value "#ffffff"
+  805:  define_field backgroundColor
+  810:  define_field "browser-canvas"
+  815:  object
+  816:  push_atom_value "100%"
+  821:  define_field width
+  826:  push_atom_value "40px"
+  831:  define_field height
+  836:  push_atom_value row
+  841:  define_field flexDirection
+  846:  push_atom_value center
+  851:  define_field alignItems
+  856:  push_atom_value "#1f252b"
+  861:  define_field backgroundColor
+  866:  push_atom_value "8px"
+  871:  define_field paddingLeft
+  876:  push_atom_value "8px"
+  881:  define_field paddingRight
+  886:  define_field toolbar
+  891:  object
+  892:  push_atom_value "34px"
+  897:  define_field width
+  902:  push_atom_value "30px"
+  907:  define_field height
+  912:  push_atom_value "30px"
+  917:  define_field lineHeight
+  922:  push_atom_value center
+  927:  define_field textAlign
+  932:  push_atom_value "#ffffff"
+  937:  define_field color
+  942:  push_atom_value "22px"
+  947:  define_field fontSize
+  952:  define_field "nav-button"
+  957:  object
+  958:  push_atom_value "18px"
+  963:  define_field fontSize
+  968:  define_field "profile-button"
+  973:  object
+  974:  push_1 1
+  975:  define_field flex
+  980:  push_atom_value "30px"
+  985:  define_field height
+  990:  push_atom_value "30px"
+  995:  define_field lineHeight
+ 1000:  push_atom_value "4px"
+ 1005:  define_field marginLeft
+ 1010:  push_atom_value "4px"
+ 1015:  define_field marginRight
+ 1020:  push_atom_value "12px"
+ 1025:  define_field paddingLeft
+ 1030:  push_atom_value "12px"
+ 1035:  define_field paddingRight
+ 1040:  push_atom_value "#17202a"
+ 1045:  define_field color
+ 1050:  push_atom_value "#ffffff"
+ 1055:  define_field backgroundColor
+ 1060:  push_atom_value "4px"
+ 1065:  define_field borderRadius
+ 1070:  push_atom_value "18px"
+ 1075:  define_field fontSize
+ 1080:  define_field "url-field"
+ 1085:  object
+ 1086:  push_atom_value absolute
+ 1091:  define_field position
+ 1096:  push_0 0
+ 1097:  define_field left
+ 1102:  push_0 0
+ 1103:  define_field bottom
+ 1108:  push_atom_value "100%"
+ 1113:  define_field width
+ 1118:  push_atom_value "26px"
+ 1123:  define_field minHeight
+ 1128:  push_atom_value "rgba(0,0,0,0.55)"
+ 1133:  define_field backgroundColor
+ 1138:  push_atom_value "8px"
+ 1143:  define_field paddingLeft
+ 1148:  push_atom_value "8px"
+ 1153:  define_field paddingRight
+ 1158:  push_atom_value center
+ 1163:  define_field justifyContent
+ 1168:  define_field "status-strip"
+ 1173:  object
+ 1174:  push_atom_value "#ffffff"
+ 1179:  define_field color
+ 1184:  push_atom_value "14px"
+ 1189:  define_field fontSize
+ 1194:  push_atom_value "22px"
+ 1199:  define_field lineHeight
+ 1204:  define_field "status-text"
+ 1209:  object
+ 1210:  push_const8 75: 0.65
+ 1212:  define_field opacity
+ 1217:  define_field "nav-button-press"
+ 1222:  object
+ 1223:  push_const8 76: 0.65
+ 1225:  define_field opacity
+ 1230:  define_field "url-field-press"
+ 1235:  object
+ 1236:  push_const8 77: 0.65
+ 1238:  define_field opacity
+ 1243:  define_field "profile-button-press"
+ 1248:  call_method 2
+ 1251:  put_field style
+ 1256:  get_var_ref_check 16: m
+ 1259:  push_atom_value "src/pages/apps/browser/browser.vue"
+ 1264:  put_field __file
+ 1269:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: o
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:1 next:-1]
+    1: const i [level:1 next:0]
+    2: const s [level:1 next:1]
+    3: const a [level:1 next:2]
+    4: const r [level:1 next:3]
+    5: const n [level:1 next:4]
+  closure vars:
+    0: h parent:loc8 const
+  stack_size: 6
+  opcodes:
+    0:  set_loc_uninitialized 5: n
+    3:  set_loc_uninitialized 4: r
+    6:  set_loc_uninitialized 3: a
+    9:  set_loc_uninitialized 2: s
+   12:  set_loc_uninitialized 1: i
+   15:  set_loc_uninitialized 0: e
+   18:  push_empty_string
+   19:  get_field2 concat
+   24:  get_arg0 0: t
+   25:  dup
+   26:  if_true8 30
+   28:  drop
+   29:  push_empty_string
+   30:  call_method 1
+   33:  get_field2 trim
+   38:  call_method 0
+   41:  put_loc0 0: e
+   42:  get_loc_check 0: e
+   45:  lnot
+   46:  dup
+   47:  if_true8 59
+   49:  drop
+   50:  push_atom_value "about:start"
+   55:  get_loc_check 0: e
+   58:  strict_eq
+   59:  if_false8 65
+   61:  get_var_ref_check 0: h
+   64:  return
+   65:  get_loc_check 0: e
+   68:  get_field2 toLowerCase
+   73:  call_method 0
+   76:  put_loc1 1: i
+   77:  push_atom_value baidu
+   82:  get_loc_check 1: i
+   85:  strict_eq
+   86:  if_false8 92
+   88:  get_var_ref_check 0: h
+   91:  return
+   92:  push_atom_value bing
+   97:  get_loc_check 1: i
+  100:  strict_eq
+  101:  if_false8 109
+  103:  push_atom_value "https://www.bing.com/"
+  108:  return
+  109:  get_loc_check 0: e
+  112:  get_field2 indexOf
+  117:  push_atom_value "://"
+  122:  call_method 1
+  125:  push_0 0
+  126:  gte
+  127:  dup
+  128:  if_true8 193
+  130:  drop
+  131:  push_0 0
+  132:  get_loc_check 0: e
+  135:  get_field2 indexOf
+  140:  push_atom_value "about:"
+  145:  call_method 1
+  148:  strict_eq
+  149:  dup
+  150:  if_true8 193
+  152:  drop
+  153:  push_0 0
+  154:  get_loc_check 0: e
+  157:  get_field2 indexOf
+  162:  push_atom_value "file:"
+  167:  call_method 1
+  170:  strict_eq
+  171:  dup
+  172:  if_true8 193
+  174:  drop
+  175:  push_0 0
+  176:  get_loc_check 0: e
+  179:  get_field2 indexOf
+  184:  push_atom_value "data:"
+  189:  call_method 1
+  192:  strict_eq
+  193:  if_false8 199
+  195:  get_loc_check 0: e
+  198:  return
+  199:  push_const8 0: 1"\\s"
+  201:  push_const8 1: 1"\u0000\u0001\u0000;\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\u000c\u0000\n"
+  203:  regexp
+  204:  get_field2 test
+  209:  get_loc_check 0: e
+  212:  call_method 1
+  215:  dup
+  216:  if_true8 237
+  218:  drop
+  219:  get_loc_check 0: e
+  222:  get_field2 indexOf
+  227:  push_atom_value "."
+  232:  call_method 1
+  235:  push_0 0
+  236:  lt
+  237:  if_false8 261
+  239:  push_atom_value "https://m.baidu.com/s?word="
+  244:  get_field2 concat
+  249:  get_var encodeURIComponent
+  254:  get_loc_check 0: e
+  257:  call1 1
+  258:  tail_call_method 1
+  261:  get_loc_check 0: e
+  264:  get_field2 split
+  269:  push_const8 2: 1"[/?#]"
+  271:  push_const8 3: 1"\u0000\u0001\u0000\u001f\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0015\u0003\u0000#\u0000#\u0000/\u0000/\u0000?\u0000?\u0000\u000c\u0000\n"
+  273:  regexp
+  274:  call_method 1
+  277:  push_0 0
+  278:  get_array_el
+  279:  put_loc2 2: s
+  280:  get_loc_check 2: s
+  283:  get_field2 split
+  288:  push_atom_value ":"
+  293:  call_method 1
+  296:  push_0 0
+  297:  get_array_el
+  298:  put_loc3 3: a
+  299:  get_loc_check 3: a
+  302:  get_field2 split
+  307:  push_atom_value "."
+  312:  call_method 1
+  315:  get_field2 filter
+  320:  get_var Boolean
+  325:  call_method 1
+  328:  put_loc8 4: r
+  330:  push_const8 4: 1"^\\d+\\.\\d+\\.\\d+\\.\\d+$"
+  332:  push_const8 5: 1"\u0000\u0001\u0000\u007f\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u0001.\u0000\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u0001.\u0000\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u0001.\u0000\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u0006\u000c\u0000\n"
+  334:  regexp
+  335:  get_field2 test
+  340:  get_loc_check 3: a
+  343:  call_method 1
+  346:  put_loc8 5: n
+  348:  push_atom_value "baidu.com"
+  353:  get_loc_check 3: a
+  356:  strict_eq
+  357:  dup
+  358:  if_true8 370
+  360:  drop
+  361:  push_atom_value "www.baidu.com"
+  366:  get_loc_check 3: a
+  369:  strict_eq
+  370:  if_false8 415
+  372:  push_atom_value "https://m.baidu.com/"
+  377:  get_field2 concat
+  382:  get_loc_check 0: e
+  385:  get_field2 substring
+  390:  get_loc_check 2: s
+  393:  get_length
+  394:  call_method 1
+  397:  get_field2 replace
+  402:  push_const8 6: 1"^\\/"
+  404:  push_const8 7: 1"\u0000\u0001\u0000\u0014\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u0001/\u0000\u000c\u0000\n"
+  406:  regexp
+  407:  push_empty_string
+  408:  call_method 2
+  411:  call_method 1
+  414:  return
+  415:  push_2 2
+  416:  get_loc_check 4: r
+  419:  get_length
+  420:  strict_neq
+  421:  dup
+  422:  if_true8 441
+  424:  drop
+  425:  push_atom_value localhost
+  430:  get_loc_check 3: a
+  433:  strict_eq
+  434:  dup
+  435:  if_true8 441
+  437:  drop
+  438:  get_loc_check 5: n
+  441:  if_false8 460
+  443:  push_atom_value "https://"
+  448:  get_field2 concat
+  453:  get_loc_check 0: e
+  456:  call_method 1
+  459:  return
+  460:  push_atom_value "https://www."
+  465:  get_field2 concat
+  470:  get_loc_check 0: e
+  473:  call_method 1
+  476:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: c
+  mode: strict
+  args: t e i
+  locals:
+    0: const s [level:1 next:-1]
+    1: const a [level:1 next:0]
+    2: const r [level:1 next:1]
+    3: const n [level:1 next:2]
+    4: const l [level:1 next:3]
+  stack_size: 4
+  opcodes:
+    0:  set_loc_uninitialized 4: l
+    3:  set_loc_uninitialized 3: n
+    6:  set_loc_uninitialized 2: r
+    9:  set_loc_uninitialized 1: a
+   12:  set_loc_uninitialized 0: s
+   15:  get_arg0 0: t
+   16:  dup
+   17:  if_false8 26
+   19:  drop
+   20:  get_arg0 0: t
+   21:  get_field data
+   26:  dup
+   27:  if_true8 36
+   29:  drop
+   30:  get_arg0 0: t
+   31:  dup
+   32:  if_true8 36
+   34:  drop
+   35:  object
+   36:  put_loc0 0: s
+   37:  get_loc_check 0: s
+   40:  get_field changedTouches
+   45:  dup
+   46:  if_true8 77
+   48:  drop
+   49:  get_loc_check 0: s
+   52:  get_field touches
+   57:  dup
+   58:  if_true8 77
+   60:  drop
+   61:  get_arg0 0: t
+   62:  get_field changedTouches
+   67:  dup
+   68:  if_true8 77
+   70:  drop
+   71:  get_arg0 0: t
+   72:  get_field touches
+   77:  put_loc1 1: a
+   78:  get_loc_check 1: a
+   81:  if_false8 96
+   83:  get_loc_check 1: a
+   86:  get_length
+   87:  if_false8 96
+   89:  get_loc_check 1: a
+   92:  push_0 0
+   93:  get_array_el
+   94:  goto8 97
+   96:  null
+   97:  dup
+   98:  if_true8 104
+  100:  drop
+  101:  get_loc_check 0: s
+  104:  put_loc2 2: r
+  105:  get_var Number
+  110:  null
+  111:  get_loc_check 2: r
+  114:  get_field x
+  119:  eq
+  120:  if_false8 132
+  122:  get_loc_check 2: r
+  125:  get_field pageX
+  130:  goto8 140
+  132:  get_loc_check 2: r
+  135:  get_field x
+  140:  call1 1
+  141:  put_loc3 3: n
+  142:  get_var Number
+  147:  null
+  148:  get_loc_check 2: r
+  151:  get_field y
+  156:  eq
+  157:  if_false8 169
+  159:  get_loc_check 2: r
+  162:  get_field pageY
+  167:  goto8 177
+  169:  get_loc_check 2: r
+  172:  get_field y
+  177:  call1 1
+  178:  put_loc8 4: l
+  180:  object
+  181:  get_var Number
+  186:  get_field2 isFinite
+  191:  get_loc_check 3: n
+  194:  call_method 1
+  197:  if_false8 204
+  199:  get_loc_check 3: n
+  202:  goto8 205
+  204:  get_arg1 1: e
+  205:  define_field x
+  210:  get_var Number
+  215:  get_field2 isFinite
+  220:  get_loc_check 4: l
+  223:  call_method 1
+  226:  if_false8 233
+  228:  get_loc_check 4: l
+  231:  goto8 234
+  233:  get_arg2 2: i
+  234:  define_field y
+  239:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: u
+  mode: strict
+  args: t
+  stack_size: 5
+  opcodes:
+    0:  push_0 0
+    1:  push_empty_string
+    2:  get_field2 concat
+    7:  get_arg0 0: t
+    8:  dup
+    9:  if_true8 13
+   11:  drop
+   12:  push_empty_string
+   13:  call_method 1
+   16:  get_field2 indexOf
+   21:  push_atom_value "data:text/html"
+   26:  call_method 1
+   29:  strict_eq
+   30:  if_false8 38
+   32:  push_atom_value "about:start"
+   37:  return
+   38:  get_arg0 0: t
+   39:  dup
+   40:  if_true8 48
+   42:  drop
+   43:  push_atom_value "about:blank"
+   48:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: d
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:1 next:-1]
+    1: const i [level:1 next:0]
+    2: const s [level:1 next:1]
+  stack_size: 7
+  opcodes:
+    0:  set_loc_uninitialized 2: s
+    3:  set_loc_uninitialized 1: i
+    6:  set_loc_uninitialized 0: e
+    9:  push_empty_string
+   10:  get_field2 concat
+   15:  get_arg0 0: t
+   16:  dup
+   17:  if_true8 21
+   19:  drop
+   20:  push_empty_string
+   21:  call_method 1
+   24:  get_field2 trim
+   29:  call_method 0
+   32:  put_loc0 0: e
+   33:  get_loc_check 0: e
+   36:  get_field2 indexOf
+   41:  push_atom_value ":"
+   46:  call_method 1
+   49:  put_loc1 1: i
+   50:  get_loc_check 1: i
+   53:  push_0 0
+   54:  lt
+   55:  if_false8 60
+   57:  push_0 0
+   58:  lnot
+   59:  return
+   60:  get_loc_check 0: e
+   63:  get_field2 substring
+   68:  push_0 0
+   69:  get_loc_check 1: i
+   72:  call_method 2
+   75:  get_field2 toLowerCase
+   80:  call_method 0
+   83:  put_loc2 2: s
+   84:  push_atom_value http
+   89:  push_atom_value https
+   94:  push_atom_value about
+   99:  push_atom_value data
+  104:  push_atom_value file
+  109:  push_atom_value blob
+  114:  push_atom_value javascript
+  119:  array_from 7
+  122:  get_field2 indexOf
+  127:  get_loc_check 2: s
+  130:  call_method 1
+  133:  push_0 0
+  134:  gte
+  135:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: p
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+  closure vars:
+    0: a parent:loc4 const
+    1: r parent:loc5 const
+  stack_size: 7
+  opcodes:
+    0:  set_loc_uninitialized 0: t
+    3:  get_var_ref_check 0: a
+    6:  call0 0
+    7:  put_loc0 0: t
+    8:  object
+    9:  get_loc_check 0: t
+   12:  get_field width
+   17:  define_field width
+   22:  get_var Math
+   27:  get_field2 max
+   32:  push_1 1
+   33:  get_loc_check 0: t
+   36:  get_field height
+   41:  get_var_ref_check 1: r
+   44:  push_i8 40
+   46:  call1 1
+   47:  sub
+   48:  get_var_ref_check 1: r
+   51:  push_0 0
+   52:  call1 1
+   53:  sub
+   54:  call_method 2
+   57:  define_field height
+   62:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+  closure vars:
+    0: p parent:loc13 var
+    1: h parent:loc8 const
+  stack_size: 2
+  opcodes:
+    0:  set_loc_uninitialized 0: t
+    3:  get_var_ref0 0: p
+    4:  call0 0
+    5:  put_loc0 0: t
+    6:  object
+    7:  get_var_ref_check 1: h
+   10:  define_field url
+   15:  get_loc_check 0: t
+   18:  get_field width
+   23:  define_field frameWidth
+   28:  get_loc_check 0: t
+   31:  get_field height
+   36:  define_field frameHeight
+   41:  push_0 0
+   42:  define_field canvasKey
+   47:  null
+   48:  define_field imageData
+   53:  null
+   54:  define_field canvasContext
+   59:  push_1 1
+   60:  lnot
+   61:  define_field initialized
+   66:  push_1 1
+   67:  lnot
+   68:  define_field initializing
+   73:  push_0 0
+   74:  define_field initToken
+   79:  push_1 1
+   80:  lnot
+   81:  define_field surfaceRebinding
+   86:  push_1 1
+   87:  lnot
+   88:  define_field needsSurfaceRebind
+   93:  array_from 0
+   96:  define_field resumeRebindTimers
+  101:  push_atom_value Initializing
+  106:  define_field statusText
+  111:  push_atom_value mobile
+  116:  define_field viewportProfile
+  121:  get_var_ref_check 1: h
+  124:  define_field nativeUrl
+  129:  push_empty_string
+  130:  define_field pageTitle
+  135:  push_0 0
+  136:  define_field loadProgress
+  141:  null
+  142:  define_field drawHandler
+  147:  null
+  148:  define_field drawTimer
+  153:  null
+  154:  define_field statePollTimer
+  159:  push_empty_string
+  160:  define_field lastStatePayload
+  165:  null
+  166:  define_field stateHandler
+  171:  null
+  172:  define_field errorHandler
+  177:  null
+  178:  define_field appShowHandler
+  183:  null
+  184:  define_field appHideHandler
+  189:  null
+  190:  define_field hideShutdownTimer
+  195:  push_1 1
+  196:  lnot
+  197:  define_field suppressHideShutdown
+  202:  push_1 1
+  203:  lnot
+  204:  define_field pendingOverlayRecovery
+  209:  null
+  210:  define_field pendingOverlayAction
+  215:  push_empty_string
+  216:  define_field lastOpenToken
+  221:  null
+  222:  define_field latestLaunchOptions
+  227:  push_0 0
+  228:  define_field lastEditableKeyboardAt
+  233:  null
+  234:  define_field touchStart
+  239:  null
+  240:  define_field lastTouch
+  245:  push_1 1
+  246:  lnot
+  247:  define_field nativeTouchActive
+  252:  null
+  253:  define_field nativeTouchPoint
+  258:  push_1 1
+  259:  lnot
+  260:  define_field draggingCanvas
+  265:  push_1 1
+  266:  lnot
+  267:  define_field suppressNextClick
+  272:  push_0 0
+  273:  define_field scrollDeltaY
+  278:  null
+  279:  define_field scrollPoint
+  284:  null
+  285:  define_field scrollFlushTimer
+  290:  push_0 0
+  291:  define_field lastScrollFlushAt
+  296:  push_atom_value native
+  301:  define_field scrollMode
+  306:  null
+  307:  define_field scrollProbeTimer
+  312:  push_minus1 -1
+  313:  define_field scrollProbeFrame
+  318:  push_0 0
+  319:  define_field scrollProbeDelta
+  324:  array_from 0
+  327:  define_field touchSamples
+  332:  null
+  333:  define_field flingTimer
+  338:  push_0 0
+  339:  define_field flingVelocity
+  344:  null
+  345:  define_field flingPoint
+  350:  null
+  351:  define_field bridgeModule
+  356:  push_1 1
+  357:  lnot
+  358:  define_field shuttingDown
+  363:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: u parent:loc11 var
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_var_ref0 0: u
+    3:  get_loc0 0: this
+    4:  get_field nativeUrl
+    9:  dup
+   10:  if_true8 19
+   12:  drop
+   13:  get_loc0 0: this
+   14:  get_field url
+   19:  tail_call 1
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  push_atom_value desktopFit
+    7:  get_loc0 0: this
+    8:  get_field viewportProfile
+   13:  strict_eq
+   14:  if_false8 22
+   16:  push_atom_value D
+   21:  return
+   22:  push_atom_value M
+   27:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  object
+    3:  push_empty_string
+    4:  get_field2 concat
+    9:  get_loc0 0: this
+   10:  get_field frameWidth
+   15:  push_atom_value px
+   20:  call_method 2
+   23:  define_field width
+   28:  push_empty_string
+   29:  get_field2 concat
+   34:  get_loc0 0: this
+   35:  get_field frameHeight
+   40:  push_atom_value px
+   45:  call_method 2
+   48:  define_field height
+   53:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+    1: const e [level:1 next:0]
+    2: catch t [level:3 next:1]
+    3: var this
+  closure vars:
+    0: n parent:loc6 let
+    1: i parent:loc2 const
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  set_loc_uninitialized 1: e
+    5:  set_loc_uninitialized 0: t
+    8:  get_loc3 3: this
+    9:  push_1 1
+   10:  lnot
+   11:  put_field shuttingDown
+   16:  get_loc3 3: this
+   17:  get_loc3 3: this
+   18:  get_field $page
+   23:  dup
+   24:  if_false8 53
+   26:  drop
+   27:  get_loc3 3: this
+   28:  get_field $page
+   33:  get_field newOptions
+   38:  dup
+   39:  if_true8 53
+   41:  drop
+   42:  get_loc3 3: this
+   43:  get_field $page
+   48:  get_field loadOptions
+   53:  dup
+   54:  if_true8 58
+   56:  drop
+   57:  null
+   58:  put_field latestLaunchOptions
+   63:  get_loc3 3: this
+   64:  get_field2 readLaunchRequest
+   69:  call_method 0
+   72:  put_loc0 0: t
+   73:  get_loc_check 0: t
+   76:  get_field url
+   81:  put_loc1 1: e
+   82:  get_loc_check 1: e
+   85:  dup
+   86:  if_false8 99
+   88:  drop
+   89:  get_loc3 3: this
+   90:  get_loc_check 1: e
+   93:  insert2
+   94:  put_field url
+   99:  drop
+  100:  get_loc3 3: this
+  101:  get_loc3 3: this
+  102:  get_field url
+  107:  put_field nativeUrl
+  112:  get_loc3 3: this
+  113:  get_loc_check 0: t
+  116:  get_field openToken
+  121:  put_field lastOpenToken
+  126:  get_loc3 3: this
+  127:  get_field2 initBridgePlayer
+  132:  call_method 0
+  135:  drop
+  136:  catch 175
+  141:  get_var_ref_check 0: n
+  144:  dup
+  145:  if_false8 171
+  147:  drop
+  148:  get_var_ref_check 0: n
+  151:  get_field shutdown
+  156:  dup
+  157:  if_false8 171
+  159:  drop
+  160:  get_var_ref_check 0: n
+  163:  get_field2 shutdown
+  168:  call_method 0
+  171:  drop
+  172:  drop
+  173:  goto8 201
+  175:  put_loc2 2: t
+  176:  catch 200
+  181:  get_var_ref_check 1: i
+  184:  push_atom_value browser
+  189:  push_atom_value "mounted shutdown"
+  194:  get_loc2 2: t
+  195:  call3 3
+  196:  drop
+  197:  drop
+  198:  goto8 201
+  200:  throw
+  201:  get_loc3 3: this
+  202:  get_field2 bindAppLifecycleEvents
+  207:  call_method 0
+  210:  drop
+  211:  get_loc3 3: this
+  212:  get_field2 startBrowserInit
+  217:  call_method 0
+  220:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:3 next:-1]
+    1: var this
+  closure vars:
+    0: n parent:loc6 let
+    1: i parent:loc2 const
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field2 cancelHideShutdown
+    8:  call_method 0
+   11:  drop
+   12:  get_loc1 1: this
+   13:  get_field2 unbindAppLifecycleEvents
+   18:  call_method 0
+   21:  drop
+   22:  get_loc1 1: this
+   23:  get_field2 releaseBrowser
+   28:  call_method 0
+   31:  drop
+   32:  catch 70
+   37:  get_var_ref_check 0: n
+   40:  dup
+   41:  if_false8 67
+   43:  drop
+   44:  get_var_ref_check 0: n
+   47:  get_field terminateChildren
+   52:  dup
+   53:  if_false8 67
+   55:  drop
+   56:  get_var_ref_check 0: n
+   59:  get_field2 terminateChildren
+   64:  call_method 0
+   67:  drop
+   68:  drop
+   69:  return_undef
+   70:  put_loc0 0: t
+   71:  catch 94
+   76:  get_var_ref_check 1: i
+   79:  push_atom_value browser
+   84:  push_atom_value "beforeDestroy terminateChildren"
+   89:  get_loc0 0: t
+   90:  call3 3
+   91:  drop
+   92:  drop
+   93:  return_undef
+   94:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: let e [level:2 next:-1]
+    1: catch t [level:4 next:3]
+    2: const i [level:2 next:0]
+    3: const s [level:2 next:2]
+    4: catch t [level:7 next:-1]
+    5: var this
+  closure vars:
+    0: t parent:loc0 const
+    1: n parent:loc6 let
+    2: i parent:loc2 const
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc8 5: this
+    3:  catch 177
+    8:  set_loc_uninitialized 3: s
+   11:  set_loc_uninitialized 2: i
+   14:  set_loc_uninitialized 0: e
+   17:  null
+   18:  put_loc0 0: e
+   19:  catch 35
+   24:  get_var_ref_check 0: t
+   27:  dup
+   28:  put_loc_check 0: e
+   31:  drop
+   32:  drop
+   33:  goto8 45
+   35:  put_loc1 1: t
+   36:  catch 44
+   41:  drop
+   42:  goto8 45
+   44:  throw
+   45:  get_loc_check 0: e
+   48:  dup
+   49:  if_true8 77
+   51:  drop
+   52:  push_atom_value undefined
+   57:  get_var_undef bridge
+   62:  typeof
+   63:  eq
+   64:  dup
+   65:  if_true8 77
+   67:  drop
+   68:  get_var bridge
+   73:  dup
+   74:  put_loc_check 0: e
+   77:  drop
+   78:  get_loc8 5: this
+   80:  get_loc_check 0: e
+   83:  put_field bridgeModule
+   88:  get_loc_check 0: e
+   91:  if_false8 113
+   93:  get_loc_check 0: e
+   96:  get_field default
+  101:  if_false8 113
+  103:  get_loc_check 0: e
+  106:  get_field default
+  111:  goto8 116
+  113:  get_loc_check 0: e
+  116:  put_loc2 2: i
+  117:  get_loc_check 2: i
+  120:  dup
+  121:  if_false8 132
+  123:  drop
+  124:  get_loc_check 2: i
+  127:  get_field webuiPlayer
+  132:  dup
+  133:  if_true8 156
+  135:  drop
+  136:  get_loc_check 0: e
+  139:  dup
+  140:  if_false8 151
+  142:  drop
+  143:  get_loc_check 0: e
+  146:  get_field webuiPlayer
+  151:  dup
+  152:  if_true8 156
+  154:  drop
+  155:  null
+  156:  put_loc3 3: s
+  157:  get_loc_check 3: s
+  160:  if_false8 174
+  162:  get_loc_check 3: s
+  165:  dup
+  166:  put_var_ref_check 1: n
+  169:  drop
+  170:  push_0 0
+  171:  lnot
+  172:  nip
+  173:  return
+  174:  drop
+  175:  goto8 205
+  177:  put_loc8 4: t
+  179:  catch 204
+  184:  get_var_ref_check 2: i
+  187:  push_atom_value browser
+  192:  push_atom_value initBridgePlayer
+  197:  get_loc8 4: t
+  199:  call3 3
+  200:  drop
+  201:  drop
+  202:  goto8 205
+  204:  throw
+  205:  null
+  206:  dup
+  207:  put_var_ref_check 1: n
+  210:  drop
+  211:  push_1 1
+  212:  lnot
+  213:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: catch t [level:6 next:-1]
+    1: var this
+  closure vars:
+    0: n parent:loc6 let
+    1: s parent:loc3 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_arg0 0: t
+    3:  is_undefined
+    4:  if_false8 9
+    6:  push_0 0
+    7:  lnot
+    8:  put_arg0 0: t
+    9:  get_loc1 1: this
+   10:  push_atom_value "DBG ensure player"
+   15:  put_field statusText
+   20:  get_var_ref_check 0: n
+   23:  if_false8 28
+   25:  push_0 0
+   26:  lnot
+   27:  return
+   28:  get_loc1 1: this
+   29:  get_field2 initBridgePlayer
+   34:  call_method 0
+   37:  if_false8 42
+   39:  push_0 0
+   40:  lnot
+   41:  return
+   42:  get_loc1 1: this
+   43:  push_atom_value "webuiPlayer unavailable"
+   48:  put_field statusText
+   53:  get_arg0 0: t
+   54:  if_false8 133
+   56:  push_atom_value undefined
+   61:  get_var_undef $falcon
+   66:  typeof
+   67:  neq
+   68:  if_false8 133
+   70:  get_var $falcon
+   75:  if_false8 133
+   77:  push_atom_value function
+   82:  get_var $falcon
+   87:  get_field toast
+   92:  typeof
+   93:  eq
+   94:  if_false8 133
+   96:  catch 123
+  101:  get_var $falcon
+  106:  get_field2 toast
+  111:  push_atom_value "webuiPlayer unavailable"
+  116:  call_method 1
+  119:  drop
+  120:  drop
+  121:  goto8 133
+  123:  put_loc0 0: t
+  124:  catch 132
+  129:  drop
+  130:  goto8 133
+  132:  throw
+  133:  get_var_ref_check 1: s
+  136:  push_atom_value browser
+  141:  push_atom_value "bridge missing webuiPlayer export"
+  146:  call2 2
+  147:  drop
+  148:  push_1 1
+  149:  lnot
+  150:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:5 next:-1]
+    1: var this
+  closure vars:
+    0: i parent:loc2 const
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field $page
+    8:  if_false 135
+   13:  get_loc1 1: this
+   14:  get_field $page
+   19:  get_field on
+   24:  if_false8 135
+   26:  get_loc1 1: this
+   27:  get_field appShowHandler
+   32:  lnot
+   33:  if_false8 135
+   35:  get_loc1 1: this
+   36:  fclosure8 0: [bytecode <null>]
+   38:  put_field appShowHandler
+   43:  get_loc1 1: this
+   44:  fclosure8 1: [bytecode <null>]
+   46:  put_field appHideHandler
+   51:  catch 110
+   56:  get_loc1 1: this
+   57:  get_field $page
+   62:  get_field2 on
+   67:  push_atom_value browser_app_show
+   72:  get_loc1 1: this
+   73:  get_field appShowHandler
+   78:  call_method 2
+   81:  drop
+   82:  get_loc1 1: this
+   83:  get_field $page
+   88:  get_field2 on
+   93:  push_atom_value browser_app_hide
+   98:  get_loc1 1: this
+   99:  get_field appHideHandler
+  104:  call_method 2
+  107:  drop
+  108:  drop
+  109:  return_undef
+  110:  put_loc0 0: t
+  111:  catch 134
+  116:  get_var_ref_check 0: i
+  119:  push_atom_value browser
+  124:  push_atom_value "app lifecycle bind"
+  129:  get_loc0 0: t
+  130:  call3 3
+  131:  drop
+  132:  drop
+  133:  return_undef
+  134:  throw
+  135:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: this local:loc1 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  get_field2 onShow
+    6:  tail_call_method 0
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: this local:loc1 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  get_field2 onHide
+    6:  tail_call_method 0
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:5 next:-1]
+    1: var this
+  closure vars:
+    0: i parent:loc2 const
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field $page
+    8:  if_false 146
+   13:  get_loc1 1: this
+   14:  get_field $page
+   19:  get_field off
+   24:  if_false8 146
+   26:  catch 106
+   31:  get_loc1 1: this
+   32:  get_field appShowHandler
+   37:  dup
+   38:  if_false8 66
+   40:  drop
+   41:  get_loc1 1: this
+   42:  get_field $page
+   47:  get_field2 off
+   52:  push_atom_value browser_app_show
+   57:  get_loc1 1: this
+   58:  get_field appShowHandler
+   63:  call_method 2
+   66:  drop
+   67:  get_loc1 1: this
+   68:  get_field appHideHandler
+   73:  dup
+   74:  if_false8 102
+   76:  drop
+   77:  get_loc1 1: this
+   78:  get_field $page
+   83:  get_field2 off
+   88:  push_atom_value browser_app_hide
+   93:  get_loc1 1: this
+   94:  get_field appHideHandler
+   99:  call_method 2
+  102:  drop
+  103:  drop
+  104:  goto8 132
+  106:  put_loc0 0: t
+  107:  catch 131
+  112:  get_var_ref_check 0: i
+  115:  push_atom_value browser
+  120:  push_atom_value "app lifecycle unbind"
+  125:  get_loc0 0: t
+  126:  call3 3
+  127:  drop
+  128:  drop
+  129:  goto8 132
+  131:  throw
+  132:  get_loc1 1: this
+  133:  null
+  134:  put_field appShowHandler
+  139:  get_loc1 1: this
+  140:  null
+  141:  put_field appHideHandler
+  146:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+    1: const e [level:1 next:0]
+    2: const i [level:1 next:1]
+    3: let s [level:1 next:2]
+    4: let a [level:1 next:3]
+    5: let t [level:2 next:4]
+    6: const e [level:3 next:5]
+    7: const r [level:3 next:6]
+    8: catch t [level:6 next:7]
+    9: var this
+  closure vars:
+    0: o parent:loc9 var
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc8 9: this
+    3:  set_loc_uninitialized 4: a
+    6:  set_loc_uninitialized 3: s
+    9:  set_loc_uninitialized 2: i
+   12:  set_loc_uninitialized 1: e
+   15:  set_loc_uninitialized 0: t
+   18:  get_loc8 9: this
+   20:  get_field $page
+   25:  dup
+   26:  if_true8 30
+   28:  drop
+   29:  object
+   30:  put_loc0 0: t
+   31:  push_atom_value undefined
+   36:  get_var_undef $falcon
+   41:  typeof
+   42:  neq
+   43:  dup
+   44:  if_false8 57
+   46:  drop
+   47:  get_var $falcon
+   52:  get_field $app
+   57:  put_loc1 1: e
+   58:  get_loc8 9: this
+   60:  get_field latestLaunchOptions
+   65:  get_loc_check 0: t
+   68:  get_field loadOptions
+   73:  get_loc_check 0: t
+   76:  get_field newOptions
+   81:  get_loc_check 1: e
+   84:  dup
+   85:  if_false8 96
+   87:  drop
+   88:  get_loc_check 1: e
+   91:  get_field launchOptions
+   96:  array_from 4
+   99:  put_loc2 2: i
+  100:  push_empty_string
+  101:  put_loc3 3: s
+  102:  push_empty_string
+  103:  put_loc8 4: a
+  105:  set_loc_uninitialized 5: t
+  108:  push_0 0
+  109:  put_loc8 5: t
+  111:  get_loc_check 5: t
+  114:  get_loc_check 2: i
+  117:  get_length
+  118:  lt
+  119:  if_false 296
+  124:  set_loc_uninitialized 7: r
+  127:  set_loc_uninitialized 6: e
+  130:  get_loc_check 2: i
+  133:  get_loc_check 5: t
+  136:  get_array_el
+  137:  dup
+  138:  if_true8 142
+  140:  drop
+  141:  object
+  142:  put_loc8 6: e
+  144:  get_loc_check 4: a
+  147:  dup
+  148:  if_true8 183
+  150:  drop
+  151:  null
+  152:  get_loc_check 6: e
+  155:  get_field openToken
+  160:  eq
+  161:  dup
+  162:  if_true8 183
+  164:  drop
+  165:  get_var String
+  170:  get_loc_check 6: e
+  173:  get_field openToken
+  178:  call1 1
+  179:  dup
+  180:  put_loc_check 4: a
+  183:  drop
+  184:  get_loc_check 6: e
+  187:  get_field url
+  192:  dup
+  193:  if_true8 216
+  195:  drop
+  196:  get_loc_check 6: e
+  199:  get_field href
+  204:  dup
+  205:  if_true8 216
+  207:  drop
+  208:  get_loc_check 6: e
+  211:  get_field u
+  216:  put_loc8 7: r
+  218:  get_loc_check 3: s
+  221:  lnot
+  222:  if_false8 283
+  224:  get_loc_check 7: r
+  227:  if_false8 283
+  229:  catch 262
+  234:  get_var_ref0 0: o
+  235:  get_var decodeURIComponent
+  240:  push_empty_string
+  241:  get_field2 concat
+  246:  get_loc_check 7: r
+  249:  call_method 1
+  252:  call1 1
+  253:  call1 1
+  254:  dup
+  255:  put_loc_check 3: s
+  258:  drop
+  259:  drop
+  260:  goto8 283
+  262:  put_loc8 8: t
+  264:  catch 282
+  269:  get_var_ref0 0: o
+  270:  get_loc_check 7: r
+  273:  call1 1
+  274:  dup
+  275:  put_loc_check 3: s
+  278:  drop
+  279:  drop
+  280:  goto8 283
+  282:  throw
+  283:  get_loc_check 5: t
+  286:  push_1 1
+  287:  add
+  288:  dup
+  289:  put_loc_check 5: t
+  292:  drop
+  293:  goto16 111
+  296:  object
+  297:  get_loc_check 3: s
+  300:  define_field url
+  305:  get_loc_check 4: a
+  308:  define_field openToken
+  313:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: const i [level:1 next:-1]
+    1: const s [level:1 next:0]
+    2: var this
+  stack_size: 8
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  set_loc_uninitialized 1: s
+    5:  set_loc_uninitialized 0: i
+    8:  get_arg0 0: t
+    9:  get_field openToken
+   14:  lnot
+   15:  dup
+   16:  if_true8 32
+   18:  drop
+   19:  get_arg0 0: t
+   20:  get_field openToken
+   25:  get_loc2 2: this
+   26:  get_field lastOpenToken
+   31:  strict_eq
+   32:  if_false8 37
+   34:  push_1 1
+   35:  lnot
+   36:  return
+   37:  get_var String
+   42:  get_arg0 0: t
+   43:  get_field openToken
+   48:  call1 1
+   49:  get_field2 slice
+   54:  push_i8 -6
+   56:  call_method 1
+   59:  put_loc0 0: i
+   60:  get_loc2 2: this
+   61:  get_field lastOpenToken
+   66:  if_false8 92
+   68:  get_var String
+   73:  get_loc2 2: this
+   74:  get_field lastOpenToken
+   79:  call1 1
+   80:  get_field2 slice
+   85:  push_i8 -6
+   87:  call_method 1
+   90:  goto8 97
+   92:  push_atom_value "-"
+   97:  put_loc1 1: s
+   98:  get_loc2 2: this
+   99:  push_atom_value "DBG "
+  104:  get_field2 concat
+  109:  get_arg1 1: e
+  110:  push_atom_value " "
+  115:  get_loc_check 0: i
+  118:  push_atom_value "/"
+  123:  get_loc_check 1: s
+  126:  call_method 5
+  129:  put_field statusText
+  134:  get_loc2 2: this
+  135:  get_arg0 0: t
+  136:  get_field openToken
+  141:  put_field lastOpenToken
+  146:  get_arg0 0: t
+  147:  get_field url
+  152:  dup
+  153:  if_false8 181
+  155:  drop
+  156:  get_loc2 2: this
+  157:  get_arg0 0: t
+  158:  get_field url
+  163:  put_field url
+  168:  get_loc2 2: this
+  169:  get_arg0 0: t
+  170:  get_field url
+  175:  insert2
+  176:  put_field nativeUrl
+  181:  drop
+  182:  get_loc2 2: this
+  183:  push_1 1
+  184:  lnot
+  185:  put_field pendingOverlayRecovery
+  190:  get_loc2 2: this
+  191:  null
+  192:  put_field pendingOverlayAction
+  197:  get_loc2 2: this
+  198:  get_field2 releaseBrowser
+  203:  call_method 0
+  206:  drop
+  207:  get_loc2 2: this
+  208:  get_field2 startBrowserInit
+  213:  push_0 0
+  214:  lnot
+  215:  call_method 1
+  218:  drop
+  219:  push_0 0
+  220:  lnot
+  221:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:1 next:-1]
+    1: var this
+  closure vars:
+    0: i parent:loc2 const
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_arg0 0: t
+    3:  is_undefined
+    4:  if_false8 9
+    6:  push_1 1
+    7:  lnot
+    8:  put_arg0 0: t
+    9:  set_loc_uninitialized 0: e
+   12:  get_loc1 1: this
+   13:  push_atom_value "DBG startInit f="
+   18:  get_arg0 0: t
+   19:  if_false8 24
+   21:  push_1 1
+   22:  goto8 25
+   24:  push_0 0
+   25:  add
+   26:  put_field statusText
+   31:  get_loc1 1: this
+   32:  push_1 1
+   33:  lnot
+   34:  put_field shuttingDown
+   39:  get_loc1 1: this
+   40:  get_field2 ensureBrowserPlayer
+   45:  push_1 1
+   46:  lnot
+   47:  call_method 1
+   50:  lnot
+   51:  if_false8 54
+   53:  return_undef
+   54:  get_loc1 1: this
+   55:  get_field initializing
+   60:  dup
+   61:  if_true8 74
+   63:  drop
+   64:  get_loc1 1: this
+   65:  get_field initialized
+   70:  if_false8 77
+   72:  get_arg0 0: t
+   73:  lnot
+   74:  if_false8 77
+   76:  return_undef
+   77:  get_loc1 1: this
+   78:  get_field initToken
+   83:  push_1 1
+   84:  add
+   85:  put_loc0 0: e
+   86:  get_loc1 1: this
+   87:  get_loc_check 0: e
+   90:  put_field initToken
+   95:  get_loc1 1: this
+   96:  push_0 0
+   97:  lnot
+   98:  put_field initializing
+  103:  get_loc1 1: this
+  104:  get_field2 initBrowser
+  109:  get_loc_check 0: e
+  112:  call_method 1
+  115:  get_field2 then
+  120:  fclosure8 0: [bytecode <null>]
+  122:  call_method 1
+  125:  get_field2 catch
+  130:  fclosure8 1: [bytecode <null>]
+  132:  call_method 1
+  135:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: this local:loc1 var
+    1: e local:loc0 const
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  get_field initToken
+    6:  get_var_ref_check 1: e
+    9:  strict_eq
+   10:  dup
+   11:  if_false8 23
+   13:  drop
+   14:  get_var_ref0 0: this
+   15:  push_1 1
+   16:  lnot
+   17:  insert2
+   18:  put_field initializing
+   23:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: this local:loc1 var
+    1: e local:loc0 const
+    2: i parent:loc0 const
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  get_field initToken
+    6:  get_var_ref_check 1: e
+    9:  strict_eq
+   10:  dup
+   11:  if_false8 23
+   13:  drop
+   14:  get_var_ref0 0: this
+   15:  push_1 1
+   16:  lnot
+   17:  insert2
+   18:  put_field initializing
+   23:  drop
+   24:  get_var_ref0 0: this
+   25:  push_atom_value "Init failed: "
+   30:  get_field2 concat
+   35:  get_arg0 0: t
+   36:  if_false8 54
+   38:  get_arg0 0: t
+   39:  get_field message
+   44:  if_false8 54
+   46:  get_arg0 0: t
+   47:  get_field message
+   52:  goto8 55
+   54:  get_arg0 0: t
+   55:  call_method 1
+   58:  put_field statusText
+   63:  get_var_ref_check 2: i
+   66:  push_atom_value browser
+   71:  push_atom_value startBrowserInit
+   76:  get_arg0 0: t
+   77:  call3 3
+   78:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:2 next:-1]
+    1: const s [level:2 next:0]
+    2: const a [level:2 next:1]
+    3: let r [level:2 next:2]
+    4: let l [level:2 next:3]
+    5: let h [level:2 next:4]
+    6: catch t [level:6 next:5]
+    7: catch t [level:10 next:5]
+    8: catch t [level:13 next:-1]
+    9: var this
+  closure vars:
+    0: i parent:loc2 const
+    1: n parent:loc6 let
+  stack_size: 8
+  opcodes:
+    0:  push_this
+    1:  put_loc8 9: this
+    3:  catch 1144
+    8:  set_loc_uninitialized 5: h
+   11:  set_loc_uninitialized 4: l
+   14:  set_loc_uninitialized 3: r
+   17:  set_loc_uninitialized 2: a
+   20:  set_loc_uninitialized 1: s
+   23:  set_loc_uninitialized 0: e
+   26:  get_loc8 9: this
+   28:  push_atom_value "DBG init enter t="
+   33:  get_field2 concat
+   38:  get_arg0 0: t
+   39:  call_method 1
+   42:  put_field statusText
+   47:  get_loc8 9: this
+   49:  get_field2 resolveCanvasSize
+   54:  call_method 0
+   57:  await
+   58:  put_loc0 0: e
+   59:  get_loc8 9: this
+   61:  push_atom_value "DBG size "
+   66:  get_field2 concat
+   71:  get_loc_check 0: e
+   74:  get_field width
+   79:  push_atom_value x
+   84:  get_loc_check 0: e
+   87:  get_field height
+   92:  call_method 3
+   95:  put_field statusText
+  100:  get_arg0 0: t
+  101:  if_false8 122
+  103:  get_arg0 0: t
+  104:  get_loc8 9: this
+  106:  get_field initToken
+  111:  strict_neq
+  112:  if_false8 122
+  114:  drop
+  115:  undefined
+  116:  gosub 1228
+  121:  return_async
+  122:  get_loc_check 0: e
+  125:  get_field width
+  130:  get_loc8 9: this
+  132:  get_field frameWidth
+  137:  strict_eq
+  138:  dup
+  139:  if_false8 158
+  141:  drop
+  142:  get_loc_check 0: e
+  145:  get_field height
+  150:  get_loc8 9: this
+  152:  get_field frameHeight
+  157:  strict_eq
+  158:  dup
+  159:  if_true8 207
+  161:  drop
+  162:  get_loc8 9: this
+  164:  get_loc_check 0: e
+  167:  get_field width
+  172:  put_field frameWidth
+  177:  get_loc8 9: this
+  179:  get_loc_check 0: e
+  182:  get_field height
+  187:  put_field frameHeight
+  192:  get_loc8 9: this
+  194:  get_field2 canvasKey
+  199:  push_1 1
+  200:  add
+  201:  insert2
+  202:  put_field canvasKey
+  207:  drop
+  208:  get_loc8 9: this
+  210:  get_field2 nextTick
+  215:  call_method 0
+  218:  await
+  219:  drop
+  220:  get_loc8 9: this
+  222:  get_field2 nextTick
+  227:  call_method 0
+  230:  await
+  231:  drop
+  232:  get_loc8 9: this
+  234:  push_atom_value "DBG nextTick ok"
+  239:  put_field statusText
+  244:  get_arg0 0: t
+  245:  if_false8 266
+  247:  get_arg0 0: t
+  248:  get_loc8 9: this
+  250:  get_field initToken
+  255:  strict_neq
+  256:  if_false8 266
+  258:  drop
+  259:  undefined
+  260:  gosub 1228
+  265:  return_async
+  266:  get_var ArrayBuffer
+  271:  dup
+  272:  get_loc8 9: this
+  274:  get_field frameWidth
+  279:  get_loc8 9: this
+  281:  get_field frameHeight
+  286:  mul
+  287:  push_4 4
+  288:  mul
+  289:  call_constructor 1
+  292:  put_loc1 1: s
+  293:  get_loc8 9: this
+  295:  get_field $refs
+  300:  get_field browserCanvas
+  305:  put_loc2 2: a
+  306:  get_loc_check 2: a
+  309:  dup
+  310:  if_false8 344
+  312:  drop
+  313:  get_loc_check 2: a
+  316:  get_loc8 9: this
+  318:  get_field frameWidth
+  323:  put_field width
+  328:  get_loc_check 2: a
+  331:  get_loc8 9: this
+  333:  get_field frameHeight
+  338:  insert2
+  339:  put_field height
+  344:  drop
+  345:  null
+  346:  put_loc3 3: r
+  347:  null
+  348:  put_loc8 4: l
+  350:  get_loc_check 1: s
+  353:  put_loc8 5: h
+  355:  catch 519
+  360:  push_atom_value function
+  365:  get_var_undef createCanvasContext
+  370:  typeof
+  371:  eq
+  372:  if_false8 385
+  374:  get_var createCanvasContext
+  379:  get_loc_check 2: a
+  382:  call1 1
+  383:  goto8 401
+  385:  get_loc_check 2: a
+  388:  get_field2 getContext
+  393:  push_atom_value "2d"
+  398:  call_method 1
+  401:  dup
+  402:  put_loc_check 3: r
+  405:  drop
+  406:  get_loc_check 3: r
+  409:  push_atom_value "#ffffff"
+  414:  put_field fillStyle
+  419:  get_loc_check 3: r
+  422:  get_field2 fillRect
+  427:  push_0 0
+  428:  push_0 0
+  429:  get_loc8 9: this
+  431:  get_field frameWidth
+  436:  get_loc8 9: this
+  438:  get_field frameHeight
+  443:  call_method 4
+  446:  drop
+  447:  get_loc_check 3: r
+  450:  get_field2 getImageData
+  455:  push_0 0
+  456:  push_0 0
+  457:  get_loc8 9: this
+  459:  get_field frameWidth
+  464:  get_loc8 9: this
+  466:  get_field frameHeight
+  471:  call_method 4
+  474:  dup
+  475:  put_loc_check 4: l
+  478:  drop
+  479:  get_loc_check 4: l
+  482:  get_field buffer
+  487:  dup
+  488:  if_true8 511
+  490:  drop
+  491:  get_loc_check 4: l
+  494:  get_field data
+  499:  get_field buffer
+  504:  dup
+  505:  if_true8 511
+  507:  drop
+  508:  get_loc_check 1: s
+  511:  dup
+  512:  put_loc_check 5: h
+  515:  drop
+  516:  drop
+  517:  goto8 559
+  519:  put_loc8 6: t
+  521:  catch 558
+  526:  get_var_ref_check 0: i
+  529:  push_atom_value browser
+  534:  push_atom_value "canvas buffer unavailable"
+  539:  get_loc8 6: t
+  541:  call3 3
+  542:  drop
+  543:  get_loc8 9: this
+  545:  push_atom_value "DBG canvas error"
+  550:  put_field statusText
+  555:  drop
+  556:  goto8 559
+  558:  throw
+  559:  get_loc8 9: this
+  561:  push_atom_value "DBG canvas "
+  566:  get_field2 concat
+  571:  get_loc_check 3: r
+  574:  if_false8 583
+  576:  push_atom_value ctx
+  581:  goto8 588
+  583:  push_atom_value noctx
+  588:  push_atom_value " "
+  593:  get_loc_check 4: l
+  596:  if_false8 605
+  598:  push_atom_value img
+  603:  goto8 610
+  605:  push_atom_value noimg
+  610:  call_method 3
+  613:  put_field statusText
+  618:  get_loc8 9: this
+  620:  get_loc_check 3: r
+  623:  put_field canvasContext
+  628:  get_loc8 9: this
+  630:  get_loc_check 4: l
+  633:  put_field imageData
+  638:  get_loc8 9: this
+  640:  get_loc8 9: this
+  642:  get_field url
+  647:  put_field nativeUrl
+  652:  get_loc8 9: this
+  654:  push_minus1 -1
+  655:  put_field lastDrawFrame
+  660:  get_loc8 9: this
+  662:  push_0 0
+  663:  put_field lastEventDrawAt
+  668:  get_loc8 9: this
+  670:  push_0 0
+  671:  put_field lastStaticForceDrawAt
+  676:  get_loc8 9: this
+  678:  fclosure8 0: [bytecode <null>]
+  680:  put_field drawHandler
+  685:  get_loc8 9: this
+  687:  fclosure8 1: [bytecode <null>]
+  689:  put_field stateHandler
+  694:  get_loc8 9: this
+  696:  fclosure8 2: [bytecode <null>]
+  698:  put_field errorHandler
+  703:  get_var_ref_check 1: n
+  706:  get_field setViewportProfile
+  711:  dup
+  712:  if_false8 733
+  714:  drop
+  715:  get_var_ref_check 1: n
+  718:  get_field2 setViewportProfile
+  723:  get_loc8 9: this
+  725:  get_field viewportProfile
+  730:  call_method 1
+  733:  drop
+  734:  get_loc8 9: this
+  736:  push_atom_value "DBG native setup"
+  741:  put_field statusText
+  746:  get_var_ref_check 1: n
+  749:  get_field2 setVideoInfo
+  754:  get_loc8 9: this
+  756:  get_field frameWidth
+  761:  get_loc8 9: this
+  763:  get_field frameHeight
+  768:  call_method 2
+  771:  drop
+  772:  get_var_ref_check 1: n
+  775:  get_field2 setImageDataBuffer
+  780:  get_loc_check 5: h
+  783:  call_method 1
+  786:  drop
+  787:  get_var_ref_check 1: n
+  790:  get_field2 setFrameInterval
+  795:  push_i8 16
+  797:  call_method 1
+  800:  drop
+  801:  get_var_ref_check 1: n
+  804:  get_field2 loadUrl
+  809:  get_loc8 9: this
+  811:  get_field url
+  816:  call_method 1
+  819:  drop
+  820:  get_loc8 9: this
+  822:  push_0 0
+  823:  lnot
+  824:  put_field initialized
+  829:  catch 996
+  834:  get_var_ref_check 1: n
+  837:  get_field onDrawFrame
+  842:  dup
+  843:  if_false8 886
+  845:  drop
+  846:  get_var_ref_check 1: n
+  849:  get_field onDrawFrame
+  854:  get_field on
+  859:  dup
+  860:  if_false8 886
+  862:  drop
+  863:  get_var_ref_check 1: n
+  866:  get_field onDrawFrame
+  871:  get_field2 on
+  876:  get_loc8 9: this
+  878:  get_field drawHandler
+  883:  call_method 1
+  886:  drop
+  887:  get_var_ref_check 1: n
+  890:  get_field onStateChanged
+  895:  dup
+  896:  if_false8 939
+  898:  drop
+  899:  get_var_ref_check 1: n
+  902:  get_field onStateChanged
+  907:  get_field on
+  912:  dup
+  913:  if_false8 939
+  915:  drop
+  916:  get_var_ref_check 1: n
+  919:  get_field onStateChanged
+  924:  get_field2 on
+  929:  get_loc8 9: this
+  931:  get_field stateHandler
+  936:  call_method 1
+  939:  drop
+  940:  get_var_ref_check 1: n
+  943:  get_field onError
+  948:  dup
+  949:  if_false8 992
+  951:  drop
+  952:  get_var_ref_check 1: n
+  955:  get_field onError
+  960:  get_field on
+  965:  dup
+  966:  if_false8 992
+  968:  drop
+  969:  get_var_ref_check 1: n
+  972:  get_field onError
+  977:  get_field2 on
+  982:  get_loc8 9: this
+  984:  get_field errorHandler
+  989:  call_method 1
+  992:  drop
+  993:  drop
+  994:  goto8 1024
+  996:  put_loc8 7: t
+  998:  catch 1023
+ 1003:  get_var_ref_check 0: i
+ 1006:  push_atom_value browser
+ 1011:  push_atom_value "event bind"
+ 1016:  get_loc8 7: t
+ 1018:  call3 3
+ 1019:  drop
+ 1020:  drop
+ 1021:  goto8 1024
+ 1023:  throw
+ 1024:  get_loc8 9: this
+ 1026:  push_atom_value "DBG start native"
+ 1031:  put_field statusText
+ 1036:  get_loc8 9: this
+ 1038:  get_field2 startDrawPump
+ 1043:  call_method 0
+ 1046:  drop
+ 1047:  get_loc8 9: this
+ 1049:  get_field2 startStatePoller
+ 1054:  call_method 0
+ 1057:  drop
+ 1058:  get_var_ref_check 1: n
+ 1061:  get_field2 start
+ 1066:  call_method 0
+ 1069:  if_false8 1120
+ 1071:  get_loc8 9: this
+ 1073:  get_field $page
+ 1078:  dup
+ 1079:  if_false8 1133
+ 1081:  drop
+ 1082:  get_loc8 9: this
+ 1084:  get_field $page
+ 1089:  get_field setTimeout
+ 1094:  dup
+ 1095:  if_false8 1133
+ 1097:  drop
+ 1098:  get_loc8 9: this
+ 1100:  get_field $page
+ 1105:  get_field2 setTimeout
+ 1110:  fclosure8 3: [bytecode <null>]
+ 1112:  push_i16 800
+ 1115:  call_method 2
+ 1118:  goto8 1133
+ 1120:  get_loc8 9: this
+ 1122:  push_atom_value "WPE blocked"
+ 1127:  insert2
+ 1128:  put_field statusText
+ 1133:  drop
+ 1134:  drop
+ 1135:  undefined
+ 1136:  gosub 1228
+ 1141:  drop
+ 1142:  goto8 1258
+ 1144:  put_loc8 8: t
+ 1146:  catch 1222
+ 1151:  get_loc8 9: this
+ 1153:  push_atom_value "Init failed: "
+ 1158:  get_field2 concat
+ 1163:  get_loc8 8: t
+ 1165:  if_false8 1185
+ 1167:  get_loc8 8: t
+ 1169:  get_field message
+ 1174:  if_false8 1185
+ 1176:  get_loc8 8: t
+ 1178:  get_field message
+ 1183:  goto8 1187
+ 1185:  get_loc8 8: t
+ 1187:  call_method 1
+ 1190:  put_field statusText
+ 1195:  get_var_ref_check 0: i
+ 1198:  push_atom_value browser
+ 1203:  push_atom_value initBrowser
+ 1208:  get_loc8 8: t
+ 1210:  call3 3
+ 1211:  drop
+ 1212:  drop
+ 1213:  undefined
+ 1214:  gosub 1228
+ 1219:  drop
+ 1220:  goto8 1258
+ 1222:  gosub 1228
+ 1227:  throw
+ 1228:  get_arg0 0: t
+ 1229:  dup
+ 1230:  if_false8 1256
+ 1232:  drop
+ 1233:  get_arg0 0: t
+ 1234:  get_loc8 9: this
+ 1236:  get_field initToken
+ 1241:  strict_eq
+ 1242:  dup
+ 1243:  if_false8 1256
+ 1245:  drop
+ 1246:  get_loc8 9: this
+ 1248:  push_1 1
+ 1249:  lnot
+ 1250:  insert2
+ 1251:  put_field initializing
+ 1256:  drop
+ 1257:  ret
+ 1258:  undefined
+ 1259:  return_async
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: this local:loc9 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  get_field2 drawFrameFromEvent
+    6:  call_method 0
+    9:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: this local:loc9 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  get_field2 handleNativeState
+    6:  get_arg0 0: t
+    7:  call_method 1
+   10:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: this local:loc9 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  get_field2 handleError
+    6:  get_arg0 0: t
+    7:  call_method 1
+   10:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: this local:loc9 var
+  stack_size: 3
+  opcodes:
+    0:  push_atom_value "Starting WPE"
+    5:  get_var_ref0 0: this
+    6:  get_field statusText
+   11:  strict_eq
+   12:  dup
+   13:  if_false8 28
+   15:  drop
+   16:  get_var_ref0 0: this
+   17:  push_atom_value Running
+   22:  insert2
+   23:  put_field statusText
+   28:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:4 next:-1]
+    1: const e [level:4 next:0]
+    2: const s [level:4 next:1]
+    3: const a [level:4 next:2]
+    4: let r [level:4 next:3]
+    5: let l [level:4 next:4]
+    6: let h [level:4 next:5]
+    7: catch t [level:7 next:6]
+    8: catch t [level:11 next:-1]
+    9: var this
+  closure vars:
+    0: i parent:loc2 const
+    1: n parent:loc6 let
+  stack_size: 8
+  opcodes:
+    0:  push_this
+    1:  put_loc8 9: this
+    3:  get_loc8 9: this
+    5:  get_field surfaceRebinding
+   10:  lnot
+   11:  if_false 673
+   16:  get_loc8 9: this
+   18:  push_0 0
+   19:  lnot
+   20:  put_field surfaceRebinding
+   25:  catch 623
+   30:  set_loc_uninitialized 6: h
+   33:  set_loc_uninitialized 5: l
+   36:  set_loc_uninitialized 4: r
+   39:  set_loc_uninitialized 3: a
+   42:  set_loc_uninitialized 2: s
+   45:  set_loc_uninitialized 1: e
+   48:  set_loc_uninitialized 0: t
+   51:  get_loc8 9: this
+   53:  get_field2 resolveCanvasSize
+   58:  call_method 0
+   61:  await
+   62:  put_loc0 0: t
+   63:  get_loc_check 0: t
+   66:  get_field width
+   71:  get_loc8 9: this
+   73:  get_field frameWidth
+   78:  strict_neq
+   79:  dup
+   80:  if_true8 99
+   82:  drop
+   83:  get_loc_check 0: t
+   86:  get_field height
+   91:  get_loc8 9: this
+   93:  get_field frameHeight
+   98:  strict_neq
+   99:  put_loc1 1: e
+  100:  get_loc_check 1: e
+  103:  dup
+  104:  if_false8 148
+  106:  drop
+  107:  get_loc8 9: this
+  109:  get_loc_check 0: t
+  112:  get_field width
+  117:  put_field frameWidth
+  122:  get_loc8 9: this
+  124:  get_loc_check 0: t
+  127:  get_field height
+  132:  put_field frameHeight
+  137:  get_loc8 9: this
+  139:  get_field2 nextTick
+  144:  call_method 0
+  147:  await
+  148:  drop
+  149:  get_var ArrayBuffer
+  154:  dup
+  155:  get_loc8 9: this
+  157:  get_field frameWidth
+  162:  get_loc8 9: this
+  164:  get_field frameHeight
+  169:  mul
+  170:  push_4 4
+  171:  mul
+  172:  call_constructor 1
+  175:  put_loc2 2: s
+  176:  get_loc8 9: this
+  178:  get_field $refs
+  183:  get_field browserCanvas
+  188:  put_loc3 3: a
+  189:  get_loc_check 3: a
+  192:  lnot
+  193:  if_false8 203
+  195:  drop
+  196:  undefined
+  197:  gosub 663
+  202:  return_async
+  203:  get_loc_check 1: e
+  206:  dup
+  207:  if_false8 241
+  209:  drop
+  210:  get_loc_check 3: a
+  213:  get_loc8 9: this
+  215:  get_field frameWidth
+  220:  put_field width
+  225:  get_loc_check 3: a
+  228:  get_loc8 9: this
+  230:  get_field frameHeight
+  235:  insert2
+  236:  put_field height
+  241:  drop
+  242:  get_loc8 9: this
+  244:  get_field canvasContext
+  249:  put_loc8 4: r
+  251:  null
+  252:  put_loc8 5: l
+  254:  get_loc_check 2: s
+  257:  put_loc8 6: h
+  259:  catch 389
+  264:  get_loc_check 4: r
+  267:  dup
+  268:  if_true8 316
+  270:  drop
+  271:  push_atom_value function
+  276:  get_var_undef createCanvasContext
+  281:  typeof
+  282:  eq
+  283:  if_false8 296
+  285:  get_var createCanvasContext
+  290:  get_loc_check 3: a
+  293:  call1 1
+  294:  goto8 312
+  296:  get_loc_check 3: a
+  299:  get_field2 getContext
+  304:  push_atom_value "2d"
+  309:  call_method 1
+  312:  dup
+  313:  put_loc_check 4: r
+  316:  drop
+  317:  get_loc_check 4: r
+  320:  get_field2 getImageData
+  325:  push_0 0
+  326:  push_0 0
+  327:  get_loc8 9: this
+  329:  get_field frameWidth
+  334:  get_loc8 9: this
+  336:  get_field frameHeight
+  341:  call_method 4
+  344:  dup
+  345:  put_loc_check 5: l
+  348:  drop
+  349:  get_loc_check 5: l
+  352:  get_field buffer
+  357:  dup
+  358:  if_true8 381
+  360:  drop
+  361:  get_loc_check 5: l
+  364:  get_field data
+  369:  get_field buffer
+  374:  dup
+  375:  if_true8 381
+  377:  drop
+  378:  get_loc_check 2: s
+  381:  dup
+  382:  put_loc_check 6: h
+  385:  drop
+  386:  drop
+  387:  goto8 417
+  389:  put_loc8 7: t
+  391:  catch 416
+  396:  get_var_ref_check 0: i
+  399:  push_atom_value browser
+  404:  push_atom_value "canvas rebind"
+  409:  get_loc8 7: t
+  411:  call3 3
+  412:  drop
+  413:  drop
+  414:  goto8 417
+  416:  throw
+  417:  get_loc_check 4: r
+  420:  lnot
+  421:  dup
+  422:  if_true8 429
+  424:  drop
+  425:  get_loc_check 5: l
+  428:  lnot
+  429:  if_false8 439
+  431:  drop
+  432:  undefined
+  433:  gosub 663
+  438:  return_async
+  439:  get_loc8 9: this
+  441:  get_loc_check 4: r
+  444:  put_field canvasContext
+  449:  get_loc8 9: this
+  451:  get_loc_check 5: l
+  454:  put_field imageData
+  459:  get_loc8 9: this
+  461:  push_minus1 -1
+  462:  put_field lastDrawFrame
+  467:  get_loc8 9: this
+  469:  push_0 0
+  470:  put_field lastEventDrawAt
+  475:  get_loc8 9: this
+  477:  push_0 0
+  478:  put_field lastStaticForceDrawAt
+  483:  get_loc_check 1: e
+  486:  dup
+  487:  if_false8 515
+  489:  drop
+  490:  get_var_ref_check 1: n
+  493:  get_field2 setVideoInfo
+  498:  get_loc8 9: this
+  500:  get_field frameWidth
+  505:  get_loc8 9: this
+  507:  get_field frameHeight
+  512:  call_method 2
+  515:  drop
+  516:  get_var_ref_check 1: n
+  519:  get_field2 setImageDataBuffer
+  524:  get_loc_check 6: h
+  527:  call_method 1
+  530:  drop
+  531:  get_var_ref_check 1: n
+  534:  get_field2 setFrameInterval
+  539:  push_i8 16
+  541:  call_method 1
+  544:  drop
+  545:  get_var_ref_check 1: n
+  548:  get_field start
+  553:  dup
+  554:  if_false8 568
+  556:  drop
+  557:  get_var_ref_check 1: n
+  560:  get_field2 start
+  565:  call_method 0
+  568:  drop
+  569:  get_loc8 9: this
+  571:  get_field2 startDrawPump
+  576:  call_method 0
+  579:  drop
+  580:  get_loc8 9: this
+  582:  get_field2 startStatePoller
+  587:  call_method 0
+  590:  drop
+  591:  get_loc8 9: this
+  593:  get_field2 drawFrameIfNeeded
+  598:  push_0 0
+  599:  lnot
+  600:  call_method 1
+  603:  drop
+  604:  get_loc8 9: this
+  606:  push_1 1
+  607:  lnot
+  608:  put_field needsSurfaceRebind
+  613:  drop
+  614:  undefined
+  615:  gosub 663
+  620:  drop
+  621:  goto8 673
+  623:  put_loc8 8: t
+  625:  catch 657
+  630:  get_var_ref_check 0: i
+  633:  push_atom_value browser
+  638:  push_atom_value "surface rebind"
+  643:  get_loc8 8: t
+  645:  call3 3
+  646:  drop
+  647:  drop
+  648:  undefined
+  649:  gosub 663
+  654:  drop
+  655:  goto8 673
+  657:  gosub 663
+  662:  throw
+  663:  get_loc8 9: this
+  665:  push_1 1
+  666:  lnot
+  667:  put_field surfaceRebinding
+  672:  ret
+  673:  undefined
+  674:  return_async
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: l parent:loc7 const
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 cancelResumeRecovery
+    8:  call_method 0
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field2 rebindCanvasSurface
+   18:  call_method 0
+   21:  drop
+   22:  get_var_ref_check 0: l
+   25:  get_field2 forEach
+   30:  fclosure8 0: [bytecode <null>]
+   32:  call_method 1
+   35:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:1 next:-1]
+  closure vars:
+    0: this local:loc0 var
+  stack_size: 4
+  opcodes:
+    0:  set_loc_uninitialized 0: e
+    3:  get_var_ref0 0: this
+    4:  get_field2 scheduleTimeout
+    9:  fclosure8 0: [bytecode <null>]
+   11:  get_arg0 0: t
+   12:  call_method 2
+   15:  put_loc0 0: e
+   16:  get_var_ref0 0: this
+   17:  get_field resumeRebindTimers
+   22:  get_field2 push
+   27:  get_loc_check 0: e
+   30:  call_method 1
+   33:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: e local:loc0 const
+    1: this parent:loc0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref1 1: this
+    1:  get_var_ref1 1: this
+    2:  get_field resumeRebindTimers
+    7:  get_field2 filter
+   12:  fclosure8 0: [bytecode <null>]
+   14:  call_method 1
+   17:  put_field resumeRebindTimers
+   22:  get_var_ref1 1: this
+   23:  get_field initialized
+   28:  dup
+   29:  if_false8 51
+   31:  drop
+   32:  get_var_ref1 1: this
+   33:  get_field2 ensureBrowserRunning
+   38:  call_method 0
+   41:  drop
+   42:  get_var_ref1 1: this
+   43:  get_field2 rebindCanvasSurface
+   48:  call_method 0
+   51:  return_undef
+
+
+/* ===== function depth=4 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: e parent:loc0 const
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_var_ref_check 0: e
+    4:  strict_neq
+    5:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field resumeRebindTimers
+    8:  get_length
+    9:  dup
+   10:  if_false8 40
+   12:  drop
+   13:  get_loc0 0: this
+   14:  get_field resumeRebindTimers
+   19:  get_field2 forEach
+   24:  fclosure8 0: [bytecode <null>]
+   26:  call_method 1
+   29:  drop
+   30:  get_loc0 0: this
+   31:  array_from 0
+   34:  insert2
+   35:  put_field resumeRebindTimers
+   40:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: this local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  get_field2 clearScheduledTimeout
+    6:  get_arg0 0: t
+    7:  tail_call_method 1
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  stack_size: 3
+  opcodes:
+    0:  get_var Promise
+    5:  dup
+    6:  fclosure8 0: [bytecode <null>]
+    8:  call_constructor 1
+   11:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 3
+  opcodes:
+    0:  get_var setTimeout
+    5:  get_arg0 0: t
+    6:  push_0 0
+    7:  tail_call 2
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: let t [level:1 next:-1]
+    1: catch t [level:3 next:4]
+    2: const e [level:1 next:0]
+    3: const s [level:1 next:2]
+    4: const a [level:1 next:3]
+    5: var this
+  closure vars:
+    0: i parent:loc2 const
+    1: p parent:loc13 var
+  stack_size: 7
+  opcodes:
+    0:  push_this
+    1:  put_loc8 5: this
+    3:  set_loc_uninitialized 4: a
+    6:  set_loc_uninitialized 3: s
+    9:  set_loc_uninitialized 2: e
+   12:  set_loc_uninitialized 0: t
+   15:  null
+   16:  put_loc0 0: t
+   17:  catch 117
+   22:  get_loc8 5: this
+   24:  get_field $page
+   29:  get_field $dom
+   34:  get_field2 getComponentRect
+   39:  get_loc8 5: this
+   41:  get_field $refs
+   46:  get_field browserCanvas
+   51:  call_method 1
+   54:  dup
+   55:  put_loc_check 0: t
+   58:  drop
+   59:  get_loc_check 0: t
+   62:  dup
+   63:  if_false8 113
+   65:  drop
+   66:  get_loc_check 0: t
+   69:  get_field then
+   74:  dup
+   75:  if_false8 113
+   77:  drop
+   78:  get_var Promise
+   83:  get_field2 race
+   88:  get_loc_check 0: t
+   91:  get_var Promise
+   96:  dup
+   97:  fclosure8 0: [bytecode <null>]
+   99:  call_constructor 1
+  102:  array_from 2
+  105:  call_method 1
+  108:  await
+  109:  dup
+  110:  put_loc_check 0: t
+  113:  drop
+  114:  drop
+  115:  goto8 143
+  117:  put_loc1 1: t
+  118:  catch 142
+  123:  get_var_ref_check 0: i
+  126:  push_atom_value browser
+  131:  push_atom_value getComponentRect
+  136:  get_loc1 1: t
+  137:  call3 3
+  138:  drop
+  139:  drop
+  140:  goto8 143
+  142:  throw
+  143:  get_loc_check 0: t
+  146:  dup
+  147:  if_false8 165
+  149:  drop
+  150:  get_loc_check 0: t
+  153:  get_field size
+  158:  dup
+  159:  if_true8 165
+  161:  drop
+  162:  get_loc_check 0: t
+  165:  put_loc2 2: e
+  166:  get_var Math
+  171:  get_field2 round
+  176:  get_var Number
+  181:  get_loc_check 2: e
+  184:  dup
+  185:  if_false8 196
+  187:  drop
+  188:  get_loc_check 2: e
+  191:  get_field width
+  196:  call1 1
+  197:  call_method 1
+  200:  put_loc3 3: s
+  201:  get_var Math
+  206:  get_field2 round
+  211:  get_var Number
+  216:  get_loc_check 2: e
+  219:  dup
+  220:  if_false8 231
+  222:  drop
+  223:  get_loc_check 2: e
+  226:  get_field height
+  231:  call1 1
+  232:  call_method 1
+  235:  put_loc8 4: a
+  237:  get_loc_check 3: s
+  240:  push_0 0
+  241:  gt
+  242:  if_false8 270
+  244:  get_loc_check 4: a
+  247:  push_0 0
+  248:  gt
+  249:  if_false8 270
+  251:  object
+  252:  get_loc_check 3: s
+  255:  define_field width
+  260:  get_loc_check 4: a
+  263:  define_field height
+  268:  goto8 272
+  270:  get_var_ref1 1: p
+  271:  call0 0
+  272:  return_async
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 3
+  opcodes:
+    0:  get_var setTimeout
+    5:  fclosure8 0: [bytecode <null>]
+    7:  push_i16 300
+   10:  tail_call 2
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t local:arg0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  null
+    2:  tail_call 1
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+    1: catch t [level:4 next:0]
+    2: var this
+  closure vars:
+    0: n parent:loc6 let
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  set_loc_uninitialized 0: t
+    5:  get_loc2 2: this
+    6:  get_field2 cancelHideShutdown
+   11:  call_method 0
+   14:  drop
+   15:  get_loc2 2: this
+   16:  push_0 0
+   17:  lnot
+   18:  put_field shuttingDown
+   23:  get_loc2 2: this
+   24:  get_field2 initToken
+   29:  push_1 1
+   30:  add
+   31:  put_field initToken
+   36:  get_loc2 2: this
+   37:  push_1 1
+   38:  lnot
+   39:  put_field initializing
+   44:  get_loc2 2: this
+   45:  get_field2 cancelScrollTimers
+   50:  call_method 0
+   53:  drop
+   54:  get_loc2 2: this
+   55:  get_field2 clearScrollProbeTimer
+   60:  call_method 0
+   63:  drop
+   64:  get_loc2 2: this
+   65:  get_field2 cancelFling
+   70:  call_method 0
+   73:  drop
+   74:  get_loc2 2: this
+   75:  get_field2 cancelResumeRecovery
+   80:  call_method 0
+   83:  drop
+   84:  get_loc2 2: this
+   85:  get_field2 stopDrawPump
+   90:  call_method 0
+   93:  drop
+   94:  get_loc2 2: this
+   95:  get_field2 stopStatePoller
+  100:  call_method 0
+  103:  drop
+  104:  get_var_ref_check 0: n
+  107:  put_loc0 0: t
+  108:  get_loc_check 0: t
+  111:  lnot
+  112:  if_false8 153
+  114:  get_loc2 2: this
+  115:  push_1 1
+  116:  lnot
+  117:  put_field initialized
+  122:  get_loc2 2: this
+  123:  null
+  124:  put_field canvasContext
+  129:  get_loc2 2: this
+  130:  null
+  131:  put_field imageData
+  136:  get_loc2 2: this
+  137:  push_1 1
+  138:  lnot
+  139:  put_field needsSurfaceRebind
+  144:  get_loc2 2: this
+  145:  push_1 1
+  146:  lnot
+  147:  put_field surfaceRebinding
+  152:  return_undef
+  153:  get_loc2 2: this
+  154:  get_field drawHandler
+  159:  dup
+  160:  if_false8 223
+  162:  drop
+  163:  get_loc_check 0: t
+  166:  get_field onDrawFrame
+  171:  dup
+  172:  if_false8 223
+  174:  drop
+  175:  get_loc_check 0: t
+  178:  get_field onDrawFrame
+  183:  get_field off
+  188:  dup
+  189:  if_false8 223
+  191:  drop
+  192:  get_loc_check 0: t
+  195:  get_field onDrawFrame
+  200:  get_field2 off
+  205:  get_loc2 2: this
+  206:  get_field drawHandler
+  211:  call_method 1
+  214:  drop
+  215:  get_loc2 2: this
+  216:  null
+  217:  insert2
+  218:  put_field drawHandler
+  223:  drop
+  224:  get_loc2 2: this
+  225:  get_field stateHandler
+  230:  dup
+  231:  if_false8 294
+  233:  drop
+  234:  get_loc_check 0: t
+  237:  get_field onStateChanged
+  242:  dup
+  243:  if_false8 294
+  245:  drop
+  246:  get_loc_check 0: t
+  249:  get_field onStateChanged
+  254:  get_field off
+  259:  dup
+  260:  if_false8 294
+  262:  drop
+  263:  get_loc_check 0: t
+  266:  get_field onStateChanged
+  271:  get_field2 off
+  276:  get_loc2 2: this
+  277:  get_field stateHandler
+  282:  call_method 1
+  285:  drop
+  286:  get_loc2 2: this
+  287:  null
+  288:  insert2
+  289:  put_field stateHandler
+  294:  drop
+  295:  get_loc2 2: this
+  296:  get_field errorHandler
+  301:  dup
+  302:  if_false8 365
+  304:  drop
+  305:  get_loc_check 0: t
+  308:  get_field onError
+  313:  dup
+  314:  if_false8 365
+  316:  drop
+  317:  get_loc_check 0: t
+  320:  get_field onError
+  325:  get_field off
+  330:  dup
+  331:  if_false8 365
+  333:  drop
+  334:  get_loc_check 0: t
+  337:  get_field onError
+  342:  get_field2 off
+  347:  get_loc2 2: this
+  348:  get_field errorHandler
+  353:  call_method 1
+  356:  drop
+  357:  get_loc2 2: this
+  358:  null
+  359:  insert2
+  360:  put_field errorHandler
+  365:  drop
+  366:  catch 421
+  371:  get_loc_check 0: t
+  374:  get_field shutdown
+  379:  if_false8 394
+  381:  get_loc_check 0: t
+  384:  get_field2 shutdown
+  389:  call_method 0
+  392:  goto8 417
+  394:  get_loc_check 0: t
+  397:  get_field stop
+  402:  dup
+  403:  if_false8 417
+  405:  drop
+  406:  get_loc_check 0: t
+  409:  get_field2 stop
+  414:  call_method 0
+  417:  drop
+  418:  drop
+  419:  goto8 431
+  421:  put_loc1 1: t
+  422:  catch 430
+  427:  drop
+  428:  goto8 431
+  430:  throw
+  431:  get_loc2 2: this
+  432:  push_1 1
+  433:  lnot
+  434:  put_field initialized
+  439:  get_loc2 2: this
+  440:  null
+  441:  put_field canvasContext
+  446:  get_loc2 2: this
+  447:  null
+  448:  put_field imageData
+  453:  get_loc2 2: this
+  454:  push_1 1
+  455:  lnot
+  456:  put_field needsSurfaceRebind
+  461:  get_loc2 2: this
+  462:  push_1 1
+  463:  lnot
+  464:  put_field surfaceRebinding
+  469:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: let e [level:1 next:-1]
+    1: const t [level:4 next:0]
+    2: catch t [level:5 next:0]
+    3: var this
+  closure vars:
+    0: n parent:loc6 let
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  set_loc_uninitialized 0: e
+    5:  get_loc3 3: this
+    6:  get_field canvasContext
+   11:  lnot
+   12:  dup
+   13:  if_true8 23
+   15:  drop
+   16:  get_loc3 3: this
+   17:  get_field imageData
+   22:  lnot
+   23:  if_false8 26
+   25:  return_undef
+   26:  get_loc3 3: this
+   27:  get_field lastDrawFrame
+   32:  push_1 1
+   33:  add
+   34:  put_loc0 0: e
+   35:  get_var_ref_check 0: n
+   38:  get_field getFrameCounter
+   43:  if_false8 133
+   45:  catch 110
+   50:  set_loc_uninitialized 1: t
+   53:  get_var Number
+   58:  get_var_ref_check 0: n
+   61:  get_field2 getFrameCounter
+   66:  call_method 0
+   69:  call1 1
+   70:  put_loc1 1: t
+   71:  get_var Number
+   76:  get_field2 isFinite
+   81:  get_loc_check 1: t
+   84:  call_method 1
+   87:  if_false8 94
+   89:  get_loc_check 1: t
+   92:  goto8 102
+   94:  get_loc3 3: this
+   95:  get_field lastDrawFrame
+  100:  push_1 1
+  101:  add
+  102:  dup
+  103:  put_loc_check 0: e
+  106:  drop
+  107:  drop
+  108:  goto8 133
+  110:  put_loc2 2: t
+  111:  catch 132
+  116:  get_loc3 3: this
+  117:  get_field lastDrawFrame
+  122:  push_1 1
+  123:  add
+  124:  dup
+  125:  put_loc_check 0: e
+  128:  drop
+  129:  drop
+  130:  goto8 133
+  132:  throw
+  133:  get_arg0 0: t
+  134:  dup
+  135:  if_true8 148
+  137:  drop
+  138:  get_loc_check 0: e
+  141:  get_loc3 3: this
+  142:  get_field lastDrawFrame
+  147:  strict_neq
+  148:  dup
+  149:  if_false8 202
+  151:  drop
+  152:  get_loc3 3: this
+  153:  get_loc_check 0: e
+  156:  put_field lastDrawFrame
+  161:  get_loc3 3: this
+  162:  get_var Date
+  167:  get_field2 now
+  172:  call_method 0
+  175:  put_field lastStaticForceDrawAt
+  180:  get_loc3 3: this
+  181:  get_field canvasContext
+  186:  get_field2 putImageData
+  191:  get_loc3 3: this
+  192:  get_field imageData
+  197:  push_0 0
+  198:  push_0 0
+  199:  call_method 3
+  202:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  set_loc_uninitialized 0: t
+    5:  get_loc1 1: this
+    6:  get_field canvasContext
+   11:  lnot
+   12:  dup
+   13:  if_true8 23
+   15:  drop
+   16:  get_loc1 1: this
+   17:  get_field imageData
+   22:  lnot
+   23:  if_false8 26
+   25:  return_undef
+   26:  get_var Date
+   31:  get_field2 now
+   36:  call_method 0
+   39:  put_loc0 0: t
+   40:  get_loc_check 0: t
+   43:  get_loc1 1: this
+   44:  get_field lastEventDrawAt
+   49:  sub
+   50:  push_i8 8
+   52:  lt
+   53:  dup
+   54:  if_true8 89
+   56:  drop
+   57:  get_loc1 1: this
+   58:  get_loc_check 0: t
+   61:  put_field lastEventDrawAt
+   66:  get_loc1 1: this
+   67:  get_field2 drawFrameIfNeeded
+   72:  get_loc_check 0: t
+   75:  get_loc1 1: this
+   76:  get_field lastStaticForceDrawAt
+   81:  sub
+   82:  push_i16 500
+   85:  gte
+   86:  call_method 1
+   89:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  set_loc_uninitialized 0: t
+    5:  get_loc1 1: this
+    6:  get_field drawTimer
+   11:  dup
+   12:  if_true8 22
+   14:  drop
+   15:  get_loc1 1: this
+   16:  get_field drawHandler
+   21:  lnot
+   22:  if_false8 25
+   24:  return_undef
+   25:  get_loc1 1: this
+   26:  get_field $page
+   31:  if_false8 50
+   33:  get_loc1 1: this
+   34:  get_field $page
+   39:  get_field setInterval
+   44:  if_false8 50
+   46:  fclosure8 0: [bytecode <null>]
+   48:  goto8 52
+   50:  fclosure8 1: [bytecode <null>]
+   52:  put_loc0 0: t
+   53:  get_loc1 1: this
+   54:  get_loc_check 0: t
+   57:  fclosure8 2: [bytecode <null>]
+   59:  push_i8 16
+   61:  call2 2
+   62:  put_field drawTimer
+   67:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t e
+  closure vars:
+    0: this local:loc1 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  get_field $page
+    6:  get_field2 setInterval
+   11:  get_arg0 0: t
+   12:  get_arg1 1: e
+   13:  tail_call_method 2
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t e
+  stack_size: 3
+  opcodes:
+    0:  get_var setInterval
+    5:  get_arg0 0: t
+    6:  get_arg1 1: e
+    7:  tail_call 2
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: this local:loc1 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  get_field initialized
+    6:  dup
+    7:  if_false8 29
+    9:  drop
+   10:  get_var_ref0 0: this
+   11:  get_field drawHandler
+   16:  dup
+   17:  if_false8 29
+   19:  drop
+   20:  get_var_ref0 0: this
+   21:  get_field2 drawHandler
+   26:  call_method 0
+   29:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+    1: var this
+  closure vars:
+    0: n parent:loc6 let
+    1: i parent:loc2 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  set_loc_uninitialized 0: t
+    5:  get_loc1 1: this
+    6:  get_field statePollTimer
+   11:  if_false8 14
+   13:  return_undef
+   14:  get_loc1 1: this
+   15:  get_field $page
+   20:  if_false8 39
+   22:  get_loc1 1: this
+   23:  get_field $page
+   28:  get_field setInterval
+   33:  if_false8 39
+   35:  fclosure8 0: [bytecode <null>]
+   37:  goto8 41
+   39:  fclosure8 1: [bytecode <null>]
+   41:  put_loc0 0: t
+   42:  get_loc1 1: this
+   43:  get_loc_check 0: t
+   46:  fclosure8 2: [bytecode <null>]
+   48:  push_i16 500
+   51:  call2 2
+   52:  put_field statePollTimer
+   57:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t e
+  closure vars:
+    0: this local:loc1 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  get_field $page
+    6:  get_field2 setInterval
+   11:  get_arg0 0: t
+   12:  get_arg1 1: e
+   13:  tail_call_method 2
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t e
+  stack_size: 3
+  opcodes:
+    0:  get_var setInterval
+    5:  get_arg0 0: t
+    6:  get_arg1 1: e
+    7:  tail_call 2
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:4 next:-1]
+  closure vars:
+    0: this local:loc1 var
+    1: n parent:loc0 let
+    2: i parent:loc1 const
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  get_field initialized
+    6:  if_false8 71
+    8:  get_var_ref_check 1: n
+   11:  get_field getState
+   16:  if_false8 71
+   18:  catch 46
+   23:  get_var_ref0 0: this
+   24:  get_field2 handleNativeState
+   29:  get_var_ref_check 1: n
+   32:  get_field2 getState
+   37:  call_method 0
+   40:  call_method 1
+   43:  drop
+   44:  drop
+   45:  return_undef
+   46:  put_loc0 0: t
+   47:  catch 70
+   52:  get_var_ref_check 2: i
+   55:  push_atom_value browser
+   60:  push_atom_value "state poll"
+   65:  get_loc0 0: t
+   66:  call3 3
+   67:  drop
+   68:  drop
+   69:  return_undef
+   70:  throw
+   71:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field statePollTimer
+    8:  dup
+    9:  if_false8 76
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field $page
+   18:  if_false8 55
+   20:  get_loc0 0: this
+   21:  get_field $page
+   26:  get_field clearInterval
+   31:  if_false8 55
+   33:  get_loc0 0: this
+   34:  get_field $page
+   39:  get_field2 clearInterval
+   44:  get_loc0 0: this
+   45:  get_field statePollTimer
+   50:  call_method 1
+   53:  goto8 67
+   55:  get_var clearInterval
+   60:  get_loc0 0: this
+   61:  get_field statePollTimer
+   66:  call1 1
+   67:  drop
+   68:  get_loc0 0: this
+   69:  null
+   70:  insert2
+   71:  put_field statePollTimer
+   76:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field drawTimer
+    8:  dup
+    9:  if_false8 76
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field $page
+   18:  if_false8 55
+   20:  get_loc0 0: this
+   21:  get_field $page
+   26:  get_field clearInterval
+   31:  if_false8 55
+   33:  get_loc0 0: this
+   34:  get_field $page
+   39:  get_field2 clearInterval
+   44:  get_loc0 0: this
+   45:  get_field drawTimer
+   50:  call_method 1
+   53:  goto8 67
+   55:  get_var clearInterval
+   60:  get_loc0 0: this
+   61:  get_field drawTimer
+   66:  call1 1
+   67:  drop
+   68:  get_loc0 0: this
+   69:  null
+   70:  insert2
+   71:  put_field drawTimer
+   76:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:7 next:-1]
+    1: var this
+  closure vars:
+    0: n parent:loc6 let
+    1: i parent:loc2 const
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field2 ensureBrowserPlayer
+    8:  push_1 1
+    9:  lnot
+   10:  call_method 1
+   13:  if_false 143
+   18:  get_loc1 1: this
+   19:  get_field initialized
+   24:  if_false8 143
+   26:  get_loc1 1: this
+   27:  get_field2 startDrawPump
+   32:  call_method 0
+   35:  drop
+   36:  get_loc1 1: this
+   37:  get_field2 startStatePoller
+   42:  call_method 0
+   45:  drop
+   46:  catch 118
+   51:  get_var_ref_check 0: n
+   54:  get_field isRunning
+   59:  lnot
+   60:  dup
+   61:  if_true8 76
+   63:  drop
+   64:  get_var_ref_check 0: n
+   67:  get_field2 isRunning
+   72:  call_method 0
+   75:  lnot
+   76:  if_false8 116
+   78:  get_var_ref_check 0: n
+   81:  get_field2 start
+   86:  call_method 0
+   89:  dup
+   90:  if_false8 115
+   92:  drop
+   93:  get_loc1 1: this
+   94:  push_atom_value Running
+   99:  put_field statusText
+  104:  get_loc1 1: this
+  105:  get_field2 drawFrameIfNeeded
+  110:  push_0 0
+  111:  lnot
+  112:  call_method 1
+  115:  drop
+  116:  drop
+  117:  return_undef
+  118:  put_loc0 0: t
+  119:  catch 142
+  124:  get_var_ref_check 1: i
+  127:  push_atom_value browser
+  132:  push_atom_value resume
+  137:  get_loc0 0: t
+  138:  call3 3
+  139:  drop
+  140:  drop
+  141:  return_undef
+  142:  throw
+  143:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  set_loc_uninitialized 0: t
+    5:  get_loc1 1: this
+    6:  get_field2 readLaunchRequest
+   11:  call_method 0
+   14:  put_loc0 0: t
+   15:  get_loc1 1: this
+   16:  get_field2 cancelHideShutdown
+   21:  call_method 0
+   24:  drop
+   25:  get_loc1 1: this
+   26:  push_1 1
+   27:  lnot
+   28:  put_field shuttingDown
+   33:  get_loc1 1: this
+   34:  get_field2 applyFreshLaunchRequest
+   39:  get_loc_check 0: t
+   42:  push_atom_value cold
+   47:  call_method 2
+   50:  dup
+   51:  if_true8 109
+   53:  drop
+   54:  get_loc1 1: this
+   55:  get_field pendingOverlayRecovery
+   60:  if_false8 72
+   62:  get_loc1 1: this
+   63:  get_field2 finishPendingOverlayRecovery
+   68:  call_method 0
+   71:  return_undef
+   72:  get_loc1 1: this
+   73:  get_field initialized
+   78:  if_false8 100
+   80:  get_loc1 1: this
+   81:  get_field2 ensureBrowserRunning
+   86:  call_method 0
+   89:  drop
+   90:  get_loc1 1: this
+   91:  get_field2 scheduleResumeRecovery
+   96:  call_method 0
+   99:  return_undef
+  100:  get_loc1 1: this
+  101:  get_field2 startBrowserInit
+  106:  call_method 0
+  109:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:1 next:-1]
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  set_loc_uninitialized 0: e
+    5:  get_loc1 1: this
+    6:  get_arg0 0: t
+    7:  dup
+    8:  if_true8 12
+   10:  drop
+   11:  null
+   12:  put_field latestLaunchOptions
+   17:  get_loc1 1: this
+   18:  get_field2 readLaunchRequest
+   23:  call_method 0
+   26:  put_loc0 0: e
+   27:  get_loc1 1: this
+   28:  get_field2 applyFreshLaunchRequest
+   33:  get_loc_check 0: e
+   36:  push_atom_value newopt
+   41:  call_method 2
+   44:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field initialized
+    8:  dup
+    9:  if_false8 79
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field2 cancelScrollTimers
+   18:  call_method 0
+   21:  drop
+   22:  get_loc0 0: this
+   23:  get_field2 clearScrollProbeTimer
+   28:  call_method 0
+   31:  drop
+   32:  get_loc0 0: this
+   33:  get_field2 cancelFling
+   38:  call_method 0
+   41:  drop
+   42:  get_loc0 0: this
+   43:  get_field2 cancelResumeRecovery
+   48:  call_method 0
+   51:  drop
+   52:  get_loc0 0: this
+   53:  push_0 0
+   54:  lnot
+   55:  put_field needsSurfaceRebind
+   60:  get_loc0 0: this
+   61:  get_field suppressHideShutdown
+   66:  dup
+   67:  if_true8 79
+   69:  drop
+   70:  get_loc0 0: this
+   71:  get_field2 scheduleHideShutdown
+   76:  call_method 0
+   79:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:3 next:-1]
+    1: var this
+  closure vars:
+    0: n parent:loc6 let
+    1: i parent:loc2 const
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  push_0 0
+    4:  lnot
+    5:  put_field shuttingDown
+   10:  get_loc1 1: this
+   11:  get_field2 releaseBrowser
+   16:  call_method 0
+   19:  drop
+   20:  catch 58
+   25:  get_var_ref_check 0: n
+   28:  dup
+   29:  if_false8 55
+   31:  drop
+   32:  get_var_ref_check 0: n
+   35:  get_field terminateChildren
+   40:  dup
+   41:  if_false8 55
+   43:  drop
+   44:  get_var_ref_check 0: n
+   47:  get_field2 terminateChildren
+   52:  call_method 0
+   55:  drop
+   56:  drop
+   57:  return_undef
+   58:  put_loc0 0: t
+   59:  catch 82
+   64:  get_var_ref_check 1: i
+   67:  push_atom_value browser
+   72:  push_atom_value terminateChildren
+   77:  get_loc0 0: t
+   78:  call3 3
+   79:  drop
+   80:  drop
+   81:  return_undef
+   82:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: n parent:loc6 let
+    1: i parent:loc2 const
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 cancelHideShutdown
+    8:  call_method 0
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_loc0 0: this
+   14:  get_field2 scheduleTimeout
+   19:  fclosure8 0: [bytecode <null>]
+   21:  push_i16 1200
+   24:  call_method 2
+   27:  put_field hideShutdownTimer
+   32:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:5 next:-1]
+  closure vars:
+    0: this local:loc0 var
+    1: n parent:loc0 let
+    2: i parent:loc1 const
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  null
+    2:  put_field hideShutdownTimer
+    7:  get_var_ref0 0: this
+    8:  get_field initialized
+   13:  dup
+   14:  if_true8 23
+   16:  drop
+   17:  get_var_ref0 0: this
+   18:  get_field initializing
+   23:  if_false8 106
+   25:  get_var_ref0 0: this
+   26:  push_0 0
+   27:  lnot
+   28:  put_field shuttingDown
+   33:  get_var_ref0 0: this
+   34:  get_field2 releaseBrowser
+   39:  call_method 0
+   42:  drop
+   43:  catch 81
+   48:  get_var_ref_check 1: n
+   51:  dup
+   52:  if_false8 78
+   54:  drop
+   55:  get_var_ref_check 1: n
+   58:  get_field terminateChildren
+   63:  dup
+   64:  if_false8 78
+   66:  drop
+   67:  get_var_ref_check 1: n
+   70:  get_field2 terminateChildren
+   75:  call_method 0
+   78:  drop
+   79:  drop
+   80:  return_undef
+   81:  put_loc0 0: t
+   82:  catch 105
+   87:  get_var_ref_check 2: i
+   90:  push_atom_value browser
+   95:  push_atom_value "hideShutdown terminateChildren"
+  100:  get_loc0 0: t
+  101:  call3 3
+  102:  drop
+  103:  drop
+  104:  return_undef
+  105:  throw
+  106:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field hideShutdownTimer
+    8:  dup
+    9:  if_false8 36
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field2 clearScheduledTimeout
+   18:  get_loc0 0: this
+   19:  get_field hideShutdownTimer
+   24:  call_method 1
+   27:  drop
+   28:  get_loc0 0: this
+   29:  null
+   30:  insert2
+   31:  put_field hideShutdownTimer
+   36:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 cancelHideShutdown
+    8:  call_method 0
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field initialized
+   18:  if_false8 40
+   20:  get_loc0 0: this
+   21:  get_field2 ensureBrowserRunning
+   26:  call_method 0
+   29:  drop
+   30:  get_loc0 0: this
+   31:  get_field2 scheduleResumeRecovery
+   36:  call_method 0
+   39:  return_undef
+   40:  get_loc0 0: this
+   41:  get_field2 startBrowserInit
+   46:  push_0 0
+   47:  lnot
+   48:  call_method 1
+   51:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  set_loc_uninitialized 0: t
+    5:  get_loc1 1: this
+    6:  get_field pendingOverlayAction
+   11:  put_loc0 0: t
+   12:  get_loc1 1: this
+   13:  push_1 1
+   14:  lnot
+   15:  put_field pendingOverlayRecovery
+   20:  get_loc1 1: this
+   21:  null
+   22:  put_field pendingOverlayAction
+   27:  get_loc1 1: this
+   28:  get_field2 recoverAfterExternalOverlay
+   33:  call_method 0
+   36:  drop
+   37:  get_loc_check 0: t
+   40:  dup
+   41:  if_false8 56
+   43:  drop
+   44:  get_loc1 1: this
+   45:  get_field2 applyPendingOverlayAction
+   50:  get_loc_check 0: t
+   53:  call_method 1
+   56:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: const e [level:6 next:-1]
+    1: catch i [level:7 next:-1]
+    2: var this
+  closure vars:
+    0: n parent:loc6 let
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_arg1 1: e
+    3:  is_undefined
+    4:  if_false8 8
+    6:  push_0 0
+    7:  put_arg1 1: e
+    8:  get_arg0 0: t
+    9:  lnot
+   10:  if_false8 13
+   12:  return_undef
+   13:  get_var_ref_check 0: n
+   16:  lnot
+   17:  lnot
+   18:  if_false 300
+   23:  get_loc2 2: this
+   24:  get_field initialized
+   29:  lnot
+   30:  lnot
+   31:  if_false 300
+   36:  catch 193
+   41:  get_loc2 2: this
+   42:  get_field2 ensureBrowserRunning
+   47:  call_method 0
+   50:  drop
+   51:  push_atom_value loadUrl
+   56:  get_arg0 0: t
+   57:  get_field type
+   62:  strict_eq
+   63:  if_false8 144
+   65:  set_loc_uninitialized 0: e
+   68:  get_arg0 0: t
+   69:  get_field value
+   74:  put_loc0 0: e
+   75:  get_loc2 2: this
+   76:  get_loc_check 0: e
+   79:  put_field url
+   84:  get_loc2 2: this
+   85:  get_loc_check 0: e
+   88:  put_field nativeUrl
+   93:  get_loc2 2: this
+   94:  push_atom_value native
+   99:  put_field scrollMode
+  104:  get_var_ref_check 0: n
+  107:  get_field2 loadUrl
+  112:  get_loc_check 0: e
+  115:  call_method 1
+  118:  drop
+  119:  get_loc2 2: this
+  120:  push_atom_value "Loading "
+  125:  get_field2 concat
+  130:  get_loc_check 0: e
+  133:  call_method 1
+  136:  put_field statusText
+  141:  undefined
+  142:  nip
+  143:  return
+  144:  push_atom_value insertText
+  149:  get_arg0 0: t
+  150:  get_field type
+  155:  strict_eq
+  156:  dup
+  157:  if_false8 190
+  159:  drop
+  160:  get_var_ref_check 0: n
+  163:  get_field2 insertText
+  168:  get_arg0 0: t
+  169:  get_field value
+  174:  call_method 1
+  177:  drop
+  178:  get_loc2 2: this
+  179:  push_atom_value "Text inserted"
+  184:  insert2
+  185:  put_field statusText
+  190:  drop
+  191:  drop
+  192:  return_undef
+  193:  put_loc1 1: i
+  194:  catch 299
+  199:  get_arg1 1: e
+  200:  push_i8 8
+  202:  lt
+  203:  if_false8 222
+  205:  get_loc2 2: this
+  206:  get_field2 scheduleTimeout
+  211:  fclosure8 0: [bytecode <null>]
+  213:  push_i8 120
+  215:  call_method 2
+  218:  drop
+  219:  undefined
+  220:  nip
+  221:  return
+  222:  push_atom_value loadUrl
+  227:  get_arg0 0: t
+  228:  get_field type
+  233:  strict_eq
+  234:  if_false8 259
+  236:  get_loc2 2: this
+  237:  push_atom_value "Load failed: "
+  242:  get_field2 concat
+  247:  get_loc1 1: i
+  248:  call_method 1
+  251:  insert2
+  252:  put_field statusText
+  257:  goto8 296
+  259:  push_atom_value insertText
+  264:  get_arg0 0: t
+  265:  get_field type
+  270:  strict_eq
+  271:  dup
+  272:  if_false8 296
+  274:  drop
+  275:  get_loc2 2: this
+  276:  push_atom_value "Text failed: "
+  281:  get_field2 concat
+  286:  get_loc1 1: i
+  287:  call_method 1
+  290:  insert2
+  291:  put_field statusText
+  296:  drop
+  297:  drop
+  298:  return_undef
+  299:  throw
+  300:  get_arg1 1: e
+  301:  push_i8 8
+  303:  gte
+  304:  if_false8 307
+  306:  return_undef
+  307:  get_loc2 2: this
+  308:  get_field2 scheduleTimeout
+  313:  fclosure8 1: [bytecode <null>]
+  315:  push_i8 120
+  317:  call_method 2
+  320:  drop
+  321:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: this local:loc2 var
+    1: t local:arg0 var
+    2: e local:arg1 var
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  get_field2 applyPendingOverlayAction
+    6:  get_var_ref1 1: t
+    7:  get_var_ref2 2: e
+    8:  push_1 1
+    9:  add
+   10:  tail_call_method 2
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: this local:loc2 var
+    1: t local:arg0 var
+    2: e local:arg1 var
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  get_field2 applyPendingOverlayAction
+    6:  get_var_ref1 1: t
+    7:  get_var_ref2 2: e
+    8:  push_1 1
+    9:  add
+   10:  tail_call_method 2
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+    1: let i [level:1 next:0]
+    2: const s [level:1 next:1]
+    3: const a [level:1 next:2]
+    4: var this
+  closure vars:
+    0: e parent:loc1 const
+    1: u parent:loc11 var
+    2: o parent:loc9 var
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc8 4: this
+    3:  set_loc_uninitialized 3: a
+    6:  set_loc_uninitialized 2: s
+    9:  set_loc_uninitialized 1: i
+   12:  set_loc_uninitialized 0: t
+   15:  get_loc8 4: this
+   17:  get_field2 ensureBrowserPlayer
+   22:  call_method 0
+   25:  lnot
+   26:  if_false8 30
+   28:  undefined
+   29:  return_async
+   30:  get_loc8 4: this
+   32:  get_field2 ensureBrowserRunning
+   37:  call_method 0
+   40:  drop
+   41:  get_loc8 4: this
+   43:  get_field nativeUrl
+   48:  dup
+   49:  if_true8 59
+   51:  drop
+   52:  get_loc8 4: this
+   54:  get_field url
+   59:  put_loc0 0: t
+   60:  get_loc8 4: this
+   62:  push_0 0
+   63:  lnot
+   64:  put_field suppressHideShutdown
+   69:  get_loc8 4: this
+   71:  get_field2 cancelHideShutdown
+   76:  call_method 0
+   79:  drop
+   80:  get_loc8 4: this
+   82:  push_0 0
+   83:  lnot
+   84:  put_field pendingOverlayRecovery
+   89:  get_loc8 4: this
+   91:  null
+   92:  put_field pendingOverlayAction
+   97:  null
+   98:  put_loc1 1: i
+   99:  catch 174
+  104:  get_var_ref_check 0: e
+  107:  push_atom_value "about:blank"
+  112:  get_loc_check 0: t
+  115:  strict_eq
+  116:  dup
+  117:  if_true8 147
+  119:  drop
+  120:  push_0 0
+  121:  push_empty_string
+  122:  get_field2 concat
+  127:  get_loc_check 0: t
+  130:  call_method 1
+  133:  get_field2 indexOf
+  138:  push_atom_value "data:text/html"
+  143:  call_method 1
+  146:  strict_eq
+  147:  if_false8 152
+  149:  push_empty_string
+  150:  goto8 157
+  152:  get_var_ref1 1: u
+  153:  get_loc_check 0: t
+  156:  call1 1
+  157:  call1 1
+  158:  await
+  159:  dup
+  160:  put_loc_check 1: i
+  163:  drop
+  164:  drop
+  165:  undefined
+  166:  gosub 180
+  171:  drop
+  172:  goto8 190
+  174:  gosub 180
+  179:  throw
+  180:  get_loc8 4: this
+  182:  push_1 1
+  183:  lnot
+  184:  put_field suppressHideShutdown
+  189:  ret
+  190:  null
+  191:  get_loc_check 1: i
+  194:  eq
+  195:  if_false8 228
+  197:  get_loc8 4: this
+  199:  push_atom_value "Keyboard cancelled"
+  204:  put_field statusText
+  209:  get_loc8 4: this
+  211:  null
+  212:  put_field pendingOverlayAction
+  217:  get_loc8 4: this
+  219:  push_1 1
+  220:  lnot
+  221:  put_field pendingOverlayRecovery
+  226:  undefined
+  227:  return_async
+  228:  get_var_ref2 2: o
+  229:  get_loc_check 1: i
+  232:  call1 1
+  233:  put_loc2 2: s
+  234:  get_loc_check 2: s
+  237:  get_loc8 4: this
+  239:  get_field url
+  244:  strict_eq
+  245:  if_false8 266
+  247:  get_loc8 4: this
+  249:  null
+  250:  put_field pendingOverlayAction
+  255:  get_loc8 4: this
+  257:  push_1 1
+  258:  lnot
+  259:  put_field pendingOverlayRecovery
+  264:  undefined
+  265:  return_async
+  266:  object
+  267:  push_atom_value loadUrl
+  272:  define_field type
+  277:  get_loc_check 2: s
+  280:  define_field value
+  285:  put_loc3 3: a
+  286:  get_loc8 4: this
+  288:  get_field2 applyPendingOverlayAction
+  293:  get_loc_check 3: a
+  296:  call_method 1
+  299:  drop
+  300:  get_loc8 4: this
+  302:  null
+  303:  put_field pendingOverlayAction
+  308:  undefined
+  309:  return_async
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:1 next:-1]
+    1: var this
+  closure vars:
+    0: c parent:loc10 var
+    1: n parent:loc6 let
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  set_loc_uninitialized 0: e
+    5:  get_loc1 1: this
+    6:  get_field suppressNextClick
+   11:  if_false8 22
+   13:  get_loc1 1: this
+   14:  push_1 1
+   15:  lnot
+   16:  put_field suppressNextClick
+   21:  return_undef
+   22:  get_loc1 1: this
+   23:  get_field2 ensureBrowserRunning
+   28:  call_method 0
+   31:  drop
+   32:  get_var_ref0 0: c
+   33:  get_arg0 0: t
+   34:  get_loc1 1: this
+   35:  get_field frameWidth
+   40:  push_2 2
+   41:  div
+   42:  get_loc1 1: this
+   43:  get_field frameHeight
+   48:  push_2 2
+   49:  div
+   50:  call3 3
+   51:  put_loc0 0: e
+   52:  get_var_ref_check 1: n
+   55:  get_field2 dispatchClick
+   60:  get_loc_check 0: e
+   63:  get_field x
+   68:  get_loc_check 0: e
+   71:  get_field y
+   76:  call_method 2
+   79:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:1 next:-1]
+    1: var this
+  closure vars:
+    0: c parent:loc10 var
+  stack_size: 7
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  set_loc_uninitialized 0: e
+    5:  get_loc1 1: this
+    6:  get_field2 ensureBrowserRunning
+   11:  call_method 0
+   14:  drop
+   15:  get_loc1 1: this
+   16:  get_field2 flushPendingScroll
+   21:  call_method 0
+   24:  drop
+   25:  get_loc1 1: this
+   26:  get_field2 cancelFling
+   31:  call_method 0
+   34:  drop
+   35:  get_loc1 1: this
+   36:  get_field2 clampCanvasPoint
+   41:  get_var_ref0 0: c
+   42:  get_arg0 0: t
+   43:  get_loc1 1: this
+   44:  get_field frameWidth
+   49:  push_2 2
+   50:  div
+   51:  get_loc1 1: this
+   52:  get_field frameHeight
+   57:  push_2 2
+   58:  div
+   59:  call3 3
+   60:  call_method 1
+   63:  put_loc0 0: e
+   64:  get_loc1 1: this
+   65:  get_loc_check 0: e
+   68:  put_field touchStart
+   73:  get_loc1 1: this
+   74:  get_loc_check 0: e
+   77:  put_field lastTouch
+   82:  get_loc1 1: this
+   83:  push_1 1
+   84:  lnot
+   85:  put_field nativeTouchActive
+   90:  get_loc1 1: this
+   91:  object
+   92:  get_loc_check 0: e
+   95:  get_field x
+  100:  define_field x
+  105:  get_loc_check 0: e
+  108:  get_field y
+  113:  define_field y
+  118:  get_var Date
+  123:  get_field2 now
+  128:  call_method 0
+  131:  define_field t
+  136:  array_from 1
+  139:  put_field touchSamples
+  144:  get_loc1 1: this
+  145:  push_1 1
+  146:  lnot
+  147:  put_field draggingCanvas
+  152:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:1 next:-1]
+    1: const i [level:1 next:0]
+    2: const s [level:1 next:1]
+    3: const a [level:1 next:2]
+    4: const r [level:1 next:3]
+    5: const t [level:6 next:4]
+    6: var this
+  closure vars:
+    0: c parent:loc10 var
+    1: n parent:loc6 let
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc8 6: this
+    3:  set_loc_uninitialized 4: r
+    6:  set_loc_uninitialized 3: a
+    9:  set_loc_uninitialized 2: s
+   12:  set_loc_uninitialized 1: i
+   15:  set_loc_uninitialized 0: e
+   18:  get_loc8 6: this
+   20:  get_field lastTouch
+   25:  lnot
+   26:  if_false8 29
+   28:  return_undef
+   29:  get_loc8 6: this
+   31:  get_field2 clampCanvasPoint
+   36:  get_var_ref0 0: c
+   37:  get_arg0 0: t
+   38:  get_loc8 6: this
+   40:  get_field lastTouch
+   45:  get_field x
+   50:  get_loc8 6: this
+   52:  get_field lastTouch
+   57:  get_field y
+   62:  call3 3
+   63:  call_method 1
+   66:  put_loc0 0: e
+   67:  get_loc8 6: this
+   69:  get_field touchStart
+   74:  if_false8 112
+   76:  get_var Math
+   81:  get_field2 abs
+   86:  get_loc_check 0: e
+   89:  get_field y
+   94:  get_loc8 6: this
+   96:  get_field touchStart
+  101:  get_field y
+  106:  sub
+  107:  call_method 1
+  110:  goto8 113
+  112:  push_0 0
+  113:  put_loc1 1: i
+  114:  get_loc8 6: this
+  116:  get_field touchStart
+  121:  if_false8 159
+  123:  get_var Math
+  128:  get_field2 abs
+  133:  get_loc_check 0: e
+  136:  get_field x
+  141:  get_loc8 6: this
+  143:  get_field touchStart
+  148:  get_field x
+  153:  sub
+  154:  call_method 1
+  157:  goto8 160
+  159:  push_0 0
+  160:  put_loc2 2: s
+  161:  get_loc8 6: this
+  163:  get_field lastTouch
+  168:  get_field y
+  173:  get_loc_check 0: e
+  176:  get_field y
+  181:  sub
+  182:  put_loc3 3: a
+  183:  get_loc_check 1: i
+  186:  push_i8 8
+  188:  gt
+  189:  dup
+  190:  if_true8 199
+  192:  drop
+  193:  get_loc_check 2: s
+  196:  push_i8 8
+  198:  gt
+  199:  put_loc8 4: r
+  201:  get_loc_check 4: r
+  204:  if_false8 325
+  206:  get_loc8 6: this
+  208:  get_field2 hasNativeTouch
+  213:  call_method 0
+  216:  if_false8 325
+  218:  get_loc8 6: this
+  220:  get_field nativeTouchActive
+  225:  lnot
+  226:  if_false8 295
+  228:  set_loc_uninitialized 5: t
+  231:  get_loc8 6: this
+  233:  get_field touchStart
+  238:  dup
+  239:  if_true8 256
+  241:  drop
+  242:  get_loc8 6: this
+  244:  get_field lastTouch
+  249:  dup
+  250:  if_true8 256
+  252:  drop
+  253:  get_loc_check 0: e
+  256:  put_loc8 5: t
+  258:  get_var_ref_check 1: n
+  261:  get_field2 dispatchTouchStart
+  266:  get_loc_check 5: t
+  269:  get_field x
+  274:  get_loc_check 5: t
+  277:  get_field y
+  282:  call_method 2
+  285:  drop
+  286:  get_loc8 6: this
+  288:  push_0 0
+  289:  lnot
+  290:  put_field nativeTouchActive
+  295:  get_loc8 6: this
+  297:  get_field2 queueNativeTouchMove
+  302:  get_loc_check 0: e
+  305:  get_loc_check 1: i
+  308:  push_i8 8
+  310:  gt
+  311:  if_false8 318
+  313:  get_loc_check 3: a
+  316:  goto8 319
+  318:  push_0 0
+  319:  call_method 2
+  322:  drop
+  323:  goto8 383
+  325:  get_loc_check 4: r
+  328:  dup
+  329:  if_false8 382
+  331:  drop
+  332:  get_var Math
+  337:  get_field2 abs
+  342:  get_loc_check 3: a
+  345:  call_method 1
+  348:  push_2 2
+  349:  gte
+  350:  dup
+  351:  if_false8 382
+  353:  drop
+  354:  get_var_ref_check 1: n
+  357:  get_field dispatchScroll
+  362:  dup
+  363:  if_false8 382
+  365:  drop
+  366:  get_loc8 6: this
+  368:  get_field2 queueScroll
+  373:  get_loc_check 0: e
+  376:  get_loc_check 3: a
+  379:  call_method 2
+  382:  drop
+  383:  get_loc_check 4: r
+  386:  dup
+  387:  if_false8 409
+  389:  drop
+  390:  get_loc8 6: this
+  392:  push_0 0
+  393:  lnot
+  394:  put_field draggingCanvas
+  399:  get_loc8 6: this
+  401:  push_0 0
+  402:  lnot
+  403:  insert2
+  404:  put_field suppressNextClick
+  409:  drop
+  410:  get_loc8 6: this
+  412:  get_loc_check 0: e
+  415:  put_field lastTouch
+  420:  get_loc8 6: this
+  422:  get_field2 recordTouchSample
+  427:  get_loc_check 0: e
+  430:  call_method 1
+  433:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:1 next:-1]
+    1: var this
+  closure vars:
+    0: c parent:loc10 var
+    1: n parent:loc6 let
+  stack_size: 7
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  set_loc_uninitialized 0: e
+    5:  get_loc1 1: this
+    6:  get_field2 clampCanvasPoint
+   11:  get_var_ref0 0: c
+   12:  get_arg0 0: t
+   13:  get_loc1 1: this
+   14:  get_field frameWidth
+   19:  push_2 2
+   20:  div
+   21:  get_loc1 1: this
+   22:  get_field frameHeight
+   27:  push_2 2
+   28:  div
+   29:  call3 3
+   30:  call_method 1
+   33:  put_loc0 0: e
+   34:  get_loc1 1: this
+   35:  get_field2 flushPendingScroll
+   40:  call_method 0
+   43:  drop
+   44:  get_loc1 1: this
+   45:  get_field nativeTouchActive
+   50:  if_false8 127
+   52:  get_var_ref_check 1: n
+   55:  get_field2 dispatchTouchEnd
+   60:  get_loc_check 0: e
+   63:  get_field x
+   68:  get_loc_check 0: e
+   71:  get_field y
+   76:  call_method 2
+   79:  drop
+   80:  get_loc1 1: this
+   81:  get_field draggingCanvas
+   86:  if_false8 102
+   88:  get_loc1 1: this
+   89:  get_field2 startFling
+   94:  get_loc_check 0: e
+   97:  call_method 1
+  100:  goto8 114
+  102:  get_loc1 1: this
+  103:  get_field2 sendScrollEnd
+  108:  get_loc_check 0: e
+  111:  call_method 1
+  114:  drop
+  115:  get_loc1 1: this
+  116:  push_0 0
+  117:  lnot
+  118:  insert2
+  119:  put_field suppressNextClick
+  124:  goto16 255
+  127:  get_loc1 1: this
+  128:  get_field draggingCanvas
+  133:  if_false8 149
+  135:  get_loc1 1: this
+  136:  get_field2 startFling
+  141:  get_loc_check 0: e
+  144:  call_method 1
+  147:  goto8 255
+  149:  get_loc1 1: this
+  150:  get_field2 hasNativeTouch
+  155:  call_method 0
+  158:  dup
+  159:  if_false8 217
+  161:  drop
+  162:  get_var_ref_check 1: n
+  165:  get_field2 dispatchTouchStart
+  170:  get_loc_check 0: e
+  173:  get_field x
+  178:  get_loc_check 0: e
+  181:  get_field y
+  186:  call_method 2
+  189:  drop
+  190:  get_var_ref_check 1: n
+  193:  get_field2 dispatchTouchEnd
+  198:  get_loc_check 0: e
+  201:  get_field x
+  206:  get_loc_check 0: e
+  209:  get_field y
+  214:  call_method 2
+  217:  drop
+  218:  get_var_ref_check 1: n
+  221:  get_field2 dispatchClick
+  226:  get_loc_check 0: e
+  229:  get_field x
+  234:  get_loc_check 0: e
+  237:  get_field y
+  242:  call_method 2
+  245:  drop
+  246:  get_loc1 1: this
+  247:  push_0 0
+  248:  lnot
+  249:  insert2
+  250:  put_field suppressNextClick
+  255:  drop
+  256:  get_loc1 1: this
+  257:  null
+  258:  put_field touchStart
+  263:  get_loc1 1: this
+  264:  null
+  265:  put_field lastTouch
+  270:  get_loc1 1: this
+  271:  push_1 1
+  272:  lnot
+  273:  put_field nativeTouchActive
+  278:  get_loc1 1: this
+  279:  push_1 1
+  280:  lnot
+  281:  put_field draggingCanvas
+  286:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: n parent:loc6 let
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field nativeTouchActive
+    8:  dup
+    9:  if_false8 71
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field lastTouch
+   18:  dup
+   19:  if_false8 71
+   21:  drop
+   22:  get_var_ref_check 0: n
+   25:  get_field2 dispatchTouchEnd
+   30:  get_loc0 0: this
+   31:  get_field lastTouch
+   36:  get_field x
+   41:  get_loc0 0: this
+   42:  get_field lastTouch
+   47:  get_field y
+   52:  call_method 2
+   55:  drop
+   56:  get_loc0 0: this
+   57:  get_field2 sendScrollEnd
+   62:  get_loc0 0: this
+   63:  get_field lastTouch
+   68:  call_method 1
+   71:  drop
+   72:  get_loc0 0: this
+   73:  get_field2 cancelScrollTimers
+   78:  call_method 0
+   81:  drop
+   82:  get_loc0 0: this
+   83:  get_field2 cancelFling
+   88:  call_method 0
+   91:  drop
+   92:  get_loc0 0: this
+   93:  null
+   94:  put_field touchStart
+   99:  get_loc0 0: this
+  100:  null
+  101:  put_field lastTouch
+  106:  get_loc0 0: this
+  107:  push_1 1
+  108:  lnot
+  109:  put_field nativeTouchActive
+  114:  get_loc0 0: this
+  115:  push_1 1
+  116:  lnot
+  117:  put_field draggingCanvas
+  122:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 handleCanvasClick
+    8:  get_arg0 0: t
+    9:  call_method 1
+   12:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field $page
+    8:  if_false8 40
+   10:  get_loc0 0: this
+   11:  get_field $page
+   16:  get_field setTimeout
+   21:  if_false8 40
+   23:  get_loc0 0: this
+   24:  get_field $page
+   29:  get_field2 setTimeout
+   34:  get_arg0 0: t
+   35:  get_arg1 1: e
+   36:  call_method 2
+   39:  return
+   40:  get_var setTimeout
+   45:  get_arg0 0: t
+   46:  get_arg1 1: e
+   47:  call2 2
+   48:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_arg0 0: t
+    3:  dup
+    4:  if_false8 51
+    6:  drop
+    7:  get_loc0 0: this
+    8:  get_field $page
+   13:  if_false8 44
+   15:  get_loc0 0: this
+   16:  get_field $page
+   21:  get_field clearTimeout
+   26:  if_false8 44
+   28:  get_loc0 0: this
+   29:  get_field $page
+   34:  get_field2 clearTimeout
+   39:  get_arg0 0: t
+   40:  call_method 1
+   43:  return_undef
+   44:  get_var clearTimeout
+   49:  get_arg0 0: t
+   50:  call1 1
+   51:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: n parent:loc6 let
+  stack_size: 3
+  opcodes:
+    0:  get_var Boolean
+    5:  get_var_ref_check 0: n
+    8:  get_field dispatchTouchStart
+   13:  dup
+   14:  if_false8 37
+   16:  drop
+   17:  get_var_ref_check 0: n
+   20:  get_field dispatchTouchMove
+   25:  dup
+   26:  if_false8 37
+   28:  drop
+   29:  get_var_ref_check 0: n
+   32:  get_field dispatchTouchEnd
+   37:  tail_call 1
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:1 next:-1]
+    1: const i [level:1 next:0]
+    2: var this
+  stack_size: 12
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  set_loc_uninitialized 1: i
+    5:  set_loc_uninitialized 0: e
+    8:  get_var Math
+   13:  get_field2 max
+   18:  push_0 0
+   19:  get_loc2 2: this
+   20:  get_field frameWidth
+   25:  push_1 1
+   26:  sub
+   27:  call_method 2
+   30:  put_loc0 0: e
+   31:  get_var Math
+   36:  get_field2 max
+   41:  push_0 0
+   42:  get_loc2 2: this
+   43:  get_field frameHeight
+   48:  push_1 1
+   49:  sub
+   50:  call_method 2
+   53:  put_loc1 1: i
+   54:  object
+   55:  get_var Math
+   60:  get_field2 max
+   65:  push_0 0
+   66:  get_var Math
+   71:  get_field2 min
+   76:  get_loc_check 0: e
+   79:  get_var Math
+   84:  get_field2 round
+   89:  get_var Number
+   94:  get_arg0 0: t
+   95:  dup
+   96:  if_false8 105
+   98:  drop
+   99:  get_arg0 0: t
+  100:  get_field x
+  105:  call1 1
+  106:  dup
+  107:  if_true8 111
+  109:  drop
+  110:  push_0 0
+  111:  call_method 1
+  114:  call_method 2
+  117:  call_method 2
+  120:  define_field x
+  125:  get_var Math
+  130:  get_field2 max
+  135:  push_0 0
+  136:  get_var Math
+  141:  get_field2 min
+  146:  get_loc_check 1: i
+  149:  get_var Math
+  154:  get_field2 round
+  159:  get_var Number
+  164:  get_arg0 0: t
+  165:  dup
+  166:  if_false8 175
+  168:  drop
+  169:  get_arg0 0: t
+  170:  get_field y
+  175:  call1 1
+  176:  dup
+  177:  if_true8 181
+  179:  drop
+  180:  push_0 0
+  181:  call_method 1
+  184:  call_method 2
+  187:  call_method 2
+  190:  define_field y
+  195:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_arg0 0: t
+    4:  put_field nativeTouchPoint
+    9:  get_loc0 0: this
+   10:  null
+   11:  put_field scrollPoint
+   16:  get_loc0 0: this
+   17:  push_0 0
+   18:  put_field scrollDeltaY
+   23:  get_var Date
+   28:  get_field2 now
+   33:  call_method 0
+   36:  get_loc0 0: this
+   37:  get_field lastScrollFlushAt
+   42:  sub
+   43:  push_i8 24
+   45:  gte
+   46:  if_false8 58
+   48:  get_loc0 0: this
+   49:  get_field2 flushPendingScroll
+   54:  call_method 0
+   57:  return_undef
+   58:  get_loc0 0: this
+   59:  get_field scrollFlushTimer
+   64:  dup
+   65:  if_true8 88
+   67:  drop
+   68:  get_loc0 0: this
+   69:  get_loc0 0: this
+   70:  get_field2 scheduleTimeout
+   75:  fclosure8 0: [bytecode <null>]
+   77:  push_i8 24
+   79:  call_method 2
+   82:  insert2
+   83:  put_field scrollFlushTimer
+   88:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: this local:loc0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  get_field2 flushPendingScroll
+    6:  call_method 0
+    9:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_arg0 0: t
+    4:  put_field scrollPoint
+    9:  get_loc0 0: this
+   10:  get_field2 scrollDeltaY
+   15:  get_arg1 1: e
+   16:  add
+   17:  put_field scrollDeltaY
+   22:  get_var Date
+   27:  get_field2 now
+   32:  call_method 0
+   35:  get_loc0 0: this
+   36:  get_field lastScrollFlushAt
+   41:  sub
+   42:  push_i8 24
+   44:  gte
+   45:  if_false8 57
+   47:  get_loc0 0: this
+   48:  get_field2 flushPendingScroll
+   53:  call_method 0
+   56:  return_undef
+   57:  get_loc0 0: this
+   58:  get_field scrollFlushTimer
+   63:  dup
+   64:  if_true8 87
+   66:  drop
+   67:  get_loc0 0: this
+   68:  get_loc0 0: this
+   69:  get_field2 scheduleTimeout
+   74:  fclosure8 0: [bytecode <null>]
+   76:  push_i8 24
+   78:  call_method 2
+   81:  insert2
+   82:  put_field scrollFlushTimer
+   87:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: this local:loc0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  get_field2 flushPendingScroll
+    6:  call_method 0
+    9:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+    1: const e [level:1 next:0]
+    2: const i [level:1 next:1]
+    3: var this
+  closure vars:
+    0: n parent:loc6 let
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  set_loc_uninitialized 2: i
+    5:  set_loc_uninitialized 1: e
+    8:  set_loc_uninitialized 0: t
+   11:  get_loc3 3: this
+   12:  get_field scrollFlushTimer
+   17:  dup
+   18:  if_false8 45
+   20:  drop
+   21:  get_loc3 3: this
+   22:  get_field2 clearScheduledTimeout
+   27:  get_loc3 3: this
+   28:  get_field scrollFlushTimer
+   33:  call_method 1
+   36:  drop
+   37:  get_loc3 3: this
+   38:  null
+   39:  insert2
+   40:  put_field scrollFlushTimer
+   45:  drop
+   46:  get_loc3 3: this
+   47:  get_var Date
+   52:  get_field2 now
+   57:  call_method 0
+   60:  put_field lastScrollFlushAt
+   65:  get_loc3 3: this
+   66:  get_field scrollPoint
+   71:  put_loc0 0: t
+   72:  get_loc3 3: this
+   73:  get_field scrollDeltaY
+   78:  put_loc1 1: e
+   79:  get_loc3 3: this
+   80:  get_field nativeTouchPoint
+   85:  put_loc2 2: i
+   86:  get_loc3 3: this
+   87:  null
+   88:  put_field scrollPoint
+   93:  get_loc3 3: this
+   94:  push_0 0
+   95:  put_field scrollDeltaY
+  100:  get_loc3 3: this
+  101:  null
+  102:  put_field nativeTouchPoint
+  107:  get_loc_check 2: i
+  110:  dup
+  111:  if_false8 163
+  113:  drop
+  114:  get_loc3 3: this
+  115:  get_field nativeTouchActive
+  120:  dup
+  121:  if_false8 163
+  123:  drop
+  124:  get_var_ref_check 0: n
+  127:  get_field dispatchTouchMove
+  132:  dup
+  133:  if_false8 163
+  135:  drop
+  136:  get_var_ref_check 0: n
+  139:  get_field2 dispatchTouchMove
+  144:  get_loc_check 2: i
+  147:  get_field x
+  152:  get_loc_check 2: i
+  155:  get_field y
+  160:  call_method 2
+  163:  drop
+  164:  get_loc_check 0: t
+  167:  lnot
+  168:  dup
+  169:  if_true8 222
+  171:  drop
+  172:  get_var Math
+  177:  get_field2 abs
+  182:  get_loc_check 1: e
+  185:  call_method 1
+  188:  push_1 1
+  189:  lt
+  190:  dup
+  191:  if_true8 222
+  193:  drop
+  194:  get_loc3 3: this
+  195:  get_field2 sendScrollDelta
+  200:  get_loc_check 0: t
+  203:  get_var Math
+  208:  get_field2 round
+  213:  get_loc_check 1: e
+  216:  call_method 1
+  219:  call_method 2
+  222:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field scrollFlushTimer
+    8:  dup
+    9:  if_false8 36
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field2 clearScheduledTimeout
+   18:  get_loc0 0: this
+   19:  get_field scrollFlushTimer
+   24:  call_method 1
+   27:  drop
+   28:  get_loc0 0: this
+   29:  null
+   30:  insert2
+   31:  put_field scrollFlushTimer
+   36:  drop
+   37:  get_loc0 0: this
+   38:  null
+   39:  put_field scrollPoint
+   44:  get_loc0 0: this
+   45:  push_0 0
+   46:  put_field scrollDeltaY
+   51:  get_loc0 0: this
+   52:  null
+   53:  put_field nativeTouchPoint
+   58:  get_loc0 0: this
+   59:  push_0 0
+   60:  put_field lastScrollFlushAt
+   65:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:3 next:-1]
+    1: catch t [level:4 next:-1]
+  closure vars:
+    0: n parent:loc6 let
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref_check 0: n
+    3:  get_field getFrameCounter
+    8:  lnot
+    9:  if_false8 13
+   11:  push_minus1 -1
+   12:  return
+   13:  catch 65
+   18:  set_loc_uninitialized 0: t
+   21:  get_var Number
+   26:  get_var_ref_check 0: n
+   29:  get_field2 getFrameCounter
+   34:  call_method 0
+   37:  call1 1
+   38:  put_loc0 0: t
+   39:  get_var Number
+   44:  get_field2 isFinite
+   49:  get_loc_check 0: t
+   52:  call_method 1
+   55:  if_false8 62
+   57:  get_loc_check 0: t
+   60:  goto8 63
+   62:  push_minus1 -1
+   63:  nip
+   64:  return
+   65:  put_loc1 1: t
+   66:  catch 74
+   71:  push_minus1 -1
+   72:  nip
+   73:  return
+   74:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field scrollProbeTimer
+    8:  dup
+    9:  if_false8 36
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field2 clearScheduledTimeout
+   18:  get_loc0 0: this
+   19:  get_field scrollProbeTimer
+   24:  call_method 1
+   27:  drop
+   28:  get_loc0 0: this
+   29:  null
+   30:  insert2
+   31:  put_field scrollProbeTimer
+   36:  drop
+   37:  get_loc0 0: this
+   38:  push_minus1 -1
+   39:  put_field scrollProbeFrame
+   44:  get_loc0 0: this
+   45:  push_0 0
+   46:  put_field scrollProbeDelta
+   51:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  closure vars:
+    0: n parent:loc6 let
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  push_atom_value native
+    7:  get_loc0 0: this
+    8:  get_field scrollMode
+   13:  strict_eq
+   14:  dup
+   15:  if_false8 128
+   17:  drop
+   18:  get_var_ref_check 0: n
+   21:  get_field dispatchDomScroll
+   26:  dup
+   27:  if_false8 128
+   29:  drop
+   30:  get_var_ref_check 0: n
+   33:  get_field dispatchScroll
+   38:  dup
+   39:  if_false8 128
+   41:  drop
+   42:  get_loc0 0: this
+   43:  get_field2 scrollProbeDelta
+   48:  get_var Math
+   53:  get_field2 abs
+   58:  get_arg0 0: t
+   59:  call_method 1
+   62:  add
+   63:  put_field scrollProbeDelta
+   68:  get_loc0 0: this
+   69:  get_field scrollProbeFrame
+   74:  push_0 0
+   75:  lt
+   76:  dup
+   77:  if_false8 96
+   79:  drop
+   80:  get_loc0 0: this
+   81:  get_loc0 0: this
+   82:  get_field2 readFrameCounter
+   87:  call_method 0
+   90:  insert2
+   91:  put_field scrollProbeFrame
+   96:  drop
+   97:  get_loc0 0: this
+   98:  get_field scrollProbeTimer
+  103:  dup
+  104:  if_true8 128
+  106:  drop
+  107:  get_loc0 0: this
+  108:  get_loc0 0: this
+  109:  get_field2 scheduleTimeout
+  114:  fclosure8 0: [bytecode <null>]
+  116:  push_i16 260
+  119:  call_method 2
+  122:  insert2
+  123:  put_field scrollProbeTimer
+  128:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+    1: const e [level:1 next:0]
+  closure vars:
+    0: this local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  set_loc_uninitialized 1: e
+    3:  set_loc_uninitialized 0: t
+    6:  get_var_ref0 0: this
+    7:  null
+    8:  put_field scrollProbeTimer
+   13:  get_var_ref0 0: this
+   14:  get_field scrollProbeFrame
+   19:  put_loc0 0: t
+   20:  get_var_ref0 0: this
+   21:  get_field scrollProbeDelta
+   26:  push_i8 32
+   28:  gte
+   29:  put_loc1 1: e
+   30:  get_var_ref0 0: this
+   31:  push_minus1 -1
+   32:  put_field scrollProbeFrame
+   37:  get_var_ref0 0: this
+   38:  push_0 0
+   39:  put_field scrollProbeDelta
+   44:  get_loc_check 1: e
+   47:  lnot
+   48:  dup
+   49:  if_true8 57
+   51:  drop
+   52:  get_loc_check 0: t
+   55:  push_0 0
+   56:  lt
+   57:  if_false8 60
+   59:  return_undef
+   60:  get_var_ref0 0: this
+   61:  get_field2 readFrameCounter
+   66:  call_method 0
+   69:  get_loc_check 0: t
+   72:  lte
+   73:  dup
+   74:  if_false8 100
+   76:  drop
+   77:  get_var_ref0 0: this
+   78:  push_atom_value dom
+   83:  put_field scrollMode
+   88:  get_var_ref0 0: this
+   89:  push_atom_value "Scroll fallback"
+   94:  insert2
+   95:  put_field statusText
+  100:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:1 next:-1]
+    1: const i [level:1 next:0]
+    2: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  set_loc_uninitialized 1: i
+    5:  set_loc_uninitialized 0: e
+    8:  get_var Date
+   13:  get_field2 now
+   18:  call_method 0
+   21:  put_loc0 0: e
+   22:  get_loc2 2: this
+   23:  get_field touchSamples
+   28:  get_field2 push
+   33:  object
+   34:  get_arg0 0: t
+   35:  get_field x
+   40:  define_field x
+   45:  get_arg0 0: t
+   46:  get_field y
+   51:  define_field y
+   56:  get_loc_check 0: e
+   59:  define_field t
+   64:  call_method 1
+   67:  drop
+   68:  get_loc_check 0: e
+   71:  push_i16 180
+   74:  sub
+   75:  put_loc1 1: i
+   76:  get_loc2 2: this
+   77:  get_loc2 2: this
+   78:  get_field touchSamples
+   83:  get_field2 filter
+   88:  fclosure8 0: [bytecode <null>]
+   90:  call_method 1
+   93:  get_field2 slice
+   98:  push_i8 -8
+  100:  call_method 1
+  103:  put_field touchSamples
+  108:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: i local:loc1 const
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_field t
+    6:  get_var_ref_check 0: i
+    9:  gte
+   10:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 sendScrollEnd
+    8:  get_arg0 0: t
+    9:  call_method 1
+   12:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: n parent:loc6 let
+  stack_size: 5
+  opcodes:
+    0:  get_arg0 0: t
+    1:  dup
+    2:  if_false8 75
+    4:  drop
+    5:  get_var_ref_check 0: n
+    8:  get_field dispatchScrollEnd
+   13:  if_false8 39
+   15:  get_var_ref_check 0: n
+   18:  get_field2 dispatchScrollEnd
+   23:  get_arg0 0: t
+   24:  get_field x
+   29:  get_arg0 0: t
+   30:  get_field y
+   35:  call_method 2
+   38:  return_undef
+   39:  get_var_ref_check 0: n
+   42:  get_field dispatchScroll
+   47:  dup
+   48:  if_false8 75
+   50:  drop
+   51:  get_var_ref_check 0: n
+   54:  get_field2 dispatchScroll
+   59:  get_arg0 0: t
+   60:  get_field x
+   65:  get_arg0 0: t
+   66:  get_field y
+   71:  push_0 0
+   72:  call_method 3
+   75:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: var this
+  closure vars:
+    0: n parent:loc6 let
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_arg0 0: t
+    3:  dup
+    4:  if_false 149
+    9:  drop
+   10:  get_arg1 1: e
+   11:  dup
+   12:  if_false 149
+   17:  drop
+   18:  push_atom_value dom
+   23:  get_loc0 0: this
+   24:  get_field scrollMode
+   29:  strict_eq
+   30:  if_false8 67
+   32:  get_var_ref_check 0: n
+   35:  get_field dispatchDomScroll
+   40:  if_false8 67
+   42:  get_var_ref_check 0: n
+   45:  get_field2 dispatchDomScroll
+   50:  get_arg0 0: t
+   51:  get_field x
+   56:  get_arg0 0: t
+   57:  get_field y
+   62:  get_arg1 1: e
+   63:  call_method 3
+   66:  return_undef
+   67:  get_var_ref_check 0: n
+   70:  get_field dispatchScroll
+   75:  if_false8 113
+   77:  get_var_ref_check 0: n
+   80:  get_field2 dispatchScroll
+   85:  get_arg0 0: t
+   86:  get_field x
+   91:  get_arg0 0: t
+   92:  get_field y
+   97:  get_arg1 1: e
+   98:  call_method 3
+  101:  drop
+  102:  get_loc0 0: this
+  103:  get_field2 armNativeScrollProbe
+  108:  get_arg1 1: e
+  109:  call_method 1
+  112:  return_undef
+  113:  get_var_ref_check 0: n
+  116:  get_field dispatchDomScroll
+  121:  dup
+  122:  if_false8 149
+  124:  drop
+  125:  get_var_ref_check 0: n
+  128:  get_field2 dispatchDomScroll
+  133:  get_arg0 0: t
+  134:  get_field x
+  139:  get_arg0 0: t
+  140:  get_field y
+  145:  get_arg1 1: e
+  146:  call_method 3
+  149:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:1 next:-1]
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_arg0 0: t
+    3:  is_undefined
+    4:  if_false8 9
+    6:  push_0 0
+    7:  lnot
+    8:  put_arg0 0: t
+    9:  set_loc_uninitialized 0: e
+   12:  get_loc1 1: this
+   13:  get_field flingPoint
+   18:  put_loc0 0: e
+   19:  get_loc1 1: this
+   20:  get_field flingTimer
+   25:  dup
+   26:  if_false8 53
+   28:  drop
+   29:  get_loc1 1: this
+   30:  get_field2 clearScheduledTimeout
+   35:  get_loc1 1: this
+   36:  get_field flingTimer
+   41:  call_method 1
+   44:  drop
+   45:  get_loc1 1: this
+   46:  null
+   47:  insert2
+   48:  put_field flingTimer
+   53:  drop
+   54:  get_arg0 0: t
+   55:  dup
+   56:  if_false8 78
+   58:  drop
+   59:  get_loc_check 0: e
+   62:  dup
+   63:  if_false8 78
+   65:  drop
+   66:  get_loc1 1: this
+   67:  get_field2 sendScrollEnd
+   72:  get_loc_check 0: e
+   75:  call_method 1
+   78:  drop
+   79:  get_loc1 1: this
+   80:  push_0 0
+   81:  put_field flingVelocity
+   86:  get_loc1 1: this
+   87:  null
+   88:  put_field flingPoint
+   93:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+    1: let i [level:1 next:0]
+    2: const s [level:1 next:1]
+    3: var this
+  closure vars:
+    0: e parent:loc1 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  set_loc_uninitialized 2: s
+    5:  set_loc_uninitialized 1: i
+    8:  set_loc_uninitialized 0: t
+   11:  get_var Date
+   16:  get_field2 now
+   21:  call_method 0
+   24:  put_loc0 0: t
+   25:  get_loc_check 0: t
+   28:  get_loc3 3: this
+   29:  get_field lastEditableKeyboardAt
+   34:  sub
+   35:  push_i16 800
+   38:  lt
+   39:  if_false8 43
+   41:  undefined
+   42:  return_async
+   43:  get_loc3 3: this
+   44:  get_loc_check 0: t
+   47:  put_field lastEditableKeyboardAt
+   52:  get_loc3 3: this
+   53:  push_atom_value "DBG editable keyboard open"
+   58:  put_field statusText
+   63:  get_loc3 3: this
+   64:  push_0 0
+   65:  lnot
+   66:  put_field suppressHideShutdown
+   71:  get_loc3 3: this
+   72:  get_field2 cancelHideShutdown
+   77:  call_method 0
+   80:  drop
+   81:  get_loc3 3: this
+   82:  push_0 0
+   83:  lnot
+   84:  put_field pendingOverlayRecovery
+   89:  get_loc3 3: this
+   90:  null
+   91:  put_field pendingOverlayAction
+   96:  null
+   97:  put_loc1 1: i
+   98:  catch 124
+  103:  get_var_ref_check 0: e
+  106:  push_empty_string
+  107:  call1 1
+  108:  await
+  109:  dup
+  110:  put_loc_check 1: i
+  113:  drop
+  114:  drop
+  115:  undefined
+  116:  gosub 130
+  121:  drop
+  122:  goto8 139
+  124:  gosub 130
+  129:  throw
+  130:  get_loc3 3: this
+  131:  push_1 1
+  132:  lnot
+  133:  put_field suppressHideShutdown
+  138:  ret
+  139:  null
+  140:  get_loc_check 1: i
+  143:  eq
+  144:  if_false8 174
+  146:  get_loc3 3: this
+  147:  push_atom_value "Keyboard cancelled"
+  152:  put_field statusText
+  157:  get_loc3 3: this
+  158:  null
+  159:  put_field pendingOverlayAction
+  164:  get_loc3 3: this
+  165:  push_1 1
+  166:  lnot
+  167:  put_field pendingOverlayRecovery
+  172:  undefined
+  173:  return_async
+  174:  get_loc_check 1: i
+  177:  lnot
+  178:  if_false8 197
+  180:  get_loc3 3: this
+  181:  null
+  182:  put_field pendingOverlayAction
+  187:  get_loc3 3: this
+  188:  push_1 1
+  189:  lnot
+  190:  put_field pendingOverlayRecovery
+  195:  undefined
+  196:  return_async
+  197:  object
+  198:  push_atom_value insertText
+  203:  define_field type
+  208:  get_loc_check 1: i
+  211:  define_field value
+  216:  put_loc2 2: s
+  217:  get_loc3 3: this
+  218:  get_field2 applyPendingOverlayAction
+  223:  get_loc_check 2: s
+  226:  call_method 1
+  229:  drop
+  230:  get_loc3 3: this
+  231:  null
+  232:  put_field pendingOverlayAction
+  237:  undefined
+  238:  return_async
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: n parent:loc6 let
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 ensureBrowserPlayer
+    8:  call_method 0
+   11:  dup
+   12:  if_false8 36
+   14:  drop
+   15:  get_loc0 0: this
+   16:  get_field2 ensureBrowserRunning
+   21:  call_method 0
+   24:  drop
+   25:  get_var_ref_check 0: n
+   28:  get_field2 goBack
+   33:  call_method 0
+   36:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: n parent:loc6 let
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 ensureBrowserPlayer
+    8:  call_method 0
+   11:  dup
+   12:  if_false8 36
+   14:  drop
+   15:  get_loc0 0: this
+   16:  get_field2 ensureBrowserRunning
+   21:  call_method 0
+   24:  drop
+   25:  get_var_ref_check 0: n
+   28:  get_field2 goForward
+   33:  call_method 0
+   36:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: catch t [level:4 next:-1]
+    1: var this
+  closure vars:
+    0: n parent:loc6 let
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  push_atom_value desktopFit
+    8:  get_arg0 0: t
+    9:  strict_eq
+   10:  if_false8 19
+   12:  push_atom_value desktopFit
+   17:  goto8 24
+   19:  push_atom_value mobile
+   24:  put_field viewportProfile
+   29:  get_var_ref_check 0: n
+   32:  get_field setViewportProfile
+   37:  if_false8 118
+   39:  catch 89
+   44:  get_var_ref_check 0: n
+   47:  get_field2 setViewportProfile
+   52:  get_loc1 1: this
+   53:  get_field viewportProfile
+   58:  call_method 1
+   61:  drop
+   62:  get_loc1 1: this
+   63:  push_atom_value "Profile "
+   68:  get_field2 concat
+   73:  get_loc1 1: this
+   74:  get_field profileLabel
+   79:  call_method 1
+   82:  put_field statusText
+   87:  drop
+   88:  return_undef
+   89:  put_loc0 0: t
+   90:  catch 117
+   95:  get_loc1 1: this
+   96:  push_atom_value "Profile failed: "
+  101:  get_field2 concat
+  106:  get_loc0 0: t
+  107:  call_method 1
+  110:  put_field statusText
+  115:  drop
+  116:  return_undef
+  117:  throw
+  118:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+    1: catch t [level:3 next:0]
+    2: var this
+  closure vars:
+    0: n parent:loc6 let
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  set_loc_uninitialized 0: t
+    5:  get_loc2 2: this
+    6:  get_field2 ensureBrowserRunning
+   11:  call_method 0
+   14:  drop
+   15:  push_atom_value desktopFit
+   20:  get_loc2 2: this
+   21:  get_field viewportProfile
+   26:  strict_eq
+   27:  if_false8 36
+   29:  push_atom_value mobile
+   34:  goto8 41
+   36:  push_atom_value desktopFit
+   41:  put_loc0 0: t
+   42:  get_loc2 2: this
+   43:  get_field2 applyViewportProfile
+   48:  get_loc_check 0: t
+   51:  call_method 1
+   54:  drop
+   55:  get_loc2 2: this
+   56:  push_atom_value native
+   61:  put_field scrollMode
+   66:  catch 85
+   71:  get_var_ref_check 0: n
+   74:  get_field2 reload
+   79:  call_method 0
+   82:  drop
+   83:  drop
+   84:  return_undef
+   85:  put_loc1 1: t
+   86:  catch 113
+   91:  get_loc2 2: this
+   92:  push_atom_value "Reload failed: "
+   97:  get_field2 concat
+  102:  get_loc1 1: t
+  103:  call_method 1
+  106:  put_field statusText
+  111:  drop
+  112:  return_undef
+  113:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: n parent:loc6 let
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 ensureBrowserPlayer
+    8:  call_method 0
+   11:  dup
+   12:  if_false8 47
+   14:  drop
+   15:  get_loc0 0: this
+   16:  get_field2 ensureBrowserRunning
+   21:  call_method 0
+   24:  drop
+   25:  get_loc0 0: this
+   26:  push_atom_value native
+   31:  put_field scrollMode
+   36:  get_var_ref_check 0: n
+   39:  get_field2 reload
+   44:  call_method 0
+   47:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: n parent:loc6 let
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 ensureBrowserPlayer
+    8:  call_method 0
+   11:  dup
+   12:  if_false8 36
+   14:  drop
+   15:  get_loc0 0: this
+   16:  get_field2 ensureBrowserRunning
+   21:  call_method 0
+   24:  drop
+   25:  get_var_ref_check 0: n
+   28:  get_field2 stopLoading
+   33:  call_method 0
+   36:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_arg0 0: t
+    3:  dup
+    4:  if_false8 36
+    6:  drop
+    7:  get_arg0 0: t
+    8:  get_loc0 0: this
+    9:  get_field lastStatePayload
+   14:  strict_neq
+   15:  dup
+   16:  if_false8 36
+   18:  drop
+   19:  get_loc0 0: this
+   20:  get_arg0 0: t
+   21:  put_field lastStatePayload
+   26:  get_loc0 0: this
+   27:  get_field2 handleState
+   32:  get_arg0 0: t
+   33:  call_method 1
+   36:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:2 next:-1]
+    1: const i [level:2 next:0]
+    2: const s [level:2 next:1]
+    3: const a [level:2 next:2]
+    4: const t [level:4 next:5]
+    5: const r [level:2 next:3]
+    6: catch e [level:5 next:-1]
+    7: var this
+  closure vars:
+    0: h parent:loc8 const
+    1: d parent:loc12 var
+    2: u parent:loc11 var
+  stack_size: 7
+  opcodes:
+    0:  push_this
+    1:  put_loc8 7: this
+    3:  catch 688
+    8:  set_loc_uninitialized 5: r
+   11:  set_loc_uninitialized 3: a
+   14:  set_loc_uninitialized 2: s
+   17:  set_loc_uninitialized 1: i
+   20:  set_loc_uninitialized 0: e
+   23:  get_var JSON
+   28:  get_field2 parse
+   33:  get_arg0 0: t
+   34:  call_method 1
+   37:  put_loc0 0: e
+   38:  get_loc_check 0: e
+   41:  get_field detail
+   46:  dup
+   47:  if_true8 51
+   49:  drop
+   50:  push_empty_string
+   51:  put_loc1 1: i
+   52:  get_loc_check 0: e
+   55:  get_field url
+   60:  dup
+   61:  if_true8 140
+   63:  drop
+   64:  push_atom_value load_committed
+   69:  get_loc_check 0: e
+   72:  get_field state
+   77:  strict_eq
+   78:  dup
+   79:  if_true8 132
+   81:  drop
+   82:  push_atom_value load_finished
+   87:  get_loc_check 0: e
+   90:  get_field state
+   95:  strict_eq
+   96:  dup
+   97:  if_true8 132
+   99:  drop
+  100:  push_atom_value load_started
+  105:  get_loc_check 0: e
+  108:  get_field state
+  113:  strict_eq
+  114:  dup
+  115:  if_true8 132
+  117:  drop
+  118:  push_atom_value load_redirected
+  123:  get_loc_check 0: e
+  126:  get_field state
+  131:  strict_eq
+  132:  if_false8 139
+  134:  get_loc_check 1: i
+  137:  goto8 140
+  139:  push_empty_string
+  140:  put_loc2 2: s
+  141:  push_atom_value "about:blank"
+  146:  get_loc_check 2: s
+  149:  strict_eq
+  150:  if_false8 185
+  152:  get_loc8 7: this
+  154:  get_field url
+  159:  get_var_ref_check 0: h
+  162:  strict_eq
+  163:  dup
+  164:  if_true8 178
+  166:  drop
+  167:  get_loc8 7: this
+  169:  get_field nativeUrl
+  174:  get_var_ref_check 0: h
+  177:  strict_eq
+  178:  if_false8 185
+  180:  get_var_ref_check 0: h
+  183:  goto8 188
+  185:  get_loc_check 2: s
+  188:  put_loc3 3: a
+  189:  get_loc_check 3: a
+  192:  dup
+  193:  if_false8 226
+  195:  drop
+  196:  get_var_ref1 1: d
+  197:  get_loc_check 3: a
+  200:  call1 1
+  201:  dup
+  202:  if_false8 226
+  204:  drop
+  205:  get_loc8 7: this
+  207:  get_loc_check 3: a
+  210:  put_field url
+  215:  get_loc8 7: this
+  217:  get_loc_check 3: a
+  220:  insert2
+  221:  put_field nativeUrl
+  226:  drop
+  227:  null
+  228:  get_loc_check 0: e
+  231:  get_field title
+  236:  neq
+  237:  dup
+  238:  if_false8 271
+  240:  drop
+  241:  get_loc8 7: this
+  243:  push_empty_string
+  244:  get_field2 concat
+  249:  get_loc_check 0: e
+  252:  get_field title
+  257:  dup
+  258:  if_true8 262
+  260:  drop
+  261:  push_empty_string
+  262:  call_method 1
+  265:  insert2
+  266:  put_field pageTitle
+  271:  drop
+  272:  null
+  273:  get_loc_check 0: e
+  276:  get_field progress
+  281:  neq
+  282:  if_false8 340
+  284:  set_loc_uninitialized 4: t
+  287:  get_var Number
+  292:  get_loc_check 0: e
+  295:  get_field progress
+  300:  call1 1
+  301:  put_loc8 4: t
+  303:  get_loc8 7: this
+  305:  get_var Number
+  310:  get_field2 isFinite
+  315:  get_loc_check 4: t
+  318:  call_method 1
+  321:  if_false8 328
+  323:  get_loc_check 4: t
+  326:  goto8 335
+  328:  get_loc8 7: this
+  330:  get_field loadProgress
+  335:  put_field loadProgress
+  340:  get_loc_check 0: e
+  343:  get_field profile
+  348:  dup
+  349:  if_false8 388
+  351:  drop
+  352:  get_loc8 7: this
+  354:  push_atom_value desktopFit
+  359:  get_loc_check 0: e
+  362:  get_field profile
+  367:  strict_eq
+  368:  if_false8 377
+  370:  push_atom_value desktopFit
+  375:  goto8 382
+  377:  push_atom_value mobile
+  382:  insert2
+  383:  put_field viewportProfile
+  388:  drop
+  389:  get_var_ref2 2: u
+  390:  get_loc_check 3: a
+  393:  if_false8 407
+  395:  get_var_ref1 1: d
+  396:  get_loc_check 3: a
+  399:  call1 1
+  400:  if_false8 407
+  402:  get_loc_check 3: a
+  405:  goto8 420
+  407:  get_var_ref1 1: d
+  408:  get_loc_check 1: i
+  411:  call1 1
+  412:  if_false8 419
+  414:  get_loc_check 1: i
+  417:  goto8 420
+  419:  push_empty_string
+  420:  call1 1
+  421:  put_loc8 5: r
+  423:  push_atom_value error
+  428:  get_loc_check 0: e
+  431:  get_field state
+  436:  strict_eq
+  437:  dup
+  438:  if_true8 455
+  440:  drop
+  441:  push_atom_value renderer_failed
+  446:  get_loc_check 0: e
+  449:  get_field state
+  454:  strict_eq
+  455:  if_false8 512
+  457:  get_loc8 7: this
+  459:  push_empty_string
+  460:  get_field2 concat
+  465:  get_loc_check 0: e
+  468:  get_field state
+  473:  push_atom_value ": "
+  478:  get_loc_check 1: i
+  481:  call_method 3
+  484:  put_field statusText
+  489:  get_loc8 7: this
+  491:  get_field2 stopDrawPump
+  496:  call_method 0
+  499:  drop
+  500:  get_loc8 7: this
+  502:  get_field2 stopStatePoller
+  507:  call_method 0
+  510:  goto8 616
+  512:  push_atom_value load_failed
+  517:  get_loc_check 0: e
+  520:  get_field state
+  525:  strict_eq
+  526:  if_false8 563
+  528:  get_loc8 7: this
+  530:  push_empty_string
+  531:  get_field2 concat
+  536:  get_loc_check 0: e
+  539:  get_field state
+  544:  push_atom_value ": "
+  549:  get_loc_check 1: i
+  552:  call_method 3
+  555:  insert2
+  556:  put_field statusText
+  561:  goto8 616
+  563:  get_loc8 7: this
+  565:  get_loc_check 0: e
+  568:  get_field state
+  573:  if_false8 602
+  575:  push_empty_string
+  576:  get_field2 concat
+  581:  get_loc_check 0: e
+  584:  get_field state
+  589:  push_atom_value " "
+  594:  get_loc_check 5: r
+  597:  call_method 3
+  600:  goto8 610
+  602:  get_loc_check 5: r
+  605:  dup
+  606:  if_true8 610
+  608:  drop
+  609:  get_arg0 0: t
+  610:  insert2
+  611:  put_field statusText
+  616:  drop
+  617:  push_atom_value stopped
+  622:  get_loc_check 0: e
+  625:  get_field state
+  630:  strict_neq
+  631:  dup
+  632:  if_true8 656
+  634:  drop
+  635:  get_loc8 7: this
+  637:  get_field shuttingDown
+  642:  dup
+  643:  if_true8 656
+  645:  drop
+  646:  get_loc8 7: this
+  648:  get_field2 ensureBrowserRunning
+  653:  call_method 0
+  656:  drop
+  657:  push_atom_value editable_hit
+  662:  get_loc_check 0: e
+  665:  get_field state
+  670:  strict_eq
+  671:  dup
+  672:  if_false8 685
+  674:  drop
+  675:  get_loc8 7: this
+  677:  get_field2 openPageTextKeyboard
+  682:  call_method 0
+  685:  drop
+  686:  drop
+  687:  return_undef
+  688:  put_loc8 6: e
+  690:  catch 719
+  695:  get_loc8 7: this
+  697:  push_empty_string
+  698:  get_field2 concat
+  703:  get_arg0 0: t
+  704:  dup
+  705:  if_true8 709
+  707:  drop
+  708:  push_empty_string
+  709:  call_method 1
+  712:  put_field statusText
+  717:  drop
+  718:  return_undef
+  719:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_empty_string
+    4:  get_field2 concat
+    9:  get_arg0 0: t
+   10:  dup
+   11:  if_true8 19
+   13:  drop
+   14:  push_atom_value "Native error"
+   19:  call_method 1
+   22:  put_field statusText
+   27:  get_loc0 0: this
+   28:  get_field2 stopDrawPump
+   33:  call_method 0
+   36:  drop
+   37:  get_loc0 0: this
+   38:  get_field2 stopStatePoller
+   43:  call_method 0
+   46:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_browser.js:1 source_len=0 */
+apps_browser.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var i
+    3: var this
+  stack_size: 17
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  set_loc0 0: t
+    4:  get_field $createElement
+    9:  put_loc1 1: e
+   10:  get_loc0 0: t
+   11:  get_field _self
+   16:  get_field _c
+   21:  dup
+   22:  if_true8 26
+   24:  drop
+   25:  get_loc1 1: e
+   26:  set_loc2 2: i
+   27:  push_atom_value div
+   32:  object
+   33:  push_atom_value "browser-shell"
+   38:  array_from 1
+   41:  define_field staticClass
+   46:  get_loc2 2: i
+   47:  push_atom_value div
+   52:  object
+   53:  push_atom_value toolbar
+   58:  array_from 1
+   61:  define_field staticClass
+   66:  get_loc2 2: i
+   67:  push_atom_value text
+   72:  object
+   73:  push_atom_value "nav-button"
+   78:  array_from 1
+   81:  define_field staticClass
+   86:  object
+   87:  get_loc0 0: t
+   88:  get_field goBack
+   93:  define_field click
+   98:  define_field on
+  103:  get_loc0 0: t
+  104:  get_field2 _v
+  109:  push_atom_value "<"
+  114:  call_method 1
+  117:  array_from 1
+  120:  call3 3
+  121:  get_loc2 2: i
+  122:  push_atom_value text
+  127:  object
+  128:  push_atom_value "nav-button"
+  133:  array_from 1
+  136:  define_field staticClass
+  141:  object
+  142:  get_loc0 0: t
+  143:  get_field goForward
+  148:  define_field click
+  153:  define_field on
+  158:  get_loc0 0: t
+  159:  get_field2 _v
+  164:  push_atom_value ">"
+  169:  call_method 1
+  172:  array_from 1
+  175:  call3 3
+  176:  get_loc2 2: i
+  177:  push_atom_value text
+  182:  object
+  183:  push_atom_value "url-field"
+  188:  array_from 1
+  191:  define_field staticClass
+  196:  object
+  197:  get_loc0 0: t
+  198:  get_field openUrlKeyboard
+  203:  define_field click
+  208:  define_field on
+  213:  get_loc0 0: t
+  214:  get_field2 _v
+  219:  get_loc0 0: t
+  220:  get_field2 _s
+  225:  get_loc0 0: t
+  226:  get_field displayUrl
+  231:  call_method 1
+  234:  call_method 1
+  237:  array_from 1
+  240:  call3 3
+  241:  get_loc2 2: i
+  242:  push_atom_value text
+  247:  object
+  248:  push_atom_value "nav-button"
+  253:  push_atom_value "profile-button"
+  258:  array_from 2
+  261:  define_field staticClass
+  266:  object
+  267:  get_loc0 0: t
+  268:  get_field toggleViewportProfile
+  273:  define_field click
+  278:  define_field on
+  283:  get_loc0 0: t
+  284:  get_field2 _v
+  289:  get_loc0 0: t
+  290:  get_field2 _s
+  295:  get_loc0 0: t
+  296:  get_field profileLabel
+  301:  call_method 1
+  304:  call_method 1
+  307:  array_from 1
+  310:  call3 3
+  311:  get_loc2 2: i
+  312:  push_atom_value text
+  317:  object
+  318:  push_atom_value "nav-button"
+  323:  array_from 1
+  326:  define_field staticClass
+  331:  object
+  332:  get_loc0 0: t
+  333:  get_field reload
+  338:  define_field click
+  343:  define_field on
+  348:  get_loc0 0: t
+  349:  get_field2 _v
+  354:  push_atom_value R
+  359:  call_method 1
+  362:  array_from 1
+  365:  call3 3
+  366:  get_loc2 2: i
+  367:  push_atom_value text
+  372:  object
+  373:  push_atom_value "nav-button"
+  378:  array_from 1
+  381:  define_field staticClass
+  386:  object
+  387:  get_loc0 0: t
+  388:  get_field stopLoading
+  393:  define_field click
+  398:  define_field on
+  403:  get_loc0 0: t
+  404:  get_field2 _v
+  409:  push_atom_value X
+  414:  call_method 1
+  417:  array_from 1
+  420:  call3 3
+  421:  array_from 6
+  424:  call3 3
+  425:  get_loc2 2: i
+  426:  push_atom_value canvas
+  431:  object
+  432:  get_loc0 0: t
+  433:  get_field canvasKey
+  438:  define_field key
+  443:  push_atom_value browserCanvas
+  448:  define_field ref
+  453:  push_atom_value "browser-canvas"
+  458:  array_from 1
+  461:  define_field staticClass
+  466:  get_loc0 0: t
+  467:  get_field canvasStyle
+  472:  define_field style
+  477:  object
+  478:  get_loc0 0: t
+  479:  get_field frameWidth
+  484:  define_field width
+  489:  get_loc0 0: t
+  490:  get_field frameHeight
+  495:  define_field height
+  500:  define_field attrs
+  505:  object
+  506:  get_loc0 0: t
+  507:  get_field handleCanvasClick
+  512:  define_field click
+  517:  get_loc0 0: t
+  518:  get_field handleCanvasTouchStart
+  523:  define_field touchstart
+  528:  get_loc0 0: t
+  529:  get_field handleCanvasTouchMove
+  534:  define_field touchmove
+  539:  get_loc0 0: t
+  540:  get_field handleCanvasTouchEnd
+  545:  define_field touchend
+  550:  get_loc0 0: t
+  551:  get_field handleCanvasTouchCancel
+  556:  define_field touchcancel
+  561:  get_loc0 0: t
+  562:  get_field handleCanvasLongPress
+  567:  define_field longpress
+  572:  define_field on
+  577:  call2 2
+  578:  get_loc2 2: i
+  579:  push_atom_value div
+  584:  object
+  585:  push_atom_value "status-strip"
+  590:  array_from 1
+  593:  define_field staticClass
+  598:  get_loc2 2: i
+  599:  push_atom_value text
+  604:  object
+  605:  push_atom_value "status-text"
+  610:  array_from 1
+  613:  define_field staticClass
+  618:  get_loc0 0: t
+  619:  get_field2 _v
+  624:  get_loc0 0: t
+  625:  get_field2 _s
+  630:  get_loc0 0: t
+  631:  get_field statusText
+  636:  call_method 1
+  639:  call_method 1
+  642:  array_from 1
+  645:  call3 3
+  646:  array_from 1
+  649:  call3 3
+  650:  array_from 3
+  653:  tail_call 3
+

@@ -1,0 +1,2014 @@
+
+/* ===== function depth=0 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: t parent:loc0 const
+    1: e local:loc0 const
+  stack_size: 3
+  opcodes:
+    0:  object
+    1:  object
+    2:  fclosure8 0: [bytecode <null>]
+    4:  define_method eatEvent,4
+   10:  fclosure8 1: [bytecode <null>]
+   12:  define_method showToast,4
+   18:  fclosure8 2: [bytecode <null>]
+   20:  define_method resetSongPagination,4
+   26:  fclosure8 3: [bytecode <null>]
+   28:  define_method setSongPage,4
+   34:  fclosure8 4: [bytecode <null>]
+   36:  set_name formatDur
+   41:  define_field formatDur
+   46:  fclosure8 5: [bytecode <null>]
+   48:  define_method formatMs,4
+   54:  fclosure8 6: [bytecode <null>]
+   56:  set_name normalizeDurationToMs
+   61:  define_field normalizeDurationToMs
+   66:  fclosure8 7: [bytecode <null>]
+   68:  set_name secondsToMs
+   73:  define_field secondsToMs
+   78:  fclosure8 8: [bytecode <null>]
+   80:  set_name msToMs
+   85:  define_field msToMs
+   90:  fclosure8 9: [bytecode <null>]
+   92:  define_method getSongDurationMs,4
+   98:  fclosure8 10: [bytecode <null>]
+  100:  set_name getShellOutput
+  105:  define_field getShellOutput
+  110:  fclosure8 11: [bytecode <null>]
+  112:  define_method execShellText,4
+  118:  fclosure8 12: [bytecode <null>]
+  120:  define_method parseDurationOutput,4
+  126:  fclosure8 13: [bytecode <null>]
+  128:  define_method probeLocalDurationMs,4
+  134:  fclosure8 14: [bytecode <null>]
+  136:  define_method buildLocalSongRecord,4
+  142:  fclosure8 15: [bytecode <null>]
+  144:  define_method setSongDownloading,4
+  150:  fclosure8 16: [bytecode <null>]
+  152:  define_method isSongDownloading,4
+  158:  fclosure8 17: [bytecode <null>]
+  160:  define_method getCurrentDownloadSong,4
+  166:  fclosure8 18: [bytecode <null>]
+  168:  define_method downloadCurrentSong,4
+  174:  fclosure8 19: [bytecode <null>]
+  176:  define_method repairLocalSongDurations,4
+  182:  fclosure8 20: [bytecode <null>]
+  184:  define_method loadLocalSongs,4
+  190:  fclosure8 21: [bytecode <null>]
+  192:  define_method cancelActiveDownloads,4
+  198:  fclosure8 22: [bytecode <null>]
+  200:  define_method closeLoginModal,4
+  206:  fclosure8 23: [bytecode <null>]
+  208:  define_method stopPolling,4
+  214:  fclosure8 24: [bytecode <null>]
+  216:  define_method jumpToQueue,4
+  222:  fclosure8 25: [bytecode <null>]
+  224:  define_method sendMusicCommand,4
+  230:  fclosure8 26: [bytecode <null>]
+  232:  set_name queueItemRef
+  237:  define_field queueItemRef
+  242:  fclosure8 27: [bytecode <null>]
+  244:  define_method openQueueDrawer,4
+  250:  fclosure8 28: [bytecode <null>]
+  252:  define_method closeQueueDrawer,4
+  258:  fclosure8 29: [bytecode <null>]
+  260:  define_method scrollQueueToCurrent,4
+  266:  fclosure8 30: [bytecode <null>]
+  268:  define_method clearQueue,4
+  274:  fclosure8 31: [bytecode <null>]
+  276:  define_method removeQueueSong,4
+  282:  fclosure8 32: [bytecode <null>]
+  284:  define_method togglePlayPause,4
+  290:  fclosure8 33: [bytecode <null>]
+  292:  define_method playPrev,4
+  298:  fclosure8 34: [bytecode <null>]
+  300:  define_method playNext,4
+  306:  fclosure8 35: [bytecode <null>]
+  308:  define_method togglePlayMode,4
+  314:  define_field methods
+  319:  put_var_ref1 1: e
+  320:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  stack_size: 0
+  opcodes:
+    0:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_arg0 0: t
+    4:  put_field toastMsg
+    9:  get_loc0 0: this
+   10:  get_field toastTimer
+   15:  dup
+   16:  if_false8 31
+   18:  drop
+   19:  get_var clearTimeout
+   24:  get_loc0 0: this
+   25:  get_field toastTimer
+   30:  call1 1
+   31:  drop
+   32:  get_loc0 0: this
+   33:  get_var setTimeout
+   38:  fclosure8 0: [bytecode <null>]
+   40:  get_arg1 1: e
+   41:  dup
+   42:  if_true8 48
+   44:  drop
+   45:  push_i16 2500
+   48:  call2 2
+   49:  put_field toastTimer
+   54:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: this local:loc0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  push_empty_string
+    2:  put_field toastMsg
+    7:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_1 1
+    4:  put_field currentSongPage
+    9:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_arg0 0: t
+    3:  push_1 1
+    4:  lt
+    5:  dup
+    6:  if_true8 41
+    8:  drop
+    9:  get_arg0 0: t
+   10:  get_loc0 0: this
+   11:  get_field totalSongPages
+   16:  gt
+   17:  dup
+   18:  if_true8 41
+   20:  drop
+   21:  get_arg0 0: t
+   22:  get_loc0 0: this
+   23:  get_field currentSongPage
+   28:  strict_eq
+   29:  dup
+   30:  if_true8 41
+   32:  drop
+   33:  get_loc0 0: this
+   34:  get_arg0 0: t
+   35:  insert2
+   36:  put_field currentSongPage
+   41:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 5
+  opcodes:
+    0:  get_arg0 0: t
+    1:  if_false8 83
+    3:  get_var Math
+    8:  get_field2 floor
+   13:  get_arg0 0: t
+   14:  push_i8 60
+   16:  div
+   17:  call_method 1
+   20:  get_field2 toString
+   25:  call_method 0
+   28:  get_field2 padStart
+   33:  push_2 2
+   34:  push_const8 0: 1"0"
+   36:  call_method 2
+   39:  push_atom_value ":"
+   44:  add
+   45:  get_var Math
+   50:  get_field2 floor
+   55:  get_arg0 0: t
+   56:  push_i8 60
+   58:  mod
+   59:  call_method 1
+   62:  get_field2 toString
+   67:  call_method 0
+   70:  get_field2 padStart
+   75:  push_2 2
+   76:  push_const8 1: 1"0"
+   78:  call_method 2
+   81:  add
+   82:  return
+   83:  push_atom_value "00:00"
+   88:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_arg0 0: t
+    3:  lnot
+    4:  dup
+    5:  if_true8 11
+    7:  drop
+    8:  get_arg0 0: t
+    9:  push_0 0
+   10:  lte
+   11:  if_false8 19
+   13:  push_atom_value "00:00"
+   18:  return
+   19:  get_loc0 0: this
+   20:  get_field2 formatDur
+   25:  get_var Math
+   30:  get_field2 floor
+   35:  get_arg0 0: t
+   36:  push_i16 1000
+   39:  div
+   40:  call_method 1
+   43:  call_method 1
+   46:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t parent:loc0 const
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref_check 0: t
+    3:  get_arg0 0: e
+    4:  push_atom_value auto
+    9:  tail_call 2
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t parent:loc0 const
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref_check 0: t
+    3:  get_arg0 0: e
+    4:  push_atom_value s
+    9:  tail_call 2
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t parent:loc0 const
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref_check 0: t
+    3:  get_arg0 0: e
+    4:  push_atom_value ms
+    9:  tail_call 2
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_arg0 0: t
+    3:  if_false8 91
+    5:  get_arg0 0: t
+    6:  get_field is_local
+   11:  dup
+   12:  if_true8 31
+   14:  drop
+   15:  get_arg0 0: t
+   16:  get_field local_path
+   21:  dup
+   22:  if_true8 31
+   24:  drop
+   25:  get_arg0 0: t
+   26:  get_field localPath
+   31:  if_false8 75
+   33:  get_var Math
+   38:  get_field2 max
+   43:  get_var Number
+   48:  get_arg0 0: t
+   49:  get_field duration_ms
+   54:  dup
+   55:  if_true8 69
+   57:  drop
+   58:  get_arg0 0: t
+   59:  get_field duration
+   64:  dup
+   65:  if_true8 69
+   67:  drop
+   68:  push_0 0
+   69:  call1 1
+   70:  push_0 0
+   71:  call_method 2
+   74:  return
+   75:  get_loc0 0: this
+   76:  get_field2 normalizeDurationToMs
+   81:  get_arg0 0: t
+   82:  get_field duration
+   87:  call_method 1
+   90:  return
+   91:  push_0 0
+   92:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 3
+  opcodes:
+    0:  null
+    1:  get_arg0 0: t
+    2:  eq
+    3:  if_false8 7
+    5:  push_empty_string
+    6:  return
+    7:  push_atom_value string
+   12:  get_arg0 0: t
+   13:  typeof
+   14:  eq
+   15:  if_false8 19
+   17:  get_arg0 0: t
+   18:  return
+   19:  get_arg0 0: t
+   20:  if_false8 44
+   22:  push_atom_value string
+   27:  get_arg0 0: t
+   28:  get_field output
+   33:  typeof
+   34:  eq
+   35:  if_false8 44
+   37:  get_arg0 0: t
+   38:  get_field output
+   43:  return
+   44:  get_arg0 0: t
+   45:  if_false8 69
+   47:  push_atom_value string
+   52:  get_arg0 0: t
+   53:  get_field text
+   58:  typeof
+   59:  eq
+   60:  if_false8 69
+   62:  get_arg0 0: t
+   63:  get_field text
+   68:  return
+   69:  get_var String
+   74:  get_arg0 0: t
+   75:  dup
+   76:  if_true8 80
+   78:  drop
+   79:  push_empty_string
+   80:  call1 1
+   81:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: let e [level:1 next:-1]
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  set_loc_uninitialized 0: e
+    5:  get_loc1 1: this
+    6:  get_field Shell
+   11:  lnot
+   12:  if_false8 16
+   14:  push_empty_string
+   15:  return_async
+   16:  push_empty_string
+   17:  put_loc0 0: e
+   18:  push_atom_value function
+   23:  get_loc1 1: this
+   24:  get_field Shell
+   29:  get_field execAsync
+   34:  typeof
+   35:  eq
+   36:  if_false8 60
+   38:  get_loc1 1: this
+   39:  get_field Shell
+   44:  get_field2 execAsync
+   49:  get_arg0 0: t
+   50:  call_method 1
+   53:  await
+   54:  dup
+   55:  put_loc_check 0: e
+   58:  goto8 101
+   60:  push_atom_value function
+   65:  get_loc1 1: this
+   66:  get_field Shell
+   71:  get_field exec
+   76:  typeof
+   77:  eq
+   78:  dup
+   79:  if_false8 101
+   81:  drop
+   82:  get_loc1 1: this
+   83:  get_field Shell
+   88:  get_field2 exec
+   93:  get_arg0 0: t
+   94:  call_method 1
+   97:  dup
+   98:  put_loc_check 0: e
+  101:  drop
+  102:  get_loc1 1: this
+  103:  get_field2 getShellOutput
+  108:  get_loc_check 0: e
+  111:  call_method 1
+  114:  get_field2 trim
+  119:  call_method 0
+  122:  return_async
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:1 next:-1]
+    1: const o [level:1 next:0]
+  stack_size: 8
+  opcodes:
+    0:  set_loc_uninitialized 1: o
+    3:  set_loc_uninitialized 0: e
+    6:  get_var String
+   11:  get_arg0 0: t
+   12:  dup
+   13:  if_true8 17
+   15:  drop
+   16:  push_empty_string
+   17:  call1 1
+   18:  get_field2 trim
+   23:  call_method 0
+   26:  put_loc0 0: e
+   27:  get_loc_check 0: e
+   30:  lnot
+   31:  if_false8 35
+   33:  push_0 0
+   34:  return
+   35:  push_const8 0: 1"^\\d+(\\.\\d+)?$"
+   37:  push_const8 1: 1"\u0000\u0002\u0000S\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u000d\u0001\u0001\u0009 \u0000\u0000\u0000\u000b\u0001\u0001.\u0000\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u000c\u0001\u0006\u000c\u0000\n"
+   39:  regexp
+   40:  get_field2 test
+   45:  get_loc_check 0: e
+   48:  call_method 1
+   51:  if_false8 93
+   53:  get_var Math
+   58:  get_field2 max
+   63:  get_var Math
+   68:  get_field2 round
+   73:  push_i16 1000
+   76:  get_var parseFloat
+   81:  get_loc_check 0: e
+   84:  call1 1
+   85:  mul
+   86:  call_method 1
+   89:  push_0 0
+   90:  tail_call_method 2
+   93:  get_loc_check 0: e
+   96:  get_field2 match
+  101:  push_const8 2: 1"(\\d{1,2}):(\\d{2}):(\\d{2})(?:\\.(\\d+))?"
+  103:  push_const8 3: 1"\u0000\u0005\u0000\u0095\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u000b\u0001\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u000c\u0001\u0001:\u0000\u000b\u0002\u001c\u0008\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u000c\u0002\u0001:\u0000\u000b\u0003\u001c\u0008\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u000c\u0003\u000d\u0004\u0004\u0009 \u0000\u0000\u0000\u0001.\u0000\u000b\u0004\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u000c\u0004\u000c\u0000\n"
+  105:  regexp
+  106:  call_method 1
+  109:  put_loc1 1: o
+  110:  get_loc_check 1: o
+  113:  lnot
+  114:  if_false8 118
+  116:  push_0 0
+  117:  return
+  118:  push_i16 1000
+  121:  push_i8 60
+  123:  push_i8 60
+  125:  get_var parseInt
+  130:  get_loc_check 1: o
+  133:  push_1 1
+  134:  get_array_el
+  135:  push_i8 10
+  137:  call2 2
+  138:  dup
+  139:  if_true8 143
+  141:  drop
+  142:  push_0 0
+  143:  mul
+  144:  get_var parseInt
+  149:  get_loc_check 1: o
+  152:  push_2 2
+  153:  get_array_el
+  154:  push_i8 10
+  156:  call2 2
+  157:  dup
+  158:  if_true8 162
+  160:  drop
+  161:  push_0 0
+  162:  add
+  163:  mul
+  164:  get_var parseInt
+  169:  get_loc_check 1: o
+  172:  push_3 3
+  173:  get_array_el
+  174:  push_i8 10
+  176:  call2 2
+  177:  dup
+  178:  if_true8 182
+  180:  drop
+  181:  push_0 0
+  182:  add
+  183:  mul
+  184:  get_loc_check 1: o
+  187:  push_4 4
+  188:  get_array_el
+  189:  if_false8 227
+  191:  get_var Math
+  196:  get_field2 round
+  201:  push_i16 1000
+  204:  get_var parseFloat
+  209:  push_atom_value "0."
+  214:  get_loc_check 1: o
+  217:  push_4 4
+  218:  get_array_el
+  219:  add
+  220:  call1 1
+  221:  mul
+  222:  call_method 1
+  225:  goto8 228
+  227:  push_0 0
+  228:  add
+  229:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:3 next:-1]
+    1: const o [level:3 next:0]
+    2: catch t [level:4 next:-1]
+    3: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_arg0 0: t
+    3:  lnot
+    4:  dup
+    5:  if_true8 15
+    7:  drop
+    8:  get_loc3 3: this
+    9:  get_field Shell
+   14:  lnot
+   15:  if_false8 19
+   17:  push_0 0
+   18:  return_async
+   19:  catch 101
+   24:  set_loc_uninitialized 1: o
+   27:  set_loc_uninitialized 0: e
+   30:  get_loc3 3: this
+   31:  get_field2 escapeShellDoubleQuoted
+   36:  get_arg0 0: t
+   37:  call_method 1
+   40:  put_loc0 0: e
+   41:  get_loc3 3: this
+   42:  get_field2 execShellText
+   47:  push_atom_value "sh -c 'if [ ! -s \""
+   52:  get_loc_check 0: e
+   55:  add
+   56:  push_atom_value "\" ]; then exit 0; fi; if command -v ffprobe >/dev/null 2>&1; then ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 \""
+   61:  add
+   62:  get_loc_check 0: e
+   65:  add
+   66:  push_atom_value "\" 2>/dev/null; else ffmpeg -i \""
+   71:  add
+   72:  get_loc_check 0: e
+   75:  add
+   76:  push_atom_value "\" 2>&1 | sed -n \"s/.*Duration: \\([0-9:.]*\\).*/\\1/p\" | head -n 1; fi'"
+   81:  add
+   82:  call_method 1
+   85:  await
+   86:  put_loc1 1: o
+   87:  get_loc3 3: this
+   88:  get_field2 parseDurationOutput
+   93:  get_loc_check 1: o
+   96:  call_method 1
+   99:  nip
+  100:  return_async
+  101:  put_loc2 2: t
+  102:  catch 110
+  107:  push_0 0
+  108:  nip
+  109:  return_async
+  110:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:1 next:-1]
+  stack_size: 5
+  opcodes:
+    0:  set_loc_uninitialized 0: e
+    3:  get_var Math
+    8:  get_field2 max
+   13:  get_var Number
+   18:  get_arg0 0: t
+   19:  dup
+   20:  if_false8 29
+   22:  drop
+   23:  get_arg0 0: t
+   24:  get_field duration_ms
+   29:  dup
+   30:  if_true8 34
+   32:  drop
+   33:  push_0 0
+   34:  call1 1
+   35:  push_0 0
+   36:  call_method 2
+   39:  put_loc0 0: e
+   40:  object
+   41:  get_arg0 0: t
+   42:  dup
+   43:  if_true8 47
+   45:  drop
+   46:  object
+   47:  null
+   48:  copy_data_properties 6
+   50:  drop
+   51:  drop
+   52:  push_0 0
+   53:  lnot
+   54:  define_field is_local
+   59:  get_loc_check 0: e
+   62:  define_field duration_ms
+   67:  get_loc_check 0: e
+   70:  push_0 0
+   71:  gt
+   72:  if_false8 79
+   74:  get_loc_check 0: e
+   77:  goto8 80
+   79:  push_0 0
+   80:  define_field duration
+   85:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: const o [level:1 next:-1]
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  set_loc_uninitialized 0: o
+    5:  object
+    6:  get_loc1 1: this
+    7:  get_field downloadingMap
+   12:  null
+   13:  copy_data_properties 6
+   15:  drop
+   16:  drop
+   17:  put_loc0 0: o
+   18:  get_arg1 1: e
+   19:  if_false8 32
+   21:  get_loc_check 0: o
+   24:  get_arg0 0: t
+   25:  to_propkey2
+   26:  push_0 0
+   27:  lnot
+   28:  insert3
+   29:  put_array_el
+   30:  goto8 37
+   32:  get_loc_check 0: o
+   35:  get_arg0 0: t
+   36:  delete
+   37:  drop
+   38:  get_loc1 1: this
+   39:  get_loc_check 0: o
+   42:  put_field downloadingMap
+   47:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_arg0 0: t
+    3:  dup
+    4:  if_false8 30
+    6:  drop
+    7:  get_arg0 0: t
+    8:  get_field song_mid
+   13:  dup
+   14:  if_false8 30
+   16:  drop
+   17:  get_loc0 0: this
+   18:  get_field downloadingMap
+   23:  get_arg0 0: t
+   24:  get_field song_mid
+   29:  get_array_el
+   30:  lnot
+   31:  lnot
+   32:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  locals:
+    0: let t [level:1 next:-1]
+    1: let e [level:1 next:0]
+    2: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  set_loc_uninitialized 1: e
+    5:  set_loc_uninitialized 0: t
+    8:  get_loc2 2: this
+    9:  get_field nowPlaying
+   14:  lnot
+   15:  dup
+   16:  if_true8 31
+   18:  drop
+   19:  get_loc2 2: this
+   20:  get_field nowPlaying
+   25:  get_field song_mid
+   30:  lnot
+   31:  if_false8 35
+   33:  null
+   34:  return
+   35:  get_loc2 2: this
+   36:  get_field nowPlaying
+   41:  get_field song_mid
+   46:  put_loc0 0: t
+   47:  array_from 0
+   50:  get_field2 concat
+   55:  get_var Array
+   60:  get_field2 isArray
+   65:  get_loc2 2: this
+   66:  get_field playQueue
+   71:  call_method 1
+   74:  if_false8 84
+   76:  get_loc2 2: this
+   77:  get_field playQueue
+   82:  goto8 87
+   84:  array_from 0
+   87:  call_method 1
+   90:  get_field2 concat
+   95:  get_var Array
+  100:  get_field2 isArray
+  105:  get_loc2 2: this
+  106:  get_field playlistSongs
+  111:  call_method 1
+  114:  if_false8 124
+  116:  get_loc2 2: this
+  117:  get_field playlistSongs
+  122:  goto8 127
+  124:  array_from 0
+  127:  call_method 1
+  130:  get_field2 concat
+  135:  get_var Array
+  140:  get_field2 isArray
+  145:  get_loc2 2: this
+  146:  get_field songs
+  151:  call_method 1
+  154:  if_false8 164
+  156:  get_loc2 2: this
+  157:  get_field songs
+  162:  goto8 167
+  164:  array_from 0
+  167:  call_method 1
+  170:  get_field2 concat
+  175:  get_var Array
+  180:  get_field2 isArray
+  185:  get_loc2 2: this
+  186:  get_field localSongs
+  191:  call_method 1
+  194:  if_false8 204
+  196:  get_loc2 2: this
+  197:  get_field localSongs
+  202:  goto8 207
+  204:  array_from 0
+  207:  call_method 1
+  210:  get_field2 find
+  215:  fclosure8 0: [bytecode <null>]
+  217:  call_method 1
+  220:  put_loc1 1: e
+  221:  get_var Object
+  226:  get_field2 assign
+  231:  object
+  232:  get_loc_check 1: e
+  235:  dup
+  236:  if_true8 240
+  238:  drop
+  239:  object
+  240:  get_loc2 2: this
+  241:  get_field nowPlaying
+  246:  tail_call_method 3
+
+
+/* ===== function depth=2 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 let
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: e
+    1:  dup
+    2:  if_false8 15
+    4:  drop
+    5:  get_arg0 0: e
+    6:  get_field song_mid
+   11:  get_var_ref_check 0: t
+   14:  strict_eq
+   15:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  locals:
+    0: let t [level:1 next:-1]
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  set_loc_uninitialized 0: t
+    5:  get_loc1 1: this
+    6:  get_field2 getCurrentDownloadSong
+   11:  call_method 0
+   14:  put_loc0 0: t
+   15:  get_loc_check 0: t
+   18:  if_false8 75
+   20:  get_loc_check 0: t
+   23:  get_field song_mid
+   28:  if_false8 75
+   30:  get_loc1 1: this
+   31:  get_field2 isSongDownloading
+   36:  get_loc_check 0: t
+   39:  call_method 1
+   42:  if_false8 60
+   44:  get_loc1 1: this
+   45:  get_field2 showToast
+   50:  push_atom_value "\u00e5\u00bd\u0093\u00e5\u0089\u008d\u00e6\u00ad\u008c\u00e6\u009b\u00b2\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e4\u00b8\u008b\u00e8\u00bd\u00bd"
+   55:  call_method 1
+   58:  goto8 89
+   60:  get_loc1 1: this
+   61:  get_field2 downloadSong
+   66:  get_loc_check 0: t
+   69:  call_method 1
+   72:  await
+   73:  goto8 89
+   75:  get_loc1 1: this
+   76:  get_field2 showToast
+   81:  push_atom_value "\u00e5\u00bd\u0093\u00e5\u0089\u008d\u00e6\u00b2\u00a1\u00e6\u009c\u0089\u00e5\u008f\u00af\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e7\u009a\u0084\u00e6\u00ad\u008c\u00e6\u009b\u00b2"
+   86:  call_method 1
+   89:  drop
+   90:  undefined
+   91:  return_async
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:4 next:-1]
+    1: let o [level:4 next:0]
+    2: let t [level:5 next:1]
+    3: const s [level:6 next:2]
+    4: const i [level:6 next:3]
+    5: const a [level:6 next:4]
+    6: const n [level:6 next:5]
+    7: catch t [level:12 next:-1]
+    8: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc8 8: this
+    3:  get_loc8 8: this
+    5:  get_field Dbase
+   10:  if_false 555
+   15:  get_var Array
+   20:  get_field2 isArray
+   25:  get_arg0 0: t
+   26:  call_method 1
+   29:  if_false 555
+   34:  get_arg0 0: t
+   35:  get_length
+   36:  if_false 555
+   41:  get_loc8 8: this
+   43:  get_field localDurationRepairing
+   48:  lnot
+   49:  if_false 555
+   54:  get_loc8 8: this
+   56:  push_0 0
+   57:  lnot
+   58:  put_field localDurationRepairing
+   63:  catch 522
+   68:  set_loc_uninitialized 1: o
+   71:  set_loc_uninitialized 0: e
+   74:  get_arg0 0: t
+   75:  get_field2 slice
+   80:  call_method 0
+   83:  put_loc0 0: e
+   84:  push_1 1
+   85:  lnot
+   86:  put_loc1 1: o
+   87:  set_loc_uninitialized 2: t
+   90:  push_0 0
+   91:  put_loc2 2: t
+   92:  get_loc_check 2: t
+   95:  get_loc_check 0: e
+   98:  get_length
+   99:  lt
+  100:  if_false 383
+  105:  set_loc_uninitialized 6: n
+  108:  set_loc_uninitialized 5: a
+  111:  set_loc_uninitialized 4: i
+  114:  set_loc_uninitialized 3: s
+  117:  get_loc_check 0: e
+  120:  get_loc_check 2: t
+  123:  get_array_el
+  124:  put_loc3 3: s
+  125:  get_loc_check 3: s
+  128:  lnot
+  129:  if_true 372
+  134:  get_loc_check 3: s
+  137:  get_field local_path
+  142:  dup
+  143:  if_true8 159
+  145:  drop
+  146:  get_loc_check 3: s
+  149:  get_field localPath
+  154:  dup
+  155:  if_true8 159
+  157:  drop
+  158:  push_empty_string
+  159:  put_loc8 4: i
+  161:  get_loc_check 4: i
+  164:  lnot
+  165:  if_true 372
+  170:  get_var Math
+  175:  get_field2 max
+  180:  get_var Number
+  185:  get_loc_check 3: s
+  188:  get_field duration_ms
+  193:  dup
+  194:  if_true8 198
+  196:  drop
+  197:  push_0 0
+  198:  call1 1
+  199:  push_0 0
+  200:  call_method 2
+  203:  put_loc8 5: a
+  205:  get_loc_check 5: a
+  208:  push_0 0
+  209:  gt
+  210:  if_false8 300
+  212:  get_var Number
+  217:  get_loc_check 3: s
+  220:  get_field duration
+  225:  dup
+  226:  if_true8 230
+  228:  drop
+  229:  push_0 0
+  230:  call1 1
+  231:  get_loc_check 5: a
+  234:  strict_eq
+  235:  dup
+  236:  if_false8 247
+  238:  drop
+  239:  get_loc_check 3: s
+  242:  get_field is_local
+  247:  dup
+  248:  if_true8 297
+  250:  drop
+  251:  get_loc_check 0: e
+  254:  get_loc_check 2: t
+  257:  to_propkey2
+  258:  object
+  259:  get_loc_check 3: s
+  262:  null
+  263:  copy_data_properties 6
+  265:  drop
+  266:  drop
+  267:  push_0 0
+  268:  lnot
+  269:  define_field is_local
+  274:  get_loc_check 5: a
+  277:  define_field duration_ms
+  282:  get_loc_check 5: a
+  285:  define_field duration
+  290:  put_array_el
+  291:  push_0 0
+  292:  lnot
+  293:  dup
+  294:  put_loc_check 1: o
+  297:  drop
+  298:  goto8 372
+  300:  get_loc8 8: this
+  302:  get_field2 probeLocalDurationMs
+  307:  get_loc_check 4: i
+  310:  call_method 1
+  313:  await
+  314:  put_loc8 6: n
+  316:  get_loc_check 6: n
+  319:  push_0 0
+  320:  gt
+  321:  dup
+  322:  if_false8 371
+  324:  drop
+  325:  get_loc_check 0: e
+  328:  get_loc_check 2: t
+  331:  to_propkey2
+  332:  object
+  333:  get_loc_check 3: s
+  336:  null
+  337:  copy_data_properties 6
+  339:  drop
+  340:  drop
+  341:  push_0 0
+  342:  lnot
+  343:  define_field is_local
+  348:  get_loc_check 6: n
+  351:  define_field duration_ms
+  356:  get_loc_check 6: n
+  359:  define_field duration
+  364:  put_array_el
+  365:  push_0 0
+  366:  lnot
+  367:  dup
+  368:  put_loc_check 1: o
+  371:  drop
+  372:  get_loc_check 2: t
+  375:  post_inc
+  376:  put_loc_check 2: t
+  379:  drop
+  380:  goto16 92
+  383:  get_loc_check 1: o
+  386:  lnot
+  387:  if_false8 397
+  389:  drop
+  390:  undefined
+  391:  gosub 545
+  396:  return_async
+  397:  get_loc8 8: this
+  399:  get_field Dbase
+  404:  get_field2 write
+  409:  get_loc8 8: this
+  411:  get_field2 getLocalMusicKey
+  416:  call_method 0
+  419:  get_loc_check 0: e
+  422:  call_method 2
+  425:  drop
+  426:  push_atom_value local
+  431:  get_loc8 8: this
+  433:  get_field tab
+  438:  strict_eq
+  439:  dup
+  440:  if_false8 511
+  442:  drop
+  443:  get_loc8 8: this
+  445:  get_loc_check 0: e
+  448:  get_field2 map
+  453:  fclosure8 0: [bytecode <null>]
+  455:  call_method 1
+  458:  put_field localSongs
+  463:  get_loc8 8: this
+  465:  get_loc8 8: this
+  467:  get_field localSongs
+  472:  get_field2 slice
+  477:  call_method 0
+  480:  put_field songs
+  485:  get_loc8 8: this
+  487:  get_loc8 8: this
+  489:  get_field songs
+  494:  get_length
+  495:  if_false8 500
+  497:  push_empty_string
+  498:  goto8 505
+  500:  push_atom_value "\u00e6\u009a\u0082\u00e6\u0097\u00a0\u00e6\u009c\u00ac\u00e5\u009c\u00b0\u00e9\u009f\u00b3\u00e4\u00b9\u0090"
+  505:  insert2
+  506:  put_field tipText
+  511:  drop
+  512:  drop
+  513:  undefined
+  514:  gosub 545
+  519:  drop
+  520:  goto8 555
+  522:  put_loc8 7: t
+  524:  catch 539
+  529:  drop
+  530:  undefined
+  531:  gosub 545
+  536:  drop
+  537:  goto8 555
+  539:  gosub 545
+  544:  throw
+  545:  get_loc8 8: this
+  547:  push_1 1
+  548:  lnot
+  549:  put_field localDurationRepairing
+  554:  ret
+  555:  undefined
+  556:  return_async
+
+
+/* ===== function depth=2 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: this local:loc8 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  get_field2 buildLocalSongRecord
+    6:  get_arg0 0: t
+    7:  tail_call_method 1
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  locals:
+    0: let t [level:3 next:-1]
+    1: catch t [level:4 next:-1]
+    2: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field Dbase
+    8:  lnot
+    9:  if_false8 32
+   11:  get_loc2 2: this
+   12:  array_from 0
+   15:  put_field songs
+   20:  get_loc2 2: this
+   21:  push_atom_value "\u00e6\u009c\u00ac\u00e5\u009c\u00b0\u00e6\u0095\u00b0\u00e6\u008d\u00ae\u00e5\u00ba\u0093\u00e4\u00b8\u008d\u00e5\u008f\u00af\u00e7\u0094\u00a8"
+   26:  put_field tipText
+   31:  return_undef
+   32:  catch 169
+   37:  set_loc_uninitialized 0: t
+   40:  get_loc2 2: this
+   41:  get_field Dbase
+   46:  get_field2 read
+   51:  get_loc2 2: this
+   52:  get_field2 getLocalMusicKey
+   57:  call_method 0
+   60:  call_method 1
+   63:  put_loc0 0: t
+   64:  get_var Array
+   69:  get_field2 isArray
+   74:  get_loc_check 0: t
+   77:  call_method 1
+   80:  dup
+   81:  if_true8 91
+   83:  drop
+   84:  array_from 0
+   87:  dup
+   88:  put_loc_check 0: t
+   91:  drop
+   92:  get_loc2 2: this
+   93:  get_loc_check 0: t
+   96:  get_field2 map
+  101:  fclosure8 0: [bytecode <null>]
+  103:  call_method 1
+  106:  put_field localSongs
+  111:  get_loc2 2: this
+  112:  get_loc2 2: this
+  113:  get_field localSongs
+  118:  get_field2 slice
+  123:  call_method 0
+  126:  put_field songs
+  131:  get_loc2 2: this
+  132:  get_loc2 2: this
+  133:  get_field songs
+  138:  get_length
+  139:  if_false8 144
+  141:  push_empty_string
+  142:  goto8 149
+  144:  push_atom_value "\u00e6\u009a\u0082\u00e6\u0097\u00a0\u00e6\u009c\u00ac\u00e5\u009c\u00b0\u00e9\u009f\u00b3\u00e4\u00b9\u0090"
+  149:  put_field tipText
+  154:  get_loc2 2: this
+  155:  get_field2 repairLocalSongDurations
+  160:  get_loc_check 0: t
+  163:  call_method 1
+  166:  drop
+  167:  drop
+  168:  return_undef
+  169:  put_loc1 1: t
+  170:  catch 206
+  175:  get_loc2 2: this
+  176:  array_from 0
+  179:  put_field localSongs
+  184:  get_loc2 2: this
+  185:  array_from 0
+  188:  put_field songs
+  193:  get_loc2 2: this
+  194:  push_atom_value "\u00e6\u009c\u00ac\u00e5\u009c\u00b0\u00e9\u009f\u00b3\u00e4\u00b9\u0090\u00e8\u00af\u00bb\u00e5\u008f\u0096\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  199:  put_field tipText
+  204:  drop
+  205:  return_undef
+  206:  throw
+
+
+/* ===== function depth=2 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: this local:loc2 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: this
+    1:  get_field2 buildLocalSongRecord
+    6:  get_arg0 0: t
+    7:  tail_call_method 1
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  set_loc_uninitialized 0: t
+    5:  get_var Array
+   10:  get_field2 isArray
+   15:  get_loc1 1: this
+   16:  get_field _activeDownloadTasks
+   21:  call_method 1
+   24:  if_false8 42
+   26:  get_loc1 1: this
+   27:  get_field _activeDownloadTasks
+   32:  get_field2 slice
+   37:  call_method 0
+   40:  goto8 45
+   42:  array_from 0
+   45:  put_loc0 0: t
+   46:  get_loc1 1: this
+   47:  array_from 0
+   50:  put_field _activeDownloadTasks
+   55:  get_loc_check 0: t
+   58:  get_field2 forEach
+   63:  fclosure8 0: [bytecode <null>]
+   65:  call_method 1
+   68:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: catch t [level:6 next:-1]
+    1: catch t [level:10 next:-1]
+  stack_size: 5
+  opcodes:
+    0:  get_arg0 0: t
+    1:  if_false 212
+    6:  get_arg0 0: t
+    7:  get_field settled
+   12:  lnot
+   13:  if_false 212
+   18:  get_arg0 0: t
+   19:  push_0 0
+   20:  lnot
+   21:  put_field settled
+   26:  get_arg0 0: t
+   27:  get_field timer
+   32:  dup
+   33:  if_false8 48
+   35:  drop
+   36:  get_var clearInterval
+   41:  get_arg0 0: t
+   42:  get_field timer
+   47:  call1 1
+   48:  drop
+   49:  get_arg0 0: t
+   50:  get_field handle
+   55:  if_false8 110
+   57:  push_atom_value function
+   62:  get_arg0 0: t
+   63:  get_field handle
+   68:  get_field abort
+   73:  typeof
+   74:  eq
+   75:  if_false8 110
+   77:  catch 100
+   82:  get_arg0 0: t
+   83:  get_field handle
+   88:  get_field2 abort
+   93:  call_method 0
+   96:  drop
+   97:  drop
+   98:  goto8 110
+  100:  put_loc0 0: t
+  101:  catch 109
+  106:  drop
+  107:  goto8 110
+  109:  throw
+  110:  get_arg0 0: t
+  111:  get_field handle
+  116:  if_false8 171
+  118:  push_atom_value function
+  123:  get_arg0 0: t
+  124:  get_field handle
+  129:  get_field destroy
+  134:  typeof
+  135:  eq
+  136:  if_false8 171
+  138:  catch 161
+  143:  get_arg0 0: t
+  144:  get_field handle
+  149:  get_field2 destroy
+  154:  call_method 0
+  157:  drop
+  158:  drop
+  159:  goto8 171
+  161:  put_loc1 1: t
+  162:  catch 170
+  167:  drop
+  168:  goto8 171
+  170:  throw
+  171:  push_atom_value function
+  176:  get_arg0 0: t
+  177:  get_field reject
+  182:  typeof
+  183:  eq
+  184:  dup
+  185:  if_false8 211
+  187:  drop
+  188:  get_arg0 0: t
+  189:  get_field2 reject
+  194:  get_var Error
+  199:  dup
+  200:  push_atom_value "page closed"
+  205:  call_constructor 1
+  208:  call_method 1
+  211:  drop
+  212:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_1 1
+    4:  lnot
+    5:  put_field showLoginModal
+   10:  get_loc0 0: this
+   11:  get_field2 stopPolling
+   16:  call_method 0
+   19:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field pollTimer
+    8:  dup
+    9:  if_false8 33
+   11:  drop
+   12:  get_var clearInterval
+   17:  get_loc0 0: this
+   18:  get_field pollTimer
+   23:  call1 1
+   24:  drop
+   25:  get_loc0 0: this
+   26:  null
+   27:  insert2
+   28:  put_field pollTimer
+   33:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: let e [level:1 next:-1]
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  set_loc_uninitialized 0: e
+    5:  get_arg0 0: t
+    6:  push_0 0
+    7:  lt
+    8:  dup
+    9:  if_true8 21
+   11:  drop
+   12:  get_arg0 0: t
+   13:  get_loc1 1: this
+   14:  get_field playQueue
+   19:  get_length
+   20:  gte
+   21:  if_false8 24
+   23:  return_undef
+   24:  get_loc1 1: this
+   25:  get_field playQueue
+   30:  get_arg0 0: t
+   31:  get_array_el
+   32:  put_loc0 0: e
+   33:  get_loc1 1: this
+   34:  object
+   35:  get_loc_check 0: e
+   38:  null
+   39:  copy_data_properties 6
+   41:  drop
+   42:  drop
+   43:  push_atom_value loading
+   48:  define_field quality
+   53:  put_field nowPlaying
+   58:  get_loc1 1: this
+   59:  get_field2 sendMusicCommand
+   64:  object
+   65:  push_atom_value play_song
+   70:  define_field action
+   75:  get_loc_check 0: e
+   78:  define_field song
+   83:  call_method 1
+   86:  drop
+   87:  get_loc1 1: this
+   88:  push_1 1
+   89:  lnot
+   90:  put_field showQueueModal
+   95:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 4
+  opcodes:
+    0:  push_atom_value undefined
+    5:  get_var_undef $falcon
+   10:  typeof
+   11:  neq
+   12:  dup
+   13:  if_false8 35
+   15:  drop
+   16:  get_var $falcon
+   21:  get_field2 trigger
+   26:  push_atom_value music_command
+   31:  get_arg0 0: t
+   32:  call_method 2
+   35:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  push_atom_value queueItem
+    5:  get_arg0 0: t
+    6:  add
+    7:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  locals:
+    0: let t [level:1 next:-1]
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  set_loc_uninitialized 0: t
+    5:  get_loc1 1: this
+    6:  push_0 0
+    7:  lnot
+    8:  put_field showQueueModal
+   13:  get_loc1 1: this
+   14:  push_i8 20
+   16:  put_field displayQueueLimit
+   21:  get_loc1 1: this
+   22:  put_loc0 0: t
+   23:  get_var setTimeout
+   28:  fclosure8 0: [bytecode <null>]
+   30:  push_i8 30
+   32:  call2 2
+   33:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t local:loc0 let
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref_check 0: t
+    3:  push_0 0
+    4:  lnot
+    5:  put_field drawerVisible
+   10:  get_var setTimeout
+   15:  fclosure8 0: [bytecode <null>]
+   17:  push_i16 350
+   20:  call2 2
+   21:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t parent:loc0 let
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref_check 0: t
+    3:  push_i16 9999
+    6:  put_field displayQueueLimit
+   11:  get_var_ref_check 0: t
+   14:  get_field2 scrollQueueToCurrent
+   19:  call_method 0
+   22:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  locals:
+    0: let t [level:1 next:-1]
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  set_loc_uninitialized 0: t
+    5:  get_loc1 1: this
+    6:  push_1 1
+    7:  lnot
+    8:  put_field drawerVisible
+   13:  get_loc1 1: this
+   14:  put_loc0 0: t
+   15:  get_var setTimeout
+   20:  fclosure8 0: [bytecode <null>]
+   22:  push_i16 300
+   25:  call2 2
+   26:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t local:loc0 let
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref_check 0: t
+    3:  push_1 1
+    4:  lnot
+    5:  put_field showQueueModal
+   10:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  locals:
+    0: let t [level:1 next:-1]
+    1: let e [level:1 next:0]
+    2: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  set_loc_uninitialized 1: e
+    5:  set_loc_uninitialized 0: t
+    8:  get_loc2 2: this
+    9:  get_field playQueueIdx
+   14:  push_0 0
+   15:  lt
+   16:  if_false8 19
+   18:  return_undef
+   19:  get_loc2 2: this
+   20:  put_loc0 0: t
+   21:  fclosure8 0: [bytecode <null>]
+   23:  set_name e
+   28:  put_loc1 1: e
+   29:  get_loc2 2: this
+   30:  get_field2 $nextTick
+   35:  fclosure8 1: [bytecode <null>]
+   37:  call_method 1
+   40:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  locals:
+    0: let e [level:2 next:-1]
+    1: let o [level:2 next:0]
+    2: let s [level:2 next:1]
+    3: catch t [level:3 next:-1]
+  closure vars:
+    0: t local:loc0 let
+  stack_size: 6
+  opcodes:
+    0:  catch 223
+    5:  set_loc_uninitialized 2: s
+    8:  set_loc_uninitialized 1: o
+   11:  set_loc_uninitialized 0: e
+   14:  get_var_ref_check 0: t
+   17:  get_field $refs
+   22:  get_field queueScroller
+   27:  put_loc0 0: e
+   28:  get_var_ref_check 0: t
+   31:  get_field $refs
+   36:  get_var_ref_check 0: t
+   39:  get_field2 queueItemRef
+   44:  get_var_ref_check 0: t
+   47:  get_field playQueueIdx
+   52:  call_method 1
+   55:  get_array_el
+   56:  put_loc1 1: o
+   57:  get_var Array
+   62:  get_field2 isArray
+   67:  get_loc_check 1: o
+   70:  call_method 1
+   73:  if_false8 82
+   75:  get_loc_check 1: o
+   78:  push_0 0
+   79:  get_array_el
+   80:  goto8 85
+   82:  get_loc_check 1: o
+   85:  put_loc2 2: s
+   86:  get_loc_check 0: e
+   89:  if_false8 130
+   91:  get_loc_check 2: s
+   94:  if_false8 130
+   96:  get_loc_check 0: e
+   99:  get_field scrollToElement
+  104:  if_false8 130
+  106:  get_loc_check 0: e
+  109:  get_field2 scrollToElement
+  114:  get_loc_check 2: s
+  117:  object
+  118:  push_0 0
+  119:  lnot
+  120:  define_field animated
+  125:  call_method 2
+  128:  goto8 220
+  130:  get_var_ref_check 0: t
+  133:  get_field $page
+  138:  dup
+  139:  if_false8 220
+  141:  drop
+  142:  get_var_ref_check 0: t
+  145:  get_field $page
+  150:  get_field $dom
+  155:  dup
+  156:  if_false8 220
+  158:  drop
+  159:  get_var_ref_check 0: t
+  162:  get_field $page
+  167:  get_field $dom
+  172:  get_field scrollToElement
+  177:  dup
+  178:  if_false8 220
+  180:  drop
+  181:  get_loc_check 2: s
+  184:  dup
+  185:  if_false8 220
+  187:  drop
+  188:  get_var_ref_check 0: t
+  191:  get_field $page
+  196:  get_field $dom
+  201:  get_field2 scrollToElement
+  206:  get_loc_check 2: s
+  209:  object
+  210:  push_i8 -60
+  212:  define_field offset
+  217:  call_method 2
+  220:  drop
+  221:  drop
+  222:  return_undef
+  223:  put_loc3 3: t
+  224:  catch 231
+  229:  drop
+  230:  return_undef
+  231:  throw
+
+
+/* ===== function depth=2 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: e local:loc1 let
+  stack_size: 3
+  opcodes:
+    0:  get_var setTimeout
+    5:  get_var_ref_check 0: e
+    8:  push_i8 30
+   10:  call2 2
+   11:  drop
+   12:  get_var setTimeout
+   17:  get_var_ref_check 0: e
+   20:  push_i8 90
+   22:  call2 2
+   23:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 sendMusicCommand
+    8:  object
+    9:  push_atom_value clear_queue
+   14:  define_field action
+   19:  call_method 1
+   22:  drop
+   23:  get_loc0 0: this
+   24:  get_field2 closeQueueDrawer
+   29:  call_method 0
+   32:  drop
+   33:  get_loc0 0: this
+   34:  get_field2 showToast
+   39:  push_atom_value "\u00e6\u0092\u00ad\u00e6\u0094\u00be\u00e9\u0098\u009f\u00e5\u0088\u0097\u00e5\u00b7\u00b2\u00e6\u00b8\u0085\u00e7\u00a9\u00ba"
+   44:  call_method 1
+   47:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: let e [level:1 next:-1]
+    1: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  set_loc_uninitialized 0: e
+    5:  get_arg0 0: t
+    6:  push_0 0
+    7:  lt
+    8:  dup
+    9:  if_true8 21
+   11:  drop
+   12:  get_arg0 0: t
+   13:  get_loc1 1: this
+   14:  get_field playQueue
+   19:  get_length
+   20:  gte
+   21:  if_false8 24
+   23:  return_undef
+   24:  get_loc1 1: this
+   25:  get_field playQueue
+   30:  get_arg0 0: t
+   31:  get_array_el
+   32:  put_loc0 0: e
+   33:  get_loc1 1: this
+   34:  get_field2 sendMusicCommand
+   39:  object
+   40:  push_atom_value remove_queue_item
+   45:  define_field action
+   50:  get_arg0 0: t
+   51:  define_field index
+   56:  call_method 1
+   59:  drop
+   60:  get_loc1 1: this
+   61:  get_field2 showToast
+   66:  push_atom_value "\u00e5\u00b7\u00b2\u00e7\u00a7\u00bb\u00e9\u0099\u00a4: "
+   71:  get_loc_check 0: e
+   74:  get_field title
+   79:  dup
+   80:  if_true8 88
+   82:  drop
+   83:  push_atom_value "\u00e6\u00ad\u008c\u00e6\u009b\u00b2"
+   88:  add
+   89:  call_method 1
+   92:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 sendMusicCommand
+    8:  object
+    9:  push_atom_value toggle
+   14:  define_field action
+   19:  call_method 1
+   22:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 sendMusicCommand
+    8:  object
+    9:  push_atom_value prev
+   14:  define_field action
+   19:  call_method 1
+   22:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 sendMusicCommand
+    8:  object
+    9:  push_atom_value next
+   14:  define_field action
+   19:  call_method 1
+   22:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: music-shared-218de356.js:1 source_len=0 */
+music-shared-218de356.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 sendMusicCommand
+    8:  object
+    9:  push_atom_value toggle_mode
+   14:  define_field action
+   19:  call_method 1
+   22:  return_undef
+

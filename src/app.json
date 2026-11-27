@@ -1,6 +1,7 @@
 {
   "pages": {
     "index": "pages/index/index.vue",
+    "desktop": "pages/desktop/desktop.vue",
     "ai": "pages/ai/ai.vue",
     "aiSettings": "pages/aiSettings/aiSettings.vue",
     "aiHistory": "pages/aiHistory/aiHistory.vue",

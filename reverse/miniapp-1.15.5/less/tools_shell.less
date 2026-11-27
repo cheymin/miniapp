@@ -1,0 +1,600 @@
+.term-root {
+    background-color: #1A1A2E;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+}
+
+.term-panel {
+    width: 42%;
+    height: 100%;
+    flex-direction: column;
+    background-color: #1A1A2E;
+    border-right-width: 1px;
+    border-right-color: rgba(255,255,255,0.08);
+    border-right-style: solid;
+}
+
+.term-statusbar {
+    height: 20px;
+    background-color: #111111;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 4px;
+}
+
+.st-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+.st-label {
+    color: #888888;
+    font-size: 11px;
+    flex: 1;
+}
+
+.st-btn {
+    width: 24px;
+    height: 16px;
+    background-color: #2c2c2e;
+    border-radius: 4px;
+    margin-left: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.st-btn-press {
+    background-color: #333333;
+}
+
+.st-bt {
+    font-size: 11px;
+}
+
+.term-screen {
+    flex: 1;
+    background-color: #000000;
+    padding-left: 2px;
+}
+
+.term-row {
+    min-height: 14px;
+    overflow: hidden;
+}
+
+.term-line {
+    font-size: 11px;
+    line-height: 14px;
+    color: #cccccc;
+    font-family: monospace;
+}
+
+.input-preview {
+    height: 20px;
+    background-color: #0d1117;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 3px;
+    border-top-width: 1px;
+    border-top-color: #1e2430;
+    border-top-style: solid;
+}
+
+.input-prompt {
+    color: #00e676;
+    font-size: 11px;
+    margin-right: 2px;
+}
+
+.input-text {
+    color: #ffffff;
+    font-size: 11px;
+    flex: 1;
+}
+
+.kb-panel {
+    flex: 1;
+    height: 100%;
+    background-color: #111111;
+    flex-direction: column;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.kb-mode-row {
+    flex-direction: row;
+    height: 22px;
+    margin-bottom: 4px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.kb-mode-btn {
+    flex: 1;
+    height: 20px;
+    background-color: #2c2c2e;
+    border-radius: 8px;
+    margin-right: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.kb-mode-btn-press {
+    background-color: #3a3a3c;
+}
+
+.kb-mode-on {
+    background-color: #1a3a2a;
+}
+
+.kb-mode-t {
+    color: #888888;
+    font-size: 11px;
+}
+
+.kb-placeholder {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.kb-placeholder-t {
+    color: #39393d;
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+
+.kb-open-btn {
+    height: 36px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #1a4a1a;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.kb-open-btn-press {
+    background-color: #2a7a2a;
+}
+
+.kb-open-t {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.fn-row {
+    flex-direction: row;
+    height: 32px;
+    margin-bottom: 4px;
+}
+
+.fn-key {
+    flex: 1;
+    height: 28px;
+    background-color: #1c2a3a;
+    border-radius: 8px;
+    margin-right: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.fn-key-press {
+    background-color: #2a4060;
+}
+
+.fn-key-del {
+    flex: 1;
+    height: 28px;
+    background-color: #2a1515;
+    border-radius: 8px;
+    margin-right: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.fn-key-del-press {
+    background-color: #4a2020;
+}
+
+.fn-t {
+    color: #a0c4e8;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.kb-scroll {
+    flex: 1;
+    width: 100%;
+}
+
+.kb-row {
+    flex-direction: row;
+    height: 44px;
+    margin-bottom: 2px;
+    align-items: center;
+}
+
+.kb-key {
+    flex: 1;
+    height: 40px;
+    background-color: #2c2c2e;
+    border-radius: 8px;
+    margin-right: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.kb-key-press {
+    background-color: #3a3a3c;
+}
+
+.kb-t {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.kb-enter {
+    height: 40px;
+    flex: 1.5;
+    background-color: #1a3a1a;
+    border-radius: 8px;
+    margin-right: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.kb-enter-press {
+    background-color: #2a6a2a;
+}
+
+.kb-shift {
+    height: 40px;
+    flex: 1.4;
+    background-color: #1a1a2a;
+    border-radius: 8px;
+    margin-right: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.kb-shift-press {
+    background-color: #2a2a4a;
+}
+
+.kb-space {
+    flex: <expr>;
+    height: 40px;
+    background-color: #3a3a3c;
+    border-radius: 8px;
+    margin-right: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.kb-space-press {
+    background-color: #3a3a3c;
+}
+
+.kb-sym {
+    flex: 1.4;
+    height: 40px;
+    background-color: #1a1a2a;
+    border-radius: 8px;
+    margin-right: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.kb-sym-press {
+    background-color: #2a2a4a;
+}
+
+.kb-sym-char {
+    flex: 1;
+    height: 40px;
+    background-color: #1e1e28;
+    border-radius: 8px;
+    margin-right: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.kb-sym-char-press {
+    background-color: #2e2e3e;
+}
+
+.claw-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #050a0a;
+    z-index: <expr>;
+    flex-direction: column;
+}
+
+.claw-panel {
+    flex: 1;
+    flex-direction: column;
+}
+
+.claw-header {
+    height: 28px;
+    background-color: #0a1a10;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 8px;
+    border-bottom-width: 1px;
+    border-bottom-color: #1a3a20;
+    border-bottom-style: solid;
+}
+
+.claw-title {
+    color: #44ff88;
+    font-size: 13px;
+    font-weight: bold;
+    flex: 1;
+}
+
+.claw-close {
+    width: 24px;
+    height: 22px;
+    background-color: #2a1010;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.claw-close-press {
+    background-color: #5a2020;
+}
+
+.claw-close-t {
+    color: #ff5555;
+    font-size: 12px;
+}
+
+.claw-output {
+    flex: 1;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+}
+
+.claw-empty {
+    padding-top: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.claw-empty-t {
+    color: #336644;
+    font-size: 12px;
+}
+
+.claw-msg {
+    margin-bottom: 8px;
+    background-color: #0e1a10;
+    border-radius: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-width: 1px;
+    border-color: #1a3a20;
+    border-style: solid;
+}
+
+.claw-role {
+    color: #33aa44;
+    font-size: 11px;
+    margin-bottom: 2px;
+}
+
+.claw-content {
+    font-size: 12px;
+}
+
+.claw-cmd-row {
+    flex-direction: row;
+    align-items: center;
+    background-color: #090e09;
+    border-radius: 4px;
+    margin-top: 4px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 6px;
+    padding-right: 5px;
+    border-width: 1px;
+    border-color: #1e3e1e;
+    border-style: solid;
+}
+
+.claw-cmd-txt {
+    flex: 1;
+    color: #88ffaa;
+    font-size: 12px;
+    font-family: monospace;
+}
+
+.claw-cmd-btn {
+    height: 24px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 4px;
+    background-color: #1a4a1a;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4px;
+}
+
+.claw-cmd-btn-press {
+    background-color: #2a7a2a;
+}
+
+.claw-cmd-btn-t {
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.claw-cmd-result {
+    flex: 1;
+    color: #666666;
+    font-size: 11px;
+    margin-left: 4px;
+}
+
+.claw-thinking {
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.claw-thinking-t {
+    color: #66cc66;
+    font-size: 12px;
+}
+
+.claw-bottom {
+    height: 34px;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #0a1208;
+    border-top-width: 1px;
+    border-top-color: #1a3020;
+    border-top-style: solid;
+}
+
+.claw-input-box {
+    flex: 1;
+    height: 26px;
+    background-color: #101810;
+    border-radius: 8px;
+    padding-left: 8px;
+    justify-content: center;
+    margin-right: 8px;
+    border-width: 1px;
+    border-color: #1e3a1e;
+    border-style: solid;
+}
+
+.claw-input-ph {
+    color: #336644;
+    font-size: 12px;
+}
+
+.claw-input-val {
+    color: #aaffaa;
+    font-size: 12px;
+}
+
+.claw-continue {
+    width: 48px;
+    height: 26px;
+    background-color: #2a2a10;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4px;
+}
+
+.claw-continue-press {
+    background-color: #4a4a1a;
+}
+
+.claw-send {
+    width: 48px;
+    height: 26px;
+    background-color: #1a4a1a;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.claw-send-press {
+    background-color: #2a7a2a;
+}
+
+.claw-btn-t {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.claw-settings-btn {
+    width: 24px;
+    height: 22px;
+    background-color: #1a2a1a;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4px;
+}
+
+.claw-settings-btn-press {
+    background-color: #2a4a2a;
+}
+
+.claw-settings-panel {
+    padding-top: 8px;
+    padding-right: 10px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    flex-direction: column;
+    border-bottom-width: 1px;
+    border-bottom-color: #1a3a20;
+    border-bottom-style: solid;
+    background-color: #0d1a10;
+}
+
+.claw-set-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 6px;
+    padding-right: 8px;
+    padding-bottom: 6px;
+    padding-left: 8px;
+    background-color: #1a2a1a;
+    border-radius: 8px;
+    margin-bottom: 4px;
+}
+
+.claw-set-row-press {
+    background-color: #2a4a2a;
+}
+
+.claw-set-label {
+    color: #6a8a6a;
+    font-size: 11px;
+}
+
+.claw-set-val {
+    color: #ccffcc;
+    font-size: 11px;
+    max-width: 140px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.claw-set-hint {
+    color: #4a6a4a;
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+.claw-input-box-press {
+    opacity: 0.65;
+}

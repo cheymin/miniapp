@@ -1,0 +1,3566 @@
+
+/* ===== function depth=0 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: t parent:loc0 const
+    1: e parent:loc1 const
+    2: i parent:loc2 const
+    3: o local:loc0 var
+    4: s local:loc1 var
+    5: r local:loc2 const
+  stack_size: 7
+  opcodes:
+    0:  object
+    1:  fclosure8 0: [bytecode <null>]
+    3:  set_name data
+    8:  define_field data
+   13:  object
+   14:  fclosure8 1: [bytecode <null>]
+   16:  set_name statusColor
+   21:  define_field statusColor
+   26:  fclosure8 2: [bytecode <null>]
+   28:  set_name videoRows
+   33:  define_field videoRows
+   38:  fclosure8 3: [bytecode <null>]
+   40:  set_name detailMeta
+   45:  define_field detailMeta
+   50:  fclosure8 4: [bytecode <null>]
+   52:  set_name sourceBtnText
+   57:  define_field sourceBtnText
+   62:  define_field computed
+   67:  fclosure8 5: [bytecode <null>]
+   69:  set_name mounted
+   74:  define_field mounted
+   79:  fclosure8 6: [bytecode <null>]
+   81:  set_name beforeDestroy
+   86:  define_field beforeDestroy
+   91:  object
+   92:  fclosure8 7: [bytecode <null>]
+   94:  set_name tbs
+   99:  define_field tbs
+  104:  fclosure8 8: [bytecode <null>]
+  106:  set_name tfs
+  111:  define_field tfs
+  116:  fclosure8 9: [bytecode <null>]
+  118:  set_name eatEvent
+  123:  define_field eatEvent
+  128:  fclosure8 10: [bytecode <null>]
+  130:  set_name formatNum
+  135:  define_field formatNum
+  140:  fclosure8 11: [bytecode <null>]
+  142:  set_name formatStat
+  147:  define_field formatStat
+  152:  fclosure8 12: [bytecode <null>]
+  154:  set_name authorName
+  159:  define_field authorName
+  164:  fclosure8 13: [bytecode <null>]
+  166:  set_name thumbProxy
+  171:  define_field thumbProxy
+  176:  fclosure8 14: [bytecode <null>]
+  178:  set_name resText
+  183:  define_field resText
+  188:  fclosure8 15: [bytecode <null>]
+  190:  set_name normalizeKbData
+  195:  define_field normalizeKbData
+  200:  fclosure8 16: [bytecode <null>]
+  202:  set_name goTrending
+  207:  define_field goTrending
+  212:  fclosure8 17: [bytecode <null>]
+  214:  set_name goHot
+  219:  define_field goHot
+  224:  fclosure8 18: [bytecode <null>]
+  226:  set_name goNew
+  231:  define_field goNew
+  236:  fclosure8 19: [bytecode <null>]
+  238:  set_name goSearch
+  243:  define_field goSearch
+  248:  fclosure8 20: [bytecode <null>]
+  250:  set_name goHistory
+  255:  define_field goHistory
+  260:  fclosure8 21: [bytecode <null>]
+  262:  set_name initBridge
+  267:  define_field initBridge
+  272:  fclosure8 22: [bytecode <null>]
+  274:  set_name loadVideos
+  279:  define_field loadVideos
+  284:  fclosure8 23: [bytecode <null>]
+  286:  set_name openKeyboardForSearch
+  291:  define_field openKeyboardForSearch
+  296:  fclosure8 24: [bytecode <null>]
+  298:  set_name doSearch
+  303:  define_field doSearch
+  308:  fclosure8 25: [bytecode <null>]
+  310:  set_name onCardClick
+  315:  define_field onCardClick
+  320:  fclosure8 26: [bytecode <null>]
+  322:  set_name openRelated
+  327:  define_field openRelated
+  332:  fclosure8 27: [bytecode <null>]
+  334:  set_name openVideoDetail
+  339:  define_field openVideoDetail
+  344:  fclosure8 28: [bytecode <null>]
+  346:  set_name closeModal
+  351:  define_field closeModal
+  356:  fclosure8 29: [bytecode <null>]
+  358:  set_name fetchDetail
+  363:  define_field fetchDetail
+  368:  fclosure8 30: [bytecode <null>]
+  370:  set_name fetchSources
+  375:  define_field fetchSources
+  380:  fclosure8 31: [bytecode <null>]
+  382:  set_name playSource
+  387:  define_field playSource
+  392:  fclosure8 32: [bytecode <null>]
+  394:  set_name saveWatchHistory
+  399:  define_field saveWatchHistory
+  404:  fclosure8 33: [bytecode <null>]
+  406:  set_name loadHistory
+  411:  define_field loadHistory
+  416:  define_field methods
+  421:  put_var_ref3 3: o
+  422:  fclosure8 34: [bytecode <null>]
+  424:  set_name s
+  429:  set_var_ref 4: s
+  432:  push_0 0
+  433:  lnot
+  434:  put_field _withStripped
+  439:  get_var_ref3 3: o
+  440:  put_var_ref 5: r
+  443:  get_var_ref_check 5: r
+  446:  get_var_ref 4: s
+  449:  put_field render
+  454:  get_var_ref_check 5: r
+  457:  array_from 0
+  460:  put_field staticRenderFns
+  465:  get_var_ref_check 5: r
+  468:  push_0 0
+  469:  lnot
+  470:  put_field _compiled
+  475:  get_var_ref_check 5: r
+  478:  push_atom_value "data-v-9647ce48"
+  483:  put_field _scopeId
+  488:  get_var_ref_check 5: r
+  491:  object
+  492:  put_field themes
+  497:  get_var_ref_check 5: r
+  500:  get_var Object
+  505:  get_field2 assign
+  510:  object
+  511:  object
+  512:  object
+  513:  push_atom_value "100%"
+  518:  define_field width
+  523:  push_atom_value "100%"
+  528:  define_field height
+  533:  push_atom_value "#000000"
+  538:  define_field backgroundColor
+  543:  push_atom_value row
+  548:  define_field flexDirection
+  553:  push_atom_value "4px"
+  558:  define_field paddingTop
+  563:  push_atom_value "4px"
+  568:  define_field paddingRight
+  573:  push_atom_value "4px"
+  578:  define_field paddingBottom
+  583:  push_atom_value "4px"
+  588:  define_field paddingLeft
+  593:  define_field app
+  598:  object
+  599:  push_atom_value "56px"
+  604:  define_field width
+  609:  push_atom_value "#1c1c1e"
+  614:  define_field backgroundColor
+  619:  push_atom_value "12px"
+  624:  define_field borderRadius
+  629:  push_atom_value "8px"
+  634:  define_field marginRight
+  639:  push_atom_value "8px"
+  644:  define_field paddingTop
+  649:  push_atom_value "4px"
+  654:  define_field paddingRight
+  659:  push_atom_value "8px"
+  664:  define_field paddingBottom
+  669:  push_atom_value "4px"
+  674:  define_field paddingLeft
+  679:  push_atom_value center
+  684:  define_field alignItems
+  689:  define_field rail
+  694:  object
+  695:  push_atom_value "48px"
+  700:  define_field width
+  705:  push_atom_value "36px"
+  710:  define_field height
+  715:  push_atom_value "8px"
+  720:  define_field borderRadius
+  725:  push_atom_value center
+  730:  define_field justifyContent
+  735:  push_atom_value center
+  740:  define_field alignItems
+  745:  push_atom_value "4px"
+  750:  define_field marginBottom
+  755:  define_field rb
+  760:  object
+  761:  push_atom_value "13px"
+  766:  define_field fontSize
+  771:  push_const8 35: 1"500"
+  773:  define_field fontWeight
+  778:  define_field rl
+  783:  object
+  784:  push_1 1
+  785:  define_field flex
+  790:  define_field "rail-sp"
+  795:  object
+  796:  push_atom_value "8px"
+  801:  define_field width
+  806:  push_atom_value "8px"
+  811:  define_field height
+  816:  push_atom_value "4px"
+  821:  define_field borderRadius
+  826:  push_atom_value "8px"
+  831:  define_field marginTop
+  836:  define_field dot
+  841:  object
+  842:  push_1 1
+  843:  define_field flex
+  848:  push_atom_value "#000000"
+  853:  define_field backgroundColor
+  858:  push_atom_value "12px"
+  863:  define_field borderRadius
+  868:  define_field main
+  873:  object
+  874:  push_1 1
+  875:  define_field flex
+  880:  push_atom_value "6px"
+  885:  define_field paddingTop
+  890:  push_atom_value "6px"
+  895:  define_field paddingRight
+  900:  push_atom_value "6px"
+  905:  define_field paddingBottom
+  910:  push_atom_value "6px"
+  915:  define_field paddingLeft
+  920:  define_field scroll
+  925:  object
+  926:  push_atom_value center
+  931:  define_field justifyContent
+  936:  push_atom_value center
+  941:  define_field alignItems
+  946:  push_atom_value "240px"
+  951:  define_field height
+  956:  define_field empty
+  961:  object
+  962:  push_atom_value "#636366"
+  967:  define_field color
+  972:  push_atom_value "14px"
+  977:  define_field fontSize
+  982:  define_field "empty-txt"
+  987:  object
+  988:  push_atom_value row
+  993:  define_field flexDirection
+  998:  push_atom_value "8px"
+ 1003:  define_field marginBottom
+ 1008:  define_field vrow
+ 1013:  object
+ 1014:  push_1 1
+ 1015:  define_field flex
+ 1020:  push_atom_value "#1c1c1e"
+ 1025:  define_field backgroundColor
+ 1030:  push_atom_value "4px"
+ 1035:  define_field borderRadius
+ 1040:  push_atom_value "8px"
+ 1045:  define_field marginRight
+ 1050:  push_0 0
+ 1051:  define_field paddingTop
+ 1056:  push_0 0
+ 1057:  define_field paddingRight
+ 1062:  push_0 0
+ 1063:  define_field paddingBottom
+ 1068:  push_0 0
+ 1069:  define_field paddingLeft
+ 1074:  push_atom_value hidden
+ 1079:  define_field overflow
+ 1084:  define_field vc
+ 1089:  object
+ 1090:  push_atom_value "rgba(0,0,0,0)"
+ 1095:  define_field backgroundColor
+ 1100:  define_field vph
+ 1105:  object
+ 1106:  push_atom_value "100%"
+ 1111:  define_field width
+ 1116:  push_atom_value "130px"
+ 1121:  define_field height
+ 1126:  push_atom_value "5px"
+ 1131:  define_field borderTopLeftRadius
+ 1136:  push_atom_value "5px"
+ 1141:  define_field borderTopRightRadius
+ 1146:  push_atom_value "#2c2c2e"
+ 1151:  define_field backgroundColor
+ 1156:  define_field vi
+ 1161:  object
+ 1162:  push_1 1
+ 1163:  define_field flex
+ 1168:  push_atom_value "6px"
+ 1173:  define_field paddingTop
+ 1178:  push_atom_value "8px"
+ 1183:  define_field paddingRight
+ 1188:  push_atom_value "8px"
+ 1193:  define_field paddingBottom
+ 1198:  push_atom_value "8px"
+ 1203:  define_field paddingLeft
+ 1208:  define_field vb
+ 1213:  object
+ 1214:  push_atom_value "#ffffff"
+ 1219:  define_field color
+ 1224:  push_atom_value "12px"
+ 1229:  define_field fontSize
+ 1234:  push_const8 36: 1"500"
+ 1236:  define_field fontWeight
+ 1241:  push_2 2
+ 1242:  define_field lines
+ 1247:  push_atom_value ellipsis
+ 1252:  define_field textOverflow
+ 1257:  push_atom_value "4px"
+ 1262:  define_field marginBottom
+ 1267:  define_field vt
+ 1272:  object
+ 1273:  push_atom_value "#c7c7cc"
+ 1278:  define_field color
+ 1283:  push_atom_value "11px"
+ 1288:  define_field fontSize
+ 1293:  push_atom_value "2px"
+ 1298:  define_field marginBottom
+ 1303:  define_field va
+ 1308:  object
+ 1309:  push_atom_value "#636366"
+ 1314:  define_field color
+ 1319:  push_atom_value "11px"
+ 1324:  define_field fontSize
+ 1329:  define_field vs
+ 1334:  object
+ 1335:  push_atom_value absolute
+ 1340:  define_field position
+ 1345:  push_0 0
+ 1346:  define_field top
+ 1351:  push_0 0
+ 1352:  define_field left
+ 1357:  push_atom_value "100%"
+ 1362:  define_field width
+ 1367:  push_atom_value "100%"
+ 1372:  define_field height
+ 1377:  push_atom_value "rgba(0,0,0,0.88)"
+ 1382:  define_field backgroundColor
+ 1387:  push_i16 999
+ 1390:  define_field zIndex
+ 1395:  push_atom_value center
+ 1400:  define_field justifyContent
+ 1405:  push_atom_value center
+ 1410:  define_field alignItems
+ 1415:  define_field ov
+ 1420:  object
+ 1421:  push_atom_value "520px"
+ 1426:  define_field width
+ 1431:  push_atom_value "#1c1c1e"
+ 1436:  define_field backgroundColor
+ 1441:  push_atom_value "12px"
+ 1446:  define_field borderRadius
+ 1451:  push_atom_value "16px"
+ 1456:  define_field paddingTop
+ 1461:  push_atom_value "16px"
+ 1466:  define_field paddingRight
+ 1471:  push_atom_value "16px"
+ 1476:  define_field paddingBottom
+ 1481:  push_atom_value "16px"
+ 1486:  define_field paddingLeft
+ 1491:  define_field pn
+ 1496:  object
+ 1497:  push_atom_value "#ffffff"
+ 1502:  define_field color
+ 1507:  push_atom_value "16px"
+ 1512:  define_field fontSize
+ 1517:  push_const8 37: 1"600"
+ 1519:  define_field fontWeight
+ 1524:  push_atom_value "8px"
+ 1529:  define_field marginBottom
+ 1534:  push_2 2
+ 1535:  define_field lines
+ 1540:  push_atom_value ellipsis
+ 1545:  define_field textOverflow
+ 1550:  define_field "p-title"
+ 1555:  object
+ 1556:  push_atom_value "#c7c7cc"
+ 1561:  define_field color
+ 1566:  push_atom_value "12px"
+ 1571:  define_field fontSize
+ 1576:  push_atom_value "8px"
+ 1581:  define_field marginBottom
+ 1586:  define_field "p-meta"
+ 1591:  object
+ 1592:  push_atom_value row
+ 1597:  define_field flexDirection
+ 1602:  push_atom_value "8px"
+ 1607:  define_field marginBottom
+ 1612:  push_atom_value wrap
+ 1617:  define_field flexWrap
+ 1622:  define_field "src-row"
+ 1627:  object
+ 1628:  push_atom_value "32px"
+ 1633:  define_field height
+ 1638:  push_0 0
+ 1639:  define_field paddingTop
+ 1644:  push_atom_value "14px"
+ 1649:  define_field paddingRight
+ 1654:  push_0 0
+ 1655:  define_field paddingBottom
+ 1660:  push_atom_value "14px"
+ 1665:  define_field paddingLeft
+ 1670:  push_atom_value "#0a84ff"
+ 1675:  define_field backgroundColor
+ 1680:  push_atom_value "8px"
+ 1685:  define_field borderRadius
+ 1690:  push_atom_value center
+ 1695:  define_field justifyContent
+ 1700:  push_atom_value center
+ 1705:  define_field alignItems
+ 1710:  push_atom_value "8px"
+ 1715:  define_field marginRight
+ 1720:  push_atom_value "8px"
+ 1725:  define_field marginBottom
+ 1730:  define_field "src-btn"
+ 1735:  object
+ 1736:  push_atom_value "#ffffff"
+ 1741:  define_field color
+ 1746:  push_atom_value "12px"
+ 1751:  define_field fontSize
+ 1756:  push_const8 38: 1"500"
+ 1758:  define_field fontWeight
+ 1763:  define_field "src-txt"
+ 1768:  object
+ 1769:  push_atom_value "8px"
+ 1774:  define_field marginBottom
+ 1779:  push_atom_value "#2c2c2e"
+ 1784:  define_field backgroundColor
+ 1789:  push_atom_value "8px"
+ 1794:  define_field paddingTop
+ 1799:  push_atom_value "8px"
+ 1804:  define_field paddingRight
+ 1809:  push_atom_value "8px"
+ 1814:  define_field paddingBottom
+ 1819:  push_atom_value "8px"
+ 1824:  define_field paddingLeft
+ 1829:  push_atom_value "8px"
+ 1834:  define_field borderRadius
+ 1839:  define_field "p-url"
+ 1844:  object
+ 1845:  push_atom_value "#0a84ff"
+ 1850:  define_field color
+ 1855:  push_atom_value "11px"
+ 1860:  define_field fontSize
+ 1865:  push_2 2
+ 1866:  define_field lines
+ 1871:  push_atom_value ellipsis
+ 1876:  define_field textOverflow
+ 1881:  define_field "p-url-t"
+ 1886:  object
+ 1887:  push_atom_value "12px"
+ 1892:  define_field marginBottom
+ 1897:  define_field "rel-box"
+ 1902:  object
+ 1903:  push_atom_value "#ffffff"
+ 1908:  define_field color
+ 1913:  push_atom_value "12px"
+ 1918:  define_field fontSize
+ 1923:  push_const8 39: 1"600"
+ 1925:  define_field fontWeight
+ 1930:  push_atom_value "8px"
+ 1935:  define_field marginBottom
+ 1940:  define_field "rel-title"
+ 1945:  object
+ 1946:  push_atom_value "112px"
+ 1951:  define_field height
+ 1956:  push_atom_value row
+ 1961:  define_field flexDirection
+ 1966:  define_field "rel-scroll"
+ 1971:  object
+ 1972:  push_atom_value "120px"
+ 1977:  define_field width
+ 1982:  push_atom_value "8px"
+ 1987:  define_field marginRight
+ 1992:  define_field "rel-card"
+ 1997:  object
+ 1998:  push_atom_value "120px"
+ 2003:  define_field width
+ 2008:  push_atom_value "68px"
+ 2013:  define_field height
+ 2018:  push_atom_value "8px"
+ 2023:  define_field borderRadius
+ 2028:  push_atom_value "#2c2c2e"
+ 2033:  define_field backgroundColor
+ 2038:  push_atom_value "4px"
+ 2043:  define_field marginBottom
+ 2048:  define_field "rel-img"
+ 2053:  object
+ 2054:  push_atom_value "#f3f4f6"
+ 2059:  define_field color
+ 2064:  push_atom_value "11px"
+ 2069:  define_field fontSize
+ 2074:  push_2 2
+ 2075:  define_field lines
+ 2080:  push_atom_value ellipsis
+ 2085:  define_field textOverflow
+ 2090:  define_field "rel-name"
+ 2095:  object
+ 2096:  push_atom_value row
+ 2101:  define_field flexDirection
+ 2106:  define_field "p-btns"
+ 2111:  object
+ 2112:  push_atom_value "36px"
+ 2117:  define_field height
+ 2122:  push_atom_value center
+ 2127:  define_field justifyContent
+ 2132:  push_atom_value center
+ 2137:  define_field alignItems
+ 2142:  push_atom_value "8px"
+ 2147:  define_field borderRadius
+ 2152:  push_1 1
+ 2153:  define_field flex
+ 2158:  push_atom_value "8px"
+ 2163:  define_field marginRight
+ 2168:  define_field pb
+ 2173:  object
+ 2174:  push_atom_value "#ffffff"
+ 2179:  define_field backgroundColor
+ 2184:  define_field "pb-w"
+ 2189:  object
+ 2190:  push_atom_value "#2c2c2e"
+ 2195:  define_field backgroundColor
+ 2200:  define_field "pb-g"
+ 2205:  object
+ 2206:  push_atom_value "#ffffff"
+ 2211:  define_field color
+ 2216:  push_atom_value "13px"
+ 2221:  define_field fontSize
+ 2226:  push_const8 40: 1"500"
+ 2228:  define_field fontWeight
+ 2233:  define_field "pb-t"
+ 2238:  object
+ 2239:  push_atom_value "#1c1c1e"
+ 2244:  define_field color
+ 2249:  define_field "pb-dark"
+ 2254:  object
+ 2255:  push_const8 41: 0.65
+ 2257:  define_field opacity
+ 2262:  define_field "rb-press"
+ 2267:  object
+ 2268:  push_const8 42: 0.65
+ 2270:  define_field opacity
+ 2275:  define_field "vc-press"
+ 2280:  object
+ 2281:  push_const8 43: 0.65
+ 2283:  define_field opacity
+ 2288:  define_field "ov-press"
+ 2293:  object
+ 2294:  push_const8 44: 0.65
+ 2296:  define_field opacity
+ 2301:  define_field "src-btn-press"
+ 2306:  object
+ 2307:  push_const8 45: 0.65
+ 2309:  define_field opacity
+ 2314:  define_field "rel-card-press"
+ 2319:  object
+ 2320:  push_const8 46: 0.65
+ 2322:  define_field opacity
+ 2327:  define_field "pb-press"
+ 2332:  object
+ 2333:  push_const8 47: 0.65
+ 2335:  define_field opacity
+ 2340:  define_field "pb-w-press"
+ 2345:  object
+ 2346:  push_const8 48: 0.65
+ 2348:  define_field opacity
+ 2353:  define_field "pb-g-press"
+ 2358:  object
+ 2359:  push_atom_value "#ffffff"
+ 2364:  define_field backgroundColor
+ 2369:  define_field "app-l"
+ 2374:  object
+ 2375:  push_atom_value "#f2f2f7"
+ 2380:  define_field backgroundColor
+ 2385:  define_field "rail-l"
+ 2390:  object
+ 2391:  push_atom_value "#ffffff"
+ 2396:  define_field backgroundColor
+ 2401:  define_field "main-l"
+ 2406:  object
+ 2407:  push_atom_value "#aeaeb2"
+ 2412:  define_field color
+ 2417:  define_field "empty-txt-l"
+ 2422:  object
+ 2423:  push_atom_value "#f2f2f7"
+ 2428:  define_field backgroundColor
+ 2433:  define_field "vc-l"
+ 2438:  object
+ 2439:  push_atom_value "#ffffff"
+ 2444:  define_field backgroundColor
+ 2449:  define_field "vi-l"
+ 2454:  object
+ 2455:  push_atom_value "#1c1c1e"
+ 2460:  define_field color
+ 2465:  define_field "vt-l"
+ 2470:  object
+ 2471:  push_atom_value "#636366"
+ 2476:  define_field color
+ 2481:  define_field "va-l"
+ 2486:  object
+ 2487:  push_atom_value "#aeaeb2"
+ 2492:  define_field color
+ 2497:  define_field "vs-l"
+ 2502:  object
+ 2503:  push_atom_value "rgba(0,0,0,0.88)"
+ 2508:  define_field backgroundColor
+ 2513:  define_field "ov-l"
+ 2518:  object
+ 2519:  push_atom_value "#f2f2f7"
+ 2524:  define_field backgroundColor
+ 2529:  define_field "pn-l"
+ 2534:  object
+ 2535:  push_atom_value "#1c1c1e"
+ 2540:  define_field color
+ 2545:  define_field "p-title-l"
+ 2550:  object
+ 2551:  push_atom_value "#636366"
+ 2556:  define_field color
+ 2561:  define_field "p-meta-l"
+ 2566:  object
+ 2567:  push_atom_value "#007aff"
+ 2572:  define_field backgroundColor
+ 2577:  define_field "src-btn-l"
+ 2582:  object
+ 2583:  push_atom_value "#1c1c1e"
+ 2588:  define_field color
+ 2593:  define_field "src-txt-l"
+ 2598:  object
+ 2599:  push_atom_value "#ffffff"
+ 2604:  define_field backgroundColor
+ 2609:  define_field "p-url-l"
+ 2614:  object
+ 2615:  push_atom_value "#007aff"
+ 2620:  define_field color
+ 2625:  define_field "p-url-t-l"
+ 2630:  object
+ 2631:  push_atom_value "#1c1c1e"
+ 2636:  define_field color
+ 2641:  define_field "rel-title-l"
+ 2646:  object
+ 2647:  push_atom_value "#ffffff"
+ 2652:  define_field backgroundColor
+ 2657:  define_field "rel-img-l"
+ 2662:  object
+ 2663:  push_atom_value "#3a3a3c"
+ 2668:  define_field color
+ 2673:  define_field "rel-name-l"
+ 2678:  object
+ 2679:  push_atom_value "#1c1c1e"
+ 2684:  define_field backgroundColor
+ 2689:  define_field "pb-w-l"
+ 2694:  object
+ 2695:  push_atom_value "#ffffff"
+ 2700:  define_field backgroundColor
+ 2705:  define_field "pb-g-l"
+ 2710:  object
+ 2711:  push_atom_value "#1c1c1e"
+ 2716:  define_field color
+ 2721:  define_field "pb-t-l"
+ 2726:  object
+ 2727:  push_atom_value "#ffffff"
+ 2732:  define_field color
+ 2737:  define_field "pb-dark-l"
+ 2742:  call_method 2
+ 2745:  put_field style
+ 2750:  get_var_ref_check 5: r
+ 2753:  push_atom_value "src/pages/apps/iwara/iwara.vue"
+ 2758:  put_field __file
+ 2763:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: e parent:loc1 const
+  stack_size: 2
+  opcodes:
+    0:  object
+    1:  null
+    2:  define_field bridge
+    7:  null
+    8:  define_field Fetch
+   13:  null
+   14:  define_field Dbase
+   19:  get_var_ref_check 0: e
+   22:  define_field baseUrl
+   27:  push_empty_string
+   28:  define_field keyword
+   33:  array_from 0
+   36:  define_field videos
+   41:  push_1 1
+   42:  lnot
+   43:  define_field isLoading
+   48:  push_atom_value "..."
+   53:  define_field tipText
+   58:  push_atom_value trending
+   63:  define_field tab
+   68:  push_1 1
+   69:  lnot
+   70:  define_field showModal
+   75:  object
+   76:  define_field currentVideo
+   81:  array_from 0
+   84:  define_field sources
+   89:  array_from 0
+   92:  define_field relatedVideos
+   97:  push_empty_string
+   98:  define_field sourceMsg
+  103:  push_1 1
+  104:  lnot
+  105:  define_field sourceFetching
+  110:  push_1 1
+  111:  lnot
+  112:  define_field detailFetching
+  117:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 1
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field Fetch
+    8:  if_false8 30
+   10:  get_loc0 0: this
+   11:  get_field isLoading
+   16:  if_false8 24
+   18:  push_atom_value "#ff9f0a"
+   23:  return
+   24:  push_atom_value "#30d158"
+   29:  return
+   30:  push_atom_value "#ff453a"
+   35:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var i
+    3: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  array_from 0
+    5:  put_loc0 0: t
+    6:  push_0 0
+    7:  put_loc1 1: e
+    8:  get_loc1 1: e
+    9:  get_loc3 3: this
+   10:  get_field videos
+   15:  get_length
+   16:  lt
+   17:  if_false 156
+   22:  get_loc3 3: this
+   23:  get_field videos
+   28:  get_loc1 1: e
+   29:  get_array_el
+   30:  array_from 1
+   33:  put_loc2 2: i
+   34:  get_loc1 1: e
+   35:  push_1 1
+   36:  add
+   37:  get_loc3 3: this
+   38:  get_field videos
+   43:  get_length
+   44:  lt
+   45:  dup
+   46:  if_false8 68
+   48:  drop
+   49:  get_loc2 2: i
+   50:  get_field2 push
+   55:  get_loc3 3: this
+   56:  get_field videos
+   61:  get_loc1 1: e
+   62:  push_1 1
+   63:  add
+   64:  get_array_el
+   65:  call_method 1
+   68:  drop
+   69:  get_loc1 1: e
+   70:  push_2 2
+   71:  add
+   72:  get_loc3 3: this
+   73:  get_field videos
+   78:  get_length
+   79:  lt
+   80:  dup
+   81:  if_false8 103
+   83:  drop
+   84:  get_loc2 2: i
+   85:  get_field2 push
+   90:  get_loc3 3: this
+   91:  get_field videos
+   96:  get_loc1 1: e
+   97:  push_2 2
+   98:  add
+   99:  get_array_el
+  100:  call_method 1
+  103:  drop
+  104:  get_loc1 1: e
+  105:  push_3 3
+  106:  add
+  107:  get_loc3 3: this
+  108:  get_field videos
+  113:  get_length
+  114:  lt
+  115:  dup
+  116:  if_false8 138
+  118:  drop
+  119:  get_loc2 2: i
+  120:  get_field2 push
+  125:  get_loc3 3: this
+  126:  get_field videos
+  131:  get_loc1 1: e
+  132:  push_3 3
+  133:  add
+  134:  get_array_el
+  135:  call_method 1
+  138:  drop
+  139:  get_loc0 0: t
+  140:  get_field2 push
+  145:  get_loc2 2: i
+  146:  call_method 1
+  149:  drop
+  150:  push_4 4
+  151:  add_loc 1: e
+  153:  goto16 8
+  156:  get_loc0 0: t
+  157:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field currentVideo
+    8:  put_loc0 0: t
+    9:  array_from 0
+   12:  put_loc1 1: e
+   13:  get_loc0 0: t
+   14:  get_field author
+   19:  dup
+   20:  if_false8 58
+   22:  drop
+   23:  get_loc0 0: t
+   24:  get_field author
+   29:  get_field name
+   34:  dup
+   35:  if_false8 58
+   37:  drop
+   38:  get_loc1 1: e
+   39:  get_field2 push
+   44:  get_loc0 0: t
+   45:  get_field author
+   50:  get_field name
+   55:  call_method 1
+   58:  drop
+   59:  get_loc0 0: t
+   60:  get_field views
+   65:  dup
+   66:  if_false8 99
+   68:  drop
+   69:  get_loc1 1: e
+   70:  get_field2 push
+   75:  get_loc2 2: this
+   76:  get_field2 formatNum
+   81:  get_loc0 0: t
+   82:  get_field views
+   87:  call_method 1
+   90:  push_atom_value "\u00e6\u0092\u00ad\u00e6\u0094\u00be"
+   95:  add
+   96:  call_method 1
+   99:  drop
+  100:  get_loc0 0: t
+  101:  get_field likes
+  106:  dup
+  107:  if_false8 140
+  109:  drop
+  110:  get_loc1 1: e
+  111:  get_field2 push
+  116:  get_loc2 2: this
+  117:  get_field2 formatNum
+  122:  get_loc0 0: t
+  123:  get_field likes
+  128:  call_method 1
+  131:  push_atom_value "\u00e8\u00b5\u009e"
+  136:  add
+  137:  call_method 1
+  140:  drop
+  141:  get_loc0 0: t
+  142:  get_field comments
+  147:  dup
+  148:  if_false8 181
+  150:  drop
+  151:  get_loc1 1: e
+  152:  get_field2 push
+  157:  get_loc2 2: this
+  158:  get_field2 formatNum
+  163:  get_loc0 0: t
+  164:  get_field comments
+  169:  call_method 1
+  172:  push_atom_value "\u00e8\u00af\u0084\u00e8\u00ae\u00ba"
+  177:  add
+  178:  call_method 1
+  181:  drop
+  182:  get_loc0 0: t
+  183:  get_field rating
+  188:  dup
+  189:  if_false8 207
+  191:  drop
+  192:  get_loc1 1: e
+  193:  get_field2 push
+  198:  get_loc0 0: t
+  199:  get_field rating
+  204:  call_method 1
+  207:  drop
+  208:  get_loc1 1: e
+  209:  get_field2 join
+  214:  push_atom_value " \u00c2\u00b7 "
+  219:  tail_call_method 1
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field sourceFetching
+    8:  if_false8 16
+   10:  push_atom_value "\u00e5\u008a\u00a0\u00e8\u00bd\u00bd\u00e4\u00b8\u00ad..."
+   15:  return
+   16:  get_loc0 0: this
+   17:  get_field sources
+   22:  get_length
+   23:  push_0 0
+   24:  gt
+   25:  if_false8 33
+   27:  push_atom_value "\u00e5\u0088\u00b7\u00e6\u0096\u00b0"
+   32:  return
+   33:  push_atom_value "\u00e6\u0092\u00ad\u00e6\u0094\u00be"
+   38:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  put_loc0 0: t
+    4:  get_loc1 1: this
+    5:  push_0 0
+    6:  lnot
+    7:  put_field _pageAlive
+   12:  get_loc1 1: this
+   13:  get_var setTimeout
+   18:  fclosure8 0: [bytecode <null>]
+   20:  push_i16 600
+   23:  call2 2
+   24:  put_field _bridgeInitTimer
+   29:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  null
+    2:  put_field _bridgeInitTimer
+    7:  get_var_ref0 0: t
+    8:  get_field _pageAlive
+   13:  dup
+   14:  if_false8 45
+   16:  drop
+   17:  get_var_ref0 0: t
+   18:  get_field2 initBridge
+   23:  call_method 0
+   26:  drop
+   27:  get_var_ref0 0: t
+   28:  get_var setTimeout
+   33:  fclosure8 0: [bytecode <null>]
+   35:  push_i16 300
+   38:  call2 2
+   39:  insert2
+   40:  put_field _initialLoadTimer
+   45:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t parent:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  null
+    2:  put_field _initialLoadTimer
+    7:  get_var_ref0 0: t
+    8:  get_field _pageAlive
+   13:  dup
+   14:  if_false8 42
+   16:  drop
+   17:  get_var_ref0 0: t
+   18:  push_atom_value trending
+   23:  put_field tab
+   28:  get_var_ref0 0: t
+   29:  get_field2 loadVideos
+   34:  push_atom_value trending
+   39:  call_method 1
+   42:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_1 1
+    4:  lnot
+    5:  put_field _pageAlive
+   10:  get_loc0 0: this
+   11:  get_field _bridgeInitTimer
+   16:  dup
+   17:  if_false8 32
+   19:  drop
+   20:  get_var clearTimeout
+   25:  get_loc0 0: this
+   26:  get_field _bridgeInitTimer
+   31:  call1 1
+   32:  drop
+   33:  get_loc0 0: this
+   34:  get_field _initialLoadTimer
+   39:  dup
+   40:  if_false8 55
+   42:  drop
+   43:  get_var clearTimeout
+   48:  get_loc0 0: this
+   49:  get_field _initialLoadTimer
+   54:  call1 1
+   55:  drop
+   56:  get_loc0 0: this
+   57:  null
+   58:  put_field _bridgeInitTimer
+   63:  get_loc0 0: this
+   64:  null
+   65:  put_field _initialLoadTimer
+   70:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  object
+    3:  get_loc0 0: this
+    4:  get_field tab
+    9:  get_arg0 0: t
+   10:  strict_eq
+   11:  if_false8 20
+   13:  push_atom_value "#ffffff"
+   18:  goto8 25
+   20:  push_atom_value "#2c2c2e"
+   25:  define_field backgroundColor
+   30:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  object
+    3:  get_loc0 0: this
+    4:  get_field tab
+    9:  get_arg0 0: t
+   10:  strict_eq
+   11:  if_false8 20
+   13:  push_atom_value "#000000"
+   18:  goto8 25
+   20:  push_atom_value "#636366"
+   25:  define_field color
+   30:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  stack_size: 0
+  opcodes:
+    0:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: t
+    1:  if_false8 41
+    3:  get_arg0 0: t
+    4:  push_i16 10000
+    7:  gte
+    8:  if_false8 31
+   10:  get_arg0 0: t
+   11:  push_i16 10000
+   14:  div
+   15:  get_field2 toFixed
+   20:  push_1 1
+   21:  call_method 1
+   24:  push_atom_value "\u00e4\u00b8\u0087"
+   29:  add
+   30:  return
+   31:  get_arg0 0: t
+   32:  get_field2 toString
+   37:  call_method 0
+   40:  return
+   41:  push_const8 0: 1"0"
+   43:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 formatNum
+    8:  get_arg0 0: t
+    9:  get_field views
+   14:  call_method 1
+   17:  push_atom_value "\u00e2\u0096\u00b6 \u00c2\u00b7 "
+   22:  add
+   23:  get_loc0 0: this
+   24:  get_field2 formatNum
+   29:  get_arg0 0: t
+   30:  get_field likes
+   35:  call_method 1
+   38:  add
+   39:  push_atom_value "\u00e2\u0099\u00a1"
+   44:  add
+   45:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 1
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_field author
+    6:  if_false8 33
+    8:  get_arg0 0: t
+    9:  get_field author
+   14:  get_field name
+   19:  if_false8 33
+   21:  get_arg0 0: t
+   22:  get_field author
+   27:  get_field name
+   32:  return
+   33:  get_arg0 0: t
+   34:  get_field author_name
+   39:  if_false8 48
+   41:  get_arg0 0: t
+   42:  get_field author_name
+   47:  return
+   48:  push_empty_string
+   49:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_arg0 0: t
+    3:  get_field thumbnail
+    8:  if_false8 36
+   10:  get_loc0 0: this
+   11:  get_field baseUrl
+   16:  push_atom_value "/iwara/proxy/image?url="
+   21:  add
+   22:  get_var encodeURIComponent
+   27:  get_arg0 0: t
+   28:  get_field thumbnail
+   33:  call1 1
+   34:  add
+   35:  return
+   36:  push_empty_string
+   37:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_field text
+    6:  if_false8 18
+    8:  get_arg0 0: t
+    9:  get_field2 text
+   14:  call_method 0
+   17:  return
+   18:  get_arg0 0: t
+   19:  get_field body
+   24:  dup
+   25:  if_true8 39
+   27:  drop
+   28:  get_arg0 0: t
+   29:  get_field _body
+   34:  dup
+   35:  if_true8 39
+   37:  drop
+   38:  push_empty_string
+   39:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  push_atom_value string
+    5:  get_arg0 0: t
+    6:  typeof
+    7:  eq
+    8:  if_false8 12
+   10:  get_arg0 0: t
+   11:  return
+   12:  get_arg0 0: t
+   13:  if_false8 113
+   15:  push_atom_value object
+   20:  get_arg0 0: t
+   21:  typeof
+   22:  eq
+   23:  if_false8 113
+   25:  push_atom_value string
+   30:  get_arg0 0: t
+   31:  get_field value
+   36:  typeof
+   37:  eq
+   38:  if_false8 47
+   40:  get_arg0 0: t
+   41:  get_field value
+   46:  return
+   47:  push_atom_value string
+   52:  get_arg0 0: t
+   53:  get_field text
+   58:  typeof
+   59:  eq
+   60:  if_false8 69
+   62:  get_arg0 0: t
+   63:  get_field text
+   68:  return
+   69:  push_atom_value string
+   74:  get_arg0 0: t
+   75:  get_field data
+   80:  typeof
+   81:  eq
+   82:  if_false8 91
+   84:  get_arg0 0: t
+   85:  get_field data
+   90:  return
+   91:  push_atom_value string
+   96:  get_arg0 0: t
+   97:  get_field key
+  102:  typeof
+  103:  eq
+  104:  if_false8 113
+  106:  get_arg0 0: t
+  107:  get_field key
+  112:  return
+  113:  push_empty_string
+  114:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_atom_value trending
+    8:  put_field tab
+   13:  get_loc0 0: this
+   14:  get_field2 loadVideos
+   19:  push_atom_value trending
+   24:  call_method 1
+   27:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_atom_value hot
+    8:  put_field tab
+   13:  get_loc0 0: this
+   14:  get_field2 loadVideos
+   19:  push_atom_value popularity
+   24:  call_method 1
+   27:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_atom_value new
+    8:  put_field tab
+   13:  get_loc0 0: this
+   14:  get_field2 loadVideos
+   19:  push_atom_value date
+   24:  call_method 1
+   27:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_atom_value search
+    8:  put_field tab
+   13:  get_loc0 0: this
+   14:  get_field2 openKeyboardForSearch
+   19:  call_method 0
+   22:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_atom_value history
+    8:  put_field tab
+   13:  get_loc0 0: this
+   14:  get_field2 loadHistory
+   19:  call_method 0
+   22:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var e
+    1: catch t [level:4 next:-1]
+    2: catch t [level:6 next:-1]
+    3: var this
+  closure vars:
+    0: t parent:loc0 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  catch 126
+    7:  null
+    8:  put_loc0 0: e
+    9:  catch 21
+   14:  get_var_ref_check 0: t
+   17:  put_loc0 0: e
+   18:  drop
+   19:  goto8 31
+   21:  put_loc1 1: t
+   22:  catch 30
+   27:  drop
+   28:  goto8 31
+   30:  throw
+   31:  get_loc0 0: e
+   32:  dup
+   33:  if_true8 58
+   35:  drop
+   36:  push_atom_value undefined
+   41:  get_var_undef bridge
+   46:  typeof
+   47:  eq
+   48:  dup
+   49:  if_true8 58
+   51:  drop
+   52:  get_var bridge
+   57:  set_loc0 0: e
+   58:  drop
+   59:  get_loc0 0: e
+   60:  dup
+   61:  if_false8 123
+   63:  drop
+   64:  get_loc3 3: this
+   65:  get_loc0 0: e
+   66:  put_field bridge
+   71:  get_loc0 0: e
+   72:  get_field Fetch
+   77:  dup
+   78:  if_false8 94
+   80:  drop
+   81:  get_loc3 3: this
+   82:  get_loc0 0: e
+   83:  get_field Fetch
+   88:  insert2
+   89:  put_field Fetch
+   94:  drop
+   95:  get_loc3 3: this
+   96:  get_loc0 0: e
+   97:  get_field Datas
+  102:  dup
+  103:  if_true8 117
+  105:  drop
+  106:  get_loc0 0: e
+  107:  get_field Dbase
+  112:  dup
+  113:  if_true8 117
+  115:  drop
+  116:  null
+  117:  insert2
+  118:  put_field Dbase
+  123:  drop
+  124:  drop
+  125:  return_undef
+  126:  put_loc2 2: t
+  127:  catch 134
+  132:  drop
+  133:  return_undef
+  134:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var i
+    2: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field Fetch
+    8:  if_false8 123
+   10:  get_loc2 2: this
+   11:  get_field isLoading
+   16:  lnot
+   17:  if_false8 123
+   19:  get_loc2 2: this
+   20:  set_loc0 0: e
+   21:  push_0 0
+   22:  lnot
+   23:  put_field isLoading
+   28:  get_loc0 0: e
+   29:  array_from 0
+   32:  put_field videos
+   37:  get_loc0 0: e
+   38:  push_atom_value "..."
+   43:  put_field tipText
+   48:  get_loc0 0: e
+   49:  get_field baseUrl
+   54:  push_atom_value "/iwara/videos?sort="
+   59:  add
+   60:  get_arg0 0: t
+   61:  add
+   62:  push_atom_value "&page=0&limit=24&rating=all"
+   67:  add
+   68:  put_loc1 1: i
+   69:  get_loc0 0: e
+   70:  get_field Fetch
+   75:  get_field2 fetch
+   80:  get_loc1 1: i
+   81:  object
+   82:  push_atom_value GET
+   87:  define_field method
+   92:  push_i8 20
+   94:  define_field timeout
+   99:  call_method 2
+  102:  get_field2 then
+  107:  fclosure8 0: [bytecode <null>]
+  109:  call_method 1
+  112:  get_field2 catch
+  117:  fclosure8 1: [bytecode <null>]
+  119:  call_method 1
+  122:  drop
+  123:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var i
+  closure vars:
+    0: e local:loc0 var
+  stack_size: 5
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_field ok
+    6:  if_false8 124
+    8:  get_var JSON
+   13:  get_field2 parse
+   18:  get_var_ref0 0: e
+   19:  get_field2 resText
+   24:  get_arg0 0: t
+   25:  call_method 1
+   28:  call_method 1
+   31:  put_loc0 0: i
+   32:  push_1 1
+   33:  get_loc0 0: i
+   34:  get_field code
+   39:  strict_eq
+   40:  if_false8 99
+   42:  get_loc0 0: i
+   43:  get_field data
+   48:  if_false8 99
+   50:  get_var_ref0 0: e
+   51:  get_loc0 0: i
+   52:  get_field data
+   57:  get_field videos
+   62:  dup
+   63:  if_true8 69
+   65:  drop
+   66:  array_from 0
+   69:  put_field videos
+   74:  get_var_ref0 0: e
+   75:  get_field videos
+   80:  get_length
+   81:  dup
+   82:  if_true8 121
+   84:  drop
+   85:  get_var_ref0 0: e
+   86:  push_atom_value "\u00e6\u009a\u0082\u00e6\u0097\u00a0\u00e5\u0086\u0085\u00e5\u00ae\u00b9"
+   91:  insert2
+   92:  put_field tipText
+   97:  goto8 121
+   99:  get_var_ref0 0: e
+  100:  get_loc0 0: i
+  101:  get_field error
+  106:  dup
+  107:  if_true8 115
+  109:  drop
+  110:  push_atom_value "\u00e5\u008a\u00a0\u00e8\u00bd\u00bd\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  115:  insert2
+  116:  put_field tipText
+  121:  drop
+  122:  goto8 142
+  124:  get_var_ref0 0: e
+  125:  push_atom_value "HTTP "
+  130:  get_arg0 0: t
+  131:  get_field status
+  136:  add
+  137:  put_field tipText
+  142:  get_var_ref0 0: e
+  143:  push_1 1
+  144:  lnot
+  145:  put_field isLoading
+  150:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: e local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: e
+    1:  get_arg0 0: t
+    2:  get_field message
+    7:  dup
+    8:  if_true8 18
+   10:  drop
+   11:  get_var String
+   16:  get_arg0 0: t
+   17:  call1 1
+   18:  put_field tipText
+   23:  get_var_ref0 0: e
+   24:  push_1 1
+   25:  lnot
+   26:  put_field isLoading
+   31:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  closure vars:
+    0: i parent:loc2 const
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_var_ref_check 0: i
+    5:  get_loc1 1: this
+    6:  get_field keyword
+   11:  call1 1
+   12:  await
+   13:  put_loc0 0: t
+   14:  null
+   15:  get_loc0 0: t
+   16:  strict_neq
+   17:  dup
+   18:  if_false8 68
+   20:  drop
+   21:  get_loc1 1: this
+   22:  get_loc0 0: t
+   23:  put_field keyword
+   28:  get_loc0 0: t
+   29:  dup
+   30:  if_false8 68
+   32:  drop
+   33:  get_loc0 0: t
+   34:  get_field trim
+   39:  dup
+   40:  if_false8 68
+   42:  drop
+   43:  get_loc0 0: t
+   44:  get_field2 trim
+   49:  call_method 0
+   52:  get_length
+   53:  push_0 0
+   54:  gt
+   55:  dup
+   56:  if_false8 68
+   58:  drop
+   59:  get_loc1 1: this
+   60:  get_field2 doSearch
+   65:  call_method 0
+   68:  drop
+   69:  undefined
+   70:  return_async
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field Fetch
+    8:  if_false 148
+   13:  get_loc2 2: this
+   14:  get_field keyword
+   19:  if_false 148
+   24:  get_loc2 2: this
+   25:  get_field isLoading
+   30:  lnot
+   31:  if_false8 148
+   33:  get_loc2 2: this
+   34:  set_loc0 0: t
+   35:  push_0 0
+   36:  lnot
+   37:  put_field isLoading
+   42:  get_loc0 0: t
+   43:  array_from 0
+   46:  put_field videos
+   51:  get_loc0 0: t
+   52:  push_atom_value "\u00e6\u0090\u009c\u00e7\u00b4\u00a2\u00e4\u00b8\u00ad..."
+   57:  put_field tipText
+   62:  get_loc0 0: t
+   63:  get_field baseUrl
+   68:  push_atom_value "/iwara/search?query="
+   73:  add
+   74:  get_var encodeURIComponent
+   79:  get_loc0 0: t
+   80:  get_field keyword
+   85:  call1 1
+   86:  add
+   87:  push_atom_value "&page=0&limit=24"
+   92:  add
+   93:  put_loc1 1: e
+   94:  get_loc0 0: t
+   95:  get_field Fetch
+  100:  get_field2 fetch
+  105:  get_loc1 1: e
+  106:  object
+  107:  push_atom_value GET
+  112:  define_field method
+  117:  push_i8 20
+  119:  define_field timeout
+  124:  call_method 2
+  127:  get_field2 then
+  132:  fclosure8 0: [bytecode <null>]
+  134:  call_method 1
+  137:  get_field2 catch
+  142:  fclosure8 1: [bytecode <null>]
+  144:  call_method 1
+  147:  drop
+  148:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: var i
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 5
+  opcodes:
+    0:  get_arg0 0: e
+    1:  get_field ok
+    6:  if_false8 124
+    8:  get_var JSON
+   13:  get_field2 parse
+   18:  get_var_ref0 0: t
+   19:  get_field2 resText
+   24:  get_arg0 0: e
+   25:  call_method 1
+   28:  call_method 1
+   31:  put_loc0 0: i
+   32:  push_1 1
+   33:  get_loc0 0: i
+   34:  get_field code
+   39:  strict_eq
+   40:  if_false8 99
+   42:  get_loc0 0: i
+   43:  get_field data
+   48:  if_false8 99
+   50:  get_var_ref0 0: t
+   51:  get_loc0 0: i
+   52:  get_field data
+   57:  get_field videos
+   62:  dup
+   63:  if_true8 69
+   65:  drop
+   66:  array_from 0
+   69:  put_field videos
+   74:  get_var_ref0 0: t
+   75:  get_field videos
+   80:  get_length
+   81:  dup
+   82:  if_true8 121
+   84:  drop
+   85:  get_var_ref0 0: t
+   86:  push_atom_value "\u00e6\u009c\u00aa\u00e6\u0089\u00be\u00e5\u0088\u00b0"
+   91:  insert2
+   92:  put_field tipText
+   97:  goto8 121
+   99:  get_var_ref0 0: t
+  100:  get_loc0 0: i
+  101:  get_field error
+  106:  dup
+  107:  if_true8 115
+  109:  drop
+  110:  push_atom_value "\u00e6\u0090\u009c\u00e7\u00b4\u00a2\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  115:  insert2
+  116:  put_field tipText
+  121:  drop
+  122:  goto8 142
+  124:  get_var_ref0 0: t
+  125:  push_atom_value "HTTP "
+  130:  get_arg0 0: e
+  131:  get_field status
+  136:  add
+  137:  put_field tipText
+  142:  get_var_ref0 0: t
+  143:  push_1 1
+  144:  lnot
+  145:  put_field isLoading
+  150:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_arg0 0: e
+    2:  get_field message
+    7:  dup
+    8:  if_true8 18
+   10:  drop
+   11:  get_var String
+   16:  get_arg0 0: e
+   17:  call1 1
+   18:  put_field tipText
+   23:  get_var_ref0 0: t
+   24:  push_1 1
+   25:  lnot
+   26:  put_field isLoading
+   31:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field showModal
+    8:  dup
+    9:  if_true8 22
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field2 openVideoDetail
+   18:  get_arg0 0: t
+   19:  call_method 1
+   22:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 openVideoDetail
+    8:  get_arg0 0: t
+    9:  call_method 1
+   12:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_arg0 0: t
+    4:  dup
+    5:  if_true8 9
+    7:  drop
+    8:  object
+    9:  put_field currentVideo
+   14:  get_loc0 0: this
+   15:  array_from 0
+   18:  put_field sources
+   23:  get_loc0 0: this
+   24:  array_from 0
+   27:  put_field relatedVideos
+   32:  get_loc0 0: this
+   33:  push_empty_string
+   34:  put_field sourceMsg
+   39:  get_loc0 0: this
+   40:  push_1 1
+   41:  lnot
+   42:  put_field sourceFetching
+   47:  get_loc0 0: this
+   48:  push_0 0
+   49:  lnot
+   50:  put_field showModal
+   55:  get_loc0 0: this
+   56:  get_field2 fetchDetail
+   61:  call_method 0
+   64:  drop
+   65:  get_loc0 0: this
+   66:  get_field2 fetchSources
+   71:  call_method 0
+   74:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_1 1
+    4:  lnot
+    5:  put_field showModal
+   10:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field Fetch
+    8:  if_false 135
+   13:  get_loc2 2: this
+   14:  get_field currentVideo
+   19:  get_field id
+   24:  if_false8 135
+   26:  get_loc2 2: this
+   27:  get_field detailFetching
+   32:  lnot
+   33:  if_false8 135
+   35:  get_loc2 2: this
+   36:  set_loc0 0: t
+   37:  push_0 0
+   38:  lnot
+   39:  put_field detailFetching
+   44:  get_loc0 0: t
+   45:  get_field baseUrl
+   50:  push_atom_value "/iwara/video/detail/"
+   55:  add
+   56:  get_var encodeURIComponent
+   61:  get_loc0 0: t
+   62:  get_field currentVideo
+   67:  get_field id
+   72:  call1 1
+   73:  add
+   74:  push_atom_value "?include_related=true"
+   79:  add
+   80:  put_loc1 1: e
+   81:  get_loc0 0: t
+   82:  get_field Fetch
+   87:  get_field2 fetch
+   92:  get_loc1 1: e
+   93:  object
+   94:  push_atom_value GET
+   99:  define_field method
+  104:  push_i8 25
+  106:  define_field timeout
+  111:  call_method 2
+  114:  get_field2 then
+  119:  fclosure8 0: [bytecode <null>]
+  121:  call_method 1
+  124:  get_field2 catch
+  129:  fclosure8 1: [bytecode <null>]
+  131:  call_method 1
+  134:  drop
+  135:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: var i
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 6
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  push_1 1
+    2:  lnot
+    3:  put_field detailFetching
+    8:  get_arg0 0: e
+    9:  get_field ok
+   14:  if_false8 120
+   16:  get_var JSON
+   21:  get_field2 parse
+   26:  get_var_ref0 0: t
+   27:  get_field2 resText
+   32:  get_arg0 0: e
+   33:  call_method 1
+   36:  call_method 1
+   39:  put_loc0 0: i
+   40:  push_1 1
+   41:  get_loc0 0: i
+   42:  get_field code
+   47:  strict_eq
+   48:  dup
+   49:  if_false8 119
+   51:  drop
+   52:  get_loc0 0: i
+   53:  get_field data
+   58:  dup
+   59:  if_false8 119
+   61:  drop
+   62:  get_var_ref0 0: t
+   63:  get_var Object
+   68:  get_field2 assign
+   73:  object
+   74:  get_var_ref0 0: t
+   75:  get_field currentVideo
+   80:  get_loc0 0: i
+   81:  get_field data
+   86:  call_method 3
+   89:  put_field currentVideo
+   94:  get_var_ref0 0: t
+   95:  get_loc0 0: i
+   96:  get_field data
+  101:  get_field related_videos
+  106:  dup
+  107:  if_true8 113
+  109:  drop
+  110:  array_from 0
+  113:  insert2
+  114:  put_field relatedVideos
+  119:  drop
+  120:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  push_1 1
+    2:  lnot
+    3:  put_field detailFetching
+    8:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field Fetch
+    8:  if_false 143
+   13:  get_loc2 2: this
+   14:  get_field currentVideo
+   19:  get_field id
+   24:  if_false8 143
+   26:  get_loc2 2: this
+   27:  get_field sourceFetching
+   32:  lnot
+   33:  if_false8 143
+   35:  get_loc2 2: this
+   36:  set_loc0 0: t
+   37:  push_0 0
+   38:  lnot
+   39:  put_field sourceFetching
+   44:  get_loc0 0: t
+   45:  push_atom_value "\u00e8\u008e\u00b7\u00e5\u008f\u0096\u00e4\u00b8\u00ad..."
+   50:  put_field sourceMsg
+   55:  get_loc0 0: t
+   56:  array_from 0
+   59:  put_field sources
+   64:  get_loc0 0: t
+   65:  get_field baseUrl
+   70:  push_atom_value "/iwara/video/sources/"
+   75:  add
+   76:  get_loc0 0: t
+   77:  get_field currentVideo
+   82:  get_field id
+   87:  add
+   88:  put_loc1 1: e
+   89:  get_loc0 0: t
+   90:  get_field Fetch
+   95:  get_field2 fetch
+  100:  get_loc1 1: e
+  101:  object
+  102:  push_atom_value GET
+  107:  define_field method
+  112:  push_i8 20
+  114:  define_field timeout
+  119:  call_method 2
+  122:  get_field2 then
+  127:  fclosure8 0: [bytecode <null>]
+  129:  call_method 1
+  132:  get_field2 catch
+  137:  fclosure8 1: [bytecode <null>]
+  139:  call_method 1
+  142:  drop
+  143:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: var i
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  push_1 1
+    2:  lnot
+    3:  put_field sourceFetching
+    8:  get_arg0 0: e
+    9:  get_field ok
+   14:  if_false 194
+   19:  get_var JSON
+   24:  get_field2 parse
+   29:  get_var_ref0 0: t
+   30:  get_field2 resText
+   35:  get_arg0 0: e
+   36:  call_method 1
+   39:  call_method 1
+   42:  put_loc0 0: i
+   43:  push_1 1
+   44:  get_loc0 0: i
+   45:  get_field code
+   50:  strict_eq
+   51:  if_false8 170
+   53:  get_loc0 0: i
+   54:  get_field data
+   59:  if_false8 170
+   61:  push_atom_value embed
+   66:  get_loc0 0: i
+   67:  get_field data
+   72:  get_field type
+   77:  strict_eq
+   78:  if_false8 120
+   80:  get_var_ref0 0: t
+   81:  push_atom_value "\u00e5\u00a4\u0096\u00e9\u0083\u00a8\u00e8\u00a7\u0086\u00e9\u00a2\u0091: "
+   86:  get_loc0 0: i
+   87:  get_field data
+   92:  get_field embed_url
+   97:  dup
+   98:  if_true8 102
+  100:  drop
+  101:  push_empty_string
+  102:  add
+  103:  put_field sourceMsg
+  108:  get_var_ref0 0: t
+  109:  array_from 0
+  112:  insert2
+  113:  put_field sources
+  118:  goto8 192
+  120:  get_var_ref0 0: t
+  121:  get_loc0 0: i
+  122:  get_field data
+  127:  get_field sources
+  132:  dup
+  133:  if_true8 139
+  135:  drop
+  136:  array_from 0
+  139:  put_field sources
+  144:  get_var_ref0 0: t
+  145:  get_var_ref0 0: t
+  146:  get_field sources
+  151:  get_length
+  152:  if_false8 157
+  154:  push_empty_string
+  155:  goto8 162
+  157:  push_atom_value "\u00e6\u0097\u00a0\u00e5\u008f\u00af\u00e7\u0094\u00a8\u00e6\u00ba\u0090"
+  162:  insert2
+  163:  put_field sourceMsg
+  168:  goto8 192
+  170:  get_var_ref0 0: t
+  171:  get_loc0 0: i
+  172:  get_field error
+  177:  dup
+  178:  if_true8 186
+  180:  drop
+  181:  push_atom_value "\u00e8\u008e\u00b7\u00e5\u008f\u0096\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  186:  insert2
+  187:  put_field sourceMsg
+  192:  drop
+  193:  return_undef
+  194:  get_var_ref0 0: t
+  195:  push_atom_value "HTTP "
+  200:  get_arg0 0: e
+  201:  get_field status
+  206:  add
+  207:  put_field sourceMsg
+  212:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  push_1 1
+    2:  lnot
+    3:  put_field sourceFetching
+    8:  get_var_ref0 0: t
+    9:  get_arg0 0: e
+   10:  get_field message
+   15:  dup
+   16:  if_true8 26
+   18:  drop
+   19:  get_var String
+   24:  get_arg0 0: e
+   25:  call1 1
+   26:  put_field sourceMsg
+   31:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var i
+    2: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_arg0 0: t
+    3:  get_field view_url
+    8:  dup
+    9:  if_true8 18
+   11:  drop
+   12:  get_arg0 0: t
+   13:  get_field download_url
+   18:  set_loc0 0: e
+   19:  if_false8 86
+   21:  get_loc2 2: this
+   22:  get_field baseUrl
+   27:  push_atom_value "/iwara/proxy/video?url="
+   32:  add
+   33:  get_var encodeURIComponent
+   38:  get_loc0 0: e
+   39:  call1 1
+   40:  add
+   41:  put_loc1 1: i
+   42:  get_loc2 2: this
+   43:  get_field2 saveWatchHistory
+   48:  get_loc2 2: this
+   49:  get_field currentVideo
+   54:  get_loc1 1: i
+   55:  call_method 2
+   58:  drop
+   59:  get_var $falcon
+   64:  get_field2 navTo
+   69:  push_atom_value tools_video
+   74:  object
+   75:  get_loc1 1: i
+   76:  define_field path
+   81:  call_method 2
+   84:  drop
+   85:  return_undef
+   86:  get_loc2 2: this
+   87:  push_atom_value "\u00e6\u0097\u00a0\u00e5\u008f\u00af\u00e7\u0094\u00a8\u00e9\u0093\u00be\u00e6\u008e\u00a5"
+   92:  put_field sourceMsg
+   97:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: var i
+    1: var o
+    2: var s
+    3: var r
+    4: catch t [level:8 next:-1]
+    5: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc8 5: this
+    3:  get_loc8 5: this
+    5:  get_field Dbase
+   10:  if_false 334
+   15:  get_arg0 0: t
+   16:  if_false 334
+   21:  catch 324
+   26:  push_atom_value iwara_history
+   31:  put_loc0 0: i
+   32:  get_loc8 5: this
+   34:  get_field Dbase
+   39:  get_field2 read
+   44:  get_loc0 0: i
+   45:  call_method 1
+   48:  put_loc1 1: o
+   49:  get_var Array
+   54:  get_field2 isArray
+   59:  get_loc1 1: o
+   60:  call_method 1
+   63:  dup
+   64:  if_true8 71
+   66:  drop
+   67:  array_from 0
+   70:  set_loc1 1: o
+   71:  drop
+   72:  get_arg0 0: t
+   73:  get_field id
+   78:  dup
+   79:  if_true8 83
+   81:  drop
+   82:  push_empty_string
+   83:  set_loc2 2: s
+   84:  if_false8 129
+   86:  push_0 0
+   87:  put_loc3 3: r
+   88:  get_loc3 3: r
+   89:  get_loc1 1: o
+   90:  get_length
+   91:  lt
+   92:  if_false8 129
+   94:  get_loc1 1: o
+   95:  get_loc3 3: r
+   96:  get_array_el
+   97:  if_false8 125
+   99:  get_loc1 1: o
+  100:  get_loc3 3: r
+  101:  get_array_el
+  102:  get_field id
+  107:  get_loc2 2: s
+  108:  strict_eq
+  109:  if_false8 125
+  111:  get_loc1 1: o
+  112:  get_field2 splice
+  117:  get_loc3 3: r
+  118:  push_1 1
+  119:  call_method 2
+  122:  drop
+  123:  goto8 129
+  125:  inc_loc 3: r
+  127:  goto8 88
+  129:  get_loc1 1: o
+  130:  get_field2 unshift
+  135:  object
+  136:  get_loc2 2: s
+  137:  define_field id
+  142:  get_arg0 0: t
+  143:  get_field title
+  148:  dup
+  149:  if_true8 153
+  151:  drop
+  152:  push_empty_string
+  153:  define_field title
+  158:  get_arg0 0: t
+  159:  get_field author
+  164:  if_false8 192
+  166:  get_arg0 0: t
+  167:  get_field author
+  172:  get_field name
+  177:  if_false8 192
+  179:  get_arg0 0: t
+  180:  get_field author
+  185:  get_field name
+  190:  goto8 193
+  192:  push_empty_string
+  193:  define_field author_name
+  198:  get_arg0 0: t
+  199:  get_field thumbnail
+  204:  dup
+  205:  if_true8 209
+  207:  drop
+  208:  push_empty_string
+  209:  define_field thumbnail
+  214:  get_arg0 0: t
+  215:  get_field views
+  220:  dup
+  221:  if_true8 225
+  223:  drop
+  224:  push_0 0
+  225:  define_field views
+  230:  get_arg0 0: t
+  231:  get_field likes
+  236:  dup
+  237:  if_true8 241
+  239:  drop
+  240:  push_0 0
+  241:  define_field likes
+  246:  get_arg1 1: e
+  247:  dup
+  248:  if_true8 252
+  250:  drop
+  251:  push_empty_string
+  252:  define_field playUrl
+  257:  get_var Date
+  262:  get_field2 now
+  267:  call_method 0
+  270:  define_field time
+  275:  call_method 1
+  278:  drop
+  279:  get_loc1 1: o
+  280:  get_length
+  281:  push_i16 200
+  284:  gt
+  285:  dup
+  286:  if_false8 303
+  288:  drop
+  289:  get_loc1 1: o
+  290:  get_field2 slice
+  295:  push_0 0
+  296:  push_i16 200
+  299:  call_method 2
+  302:  set_loc1 1: o
+  303:  drop
+  304:  get_loc8 5: this
+  306:  get_field Dbase
+  311:  get_field2 write
+  316:  get_loc0 0: i
+  317:  get_loc1 1: o
+  318:  call_method 2
+  321:  drop
+  322:  drop
+  323:  return_undef
+  324:  put_loc8 4: t
+  326:  catch 333
+  331:  drop
+  332:  return_undef
+  333:  throw
+  334:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: catch t [level:5 next:-1]
+    2: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field Dbase
+    8:  lnot
+    9:  if_false8 32
+   11:  get_loc2 2: this
+   12:  push_atom_value "\u00e6\u0097\u00a0\u00e8\u00a7\u0082\u00e7\u009c\u008b\u00e8\u00ae\u00b0\u00e5\u00bd\u0095"
+   17:  put_field tipText
+   22:  get_loc2 2: this
+   23:  array_from 0
+   26:  put_field videos
+   31:  return_undef
+   32:  catch 131
+   37:  get_loc2 2: this
+   38:  get_field Dbase
+   43:  get_field2 read
+   48:  push_atom_value iwara_history
+   53:  call_method 1
+   56:  put_loc0 0: t
+   57:  get_var Array
+   62:  get_field2 isArray
+   67:  get_loc0 0: t
+   68:  call_method 1
+   71:  lnot
+   72:  dup
+   73:  if_true8 80
+   75:  drop
+   76:  push_0 0
+   77:  get_loc0 0: t
+   78:  get_length
+   79:  strict_eq
+   80:  if_false8 105
+   82:  get_loc2 2: this
+   83:  push_atom_value "\u00e6\u0097\u00a0\u00e8\u00a7\u0082\u00e7\u009c\u008b\u00e8\u00ae\u00b0\u00e5\u00bd\u0095"
+   88:  put_field tipText
+   93:  get_loc2 2: this
+   94:  array_from 0
+   97:  put_field videos
+  102:  undefined
+  103:  nip
+  104:  return
+  105:  get_loc2 2: this
+  106:  get_loc0 0: t
+  107:  get_field2 map
+  112:  fclosure8 0: [bytecode <null>]
+  114:  call_method 1
+  117:  put_field videos
+  122:  get_loc2 2: this
+  123:  push_empty_string
+  124:  put_field tipText
+  129:  drop
+  130:  return_undef
+  131:  put_loc1 1: t
+  132:  catch 159
+  137:  get_loc2 2: this
+  138:  push_atom_value "\u00e8\u00af\u00bb\u00e5\u008f\u0096\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  143:  put_field tipText
+  148:  get_loc2 2: this
+  149:  array_from 0
+  152:  put_field videos
+  157:  drop
+  158:  return_undef
+  159:  throw
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 4
+  opcodes:
+    0:  object
+    1:  get_arg0 0: t
+    2:  get_field id
+    7:  define_field id
+   12:  get_arg0 0: t
+   13:  get_field title
+   18:  define_field title
+   23:  object
+   24:  get_arg0 0: t
+   25:  get_field author_name
+   30:  dup
+   31:  if_true8 35
+   33:  drop
+   34:  push_empty_string
+   35:  define_field name
+   40:  define_field author
+   45:  get_arg0 0: t
+   46:  get_field thumbnail
+   51:  define_field thumbnail
+   56:  get_arg0 0: t
+   57:  get_field views
+   62:  define_field views
+   67:  get_arg0 0: t
+   68:  get_field likes
+   73:  define_field likes
+   78:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var i
+    3: var this
+  stack_size: 30
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  set_loc0 0: t
+    4:  get_field $createElement
+    9:  put_loc1 1: e
+   10:  get_loc0 0: t
+   11:  get_field _self
+   16:  get_field _c
+   21:  dup
+   22:  if_true8 26
+   24:  drop
+   25:  get_loc1 1: e
+   26:  set_loc2 2: i
+   27:  push_atom_value div
+   32:  object
+   33:  push_atom_value app
+   38:  array_from 1
+   41:  define_field staticClass
+   46:  get_loc2 2: i
+   47:  push_atom_value div
+   52:  object
+   53:  push_atom_value rail
+   58:  array_from 1
+   61:  define_field staticClass
+   66:  get_loc2 2: i
+   67:  push_atom_value div
+   72:  object
+   73:  push_atom_value rb
+   78:  array_from 1
+   81:  define_field staticClass
+   86:  get_loc0 0: t
+   87:  get_field2 tbs
+   92:  push_atom_value trending
+   97:  call_method 1
+  100:  define_field style
+  105:  object
+  106:  get_loc0 0: t
+  107:  get_field goTrending
+  112:  define_field click
+  117:  define_field on
+  122:  get_loc2 2: i
+  123:  push_atom_value text
+  128:  object
+  129:  push_atom_value rl
+  134:  array_from 1
+  137:  define_field staticClass
+  142:  get_loc0 0: t
+  143:  get_field2 tfs
+  148:  push_atom_value trending
+  153:  call_method 1
+  156:  define_field style
+  161:  get_loc0 0: t
+  162:  get_field2 _v
+  167:  push_atom_value "\u00e6\u008e\u00a8"
+  172:  call_method 1
+  175:  array_from 1
+  178:  call3 3
+  179:  array_from 1
+  182:  call3 3
+  183:  get_loc2 2: i
+  184:  push_atom_value div
+  189:  object
+  190:  push_atom_value rb
+  195:  array_from 1
+  198:  define_field staticClass
+  203:  get_loc0 0: t
+  204:  get_field2 tbs
+  209:  push_atom_value hot
+  214:  call_method 1
+  217:  define_field style
+  222:  object
+  223:  get_loc0 0: t
+  224:  get_field goHot
+  229:  define_field click
+  234:  define_field on
+  239:  get_loc2 2: i
+  240:  push_atom_value text
+  245:  object
+  246:  push_atom_value rl
+  251:  array_from 1
+  254:  define_field staticClass
+  259:  get_loc0 0: t
+  260:  get_field2 tfs
+  265:  push_atom_value hot
+  270:  call_method 1
+  273:  define_field style
+  278:  get_loc0 0: t
+  279:  get_field2 _v
+  284:  push_atom_value "\u00e7\u0083\u00ad"
+  289:  call_method 1
+  292:  array_from 1
+  295:  call3 3
+  296:  array_from 1
+  299:  call3 3
+  300:  get_loc2 2: i
+  301:  push_atom_value div
+  306:  object
+  307:  push_atom_value rb
+  312:  array_from 1
+  315:  define_field staticClass
+  320:  get_loc0 0: t
+  321:  get_field2 tbs
+  326:  push_atom_value new
+  331:  call_method 1
+  334:  define_field style
+  339:  object
+  340:  get_loc0 0: t
+  341:  get_field goNew
+  346:  define_field click
+  351:  define_field on
+  356:  get_loc2 2: i
+  357:  push_atom_value text
+  362:  object
+  363:  push_atom_value rl
+  368:  array_from 1
+  371:  define_field staticClass
+  376:  get_loc0 0: t
+  377:  get_field2 tfs
+  382:  push_atom_value new
+  387:  call_method 1
+  390:  define_field style
+  395:  get_loc0 0: t
+  396:  get_field2 _v
+  401:  push_atom_value "\u00e6\u0096\u00b0"
+  406:  call_method 1
+  409:  array_from 1
+  412:  call3 3
+  413:  array_from 1
+  416:  call3 3
+  417:  get_loc2 2: i
+  418:  push_atom_value div
+  423:  object
+  424:  push_atom_value rb
+  429:  array_from 1
+  432:  define_field staticClass
+  437:  get_loc0 0: t
+  438:  get_field2 tbs
+  443:  push_atom_value search
+  448:  call_method 1
+  451:  define_field style
+  456:  object
+  457:  get_loc0 0: t
+  458:  get_field goSearch
+  463:  define_field click
+  468:  define_field on
+  473:  get_loc2 2: i
+  474:  push_atom_value text
+  479:  object
+  480:  push_atom_value rl
+  485:  array_from 1
+  488:  define_field staticClass
+  493:  get_loc0 0: t
+  494:  get_field2 tfs
+  499:  push_atom_value search
+  504:  call_method 1
+  507:  define_field style
+  512:  get_loc0 0: t
+  513:  get_field2 _v
+  518:  push_atom_value "\u00e6\u0090\u009c"
+  523:  call_method 1
+  526:  array_from 1
+  529:  call3 3
+  530:  array_from 1
+  533:  call3 3
+  534:  get_loc2 2: i
+  535:  push_atom_value div
+  540:  object
+  541:  push_atom_value rb
+  546:  array_from 1
+  549:  define_field staticClass
+  554:  get_loc0 0: t
+  555:  get_field2 tbs
+  560:  push_atom_value history
+  565:  call_method 1
+  568:  define_field style
+  573:  object
+  574:  get_loc0 0: t
+  575:  get_field goHistory
+  580:  define_field click
+  585:  define_field on
+  590:  get_loc2 2: i
+  591:  push_atom_value text
+  596:  object
+  597:  push_atom_value rl
+  602:  array_from 1
+  605:  define_field staticClass
+  610:  get_loc0 0: t
+  611:  get_field2 tfs
+  616:  push_atom_value history
+  621:  call_method 1
+  624:  define_field style
+  629:  get_loc0 0: t
+  630:  get_field2 _v
+  635:  push_atom_value "\u00e5\u008e\u0086"
+  640:  call_method 1
+  643:  array_from 1
+  646:  call3 3
+  647:  array_from 1
+  650:  call3 3
+  651:  get_loc2 2: i
+  652:  push_atom_value div
+  657:  object
+  658:  push_atom_value "rail-sp"
+  663:  array_from 1
+  666:  define_field staticClass
+  671:  call2 2
+  672:  get_loc2 2: i
+  673:  push_atom_value div
+  678:  object
+  679:  push_atom_value dot
+  684:  array_from 1
+  687:  define_field staticClass
+  692:  object
+  693:  get_loc0 0: t
+  694:  get_field statusColor
+  699:  define_field backgroundColor
+  704:  define_field style
+  709:  call2 2
+  710:  array_from 7
+  713:  call3 3
+  714:  get_loc2 2: i
+  715:  push_atom_value div
+  720:  object
+  721:  push_atom_value main
+  726:  array_from 1
+  729:  define_field staticClass
+  734:  get_loc2 2: i
+  735:  push_atom_value scroller
+  740:  object
+  741:  push_atom_value scroll
+  746:  array_from 1
+  749:  define_field staticClass
+  754:  push_0 0
+  755:  get_loc0 0: t
+  756:  get_field videos
+  761:  get_length
+  762:  strict_eq
+  763:  if_false8 839
+  765:  get_loc2 2: i
+  766:  push_atom_value div
+  771:  object
+  772:  push_atom_value empty
+  777:  array_from 1
+  780:  define_field staticClass
+  785:  get_loc2 2: i
+  786:  push_atom_value text
+  791:  object
+  792:  push_atom_value "empty-txt"
+  797:  array_from 1
+  800:  define_field staticClass
+  805:  get_loc0 0: t
+  806:  get_field2 _v
+  811:  get_loc0 0: t
+  812:  get_field2 _s
+  817:  get_loc0 0: t
+  818:  get_field tipText
+  823:  call_method 1
+  826:  call_method 1
+  829:  array_from 1
+  832:  call3 3
+  833:  array_from 1
+  836:  call3 3
+  837:  goto8 848
+  839:  get_loc0 0: t
+  840:  get_field2 _e
+  845:  call_method 0
+  848:  get_loc0 0: t
+  849:  get_field2 _l
+  854:  get_loc0 0: t
+  855:  get_field videoRows
+  860:  fclosure8 0: [bytecode <null>]
+  862:  call_method 2
+  865:  array_from 2
+  868:  push_2 2
+  869:  call 4
+  872:  array_from 1
+  875:  call3 3
+  876:  get_loc0 0: t
+  877:  get_field showModal
+  882:  if_false 1571
+  887:  get_loc2 2: i
+  888:  push_atom_value div
+  893:  object
+  894:  push_atom_value ov
+  899:  array_from 1
+  902:  define_field staticClass
+  907:  object
+  908:  fclosure8 1: [bytecode <null>]
+  910:  set_name click
+  915:  define_field click
+  920:  define_field on
+  925:  get_loc2 2: i
+  926:  push_atom_value div
+  931:  object
+  932:  push_atom_value pn
+  937:  array_from 1
+  940:  define_field staticClass
+  945:  get_loc2 2: i
+  946:  push_atom_value text
+  951:  object
+  952:  push_atom_value "p-title"
+  957:  array_from 1
+  960:  define_field staticClass
+  965:  get_loc0 0: t
+  966:  get_field2 _v
+  971:  get_loc0 0: t
+  972:  get_field2 _s
+  977:  get_loc0 0: t
+  978:  get_field currentVideo
+  983:  get_field title
+  988:  call_method 1
+  991:  call_method 1
+  994:  array_from 1
+  997:  call3 3
+  998:  get_loc2 2: i
+  999:  push_atom_value text
+ 1004:  object
+ 1005:  push_atom_value "p-meta"
+ 1010:  array_from 1
+ 1013:  define_field staticClass
+ 1018:  get_loc0 0: t
+ 1019:  get_field2 _v
+ 1024:  get_loc0 0: t
+ 1025:  get_field2 _s
+ 1030:  get_loc0 0: t
+ 1031:  get_field detailMeta
+ 1036:  call_method 1
+ 1039:  call_method 1
+ 1042:  array_from 1
+ 1045:  call3 3
+ 1046:  get_loc0 0: t
+ 1047:  get_field sources
+ 1052:  get_length
+ 1053:  push_0 0
+ 1054:  gt
+ 1055:  if_false8 1100
+ 1057:  get_loc2 2: i
+ 1058:  push_atom_value div
+ 1063:  object
+ 1064:  push_atom_value "src-row"
+ 1069:  array_from 1
+ 1072:  define_field staticClass
+ 1077:  get_loc0 0: t
+ 1078:  get_field2 _l
+ 1083:  get_loc0 0: t
+ 1084:  get_field sources
+ 1089:  fclosure8 2: [bytecode <null>]
+ 1091:  call_method 2
+ 1094:  push_0 0
+ 1095:  call 4
+ 1098:  goto8 1109
+ 1100:  get_loc0 0: t
+ 1101:  get_field2 _e
+ 1106:  call_method 0
+ 1109:  get_loc0 0: t
+ 1110:  get_field sourceMsg
+ 1115:  if_false8 1191
+ 1117:  get_loc2 2: i
+ 1118:  push_atom_value div
+ 1123:  object
+ 1124:  push_atom_value "p-url"
+ 1129:  array_from 1
+ 1132:  define_field staticClass
+ 1137:  get_loc2 2: i
+ 1138:  push_atom_value text
+ 1143:  object
+ 1144:  push_atom_value "p-url-t"
+ 1149:  array_from 1
+ 1152:  define_field staticClass
+ 1157:  get_loc0 0: t
+ 1158:  get_field2 _v
+ 1163:  get_loc0 0: t
+ 1164:  get_field2 _s
+ 1169:  get_loc0 0: t
+ 1170:  get_field sourceMsg
+ 1175:  call_method 1
+ 1178:  call_method 1
+ 1181:  array_from 1
+ 1184:  call3 3
+ 1185:  array_from 1
+ 1188:  call3 3
+ 1189:  goto8 1200
+ 1191:  get_loc0 0: t
+ 1192:  get_field2 _e
+ 1197:  call_method 0
+ 1200:  get_loc0 0: t
+ 1201:  get_field relatedVideos
+ 1206:  get_length
+ 1207:  push_0 0
+ 1208:  gt
+ 1209:  if_false 1345
+ 1214:  get_loc2 2: i
+ 1215:  push_atom_value div
+ 1220:  object
+ 1221:  push_atom_value "rel-box"
+ 1226:  array_from 1
+ 1229:  define_field staticClass
+ 1234:  get_loc2 2: i
+ 1235:  push_atom_value text
+ 1240:  object
+ 1241:  push_atom_value "rel-title"
+ 1246:  array_from 1
+ 1249:  define_field staticClass
+ 1254:  get_loc0 0: t
+ 1255:  get_field2 _v
+ 1260:  push_atom_value "\u00e7\u009b\u00b8\u00e5\u0085\u00b3\u00e6\u008e\u00a8\u00e8\u008d\u0090"
+ 1265:  call_method 1
+ 1268:  array_from 1
+ 1271:  call3 3
+ 1272:  get_loc2 2: i
+ 1273:  push_atom_value scroller
+ 1278:  object
+ 1279:  push_atom_value "rel-scroll"
+ 1284:  array_from 1
+ 1287:  define_field staticClass
+ 1292:  object
+ 1293:  push_atom_value horizontal
+ 1298:  define_field scrollDirection
+ 1303:  push_atom_value false
+ 1308:  define_field showScrollbar
+ 1313:  define_field attrs
+ 1318:  get_loc0 0: t
+ 1319:  get_field2 _l
+ 1324:  get_loc0 0: t
+ 1325:  get_field relatedVideos
+ 1330:  fclosure8 3: [bytecode <null>]
+ 1332:  call_method 2
+ 1335:  push_0 0
+ 1336:  call 4
+ 1339:  array_from 2
+ 1342:  call3 3
+ 1343:  goto8 1354
+ 1345:  get_loc0 0: t
+ 1346:  get_field2 _e
+ 1351:  call_method 0
+ 1354:  get_loc2 2: i
+ 1355:  push_atom_value div
+ 1360:  object
+ 1361:  push_atom_value "p-btns"
+ 1366:  array_from 1
+ 1369:  define_field staticClass
+ 1374:  get_loc2 2: i
+ 1375:  push_atom_value div
+ 1380:  object
+ 1381:  push_atom_value pb
+ 1386:  push_atom_value "pb-w"
+ 1391:  array_from 2
+ 1394:  define_field staticClass
+ 1399:  object
+ 1400:  get_loc0 0: t
+ 1401:  get_field fetchSources
+ 1406:  define_field click
+ 1411:  define_field on
+ 1416:  get_loc2 2: i
+ 1417:  push_atom_value text
+ 1422:  object
+ 1423:  push_atom_value "pb-t"
+ 1428:  push_atom_value "pb-dark"
+ 1433:  array_from 2
+ 1436:  define_field staticClass
+ 1441:  get_loc0 0: t
+ 1442:  get_field2 _v
+ 1447:  get_loc0 0: t
+ 1448:  get_field2 _s
+ 1453:  get_loc0 0: t
+ 1454:  get_field sourceBtnText
+ 1459:  call_method 1
+ 1462:  call_method 1
+ 1465:  array_from 1
+ 1468:  call3 3
+ 1469:  array_from 1
+ 1472:  call3 3
+ 1473:  get_loc2 2: i
+ 1474:  push_atom_value div
+ 1479:  object
+ 1480:  push_atom_value pb
+ 1485:  push_atom_value "pb-g"
+ 1490:  array_from 2
+ 1493:  define_field staticClass
+ 1498:  object
+ 1499:  get_loc0 0: t
+ 1500:  get_field closeModal
+ 1505:  define_field click
+ 1510:  define_field on
+ 1515:  get_loc2 2: i
+ 1516:  push_atom_value text
+ 1521:  object
+ 1522:  push_atom_value "pb-t"
+ 1527:  array_from 1
+ 1530:  define_field staticClass
+ 1535:  get_loc0 0: t
+ 1536:  get_field2 _v
+ 1541:  push_atom_value "\u00e5\u0085\u00b3\u00e9\u0097\u00ad"
+ 1546:  call_method 1
+ 1549:  array_from 1
+ 1552:  call3 3
+ 1553:  array_from 1
+ 1556:  call3 3
+ 1557:  array_from 2
+ 1560:  call3 3
+ 1561:  array_from 6
+ 1564:  call3 3
+ 1565:  array_from 1
+ 1568:  call3 3
+ 1569:  goto8 1580
+ 1571:  get_loc0 0: t
+ 1572:  get_field2 _e
+ 1577:  call_method 0
+ 1580:  array_from 3
+ 1583:  tail_call 3
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: e o
+  closure vars:
+    0: t local:loc0 var
+    1: i local:loc2 var
+  stack_size: 11
+  opcodes:
+    0:  get_var_ref1 1: i
+    1:  push_atom_value div
+    6:  object
+    7:  get_arg1 1: o
+    8:  define_field key
+   13:  push_atom_value vrow
+   18:  array_from 1
+   21:  define_field staticClass
+   26:  get_var_ref0 0: t
+   27:  get_field2 _l
+   32:  get_arg0 0: e
+   33:  fclosure8 0: [bytecode <null>]
+   35:  call_method 2
+   38:  get_arg0 0: e
+   39:  get_length
+   40:  push_3 3
+   41:  lte
+   42:  if_false8 72
+   44:  get_var_ref1 1: i
+   45:  push_atom_value div
+   50:  object
+   51:  push_atom_value vc
+   56:  push_atom_value vph
+   61:  array_from 2
+   64:  define_field staticClass
+   69:  call2 2
+   70:  goto8 81
+   72:  get_var_ref0 0: t
+   73:  get_field2 _e
+   78:  call_method 0
+   81:  get_arg0 0: e
+   82:  get_length
+   83:  push_2 2
+   84:  lte
+   85:  if_false8 115
+   87:  get_var_ref1 1: i
+   88:  push_atom_value div
+   93:  object
+   94:  push_atom_value vc
+   99:  push_atom_value vph
+  104:  array_from 2
+  107:  define_field staticClass
+  112:  call2 2
+  113:  goto8 124
+  115:  get_var_ref0 0: t
+  116:  get_field2 _e
+  121:  call_method 0
+  124:  get_arg0 0: e
+  125:  get_length
+  126:  push_1 1
+  127:  lte
+  128:  if_false8 158
+  130:  get_var_ref1 1: i
+  131:  push_atom_value div
+  136:  object
+  137:  push_atom_value vc
+  142:  push_atom_value vph
+  147:  array_from 2
+  150:  define_field staticClass
+  155:  call2 2
+  156:  goto8 167
+  158:  get_var_ref0 0: t
+  159:  get_field2 _e
+  164:  call_method 0
+  167:  array_from 4
+  170:  push_2 2
+  171:  tail_call 4
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: e o
+  closure vars:
+    0: t parent:loc0 var
+    1: i parent:loc1 var
+  stack_size: 19
+  opcodes:
+    0:  get_var_ref1 1: i
+    1:  push_atom_value div
+    6:  object
+    7:  get_arg1 1: o
+    8:  define_field key
+   13:  push_atom_value vc
+   18:  array_from 1
+   21:  define_field staticClass
+   26:  object
+   27:  fclosure8 0: [bytecode <null>]
+   29:  set_name click
+   34:  define_field click
+   39:  define_field on
+   44:  get_var_ref1 1: i
+   45:  push_atom_value image
+   50:  object
+   51:  push_atom_value vi
+   56:  array_from 1
+   59:  define_field staticClass
+   64:  object
+   65:  get_var_ref0 0: t
+   66:  get_field2 thumbProxy
+   71:  get_arg0 0: e
+   72:  call_method 1
+   75:  define_field src
+   80:  push_atom_value aspectFill
+   85:  define_field mode
+   90:  define_field attrs
+   95:  call2 2
+   96:  get_var_ref1 1: i
+   97:  push_atom_value div
+  102:  object
+  103:  push_atom_value vb
+  108:  array_from 1
+  111:  define_field staticClass
+  116:  get_var_ref1 1: i
+  117:  push_atom_value text
+  122:  object
+  123:  push_atom_value vt
+  128:  array_from 1
+  131:  define_field staticClass
+  136:  get_var_ref0 0: t
+  137:  get_field2 _v
+  142:  get_var_ref0 0: t
+  143:  get_field2 _s
+  148:  get_arg0 0: e
+  149:  get_field title
+  154:  call_method 1
+  157:  call_method 1
+  160:  array_from 1
+  163:  call3 3
+  164:  get_var_ref1 1: i
+  165:  push_atom_value text
+  170:  object
+  171:  push_atom_value va
+  176:  array_from 1
+  179:  define_field staticClass
+  184:  get_var_ref0 0: t
+  185:  get_field2 _v
+  190:  get_var_ref0 0: t
+  191:  get_field2 _s
+  196:  get_var_ref0 0: t
+  197:  get_field2 authorName
+  202:  get_arg0 0: e
+  203:  call_method 1
+  206:  call_method 1
+  209:  call_method 1
+  212:  array_from 1
+  215:  call3 3
+  216:  get_var_ref1 1: i
+  217:  push_atom_value text
+  222:  object
+  223:  push_atom_value vs
+  228:  array_from 1
+  231:  define_field staticClass
+  236:  get_var_ref0 0: t
+  237:  get_field2 _v
+  242:  get_var_ref0 0: t
+  243:  get_field2 _s
+  248:  get_var_ref0 0: t
+  249:  get_field2 formatStat
+  254:  get_arg0 0: e
+  255:  call_method 1
+  258:  call_method 1
+  261:  call_method 1
+  264:  array_from 1
+  267:  call3 3
+  268:  array_from 3
+  271:  call3 3
+  272:  array_from 2
+  275:  tail_call 3
+
+
+/* ===== function depth=4 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: i
+  closure vars:
+    0: t parent:loc0 var
+    1: e local:arg0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 onCardClick
+    6:  get_var_ref1 1: e
+    7:  tail_call_method 1
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: e
+    1:  get_field2 stopPropagation
+    6:  call_method 0
+    9:  drop
+   10:  get_var_ref0 0: t
+   11:  get_field2 eatEvent
+   16:  get_arg0 0: e
+   17:  tail_call_method 1
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: e o
+  closure vars:
+    0: t local:loc0 var
+    1: i local:loc2 var
+  stack_size: 13
+  opcodes:
+    0:  get_var_ref1 1: i
+    1:  push_atom_value div
+    6:  object
+    7:  get_arg1 1: o
+    8:  define_field key
+   13:  push_atom_value "src-btn"
+   18:  array_from 1
+   21:  define_field staticClass
+   26:  object
+   27:  fclosure8 0: [bytecode <null>]
+   29:  set_name click
+   34:  define_field click
+   39:  define_field on
+   44:  get_var_ref1 1: i
+   45:  push_atom_value text
+   50:  object
+   51:  push_atom_value "src-txt"
+   56:  array_from 1
+   59:  define_field staticClass
+   64:  get_var_ref0 0: t
+   65:  get_field2 _v
+   70:  push_atom_value "\u00e2\u0096\u00b6 "
+   75:  get_var_ref0 0: t
+   76:  get_field2 _s
+   81:  get_arg0 0: e
+   82:  get_field quality
+   87:  dup
+   88:  if_true8 96
+   90:  drop
+   91:  push_atom_value Source
+   96:  call_method 1
+   99:  add
+  100:  call_method 1
+  103:  array_from 1
+  106:  call3 3
+  107:  array_from 1
+  110:  tail_call 3
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: i
+  closure vars:
+    0: t parent:loc0 var
+    1: e local:arg0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 playSource
+    6:  get_var_ref1 1: e
+    7:  tail_call_method 1
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: e o
+  closure vars:
+    0: t local:loc0 var
+    1: i local:loc2 var
+  stack_size: 12
+  opcodes:
+    0:  get_var_ref1 1: i
+    1:  push_atom_value div
+    6:  object
+    7:  get_arg1 1: o
+    8:  define_field key
+   13:  push_atom_value "rel-card"
+   18:  array_from 1
+   21:  define_field staticClass
+   26:  object
+   27:  fclosure8 0: [bytecode <null>]
+   29:  set_name click
+   34:  define_field click
+   39:  define_field on
+   44:  get_var_ref1 1: i
+   45:  push_atom_value image
+   50:  object
+   51:  push_atom_value "rel-img"
+   56:  array_from 1
+   59:  define_field staticClass
+   64:  object
+   65:  get_var_ref0 0: t
+   66:  get_field2 thumbProxy
+   71:  get_arg0 0: e
+   72:  call_method 1
+   75:  define_field src
+   80:  push_atom_value aspectFill
+   85:  define_field mode
+   90:  define_field attrs
+   95:  call2 2
+   96:  get_var_ref1 1: i
+   97:  push_atom_value text
+  102:  object
+  103:  push_atom_value "rel-name"
+  108:  array_from 1
+  111:  define_field staticClass
+  116:  get_var_ref0 0: t
+  117:  get_field2 _v
+  122:  get_var_ref0 0: t
+  123:  get_field2 _s
+  128:  get_arg0 0: e
+  129:  get_field title
+  134:  call_method 1
+  137:  call_method 1
+  140:  array_from 1
+  143:  call3 3
+  144:  array_from 2
+  147:  tail_call 3
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_iwara.js:1 source_len=0 */
+apps_iwara.js:1: function: <null>
+  mode: strict
+  args: i
+  closure vars:
+    0: t parent:loc0 var
+    1: e local:arg0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 openRelated
+    6:  get_var_ref1 1: e
+    7:  tail_call_method 1
+

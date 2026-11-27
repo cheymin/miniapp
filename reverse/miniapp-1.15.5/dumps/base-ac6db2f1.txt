@@ -1,0 +1,3272 @@
+
+/* ===== function depth=0 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: <eval>
+  mode: strict
+  locals:
+    0: catch e [level:3 next:-1]
+    1: catch t [level:7 next:0]
+  closure vars:
+    0: t parent:loc0 const
+    1: e parent:loc1 const
+    2: n parent:loc2 const
+    3: a local:loc0 const
+    4: o local:loc1 const
+    5: r local:loc2 const
+    6: i local:loc3 const
+    7: s local:loc4 var
+    8: c local:loc5 var
+    9: l local:loc6 var
+   10: f local:loc7 var
+   11: u local:loc8 var
+   12: p local:loc9 var
+   13: y local:loc10 var
+   14: d local:loc11 var
+   15: v local:loc12 let
+   16: g local:loc13 let
+   17: h local:loc14 var
+   18: b local:loc15 const
+   19: _ local:loc16 const
+   20: m local:loc17 const
+   21: w local:loc18 const
+   22: k local:loc19 const
+   23: $ local:loc20 const
+   24: A local:loc21 const
+   25: U local:loc22 const
+   26: q local:loc23 var
+   27: D local:loc24 const
+   28: B local:loc25 var
+   29: S local:loc26 var
+   30: j local:loc27 var
+   31: x local:loc28 var
+   32: O local:loc29 var
+   33: C local:loc30 var
+   34: z local:loc31 var
+   35: N local:loc32 let
+   36: K local:loc33 let
+   37: P local:loc34 let
+   38: M local:loc35 const
+   39: Z local:loc36 const
+   40: I local:loc37 const
+   41: T local:loc38 let
+   42: R local:loc39 let
+   43: W local:loc40 let
+   44: J local:loc41 let
+   45: G local:loc42 let
+   46: L local:loc43 let
+   47: E local:loc44 let
+   48: F local:loc45 const
+   49: H local:loc46 let
+   50: X local:loc47 var
+   51: Q local:loc48 var
+   52: V local:loc49 const
+   53: Y local:loc50 const
+   54: tt local:loc51 const
+   55: et local:loc52 const
+   56: nt local:loc53 const
+   57: at local:loc54 var
+   58: ot local:loc55 var
+   59: rt local:loc56 var
+   60: it local:loc57 var
+   61: st local:loc58 var
+   62: ct local:loc59 var
+   63: lt local:loc60 var
+  stack_size: 6
+  opcodes:
+    0:  fclosure8 0: [bytecode s]
+    2:  put_var_ref 7: s
+    5:  fclosure8 1: [bytecode c]
+    7:  put_var_ref 8: c
+   10:  fclosure8 2: [bytecode l]
+   12:  put_var_ref 9: l
+   15:  fclosure8 3: [bytecode f]
+   17:  put_var_ref 10: f
+   20:  fclosure8 4: [bytecode u]
+   22:  put_var_ref 11: u
+   25:  fclosure8 5: [bytecode p]
+   27:  put_var_ref 12: p
+   30:  fclosure8 6: [bytecode y]
+   32:  put_var_ref 13: y
+   35:  fclosure8 7: [bytecode d]
+   37:  put_var_ref 14: d
+   40:  fclosure8 8: [bytecode h]
+   42:  put_var_ref 17: h
+   45:  fclosure8 9: [bytecode q]
+   47:  put_var_ref 26: q
+   50:  fclosure8 12: [bytecode B]
+   52:  put_var_ref 28: B
+   55:  fclosure8 13: [bytecode S]
+   57:  put_var_ref 29: S
+   60:  fclosure8 14: [bytecode j]
+   62:  put_var_ref 30: j
+   65:  fclosure8 15: [bytecode x]
+   67:  put_var_ref 31: x
+   70:  fclosure8 17: [bytecode C]
+   72:  put_var_ref 33: C
+   75:  fclosure8 18: [bytecode z]
+   77:  put_var_ref 34: z
+   80:  fclosure8 19: [bytecode X]
+   82:  put_var_ref 50: X
+   85:  fclosure8 20: [bytecode Q]
+   87:  put_var_ref 51: Q
+   90:  fclosure8 21: [bytecode at]
+   92:  put_var_ref 57: at
+   95:  fclosure8 22: [bytecode ot]
+   97:  put_var_ref 58: ot
+  100:  fclosure8 24: [bytecode rt]
+  102:  put_var_ref 59: rt
+  105:  fclosure8 25: [bytecode it]
+  107:  put_var_ref 60: it
+  110:  fclosure8 26: [bytecode st]
+  112:  put_var_ref 61: st
+  115:  fclosure8 27: [bytecode ct]
+  117:  put_var_ref 62: ct
+  120:  fclosure8 28: [bytecode lt]
+  122:  put_var_ref 63: lt
+  125:  push_atom_value desktop_activity_status
+  130:  put_var_ref3 3: a
+  131:  push_atom_value desktop_runtime_status
+  136:  put_var_ref 4: o
+  139:  object
+  140:  object
+  141:  push_atom_value music
+  146:  define_field scene
+  151:  push_atom_value "\u00e5\u0090\u00ac\u00e6\u00ad\u008cing"
+  156:  define_field label
+  161:  push_i8 120
+  163:  define_field priority
+  168:  push_atom_value software
+  173:  define_field kind
+  178:  define_field apps_music
+  183:  object
+  184:  push_atom_value music
+  189:  define_field scene
+  194:  push_atom_value "\u00e5\u0090\u00ac\u00e6\u00ad\u008cing"
+  199:  define_field label
+  204:  push_i8 120
+  206:  define_field priority
+  211:  push_atom_value software
+  216:  define_field kind
+  221:  define_field apps_wyyyy
+  226:  object
+  227:  push_atom_value assis
+  232:  define_field scene
+  237:  push_atom_value "\u00e5\u00ad\u00a6\u00e4\u00b9\u00a0ing"
+  242:  define_field label
+  247:  push_i8 118
+  249:  define_field priority
+  254:  push_atom_value software
+  259:  define_field kind
+  264:  define_field apps_assis
+  269:  object
+  270:  push_atom_value chat
+  275:  define_field scene
+  280:  push_atom_value "\u00e8\u0081\u008a\u00e5\u00a4\u00a9ing"
+  285:  define_field label
+  290:  push_i8 116
+  292:  define_field priority
+  297:  push_atom_value software
+  302:  define_field kind
+  307:  define_field apps_chats
+  312:  object
+  313:  push_atom_value chaty
+  318:  define_field scene
+  323:  push_atom_value "\u00e6\u00b0\u00b4\u00e7\u00be\u00a4ing"
+  328:  define_field label
+  333:  push_i8 114
+  335:  define_field priority
+  340:  push_atom_value software
+  345:  define_field kind
+  350:  define_field apps_chaty
+  355:  object
+  356:  push_atom_value bilibili
+  361:  define_field scene
+  366:  push_atom_value "\u00e5\u0093\u0094\u00e5\u0093\u00a9ing"
+  371:  define_field label
+  376:  push_i8 112
+  378:  define_field priority
+  383:  push_atom_value software
+  388:  define_field kind
+  393:  define_field apps_bilis
+  398:  object
+  399:  push_atom_value novel
+  404:  define_field scene
+  409:  push_atom_value "\u00e5\u00b0\u008f\u00e8\u00af\u00b4ing"
+  414:  define_field label
+  419:  push_i8 110
+  421:  define_field priority
+  426:  push_atom_value software
+  431:  define_field kind
+  436:  define_field apps_fanqie
+  441:  object
+  442:  push_atom_value tool
+  447:  define_field scene
+  452:  push_atom_value "\u00e6\u0091\u00b8\u00e9\u00b1\u00bcing"
+  457:  define_field label
+  462:  push_i8 60
+  464:  define_field priority
+  469:  push_atom_value tool
+  474:  define_field kind
+  479:  define_field tools_camera
+  484:  object
+  485:  push_atom_value tool
+  490:  define_field scene
+  495:  push_atom_value "\u00e6\u0091\u00b8\u00e9\u00b1\u00bcing"
+  500:  define_field label
+  505:  push_i8 60
+  507:  define_field priority
+  512:  push_atom_value tool
+  517:  define_field kind
+  522:  define_field tools_settings
+  527:  object
+  528:  push_atom_value tool
+  533:  define_field scene
+  538:  push_atom_value "\u00e6\u0091\u00b8\u00e9\u00b1\u00bcing"
+  543:  define_field label
+  548:  push_i8 60
+  550:  define_field priority
+  555:  push_atom_value tool
+  560:  define_field kind
+  565:  define_field miniapp_tools
+  570:  put_var_ref 5: r
+  573:  object
+  574:  push_atom_value apps_music
+  579:  define_field music
+  584:  push_atom_value apps_wyyyy
+  589:  define_field wyyyy
+  594:  push_atom_value apps_assis
+  599:  define_field assis
+  604:  push_atom_value apps_chats
+  609:  define_field claude
+  614:  push_atom_value apps_chaty
+  619:  define_field chaty
+  624:  push_atom_value apps_bilis
+  629:  define_field bilibili
+  634:  push_atom_value apps_fanqie
+  639:  define_field fanqie
+  644:  push_atom_value tools_camera
+  649:  define_field camera
+  654:  push_atom_value tools_settings
+  659:  define_field settings
+  664:  push_atom_value miniapp_tools
+  669:  define_field tools
+  674:  put_var_ref 6: i
+  677:  push_0 0
+  678:  put_var_ref 15: v
+  681:  null
+  682:  put_var_ref 16: g
+  685:  push_atom_value direct
+  690:  put_var_ref 18: b
+  693:  push_atom_value cdn_cn2
+  698:  put_var_ref 19: _
+  701:  push_atom_value chongqing
+  706:  put_var_ref 20: m
+  709:  push_atom_value chongqing_legacy
+  714:  put_var_ref 21: w
+  717:  push_atom_value auto
+  722:  put_var_ref 22: k
+  725:  get_var_ref_check 18: b
+  728:  get_var_ref_check 20: m
+  731:  get_var_ref_check 19: _
+  734:  get_var_ref_check 21: w
+  737:  array_from 4
+  740:  put_var_ref 23: $
+  743:  object
+  744:  put_var_ref 24: A
+  747:  get_var_ref_check 24: A
+  750:  get_var_ref_check 18: b
+  753:  to_propkey2
+  754:  object
+  755:  push_atom_value "\u00e9\u00a6\u0099\u00e6\u00b8\u00af\u00e4\u00b8\u0089\u00e7\u00bd\u0091\u00e7\u009b\u00b4\u00e8\u00bf\u009e\u00ef\u00bc\u0088CN2+CMI+CUG\u00ef\u00bc\u0089"
+  760:  define_field label
+  765:  push_atom_value "https://api.loliyc.com"
+  770:  define_field apiBaseUrl
+  775:  push_atom_value "wss://ws.loliyc.com"
+  780:  define_field chatyWsUrl
+  785:  put_array_el
+  786:  get_var_ref_check 24: A
+  789:  get_var_ref_check 19: _
+  792:  to_propkey2
+  793:  object
+  794:  push_atom_value "\u00e9\u00a6\u0099\u00e6\u00b8\u00af\u00e7\u0094\u00b5\u00e4\u00bf\u00a1\u00e4\u00b8\u0093\u00e7\u00ba\u00bf\u00ef\u00bc\u0088CDN CN2\u00ef\u00bc\u0089"
+  799:  define_field label
+  804:  push_atom_value "https://cdn-api.loliyc.com"
+  809:  define_field apiBaseUrl
+  814:  push_atom_value "wss://cdn-ws.loliyc.com"
+  819:  define_field chatyWsUrl
+  824:  put_array_el
+  825:  get_var_ref_check 24: A
+  828:  get_var_ref_check 20: m
+  831:  to_propkey2
+  832:  object
+  833:  push_atom_value "\u00e9\u0087\u008d\u00e5\u00ba\u0086\u00e7\u0094\u00b5\u00e4\u00bf\u00a1\u00e4\u00b8\u0093\u00e7\u00ba\u00bf"
+  838:  define_field label
+  843:  push_atom_value "http://183.66.27.21:10024"
+  848:  define_field apiBaseUrl
+  853:  push_atom_value "ws://loli.tesbin.top:66/"
+  858:  define_field chatyWsUrl
+  863:  put_array_el
+  864:  get_var_ref_check 24: A
+  867:  get_var_ref_check 21: w
+  870:  to_propkey2
+  871:  object
+  872:  push_atom_value "\u00e9\u0087\u008d\u00e5\u00ba\u0086\u00e7\u0094\u00b5\u00e4\u00bf\u00a1\u00e4\u00b8\u0093\u00e7\u00ba\u00bf\u00ef\u00bc\u0088\u00e6\u0097\u00a7\u00ef\u00bc\u0089"
+  877:  define_field label
+  882:  push_atom_value "http://103.40.14.174:27447"
+  887:  define_field apiBaseUrl
+  892:  push_atom_value "ws://loli.tesbin.top:66/"
+  897:  define_field chatyWsUrl
+  902:  put_array_el
+  903:  object
+  904:  get_var_ref_check 22: k
+  907:  define_field value
+  912:  push_atom_value "\u00e8\u0087\u00aa\u00e5\u008a\u00a8\u00e9\u0080\u0089\u00e6\u008b\u00a9\u00ef\u00bc\u0088\u00e6\u008e\u00a8\u00e8\u008d\u0090\u00ef\u00bc\u0089"
+  917:  define_field label
+  922:  object
+  923:  get_var_ref_check 18: b
+  926:  define_field value
+  931:  get_var_ref_check 24: A
+  934:  get_var_ref_check 18: b
+  937:  get_array_el
+  938:  get_field label
+  943:  define_field label
+  948:  object
+  949:  get_var_ref_check 19: _
+  952:  define_field value
+  957:  get_var_ref_check 24: A
+  960:  get_var_ref_check 19: _
+  963:  get_array_el
+  964:  get_field label
+  969:  define_field label
+  974:  object
+  975:  get_var_ref_check 20: m
+  978:  define_field value
+  983:  get_var_ref_check 24: A
+  986:  get_var_ref_check 20: m
+  989:  get_array_el
+  990:  get_field label
+  995:  define_field label
+ 1000:  array_from 4
+ 1003:  put_var_ref 25: U
+ 1006:  get_var_ref_check 23: $
+ 1009:  get_field2 map
+ 1014:  fclosure8 10: [bytecode <null>]
+ 1016:  call_method 1
+ 1019:  get_field2 filter
+ 1024:  fclosure8 11: [bytecode <null>]
+ 1026:  call_method 1
+ 1029:  put_var_ref 27: D
+ 1032:  fclosure8 16: [bytecode <null>]
+ 1034:  call0 0
+ 1035:  set_var_ref 32: O
+ 1038:  get_field pinned
+ 1043:  if_false8 1055
+ 1045:  get_var_ref 32: O
+ 1048:  get_field mode
+ 1053:  goto8 1060
+ 1055:  get_var_ref_check 23: $
+ 1058:  push_0 0
+ 1059:  get_array_el
+ 1060:  put_var_ref 35: N
+ 1063:  push_empty_string
+ 1064:  put_var_ref 36: K
+ 1067:  push_empty_string
+ 1068:  put_var_ref 37: P
+ 1071:  push_atom_value "https://auth.loliyc.com/api"
+ 1076:  put_var_ref 38: M
+ 1079:  push_atom_value "https://sq.kashic.cn/p/loliapp/files"
+ 1084:  put_var_ref 39: Z
+ 1087:  push_atom_value "https://stc.loliyc.com/v1"
+ 1092:  put_var_ref 40: I
+ 1095:  push_empty_string
+ 1096:  put_var_ref 41: T
+ 1099:  push_empty_string
+ 1100:  put_var_ref 42: R
+ 1103:  push_empty_string
+ 1104:  put_var_ref 43: W
+ 1107:  push_empty_string
+ 1108:  put_var_ref 44: J
+ 1111:  push_empty_string
+ 1112:  put_var_ref 45: G
+ 1115:  push_empty_string
+ 1116:  put_var_ref 46: L
+ 1119:  push_empty_string
+ 1120:  put_var_ref 47: E
+ 1123:  push_atom_value "https://api.loliyc.com/avatar"
+ 1128:  put_var_ref 48: F
+ 1131:  push_empty_string
+ 1132:  put_var_ref 49: H
+ 1135:  get_var_ref 14: d
+ 1138:  get_var_ref_check 38: M
+ 1141:  push_atom_value "/login"
+ 1146:  call2 2
+ 1147:  put_var_ref 52: V
+ 1150:  get_var_ref 14: d
+ 1153:  get_var_ref_check 38: M
+ 1156:  push_atom_value "/get"
+ 1161:  call2 2
+ 1162:  put_var_ref 53: Y
+ 1165:  get_var_ref 14: d
+ 1168:  get_var_ref_check 39: Z
+ 1171:  push_atom_value "/shops.json"
+ 1176:  call2 2
+ 1177:  put_var_ref 54: tt
+ 1180:  get_var_ref 14: d
+ 1183:  push_atom_value "https://sq.kashic.cn/p/loliapp"
+ 1188:  push_atom_value "/version4.json"
+ 1193:  call2 2
+ 1194:  put_var_ref 55: et
+ 1197:  get_var_ref 14: d
+ 1200:  get_var_ref_check 39: Z
+ 1203:  push_atom_value "/versionInfo.txt"
+ 1208:  call2 2
+ 1209:  put_var_ref 56: nt
+ 1212:  get_var_ref 57: at
+ 1215:  get_var_ref_check 35: N
+ 1218:  call1 1
+ 1219:  drop
+ 1220:  catch 1242
+ 1225:  get_var_ref 34: z
+ 1228:  call0 0
+ 1229:  get_field2 catch
+ 1234:  fclosure8 23: [bytecode <null>]
+ 1236:  call_method 1
+ 1239:  drop
+ 1240:  drop
+ 1241:  return_undef
+ 1242:  put_loc0 0: e
+ 1243:  catch 1284
+ 1248:  catch 1272
+ 1253:  get_var_ref_check 0: t
+ 1256:  push_atom_value base
+ 1261:  push_atom_value "network route probe"
+ 1266:  get_loc0 0: e
+ 1267:  call3 3
+ 1268:  drop
+ 1269:  drop
+ 1270:  goto8 1282
+ 1272:  put_loc1 1: t
+ 1273:  catch 1281
+ 1278:  drop
+ 1279:  goto8 1282
+ 1281:  throw
+ 1282:  drop
+ 1283:  return_undef
+ 1284:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: s
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: t
+    1:  dup
+    2:  if_false8 51
+    4:  drop
+    5:  get_arg0 0: t
+    6:  get_field $Dbase
+   11:  dup
+   12:  if_true8 51
+   14:  drop
+   15:  get_arg0 0: t
+   16:  get_field $qqDbase
+   21:  dup
+   22:  if_true8 51
+   24:  drop
+   25:  get_arg0 0: t
+   26:  get_field $chatyBgDbase
+   31:  dup
+   32:  if_true8 51
+   34:  drop
+   35:  get_arg0 0: t
+   36:  get_field $qqBgDbase
+   41:  dup
+   42:  if_true8 51
+   44:  drop
+   45:  get_arg0 0: t
+   46:  get_field $qqDbase2
+   51:  dup
+   52:  if_true8 56
+   54:  drop
+   55:  null
+   56:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: c
+  mode: strict
+  args: t
+  locals:
+    0: catch a [level:4 next:-1]
+    1: var e
+    2: var n
+  stack_size: 6
+  opcodes:
+    0:  get_arg0 0: t
+    1:  lnot
+    2:  dup
+    3:  if_true8 14
+    5:  drop
+    6:  push_atom_value object
+   11:  get_arg0 0: t
+   12:  typeof
+   13:  neq
+   14:  if_false8 18
+   16:  object
+   17:  return
+   18:  catch 52
+   23:  get_var JSON
+   28:  get_field2 parse
+   33:  get_var JSON
+   38:  get_field2 stringify
+   43:  get_arg0 0: t
+   44:  call_method 1
+   47:  call_method 1
+   50:  nip
+   51:  return
+   52:  put_loc0 0: a
+   53:  catch 96
+   58:  object
+   59:  put_loc1 1: e
+   60:  get_arg0 0: t
+   61:  for_in_start
+   62:  goto8 88
+   64:  put_loc2 2: n
+   65:  get_arg0 0: t
+   66:  get_field2 hasOwnProperty
+   71:  get_loc2 2: n
+   72:  call_method 1
+   75:  dup
+   76:  if_false8 87
+   78:  drop
+   79:  get_loc1 1: e
+   80:  get_loc2 2: n
+   81:  to_propkey2
+   82:  get_arg0 0: t
+   83:  get_loc2 2: n
+   84:  get_array_el
+   85:  insert3
+   86:  put_array_el
+   87:  drop
+   88:  for_in_next
+   89:  if_false8 64
+   91:  drop
+   92:  drop
+   93:  get_loc1 1: e
+   94:  nip
+   95:  return
+   96:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: l
+  mode: strict
+  args: t e n
+  locals:
+    0: var o
+    1: var l
+    2: var f
+    3: var u
+    4: catch t [level:5 next:-1]
+  closure vars:
+    0: i parent:loc6 const
+    1: r parent:loc5 const
+    2: c parent:loc8 var
+    3: s parent:loc7 var
+    4: a parent:loc3 const
+  stack_size: 8
+  opcodes:
+    0:  get_var_ref3 3: s
+    1:  get_arg0 0: t
+    2:  call1 1
+    3:  set_loc0 0: o
+    4:  lnot
+    5:  dup
+    6:  if_true8 22
+    8:  drop
+    9:  push_atom_value function
+   14:  get_loc0 0: o
+   15:  get_field write
+   20:  typeof
+   21:  neq
+   22:  if_false8 26
+   24:  null
+   25:  return
+   26:  fclosure8 0: [bytecode <null>]
+   28:  get_arg1 1: e
+   29:  call1 1
+   30:  set_loc1 1: l
+   31:  lnot
+   32:  if_false8 36
+   34:  null
+   35:  return
+   36:  get_var_ref2 2: c
+   37:  get_arg2 2: n
+   38:  call1 1
+   39:  put_loc2 2: f
+   40:  get_var Object
+   45:  get_field2 assign
+   50:  object
+   51:  get_loc1 1: l
+   52:  get_loc2 2: f
+   53:  object
+   54:  get_loc2 2: f
+   55:  if_false8 73
+   57:  get_loc2 2: f
+   58:  get_field pageKey
+   63:  if_false8 73
+   65:  get_loc2 2: f
+   66:  get_field pageKey
+   71:  goto8 79
+   73:  get_loc1 1: l
+   74:  get_field pageKey
+   79:  define_field pageKey
+   84:  get_var Date
+   89:  get_field2 now
+   94:  call_method 0
+   97:  define_field updatedAt
+  102:  get_loc2 2: f
+  103:  lnot
+  104:  dup
+  105:  if_true8 117
+  107:  drop
+  108:  push_1 1
+  109:  lnot
+  110:  get_loc2 2: f
+  111:  get_field active
+  116:  strict_neq
+  117:  define_field active
+  122:  call_method 4
+  125:  put_loc3 3: u
+  126:  catch 148
+  131:  get_loc0 0: o
+  132:  get_field2 write
+  137:  get_var_ref_check 4: a
+  140:  get_loc3 3: u
+  141:  call_method 2
+  144:  drop
+  145:  drop
+  146:  goto8 159
+  148:  put_loc8 4: t
+  150:  catch 158
+  155:  drop
+  156:  goto8 159
+  158:  throw
+  159:  get_loc3 3: u
+  160:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var n
+    2: var a
+  closure vars:
+    0: i parent:loc0 const
+    1: r parent:loc1 const
+    2: c parent:loc2 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref_check 0: i
+    3:  get_arg0 0: t
+    4:  get_array_el
+    5:  dup
+    6:  if_true8 10
+    8:  drop
+    9:  get_arg0 0: t
+   10:  put_loc0 0: e
+   11:  get_var_ref_check 1: r
+   14:  get_loc0 0: e
+   15:  get_array_el
+   16:  set_loc1 1: n
+   17:  lnot
+   18:  if_false8 22
+   20:  null
+   21:  return
+   22:  get_var_ref2 2: c
+   23:  get_loc1 1: n
+   24:  call1 1
+   25:  set_loc2 2: a
+   26:  get_loc0 0: e
+   27:  put_field pageKey
+   32:  get_loc2 2: a
+   33:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: f
+  mode: strict
+  args: t e
+  locals:
+    0: var n
+    1: var o
+    2: var r
+    3: catch t [level:5 next:-1]
+  closure vars:
+    0: s parent:loc7 var
+    1: i parent:loc6 const
+    2: a parent:loc3 const
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: s
+    1:  get_arg0 0: t
+    2:  call1 1
+    3:  set_loc0 0: n
+    4:  if_false 143
+    9:  push_atom_value function
+   14:  get_loc0 0: n
+   15:  get_field read
+   20:  typeof
+   21:  eq
+   22:  if_false8 143
+   24:  push_atom_value function
+   29:  get_loc0 0: n
+   30:  get_field write
+   35:  typeof
+   36:  eq
+   37:  if_false8 143
+   39:  get_arg1 1: e
+   40:  if_false8 54
+   42:  get_var_ref_check 1: i
+   45:  get_arg1 1: e
+   46:  get_array_el
+   47:  dup
+   48:  if_true8 55
+   50:  drop
+   51:  get_arg1 1: e
+   52:  goto8 55
+   54:  push_empty_string
+   55:  put_loc1 1: o
+   56:  catch 134
+   61:  get_loc0 0: n
+   62:  get_field2 read
+   67:  get_var_ref_check 2: a
+   70:  call_method 1
+   73:  put_loc2 2: r
+   74:  get_loc1 1: o
+   75:  dup
+   76:  if_false8 114
+   78:  drop
+   79:  get_loc2 2: r
+   80:  dup
+   81:  if_false8 114
+   83:  drop
+   84:  get_loc2 2: r
+   85:  get_field pageKey
+   90:  dup
+   91:  if_false8 114
+   93:  drop
+   94:  get_var String
+   99:  get_loc2 2: r
+  100:  get_field pageKey
+  105:  call1 1
+  106:  get_var String
+  111:  get_loc1 1: o
+  112:  call1 1
+  113:  strict_neq
+  114:  dup
+  115:  if_true8 131
+  117:  drop
+  118:  get_loc0 0: n
+  119:  get_field2 write
+  124:  get_var_ref_check 2: a
+  127:  null
+  128:  call_method 2
+  131:  drop
+  132:  drop
+  133:  return_undef
+  134:  put_loc3 3: t
+  135:  catch 142
+  140:  drop
+  141:  return_undef
+  142:  throw
+  143:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: u
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var n
+    2: catch t [level:5 next:-1]
+  closure vars:
+    0: s parent:loc7 var
+    1: a parent:loc3 const
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: s
+    1:  get_arg0 0: t
+    2:  call1 1
+    3:  set_loc0 0: e
+    4:  lnot
+    5:  dup
+    6:  if_true8 22
+    8:  drop
+    9:  push_atom_value function
+   14:  get_loc0 0: e
+   15:  get_field read
+   20:  typeof
+   21:  neq
+   22:  if_false8 26
+   24:  null
+   25:  return
+   26:  catch 62
+   31:  get_loc0 0: e
+   32:  get_field2 read
+   37:  get_var_ref_check 1: a
+   40:  call_method 1
+   43:  set_loc1 1: n
+   44:  if_false8 59
+   46:  push_atom_value object
+   51:  get_loc1 1: n
+   52:  typeof
+   53:  eq
+   54:  if_false8 59
+   56:  get_loc1 1: n
+   57:  nip
+   58:  return
+   59:  drop
+   60:  goto8 72
+   62:  put_loc2 2: t
+   63:  catch 71
+   68:  drop
+   69:  goto8 72
+   71:  throw
+   72:  null
+   73:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: p
+  mode: strict
+  args: t e
+  locals:
+    0: var n
+    1: var a
+    2: catch t [level:4 next:-1]
+  closure vars:
+    0: s parent:loc7 var
+    1: c parent:loc8 var
+    2: o parent:loc4 const
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: s
+    1:  get_arg0 0: t
+    2:  call1 1
+    3:  set_loc0 0: n
+    4:  lnot
+    5:  dup
+    6:  if_true8 22
+    8:  drop
+    9:  push_atom_value function
+   14:  get_loc0 0: n
+   15:  get_field write
+   20:  typeof
+   21:  neq
+   22:  if_false8 26
+   24:  null
+   25:  return
+   26:  get_arg1 1: e
+   27:  if_false8 44
+   29:  push_atom_value object
+   34:  get_arg1 1: e
+   35:  typeof
+   36:  eq
+   37:  if_false8 44
+   39:  get_var_ref1 1: c
+   40:  get_arg1 1: e
+   41:  call1 1
+   42:  goto8 45
+   44:  null
+   45:  put_loc1 1: a
+   46:  catch 68
+   51:  get_loc0 0: n
+   52:  get_field2 write
+   57:  get_var_ref_check 2: o
+   60:  get_loc1 1: a
+   61:  call_method 2
+   64:  drop
+   65:  drop
+   66:  goto8 78
+   68:  put_loc2 2: t
+   69:  catch 77
+   74:  drop
+   75:  goto8 78
+   77:  throw
+   78:  get_loc1 1: a
+   79:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: y
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var n
+    2: catch t [level:5 next:-1]
+  closure vars:
+    0: s parent:loc7 var
+    1: o parent:loc4 const
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: s
+    1:  get_arg0 0: t
+    2:  call1 1
+    3:  set_loc0 0: e
+    4:  lnot
+    5:  dup
+    6:  if_true8 22
+    8:  drop
+    9:  push_atom_value function
+   14:  get_loc0 0: e
+   15:  get_field read
+   20:  typeof
+   21:  neq
+   22:  if_false8 26
+   24:  null
+   25:  return
+   26:  catch 62
+   31:  get_loc0 0: e
+   32:  get_field2 read
+   37:  get_var_ref_check 1: o
+   40:  call_method 1
+   43:  set_loc1 1: n
+   44:  if_false8 59
+   46:  push_atom_value object
+   51:  get_loc1 1: n
+   52:  typeof
+   53:  eq
+   54:  if_false8 59
+   56:  get_loc1 1: n
+   57:  nip
+   58:  return
+   59:  drop
+   60:  goto8 72
+   62:  put_loc2 2: t
+   63:  catch 71
+   68:  drop
+   69:  goto8 72
+   71:  throw
+   72:  null
+   73:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: d
+  mode: strict
+  args: t e
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_arg1 1: e
+    2:  add
+    3:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: h
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  push_atom_value string
+    5:  get_arg0 0: t
+    6:  typeof
+    7:  eq
+    8:  if_false8 12
+   10:  get_arg0 0: t
+   11:  return
+   12:  get_arg0 0: t
+   13:  if_false8 113
+   15:  push_atom_value object
+   20:  get_arg0 0: t
+   21:  typeof
+   22:  eq
+   23:  if_false8 113
+   25:  push_atom_value string
+   30:  get_arg0 0: t
+   31:  get_field value
+   36:  typeof
+   37:  eq
+   38:  if_false8 47
+   40:  get_arg0 0: t
+   41:  get_field value
+   46:  return
+   47:  push_atom_value string
+   52:  get_arg0 0: t
+   53:  get_field text
+   58:  typeof
+   59:  eq
+   60:  if_false8 69
+   62:  get_arg0 0: t
+   63:  get_field text
+   68:  return
+   69:  push_atom_value string
+   74:  get_arg0 0: t
+   75:  get_field data
+   80:  typeof
+   81:  eq
+   82:  if_false8 91
+   84:  get_arg0 0: t
+   85:  get_field data
+   90:  return
+   91:  push_atom_value string
+   96:  get_arg0 0: t
+   97:  get_field key
+  102:  typeof
+  103:  eq
+  104:  if_false8 113
+  106:  get_arg0 0: t
+  107:  get_field key
+  112:  return
+  113:  null
+  114:  get_arg0 0: t
+  115:  eq
+  116:  if_false8 120
+  118:  push_empty_string
+  119:  return
+  120:  get_var String
+  125:  get_arg0 0: t
+  126:  call1 1
+  127:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: q
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var n
+    2: var a
+    3: var o
+  closure vars:
+    0: A parent:loc24 const
+  stack_size: 6
+  opcodes:
+    0:  get_var_ref_check 0: A
+    3:  get_arg0 0: t
+    4:  get_array_el
+    5:  set_loc0 0: e
+    6:  lnot
+    7:  dup
+    8:  if_true8 18
+   10:  drop
+   11:  get_loc0 0: e
+   12:  get_field apiBaseUrl
+   17:  lnot
+   18:  if_false8 22
+   20:  push_empty_string
+   21:  return
+   22:  push_const8 0: 1"^[a-zA-Z][a-zA-Z0-9+.-]*:\\/\\/([^/?#]+)"
+   24:  push_const8 1: 1"\u0000\u0002\u0000w\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u0015\u0002\u0000A\u0000Z\u0000a\u0000z\u0000\u001c\u0018\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0005\u0000+\u0000+\u0000-\u0000.\u00000\u00009\u0000A\u0000Z\u0000a\u0000z\u0000\n\u0001:\u0000\u0001/\u0000\u0001/\u0000\u000b\u0001\u001c\u0014\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0004\u0000\u0000\u0000\"\u0000$\u0000.\u00000\u0000>\u0000@\u0000\u00ff\u00ff\n\u000c\u0001\u000c\u0000\n"
+   26:  regexp
+   27:  get_field2 exec
+   32:  get_loc0 0: e
+   33:  get_field apiBaseUrl
+   38:  call_method 1
+   41:  set_loc1 1: n
+   42:  lnot
+   43:  if_false8 47
+   45:  push_empty_string
+   46:  return
+   47:  get_loc1 1: n
+   48:  push_1 1
+   49:  get_array_el
+   50:  set_loc2 2: a
+   51:  get_field2 lastIndexOf
+   56:  push_atom_value "@"
+   61:  call_method 1
+   64:  set_loc3 3: o
+   65:  push_0 0
+   66:  gte
+   67:  dup
+   68:  if_false8 84
+   70:  drop
+   71:  get_loc2 2: a
+   72:  get_field2 slice
+   77:  get_loc3 3: o
+   78:  push_1 1
+   79:  add
+   80:  call_method 1
+   83:  set_loc2 2: a
+   84:  drop
+   85:  push_atom_value "["
+   90:  get_loc2 2: a
+   91:  get_field2 charAt
+   96:  push_0 0
+   97:  call_method 1
+  100:  strict_eq
+  101:  if_false8 128
+  103:  get_loc2 2: a
+  104:  get_field2 slice
+  109:  push_1 1
+  110:  get_loc2 2: a
+  111:  get_field2 indexOf
+  116:  push_atom_value "]"
+  121:  call_method 1
+  124:  call_method 2
+  127:  return
+  128:  get_loc2 2: a
+  129:  get_field2 split
+  134:  push_atom_value ":"
+  139:  call_method 1
+  142:  push_0 0
+  143:  get_array_el
+  144:  get_field2 toLowerCase
+  149:  call_method 0
+  152:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: q parent:loc26 var
+  stack_size: 3
+  opcodes:
+    0:  object
+    1:  get_arg0 0: t
+    2:  define_field mode
+    7:  get_var_ref0 0: q
+    8:  get_arg0 0: t
+    9:  call1 1
+   10:  define_field host
+   15:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 1
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_field host
+    6:  lnot
+    7:  lnot
+    8:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: B
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var n
+    2: var a
+    3: var o
+    4: var r
+    5: var i
+  closure vars:
+    0: D parent:loc27 const
+  stack_size: 6
+  opcodes:
+    0:  get_var String
+    5:  get_arg0 0: t
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  push_empty_string
+   11:  call1 1
+   12:  put_loc0 0: e
+   13:  push_const8 0: 1"^[a-zA-Z][a-zA-Z0-9+.-]*:\\/\\/([^/?#]+)"
+   15:  push_const8 1: 1"\u0000\u0002\u0000w\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u0015\u0002\u0000A\u0000Z\u0000a\u0000z\u0000\u001c\u0018\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0005\u0000+\u0000+\u0000-\u0000.\u00000\u00009\u0000A\u0000Z\u0000a\u0000z\u0000\n\u0001:\u0000\u0001/\u0000\u0001/\u0000\u000b\u0001\u001c\u0014\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0004\u0000\u0000\u0000\"\u0000$\u0000.\u00000\u0000>\u0000@\u0000\u00ff\u00ff\n\u000c\u0001\u000c\u0000\n"
+   17:  regexp
+   18:  get_field2 exec
+   23:  get_loc0 0: e
+   24:  call_method 1
+   27:  set_loc1 1: n
+   28:  lnot
+   29:  if_false8 33
+   31:  null
+   32:  return
+   33:  get_loc1 1: n
+   34:  push_1 1
+   35:  get_array_el
+   36:  set_loc2 2: a
+   37:  get_field2 lastIndexOf
+   42:  push_atom_value "@"
+   47:  call_method 1
+   50:  set_loc3 3: o
+   51:  push_0 0
+   52:  gte
+   53:  dup
+   54:  if_false8 70
+   56:  drop
+   57:  get_loc2 2: a
+   58:  get_field2 slice
+   63:  get_loc3 3: o
+   64:  push_1 1
+   65:  add
+   66:  call_method 1
+   69:  set_loc2 2: a
+   70:  drop
+   71:  push_atom_value "["
+   76:  get_loc2 2: a
+   77:  get_field2 charAt
+   82:  push_0 0
+   83:  call_method 1
+   86:  strict_eq
+   87:  if_false8 115
+   89:  get_loc2 2: a
+   90:  get_field2 slice
+   95:  push_1 1
+   96:  get_loc2 2: a
+   97:  get_field2 indexOf
+  102:  push_atom_value "]"
+  107:  call_method 1
+  110:  call_method 2
+  113:  goto8 131
+  115:  get_loc2 2: a
+  116:  get_field2 split
+  121:  push_atom_value ":"
+  126:  call_method 1
+  129:  push_0 0
+  130:  get_array_el
+  131:  get_field2 toLowerCase
+  136:  call_method 0
+  139:  put_loc8 4: r
+  141:  push_0 0
+  142:  put_loc8 5: i
+  144:  get_loc8 5: i
+  146:  get_var_ref_check 0: D
+  149:  get_length
+  150:  lt
+  151:  if_false8 185
+  153:  get_var_ref_check 0: D
+  156:  get_loc8 5: i
+  158:  get_array_el
+  159:  get_field host
+  164:  get_loc8 4: r
+  166:  strict_eq
+  167:  if_false8 181
+  169:  get_var_ref_check 0: D
+  172:  get_loc8 5: i
+  174:  get_array_el
+  175:  get_field mode
+  180:  return
+  181:  inc_loc 5: i
+  183:  goto8 144
+  185:  null
+  186:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: S
+  mode: strict
+  args: t e
+  locals:
+    0: var n
+    1: var a
+    2: var o
+    3: var r
+  closure vars:
+    0: A parent:loc24 const
+  stack_size: 4
+  opcodes:
+    0:  get_var String
+    5:  get_arg0 0: t
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  push_empty_string
+   11:  call1 1
+   12:  put_loc0 0: n
+   13:  get_var_ref_check 0: A
+   16:  get_arg1 1: e
+   17:  get_array_el
+   18:  set_loc1 1: a
+   19:  lnot
+   20:  dup
+   21:  if_true8 31
+   23:  drop
+   24:  get_loc1 1: a
+   25:  get_field apiBaseUrl
+   30:  lnot
+   31:  if_false8 35
+   33:  push_empty_string
+   34:  return
+   35:  push_const8 0: 1"^([a-zA-Z][a-zA-Z0-9+.-]*:\\/\\/)([^/?#]+)"
+   37:  push_const8 1: 1"\u0000\u0003\u0000{\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u000b\u0001\u0015\u0002\u0000A\u0000Z\u0000a\u0000z\u0000\u001c\u0018\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0005\u0000+\u0000+\u0000-\u0000.\u00000\u00009\u0000A\u0000Z\u0000a\u0000z\u0000\n\u0001:\u0000\u0001/\u0000\u0001/\u0000\u000c\u0001\u000b\u0002\u001c\u0014\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0004\u0000\u0000\u0000\"\u0000$\u0000.\u00000\u0000>\u0000@\u0000\u00ff\u00ff\n\u000c\u0002\u000c\u0000\n"
+   39:  regexp
+   40:  get_field2 exec
+   45:  get_loc1 1: a
+   46:  get_field apiBaseUrl
+   51:  call_method 1
+   54:  set_loc2 2: o
+   55:  lnot
+   56:  if_false8 60
+   58:  push_empty_string
+   59:  return
+   60:  get_loc0 0: n
+   61:  get_field2 replace
+   66:  push_const8 2: 1"^[a-zA-Z][a-zA-Z0-9+.-]*:\\/\\/[^/?#]+"
+   68:  push_const8 3: 1"\u0000\u0001\u0000s\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u0015\u0002\u0000A\u0000Z\u0000a\u0000z\u0000\u001c\u0018\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0005\u0000+\u0000+\u0000-\u0000.\u00000\u00009\u0000A\u0000Z\u0000a\u0000z\u0000\n\u0001:\u0000\u0001/\u0000\u0001/\u0000\u001c\u0014\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0004\u0000\u0000\u0000\"\u0000$\u0000.\u00000\u0000>\u0000@\u0000\u00ff\u00ff\n\u000c\u0000\n"
+   70:  regexp
+   71:  push_empty_string
+   72:  call_method 2
+   75:  put_loc3 3: r
+   76:  get_loc2 2: o
+   77:  push_1 1
+   78:  get_array_el
+   79:  get_loc2 2: o
+   80:  push_2 2
+   81:  get_array_el
+   82:  add
+   83:  get_loc3 3: r
+   84:  add
+   85:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: j
+  mode: strict
+  closure vars:
+    0: e parent:loc1 const
+  stack_size: 1
+  opcodes:
+    0:  get_var_ref_check 0: e
+    3:  tail_call 0
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: x
+  mode: strict
+  args: t
+  closure vars:
+    0: k parent:loc22 const
+    1: b parent:loc18 const
+    2: _ parent:loc19 const
+    3: m parent:loc20 const
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_var_ref_check 0: k
+    4:  strict_eq
+    5:  if_false8 11
+    7:  get_var_ref_check 0: k
+   10:  return
+   11:  get_arg0 0: t
+   12:  get_var_ref_check 1: b
+   15:  strict_eq
+   16:  if_false8 22
+   18:  get_var_ref_check 1: b
+   21:  return
+   22:  get_arg0 0: t
+   23:  get_var_ref_check 2: _
+   26:  strict_eq
+   27:  if_false8 33
+   29:  get_var_ref_check 2: _
+   32:  return
+   33:  get_arg0 0: t
+   34:  get_var_ref_check 3: m
+   37:  strict_eq
+   38:  if_false8 44
+   40:  get_var_ref_check 3: m
+   43:  return
+   44:  get_var_ref_check 0: k
+   47:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var n
+    3: catch t [level:4 next:-1]
+  closure vars:
+    0: k parent:loc22 const
+    1: j parent:loc30 var
+    2: x parent:loc31 var
+  stack_size: 4
+  opcodes:
+    0:  object
+    1:  get_var_ref_check 0: k
+    4:  define_field mode
+    9:  push_1 1
+   10:  lnot
+   11:  define_field pinned
+   16:  put_loc0 0: t
+   17:  get_var_ref1 1: j
+   18:  call0 0
+   19:  set_loc1 1: e
+   20:  lnot
+   21:  dup
+   22:  if_true8 38
+   24:  drop
+   25:  push_atom_value function
+   30:  get_loc1 1: e
+   31:  get_field read
+   36:  typeof
+   37:  neq
+   38:  if_false8 42
+   40:  get_loc0 0: t
+   41:  return
+   42:  catch 126
+   47:  get_loc1 1: e
+   48:  get_field2 read
+   53:  push_atom_value sys_adaptation_configs
+   58:  call_method 1
+   61:  set_loc2 2: n
+   62:  dup
+   63:  if_false8 122
+   65:  drop
+   66:  push_atom_value object
+   71:  get_loc2 2: n
+   72:  typeof
+   73:  eq
+   74:  dup
+   75:  if_false8 122
+   77:  drop
+   78:  push_0 0
+   79:  lnot
+   80:  get_loc2 2: n
+   81:  get_field networkRoutePinned
+   86:  strict_eq
+   87:  dup
+   88:  if_false8 122
+   90:  drop
+   91:  get_loc0 0: t
+   92:  get_var_ref2 2: x
+   93:  get_loc2 2: n
+   94:  get_field networkRouteMode
+   99:  call1 1
+  100:  put_field mode
+  105:  get_loc0 0: t
+  106:  get_loc0 0: t
+  107:  get_field mode
+  112:  get_var_ref_check 0: k
+  115:  strict_neq
+  116:  insert2
+  117:  put_field pinned
+  122:  drop
+  123:  drop
+  124:  goto8 136
+  126:  put_loc3 3: t
+  127:  catch 135
+  132:  drop
+  133:  goto8 136
+  135:  throw
+  136:  get_loc0 0: t
+  137:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: C
+  mode: strict
+  args: t e
+  locals:
+    0: var n
+    1: var a
+    2: catch t [level:4 next:-1]
+  closure vars:
+    0: j parent:loc30 var
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: j
+    1:  call0 0
+    2:  set_loc0 0: n
+    3:  if_false8 102
+    5:  push_atom_value function
+   10:  get_loc0 0: n
+   11:  get_field write
+   16:  typeof
+   17:  eq
+   18:  if_false8 102
+   20:  catch 93
+   25:  get_loc0 0: n
+   26:  get_field2 read
+   31:  push_atom_value sys_adaptation_configs
+   36:  call_method 1
+   39:  set_loc1 1: a
+   40:  dup
+   41:  if_false8 52
+   43:  drop
+   44:  push_atom_value object
+   49:  get_loc1 1: a
+   50:  typeof
+   51:  eq
+   52:  dup
+   53:  if_true8 58
+   55:  drop
+   56:  object
+   57:  set_loc1 1: a
+   58:  drop
+   59:  get_loc1 1: a
+   60:  get_arg0 0: t
+   61:  put_field networkRouteMode
+   66:  get_loc1 1: a
+   67:  get_arg1 1: e
+   68:  lnot
+   69:  lnot
+   70:  put_field networkRoutePinned
+   75:  get_loc0 0: n
+   76:  get_field2 write
+   81:  push_atom_value sys_adaptation_configs
+   86:  get_loc1 1: a
+   87:  call_method 2
+   90:  drop
+   91:  drop
+   92:  return_undef
+   93:  put_loc2 2: t
+   94:  catch 101
+   99:  drop
+  100:  return_undef
+  101:  throw
+  102:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: z
+  mode: strict
+  locals:
+    0: var t
+  closure vars:
+    0: A parent:loc24 const
+    1: n parent:loc2 const
+    2: N parent:loc35 let
+    3: at parent:loc57 var
+    4: C parent:loc33 var
+    5: $ parent:loc23 const
+    6: O parent:loc32 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref 6: O
+    3:  get_field pinned
+    8:  if_false8 26
+   10:  get_var Promise
+   15:  get_field2 resolve
+   20:  get_var_ref_check 2: N
+   23:  tail_call_method 1
+   26:  push_0 0
+   27:  put_loc0 0: t
+   28:  fclosure8 0: [bytecode e]
+   30:  tail_call 0
+
+
+/* ===== function depth=2 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: e
+  mode: strict
+  locals:
+    0: var a
+    1: const e
+  closure vars:
+    0: A parent:loc0 const
+    1: n parent:loc1 const
+    2: N parent:loc2 let
+    3: at parent:loc3 var
+    4: C parent:loc4 var
+    5: t local:loc0 var
+    6: $ parent:loc5 const
+  stack_size: 3
+  opcodes:
+    0:  special_object 2
+    2:  put_loc1 1: e
+    3:  get_var_ref 5: t
+    6:  get_var_ref_check 6: $
+    9:  get_length
+   10:  gte
+   11:  if_false8 29
+   13:  get_var Promise
+   18:  get_field2 resolve
+   23:  get_var_ref_check 2: N
+   26:  tail_call_method 1
+   29:  get_var_ref_check 6: $
+   32:  get_var_ref 5: t
+   35:  post_inc
+   36:  put_var_ref 5: t
+   39:  get_array_el
+   40:  put_loc0 0: a
+   41:  fclosure8 0: [bytecode <null>]
+   43:  get_loc0 0: a
+   44:  call1 1
+   45:  get_field2 then
+   50:  fclosure8 1: [bytecode <null>]
+   52:  tail_call_method 1
+
+
+/* ===== function depth=3 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var a
+  closure vars:
+    0: A parent:loc0 const
+    1: n parent:loc1 const
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref_check 0: A
+    3:  get_arg0 0: t
+    4:  get_array_el
+    5:  set_loc0 0: e
+    6:  lnot
+    7:  if_false8 24
+    9:  get_var Promise
+   14:  get_field2 resolve
+   19:  push_1 1
+   20:  lnot
+   21:  tail_call_method 1
+   24:  get_var_ref_check 1: n
+   27:  call0 0
+   28:  set_loc1 1: a
+   29:  if_false8 58
+   31:  push_atom_value function
+   36:  get_loc1 1: a
+   37:  get_field fetch
+   42:  typeof
+   43:  eq
+   44:  if_false8 58
+   46:  get_var Promise
+   51:  dup
+   52:  fclosure8 0: [bytecode <null>]
+   54:  call_constructor 1
+   57:  return
+   58:  get_var Promise
+   63:  get_field2 resolve
+   68:  push_1 1
+   69:  lnot
+   70:  call_method 1
+   73:  return
+
+
+/* ===== function depth=4 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var n
+    1: var o
+    2: var r
+    3: var i
+    4: catch t [level:4 next:-1]
+  closure vars:
+    0: a local:loc1 var
+    1: e local:loc0 var
+  stack_size: 6
+  opcodes:
+    0:  fclosure8 1: [bytecode r]
+    2:  put_loc2 2: r
+    3:  push_1 1
+    4:  lnot
+    5:  put_loc0 0: n
+    6:  get_var setTimeout
+   11:  fclosure8 0: [bytecode <null>]
+   13:  push_i16 8000
+   16:  call2 2
+   17:  put_loc1 1: o
+   18:  catch 106
+   23:  get_var_ref0 0: a
+   24:  get_field2 fetch
+   29:  get_var_ref1 1: e
+   30:  get_field apiBaseUrl
+   35:  push_atom_value "/"
+   40:  add
+   41:  object
+   42:  push_atom_value GET
+   47:  define_field method
+   52:  push_6 6
+   53:  define_field timeout
+   58:  call_method 2
+   61:  set_loc3 3: i
+   62:  lnot
+   63:  dup
+   64:  if_true8 80
+   66:  drop
+   67:  push_atom_value function
+   72:  get_loc3 3: i
+   73:  get_field then
+   78:  typeof
+   79:  neq
+   80:  if_false8 90
+   82:  get_loc2 2: r
+   83:  push_1 1
+   84:  lnot
+   85:  call1 1
+   86:  drop
+   87:  undefined
+   88:  nip
+   89:  return
+   90:  get_loc3 3: i
+   91:  get_field2 then
+   96:  fclosure8 2: [bytecode <null>]
+   98:  fclosure8 3: [bytecode <null>]
+  100:  call_method 2
+  103:  drop
+  104:  drop
+  105:  return_undef
+  106:  put_loc8 4: t
+  108:  catch 120
+  113:  get_loc2 2: r
+  114:  push_1 1
+  115:  lnot
+  116:  call1 1
+  117:  drop
+  118:  drop
+  119:  return_undef
+  120:  throw
+
+
+/* ===== function depth=5 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: r local:loc2 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: r
+    1:  push_1 1
+    2:  lnot
+    3:  call1 1
+    4:  return_undef
+
+
+/* ===== function depth=5 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: r
+  mode: strict
+  args: e
+  closure vars:
+    0: n local:loc0 var
+    1: o local:loc1 var
+    2: t local:arg0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: n
+    1:  dup
+    2:  if_true8 19
+    4:  drop
+    5:  push_0 0
+    6:  lnot
+    7:  put_var_ref0 0: n
+    8:  get_var clearTimeout
+   13:  get_var_ref1 1: o
+   14:  call1 1
+   15:  drop
+   16:  get_var_ref2 2: t
+   17:  get_arg0 0: e
+   18:  call1 1
+   19:  return_undef
+
+
+/* ===== function depth=5 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: r local:loc2 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: r
+    1:  push_0 0
+    2:  lnot
+    3:  call1 1
+    4:  return_undef
+
+
+/* ===== function depth=5 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: r local:loc2 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: r
+    1:  push_1 1
+    2:  lnot
+    3:  call1 1
+    4:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: a local:loc0 var
+    1: N parent:loc2 let
+    2: at parent:loc3 var
+    3: C parent:loc4 var
+    4: e local:loc1 const
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: t
+    1:  if_false8 24
+    3:  get_var_ref0 0: a
+    4:  get_var_ref_check 1: N
+    7:  strict_neq
+    8:  dup
+    9:  if_false8 15
+   11:  drop
+   12:  get_var_ref2 2: at
+   13:  get_var_ref0 0: a
+   14:  call1 1
+   15:  drop
+   16:  get_var_ref3 3: C
+   17:  get_var_ref0 0: a
+   18:  push_1 1
+   19:  lnot
+   20:  call2 2
+   21:  drop
+   22:  get_var_ref0 0: a
+   23:  return
+   24:  get_var_ref 4: e
+   27:  call0 0
+   28:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: X
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var n
+    2: var a
+  stack_size: 4
+  opcodes:
+    0:  push_atom_value string
+    5:  get_arg0 0: t
+    6:  typeof
+    7:  eq
+    8:  if_false8 21
+   10:  get_arg0 0: t
+   11:  get_field2 trim
+   16:  call_method 0
+   19:  goto8 22
+   21:  push_empty_string
+   22:  set_loc0 0: e
+   23:  lnot
+   24:  dup
+   25:  if_true8 42
+   27:  drop
+   28:  push_const8 0: 1"\\s"
+   30:  push_const8 1: 1"\u0000\u0001\u0000;\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\u000c\u0000\n"
+   32:  regexp
+   33:  get_field2 test
+   38:  get_loc0 0: e
+   39:  call_method 1
+   42:  if_false8 46
+   44:  push_empty_string
+   45:  return
+   46:  get_loc0 0: e
+   47:  get_field2 match
+   52:  push_const8 2: 1"^https:\\/\\/([^/?#]+)(?:[/?#]|$)"
+   54:  push_const8 3: 1"\u0002\u0002\u0000l\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u0001H\u0000\u0001T\u0000\u0001T\u0000\u0001P\u0000\u0001S\u0000\u0001:\u0000\u0001/\u0000\u0001/\u0000\u000b\u0001\u001c\u0014\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0004\u0000\u0000\u0000\"\u0000$\u0000.\u00000\u0000>\u0000@\u0000\u00ff\u00ff\n\u000c\u0001\u0009\u0014\u0000\u0000\u0000\u0015\u0003\u0000#\u0000#\u0000/\u0000/\u0000?\u0000?\u0000\u0007\u0001\u0000\u0000\u0000\u0006\u000c\u0000\n"
+   56:  regexp
+   57:  call_method 1
+   60:  set_loc1 1: n
+   61:  lnot
+   62:  if_false8 66
+   64:  push_empty_string
+   65:  return
+   66:  get_loc1 1: n
+   67:  push_1 1
+   68:  get_array_el
+   69:  set_loc2 2: a
+   70:  get_field2 indexOf
+   75:  push_atom_value "@"
+   80:  call_method 1
+   83:  push_0 0
+   84:  gte
+   85:  dup
+   86:  if_true8 105
+   88:  drop
+   89:  get_loc2 2: a
+   90:  get_field2 indexOf
+   95:  push_atom_value ".."
+  100:  call_method 1
+  103:  push_0 0
+  104:  gte
+  105:  if_false8 109
+  107:  push_empty_string
+  108:  return
+  109:  push_const8 4: 1"^(?:\\[[0-9a-f:.]+\\]|[a-z0-9](?:[a-z0-9.-]*[a-z0-9])?)(?::[0-9]{1,5})?$"
+  111:  push_const8 5: 1"\u0002\u0001\u0000\u00b0\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u00090\u0000\u0000\u0000\u0001[\u0000\u001c\u0014\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0004\u0000.\u0000.\u00000\u0000:\u0000A\u0000F\u0000a\u0000f\u0000\n\u0001]\u0000\u0007H\u0000\u0000\u0000\u0015\u0003\u00000\u00009\u0000A\u0000Z\u0000a\u0000z\u0000\u00094\u0000\u0000\u0000\u001c\u0014\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0004\u0000-\u0000.\u00000\u00009\u0000A\u0000Z\u0000a\u0000z\u0000\n\u0015\u0003\u00000\u00009\u0000A\u0000Z\u0000a\u0000z\u0000\u0009\u001c\u0000\u0000\u0000\u0001:\u0000\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0005\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u0006\u000c\u0000\n"
+  113:  regexp
+  114:  get_field2 test
+  119:  get_loc2 2: a
+  120:  call_method 1
+  123:  if_false8 145
+  125:  push_const8 6: 1"^https:\\/\\/103\\.40\\.14\\.174(?::27447)?\\/avatar(?:[/?#]|$)"
+  127:  push_const8 7: 1"\u0002\u0001\u0000\u00a3\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u0001H\u0000\u0001T\u0000\u0001T\u0000\u0001P\u0000\u0001S\u0000\u0001:\u0000\u0001/\u0000\u0001/\u0000\u00011\u0000\u00010\u0000\u00013\u0000\u0001.\u0000\u00014\u0000\u00010\u0000\u0001.\u0000\u00011\u0000\u00014\u0000\u0001.\u0000\u00011\u0000\u00017\u0000\u00014\u0000\u001c\u0013\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0006\u0000\u0000\u0000\u0001:\u0000\u00012\u0000\u00017\u0000\u00014\u0000\u00014\u0000\u00017\u0000\n\u0001/\u0000\u0001A\u0000\u0001V\u0000\u0001A\u0000\u0001T\u0000\u0001A\u0000\u0001R\u0000\u0009\u0014\u0000\u0000\u0000\u0015\u0003\u0000#\u0000#\u0000/\u0000/\u0000?\u0000?\u0000\u0007\u0001\u0000\u0000\u0000\u0006\u000c\u0000\n"
+  129:  regexp
+  130:  get_field2 test
+  135:  get_loc0 0: e
+  136:  call_method 1
+  139:  if_false8 143
+  141:  push_empty_string
+  142:  return
+  143:  get_loc0 0: e
+  144:  return
+  145:  push_empty_string
+  146:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: Q
+  mode: strict
+  args: t
+  locals:
+    0: var e
+  closure vars:
+    0: F parent:loc48 const
+  stack_size: 3
+  opcodes:
+    0:  get_var String
+    5:  null
+    6:  get_arg0 0: t
+    7:  eq
+    8:  if_false8 13
+   10:  push_empty_string
+   11:  goto8 14
+   13:  get_arg0 0: t
+   14:  call1 1
+   15:  get_field2 trim
+   20:  call_method 0
+   23:  set_loc0 0: e
+   24:  if_false8 44
+   26:  get_var_ref_check 0: F
+   29:  push_atom_value "?cache="
+   34:  add
+   35:  get_var encodeURIComponent
+   40:  get_loc0 0: e
+   41:  call1 1
+   42:  add
+   43:  return
+   44:  push_empty_string
+   45:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: at
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var n
+    2: var a
+  closure vars:
+    0: x parent:loc31 var
+    1: k parent:loc22 const
+    2: $ parent:loc23 const
+    3: A parent:loc24 const
+    4: b parent:loc18 const
+    5: N parent:loc35 let
+    6: K parent:loc36 let
+    7: P parent:loc37 let
+    8: d parent:loc14 var
+    9: J parent:loc44 let
+   10: G parent:loc45 let
+   11: T parent:loc41 let
+   12: R parent:loc42 let
+   13: W parent:loc43 let
+   14: L parent:loc46 let
+   15: E parent:loc47 let
+   16: H parent:loc49 let
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: x
+    1:  get_arg0 0: t
+    2:  call1 1
+    3:  set_loc0 0: e
+    4:  get_var_ref_check 1: k
+    7:  strict_eq
+    8:  if_false8 17
+   10:  get_var_ref_check 2: $
+   13:  push_0 0
+   14:  get_array_el
+   15:  goto8 18
+   17:  get_loc0 0: e
+   18:  put_loc1 1: n
+   19:  get_var_ref_check 3: A
+   22:  get_loc1 1: n
+   23:  get_array_el
+   24:  dup
+   25:  if_true8 35
+   27:  drop
+   28:  get_var_ref_check 3: A
+   31:  get_var_ref_check 4: b
+   34:  get_array_el
+   35:  put_loc2 2: a
+   36:  get_loc1 1: n
+   37:  dup
+   38:  put_var_ref_check 5: N
+   41:  drop
+   42:  get_loc2 2: a
+   43:  get_field apiBaseUrl
+   48:  dup
+   49:  put_var_ref_check 6: K
+   52:  drop
+   53:  get_var_ref 8: d
+   56:  get_var_ref_check 6: K
+   59:  push_atom_value "/v1"
+   64:  call2 2
+   65:  dup
+   66:  put_var_ref_check 7: P
+   69:  drop
+   70:  get_var_ref_check 7: P
+   73:  dup
+   74:  put_var_ref_check 9: J
+   77:  drop
+   78:  get_var_ref 8: d
+   81:  get_var_ref_check 6: K
+   84:  push_atom_value "/zimage"
+   89:  call2 2
+   90:  dup
+   91:  put_var_ref_check 10: G
+   94:  drop
+   95:  get_var_ref_check 6: K
+   98:  dup
+   99:  put_var_ref_check 11: T
+  102:  drop
+  103:  get_var_ref_check 6: K
+  106:  dup
+  107:  put_var_ref_check 12: R
+  110:  drop
+  111:  get_var_ref_check 6: K
+  114:  dup
+  115:  put_var_ref_check 13: W
+  118:  drop
+  119:  get_var_ref_check 6: K
+  122:  dup
+  123:  put_var_ref_check 14: L
+  126:  drop
+  127:  get_var_ref_check 6: K
+  130:  dup
+  131:  put_var_ref_check 15: E
+  134:  drop
+  135:  get_loc2 2: a
+  136:  get_field chatyWsUrl
+  141:  dup
+  142:  put_var_ref_check 16: H
+  145:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: ot
+  mode: strict
+  args: t
+  locals:
+    0: var e
+  closure vars:
+    0: x parent:loc31 var
+    1: O parent:loc32 var
+    2: k parent:loc22 const
+    3: at parent:loc57 var
+    4: C parent:loc33 var
+    5: $ parent:loc23 const
+    6: z parent:loc34 var
+    7: N parent:loc35 let
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: x
+    1:  get_arg0 0: t
+    2:  call1 1
+    3:  put_loc0 0: e
+    4:  get_var_ref1 1: O
+    5:  get_loc0 0: e
+    6:  put_field mode
+   11:  get_var_ref1 1: O
+   12:  get_loc0 0: e
+   13:  get_var_ref_check 2: k
+   16:  strict_neq
+   17:  put_field pinned
+   22:  get_loc0 0: e
+   23:  get_var_ref_check 2: k
+   26:  strict_eq
+   27:  if_false8 56
+   29:  get_var_ref3 3: at
+   30:  get_var_ref_check 2: k
+   33:  call1 1
+   34:  drop
+   35:  get_var_ref 4: C
+   38:  get_var_ref_check 5: $
+   41:  push_0 0
+   42:  get_array_el
+   43:  push_1 1
+   44:  lnot
+   45:  call2 2
+   46:  drop
+   47:  get_var_ref 6: z
+   50:  call0 0
+   51:  drop
+   52:  get_var_ref_check 7: N
+   55:  return
+   56:  get_var_ref3 3: at
+   57:  get_loc0 0: e
+   58:  call1 1
+   59:  drop
+   60:  get_var_ref 4: C
+   63:  get_loc0 0: e
+   64:  push_0 0
+   65:  lnot
+   66:  call2 2
+   67:  drop
+   68:  get_var_ref_check 7: N
+   71:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: <null>
+  mode: strict
+  stack_size: 0
+  opcodes:
+    0:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: rt
+  mode: strict
+  args: t
+  closure vars:
+    0: d parent:loc14 var
+    1: Z parent:loc39 const
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: d
+    1:  get_var_ref_check 1: Z
+    4:  push_atom_value "/"
+    9:  get_arg0 0: t
+   10:  add
+   11:  tail_call 2
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: it
+  mode: strict
+  args: t
+  closure vars:
+    0: G parent:loc45 let
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref_check 0: G
+    3:  push_atom_value "?"
+    8:  add
+    9:  push_atom_value tag
+   14:  add
+   15:  push_atom_value "="
+   20:  add
+   21:  get_var encodeURIComponent
+   26:  get_var String
+   31:  get_arg0 0: t
+   32:  dup
+   33:  if_true8 37
+   35:  drop
+   36:  push_empty_string
+   37:  call1 1
+   38:  get_field2 trim
+   43:  call_method 0
+   46:  call1 1
+   47:  add
+   48:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: st
+  mode: strict
+  args: t e
+  locals:
+    0: var n
+    1: var a
+    2: var o
+    3: var r
+    4: var i
+  closure vars:
+    0: h parent:loc17 var
+    1: g parent:loc16 let
+    2: v parent:loc15 let
+  stack_size: 5
+  opcodes:
+    0:  get_arg1 1: e
+    1:  dup
+    2:  if_true8 6
+    4:  drop
+    5:  object
+    6:  set_loc0 0: n
+    7:  get_field route
+   12:  dup
+   13:  if_true8 21
+   15:  drop
+   16:  push_atom_value tools_keyboard
+   21:  put_loc1 1: a
+   22:  get_loc0 0: n
+   23:  get_field eventName
+   28:  dup
+   29:  if_true8 46
+   31:  drop
+   32:  push_atom_value tools_keyboard_result_
+   37:  get_var_ref_check 2: v
+   40:  inc
+   41:  dup
+   42:  put_var_ref_check 2: v
+   45:  add
+   46:  put_loc2 2: o
+   47:  object
+   48:  get_var String
+   53:  null
+   54:  get_arg0 0: t
+   55:  eq
+   56:  if_false8 61
+   58:  push_empty_string
+   59:  goto8 62
+   61:  get_arg0 0: t
+   62:  call1 1
+   63:  define_field data
+   68:  get_loc2 2: o
+   69:  define_field eventName
+   74:  put_loc3 3: r
+   75:  get_loc0 0: n
+   76:  get_field loadOptions
+   81:  if_false8 128
+   83:  push_atom_value object
+   88:  get_loc0 0: n
+   89:  get_field loadOptions
+   94:  typeof
+   95:  eq
+   96:  if_false8 128
+   98:  get_loc0 0: n
+   99:  get_field loadOptions
+  104:  for_in_start
+  105:  goto8 123
+  107:  put_loc8 4: i
+  109:  get_loc3 3: r
+  110:  get_loc8 4: i
+  112:  to_propkey2
+  113:  get_loc0 0: n
+  114:  get_field loadOptions
+  119:  get_loc8 4: i
+  121:  get_array_el
+  122:  put_array_el
+  123:  for_in_next
+  124:  if_false8 107
+  126:  drop
+  127:  drop
+  128:  get_var Promise
+  133:  dup
+  134:  fclosure8 0: [bytecode <null>]
+  136:  call_constructor 1
+  139:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var n
+    2: var i
+    3: var s
+    4: catch t [level:5 next:-1]
+    5: var c
+    6: var l
+  closure vars:
+    0: h parent:loc0 var
+    1: o local:loc2 var
+    2: g parent:loc1 let
+    3: a local:loc1 var
+    4: r local:loc3 var
+  stack_size: 5
+  opcodes:
+    0:  fclosure8 3: [bytecode c]
+    2:  put_loc8 5: c
+    4:  fclosure8 4: [bytecode l]
+    6:  put_loc8 6: l
+    8:  push_atom_value undefined
+   13:  get_var_undef $falcon
+   18:  typeof
+   19:  neq
+   20:  if_false 219
+   25:  get_var $falcon
+   30:  if_false 219
+   35:  push_atom_value function
+   40:  get_var $falcon
+   45:  get_field navTo
+   50:  typeof
+   51:  eq
+   52:  if_false 219
+   57:  push_atom_value function
+   62:  get_var $falcon
+   67:  get_field on
+   72:  typeof
+   73:  eq
+   74:  if_false 219
+   79:  get_var_ref_check 2: g
+   82:  dup
+   83:  if_false8 117
+   85:  drop
+   86:  push_atom_value function
+   91:  get_var_ref_check 2: g
+   94:  get_field resolve
+   99:  typeof
+  100:  eq
+  101:  dup
+  102:  if_false8 117
+  104:  drop
+  105:  get_var_ref_check 2: g
+  108:  get_field2 resolve
+  113:  null
+  114:  call_method 1
+  117:  drop
+  118:  push_1 1
+  119:  lnot
+  120:  put_loc0 0: e
+  121:  fclosure8 0: [bytecode <null>]
+  123:  set_name n
+  128:  put_loc1 1: n
+  129:  get_var setTimeout
+  134:  fclosure8 1: [bytecode <null>]
+  136:  push_i32 600000
+  141:  call2 2
+  142:  put_loc2 2: i
+  143:  object
+  144:  fclosure8 2: [bytecode <null>]
+  146:  set_name resolve
+  151:  define_field resolve
+  156:  set_loc3 3: s
+  157:  dup
+  158:  put_var_ref_check 2: g
+  161:  drop
+  162:  catch 203
+  167:  get_var $falcon
+  172:  get_field2 on
+  177:  get_var_ref1 1: o
+  178:  get_loc1 1: n
+  179:  call_method 2
+  182:  drop
+  183:  get_var $falcon
+  188:  get_field2 navTo
+  193:  get_var_ref3 3: a
+  194:  get_var_ref 4: r
+  197:  call_method 2
+  200:  drop
+  201:  drop
+  202:  return_undef
+  203:  put_loc8 4: t
+  205:  catch 218
+  210:  get_loc8 6: l
+  212:  get_loc1 1: n
+  213:  null
+  214:  call2 2
+  215:  drop
+  216:  drop
+  217:  return_undef
+  218:  throw
+  219:  get_arg0 0: t
+  220:  null
+  221:  call1 1
+  222:  drop
+  223:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+  closure vars:
+    0: h parent:loc0 var
+    1: l local:loc6 var
+    2: n local:loc1 var
+  stack_size: 3
+  opcodes:
+    0:  fclosure8 0: [bytecode <null>]
+    2:  get_arg0 0: t
+    3:  call1 1
+    4:  put_loc0 0: e
+    5:  get_var_ref1 1: l
+    6:  get_var_ref2 2: n
+    7:  get_loc0 0: e
+    8:  get_field value
+   13:  call2 2
+   14:  return_undef
+
+
+/* ===== function depth=4 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var n
+    2: var a
+  closure vars:
+    0: h parent:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: t
+    1:  if_false8 21
+    3:  undefined
+    4:  get_arg0 0: t
+    5:  get_field data
+   10:  strict_neq
+   11:  if_false8 21
+   13:  get_arg0 0: t
+   14:  get_field data
+   19:  goto8 22
+   21:  get_arg0 0: t
+   22:  set_loc0 0: e
+   23:  lnot
+   24:  dup
+   25:  if_true8 49
+   27:  drop
+   28:  push_atom_value object
+   33:  get_loc0 0: e
+   34:  typeof
+   35:  neq
+   36:  dup
+   37:  if_true8 49
+   39:  drop
+   40:  push_0 0
+   41:  lnot
+   42:  get_loc0 0: e
+   43:  get_field cancelled
+   48:  strict_neq
+   49:  lnot
+   50:  put_loc1 1: n
+   51:  get_loc0 0: e
+   52:  put_loc2 2: a
+   53:  get_loc0 0: e
+   54:  dup
+   55:  if_false8 146
+   57:  drop
+   58:  push_atom_value object
+   63:  get_loc0 0: e
+   64:  typeof
+   65:  eq
+   66:  dup
+   67:  if_false8 146
+   69:  drop
+   70:  undefined
+   71:  get_loc0 0: e
+   72:  get_field value
+   77:  strict_neq
+   78:  if_false8 89
+   80:  get_loc0 0: e
+   81:  get_field value
+   86:  set_loc2 2: a
+   87:  goto8 146
+   89:  undefined
+   90:  get_loc0 0: e
+   91:  get_field text
+   96:  strict_neq
+   97:  if_false8 108
+   99:  get_loc0 0: e
+  100:  get_field text
+  105:  set_loc2 2: a
+  106:  goto8 146
+  108:  undefined
+  109:  get_loc0 0: e
+  110:  get_field data
+  115:  strict_neq
+  116:  if_false8 127
+  118:  get_loc0 0: e
+  119:  get_field data
+  124:  set_loc2 2: a
+  125:  goto8 146
+  127:  undefined
+  128:  get_loc0 0: e
+  129:  get_field key
+  134:  strict_neq
+  135:  dup
+  136:  if_false8 146
+  138:  drop
+  139:  get_loc0 0: e
+  140:  get_field key
+  145:  set_loc2 2: a
+  146:  drop
+  147:  object
+  148:  get_loc1 1: n
+  149:  define_field cancelled
+  154:  get_loc1 1: n
+  155:  if_false8 160
+  157:  null
+  158:  goto8 163
+  160:  get_var_ref0 0: h
+  161:  get_loc2 2: a
+  162:  call1 1
+  163:  define_field value
+  168:  return
+
+
+/* ===== function depth=3 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: l local:loc6 var
+    1: n local:loc1 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: l
+    1:  get_var_ref1 1: n
+    2:  null
+    3:  call2 2
+    4:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: l local:loc6 var
+    1: n local:loc1 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: l
+    1:  get_var_ref1 1: n
+    2:  get_arg0 0: t
+    3:  call2 2
+    4:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: c
+  mode: strict
+  args: t
+  closure vars:
+    0: o parent:loc1 var
+    1: g parent:loc2 let
+    2: s local:loc3 var
+  stack_size: 3
+  opcodes:
+    0:  fclosure8 0: [bytecode <null>]
+    2:  get_var_ref0 0: o
+    3:  get_arg0 0: t
+    4:  call2 2
+    5:  lnot
+    6:  drop
+    7:  get_var_ref_check 1: g
+   10:  get_var_ref2 2: s
+   11:  strict_eq
+   12:  dup
+   13:  if_false8 21
+   15:  drop
+   16:  null
+   17:  dup
+   18:  put_var_ref_check 1: g
+   21:  return_undef
+
+
+/* ===== function depth=4 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: catch t [level:3 next:-1]
+  stack_size: 5
+  opcodes:
+    0:  catch 69
+    5:  push_atom_value undefined
+   10:  get_var_undef $falcon
+   15:  typeof
+   16:  neq
+   17:  dup
+   18:  if_false8 66
+   20:  drop
+   21:  get_var $falcon
+   26:  dup
+   27:  if_false8 66
+   29:  drop
+   30:  push_atom_value function
+   35:  get_var $falcon
+   40:  get_field off
+   45:  typeof
+   46:  eq
+   47:  dup
+   48:  if_false8 66
+   50:  drop
+   51:  get_var $falcon
+   56:  get_field2 off
+   61:  get_arg0 0: t
+   62:  get_arg1 1: e
+   63:  call_method 2
+   66:  drop
+   67:  drop
+   68:  return_undef
+   69:  put_loc0 0: t
+   70:  catch 77
+   75:  drop
+   76:  return_undef
+   77:  throw
+
+
+/* ===== function depth=3 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: l
+  mode: strict
+  args: n a
+  closure vars:
+    0: e local:loc0 var
+    1: i local:loc2 var
+    2: c local:loc5 var
+    3: t local:arg0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: e
+    1:  dup
+    2:  if_true8 31
+    4:  drop
+    5:  push_0 0
+    6:  lnot
+    7:  put_var_ref0 0: e
+    8:  get_var_ref1 1: i
+    9:  dup
+   10:  if_false8 23
+   12:  drop
+   13:  get_var clearTimeout
+   18:  get_var_ref1 1: i
+   19:  call1 1
+   20:  drop
+   21:  null
+   22:  set_var_ref1 1: i
+   23:  drop
+   24:  get_var_ref2 2: c
+   25:  get_arg0 0: n
+   26:  call1 1
+   27:  drop
+   28:  get_var_ref3 3: t
+   29:  get_arg1 1: a
+   30:  call1 1
+   31:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: ct
+  mode: strict
+  args: e n
+  locals:
+    0: var a
+    1: var o
+    2: var r
+    3: var i
+    4: var s
+    5: var c
+    6: var l
+    7: var f
+    8: catch e [level:15 next:-1]
+    9: var p
+   10: var y
+   11: catch e [level:18 next:-1]
+  closure vars:
+    0: t parent:loc0 const
+    1: u parent:loc11 var
+  stack_size: 7
+  opcodes:
+    0:  get_arg1 1: n
+    1:  if_false 949
+    6:  get_arg1 1: n
+    7:  get_field title
+   12:  if_false 949
+   17:  get_arg0 0: e
+   18:  dup
+   19:  if_false8 58
+   21:  drop
+   22:  get_arg0 0: e
+   23:  get_field $Dbase
+   28:  dup
+   29:  if_true8 58
+   31:  drop
+   32:  get_arg0 0: e
+   33:  get_field $qqDbase
+   38:  dup
+   39:  if_true8 58
+   41:  drop
+   42:  get_arg0 0: e
+   43:  get_field $chatyBgDbase
+   48:  dup
+   49:  if_true8 58
+   51:  drop
+   52:  get_arg0 0: e
+   53:  get_field $qqBgDbase
+   58:  dup
+   59:  if_true8 63
+   61:  drop
+   62:  null
+   63:  set_loc0 0: a
+   64:  if_false 949
+   69:  push_atom_value function
+   74:  get_loc0 0: a
+   75:  get_field read
+   80:  typeof
+   81:  eq
+   82:  if_false 949
+   87:  push_atom_value function
+   92:  get_loc0 0: a
+   93:  get_field write
+   98:  typeof
+   99:  eq
+  100:  if_false 949
+  105:  catch 922
+  110:  get_loc0 0: a
+  111:  get_field2 read
+  116:  push_atom_value ob_desktop_messages
+  121:  call_method 1
+  124:  dup
+  125:  if_true8 131
+  127:  drop
+  128:  array_from 0
+  131:  put_loc1 1: o
+  132:  get_var Array
+  137:  get_field2 isArray
+  142:  get_loc1 1: o
+  143:  call_method 1
+  146:  dup
+  147:  if_true8 154
+  149:  drop
+  150:  array_from 0
+  153:  set_loc1 1: o
+  154:  drop
+  155:  get_arg1 1: n
+  156:  get_field _mergeKey
+  161:  dup
+  162:  if_true8 166
+  164:  drop
+  165:  push_empty_string
+  166:  put_loc2 2: r
+  167:  push_minus1 -1
+  168:  put_loc3 3: i
+  169:  get_loc2 2: r
+  170:  if_false8 210
+  172:  push_0 0
+  173:  put_loc8 4: s
+  175:  get_loc8 4: s
+  177:  get_loc1 1: o
+  178:  get_length
+  179:  lt
+  180:  if_false8 210
+  182:  get_loc1 1: o
+  183:  get_loc8 4: s
+  185:  get_array_el
+  186:  if_false8 206
+  188:  get_loc1 1: o
+  189:  get_loc8 4: s
+  191:  get_array_el
+  192:  get_field _mergeKey
+  197:  get_loc2 2: r
+  198:  strict_eq
+  199:  if_false8 206
+  201:  get_loc8 4: s
+  203:  put_loc3 3: i
+  204:  goto8 210
+  206:  inc_loc 4: s
+  208:  goto8 175
+  210:  object
+  211:  get_arg1 1: n
+  212:  get_field title
+  217:  dup
+  218:  if_true8 226
+  220:  drop
+  221:  push_atom_value "\u00e6\u0096\u00b0\u00e6\u00b6\u0088\u00e6\u0081\u00af"
+  226:  define_field title
+  231:  get_arg1 1: n
+  232:  get_field desc
+  237:  dup
+  238:  if_true8 242
+  240:  drop
+  241:  push_empty_string
+  242:  define_field desc
+  247:  get_arg1 1: n
+  248:  get_field time
+  253:  dup
+  254:  if_true8 336
+  256:  drop
+  257:  get_var Date
+  262:  dup
+  263:  call_constructor 0
+  266:  get_field2 getHours
+  271:  call_method 0
+  274:  get_field2 toString
+  279:  call_method 0
+  282:  get_field2 padStart
+  287:  push_2 2
+  288:  push_const8 0: 1"0"
+  290:  call_method 2
+  293:  push_atom_value ":"
+  298:  add
+  299:  get_var Date
+  304:  dup
+  305:  call_constructor 0
+  308:  get_field2 getMinutes
+  313:  call_method 0
+  316:  get_field2 toString
+  321:  call_method 0
+  324:  get_field2 padStart
+  329:  push_2 2
+  330:  push_const8 1: 1"0"
+  332:  call_method 2
+  335:  add
+  336:  define_field time
+  341:  get_arg1 1: n
+  342:  get_field icon
+  347:  dup
+  348:  if_true8 352
+  350:  drop
+  351:  push_empty_string
+  352:  define_field icon
+  357:  get_arg1 1: n
+  358:  get_field color
+  363:  dup
+  364:  if_true8 372
+  366:  drop
+  367:  push_atom_value "#60a5fa"
+  372:  define_field color
+  377:  get_arg1 1: n
+  378:  get_field route
+  383:  dup
+  384:  if_true8 388
+  386:  drop
+  387:  push_empty_string
+  388:  define_field route
+  393:  get_arg1 1: n
+  394:  get_field avatarUrl
+  399:  dup
+  400:  if_true8 404
+  402:  drop
+  403:  push_empty_string
+  404:  define_field avatarUrl
+  409:  get_arg1 1: n
+  410:  get_field count
+  415:  dup
+  416:  if_true8 420
+  418:  drop
+  419:  push_1 1
+  420:  define_field count
+  425:  get_loc2 2: r
+  426:  define_field _mergeKey
+  431:  put_loc8 5: c
+  433:  get_loc3 3: i
+  434:  push_0 0
+  435:  gte
+  436:  if_false8 554
+  438:  get_loc1 1: o
+  439:  get_field2 splice
+  444:  get_loc3 3: i
+  445:  push_1 1
+  446:  call_method 2
+  449:  push_0 0
+  450:  get_array_el
+  451:  set_loc8 6: l
+  453:  get_loc8 5: c
+  455:  get_field desc
+  460:  put_field desc
+  465:  get_loc8 6: l
+  467:  get_loc8 5: c
+  469:  get_field time
+  474:  put_field time
+  479:  get_loc8 6: l
+  481:  get_loc8 6: l
+  483:  get_field count
+  488:  dup
+  489:  if_true8 493
+  491:  drop
+  492:  push_0 0
+  493:  get_loc8 5: c
+  495:  get_field count
+  500:  dup
+  501:  if_true8 505
+  503:  drop
+  504:  push_1 1
+  505:  add
+  506:  put_field count
+  511:  get_loc8 6: l
+  513:  get_loc8 5: c
+  515:  get_field avatarUrl
+  520:  dup
+  521:  if_true8 531
+  523:  drop
+  524:  get_loc8 6: l
+  526:  get_field avatarUrl
+  531:  put_field avatarUrl
+  536:  get_loc1 1: o
+  537:  get_field2 unshift
+  542:  get_loc8 6: l
+  544:  call_method 1
+  547:  drop
+  548:  get_loc8 6: l
+  550:  put_loc8 5: c
+  552:  goto8 566
+  554:  get_loc1 1: o
+  555:  get_field2 unshift
+  560:  get_loc8 5: c
+  562:  call_method 1
+  565:  drop
+  566:  get_loc1 1: o
+  567:  get_length
+  568:  push_i8 30
+  570:  gt
+  571:  dup
+  572:  if_false8 588
+  574:  drop
+  575:  get_loc1 1: o
+  576:  get_field2 slice
+  581:  push_0 0
+  582:  push_i8 30
+  584:  call_method 2
+  587:  set_loc1 1: o
+  588:  drop
+  589:  get_loc0 0: a
+  590:  get_field2 write
+  595:  push_atom_value ob_desktop_messages
+  600:  get_loc1 1: o
+  601:  call_method 2
+  604:  drop
+  605:  push_atom_value undefined
+  610:  get_var_undef $falcon
+  615:  typeof
+  616:  neq
+  617:  if_false 920
+  622:  object
+  623:  get_loc8 5: c
+  625:  define_field message
+  630:  get_var JSON
+  635:  get_field2 parse
+  640:  get_var JSON
+  645:  get_field2 stringify
+  650:  get_loc1 1: o
+  651:  call_method 1
+  654:  call_method 1
+  657:  define_field allMessages
+  662:  put_loc8 7: f
+  664:  catch 755
+  669:  push_atom_value function
+  674:  get_var $falcon
+  679:  get_field trigger
+  684:  typeof
+  685:  eq
+  686:  if_false8 710
+  688:  get_var $falcon
+  693:  get_field2 trigger
+  698:  push_atom_value desktop_notification_pushed
+  703:  get_loc8 7: f
+  705:  call_method 2
+  708:  goto8 751
+  710:  push_atom_value function
+  715:  get_var $falcon
+  720:  get_field emit
+  725:  typeof
+  726:  eq
+  727:  dup
+  728:  if_false8 751
+  730:  drop
+  731:  get_var $falcon
+  736:  get_field2 emit
+  741:  push_atom_value desktop_notification_pushed
+  746:  get_loc8 7: f
+  748:  call_method 2
+  751:  drop
+  752:  drop
+  753:  goto8 783
+  755:  put_loc8 8: e
+  757:  catch 782
+  762:  get_var_ref_check 0: t
+  765:  push_atom_value base
+  770:  push_atom_value "pushDesktopNotification trigger event"
+  775:  get_loc8 8: e
+  777:  call3 3
+  778:  drop
+  779:  drop
+  780:  goto8 783
+  782:  throw
+  783:  null
+  784:  put_loc8 9: p
+  786:  get_var Date
+  791:  get_field2 now
+  796:  call_method 0
+  799:  put_loc8 10: y
+  801:  get_arg0 0: e
+  802:  if_false8 837
+  804:  get_arg0 0: e
+  805:  get_field __desktopActivityCacheAt
+  810:  if_false8 837
+  812:  get_loc8 10: y
+  814:  get_arg0 0: e
+  815:  get_field __desktopActivityCacheAt
+  820:  sub
+  821:  push_i16 800
+  824:  lt
+  825:  if_false8 837
+  827:  get_arg0 0: e
+  828:  get_field __desktopActivityCache
+  833:  set_loc8 9: p
+  835:  goto8 864
+  837:  get_var_ref1 1: u
+  838:  get_arg0 0: e
+  839:  call1 1
+  840:  put_loc8 9: p
+  842:  get_arg0 0: e
+  843:  dup
+  844:  if_false8 864
+  846:  drop
+  847:  get_arg0 0: e
+  848:  get_loc8 9: p
+  850:  put_field __desktopActivityCache
+  855:  get_arg0 0: e
+  856:  get_loc8 10: y
+  858:  insert2
+  859:  put_field __desktopActivityCacheAt
+  864:  drop
+  865:  get_loc8 9: p
+  867:  lnot
+  868:  dup
+  869:  if_true8 919
+  871:  drop
+  872:  push_1 1
+  873:  lnot
+  874:  get_loc8 9: p
+  876:  get_field active
+  881:  strict_eq
+  882:  dup
+  883:  if_true8 919
+  885:  drop
+  886:  push_0 0
+  887:  lnot
+  888:  get_arg1 1: n
+  889:  get_field suppressGlobalModal
+  894:  strict_eq
+  895:  dup
+  896:  if_true8 919
+  898:  drop
+  899:  get_var $falcon
+  904:  get_field2 trigger
+  909:  push_atom_value show_global_notification_modal
+  914:  get_loc8 5: c
+  916:  call_method 2
+  919:  drop
+  920:  drop
+  921:  return_undef
+  922:  put_loc8 11: e
+  924:  catch 948
+  929:  get_var_ref_check 0: t
+  932:  push_atom_value base
+  937:  push_atom_value pushDesktopNotification
+  942:  get_loc8 11: e
+  944:  call3 3
+  945:  drop
+  946:  drop
+  947:  return_undef
+  948:  throw
+  949:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: base-ac6db2f1.js:1 source_len=0 */
+base-ac6db2f1.js:1: function: lt
+  mode: strict
+  args: t e
+  locals:
+    0: var n
+    1: var a
+    2: var o
+    3: var r
+    4: var i
+    5: catch t [level:9 next:-1]
+    6: catch t [level:11 next:-1]
+  stack_size: 6
+  opcodes:
+    0:  get_arg0 0: t
+    1:  dup
+    2:  if_false8 41
+    4:  drop
+    5:  get_arg0 0: t
+    6:  get_field $Dbase
+   11:  dup
+   12:  if_true8 41
+   14:  drop
+   15:  get_arg0 0: t
+   16:  get_field $qqDbase
+   21:  dup
+   22:  if_true8 41
+   24:  drop
+   25:  get_arg0 0: t
+   26:  get_field $chatyBgDbase
+   31:  dup
+   32:  if_true8 41
+   34:  drop
+   35:  get_arg0 0: t
+   36:  get_field $qqBgDbase
+   41:  dup
+   42:  if_true8 46
+   44:  drop
+   45:  null
+   46:  set_loc0 0: n
+   47:  if_false 337
+   52:  push_atom_value function
+   57:  get_loc0 0: n
+   58:  get_field read
+   63:  typeof
+   64:  eq
+   65:  if_false 337
+   70:  push_atom_value function
+   75:  get_loc0 0: n
+   76:  get_field write
+   81:  typeof
+   82:  eq
+   83:  if_false 337
+   88:  catch 327
+   93:  get_loc0 0: n
+   94:  get_field2 read
+   99:  push_atom_value ob_desktop_messages
+  104:  call_method 1
+  107:  dup
+  108:  if_true8 114
+  110:  drop
+  111:  array_from 0
+  114:  put_loc1 1: a
+  115:  get_var Array
+  120:  get_field2 isArray
+  125:  get_loc1 1: a
+  126:  call_method 1
+  129:  lnot
+  130:  if_false8 134
+  132:  drop
+  133:  return_undef
+  134:  array_from 0
+  137:  put_loc2 2: o
+  138:  push_0 0
+  139:  put_loc3 3: r
+  140:  get_loc3 3: r
+  141:  get_loc1 1: a
+  142:  get_length
+  143:  lt
+  144:  if_false8 184
+  146:  get_loc1 1: a
+  147:  get_loc3 3: r
+  148:  get_array_el
+  149:  dup
+  150:  if_false8 179
+  152:  drop
+  153:  get_loc1 1: a
+  154:  get_loc3 3: r
+  155:  get_array_el
+  156:  get_field route
+  161:  get_arg1 1: e
+  162:  strict_neq
+  163:  dup
+  164:  if_false8 179
+  166:  drop
+  167:  get_loc2 2: o
+  168:  get_field2 push
+  173:  get_loc1 1: a
+  174:  get_loc3 3: r
+  175:  get_array_el
+  176:  call_method 1
+  179:  drop
+  180:  inc_loc 3: r
+  182:  goto8 140
+  184:  get_loc0 0: n
+  185:  get_field2 write
+  190:  push_atom_value ob_desktop_messages
+  195:  get_loc2 2: o
+  196:  call_method 2
+  199:  drop
+  200:  push_atom_value undefined
+  205:  get_var_undef $falcon
+  210:  typeof
+  211:  neq
+  212:  if_false8 325
+  214:  object
+  215:  get_loc2 2: o
+  216:  define_field allMessages
+  221:  put_loc8 4: i
+  223:  catch 314
+  228:  push_atom_value function
+  233:  get_var $falcon
+  238:  get_field trigger
+  243:  typeof
+  244:  eq
+  245:  if_false8 269
+  247:  get_var $falcon
+  252:  get_field2 trigger
+  257:  push_atom_value desktop_notification_pushed
+  262:  get_loc8 4: i
+  264:  call_method 2
+  267:  goto8 310
+  269:  push_atom_value function
+  274:  get_var $falcon
+  279:  get_field emit
+  284:  typeof
+  285:  eq
+  286:  dup
+  287:  if_false8 310
+  289:  drop
+  290:  get_var $falcon
+  295:  get_field2 emit
+  300:  push_atom_value desktop_notification_pushed
+  305:  get_loc8 4: i
+  307:  call_method 2
+  310:  drop
+  311:  drop
+  312:  goto8 325
+  314:  put_loc8 5: t
+  316:  catch 324
+  321:  drop
+  322:  goto8 325
+  324:  throw
+  325:  drop
+  326:  return_undef
+  327:  put_loc8 6: t
+  329:  catch 336
+  334:  drop
+  335:  return_undef
+  336:  throw
+  337:  return_undef
+

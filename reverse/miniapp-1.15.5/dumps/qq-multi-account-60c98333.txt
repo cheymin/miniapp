@@ -1,0 +1,461 @@
+
+/* ===== function depth=0 ===== */
+/* debug: qq-multi-account-60c98333.js:1 source_len=0 */
+qq-multi-account-60c98333.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: t local:loc0 const
+    1: r local:loc1 const
+    2: e local:loc2 var
+    3: n local:loc3 var
+    4: i local:loc4 var
+    5: o local:loc5 var
+  stack_size: 18
+  opcodes:
+    0:  fclosure8 0: [bytecode e]
+    2:  put_var_ref2 2: e
+    3:  fclosure8 1: [bytecode n]
+    5:  put_var_ref3 3: n
+    6:  fclosure8 2: [bytecode i]
+    8:  put_var_ref 4: i
+   11:  fclosure8 3: [bytecode o]
+   13:  put_var_ref 5: o
+   16:  push_atom_value ob_accounts
+   21:  put_var_ref0 0: t
+   22:  push_atom_value ob_account_current
+   27:  put_var_ref1 1: r
+   28:  get_var Object
+   33:  get_field2 freeze
+   38:  push_atom_value ob_accounts
+   43:  push_atom_value ob_account_current
+   48:  push_atom_value ob_account_migrated_v1
+   53:  push_atom_value ob_account_session
+   58:  push_atom_value ob_qqbot_device_identity
+   63:  push_atom_value ob_device_token
+   68:  push_atom_value ob_ws_config
+   73:  push_atom_value ob_settings
+   78:  push_atom_value ob_popup_notice_enabled
+   83:  push_atom_value ob_store_diag
+   88:  push_atom_value ob_store_probe
+   93:  array_from 11
+   96:  call_method 1
+   99:  drop
+  100:  get_var Object
+  105:  get_field2 freeze
+  110:  push_atom_value messages
+  115:  push_atom_value messageStore
+  120:  push_atom_value chatList
+  125:  push_atom_value groupList
+  130:  push_atom_value friendList
+  135:  push_atom_value currentChat
+  140:  push_atom_value groupMembers
+  145:  push_atom_value addRequests
+  150:  push_atom_value pendingImages
+  155:  push_atom_value forwardPreviewItems
+  160:  push_atom_value memeList
+  165:  push_atom_value hiddenChats
+  170:  push_atom_value unreadProgress
+  175:  push_atom_value unreadTotal
+  180:  push_atom_value unreadLoaded
+  185:  push_atom_value syncGapWarning
+  190:  array_from 16
+  193:  call_method 1
+  196:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: qq-multi-account-60c98333.js:1 source_len=0 */
+qq-multi-account-60c98333.js:1: function: e
+  mode: strict
+  args: r
+  locals:
+    0: const e [level:3 next:-1]
+    1: const n [level:3 next:0]
+    2: catch t [level:4 next:-1]
+  closure vars:
+    0: t parent:loc0 const
+  stack_size: 4
+  opcodes:
+    0:  get_arg0 0: r
+    1:  lnot
+    2:  dup
+    3:  if_true8 19
+    5:  drop
+    6:  push_atom_value function
+   11:  get_arg0 0: r
+   12:  get_field read
+   17:  typeof
+   18:  neq
+   19:  if_false8 25
+   21:  array_from 0
+   24:  return
+   25:  catch 131
+   30:  set_loc_uninitialized 1: n
+   33:  set_loc_uninitialized 0: e
+   36:  get_arg0 0: r
+   37:  get_field2 read
+   42:  get_var_ref_check 0: t
+   45:  call_method 1
+   48:  put_loc0 0: e
+   49:  push_atom_value string
+   54:  get_loc_check 0: e
+   57:  typeof
+   58:  eq
+   59:  if_false8 79
+   61:  get_var JSON
+   66:  get_field2 parse
+   71:  get_loc_check 0: e
+   74:  call_method 1
+   77:  goto8 82
+   79:  get_loc_check 0: e
+   82:  put_loc1 1: n
+   83:  get_var Array
+   88:  get_field2 isArray
+   93:  get_loc_check 1: n
+   96:  call_method 1
+   99:  if_false8 126
+  101:  get_loc_check 1: n
+  104:  get_field2 filter
+  109:  fclosure8 0: [bytecode <null>]
+  111:  call_method 1
+  114:  get_field2 map
+  119:  fclosure8 1: [bytecode <null>]
+  121:  call_method 1
+  124:  goto8 129
+  126:  array_from 0
+  129:  nip
+  130:  return
+  131:  put_loc2 2: t
+  132:  catch 142
+  137:  array_from 0
+  140:  nip
+  141:  return
+  142:  throw
+
+
+/* ===== function depth=2 ===== */
+/* debug: qq-multi-account-60c98333.js:1 source_len=0 */
+qq-multi-account-60c98333.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: t
+    1:  dup
+    2:  if_false8 30
+    4:  drop
+    5:  get_var String
+   10:  get_arg0 0: t
+   11:  get_field qqUin
+   16:  dup
+   17:  if_true8 21
+   19:  drop
+   20:  push_empty_string
+   21:  call1 1
+   22:  get_field2 trim
+   27:  call_method 0
+   30:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: qq-multi-account-60c98333.js:1 source_len=0 */
+qq-multi-account-60c98333.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 3
+  opcodes:
+    0:  object
+    1:  get_arg0 0: t
+    2:  null
+    3:  copy_data_properties 6
+    5:  drop
+    6:  drop
+    7:  get_var String
+   12:  get_arg0 0: t
+   13:  get_field qqUin
+   18:  call1 1
+   19:  define_field qqUin
+   24:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: qq-multi-account-60c98333.js:1 source_len=0 */
+qq-multi-account-60c98333.js:1: function: n
+  mode: strict
+  args: r n
+  locals:
+    0: const i [level:1 next:-1]
+    1: const o [level:1 next:0]
+    2: const s [level:1 next:1]
+    3: const c [level:1 next:2]
+  closure vars:
+    0: t parent:loc0 const
+    1: e parent:loc2 var
+  stack_size: 4
+  opcodes:
+    0:  get_arg1 1: n
+    1:  is_undefined
+    2:  if_false8 6
+    4:  object
+    5:  put_arg1 1: n
+    6:  set_loc_uninitialized 3: c
+    9:  set_loc_uninitialized 2: s
+   12:  set_loc_uninitialized 1: o
+   15:  set_loc_uninitialized 0: i
+   18:  get_var String
+   23:  get_arg1 1: n
+   24:  get_field qqUin
+   29:  dup
+   30:  if_true8 34
+   32:  drop
+   33:  push_empty_string
+   34:  call1 1
+   35:  get_field2 trim
+   40:  call_method 0
+   43:  put_loc0 0: i
+   44:  get_loc_check 0: i
+   47:  lnot
+   48:  if_false8 55
+   50:  get_var_ref1 1: e
+   51:  get_arg0 0: r
+   52:  tail_call 1
+   55:  get_var_ref1 1: e
+   56:  get_arg0 0: r
+   57:  call1 1
+   58:  put_loc1 1: o
+   59:  get_loc_check 1: o
+   62:  get_field2 findIndex
+   67:  fclosure8 0: [bytecode <null>]
+   69:  call_method 1
+   72:  put_loc2 2: s
+   73:  object
+   74:  get_loc_check 2: s
+   77:  push_0 0
+   78:  gte
+   79:  if_false8 90
+   81:  get_loc_check 1: o
+   84:  get_loc_check 2: s
+   87:  get_array_el
+   88:  goto8 91
+   90:  object
+   91:  null
+   92:  copy_data_properties 6
+   94:  drop
+   95:  drop
+   96:  get_arg1 1: n
+   97:  null
+   98:  copy_data_properties 6
+  100:  drop
+  101:  drop
+  102:  get_loc_check 0: i
+  105:  define_field qqUin
+  110:  get_var Number
+  115:  get_arg1 1: n
+  116:  get_field lastUsedAt
+  121:  call1 1
+  122:  dup
+  123:  if_true8 139
+  125:  drop
+  126:  get_var Date
+  131:  get_field2 now
+  136:  call_method 0
+  139:  define_field lastUsedAt
+  144:  put_loc3 3: c
+  145:  get_loc_check 2: s
+  148:  push_0 0
+  149:  gte
+  150:  if_false8 166
+  152:  get_loc_check 1: o
+  155:  get_loc_check 2: s
+  158:  to_propkey2
+  159:  get_loc_check 3: c
+  162:  insert3
+  163:  put_array_el
+  164:  goto8 180
+  166:  get_loc_check 1: o
+  169:  get_field2 push
+  174:  get_loc_check 3: c
+  177:  call_method 1
+  180:  drop
+  181:  fclosure8 1: [bytecode <null>]
+  183:  get_arg0 0: r
+  184:  get_loc_check 1: o
+  187:  call2 2
+  188:  drop
+  189:  get_loc_check 1: o
+  192:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: qq-multi-account-60c98333.js:1 source_len=0 */
+qq-multi-account-60c98333.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: i local:loc0 const
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_field qqUin
+    6:  get_var_ref_check 0: i
+    9:  strict_eq
+   10:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: qq-multi-account-60c98333.js:1 source_len=0 */
+qq-multi-account-60c98333.js:1: function: <null>
+  mode: strict
+  args: r e
+  locals:
+    0: catch t [level:4 next:-1]
+  closure vars:
+    0: t parent:loc0 const
+  stack_size: 7
+  opcodes:
+    0:  get_arg0 0: r
+    1:  lnot
+    2:  dup
+    3:  if_true8 19
+    5:  drop
+    6:  push_atom_value function
+   11:  get_arg0 0: r
+   12:  get_field write
+   17:  typeof
+   18:  neq
+   19:  if_false8 24
+   21:  push_1 1
+   22:  lnot
+   23:  return
+   24:  catch 68
+   29:  get_arg0 0: r
+   30:  get_field2 write
+   35:  get_var_ref_check 0: t
+   38:  get_var Array
+   43:  get_field2 isArray
+   48:  get_arg1 1: e
+   49:  call_method 1
+   52:  if_false8 57
+   54:  get_arg1 1: e
+   55:  goto8 60
+   57:  array_from 0
+   60:  call_method 2
+   63:  drop
+   64:  push_0 0
+   65:  lnot
+   66:  nip
+   67:  return
+   68:  put_loc0 0: t
+   69:  catch 78
+   74:  push_1 1
+   75:  lnot
+   76:  nip
+   77:  return
+   78:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: qq-multi-account-60c98333.js:1 source_len=0 */
+qq-multi-account-60c98333.js:1: function: i
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:3 next:-1]
+    1: catch t [level:4 next:-1]
+  closure vars:
+    0: r parent:loc1 const
+  stack_size: 4
+  opcodes:
+    0:  get_arg0 0: t
+    1:  lnot
+    2:  dup
+    3:  if_true8 19
+    5:  drop
+    6:  push_atom_value function
+   11:  get_arg0 0: t
+   12:  get_field read
+   17:  typeof
+   18:  neq
+   19:  if_false8 23
+   21:  push_empty_string
+   22:  return
+   23:  catch 73
+   28:  set_loc_uninitialized 0: e
+   31:  get_arg0 0: t
+   32:  get_field2 read
+   37:  get_var_ref_check 0: r
+   40:  call_method 1
+   43:  put_loc0 0: e
+   44:  null
+   45:  get_loc_check 0: e
+   48:  eq
+   49:  if_false8 54
+   51:  push_empty_string
+   52:  goto8 71
+   54:  get_var String
+   59:  get_loc_check 0: e
+   62:  call1 1
+   63:  get_field2 trim
+   68:  call_method 0
+   71:  nip
+   72:  return
+   73:  put_loc1 1: t
+   74:  catch 82
+   79:  push_empty_string
+   80:  nip
+   81:  return
+   82:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: qq-multi-account-60c98333.js:1 source_len=0 */
+qq-multi-account-60c98333.js:1: function: o
+  mode: strict
+  args: t e
+  locals:
+    0: catch t [level:4 next:-1]
+  closure vars:
+    0: r parent:loc1 const
+  stack_size: 7
+  opcodes:
+    0:  get_arg0 0: t
+    1:  lnot
+    2:  dup
+    3:  if_true8 19
+    5:  drop
+    6:  push_atom_value function
+   11:  get_arg0 0: t
+   12:  get_field write
+   17:  typeof
+   18:  neq
+   19:  if_false8 24
+   21:  push_1 1
+   22:  lnot
+   23:  return
+   24:  catch 66
+   29:  get_arg0 0: t
+   30:  get_field2 write
+   35:  get_var_ref_check 0: r
+   38:  get_var String
+   43:  get_arg1 1: e
+   44:  dup
+   45:  if_true8 49
+   47:  drop
+   48:  push_empty_string
+   49:  call1 1
+   50:  get_field2 trim
+   55:  call_method 0
+   58:  call_method 2
+   61:  drop
+   62:  push_0 0
+   63:  lnot
+   64:  nip
+   65:  return
+   66:  put_loc0 0: t
+   67:  catch 76
+   72:  push_1 1
+   73:  lnot
+   74:  nip
+   75:  return
+   76:  throw
+

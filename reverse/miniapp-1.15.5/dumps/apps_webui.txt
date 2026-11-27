@@ -1,0 +1,3110 @@
+
+/* ===== function depth=0 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: t parent:loc0 const
+    1: e parent:loc1 const
+    2: s parent:loc2 const
+    3: o local:loc0 const
+    4: l local:loc1 const
+    5: i local:loc2 const
+    6: r local:loc3 const
+    7: a local:loc4 const
+    8: n local:loc5 const
+    9: h local:loc6 var
+   10: c local:loc7 var
+   11: d local:loc8 const
+  stack_size: 12
+  opcodes:
+    0:  get_var_ref_check 2: s
+    3:  push_atom_value "/a.tar"
+    8:  add
+    9:  put_var_ref3 3: o
+   10:  push_atom_value "/userdisk/a.tar"
+   15:  put_var_ref 4: l
+   18:  push_atom_value "/userdisk/chroot/rootfs"
+   23:  put_var_ref 5: i
+   26:  push_empty_string
+   27:  get_field2 concat
+   32:  get_var_ref_check 5: i
+   35:  push_atom_value "/debian-12-arm64"
+   40:  call_method 2
+   43:  put_var_ref 6: r
+   46:  object
+   47:  push_empty_string
+   48:  get_field2 concat
+   53:  get_var_ref_check 6: r
+   56:  push_atom_value "/opt/wpe-hostabi/lib"
+   61:  call_method 2
+   64:  define_field path
+   69:  push_atom_value d
+   74:  define_field kind
+   79:  push_atom_value "WPE lib \u00e7\u009b\u00ae\u00e5\u00bd\u0095"
+   84:  define_field label
+   89:  object
+   90:  push_empty_string
+   91:  get_field2 concat
+   96:  get_var_ref_check 6: r
+   99:  push_atom_value "/opt/wpe-hostabi/lib/libWPEWebKit-1.1.so.0"
+  104:  call_method 2
+  107:  define_field path
+  112:  push_atom_value f
+  117:  define_field kind
+  122:  push_atom_value "WebKit \u00e4\u00b8\u00bb\u00e5\u00ba\u0093"
+  127:  define_field label
+  132:  object
+  133:  push_empty_string
+  134:  get_field2 concat
+  139:  get_var_ref_check 6: r
+  142:  push_atom_value "/opt/wpe-hostabi/libexec/wpe-webkit-1.1/WPEWebProcess"
+  147:  call_method 2
+  150:  define_field path
+  155:  push_atom_value f
+  160:  define_field kind
+  165:  push_atom_value WPEWebProcess
+  170:  define_field label
+  175:  object
+  176:  push_empty_string
+  177:  get_field2 concat
+  182:  get_var_ref_check 6: r
+  185:  push_atom_value "/opt/wpe-hostabi/libexec/wpe-webkit-1.1/WPENetworkProcess"
+  190:  call_method 2
+  193:  define_field path
+  198:  push_atom_value f
+  203:  define_field kind
+  208:  push_atom_value WPENetworkProcess
+  213:  define_field label
+  218:  object
+  219:  push_empty_string
+  220:  get_field2 concat
+  225:  get_var_ref_check 6: r
+  228:  push_atom_value "/opt/wpe-hostabi/lib/wpe-webkit-1.1/injected-bundle/libWPEInjectedBundle.so"
+  233:  call_method 2
+  236:  define_field path
+  241:  push_atom_value f
+  246:  define_field kind
+  251:  push_atom_value InjectedBundle
+  256:  define_field label
+  261:  object
+  262:  push_empty_string
+  263:  get_field2 concat
+  268:  get_var_ref_check 6: r
+  271:  push_atom_value "/opt/wpe-hostabi/etc/fonts/fonts.conf"
+  276:  call_method 2
+  279:  define_field path
+  284:  push_atom_value f
+  289:  define_field kind
+  294:  push_atom_value "fonts.conf"
+  299:  define_field label
+  304:  object
+  305:  push_empty_string
+  306:  get_field2 concat
+  311:  get_var_ref_check 6: r
+  314:  push_atom_value "/opt/wpe-hostabi/share/glvnd/egl_vendor.d/50_mesa_hostabi.json"
+  319:  call_method 2
+  322:  define_field path
+  327:  push_atom_value f
+  332:  define_field kind
+  337:  push_atom_value "EGL vendor"
+  342:  define_field label
+  347:  object
+  348:  push_empty_string
+  349:  get_field2 concat
+  354:  get_var_ref_check 6: r
+  357:  push_atom_value "/etc/ssl/certs/ca-certificates.crt"
+  362:  call_method 2
+  365:  define_field path
+  370:  push_atom_value f
+  375:  define_field kind
+  380:  push_atom_value "CA \u00e8\u00af\u0081\u00e4\u00b9\u00a6"
+  385:  define_field label
+  390:  array_from 8
+  393:  put_var_ref 7: a
+  396:  object
+  397:  push_atom_value "/usr/lib/gstreamer-1.0"
+  402:  define_field path
+  407:  push_atom_value d
+  412:  define_field kind
+  417:  push_atom_value "\u00e5\u00ae\u00bf\u00e4\u00b8\u00bb GStreamer \u00e6\u008f\u0092\u00e4\u00bb\u00b6\u00e7\u009b\u00ae\u00e5\u00bd\u0095\u00e7\u00bc\u00ba\u00e5\u00a4\u00b1\u00ef\u00bc\u008c\u00e7\u00bd\u0091\u00e9\u00a1\u00b5\u00e9\u009f\u00b3\u00e8\u00a7\u0086\u00e9\u00a2\u0091\u00e5\u008f\u00af\u00e8\u0083\u00bd"
+  422:  define_field label
+  427:  object
+  428:  push_atom_value "/usr/libexec/gstreamer-1.0/gst-plugin-scanner"
+  433:  define_field path
+  438:  push_atom_value f
+  443:  define_field kind
+  448:  push_atom_value "\u00e5\u00ae\u00bf\u00e4\u00b8\u00bb gst-plugin-scanner \u00e7\u00bc\u00ba\u00e5\u00a4\u00b1\u00ef\u00bc\u008c\u00e7\u00bd\u0091\u00e9\u00a1\u00b5\u00e9\u009f\u00b3\u00e8\u00a7\u0086\u00e9\u00a2\u0091\u00e5\u008f\u00af\u00e8\u0083\u00bd\u00e5\u00bc\u0082"
+  453:  define_field label
+  458:  array_from 2
+  461:  put_var_ref 8: n
+  464:  object
+  465:  get_var_ref_check 1: e
+  468:  array_from 1
+  471:  define_field mixins
+  476:  push_atom_value apps_webui
+  481:  define_field name
+  486:  fclosure8 0: [bytecode <null>]
+  488:  set_name data
+  493:  define_field data
+  498:  fclosure8 1: [bytecode <null>]
+  500:  define_method mounted,4
+  506:  fclosure8 2: [bytecode <null>]
+  508:  define_method beforeDestroy,4
+  514:  object
+  515:  fclosure8 3: [bytecode <null>]
+  517:  define_method toast,4
+  523:  fclosure8 4: [bytecode <null>]
+  525:  define_method log,4
+  531:  fclosure8 5: [bytecode <null>]
+  533:  define_method initBridge,4
+  539:  fclosure8 6: [bytecode <null>]
+  541:  define_method shellOutput,4
+  547:  fclosure8 7: [bytecode <null>]
+  549:  define_method execShell,4
+  555:  fclosure8 8: [bytecode <null>]
+  557:  define_method cleanupBrowserProcesses,4
+  563:  fclosure8 9: [bytecode <null>]
+  565:  define_method pathExists,4
+  571:  fclosure8 10: [bytecode <null>]
+  573:  define_method collectHostWarnings,4
+  579:  fclosure8 11: [bytecode <null>]
+  581:  define_method checkBundle,4
+  587:  fclosure8 12: [bytecode <null>]
+  589:  define_method hasDownloadedArchive,4
+  595:  fclosure8 13: [bytecode <null>]
+  597:  define_method startBootstrap,4
+  603:  fclosure8 14: [bytecode <null>]
+  605:  define_method downloadArchive,4
+  611:  fclosure8 15: [bytecode <null>]
+  613:  define_method startDownloadPoll,4
+  619:  fclosure8 16: [bytecode <null>]
+  621:  define_method stopDownloadPoll,4
+  627:  fclosure8 17: [bytecode <null>]
+  629:  define_method targetDirExists,4
+  635:  fclosure8 18: [bytecode <null>]
+  637:  define_method installArchive,4
+  643:  fclosure8 19: [bytecode <null>]
+  645:  define_method reinstall,4
+  651:  fclosure8 20: [bytecode <null>]
+  653:  define_method forceCloseBrowser,4
+  659:  fclosure8 21: [bytecode <null>]
+  661:  define_method openBrowser,4
+  667:  define_field methods
+  672:  put_var_ref 9: h
+  675:  fclosure8 22: [bytecode <null>]
+  677:  set_name c
+  682:  set_var_ref 10: c
+  685:  push_0 0
+  686:  lnot
+  687:  put_field _withStripped
+  692:  get_var_ref 9: h
+  695:  put_var_ref 11: d
+  698:  get_var_ref_check 11: d
+  701:  get_var_ref 10: c
+  704:  put_field render
+  709:  get_var_ref_check 11: d
+  712:  array_from 0
+  715:  put_field staticRenderFns
+  720:  get_var_ref_check 11: d
+  723:  push_0 0
+  724:  lnot
+  725:  put_field _compiled
+  730:  get_var_ref_check 11: d
+  733:  push_atom_value "data-v-725fb368"
+  738:  put_field _scopeId
+  743:  get_var_ref_check 11: d
+  746:  object
+  747:  put_field themes
+  752:  get_var_ref_check 11: d
+  755:  get_var Object
+  760:  get_field2 assign
+  765:  object
+  766:  object
+  767:  object
+  768:  push_atom_value "100%"
+  773:  define_field width
+  778:  push_atom_value "100%"
+  783:  define_field height
+  788:  push_atom_value "#0b1220"
+  793:  define_field backgroundColor
+  798:  define_field "page-scroll"
+  803:  object
+  804:  push_atom_value "100%"
+  809:  define_field width
+  814:  push_atom_value "100%"
+  819:  define_field minHeight
+  824:  push_atom_value center
+  829:  define_field justifyContent
+  834:  push_atom_value center
+  839:  define_field alignItems
+  844:  push_atom_value "14px"
+  849:  define_field paddingTop
+  854:  push_atom_value "14px"
+  859:  define_field paddingRight
+  864:  push_atom_value "14px"
+  869:  define_field paddingBottom
+  874:  push_atom_value "14px"
+  879:  define_field paddingLeft
+  884:  define_field page
+  889:  object
+  890:  push_atom_value "100%"
+  895:  define_field width
+  900:  push_atom_value "820px"
+  905:  define_field maxWidth
+  910:  push_atom_value "#121a2b"
+  915:  define_field backgroundColor
+  920:  push_atom_value "12px"
+  925:  define_field borderRadius
+  930:  push_atom_value "16px"
+  935:  define_field paddingTop
+  940:  push_atom_value "16px"
+  945:  define_field paddingRight
+  950:  push_atom_value "16px"
+  955:  define_field paddingBottom
+  960:  push_atom_value "16px"
+  965:  define_field paddingLeft
+  970:  define_field card
+  975:  object
+  976:  push_atom_value "#ffffff"
+  981:  define_field color
+  986:  push_atom_value "26px"
+  991:  define_field fontSize
+  996:  push_atom_value bold
+ 1001:  define_field fontWeight
+ 1006:  define_field title
+ 1011:  object
+ 1012:  push_atom_value "8px"
+ 1017:  define_field marginTop
+ 1022:  push_atom_value "#c6d0e1"
+ 1027:  define_field color
+ 1032:  push_atom_value "18px"
+ 1037:  define_field fontSize
+ 1042:  define_field status
+ 1047:  object
+ 1048:  push_atom_value "100%"
+ 1053:  define_field width
+ 1058:  push_atom_value "12px"
+ 1063:  define_field height
+ 1068:  push_atom_value "#24314d"
+ 1073:  define_field backgroundColor
+ 1078:  push_atom_value "999px"
+ 1083:  define_field borderRadius
+ 1088:  push_atom_value "12px"
+ 1093:  define_field marginTop
+ 1098:  push_atom_value hidden
+ 1103:  define_field overflow
+ 1108:  define_field "progress-track"
+ 1113:  object
+ 1114:  push_atom_value "12px"
+ 1119:  define_field height
+ 1124:  push_atom_value "#0a84ff"
+ 1129:  define_field backgroundColor
+ 1134:  push_atom_value "999px"
+ 1139:  define_field borderRadius
+ 1144:  define_field "progress-fill"
+ 1149:  object
+ 1150:  push_atom_value "8px"
+ 1155:  define_field marginTop
+ 1160:  push_atom_value "#9fb3d9"
+ 1165:  define_field color
+ 1170:  push_atom_value "15px"
+ 1175:  define_field fontSize
+ 1180:  define_field "progress-text"
+ 1185:  object
+ 1186:  push_atom_value "12px"
+ 1191:  define_field marginTop
+ 1196:  push_atom_value "12px"
+ 1201:  define_field paddingTop
+ 1206:  push_atom_value "12px"
+ 1211:  define_field paddingRight
+ 1216:  push_atom_value "12px"
+ 1221:  define_field paddingBottom
+ 1226:  push_atom_value "12px"
+ 1231:  define_field paddingLeft
+ 1236:  push_atom_value "12px"
+ 1241:  define_field borderRadius
+ 1246:  push_atom_value "#2c1f0d"
+ 1251:  define_field backgroundColor
+ 1256:  define_field "warn-box"
+ 1261:  object
+ 1262:  push_atom_value "#ffd37a"
+ 1267:  define_field color
+ 1272:  push_atom_value "16px"
+ 1277:  define_field fontSize
+ 1282:  push_atom_value bold
+ 1287:  define_field fontWeight
+ 1292:  define_field "warn-title"
+ 1297:  object
+ 1298:  push_atom_value "4px"
+ 1303:  define_field marginTop
+ 1308:  push_atom_value "#ffd37a"
+ 1313:  define_field color
+ 1318:  push_atom_value "15px"
+ 1323:  define_field fontSize
+ 1328:  define_field "warn-text"
+ 1333:  object
+ 1334:  push_atom_value "100%"
+ 1339:  define_field width
+ 1344:  push_atom_value "220px"
+ 1349:  define_field height
+ 1354:  push_atom_value "12px"
+ 1359:  define_field marginTop
+ 1364:  push_atom_value "12px"
+ 1369:  define_field paddingTop
+ 1374:  push_atom_value "12px"
+ 1379:  define_field paddingRight
+ 1384:  push_atom_value "12px"
+ 1389:  define_field paddingBottom
+ 1394:  push_atom_value "12px"
+ 1399:  define_field paddingLeft
+ 1404:  push_atom_value "#0a0f1a"
+ 1409:  define_field backgroundColor
+ 1414:  push_atom_value "12px"
+ 1419:  define_field borderRadius
+ 1424:  define_field "log-box"
+ 1429:  object
+ 1430:  push_atom_value "#7fe3a1"
+ 1435:  define_field color
+ 1440:  push_atom_value "14px"
+ 1445:  define_field fontSize
+ 1450:  push_atom_value "22px"
+ 1455:  define_field lineHeight
+ 1460:  define_field "log-line"
+ 1465:  object
+ 1466:  push_atom_value "12px"
+ 1471:  define_field marginTop
+ 1476:  push_atom_value row
+ 1481:  define_field flexDirection
+ 1486:  push_atom_value "flex-start"
+ 1491:  define_field justifyContent
+ 1496:  define_field actions
+ 1501:  object
+ 1502:  push_atom_value "108px"
+ 1507:  define_field minWidth
+ 1512:  push_atom_value "38px"
+ 1517:  define_field height
+ 1522:  push_atom_value "8px"
+ 1527:  define_field borderRadius
+ 1532:  push_atom_value center
+ 1537:  define_field justifyContent
+ 1542:  push_atom_value center
+ 1547:  define_field alignItems
+ 1552:  push_0 0
+ 1553:  define_field paddingTop
+ 1558:  push_atom_value "12px"
+ 1563:  define_field paddingRight
+ 1568:  push_0 0
+ 1569:  define_field paddingBottom
+ 1574:  push_atom_value "12px"
+ 1579:  define_field paddingLeft
+ 1584:  push_atom_value "8px"
+ 1589:  define_field marginRight
+ 1594:  define_field btn
+ 1599:  object
+ 1600:  push_atom_value "#2563eb"
+ 1605:  define_field backgroundColor
+ 1610:  define_field "btn-primary"
+ 1615:  object
+ 1616:  push_atom_value "#334155"
+ 1621:  define_field backgroundColor
+ 1626:  define_field "btn-secondary"
+ 1631:  object
+ 1632:  push_atom_value "#d97706"
+ 1637:  define_field backgroundColor
+ 1642:  define_field "btn-reinstall"
+ 1647:  object
+ 1648:  push_atom_value "#b42318"
+ 1653:  define_field backgroundColor
+ 1658:  define_field "btn-danger"
+ 1663:  object
+ 1664:  push_atom_value "#ffffff"
+ 1669:  define_field color
+ 1674:  push_atom_value "15px"
+ 1679:  define_field fontSize
+ 1684:  push_atom_value bold
+ 1689:  define_field fontWeight
+ 1694:  define_field "btn-text"
+ 1699:  object
+ 1700:  push_const8 23: 0.65
+ 1702:  define_field opacity
+ 1707:  define_field "btn-press"
+ 1712:  object
+ 1713:  push_const8 24: 0.65
+ 1715:  define_field opacity
+ 1720:  define_field "btn-primary-press"
+ 1725:  object
+ 1726:  push_const8 25: 0.65
+ 1728:  define_field opacity
+ 1733:  define_field "btn-reinstall-press"
+ 1738:  object
+ 1739:  push_const8 26: 0.65
+ 1741:  define_field opacity
+ 1746:  define_field "btn-secondary-press"
+ 1751:  object
+ 1752:  push_const8 27: 0.65
+ 1754:  define_field opacity
+ 1759:  define_field "btn-danger-press"
+ 1764:  object
+ 1765:  push_atom_value "#e1e7f5"
+ 1770:  define_field backgroundColor
+ 1775:  define_field "page-scroll-l"
+ 1780:  object
+ 1781:  push_atom_value "#e2e8f3"
+ 1786:  define_field backgroundColor
+ 1791:  define_field "card-l"
+ 1796:  object
+ 1797:  push_atom_value "#1c1c1e"
+ 1802:  define_field color
+ 1807:  define_field "title-l"
+ 1812:  object
+ 1813:  push_atom_value "#07090d"
+ 1818:  define_field color
+ 1823:  define_field "status-l"
+ 1828:  object
+ 1829:  push_atom_value "#b9c5df"
+ 1834:  define_field backgroundColor
+ 1839:  define_field "progress-track-l"
+ 1844:  object
+ 1845:  push_atom_value "#007aff"
+ 1850:  define_field backgroundColor
+ 1855:  define_field "progress-fill-l"
+ 1860:  object
+ 1861:  push_atom_value "#06090f"
+ 1866:  define_field color
+ 1871:  define_field "progress-text-l"
+ 1876:  object
+ 1877:  push_atom_value "#f6ece0"
+ 1882:  define_field backgroundColor
+ 1887:  define_field "warn-box-l"
+ 1892:  object
+ 1893:  push_atom_value "#140e00"
+ 1898:  define_field color
+ 1903:  define_field "warn-title-l"
+ 1908:  object
+ 1909:  push_atom_value "#140e00"
+ 1914:  define_field color
+ 1919:  define_field "warn-text-l"
+ 1924:  object
+ 1925:  push_atom_value "#e2e7f4"
+ 1930:  define_field backgroundColor
+ 1935:  define_field "log-box-l"
+ 1940:  object
+ 1941:  push_atom_value "#041108"
+ 1946:  define_field color
+ 1951:  define_field "log-line-l"
+ 1956:  object
+ 1957:  push_atom_value "#020713"
+ 1962:  define_field backgroundColor
+ 1967:  define_field "btn-primary-l"
+ 1972:  object
+ 1973:  push_atom_value "#bfcad9"
+ 1978:  define_field backgroundColor
+ 1983:  define_field "btn-secondary-l"
+ 1988:  object
+ 1989:  push_atom_value "#f5a03d"
+ 1994:  define_field backgroundColor
+ 1999:  define_field "btn-reinstall-l"
+ 2004:  object
+ 2005:  push_atom_value "#e7564b"
+ 2010:  define_field backgroundColor
+ 2015:  define_field "btn-danger-l"
+ 2020:  object
+ 2021:  push_atom_value "#1c1c1e"
+ 2026:  define_field color
+ 2031:  define_field "btn-text-l"
+ 2036:  call_method 2
+ 2039:  put_field style
+ 2044:  get_var_ref_check 11: d
+ 2047:  push_atom_value "src/pages/apps/webui/webui.vue"
+ 2052:  put_field __file
+ 2057:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  stack_size: 2
+  opcodes:
+    0:  object
+    1:  null
+    2:  define_field bridge
+    7:  null
+    8:  define_field Shell
+   13:  null
+   14:  define_field Fetch
+   19:  push_1 1
+   20:  lnot
+   21:  define_field busy
+   26:  push_1 1
+   27:  lnot
+   28:  define_field cleaning
+   33:  push_1 1
+   34:  lnot
+   35:  define_field reinstalling
+   40:  push_atom_value "\u00e5\u0087\u0086\u00e5\u00a4\u0087\u00e6\u00a3\u0080\u00e6\u009f\u00a5\u00e6\u00b5\u008f\u00e8\u00a7\u0088\u00e5\u0099\u00a8\u00e8\u00bf\u0090\u00e8\u00a1\u008c\u00e7\u008e\u00af\u00e5\u00a2\u0083..."
+   45:  define_field statusText
+   50:  push_0 0
+   51:  define_field progress
+   56:  array_from 0
+   59:  define_field logs
+   64:  array_from 0
+   67:  define_field hostWarnings
+   72:  null
+   73:  define_field downloadHandle
+   78:  null
+   79:  define_field downloadPollTimer
+   84:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 initBridge
+    8:  call_method 0
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field2 startBootstrap
+   18:  push_1 1
+   19:  lnot
+   20:  call_method 1
+   23:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 stopDownloadPoll
+    8:  call_method 0
+   11:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: catch t [level:3 next:-1]
+  stack_size: 4
+  opcodes:
+    0:  catch 68
+    5:  push_atom_value undefined
+   10:  get_var_undef $falcon
+   15:  typeof
+   16:  neq
+   17:  dup
+   18:  if_false8 65
+   20:  drop
+   21:  get_var $falcon
+   26:  dup
+   27:  if_false8 65
+   29:  drop
+   30:  push_atom_value function
+   35:  get_var $falcon
+   40:  get_field toast
+   45:  typeof
+   46:  eq
+   47:  dup
+   48:  if_false8 65
+   50:  drop
+   51:  get_var $falcon
+   56:  get_field2 toast
+   61:  get_arg0 0: t
+   62:  call_method 1
+   65:  drop
+   66:  drop
+   67:  return_undef
+   68:  put_loc0 0: t
+   69:  catch 76
+   74:  drop
+   75:  return_undef
+   76:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:1 next:-1]
+    1: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  set_loc_uninitialized 0: e
+    5:  push_atom_value "["
+   10:  get_field2 concat
+   15:  fclosure8 0: [bytecode <null>]
+   17:  call0 0
+   18:  push_atom_value "] "
+   23:  get_arg0 0: t
+   24:  call_method 3
+   27:  put_loc0 0: e
+   28:  get_loc1 1: this
+   29:  get_field logs
+   34:  get_field2 push
+   39:  get_loc_check 0: e
+   42:  call_method 1
+   45:  drop
+   46:  get_loc1 1: this
+   47:  get_field logs
+   52:  get_length
+   53:  push_i8 80
+   55:  gt
+   56:  dup
+   57:  if_false8 91
+   59:  drop
+   60:  get_loc1 1: this
+   61:  get_loc1 1: this
+   62:  get_field logs
+   67:  get_field2 slice
+   72:  get_loc1 1: this
+   73:  get_field logs
+   78:  get_length
+   79:  push_i8 80
+   81:  sub
+   82:  call_method 1
+   85:  insert2
+   86:  put_field logs
+   91:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+  stack_size: 10
+  opcodes:
+    0:  set_loc_uninitialized 0: t
+    3:  get_var Date
+    8:  dup
+    9:  call_constructor 0
+   12:  put_loc0 0: t
+   13:  push_empty_string
+   14:  get_field2 concat
+   19:  push_empty_string
+   20:  get_field2 concat
+   25:  get_loc_check 0: t
+   28:  get_field2 getHours
+   33:  call_method 0
+   36:  call_method 1
+   39:  get_field2 padStart
+   44:  push_2 2
+   45:  push_const8 0: 1"0"
+   47:  call_method 2
+   50:  push_atom_value ":"
+   55:  push_empty_string
+   56:  get_field2 concat
+   61:  get_loc_check 0: t
+   64:  get_field2 getMinutes
+   69:  call_method 0
+   72:  call_method 1
+   75:  get_field2 padStart
+   80:  push_2 2
+   81:  push_const8 1: 1"0"
+   83:  call_method 2
+   86:  push_atom_value ":"
+   91:  push_empty_string
+   92:  get_field2 concat
+   97:  get_loc_check 0: t
+  100:  get_field2 getSeconds
+  105:  call_method 0
+  108:  call_method 1
+  111:  get_field2 padStart
+  116:  push_2 2
+  117:  push_const8 2: 1"0"
+  119:  call_method 2
+  122:  tail_call_method 5
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  locals:
+    0: let e [level:2 next:-1]
+    1: catch t [level:4 next:0]
+    2: catch t [level:7 next:-1]
+    3: var this
+  closure vars:
+    0: t parent:loc0 const
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  catch 186
+    7:  set_loc_uninitialized 0: e
+   10:  null
+   11:  put_loc0 0: e
+   12:  catch 28
+   17:  get_var_ref_check 0: t
+   20:  dup
+   21:  put_loc_check 0: e
+   24:  drop
+   25:  drop
+   26:  goto8 38
+   28:  put_loc1 1: t
+   29:  catch 37
+   34:  drop
+   35:  goto8 38
+   37:  throw
+   38:  get_loc_check 0: e
+   41:  dup
+   42:  if_true8 70
+   44:  drop
+   45:  push_atom_value undefined
+   50:  get_var_undef bridge
+   55:  typeof
+   56:  eq
+   57:  dup
+   58:  if_true8 70
+   60:  drop
+   61:  get_var bridge
+   66:  dup
+   67:  put_loc_check 0: e
+   70:  drop
+   71:  get_loc_check 0: e
+   74:  lnot
+   75:  if_false8 79
+   77:  drop
+   78:  return_undef
+   79:  get_loc3 3: this
+   80:  get_loc_check 0: e
+   83:  put_field bridge
+   88:  get_loc3 3: this
+   89:  get_loc_check 0: e
+   92:  get_field Shell
+   97:  dup
+   98:  if_true8 131
+  100:  drop
+  101:  get_loc_check 0: e
+  104:  get_field default
+  109:  dup
+  110:  if_false8 126
+  112:  drop
+  113:  get_loc_check 0: e
+  116:  get_field default
+  121:  get_field Shell
+  126:  dup
+  127:  if_true8 131
+  129:  drop
+  130:  null
+  131:  put_field Shell
+  136:  get_loc3 3: this
+  137:  get_loc_check 0: e
+  140:  get_field Fetch
+  145:  dup
+  146:  if_true8 179
+  148:  drop
+  149:  get_loc_check 0: e
+  152:  get_field default
+  157:  dup
+  158:  if_false8 174
+  160:  drop
+  161:  get_loc_check 0: e
+  164:  get_field default
+  169:  get_field Fetch
+  174:  dup
+  175:  if_true8 179
+  177:  drop
+  178:  null
+  179:  put_field Fetch
+  184:  drop
+  185:  return_undef
+  186:  put_loc2 2: t
+  187:  catch 218
+  192:  get_loc3 3: this
+  193:  get_field2 log
+  198:  push_atom_value "bridge \u00e5\u0088\u009d\u00e5\u00a7\u008b\u00e5\u008c\u0096\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5: "
+  203:  get_field2 concat
+  208:  get_loc2 2: t
+  209:  call_method 1
+  212:  call_method 1
+  215:  drop
+  216:  drop
+  217:  return_undef
+  218:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  null
+    1:  get_arg0 0: t
+    2:  eq
+    3:  if_false8 7
+    5:  push_empty_string
+    6:  return
+    7:  push_atom_value object
+   12:  get_arg0 0: t
+   13:  typeof
+   14:  eq
+   15:  if_false8 65
+   17:  null
+   18:  get_arg0 0: t
+   19:  get_field output
+   24:  neq
+   25:  if_false8 41
+   27:  get_var String
+   32:  get_arg0 0: t
+   33:  get_field output
+   38:  tail_call 1
+   41:  null
+   42:  get_arg0 0: t
+   43:  get_field message
+   48:  neq
+   49:  if_false8 65
+   51:  get_var String
+   56:  get_arg0 0: t
+   57:  get_field message
+   62:  tail_call 1
+   65:  get_var String
+   70:  get_arg0 0: t
+   71:  tail_call 1
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field Shell
+    8:  lnot
+    9:  dup
+   10:  if_true8 31
+   12:  drop
+   13:  push_atom_value function
+   18:  get_loc0 0: this
+   19:  get_field Shell
+   24:  get_field exec
+   29:  typeof
+   30:  neq
+   31:  if_false8 48
+   33:  get_var Error
+   38:  dup
+   39:  push_atom_value "Shell.exec \u00e4\u00b8\u008d\u00e5\u008f\u00af\u00e7\u0094\u00a8"
+   44:  call_constructor 1
+   47:  throw
+   48:  get_loc0 0: this
+   49:  get_field Shell
+   54:  get_field2 exec
+   59:  get_arg0 0: t
+   60:  tail_call_method 1
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:1 next:-1]
+    1: let s [level:1 next:0]
+    2: const o [level:1 next:1]
+    3: const t [level:3 next:2]
+    4: catch t [level:6 next:2]
+    5: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc8 5: this
+    3:  set_loc_uninitialized 2: o
+    6:  set_loc_uninitialized 1: s
+    9:  set_loc_uninitialized 0: e
+   12:  get_loc8 5: this
+   14:  get_field Shell
+   19:  lnot
+   20:  if_false8 37
+   22:  get_var Error
+   27:  dup
+   28:  push_atom_value "bridge.Shell \u00e4\u00b8\u008d\u00e5\u008f\u00af\u00e7\u0094\u00a8"
+   33:  call_constructor 1
+   36:  throw
+   37:  get_arg0 0: t
+   38:  dup
+   39:  if_true8 47
+   41:  drop
+   42:  push_atom_value manual
+   47:  put_loc0 0: e
+   48:  push_0 0
+   49:  put_loc1 1: s
+   50:  fclosure8 0: [bytecode <null>]
+   52:  set_name o
+   57:  put_loc2 2: o
+   58:  get_loc_check 2: o
+   61:  push_atom_value "pkill -9 WPEWebProcess 2>/dev/null || true"
+   66:  call1 1
+   67:  drop
+   68:  get_loc_check 2: o
+   71:  push_atom_value "pkill -9 WPENetworkProcess 2>/dev/null || true"
+   76:  call1 1
+   77:  drop
+   78:  catch 198
+   83:  set_loc_uninitialized 3: t
+   86:  push_atom_value "sh -c 'for f in /proc/*/comm; do n=$(cat \"$f\" 2>/dev/null); case \"$n\" in WPEWebProcess|WPENetworkProcess) echo 1;; esac; done'"
+   91:  put_loc3 3: t
+   92:  get_loc8 5: this
+   94:  get_field2 shellOutput
+   99:  get_loc8 5: this
+  101:  get_field2 execShell
+  106:  get_loc_check 3: t
+  109:  call_method 1
+  112:  call_method 1
+  115:  get_field2 trim
+  120:  call_method 0
+  123:  if_false8 189
+  125:  get_loc_check 2: o
+  128:  push_atom_value "killall -9 WPEWebProcess 2>/dev/null || true"
+  133:  call1 1
+  134:  drop
+  135:  get_loc_check 2: o
+  138:  push_atom_value "killall -9 WPENetworkProcess 2>/dev/null || true"
+  143:  call1 1
+  144:  drop
+  145:  get_loc8 5: this
+  147:  get_field2 shellOutput
+  152:  get_loc8 5: this
+  154:  get_field2 execShell
+  159:  get_loc_check 3: t
+  162:  call_method 1
+  165:  call_method 1
+  168:  get_field2 trim
+  173:  call_method 0
+  176:  if_false8 181
+  178:  push_0 0
+  179:  goto8 182
+  181:  push_1 1
+  182:  dup
+  183:  put_loc_check 1: s
+  186:  drop
+  187:  goto8 195
+  189:  push_1 1
+  190:  dup
+  191:  put_loc_check 1: s
+  194:  drop
+  195:  drop
+  196:  goto8 215
+  198:  put_loc8 4: t
+  200:  catch 214
+  205:  push_1 1
+  206:  dup
+  207:  put_loc_check 1: s
+  210:  drop
+  211:  drop
+  212:  goto8 215
+  214:  throw
+  215:  get_loc_check 1: s
+  218:  if_false8 253
+  220:  get_loc8 5: this
+  222:  get_field2 log
+  227:  push_atom_value "\u00e5\u00b7\u00b2\u00e6\u00b8\u0085\u00e7\u0090\u0086\u00e6\u00b5\u008f\u00e8\u00a7\u0088\u00e5\u0099\u00a8\u00e6\u00ae\u008b\u00e7\u0095\u0099\u00e8\u00bf\u009b\u00e7\u00a8\u008b("
+  232:  get_field2 concat
+  237:  get_loc_check 0: e
+  240:  push_atom_value ")"
+  245:  call_method 2
+  248:  call_method 1
+  251:  goto8 284
+  253:  get_loc8 5: this
+  255:  get_field2 log
+  260:  push_atom_value "\u00e6\u009c\u00aa\u00e5\u008f\u0091\u00e7\u008e\u00b0\u00e6\u00b5\u008f\u00e8\u00a7\u0088\u00e5\u0099\u00a8\u00e6\u00ae\u008b\u00e7\u0095\u0099\u00e8\u00bf\u009b\u00e7\u00a8\u008b("
+  265:  get_field2 concat
+  270:  get_loc_check 0: e
+  273:  push_atom_value ")"
+  278:  call_method 2
+  281:  call_method 1
+  284:  drop
+  285:  get_loc_check 1: s
+  288:  if_false8 299
+  290:  push_atom_value cleaned
+  295:  array_from 1
+  298:  return
+  299:  array_from 0
+  302:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: catch t [level:3 next:-1]
+  closure vars:
+    0: this local:loc5 var
+  stack_size: 4
+  opcodes:
+    0:  catch 18
+    5:  get_var_ref0 0: this
+    6:  get_field2 execShell
+   11:  get_arg0 0: t
+   12:  call_method 1
+   15:  drop
+   16:  drop
+   17:  return_undef
+   18:  put_loc0 0: t
+   19:  catch 26
+   24:  drop
+   25:  return_undef
+   26:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: const s [level:2 next:-1]
+    1: catch t [level:3 next:-1]
+    2: var this
+  stack_size: 8
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  catch 99
+    7:  set_loc_uninitialized 0: s
+   10:  push_atom_value "sh -c \"test -"
+   15:  get_field2 concat
+   20:  push_atom_value d
+   25:  get_arg1 1: e
+   26:  strict_eq
+   27:  if_false8 36
+   29:  push_atom_value d
+   34:  goto8 41
+   36:  push_atom_value f
+   41:  push_atom_value " \\\""
+   46:  get_loc2 2: this
+   47:  get_field2 escapeShellDoubleQuoted
+   52:  get_arg0 0: t
+   53:  call_method 1
+   56:  push_atom_value "\\\" && echo 1 || echo 0\""
+   61:  call_method 4
+   64:  put_loc0 0: s
+   65:  push_const8 0: 1"1"
+   67:  get_loc2 2: this
+   68:  get_field2 shellOutput
+   73:  get_loc2 2: this
+   74:  get_field2 execShell
+   79:  get_loc_check 0: s
+   82:  call_method 1
+   85:  call_method 1
+   88:  get_field2 trim
+   93:  call_method 0
+   96:  strict_eq
+   97:  nip
+   98:  return
+   99:  put_loc1 1: t
+  100:  catch 109
+  105:  push_1 1
+  106:  lnot
+  107:  nip
+  108:  return
+  109:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+    1: let e [level:2 next:0]
+    2: const s [level:3 next:1]
+    3: var this
+  closure vars:
+    0: n parent:loc8 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  set_loc_uninitialized 0: t
+    5:  array_from 0
+    8:  put_loc0 0: t
+    9:  set_loc_uninitialized 1: e
+   12:  push_0 0
+   13:  put_loc1 1: e
+   14:  get_loc_check 1: e
+   17:  get_var_ref_check 0: n
+   20:  get_length
+   21:  lt
+   22:  if_false8 96
+   24:  set_loc_uninitialized 2: s
+   27:  get_var_ref_check 0: n
+   30:  get_loc_check 1: e
+   33:  get_array_el
+   34:  put_loc2 2: s
+   35:  get_loc3 3: this
+   36:  get_field2 pathExists
+   41:  get_loc_check 2: s
+   44:  get_field path
+   49:  get_loc_check 2: s
+   52:  get_field kind
+   57:  call_method 2
+   60:  dup
+   61:  if_true8 83
+   63:  drop
+   64:  get_loc_check 0: t
+   67:  get_field2 push
+   72:  get_loc_check 2: s
+   75:  get_field label
+   80:  call_method 1
+   83:  drop
+   84:  get_loc_check 1: e
+   87:  push_1 1
+   88:  add
+   89:  dup
+   90:  put_loc_check 1: e
+   93:  drop
+   94:  goto8 14
+   96:  get_loc3 3: this
+   97:  get_loc_check 0: t
+  100:  put_field hostWarnings
+  105:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+    1: let e [level:2 next:0]
+    2: const s [level:3 next:1]
+    3: var this
+  closure vars:
+    0: a parent:loc7 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  set_loc_uninitialized 0: t
+    5:  array_from 0
+    8:  put_loc0 0: t
+    9:  set_loc_uninitialized 1: e
+   12:  push_0 0
+   13:  put_loc1 1: e
+   14:  get_loc_check 1: e
+   17:  get_var_ref_check 0: a
+   20:  get_length
+   21:  lt
+   22:  if_false8 91
+   24:  set_loc_uninitialized 2: s
+   27:  get_var_ref_check 0: a
+   30:  get_loc_check 1: e
+   33:  get_array_el
+   34:  put_loc2 2: s
+   35:  get_loc3 3: this
+   36:  get_field2 pathExists
+   41:  get_loc_check 2: s
+   44:  get_field path
+   49:  get_loc_check 2: s
+   52:  get_field kind
+   57:  call_method 2
+   60:  dup
+   61:  if_true8 78
+   63:  drop
+   64:  get_loc_check 0: t
+   67:  get_field2 push
+   72:  get_loc_check 2: s
+   75:  call_method 1
+   78:  drop
+   79:  get_loc_check 1: e
+   82:  push_1 1
+   83:  add
+   84:  dup
+   85:  put_loc_check 1: e
+   88:  drop
+   89:  goto8 14
+   91:  object
+   92:  push_0 0
+   93:  get_loc_check 0: t
+   96:  get_length
+   97:  strict_eq
+   98:  define_field ok
+  103:  get_loc_check 0: t
+  106:  define_field missing
+  111:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: l parent:loc4 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 pathExists
+    8:  get_var_ref_check 0: l
+   11:  push_atom_value f
+   16:  tail_call_method 2
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: const e [level:4 next:-1]
+    1: let t [level:9 next:2]
+    2: const s [level:4 next:0]
+    3: const t [level:11 next:2]
+    4: catch t [level:12 next:-1]
+    5: var this
+  closure vars:
+    0: l parent:loc4 const
+  stack_size: 9
+  opcodes:
+    0:  push_this
+    1:  put_loc8 5: this
+    3:  get_loc8 5: this
+    5:  get_field busy
+   10:  lnot
+   11:  if_false 714
+   16:  get_loc8 5: this
+   18:  push_0 0
+   19:  lnot
+   20:  put_field busy
+   25:  get_loc8 5: this
+   27:  push_5 5
+   28:  put_field progress
+   33:  catch 603
+   38:  set_loc_uninitialized 2: s
+   41:  set_loc_uninitialized 0: e
+   44:  get_loc8 5: this
+   46:  get_field Shell
+   51:  lnot
+   52:  if_false8 69
+   54:  get_var Error
+   59:  dup
+   60:  push_atom_value "bridge.Shell \u00e4\u00b8\u008d\u00e5\u008f\u00af\u00e7\u0094\u00a8"
+   65:  call_constructor 1
+   68:  throw
+   69:  get_loc8 5: this
+   71:  get_field2 collectHostWarnings
+   76:  call_method 0
+   79:  drop
+   80:  get_loc8 5: this
+   82:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e6\u00a3\u0080\u00e6\u009f\u00a5\u00e6\u00b5\u008f\u00e8\u00a7\u0088\u00e5\u0099\u00a8\u00e6\u0096\u0087\u00e4\u00bb\u00b6..."
+   87:  put_field statusText
+   92:  get_loc8 5: this
+   94:  get_field2 checkBundle
+   99:  call_method 0
+  102:  put_loc0 0: e
+  103:  get_loc_check 0: e
+  106:  get_field ok
+  111:  if_false8 173
+  113:  get_arg0 0: t
+  114:  lnot
+  115:  if_false8 173
+  117:  get_loc8 5: this
+  119:  push_i8 100
+  121:  put_field progress
+  126:  get_loc8 5: this
+  128:  push_atom_value "\u00e7\u008e\u00af\u00e5\u00a2\u0083\u00e5\u00b7\u00b2\u00e5\u00b0\u00b1\u00e7\u00bb\u00aa\u00ef\u00bc\u008c\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e6\u0089\u0093\u00e5\u00bc\u0080\u00e6\u00b5\u008f\u00e8\u00a7\u0088\u00e5\u0099\u00a8..."
+  133:  put_field statusText
+  138:  get_loc8 5: this
+  140:  get_field2 log
+  145:  push_atom_value "\u00e6\u00a3\u0080\u00e6\u00b5\u008b\u00e5\u0088\u00b0 WebUI \u00e8\u00bf\u0090\u00e8\u00a1\u008c\u00e6\u0097\u00b6\u00e5\u00ae\u008c\u00e6\u0095\u00b4"
+  150:  call_method 1
+  153:  drop
+  154:  get_loc8 5: this
+  156:  get_field2 openBrowser
+  161:  call_method 0
+  164:  drop
+  165:  undefined
+  166:  nip
+  167:  gosub 704
+  172:  return_async
+  173:  get_loc_check 0: e
+  176:  get_field missing
+  181:  get_length
+  182:  if_false 320
+  187:  get_loc8 5: this
+  189:  get_field2 log
+  194:  push_atom_value "\u00e7\u00bc\u00ba\u00e5\u00b0\u0091 "
+  199:  get_field2 concat
+  204:  get_loc_check 0: e
+  207:  get_field missing
+  212:  get_length
+  213:  push_atom_value " \u00e9\u00a1\u00b9\u00e6\u0096\u0087\u00e4\u00bb\u00b6\u00ef\u00bc\u008c\u00e5\u00bc\u0080\u00e5\u00a7\u008b\u00e5\u00ae\u0089\u00e8\u00a3\u0085"
+  218:  call_method 2
+  221:  call_method 1
+  224:  drop
+  225:  set_loc_uninitialized 1: t
+  228:  push_0 0
+  229:  put_loc1 1: t
+  230:  get_loc_check 1: t
+  233:  get_loc_check 0: e
+  236:  get_field missing
+  241:  get_length
+  242:  lt
+  243:  if_false8 336
+  245:  get_loc8 5: this
+  247:  get_field2 log
+  252:  push_atom_value "\u00e7\u00bc\u00ba\u00e5\u00a4\u00b1: "
+  257:  get_field2 concat
+  262:  get_loc_check 0: e
+  265:  get_field missing
+  270:  get_loc_check 1: t
+  273:  get_array_el
+  274:  get_field label
+  279:  push_atom_value " -> "
+  284:  get_loc_check 0: e
+  287:  get_field missing
+  292:  get_loc_check 1: t
+  295:  get_array_el
+  296:  get_field path
+  301:  call_method 3
+  304:  call_method 1
+  307:  drop
+  308:  get_loc_check 1: t
+  311:  push_1 1
+  312:  add
+  313:  dup
+  314:  put_loc_check 1: t
+  317:  drop
+  318:  goto8 230
+  320:  get_loc8 5: this
+  322:  get_field2 log
+  327:  push_atom_value "\u00e6\u0094\u00b6\u00e5\u0088\u00b0\u00e6\u0089\u008b\u00e5\u008a\u00a8\u00e9\u0087\u008d\u00e8\u00af\u0095\u00ef\u00bc\u008c\u00e5\u0087\u0086\u00e5\u00a4\u0087\u00e9\u0087\u008d\u00e6\u0096\u00b0\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e5\u00ae\u0089\u00e8\u00a3\u0085"
+  332:  call_method 1
+  335:  drop
+  336:  get_loc8 5: this
+  338:  get_field2 hasDownloadedArchive
+  343:  call_method 0
+  346:  if_false8 401
+  348:  get_arg0 0: t
+  349:  lnot
+  350:  if_false8 401
+  352:  get_loc8 5: this
+  354:  push_i8 72
+  356:  put_field progress
+  361:  get_loc8 5: this
+  363:  push_atom_value "\u00e6\u00a3\u0080\u00e6\u00b5\u008b\u00e5\u0088\u00b0\u00e5\u00b7\u00b2\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e7\u009a\u0084\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u008c\u0085\u00ef\u00bc\u008c\u00e8\u00b7\u00b3\u00e8\u00bf\u0087\u00e4\u00b8\u008b\u00e8\u00bd\u00bd..."
+  368:  put_field statusText
+  373:  get_loc8 5: this
+  375:  get_field2 log
+  380:  push_atom_value "\u00e6\u00a3\u0080\u00e6\u00b5\u008b\u00e5\u0088\u00b0\u00e5\u00b7\u00b2\u00e6\u009c\u0089\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u008c\u0085: "
+  385:  get_field2 concat
+  390:  get_var_ref_check 0: l
+  393:  call_method 1
+  396:  call_method 1
+  399:  goto8 412
+  401:  get_loc8 5: this
+  403:  get_field2 downloadArchive
+  408:  call_method 0
+  411:  await
+  412:  drop
+  413:  get_loc8 5: this
+  415:  get_field2 installArchive
+  420:  call_method 0
+  423:  await
+  424:  drop
+  425:  get_loc8 5: this
+  427:  push_i8 95
+  429:  put_field progress
+  434:  get_loc8 5: this
+  436:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e9\u00aa\u008c\u00e8\u00af\u0081\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e7\u00bb\u0093\u00e6\u009e\u009c..."
+  441:  put_field statusText
+  446:  get_loc8 5: this
+  448:  get_field2 checkBundle
+  453:  call_method 0
+  456:  put_loc2 2: s
+  457:  get_loc_check 2: s
+  460:  get_field ok
+  465:  lnot
+  466:  if_false8 529
+  468:  set_loc_uninitialized 3: t
+  471:  get_loc_check 2: s
+  474:  get_field missing
+  479:  get_field2 map
+  484:  fclosure8 0: [bytecode <null>]
+  486:  call_method 1
+  489:  get_field2 join
+  494:  push_atom_value "\u00e3\u0080\u0081"
+  499:  call_method 1
+  502:  put_loc3 3: t
+  503:  get_var Error
+  508:  dup
+  509:  push_atom_value "\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u0090\u008e\u00e4\u00bb\u008d\u00e7\u00bc\u00ba\u00e5\u00b0\u0091\u00e6\u0096\u0087\u00e4\u00bb\u00b6: "
+  514:  get_field2 concat
+  519:  get_loc_check 3: t
+  522:  call_method 1
+  525:  call_constructor 1
+  528:  throw
+  529:  get_loc8 5: this
+  531:  push_i8 100
+  533:  put_field progress
+  538:  get_loc8 5: this
+  540:  push_atom_value "\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u00ae\u008c\u00e6\u0088\u0090\u00ef\u00bc\u008c\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e6\u0089\u0093\u00e5\u00bc\u0080\u00e6\u00b5\u008f\u00e8\u00a7\u0088\u00e5\u0099\u00a8..."
+  545:  put_field statusText
+  550:  get_loc8 5: this
+  552:  get_field2 log
+  557:  push_atom_value "WebUI \u00e8\u00bf\u0090\u00e8\u00a1\u008c\u00e6\u0097\u00b6\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e6\u0088\u0090\u00e5\u008a\u009f"
+  562:  call_method 1
+  565:  drop
+  566:  get_loc8 5: this
+  568:  get_field2 toast
+  573:  push_atom_value "WebUI \u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u00ae\u008c\u00e6\u0088\u0090"
+  578:  call_method 1
+  581:  drop
+  582:  get_loc8 5: this
+  584:  get_field2 openBrowser
+  589:  call_method 0
+  592:  drop
+  593:  drop
+  594:  undefined
+  595:  gosub 704
+  600:  drop
+  601:  goto8 714
+  603:  put_loc8 4: t
+  605:  catch 698
+  610:  get_loc8 5: this
+  612:  push_atom_value "\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5: "
+  617:  get_field2 concat
+  622:  get_loc8 4: t
+  624:  if_false8 644
+  626:  get_loc8 4: t
+  628:  get_field message
+  633:  if_false8 644
+  635:  get_loc8 4: t
+  637:  get_field message
+  642:  goto8 646
+  644:  get_loc8 4: t
+  646:  call_method 1
+  649:  put_field statusText
+  654:  get_loc8 5: this
+  656:  get_field2 log
+  661:  get_loc8 5: this
+  663:  get_field statusText
+  668:  call_method 1
+  671:  drop
+  672:  get_loc8 5: this
+  674:  get_field2 toast
+  679:  push_atom_value "WebUI \u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  684:  call_method 1
+  687:  drop
+  688:  drop
+  689:  undefined
+  690:  gosub 704
+  695:  drop
+  696:  goto8 714
+  698:  gosub 704
+  703:  throw
+  704:  get_loc8 5: this
+  706:  push_1 1
+  707:  lnot
+  708:  put_field busy
+  713:  ret
+  714:  undefined
+  715:  return_async
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 1
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_field label
+    6:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:1 next:-1]
+    1: var this
+  closure vars:
+    0: o parent:loc3 const
+    1: l parent:loc4 const
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  set_loc_uninitialized 0: t
+    5:  get_loc1 1: this
+    6:  put_loc0 0: t
+    7:  get_var Promise
+   12:  dup
+   13:  fclosure8 0: [bytecode <null>]
+   15:  call_constructor 1
+   18:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  args: e s
+  locals:
+    0: let i [level:1 next:-1]
+    1: catch t [level:4 next:0]
+  closure vars:
+    0: t local:loc0 const
+    1: o parent:loc0 const
+    2: l parent:loc1 const
+  stack_size: 7
+  opcodes:
+    0:  set_loc_uninitialized 0: i
+    3:  get_var_ref_check 0: t
+    6:  push_i8 10
+    8:  put_field progress
+   13:  get_var_ref_check 0: t
+   16:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e4\u00b8\u008b\u00e8\u00bd\u00bd WebUI \u00e8\u00bf\u0090\u00e8\u00a1\u008c\u00e6\u0097\u00b6..."
+   21:  put_field statusText
+   26:  get_var_ref_check 0: t
+   29:  get_field2 log
+   34:  push_atom_value "\u00e5\u00bc\u0080\u00e5\u00a7\u008b\u00e4\u00b8\u008b\u00e8\u00bd\u00bd "
+   39:  get_field2 concat
+   44:  get_var_ref_check 1: o
+   47:  push_atom_value " (134MB)"
+   52:  call_method 2
+   55:  call_method 1
+   58:  drop
+   59:  get_var_ref_check 0: t
+   62:  get_field Fetch
+   67:  lnot
+   68:  dup
+   69:  if_true8 92
+   71:  drop
+   72:  push_atom_value function
+   77:  get_var_ref_check 0: t
+   80:  get_field Fetch
+   85:  get_field downloadFile
+   90:  typeof
+   91:  neq
+   92:  if_false8 112
+   94:  get_arg1 1: s
+   95:  get_var Error
+  100:  dup
+  101:  push_atom_value "Fetch.downloadFile \u00e4\u00b8\u008d\u00e5\u008f\u00af\u00e7\u0094\u00a8"
+  106:  call_constructor 1
+  109:  call1 1
+  110:  drop
+  111:  return_undef
+  112:  null
+  113:  put_loc0 0: i
+  114:  catch 158
+  119:  get_var_ref_check 0: t
+  122:  get_field Fetch
+  127:  get_field2 downloadFile
+  132:  get_var_ref_check 1: o
+  135:  get_var_ref_check 2: l
+  138:  object
+  139:  push_i16 1800
+  142:  define_field timeout
+  147:  call_method 3
+  150:  dup
+  151:  put_loc_check 0: i
+  154:  drop
+  155:  drop
+  156:  goto8 213
+  158:  put_loc1 1: t
+  159:  catch 212
+  164:  get_arg1 1: s
+  165:  get_var Error
+  170:  dup
+  171:  push_atom_value "downloadFile \u00e8\u00b0\u0083\u00e7\u0094\u00a8\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5: "
+  176:  get_field2 concat
+  181:  get_loc1 1: t
+  182:  if_false8 200
+  184:  get_loc1 1: t
+  185:  get_field message
+  190:  if_false8 200
+  192:  get_loc1 1: t
+  193:  get_field message
+  198:  goto8 201
+  200:  get_loc1 1: t
+  201:  call_method 1
+  204:  call_constructor 1
+  207:  call1 1
+  208:  drop
+  209:  undefined
+  210:  nip
+  211:  return
+  212:  throw
+  213:  get_loc_check 0: i
+  216:  if_false8 243
+  218:  get_var_ref_check 0: t
+  221:  get_loc_check 0: i
+  224:  put_field downloadHandle
+  229:  get_var_ref_check 0: t
+  232:  get_field2 startDownloadPoll
+  237:  get_arg0 0: e
+  238:  get_arg1 1: s
+  239:  call_method 2
+  242:  return_undef
+  243:  get_arg1 1: s
+  244:  get_var Error
+  249:  dup
+  250:  push_atom_value "downloadFile \u00e8\u00bf\u0094\u00e5\u009b\u009e\u00e7\u00a9\u00ba\u00e5\u008f\u00a5\u00e6\u009f\u0084"
+  255:  call_constructor 1
+  258:  call1 1
+  259:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: const s [level:1 next:-1]
+    1: var this
+  closure vars:
+    0: l parent:loc4 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  set_loc_uninitialized 0: s
+    5:  get_loc1 1: this
+    6:  put_loc0 0: s
+    7:  get_loc_check 0: s
+   10:  get_field downloadPollTimer
+   15:  dup
+   16:  if_false8 44
+   18:  drop
+   19:  get_var clearInterval
+   24:  get_loc_check 0: s
+   27:  get_field downloadPollTimer
+   32:  call1 1
+   33:  drop
+   34:  get_loc_check 0: s
+   37:  null
+   38:  insert2
+   39:  put_field downloadPollTimer
+   44:  drop
+   45:  get_loc_check 0: s
+   48:  get_field downloadHandle
+   53:  if_false8 76
+   55:  get_loc_check 0: s
+   58:  get_var setInterval
+   63:  fclosure8 0: [bytecode <null>]
+   65:  push_i16 150
+   68:  call2 2
+   69:  insert2
+   70:  put_field downloadPollTimer
+   75:  return_undef
+   76:  get_arg1 1: e
+   77:  get_var Error
+   82:  dup
+   83:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e5\u008f\u00a5\u00e6\u009f\u0084\u00e6\u0097\u00a0\u00e6\u0095\u0088"
+   88:  call_constructor 1
+   91:  call1 1
+   92:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const o [level:1 next:-1]
+    1: let i [level:1 next:0]
+    2: catch t [level:4 next:5]
+    3: catch t [level:8 next:2]
+    4: let r [level:1 next:1]
+    5: let a [level:1 next:4]
+    6: let t [level:10 next:5]
+    7: const e [level:11 next:6]
+    8: catch t [level:14 next:5]
+  closure vars:
+    0: s local:loc0 const
+    1: e local:arg1 var
+    2: l parent:loc0 const
+    3: t local:arg0 var
+  stack_size: 11
+  opcodes:
+    0:  set_loc_uninitialized 5: a
+    3:  set_loc_uninitialized 4: r
+    6:  set_loc_uninitialized 1: i
+    9:  set_loc_uninitialized 0: o
+   12:  get_var_ref_check 0: s
+   15:  get_field downloadHandle
+   20:  put_loc0 0: o
+   21:  get_loc_check 0: o
+   24:  lnot
+   25:  if_false8 57
+   27:  get_var_ref_check 0: s
+   30:  get_field2 stopDownloadPoll
+   35:  call_method 0
+   38:  drop
+   39:  get_var_ref1 1: e
+   40:  get_var Error
+   45:  dup
+   46:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e5\u008f\u00a5\u00e6\u009f\u0084\u00e4\u00b8\u00a2\u00e5\u00a4\u00b1"
+   51:  call_constructor 1
+   54:  call1 1
+   55:  drop
+   56:  return_undef
+   57:  array_from 0
+   60:  put_loc1 1: i
+   61:  catch 92
+   66:  get_loc_check 0: o
+   69:  get_field2 poll
+   74:  call_method 0
+   77:  dup
+   78:  if_true8 84
+   80:  drop
+   81:  array_from 0
+   84:  dup
+   85:  put_loc_check 1: i
+   88:  drop
+   89:  drop
+   90:  goto8 198
+   92:  put_loc2 2: t
+   93:  catch 197
+   98:  get_var_ref_check 0: s
+  101:  get_field2 stopDownloadPoll
+  106:  call_method 0
+  109:  drop
+  110:  catch 130
+  115:  get_loc_check 0: o
+  118:  get_field2 destroy
+  123:  call_method 0
+  126:  drop
+  127:  drop
+  128:  goto8 140
+  130:  put_loc3 3: t
+  131:  catch 139
+  136:  drop
+  137:  goto8 140
+  139:  throw
+  140:  get_var_ref_check 0: s
+  143:  null
+  144:  put_field downloadHandle
+  149:  get_var_ref1 1: e
+  150:  get_var Error
+  155:  dup
+  156:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e8\u00bd\u00ae\u00e8\u00af\u00a2\u00e5\u00bc\u0082\u00e5\u00b8\u00b8: "
+  161:  get_field2 concat
+  166:  get_loc2 2: t
+  167:  if_false8 185
+  169:  get_loc2 2: t
+  170:  get_field message
+  175:  if_false8 185
+  177:  get_loc2 2: t
+  178:  get_field message
+  183:  goto8 186
+  185:  get_loc2 2: t
+  186:  call_method 1
+  189:  call_constructor 1
+  192:  call1 1
+  193:  drop
+  194:  undefined
+  195:  nip
+  196:  return
+  197:  throw
+  198:  push_1 1
+  199:  lnot
+  200:  put_loc8 4: r
+  202:  null
+  203:  put_loc8 5: a
+  205:  set_loc_uninitialized 6: t
+  208:  push_0 0
+  209:  put_loc8 6: t
+  211:  get_loc_check 6: t
+  214:  get_loc_check 1: i
+  217:  get_length
+  218:  lt
+  219:  if_false 575
+  224:  set_loc_uninitialized 7: e
+  227:  get_loc_check 1: i
+  230:  get_loc_check 6: t
+  233:  get_array_el
+  234:  dup
+  235:  if_true8 239
+  237:  drop
+  238:  object
+  239:  put_loc8 7: e
+  241:  push_atom_value progress
+  246:  get_loc_check 7: e
+  249:  get_field type
+  254:  strict_eq
+  255:  if_false 482
+  260:  get_loc_check 7: e
+  263:  get_field total
+  268:  push_0 0
+  269:  gt
+  270:  if_false 430
+  275:  get_var_ref_check 0: s
+  278:  get_var Math
+  283:  get_field2 max
+  288:  push_i8 10
+  290:  get_var Math
+  295:  get_field2 min
+  300:  push_i8 70
+  302:  get_var Math
+  307:  get_field2 round
+  312:  get_loc_check 7: e
+  315:  get_field downloaded
+  320:  get_loc_check 7: e
+  323:  get_field total
+  328:  div
+  329:  push_i8 60
+  331:  mul
+  332:  call_method 1
+  335:  push_i8 10
+  337:  add
+  338:  call_method 2
+  341:  call_method 2
+  344:  put_field progress
+  349:  get_var_ref_check 0: s
+  352:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e4\u00b8\u00ad "
+  357:  get_field2 concat
+  362:  get_loc_check 7: e
+  365:  get_field downloaded
+  370:  push_i32 1048576
+  375:  div
+  376:  get_field2 toFixed
+  381:  push_1 1
+  382:  call_method 1
+  385:  push_atom_value "MB / "
+  390:  get_loc_check 7: e
+  393:  get_field total
+  398:  push_i32 1048576
+  403:  div
+  404:  get_field2 toFixed
+  409:  push_1 1
+  410:  call_method 1
+  413:  push_atom_value MB
+  418:  call_method 4
+  421:  insert2
+  422:  put_field statusText
+  427:  goto16 561
+  430:  get_var_ref_check 0: s
+  433:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e4\u00b8\u00ad "
+  438:  get_field2 concat
+  443:  get_loc_check 7: e
+  446:  get_field downloaded
+  451:  push_i32 1048576
+  456:  div
+  457:  get_field2 toFixed
+  462:  push_1 1
+  463:  call_method 1
+  466:  push_atom_value MB
+  471:  call_method 2
+  474:  insert2
+  475:  put_field statusText
+  480:  goto8 561
+  482:  push_atom_value done
+  487:  get_loc_check 7: e
+  490:  get_field type
+  495:  strict_eq
+  496:  if_false8 506
+  498:  push_0 0
+  499:  lnot
+  500:  dup
+  501:  put_loc_check 4: r
+  504:  goto8 561
+  506:  push_atom_value error
+  511:  get_loc_check 7: e
+  514:  get_field type
+  519:  strict_eq
+  520:  dup
+  521:  if_false8 561
+  523:  drop
+  524:  push_0 0
+  525:  lnot
+  526:  dup
+  527:  put_loc_check 4: r
+  530:  drop
+  531:  get_var Error
+  536:  dup
+  537:  get_loc_check 7: e
+  540:  get_field message
+  545:  dup
+  546:  if_true8 554
+  548:  drop
+  549:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  554:  call_constructor 1
+  557:  dup
+  558:  put_loc_check 5: a
+  561:  drop
+  562:  get_loc_check 6: t
+  565:  push_1 1
+  566:  add
+  567:  dup
+  568:  put_loc_check 6: t
+  571:  drop
+  572:  goto16 211
+  575:  get_loc_check 4: r
+  578:  lnot
+  579:  if_false8 622
+  581:  catch 611
+  586:  get_loc_check 0: o
+  589:  get_field2 isFinished
+  594:  call_method 0
+  597:  dup
+  598:  if_false8 607
+  600:  drop
+  601:  push_0 0
+  602:  lnot
+  603:  dup
+  604:  put_loc_check 4: r
+  607:  drop
+  608:  drop
+  609:  goto8 622
+  611:  put_loc8 8: t
+  613:  catch 621
+  618:  drop
+  619:  goto8 622
+  621:  throw
+  622:  get_loc_check 4: r
+  625:  dup
+  626:  if_false8 732
+  628:  drop
+  629:  get_var_ref_check 0: s
+  632:  get_field2 stopDownloadPoll
+  637:  call_method 0
+  640:  drop
+  641:  get_loc_check 5: a
+  644:  if_false8 652
+  646:  get_var_ref1 1: e
+  647:  get_loc_check 5: a
+  650:  call1 1
+  651:  return_undef
+  652:  get_var_ref_check 0: s
+  655:  get_field2 pathExists
+  660:  get_var_ref_check 2: l
+  663:  push_atom_value f
+  668:  call_method 2
+  671:  if_false8 716
+  673:  get_var_ref_check 0: s
+  676:  push_i8 70
+  678:  put_field progress
+  683:  get_var_ref_check 0: s
+  686:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e5\u00ae\u008c\u00e6\u0088\u0090\u00ef\u00bc\u008c\u00e5\u0087\u0086\u00e5\u00a4\u0087\u00e8\u00a7\u00a3\u00e5\u008e\u008b\u00e5\u00ae\u0089\u00e8\u00a3\u0085"
+  691:  put_field statusText
+  696:  get_var_ref_check 0: s
+  699:  get_field2 log
+  704:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e5\u00ae\u008c\u00e6\u0088\u0090\u00ef\u00bc\u008c\u00e5\u0087\u0086\u00e5\u00a4\u0087\u00e8\u00a7\u00a3\u00e5\u008e\u008b\u00e5\u00ae\u0089\u00e8\u00a3\u0085"
+  709:  call_method 1
+  712:  drop
+  713:  get_var_ref3 3: t
+  714:  call0 0
+  715:  return_undef
+  716:  get_var_ref1 1: e
+  717:  get_var Error
+  722:  dup
+  723:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u00bd\u00bd\u00e5\u00ae\u008c\u00e6\u0088\u0090\u00e4\u00bd\u0086\u00e6\u009c\u00aa\u00e6\u0089\u00be\u00e5\u0088\u00b0 a.tar"
+  728:  call_constructor 1
+  731:  call1 1
+  732:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:5 next:-1]
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field downloadPollTimer
+    8:  dup
+    9:  if_false8 33
+   11:  drop
+   12:  get_var clearInterval
+   17:  get_loc1 1: this
+   18:  get_field downloadPollTimer
+   23:  call1 1
+   24:  drop
+   25:  get_loc1 1: this
+   26:  null
+   27:  insert2
+   28:  put_field downloadPollTimer
+   33:  drop
+   34:  get_loc1 1: this
+   35:  get_field downloadHandle
+   40:  if_false8 82
+   42:  catch 65
+   47:  get_loc1 1: this
+   48:  get_field downloadHandle
+   53:  get_field2 destroy
+   58:  call_method 0
+   61:  drop
+   62:  drop
+   63:  goto8 75
+   65:  put_loc0 0: t
+   66:  catch 74
+   71:  drop
+   72:  goto8 75
+   74:  throw
+   75:  get_loc1 1: this
+   76:  null
+   77:  put_field downloadHandle
+   82:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: r parent:loc6 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 pathExists
+    8:  get_var_ref_check 0: r
+   11:  push_atom_value d
+   16:  tail_call_method 2
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:5 next:-1]
+    1: catch t [level:9 next:-1]
+    2: catch t [level:14 next:-1]
+    3: var this
+  closure vars:
+    0: r parent:loc6 const
+    1: i parent:loc5 const
+    2: l parent:loc4 const
+  stack_size: 12
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  push_i8 80
+    5:  put_field progress
+   10:  get_loc3 3: this
+   11:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e8\u00a7\u00a3\u00e5\u008e\u008b\u00e5\u00b9\u00b6\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e8\u00bf\u0090\u00e8\u00a1\u008c\u00e6\u0097\u00b6..."
+   16:  put_field statusText
+   21:  get_loc3 3: this
+   22:  get_field2 log
+   27:  push_atom_value "\u00e5\u00bc\u0080\u00e5\u00a7\u008b\u00e8\u00a7\u00a3\u00e5\u008e\u008b a.tar"
+   32:  call_method 1
+   35:  drop
+   36:  get_loc3 3: this
+   37:  get_field2 targetDirExists
+   42:  call_method 0
+   45:  if_false 197
+   50:  get_loc3 3: this
+   51:  get_field2 log
+   56:  push_atom_value "\u00e7\u009b\u00ae\u00e6\u00a0\u0087\u00e7\u009b\u00ae\u00e5\u00bd\u0095\u00e5\u00b7\u00b2\u00e5\u00ad\u0098\u00e5\u009c\u00a8: "
+   61:  get_field2 concat
+   66:  get_var_ref_check 0: r
+   69:  push_atom_value "\u00ef\u00bc\u008c\u00e5\u0085\u0088\u00e5\u0088\u00a0\u00e9\u0099\u00a4\u00e6\u0097\u00a7\u00e7\u0089\u0088\u00e6\u009c\u00ac"
+   74:  call_method 2
+   77:  call_method 1
+   80:  drop
+   81:  catch 144
+   86:  get_loc3 3: this
+   87:  get_field2 execShell
+   92:  push_atom_value "sh -c \"rm -rf \\\""
+   97:  get_field2 concat
+  102:  get_loc3 3: this
+  103:  get_field2 escapeShellDoubleQuoted
+  108:  get_var_ref_check 0: r
+  111:  call_method 1
+  114:  push_atom_value "\\\"\""
+  119:  call_method 2
+  122:  call_method 1
+  125:  drop
+  126:  get_loc3 3: this
+  127:  get_field2 log
+  132:  push_atom_value "\u00e6\u0097\u00a7\u00e7\u0089\u0088\u00e6\u009c\u00ac\u00e5\u00b7\u00b2\u00e5\u0088\u00a0\u00e9\u0099\u00a4"
+  137:  call_method 1
+  140:  drop
+  141:  drop
+  142:  goto8 197
+  144:  put_loc0 0: t
+  145:  catch 196
+  150:  get_loc3 3: this
+  151:  get_field2 log
+  156:  push_atom_value "\u00e5\u0088\u00a0\u00e9\u0099\u00a4\u00e6\u0097\u00a7\u00e7\u0089\u0088\u00e6\u009c\u00ac\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5: "
+  161:  get_field2 concat
+  166:  get_loc0 0: t
+  167:  if_false8 185
+  169:  get_loc0 0: t
+  170:  get_field message
+  175:  if_false8 185
+  177:  get_loc0 0: t
+  178:  get_field message
+  183:  goto8 186
+  185:  get_loc0 0: t
+  186:  call_method 1
+  189:  call_method 1
+  192:  drop
+  193:  drop
+  194:  goto8 197
+  196:  throw
+  197:  catch 279
+  202:  get_loc3 3: this
+  203:  get_field2 execShell
+  208:  push_atom_value "sh -c \"mkdir -p \\\""
+  213:  get_field2 concat
+  218:  get_loc3 3: this
+  219:  get_field2 escapeShellDoubleQuoted
+  224:  get_var_ref_check 1: i
+  227:  call_method 1
+  230:  push_atom_value "\\\" && gzip -dc \\\""
+  235:  get_loc3 3: this
+  236:  get_field2 escapeShellDoubleQuoted
+  241:  get_var_ref_check 2: l
+  244:  call_method 1
+  247:  push_atom_value "\\\" | tar -xvf - -C \\\""
+  252:  get_loc3 3: this
+  253:  get_field2 escapeShellDoubleQuoted
+  258:  get_var_ref_check 1: i
+  261:  call_method 1
+  264:  push_atom_value "\\\"\""
+  269:  call_method 6
+  272:  call_method 1
+  275:  drop
+  276:  drop
+  277:  goto8 329
+  279:  put_loc1 1: t
+  280:  catch 328
+  285:  get_var Error
+  290:  dup
+  291:  push_atom_value "\u00e8\u00a7\u00a3\u00e5\u008e\u008b\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5: "
+  296:  get_field2 concat
+  301:  get_loc1 1: t
+  302:  if_false8 320
+  304:  get_loc1 1: t
+  305:  get_field message
+  310:  if_false8 320
+  312:  get_loc1 1: t
+  313:  get_field message
+  318:  goto8 321
+  320:  get_loc1 1: t
+  321:  call_method 1
+  324:  call_constructor 1
+  327:  throw
+  328:  throw
+  329:  get_loc3 3: this
+  330:  get_field2 targetDirExists
+  335:  call_method 0
+  338:  lnot
+  339:  dup
+  340:  if_true8 375
+  342:  drop
+  343:  get_loc3 3: this
+  344:  get_field2 pathExists
+  349:  push_empty_string
+  350:  get_field2 concat
+  355:  get_var_ref_check 0: r
+  358:  push_atom_value "/opt/wpe-hostabi/lib/libWPEWebKit-1.1.so.0"
+  363:  call_method 2
+  366:  push_atom_value f
+  371:  call_method 2
+  374:  lnot
+  375:  if_false8 392
+  377:  get_var Error
+  382:  dup
+  383:  push_atom_value "\u00e8\u00a7\u00a3\u00e5\u008e\u008b\u00e5\u00ae\u008c\u00e6\u0088\u0090\u00e4\u00bd\u0086\u00e7\u009b\u00ae\u00e6\u00a0\u0087\u00e7\u009b\u00ae\u00e5\u00bd\u0095\u00e4\u00b8\u00ba\u00e7\u00a9\u00ba\u00e6\u0088\u0096\u00e7\u00bc\u00ba\u00e5\u00b0\u0091\u00e5\u0085\u00b3\u00e9\u0094\u00ae\u00e6\u0096\u0087\u00e4\u00bb\u00b6"
+  388:  call_constructor 1
+  391:  throw
+  392:  get_loc3 3: this
+  393:  push_i8 90
+  395:  put_field progress
+  400:  get_loc3 3: this
+  401:  get_field2 log
+  406:  push_atom_value "\u00e8\u00a7\u00a3\u00e5\u008e\u008b\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u00ae\u008c\u00e6\u0088\u0090"
+  411:  call_method 1
+  414:  drop
+  415:  catch 479
+  420:  get_loc3 3: this
+  421:  get_field2 execShell
+  426:  push_atom_value "sh -c \"chmod 755 \\\""
+  431:  get_field2 concat
+  436:  get_loc3 3: this
+  437:  get_field2 escapeShellDoubleQuoted
+  442:  get_var_ref_check 0: r
+  445:  call_method 1
+  448:  push_atom_value "/opt/wpe-hostabi/libexec/wpe-webkit-1.1/WPEWebProcess\\\" \\\""
+  453:  get_loc3 3: this
+  454:  get_field2 escapeShellDoubleQuoted
+  459:  get_var_ref_check 0: r
+  462:  call_method 1
+  465:  push_atom_value "/opt/wpe-hostabi/libexec/wpe-webkit-1.1/WPENetworkProcess\\\" 2>/dev/null || true\""
+  470:  call_method 4
+  473:  call_method 1
+  476:  drop
+  477:  drop
+  478:  return_undef
+  479:  put_loc2 2: t
+  480:  catch 487
+  485:  drop
+  486:  return_undef
+  487:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:6 next:-1]
+    1: catch t [level:10 next:-1]
+    2: catch t [level:14 next:-1]
+    3: catch t [level:19 next:-1]
+    4: catch t [level:21 next:-1]
+    5: var this
+  closure vars:
+    0: i parent:loc5 const
+    1: l parent:loc4 const
+    2: r parent:loc6 const
+  stack_size: 13
+  opcodes:
+    0:  push_this
+    1:  put_loc8 5: this
+    3:  get_loc8 5: this
+    5:  get_field busy
+   10:  dup
+   11:  if_true8 32
+   13:  drop
+   14:  get_loc8 5: this
+   16:  get_field cleaning
+   21:  dup
+   22:  if_true8 32
+   24:  drop
+   25:  get_loc8 5: this
+   27:  get_field reinstalling
+   32:  lnot
+   33:  if_false 871
+   38:  get_loc8 5: this
+   40:  push_0 0
+   41:  lnot
+   42:  put_field reinstalling
+   47:  get_loc8 5: this
+   49:  push_0 0
+   50:  put_field progress
+   55:  catch 760
+   60:  get_loc8 5: this
+   62:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e6\u00b8\u0085\u00e7\u0090\u0086\u00e6\u0097\u00a7\u00e6\u0096\u0087\u00e4\u00bb\u00b6..."
+   67:  put_field statusText
+   72:  get_loc8 5: this
+   74:  get_field2 log
+   79:  push_atom_value "\u00e9\u0087\u008d\u00e6\u0096\u00b0\u00e5\u00ae\u0089\u00e8\u00a3\u0085: \u00e6\u00b8\u0085\u00e7\u0090\u0086 /userdisk/chroot"
+   84:  call_method 1
+   87:  drop
+   88:  catch 154
+   93:  get_loc8 5: this
+   95:  get_field2 execShell
+  100:  push_atom_value "sh -c \"rm -rf \\\""
+  105:  get_field2 concat
+  110:  get_loc8 5: this
+  112:  get_field2 escapeShellDoubleQuoted
+  117:  get_var_ref_check 0: i
+  120:  call_method 1
+  123:  push_atom_value "\\\"\""
+  128:  call_method 2
+  131:  call_method 1
+  134:  drop
+  135:  get_loc8 5: this
+  137:  get_field2 log
+  142:  push_atom_value "/userdisk/chroot \u00e5\u00b7\u00b2\u00e5\u0088\u00a0\u00e9\u0099\u00a4"
+  147:  call_method 1
+  150:  drop
+  151:  drop
+  152:  goto8 208
+  154:  put_loc0 0: t
+  155:  catch 207
+  160:  get_loc8 5: this
+  162:  get_field2 log
+  167:  push_atom_value "\u00e5\u0088\u00a0\u00e9\u0099\u00a4 chroot \u00e5\u00a4\u00b1\u00e8\u00b4\u00a5: "
+  172:  get_field2 concat
+  177:  get_loc0 0: t
+  178:  if_false8 196
+  180:  get_loc0 0: t
+  181:  get_field message
+  186:  if_false8 196
+  188:  get_loc0 0: t
+  189:  get_field message
+  194:  goto8 197
+  196:  get_loc0 0: t
+  197:  call_method 1
+  200:  call_method 1
+  203:  drop
+  204:  drop
+  205:  goto8 208
+  207:  throw
+  208:  catch 274
+  213:  get_loc8 5: this
+  215:  get_field2 execShell
+  220:  push_atom_value "sh -c \"rm -f \\\""
+  225:  get_field2 concat
+  230:  get_loc8 5: this
+  232:  get_field2 escapeShellDoubleQuoted
+  237:  get_var_ref_check 1: l
+  240:  call_method 1
+  243:  push_atom_value "\\\"\""
+  248:  call_method 2
+  251:  call_method 1
+  254:  drop
+  255:  get_loc8 5: this
+  257:  get_field2 log
+  262:  push_atom_value "\u00e6\u0097\u00a7\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u008c\u0085\u00e5\u00b7\u00b2\u00e5\u0088\u00a0\u00e9\u0099\u00a4"
+  267:  call_method 1
+  270:  drop
+  271:  drop
+  272:  goto8 328
+  274:  put_loc1 1: t
+  275:  catch 327
+  280:  get_loc8 5: this
+  282:  get_field2 log
+  287:  push_atom_value "\u00e5\u0088\u00a0\u00e9\u0099\u00a4\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u008c\u0085\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5: "
+  292:  get_field2 concat
+  297:  get_loc1 1: t
+  298:  if_false8 316
+  300:  get_loc1 1: t
+  301:  get_field message
+  306:  if_false8 316
+  308:  get_loc1 1: t
+  309:  get_field message
+  314:  goto8 317
+  316:  get_loc1 1: t
+  317:  call_method 1
+  320:  call_method 1
+  323:  drop
+  324:  drop
+  325:  goto8 328
+  327:  throw
+  328:  get_loc8 5: this
+  330:  push_5 5
+  331:  put_field progress
+  336:  get_loc8 5: this
+  338:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e4\u00b8\u008b\u00e8\u00bd\u00bd WebUI \u00e8\u00bf\u0090\u00e8\u00a1\u008c\u00e6\u0097\u00b6..."
+  343:  put_field statusText
+  348:  get_loc8 5: this
+  350:  get_field2 downloadArchive
+  355:  call_method 0
+  358:  await
+  359:  drop
+  360:  get_loc8 5: this
+  362:  push_i8 72
+  364:  put_field progress
+  369:  get_loc8 5: this
+  371:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e8\u00a7\u00a3\u00e5\u008e\u008b\u00e5\u00ae\u0089\u00e8\u00a3\u0085..."
+  376:  put_field statusText
+  381:  get_loc8 5: this
+  383:  get_field2 log
+  388:  push_atom_value "\u00e5\u00bc\u0080\u00e5\u00a7\u008b\u00e8\u00a7\u00a3\u00e5\u008e\u008b a.tar"
+  393:  call_method 1
+  396:  drop
+  397:  catch 483
+  402:  get_loc8 5: this
+  404:  get_field2 execShell
+  409:  push_atom_value "sh -c \"mkdir -p \\\""
+  414:  get_field2 concat
+  419:  get_loc8 5: this
+  421:  get_field2 escapeShellDoubleQuoted
+  426:  get_var_ref_check 0: i
+  429:  call_method 1
+  432:  push_atom_value "\\\" && gzip -dc \\\""
+  437:  get_loc8 5: this
+  439:  get_field2 escapeShellDoubleQuoted
+  444:  get_var_ref_check 1: l
+  447:  call_method 1
+  450:  push_atom_value "\\\" | tar -xvf - -C \\\""
+  455:  get_loc8 5: this
+  457:  get_field2 escapeShellDoubleQuoted
+  462:  get_var_ref_check 0: i
+  465:  call_method 1
+  468:  push_atom_value "\\\"\""
+  473:  call_method 6
+  476:  call_method 1
+  479:  drop
+  480:  drop
+  481:  goto8 533
+  483:  put_loc2 2: t
+  484:  catch 532
+  489:  get_var Error
+  494:  dup
+  495:  push_atom_value "\u00e8\u00a7\u00a3\u00e5\u008e\u008b\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5: "
+  500:  get_field2 concat
+  505:  get_loc2 2: t
+  506:  if_false8 524
+  508:  get_loc2 2: t
+  509:  get_field message
+  514:  if_false8 524
+  516:  get_loc2 2: t
+  517:  get_field message
+  522:  goto8 525
+  524:  get_loc2 2: t
+  525:  call_method 1
+  528:  call_constructor 1
+  531:  throw
+  532:  throw
+  533:  get_loc8 5: this
+  535:  get_field2 pathExists
+  540:  push_empty_string
+  541:  get_field2 concat
+  546:  get_var_ref_check 2: r
+  549:  push_atom_value "/opt/wpe-hostabi/lib/libWPEWebKit-1.1.so.0"
+  554:  call_method 2
+  557:  push_atom_value f
+  562:  call_method 2
+  565:  lnot
+  566:  if_false8 583
+  568:  get_var Error
+  573:  dup
+  574:  push_atom_value "\u00e8\u00a7\u00a3\u00e5\u008e\u008b\u00e5\u00ae\u008c\u00e6\u0088\u0090\u00e4\u00bd\u0086\u00e7\u009b\u00ae\u00e6\u00a0\u0087\u00e7\u009b\u00ae\u00e5\u00bd\u0095\u00e4\u00b8\u00ba\u00e7\u00a9\u00ba\u00e6\u0088\u0096\u00e7\u00bc\u00ba\u00e5\u00b0\u0091\u00e5\u0085\u00b3\u00e9\u0094\u00ae\u00e6\u0096\u0087\u00e4\u00bb\u00b6"
+  579:  call_constructor 1
+  582:  throw
+  583:  get_loc8 5: this
+  585:  push_i8 90
+  587:  put_field progress
+  592:  get_loc8 5: this
+  594:  get_field2 log
+  599:  push_atom_value "\u00e8\u00a7\u00a3\u00e5\u008e\u008b\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u00ae\u008c\u00e6\u0088\u0090"
+  604:  call_method 1
+  607:  drop
+  608:  catch 676
+  613:  get_loc8 5: this
+  615:  get_field2 execShell
+  620:  push_atom_value "sh -c \"chmod 755 \\\""
+  625:  get_field2 concat
+  630:  get_loc8 5: this
+  632:  get_field2 escapeShellDoubleQuoted
+  637:  get_var_ref_check 2: r
+  640:  call_method 1
+  643:  push_atom_value "/opt/wpe-hostabi/libexec/wpe-webkit-1.1/WPEWebProcess\\\" \\\""
+  648:  get_loc8 5: this
+  650:  get_field2 escapeShellDoubleQuoted
+  655:  get_var_ref_check 2: r
+  658:  call_method 1
+  661:  push_atom_value "/opt/wpe-hostabi/libexec/wpe-webkit-1.1/WPENetworkProcess\\\" 2>/dev/null || true\""
+  666:  call_method 4
+  669:  call_method 1
+  672:  drop
+  673:  drop
+  674:  goto8 686
+  676:  put_loc3 3: t
+  677:  catch 685
+  682:  drop
+  683:  goto8 686
+  685:  throw
+  686:  get_loc8 5: this
+  688:  push_i8 100
+  690:  put_field progress
+  695:  get_loc8 5: this
+  697:  push_atom_value "\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u00ae\u008c\u00e6\u0088\u0090\u00ef\u00bc\u008c\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e6\u0089\u0093\u00e5\u00bc\u0080\u00e6\u00b5\u008f\u00e8\u00a7\u0088\u00e5\u0099\u00a8..."
+  702:  put_field statusText
+  707:  get_loc8 5: this
+  709:  get_field2 log
+  714:  push_atom_value "WebUI \u00e8\u00bf\u0090\u00e8\u00a1\u008c\u00e6\u0097\u00b6\u00e9\u0087\u008d\u00e6\u0096\u00b0\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e6\u0088\u0090\u00e5\u008a\u009f"
+  719:  call_method 1
+  722:  drop
+  723:  get_loc8 5: this
+  725:  get_field2 toast
+  730:  push_atom_value "WebUI \u00e9\u0087\u008d\u00e6\u0096\u00b0\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u00ae\u008c\u00e6\u0088\u0090"
+  735:  call_method 1
+  738:  drop
+  739:  get_loc8 5: this
+  741:  get_field2 openBrowser
+  746:  call_method 0
+  749:  drop
+  750:  drop
+  751:  undefined
+  752:  gosub 861
+  757:  drop
+  758:  goto8 871
+  760:  put_loc8 4: t
+  762:  catch 855
+  767:  get_loc8 5: this
+  769:  push_atom_value "\u00e9\u0087\u008d\u00e6\u0096\u00b0\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5: "
+  774:  get_field2 concat
+  779:  get_loc8 4: t
+  781:  if_false8 801
+  783:  get_loc8 4: t
+  785:  get_field message
+  790:  if_false8 801
+  792:  get_loc8 4: t
+  794:  get_field message
+  799:  goto8 803
+  801:  get_loc8 4: t
+  803:  call_method 1
+  806:  put_field statusText
+  811:  get_loc8 5: this
+  813:  get_field2 log
+  818:  get_loc8 5: this
+  820:  get_field statusText
+  825:  call_method 1
+  828:  drop
+  829:  get_loc8 5: this
+  831:  get_field2 toast
+  836:  push_atom_value "WebUI \u00e9\u0087\u008d\u00e6\u0096\u00b0\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  841:  call_method 1
+  844:  drop
+  845:  drop
+  846:  undefined
+  847:  gosub 861
+  852:  drop
+  853:  goto8 871
+  855:  gosub 861
+  860:  throw
+  861:  get_loc8 5: this
+  863:  push_1 1
+  864:  lnot
+  865:  put_field reinstalling
+  870:  ret
+  871:  undefined
+  872:  return_async
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  locals:
+    0: const t [level:4 next:-1]
+    1: catch t [level:5 next:-1]
+    2: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field cleaning
+    8:  lnot
+    9:  if_false 240
+   14:  get_loc2 2: this
+   15:  get_field busy
+   20:  lnot
+   21:  if_false 240
+   26:  get_loc2 2: this
+   27:  push_0 0
+   28:  lnot
+   29:  put_field cleaning
+   34:  catch 140
+   39:  set_loc_uninitialized 0: t
+   42:  get_loc2 2: this
+   43:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e5\u00bc\u00ba\u00e5\u0088\u00b6\u00e6\u00b8\u0085\u00e7\u0090\u0086\u00e6\u00b5\u008f\u00e8\u00a7\u0088\u00e5\u0099\u00a8\u00e8\u00bf\u009b\u00e7\u00a8\u008b..."
+   48:  put_field statusText
+   53:  get_loc2 2: this
+   54:  get_field2 cleanupBrowserProcesses
+   59:  push_atom_value manual_close
+   64:  call_method 1
+   67:  put_loc0 0: t
+   68:  get_loc2 2: this
+   69:  push_0 0
+   70:  put_field progress
+   75:  get_loc2 2: this
+   76:  get_loc_check 0: t
+   79:  get_length
+   80:  if_false8 106
+   82:  push_atom_value "\u00e5\u00b7\u00b2\u00e6\u00b8\u0085\u00e7\u0090\u0086 "
+   87:  get_field2 concat
+   92:  get_loc_check 0: t
+   95:  get_length
+   96:  push_atom_value " \u00e4\u00b8\u00aa\u00e6\u00b5\u008f\u00e8\u00a7\u0088\u00e5\u0099\u00a8\u00e8\u00bf\u009b\u00e7\u00a8\u008b"
+  101:  call_method 2
+  104:  goto8 111
+  106:  push_atom_value "\u00e6\u009c\u00aa\u00e5\u008f\u0091\u00e7\u008e\u00b0\u00e9\u009c\u0080\u00e8\u00a6\u0081\u00e6\u00b8\u0085\u00e7\u0090\u0086\u00e7\u009a\u0084\u00e6\u00b5\u008f\u00e8\u00a7\u0088\u00e5\u0099\u00a8\u00e8\u00bf\u009b\u00e7\u00a8\u008b"
+  111:  put_field statusText
+  116:  get_loc2 2: this
+  117:  get_field2 toast
+  122:  push_atom_value "\u00e6\u00b5\u008f\u00e8\u00a7\u0088\u00e5\u0099\u00a8\u00e8\u00bf\u009b\u00e7\u00a8\u008b\u00e5\u00b7\u00b2\u00e6\u00b8\u0085\u00e7\u0090\u0086"
+  127:  call_method 1
+  130:  drop
+  131:  drop
+  132:  undefined
+  133:  gosub 231
+  138:  drop
+  139:  return_undef
+  140:  put_loc1 1: t
+  141:  catch 225
+  146:  get_loc2 2: this
+  147:  push_atom_value "\u00e6\u00b8\u0085\u00e7\u0090\u0086\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5: "
+  152:  get_field2 concat
+  157:  get_loc1 1: t
+  158:  if_false8 176
+  160:  get_loc1 1: t
+  161:  get_field message
+  166:  if_false8 176
+  168:  get_loc1 1: t
+  169:  get_field message
+  174:  goto8 177
+  176:  get_loc1 1: t
+  177:  call_method 1
+  180:  put_field statusText
+  185:  get_loc2 2: this
+  186:  get_field2 log
+  191:  get_loc2 2: this
+  192:  get_field statusText
+  197:  call_method 1
+  200:  drop
+  201:  get_loc2 2: this
+  202:  get_field2 toast
+  207:  push_atom_value "\u00e6\u00b5\u008f\u00e8\u00a7\u0088\u00e5\u0099\u00a8\u00e8\u00bf\u009b\u00e7\u00a8\u008b\u00e6\u00b8\u0085\u00e7\u0090\u0086\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  212:  call_method 1
+  215:  drop
+  216:  drop
+  217:  undefined
+  218:  gosub 231
+  223:  drop
+  224:  return_undef
+  225:  gosub 231
+  230:  throw
+  231:  get_loc2 2: this
+  232:  push_1 1
+  233:  lnot
+  234:  put_field cleaning
+  239:  ret
+  240:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 log
+    8:  push_atom_value "\u00e6\u00b5\u008f\u00e8\u00a7\u0088\u00e5\u0099\u00a8\u00e5\u008a\u009f\u00e8\u0083\u00bd\u00e5\u00b7\u00b2\u00e7\u00a7\u00bb\u00e9\u0099\u00a4\u00ef\u00bc\u008c\u00e4\u00bb\u0085\u00e4\u00bf\u009d\u00e7\u0095\u0099\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u0099\u00a8"
+   13:  call_method 1
+   16:  drop
+   17:  get_loc0 0: this
+   18:  get_field2 toast
+   23:  push_atom_value "\u00e6\u00b5\u008f\u00e8\u00a7\u0088\u00e5\u0099\u00a8\u00e5\u00b7\u00b2\u00e7\u00a7\u00bb\u00e9\u0099\u00a4\u00ef\u00bc\u008c\u00e4\u00bb\u0085\u00e4\u00bf\u009d\u00e7\u0095\u0099\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u0099\u00a8"
+   28:  call_method 1
+   31:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var s
+    3: var this
+  stack_size: 32
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  set_loc0 0: t
+    4:  get_field $createElement
+    9:  put_loc1 1: e
+   10:  get_loc0 0: t
+   11:  get_field _self
+   16:  get_field _c
+   21:  dup
+   22:  if_true8 26
+   24:  drop
+   25:  get_loc1 1: e
+   26:  set_loc2 2: s
+   27:  push_atom_value scroller
+   32:  object
+   33:  push_atom_value "page-scroll"
+   38:  array_from 1
+   41:  define_field staticClass
+   46:  get_loc2 2: s
+   47:  push_atom_value div
+   52:  object
+   53:  push_atom_value page
+   58:  array_from 1
+   61:  define_field staticClass
+   66:  get_loc2 2: s
+   67:  push_atom_value div
+   72:  object
+   73:  push_atom_value card
+   78:  array_from 1
+   81:  define_field staticClass
+   86:  get_loc2 2: s
+   87:  push_atom_value text
+   92:  object
+   93:  push_atom_value title
+   98:  array_from 1
+  101:  define_field staticClass
+  106:  get_loc0 0: t
+  107:  get_field2 _v
+  112:  push_atom_value "WebUI \u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e5\u0099\u00a8"
+  117:  call_method 1
+  120:  array_from 1
+  123:  call3 3
+  124:  get_loc2 2: s
+  125:  push_atom_value text
+  130:  object
+  131:  push_atom_value status
+  136:  array_from 1
+  139:  define_field staticClass
+  144:  get_loc0 0: t
+  145:  get_field2 _v
+  150:  get_loc0 0: t
+  151:  get_field2 _s
+  156:  get_loc0 0: t
+  157:  get_field statusText
+  162:  call_method 1
+  165:  call_method 1
+  168:  array_from 1
+  171:  call3 3
+  172:  get_loc2 2: s
+  173:  push_atom_value div
+  178:  object
+  179:  push_atom_value "progress-track"
+  184:  array_from 1
+  187:  define_field staticClass
+  192:  get_loc2 2: s
+  193:  push_atom_value div
+  198:  object
+  199:  push_atom_value "progress-fill"
+  204:  array_from 1
+  207:  define_field staticClass
+  212:  object
+  213:  get_loc0 0: t
+  214:  get_field progress
+  219:  push_atom_value "%"
+  224:  add
+  225:  define_field width
+  230:  define_field style
+  235:  call2 2
+  236:  array_from 1
+  239:  call3 3
+  240:  get_loc2 2: s
+  241:  push_atom_value text
+  246:  object
+  247:  push_atom_value "progress-text"
+  252:  array_from 1
+  255:  define_field staticClass
+  260:  get_loc0 0: t
+  261:  get_field2 _v
+  266:  get_loc0 0: t
+  267:  get_field2 _s
+  272:  get_loc0 0: t
+  273:  get_field progress
+  278:  call_method 1
+  281:  push_atom_value "%"
+  286:  add
+  287:  call_method 1
+  290:  array_from 1
+  293:  call3 3
+  294:  get_loc0 0: t
+  295:  get_field hostWarnings
+  300:  get_length
+  301:  if_false8 387
+  303:  get_loc2 2: s
+  304:  push_atom_value div
+  309:  object
+  310:  push_atom_value "warn-box"
+  315:  array_from 1
+  318:  define_field staticClass
+  323:  get_loc2 2: s
+  324:  push_atom_value text
+  329:  object
+  330:  push_atom_value "warn-title"
+  335:  array_from 1
+  338:  define_field staticClass
+  343:  get_loc0 0: t
+  344:  get_field2 _v
+  349:  push_atom_value "\u00e7\u008e\u00af\u00e5\u00a2\u0083\u00e6\u008f\u0090\u00e7\u00a4\u00ba"
+  354:  call_method 1
+  357:  array_from 1
+  360:  call3 3
+  361:  get_loc0 0: t
+  362:  get_field2 _l
+  367:  get_loc0 0: t
+  368:  get_field hostWarnings
+  373:  fclosure8 0: [bytecode <null>]
+  375:  call_method 2
+  378:  array_from 2
+  381:  push_2 2
+  382:  call 4
+  385:  goto8 396
+  387:  get_loc0 0: t
+  388:  get_field2 _e
+  393:  call_method 0
+  396:  get_loc2 2: s
+  397:  push_atom_value scroller
+  402:  object
+  403:  push_atom_value "log-box"
+  408:  array_from 1
+  411:  define_field staticClass
+  416:  object
+  417:  push_atom_value vertical
+  422:  define_field scrollDirection
+  427:  define_field attrs
+  432:  get_loc0 0: t
+  433:  get_field2 _l
+  438:  get_loc0 0: t
+  439:  get_field logs
+  444:  fclosure8 1: [bytecode <null>]
+  446:  call_method 2
+  449:  push_0 0
+  450:  call 4
+  453:  get_loc2 2: s
+  454:  push_atom_value div
+  459:  object
+  460:  push_atom_value actions
+  465:  array_from 1
+  468:  define_field staticClass
+  473:  get_loc2 2: s
+  474:  push_atom_value div
+  479:  object
+  480:  push_atom_value btn
+  485:  push_atom_value "btn-primary"
+  490:  array_from 2
+  493:  define_field staticClass
+  498:  object
+  499:  fclosure8 2: [bytecode <null>]
+  501:  set_name click
+  506:  define_field click
+  511:  define_field on
+  516:  get_loc2 2: s
+  517:  push_atom_value text
+  522:  object
+  523:  push_atom_value "btn-text"
+  528:  array_from 1
+  531:  define_field staticClass
+  536:  get_loc0 0: t
+  537:  get_field2 _v
+  542:  get_loc0 0: t
+  543:  get_field2 _s
+  548:  get_loc0 0: t
+  549:  get_field busy
+  554:  if_false8 563
+  556:  push_atom_value "\u00e5\u00a4\u0084\u00e7\u0090\u0086\u00e4\u00b8\u00ad..."
+  561:  goto8 568
+  563:  push_atom_value "\u00e9\u0087\u008d\u00e8\u00af\u0095"
+  568:  call_method 1
+  571:  call_method 1
+  574:  array_from 1
+  577:  call3 3
+  578:  array_from 1
+  581:  call3 3
+  582:  get_loc2 2: s
+  583:  push_atom_value div
+  588:  object
+  589:  push_atom_value btn
+  594:  push_atom_value "btn-reinstall"
+  599:  array_from 2
+  602:  define_field staticClass
+  607:  object
+  608:  get_loc0 0: t
+  609:  get_field reinstall
+  614:  define_field click
+  619:  define_field on
+  624:  get_loc2 2: s
+  625:  push_atom_value text
+  630:  object
+  631:  push_atom_value "btn-text"
+  636:  array_from 1
+  639:  define_field staticClass
+  644:  get_loc0 0: t
+  645:  get_field2 _v
+  650:  get_loc0 0: t
+  651:  get_field2 _s
+  656:  get_loc0 0: t
+  657:  get_field reinstalling
+  662:  if_false8 671
+  664:  push_atom_value "\u00e9\u0087\u008d\u00e6\u0096\u00b0\u00e5\u00ae\u0089\u00e8\u00a3\u0085\u00e4\u00b8\u00ad..."
+  669:  goto8 676
+  671:  push_atom_value "\u00e9\u0087\u008d\u00e6\u0096\u00b0\u00e5\u00ae\u0089\u00e8\u00a3\u0085"
+  676:  call_method 1
+  679:  call_method 1
+  682:  array_from 1
+  685:  call3 3
+  686:  array_from 1
+  689:  call3 3
+  690:  get_loc2 2: s
+  691:  push_atom_value div
+  696:  object
+  697:  push_atom_value btn
+  702:  push_atom_value "btn-secondary"
+  707:  array_from 2
+  710:  define_field staticClass
+  715:  object
+  716:  get_loc0 0: t
+  717:  get_field openBrowser
+  722:  define_field click
+  727:  define_field on
+  732:  get_loc2 2: s
+  733:  push_atom_value text
+  738:  object
+  739:  push_atom_value "btn-text"
+  744:  array_from 1
+  747:  define_field staticClass
+  752:  get_loc0 0: t
+  753:  get_field2 _v
+  758:  push_atom_value "\u00e7\u009b\u00b4\u00e6\u008e\u00a5\u00e6\u0089\u0093\u00e5\u00bc\u0080"
+  763:  call_method 1
+  766:  array_from 1
+  769:  call3 3
+  770:  array_from 1
+  773:  call3 3
+  774:  get_loc2 2: s
+  775:  push_atom_value div
+  780:  object
+  781:  push_atom_value btn
+  786:  push_atom_value "btn-danger"
+  791:  array_from 2
+  794:  define_field staticClass
+  799:  object
+  800:  get_loc0 0: t
+  801:  get_field forceCloseBrowser
+  806:  define_field click
+  811:  define_field on
+  816:  get_loc2 2: s
+  817:  push_atom_value text
+  822:  object
+  823:  push_atom_value "btn-text"
+  828:  array_from 1
+  831:  define_field staticClass
+  836:  get_loc0 0: t
+  837:  get_field2 _v
+  842:  get_loc0 0: t
+  843:  get_field2 _s
+  848:  get_loc0 0: t
+  849:  get_field cleaning
+  854:  if_false8 863
+  856:  push_atom_value "\u00e6\u00b8\u0085\u00e7\u0090\u0086\u00e4\u00b8\u00ad..."
+  861:  goto8 868
+  863:  push_atom_value "\u00e5\u0085\u00b3\u00e9\u0097\u00ad\u00e5\u00b9\u00b6\u00e6\u00b8\u0085\u00e7\u0090\u0086"
+  868:  call_method 1
+  871:  call_method 1
+  874:  array_from 1
+  877:  call3 3
+  878:  array_from 1
+  881:  call3 3
+  882:  array_from 4
+  885:  call3 3
+  886:  array_from 7
+  889:  call3 3
+  890:  array_from 1
+  893:  call3 3
+  894:  array_from 1
+  897:  tail_call 3
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  args: e o
+  closure vars:
+    0: s local:loc2 var
+    1: t local:loc0 var
+  stack_size: 8
+  opcodes:
+    0:  get_var_ref0 0: s
+    1:  push_atom_value text
+    6:  object
+    7:  get_arg1 1: o
+    8:  define_field key
+   13:  push_atom_value "warn-text"
+   18:  array_from 1
+   21:  define_field staticClass
+   26:  get_var_ref1 1: t
+   27:  get_field2 _v
+   32:  get_var_ref1 1: t
+   33:  get_field2 _s
+   38:  get_arg0 0: e
+   39:  call_method 1
+   42:  call_method 1
+   45:  array_from 1
+   48:  tail_call 3
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  args: e o
+  closure vars:
+    0: s local:loc2 var
+    1: t local:loc0 var
+  stack_size: 8
+  opcodes:
+    0:  get_var_ref0 0: s
+    1:  push_atom_value text
+    6:  object
+    7:  get_arg1 1: o
+    8:  define_field key
+   13:  push_atom_value "log-line"
+   18:  array_from 1
+   21:  define_field staticClass
+   26:  get_var_ref1 1: t
+   27:  get_field2 _v
+   32:  get_var_ref1 1: t
+   33:  get_field2 _s
+   38:  get_arg0 0: e
+   39:  call_method 1
+   42:  call_method 1
+   45:  array_from 1
+   48:  tail_call 3
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_webui.js:1 source_len=0 */
+apps_webui.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 startBootstrap
+    6:  push_0 0
+    7:  lnot
+    8:  tail_call_method 1
+

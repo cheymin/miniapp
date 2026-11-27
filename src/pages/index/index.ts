@@ -16,198 +16,468 @@
 // along with miniapp.  If not, see <https://www.gnu.org/licenses/>.
 
 import { defineComponent } from 'vue';
-import { showError, showSuccess } from '../../components/ToastMessage';
-import { loadPassword, verifyPassword } from '../../utils/password';
-import { openSystemInput } from '../../utils/systemInput';
-import { exec } from '../../utils/nativeShell';
-import aiIcon from '../../../images/home/ai.png';
-import imageIcon from '../../../images/home/image.png';
-import fileIcon from '../../../images/home/file.png';
-import videoIcon from '../../../images/home/video.png';
-import updateIcon from '../../../images/home/update.png';
-import settingsIcon from '../../../images/home/settings.png';
 
-export type indexOptions = {};
+// 复刻自 1.15.5 包 index.js：计算器主页。
+// 输入 “1999” 并求值可进入 desktop 桌面。
 
-const APP_VERSION = '3.0.0';
-const WEEKDAYS = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
-const SWIPE_THRESHOLD = 28;
+type ThemeColor = [string, string];
+
+interface CalcKey {
+    key: string;
+    text: string;
+    expr: string;
+    color: ThemeColor;
+    wide?: boolean;
+}
+
+interface CalcResult {
+    ok: boolean;
+    text: string;
+}
+
+const THEME = {
+    ng: ['#0f263b', '#e3e3e3'] as ThemeColor,
+    sb: ['#022133', '#c2e7ff'] as ThemeColor,
+    db: ['#052350', '#d3e3fd'] as ThemeColor,
+    lg: ['#6ada8b', '#0a3818'] as ThemeColor,
+};
+
+const COLOR_NORMAL = '#e3e3e3';
+const COLOR_OK = '#6dd58c';
+const COLOR_ERR = '#f2b8b5';
+const DESKTOP_SECRET = '1999';
+
+function digitKey(digit: string): CalcKey {
+    return { key: 'd' + digit, text: digit, expr: digit, color: THEME.ng };
+}
+
+const LINE1: CalcKey[] = [
+    { key: 'e', text: 'e', expr: 'e', color: THEME.sb },
+    { key: 'pi', text: 'π', expr: 'π', color: THEME.sb },
+    { key: 'pow', text: 'xⁿ', expr: '^', color: THEME.sb },
+    { key: 'fact', text: '!', expr: '!', color: THEME.sb },
+    { key: 'clear', text: 'AC', expr: 'clear', color: THEME.db },
+    digitKey('7'),
+    digitKey('8'),
+    digitKey('9'),
+    { key: 'lp', text: '(', expr: '(', color: THEME.sb },
+    { key: 'div', text: '÷', expr: '/', color: THEME.sb },
+    { key: 'mul', text: '×', expr: '*', color: THEME.sb },
+];
+
+const LINE2: CalcKey[] = [
+    { key: 'unit', text: 'rad', expr: 'unit-toggle', color: THEME.sb },
+    { key: 'sin', text: 'sin', expr: 'sin(', color: THEME.sb },
+    { key: 'cos', text: 'cos', expr: 'cos(', color: THEME.sb },
+    { key: 'tan', text: 'tan', expr: 'tan(', color: THEME.sb },
+    { key: 'dot', text: '.', expr: '.', color: THEME.ng },
+    digitKey('4'),
+    digitKey('5'),
+    digitKey('6'),
+    { key: 'rp', text: ')', expr: ')', color: THEME.sb },
+    { key: 'sub', text: '-', expr: '-', color: THEME.sb },
+    { key: 'add', text: '+', expr: '+', color: THEME.sb },
+];
+
+const LINE3: CalcKey[] = [
+    { key: 'inv', text: 'inv', expr: 'inverse', color: THEME.sb },
+    { key: 'sqrt', text: '√', expr: 'sqrt(', color: THEME.sb },
+    { key: 'ln', text: 'ln', expr: 'ln(', color: THEME.sb },
+    { key: 'log', text: 'log', expr: 'log(', color: THEME.sb },
+    digitKey('0'),
+    digitKey('1'),
+    digitKey('2'),
+    digitKey('3'),
+    { key: 'del', text: 'Del', expr: 'remove', color: THEME.sb },
+];
+
+const LINE3_INV: CalcKey[] = [
+    { key: 'inv', text: 'inv', expr: 'inverse', color: THEME.sb },
+    { key: 'sqr', text: 'x²', expr: '^2', color: THEME.sb },
+    { key: 'expx', text: 'eˣ', expr: 'e^', color: THEME.sb },
+    { key: 'pow10', text: '10ˣ', expr: '10^', color: THEME.sb },
+    digitKey('0'),
+    digitKey('1'),
+    digitKey('2'),
+    digitKey('3'),
+    { key: 'del', text: 'Del', expr: 'remove', color: THEME.sb },
+];
+
+const FUNC_NAMES = ['asin', 'acos', 'atan', 'sin', 'cos', 'tan', 'sqrt', 'cbrt', 'ln', 'log'];
+
+class ExpressionParser {
+    private pos = 0;
+
+    constructor(private src: string) {}
+
+    parse(): number {
+        const value = this.parseAdditive();
+        this.skipSpaces();
+        if (this.pos < this.src.length) {
+            throw new Error('invalid expr');
+        }
+        return value;
+    }
+
+    private skipSpaces() {
+        while (this.src[this.pos] === ' ') {
+            this.pos += 1;
+        }
+    }
+
+    private peek(): string {
+        this.skipSpaces();
+        return this.src[this.pos] || '';
+    }
+
+    private parseAdditive(): number {
+        let value = this.parseMultiplicative();
+        for (;;) {
+            const ch = this.peek();
+            if (ch === '+') {
+                this.pos += 1;
+                value += this.parseMultiplicative();
+            } else if (ch === '-') {
+                this.pos += 1;
+                value -= this.parseMultiplicative();
+            } else {
+                return value;
+            }
+        }
+    }
+
+    private parseMultiplicative(): number {
+        let value = this.parseUnary();
+        for (;;) {
+            const ch = this.peek();
+            if (ch === '*') {
+                this.pos += 1;
+                value *= this.parseUnary();
+            } else if (ch === '/') {
+                this.pos += 1;
+                value /= this.parseUnary();
+            } else {
+                return value;
+            }
+        }
+    }
+
+    private parseUnary(): number {
+        const ch = this.peek();
+        if (ch === '-') {
+            this.pos += 1;
+            return -this.parseUnary();
+        }
+        if (ch === '+') {
+            this.pos += 1;
+            return this.parseUnary();
+        }
+        return this.parsePower();
+    }
+
+    private parsePower(): number {
+        const base = this.parsePostfix();
+        if (this.peek() === '^') {
+            this.pos += 1;
+            const exponent = this.parseUnary();
+            return Math.pow(base, exponent);
+        }
+        return base;
+    }
+
+    private parsePostfix(): number {
+        let value = this.parsePrimary();
+        while (this.peek() === '!') {
+            this.pos += 1;
+            value = this.factorial(value);
+        }
+        return value;
+    }
+
+    private parsePrimary(): number {
+        this.skipSpaces();
+        const rest = this.src.slice(this.pos);
+        const numMatch = /^\d+(?:\.\d*)?|^\.\d+/.exec(rest);
+        if (numMatch) {
+            this.pos += numMatch[0].length;
+            return Number(numMatch[0]);
+        }
+        if (rest.startsWith('π')) {
+            this.pos += 1;
+            return Math.PI;
+        }
+        const name = FUNC_NAMES.find((item) => rest.startsWith(item));
+        if (name) {
+            this.pos += name.length;
+            if (this.peek() !== '(') {
+                throw new Error('invalid call');
+            }
+            this.pos += 1;
+            const arg = this.parseAdditive();
+            if (this.peek() === ')') {
+                this.pos += 1;
+            }
+            return callFunction(name, arg);
+        }
+        if (rest.startsWith('e')) {
+            this.pos += 1;
+            return Math.E;
+        }
+        if (this.peek() === '(') {
+            this.pos += 1;
+            const value = this.parseAdditive();
+            if (this.peek() === ')') {
+                this.pos += 1;
+            }
+            return value;
+        }
+        throw new Error('invalid token');
+    }
+
+    private factorial(raw: number): number {
+        if (!Number.isFinite(raw) || raw < 0 || Math.abs(raw - Math.round(raw)) > 1e-9) {
+            throw new Error('factorial invalid');
+        }
+        const n = Math.round(raw);
+        if (n > 170) {
+            throw new Error('factorial overflow');
+        }
+        let result = 1;
+        for (let i = 2; i <= n; i += 1) {
+            result *= i;
+        }
+        return result;
+    }
+}
+
+let currentUnit: 'rad' | 'deg' = 'rad';
+
+function callFunction(name: string, arg: number): number {
+    const toRad = (v: number) => (currentUnit === 'deg' ? (v * Math.PI) / 180 : v);
+    const fromRad = (v: number) => (currentUnit === 'deg' ? (v * 180) / Math.PI : v);
+    switch (name) {
+        case 'sin':
+            return Math.sin(toRad(arg));
+        case 'cos':
+            return Math.cos(toRad(arg));
+        case 'tan':
+            return Math.tan(toRad(arg));
+        case 'asin':
+            return fromRad(Math.asin(arg));
+        case 'acos':
+            return fromRad(Math.acos(arg));
+        case 'atan':
+            return fromRad(Math.atan(arg));
+        case 'sqrt':
+            return Math.sqrt(arg);
+        case 'cbrt':
+            return Math.cbrt(arg);
+        case 'ln':
+            return Math.log(arg);
+        case 'log':
+            return Math.log(arg) / Math.LN10;
+        default:
+            throw new Error('unknown func');
+    }
+}
+
+function tokenize(expr: string) {
+    const tokens: string[] = [];
+    let i = 0;
+    while (i < expr.length) {
+        const ch = expr[i];
+        if (ch === ' ') {
+            i += 1;
+            continue;
+        }
+        if (/[0-9.]/.test(ch)) {
+            let num = ch;
+            i += 1;
+            while (i < expr.length && /[0-9.]/.test(expr[i])) {
+                num += expr[i];
+                i += 1;
+            }
+            tokens.push(num);
+            continue;
+        }
+        const name = FUNC_NAMES.find((item) => expr.startsWith(item, i));
+        if (name) {
+            tokens.push(name);
+            i += name.length;
+            continue;
+        }
+        if (ch === 'π') {
+            tokens.push('π');
+            i += 1;
+            continue;
+        }
+        if ('e+-*/^!()'.includes(ch)) {
+            tokens.push(ch);
+            i += 1;
+            continue;
+        }
+        throw new Error('invalid char');
+    }
+    return tokens;
+}
+
+function evaluateExpression(expr: string): CalcResult {
+    try {
+        if (!expr.trim()) {
+            return { ok: false, text: '0' };
+        }
+        const value = new ExpressionParser(expr).parse();
+        if (Number.isNaN(value)) {
+            return { ok: false, text: '定义域错误' };
+        }
+        if (!Number.isFinite(value)) {
+            return { ok: false, text: '定义域错误' };
+        }
+        return { ok: true, text: formatNumber(value) };
+    } catch (error) {
+        return { ok: false, text: '不合法的计算' };
+    }
+}
+
+function formatNumber(value: number): string {
+    if (Math.abs(value) < 1e-12) {
+        value = 0;
+    }
+    const rounded = Math.round(value);
+    if (Math.abs(value - rounded) < 1e-12) {
+        return String(rounded);
+    }
+    return value
+        .toPrecision(12)
+        .replace(/(\.\d*?[1-9])0+$/, '$1')
+        .replace(/\.0+$/, '');
+}
 
 const index = defineComponent({
     data() {
         return {
-            $page: {} as FalconPage<indexOptions>,
-            checking: true,
-            locked: false,
-            passwordHash: '',
-            version: APP_VERSION,
-            clockTime: '00:00',
-            clockDate: '',
-            clockTimer: null as number | null,
-
-            page: 0,
-            animClass: '',
-            touchStartY: 0,
-            touchLastY: 0,
-            swiping: false,
-
-            apps: [
-                { key: 'ai', name: 'AI 助手', icon: aiIcon, theme: 'theme-ai' },
-                { key: 'gallery', name: '图库', icon: imageIcon, theme: 'theme-image' },
-                { key: 'file', name: '文件', icon: fileIcon, theme: 'theme-file' },
-                { key: 'video', name: '视频', icon: videoIcon, theme: 'theme-video' },
-                { key: 'terminal', name: '终端', glyph: '>_', theme: 'theme-terminal' },
-                { key: 'appsManage', name: '应用', glyph: '应', theme: 'theme-apps' },
-                { key: 'update', name: '更新', icon: updateIcon, theme: 'theme-update' },
-                { key: 'settings', name: '设置', icon: settingsIcon, theme: 'theme-settings' },
-                { key: 'lock', name: '锁屏', glyph: '锁', theme: 'theme-lock' },
-            ],
+            loading: true,
+            didWarmUp: false,
+            isInv: false,
+            unit: 'rad' as 'rad' | 'deg',
+            tokens: [] as string[],
+            result: null as string | null,
+            textColor: COLOR_NORMAL,
+            pressedKey: '',
+            emptyObject: {},
         };
     },
 
-    mounted() {
-        // 旧版本把抽帧写在 /userdisk，这里主动清掉，避免占用用户空间。
-        try {
-            exec('rm -rf /userdisk/.cheymin/player 2>/dev/null; true').catch(() => undefined);
-        } catch {
-            // Shell 不可用时忽略
-        }
-        this.checkLock();
-        this.updateClock();
-        this.clockTimer = setInterval(() => this.updateClock(), 1000);
+    computed: {
+        keyMap(): { line1: CalcKey[]; line2: CalcKey[]; line3: CalcKey[] } {
+            const altUnit = this.unit === 'rad' ? 'deg' : 'rad';
+            const line2 = [{ ...LINE2[0], text: altUnit }].concat(LINE2.slice(1));
+            return {
+                line1: LINE1,
+                line2,
+                line3: this.isInv ? LINE3_INV : LINE3,
+            };
+        },
+
+        display(): string {
+            if (this.result !== null) {
+                return this.result;
+            }
+            return this.tokens.map(prettyToken).join('');
+        },
     },
 
-    unmounted() {
-        if (this.clockTimer !== null) {
-            clearInterval(this.clockTimer);
-            this.clockTimer = null;
-        }
+    mounted() {
+        currentUnit = 'rad';
+        // 预热求值引擎，和原包一致：先跑一次 1+1。
+        setTimeout(() => {
+            evaluateExpression('1+1');
+            this.didWarmUp = true;
+            this.loading = false;
+        }, 60);
     },
 
     methods: {
-        updateClock() {
-            const now = new Date();
-            this.clockTime = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
-            this.clockDate = `${now.getMonth() + 1} 月 ${now.getDate()} 日 ${WEEKDAYS[now.getDay()]}`;
-        },
-
-        async checkLock() {
-            this.passwordHash = await loadPassword();
-            this.locked = !!this.passwordHash;
-            this.checking = false;
-        },
-
-        unlock() {
-            openSystemInput(
-                () => '',
-                (value) => {
-                    if (verifyPassword(value, this.passwordHash)) {
-                        this.locked = false;
-                        showSuccess('已解锁');
-                    } else {
-                        showError('密码错误');
-                    }
-                },
-                (value) => {
-                    if (!value) { return '请输入密码'; }
-                }
-            );
-        },
-
-        goPage(target: number) {
-            if (this.page === target) { return; }
-            this.page = target;
-            this.animClass = target === 1 ? 'page-up' : 'page-down';
-            this.$forceUpdate();
-        },
-
-        touchY(event: any): number {
-            const list = (event && (event.touches || event.changedTouches)) || [];
-            const point = list[0] || (event && event.detail) || {};
-            const value = point.clientY !== undefined ? point.clientY : (point.pageY !== undefined ? point.pageY : point.screenY);
-            return Number(value) || 0;
-        },
-
-        onTouchStart(event: any) {
-            if (this.locked || this.checking) { return; }
-            this.touchStartY = this.touchY(event);
-            this.touchLastY = this.touchStartY;
-            this.swiping = true;
-        },
-
-        onTouchMove(event: any) {
-            if (!this.swiping) { return; }
-            this.touchLastY = this.touchY(event);
-        },
-
-        onTouchEnd(event: any) {
-            if (!this.swiping) { return; }
-            this.swiping = false;
-            const endY = this.touchY(event) || this.touchLastY;
-            const delta = endY - this.touchStartY;
-            if (delta <= -SWIPE_THRESHOLD && this.page === 0) {
-                this.goPage(1);
-            } else if (delta >= SWIPE_THRESHOLD && this.page === 1) {
-                this.goPage(0);
-            }
-        },
-
-        openApp(key: string) {
-            switch (key) {
-                case 'ai':
-                    $falcon.navTo('ai', {});
-                    break;
-                case 'gallery':
-                    $falcon.navTo('gallery', {});
-                    break;
-                case 'file':
-                    $falcon.navTo('fileManager', {});
-                    break;
-                case 'video':
-                    this.openVideoPlayer();
-                    break;
-                case 'terminal':
-                    $falcon.navTo('terminal', {});
-                    break;
-                case 'appsManage':
-                    $falcon.navTo('appsManage', {});
-                    break;
-                case 'lock':
-                    this.lockNow();
-                    break;
-                case 'update':
-                    $falcon.navTo('update', {});
-                    break;
-                case 'settings':
-                    $falcon.navTo('appSettings', {});
-                    break;
-            }
-        },
-
-        lockNow() {
-            if (!this.passwordHash) {
-                showError('请先在设置中创建应用锁密码');
-                $falcon.navTo('appSettings', {});
+        onKey(key: CalcKey) {
+            const expr = key.expr;
+            if (expr === 'clear') {
+                this.clearAll();
                 return;
             }
-            this.locked = true;
-            this.$forceUpdate();
+            if (expr === 'remove') {
+                this.tokens.pop();
+                this.result = null;
+                this.textColor = COLOR_NORMAL;
+                return;
+            }
+            if (expr === 'unit-toggle') {
+                this.unit = this.unit === 'rad' ? 'deg' : 'rad';
+                currentUnit = this.unit;
+                return;
+            }
+            if (expr === 'inverse') {
+                this.isInv = !this.isInv;
+                return;
+            }
+            this.textColor = COLOR_NORMAL;
+            this.result = null;
+            const last = this.tokens[this.tokens.length - 1] || '';
+            if (/^[0-9.]/.test(expr) && /^[0-9.]/.test(last)) {
+                this.tokens[this.tokens.length - 1] = last + expr;
+            } else {
+                this.tokens.push(expr);
+            }
         },
 
-        openVideoPlayer() {
-            openSystemInput(
-                () => '',
-                (value) => {
-                    const target = value.trim();
-                    if (!target) { return; }
-                    $falcon.navTo('videoPlayer', { path: target });
-                },
-                (value) => {
-                    if (!value.trim()) { return '请输入视频路径或链接'; }
-                }
-            );
+        clearAll() {
+            this.tokens = [];
+            this.result = null;
+            this.textColor = COLOR_NORMAL;
+            this.isInv = false;
+        },
+
+        evaluate() {
+            const outcome = evaluateExpression(this.tokens.join(''));
+            this.result = outcome.text;
+            this.textColor = outcome.ok ? COLOR_OK : COLOR_ERR;
+            if (outcome.ok) {
+                this.checkSecret(outcome.text);
+            }
+        },
+
+        checkSecret(display: string) {
+            if (display === DESKTOP_SECRET) {
+                $falcon.navTo('desktop', { from: 'index' });
+            }
+        },
+
+        press(key: CalcKey) {
+            this.pressedKey = key.key;
+        },
+
+        release() {
+            this.pressedKey = '';
         },
     },
 });
+
+function prettyToken(token: string): string {
+    switch (token) {
+        case 'sqrt(':
+            return '√(';
+        case '*':
+            return '×';
+        case '/':
+            return '÷';
+        case '^2':
+            return '²';
+        case 'e^':
+            return 'e^';
+        case '10^':
+            return '10^';
+        default:
+            return token;
+    }
+}
 
 export default index;

@@ -1,0 +1,1438 @@
+
+/* ===== function depth=0 ===== */
+/* debug: qq-message-archive-d42bf7e9.js:1 source_len=0 */
+qq-message-archive-d42bf7e9.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: e local:loc0 const
+    1: r local:loc1 const
+    2: t local:loc2 const
+    3: a local:loc3 const
+    4: n local:loc4 var
+    5: i local:loc5 var
+    6: o local:loc6 var
+    7: s local:loc7 var
+    8: u local:loc8 var
+    9: c local:loc9 var
+   10: l local:loc10 var
+   11: f local:loc11 var
+   12: h local:loc12 var
+   13: g local:loc13 var
+   14: p local:loc14 var
+  stack_size: 2
+  opcodes:
+    0:  fclosure8 0: [bytecode n]
+    2:  put_var_ref 4: n
+    5:  fclosure8 1: [bytecode i]
+    7:  put_var_ref 5: i
+   10:  fclosure8 2: [bytecode o]
+   12:  put_var_ref 6: o
+   15:  fclosure8 3: [bytecode s]
+   17:  put_var_ref 7: s
+   20:  fclosure8 4: [bytecode u]
+   22:  put_var_ref 8: u
+   25:  fclosure8 5: [bytecode c]
+   27:  put_var_ref 9: c
+   30:  fclosure8 6: [bytecode l]
+   32:  put_var_ref 10: l
+   35:  fclosure8 7: [bytecode f]
+   37:  put_var_ref 11: f
+   40:  fclosure8 8: [bytecode h]
+   42:  put_var_ref 12: h
+   45:  fclosure8 9: [bytecode g]
+   47:  put_var_ref 13: g
+   50:  fclosure8 10: [bytecode p]
+   52:  put_var_ref 14: p
+   55:  push_i16 400
+   58:  put_var_ref0 0: e
+   59:  push_2 2
+   60:  put_var_ref1 1: r
+   61:  push_i8 80
+   63:  put_var_ref2 2: t
+   64:  push_atom_value function
+   69:  get_var_undef WeakMap
+   74:  typeof
+   75:  eq
+   76:  if_false8 89
+   78:  get_var WeakMap
+   83:  dup
+   84:  call_constructor 0
+   87:  goto8 90
+   89:  null
+   90:  put_var_ref3 3: a
+   91:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: qq-message-archive-d42bf7e9.js:1 source_len=0 */
+qq-message-archive-d42bf7e9.js:1: function: n
+  mode: strict
+  args: e r
+  stack_size: 2
+  opcodes:
+    0:  push_atom_value ob_msgarc_meta_
+    5:  get_arg0 0: e
+    6:  add
+    7:  push_atom_value _
+   12:  add
+   13:  get_arg1 1: r
+   14:  add
+   15:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: qq-message-archive-d42bf7e9.js:1 source_len=0 */
+qq-message-archive-d42bf7e9.js:1: function: i
+  mode: strict
+  args: e r t
+  stack_size: 2
+  opcodes:
+    0:  push_atom_value ob_msgarc_
+    5:  get_arg0 0: e
+    6:  add
+    7:  push_atom_value _
+   12:  add
+   13:  get_arg1 1: r
+   14:  add
+   15:  push_atom_value _
+   20:  add
+   21:  get_arg2 2: t
+   22:  add
+   23:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: qq-message-archive-d42bf7e9.js:1 source_len=0 */
+qq-message-archive-d42bf7e9.js:1: function: o
+  mode: strict
+  args: e r
+  locals:
+    0: var t
+    1: catch e [level:6 next:-1]
+    2: catch e [level:9 next:-1]
+  stack_size: 5
+  opcodes:
+    0:  get_arg0 0: e
+    1:  lnot
+    2:  dup
+    3:  if_true8 19
+    5:  drop
+    6:  push_atom_value function
+   11:  get_arg0 0: e
+   12:  get_field read
+   17:  typeof
+   18:  neq
+   19:  if_false8 23
+   21:  null
+   22:  return
+   23:  catch 94
+   28:  get_arg0 0: e
+   29:  get_field2 read
+   34:  get_arg1 1: r
+   35:  call_method 1
+   38:  put_loc0 0: t
+   39:  push_atom_value string
+   44:  get_loc0 0: t
+   45:  typeof
+   46:  eq
+   47:  if_false8 83
+   49:  catch 72
+   54:  get_var JSON
+   59:  get_field2 parse
+   64:  get_loc0 0: t
+   65:  call_method 1
+   68:  put_loc0 0: t
+   69:  drop
+   70:  goto8 83
+   72:  put_loc1 1: e
+   73:  catch 82
+   78:  null
+   79:  nip
+   80:  nip
+   81:  return
+   82:  throw
+   83:  undefined
+   84:  get_loc0 0: t
+   85:  strict_eq
+   86:  if_false8 91
+   88:  null
+   89:  goto8 92
+   91:  get_loc0 0: t
+   92:  nip
+   93:  return
+   94:  put_loc2 2: e
+   95:  catch 103
+  100:  null
+  101:  nip
+  102:  return
+  103:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: qq-message-archive-d42bf7e9.js:1 source_len=0 */
+qq-message-archive-d42bf7e9.js:1: function: s
+  mode: strict
+  args: e
+  locals:
+    0: var r
+    1: var t
+    2: var a
+    3: var n
+    4: var i
+    5: var o
+  stack_size: 5
+  opcodes:
+    0:  get_var Array
+    5:  get_field2 isArray
+   10:  get_arg0 0: e
+   11:  call_method 1
+   14:  if_false8 19
+   16:  get_arg0 0: e
+   17:  goto8 22
+   19:  array_from 0
+   22:  put_loc0 0: r
+   23:  array_from 0
+   26:  put_loc1 1: t
+   27:  push_0 0
+   28:  put_loc2 2: a
+   29:  get_loc2 2: a
+   30:  get_loc0 0: r
+   31:  get_length
+   32:  lt
+   33:  if_false 220
+   38:  get_loc0 0: r
+   39:  get_loc2 2: a
+   40:  get_array_el
+   41:  set_loc3 3: n
+   42:  if_false 204
+   47:  object
+   48:  put_loc8 4: i
+   50:  get_loc3 3: n
+   51:  for_in_start
+   52:  goto8 131
+   54:  put_loc8 5: o
+   56:  get_var Object
+   61:  get_field prototype
+   66:  get_field hasOwnProperty
+   71:  get_field2 call
+   76:  get_loc3 3: n
+   77:  get_loc8 5: o
+   79:  call_method 2
+   82:  dup
+   83:  if_false8 130
+   85:  drop
+   86:  push_atom_value _
+   91:  get_loc8 5: o
+   93:  get_field2 charAt
+   98:  push_0 0
+   99:  call_method 1
+  102:  strict_neq
+  103:  dup
+  104:  if_false8 130
+  106:  drop
+  107:  push_atom_value rawPacket
+  112:  get_loc8 5: o
+  114:  strict_neq
+  115:  dup
+  116:  if_false8 130
+  118:  drop
+  119:  get_loc8 4: i
+  121:  get_loc8 5: o
+  123:  to_propkey2
+  124:  get_loc3 3: n
+  125:  get_loc8 5: o
+  127:  get_array_el
+  128:  insert3
+  129:  put_array_el
+  130:  drop
+  131:  for_in_next
+  132:  if_false8 54
+  134:  drop
+  135:  drop
+  136:  get_loc8 4: i
+  138:  get_var Number
+  143:  get_loc3 3: n
+  144:  get_field rawPacket
+  149:  dup
+  150:  if_false8 164
+  152:  drop
+  153:  get_loc3 3: n
+  154:  get_field rawPacket
+  159:  get_field bixia_instance_seq
+  164:  dup
+  165:  if_true8 179
+  167:  drop
+  168:  get_loc3 3: n
+  169:  get_field seq
+  174:  dup
+  175:  if_true8 179
+  177:  drop
+  178:  push_0 0
+  179:  call1 1
+  180:  dup
+  181:  if_true8 185
+  183:  drop
+  184:  push_0 0
+  185:  put_field seq
+  190:  get_loc1 1: t
+  191:  get_field2 push
+  196:  get_loc8 4: i
+  198:  call_method 1
+  201:  drop
+  202:  goto8 215
+  204:  get_loc1 1: t
+  205:  get_field2 push
+  210:  get_loc3 3: n
+  211:  call_method 1
+  214:  drop
+  215:  inc_loc 2: a
+  217:  goto16 29
+  220:  get_loc1 1: t
+  221:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: qq-message-archive-d42bf7e9.js:1 source_len=0 */
+qq-message-archive-d42bf7e9.js:1: function: u
+  mode: strict
+  args: e
+  stack_size: 4
+  opcodes:
+    0:  get_arg0 0: e
+    1:  if_false8 118
+    3:  undefined
+    4:  get_arg0 0: e
+    5:  get_field msgId
+   10:  strict_neq
+   11:  if_false8 46
+   13:  null
+   14:  get_arg0 0: e
+   15:  get_field msgId
+   20:  strict_neq
+   21:  if_false8 46
+   23:  push_empty_string
+   24:  get_arg0 0: e
+   25:  get_field msgId
+   30:  strict_neq
+   31:  if_false8 46
+   33:  push_atom_value i
+   38:  get_arg0 0: e
+   39:  get_field msgId
+   44:  add
+   45:  return
+   46:  push_atom_value f
+   51:  get_var Number
+   56:  get_arg0 0: e
+   57:  get_field time
+   62:  dup
+   63:  if_true8 67
+   65:  drop
+   66:  push_0 0
+   67:  call1 1
+   68:  add
+   69:  push_atom_value "|"
+   74:  add
+   75:  get_var String
+   80:  get_arg0 0: e
+   81:  get_field senderId
+   86:  dup
+   87:  if_true8 91
+   89:  drop
+   90:  push_empty_string
+   91:  call1 1
+   92:  add
+   93:  push_atom_value "|"
+   98:  add
+   99:  get_var String
+  104:  get_arg0 0: e
+  105:  get_field text
+  110:  dup
+  111:  if_true8 115
+  113:  drop
+  114:  push_empty_string
+  115:  call1 1
+  116:  add
+  117:  return
+  118:  push_empty_string
+  119:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: qq-message-archive-d42bf7e9.js:1 source_len=0 */
+qq-message-archive-d42bf7e9.js:1: function: c
+  mode: strict
+  args: e r
+  locals:
+    0: var t
+    1: var a
+  stack_size: 6
+  opcodes:
+    0:  get_arg0 0: e
+    1:  lnot
+    2:  dup
+    3:  if_true8 8
+    5:  drop
+    6:  get_arg1 1: r
+    7:  lnot
+    8:  if_false8 13
+   10:  push_1 1
+   11:  lnot
+   12:  return
+   13:  get_arg0 0: e
+   14:  get_field recentSet
+   19:  get_arg1 1: r
+   20:  get_array_el
+   21:  if_false8 26
+   23:  push_1 1
+   24:  lnot
+   25:  return
+   26:  get_arg0 0: e
+   27:  get_field recentSet
+   32:  get_arg1 1: r
+   33:  to_propkey2
+   34:  push_0 0
+   35:  lnot
+   36:  put_array_el
+   37:  get_arg0 0: e
+   38:  get_field recentKeys
+   43:  get_field2 push
+   48:  get_arg1 1: r
+   49:  call_method 1
+   52:  drop
+   53:  get_arg0 0: e
+   54:  get_field recentKeys
+   59:  get_length
+   60:  push_i16 3000
+   63:  gt
+   64:  if_false8 121
+   66:  get_arg0 0: e
+   67:  get_field recentKeys
+   72:  get_field2 splice
+   77:  push_0 0
+   78:  get_var Math
+   83:  get_field2 floor
+   88:  push_i16 1500
+   91:  call_method 1
+   94:  call_method 2
+   97:  put_loc0 0: t
+   98:  push_0 0
+   99:  put_loc1 1: a
+  100:  get_loc1 1: a
+  101:  get_loc0 0: t
+  102:  get_length
+  103:  lt
+  104:  if_false8 121
+  106:  get_arg0 0: e
+  107:  get_field recentSet
+  112:  get_loc0 0: t
+  113:  get_loc1 1: a
+  114:  get_array_el
+  115:  delete
+  116:  drop
+  117:  inc_loc 1: a
+  119:  goto8 100
+  121:  push_0 0
+  122:  lnot
+  123:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: qq-message-archive-d42bf7e9.js:1 source_len=0 */
+qq-message-archive-d42bf7e9.js:1: function: l
+  mode: strict
+  args: r t l f h
+  locals:
+    0: var p
+    1: var v
+    2: var d
+    3: var y
+    4: catch e [level:6 next:-1]
+    5: var m
+    6: var _
+    7: var A
+    8: var b
+    9: var N
+   10: var w
+   11: var x
+   12: var S
+   13: catch e [level:20 next:-1]
+   14: catch e [level:24 next:-1]
+   15: catch e [level:27 next:-1]
+  closure vars:
+    0: a parent:loc3 const
+    1: o parent:loc6 var
+    2: n parent:loc4 var
+    3: i parent:loc5 var
+    4: c parent:loc9 var
+    5: u parent:loc8 var
+    6: g parent:loc13 var
+    7: s parent:loc7 var
+    8: e parent:loc0 const
+  stack_size: 8
+  opcodes:
+    0:  get_arg0 0: r
+    1:  lnot
+    2:  dup
+    3:  if_true8 19
+    5:  drop
+    6:  push_atom_value function
+   11:  get_arg0 0: r
+   12:  get_field write
+   17:  typeof
+   18:  neq
+   19:  if_false8 41
+   21:  object
+   22:  push_0 0
+   23:  define_field hot
+   28:  push_0 0
+   29:  define_field archived
+   34:  push_0 0
+   35:  define_field pages
+   40:  return
+   41:  get_var Array
+   46:  get_field2 isArray
+   51:  get_arg3 3: f
+   52:  call_method 1
+   55:  if_false8 60
+   57:  get_arg3 3: f
+   58:  goto8 63
+   60:  array_from 0
+   63:  put_loc0 0: p
+   64:  get_var Boolean
+   69:  get_arg 4: h
+   72:  dup
+   73:  if_false8 84
+   75:  drop
+   76:  get_arg 4: h
+   79:  get_field allowShrink
+   84:  call1 1
+   85:  lnot
+   86:  if_false8 142
+   88:  get_var_ref1 1: o
+   89:  get_arg0 0: r
+   90:  push_atom_value ob_msg_
+   95:  get_arg1 1: t
+   96:  add
+   97:  push_atom_value _
+  102:  add
+  103:  get_arg2 2: l
+  104:  add
+  105:  call2 2
+  106:  put_loc1 1: v
+  107:  get_var Array
+  112:  get_field2 isArray
+  117:  get_loc1 1: v
+  118:  call_method 1
+  121:  dup
+  122:  if_false8 141
+  124:  drop
+  125:  get_loc1 1: v
+  126:  get_length
+  127:  get_loc0 0: p
+  128:  get_length
+  129:  gt
+  130:  dup
+  131:  if_false8 141
+  133:  drop
+  134:  get_var_ref 6: g
+  137:  get_loc1 1: v
+  138:  get_loc0 0: p
+  139:  call2 2
+  140:  set_loc0 0: p
+  141:  drop
+  142:  get_var Math
+  147:  get_field2 max
+  152:  push_1 1
+  153:  get_var Number
+  158:  get_arg 4: h
+  161:  dup
+  162:  if_false8 173
+  164:  drop
+  165:  get_arg 4: h
+  168:  get_field hotSize
+  173:  call1 1
+  174:  dup
+  175:  if_true8 181
+  177:  drop
+  178:  push_i16 200
+  181:  call_method 2
+  184:  put_loc2 2: d
+  185:  get_var Math
+  190:  get_field2 max
+  195:  push_0 0
+  196:  get_loc0 0: p
+  197:  get_length
+  198:  get_loc2 2: d
+  199:  sub
+  200:  call_method 2
+  203:  put_loc3 3: y
+  204:  catch 251
+  209:  get_arg0 0: r
+  210:  get_field2 write
+  215:  push_atom_value ob_msg_
+  220:  get_arg1 1: t
+  221:  add
+  222:  push_atom_value _
+  227:  add
+  228:  get_arg2 2: l
+  229:  add
+  230:  get_var_ref 7: s
+  233:  get_loc0 0: p
+  234:  get_field2 slice
+  239:  get_loc3 3: y
+  240:  call_method 1
+  243:  call1 1
+  244:  call_method 2
+  247:  drop
+  248:  drop
+  249:  goto8 262
+  251:  put_loc8 4: e
+  253:  catch 261
+  258:  drop
+  259:  goto8 262
+  261:  throw
+  262:  fclosure8 0: [bytecode <null>]
+  264:  get_arg0 0: r
+  265:  get_arg1 1: t
+  266:  get_arg2 2: l
+  267:  call3 3
+  268:  set_loc8 5: m
+  270:  lnot
+  271:  if_false8 296
+  273:  object
+  274:  get_loc0 0: p
+  275:  get_length
+  276:  get_loc3 3: y
+  277:  sub
+  278:  define_field hot
+  283:  push_0 0
+  284:  define_field archived
+  289:  push_0 0
+  290:  define_field pages
+  295:  return
+  296:  array_from 0
+  299:  put_loc8 6: _
+  301:  push_0 0
+  302:  put_loc8 7: A
+  304:  get_loc8 7: A
+  306:  get_loc3 3: y
+  307:  lt
+  308:  if_false8 379
+  310:  get_loc0 0: p
+  311:  get_loc8 7: A
+  313:  get_array_el
+  314:  set_loc8 8: b
+  316:  if_false8 375
+  318:  get_loc8 8: b
+  320:  get_field _archived
+  325:  lnot
+  326:  if_false8 375
+  328:  get_var_ref 5: u
+  331:  get_loc8 8: b
+  333:  call1 1
+  334:  set_loc8 9: N
+  336:  if_false8 362
+  338:  get_loc8 5: m
+  340:  get_field recentSet
+  345:  get_loc8 9: N
+  347:  get_array_el
+  348:  if_false8 362
+  350:  get_loc8 8: b
+  352:  push_0 0
+  353:  lnot
+  354:  insert2
+  355:  put_field _archived
+  360:  goto8 374
+  362:  get_loc8 6: _
+  364:  get_field2 push
+  369:  get_loc8 8: b
+  371:  call_method 1
+  374:  drop
+  375:  inc_loc 7: A
+  377:  goto8 304
+  379:  get_loc8 6: _
+  381:  get_length
+  382:  if_false 732
+  387:  push_0 0
+  388:  put_loc8 10: w
+  390:  get_loc8 10: w
+  392:  get_loc8 6: _
+  394:  get_length
+  395:  lt
+  396:  if_false8 447
+  398:  get_loc8 6: _
+  400:  get_loc8 10: w
+  402:  get_array_el
+  403:  set_loc8 11: x
+  405:  push_0 0
+  406:  lnot
+  407:  put_field _archived
+  412:  get_var_ref 4: c
+  415:  get_loc8 5: m
+  417:  get_var_ref 5: u
+  420:  get_loc8 11: x
+  422:  call1 1
+  423:  call2 2
+  424:  drop
+  425:  get_loc8 5: m
+  427:  get_field open
+  432:  get_field2 push
+  437:  get_loc8 11: x
+  439:  call_method 1
+  442:  drop
+  443:  inc_loc 10: w
+  445:  goto8 390
+  447:  get_loc8 5: m
+  449:  get_field open
+  454:  get_length
+  455:  get_var_ref_check 8: e
+  458:  gte
+  459:  if_false8 569
+  461:  get_loc8 5: m
+  463:  get_field open
+  468:  get_field2 slice
+  473:  push_0 0
+  474:  get_var_ref_check 8: e
+  477:  call_method 2
+  480:  put_loc8 12: S
+  482:  catch 517
+  487:  get_arg0 0: r
+  488:  get_field2 write
+  493:  get_var_ref3 3: i
+  494:  get_arg1 1: t
+  495:  get_arg2 2: l
+  496:  get_loc8 5: m
+  498:  get_field sealed
+  503:  call3 3
+  504:  get_var_ref 7: s
+  507:  get_loc8 12: S
+  509:  call1 1
+  510:  call_method 2
+  513:  drop
+  514:  drop
+  515:  goto8 528
+  517:  put_loc8 13: e
+  519:  catch 527
+  524:  drop
+  525:  goto8 528
+  527:  throw
+  528:  get_loc8 5: m
+  530:  get_field2 sealed
+  535:  push_1 1
+  536:  add
+  537:  put_field sealed
+  542:  get_loc8 5: m
+  544:  get_loc8 5: m
+  546:  get_field open
+  551:  get_field2 slice
+  556:  get_var_ref_check 8: e
+  559:  call_method 1
+  562:  put_field open
+  567:  goto8 447
+  569:  get_loc8 5: m
+  571:  get_field open
+  576:  get_length
+  577:  if_false8 630
+  579:  catch 619
+  584:  get_arg0 0: r
+  585:  get_field2 write
+  590:  get_var_ref3 3: i
+  591:  get_arg1 1: t
+  592:  get_arg2 2: l
+  593:  get_loc8 5: m
+  595:  get_field sealed
+  600:  call3 3
+  601:  get_var_ref 7: s
+  604:  get_loc8 5: m
+  606:  get_field open
+  611:  call1 1
+  612:  call_method 2
+  615:  drop
+  616:  drop
+  617:  goto8 630
+  619:  put_loc8 14: e
+  621:  catch 629
+  626:  drop
+  627:  goto8 630
+  629:  throw
+  630:  catch 721
+  635:  get_arg0 0: r
+  636:  get_field2 write
+  641:  get_var_ref2 2: n
+  642:  get_arg1 1: t
+  643:  get_arg2 2: l
+  644:  call2 2
+  645:  object
+  646:  get_loc8 5: m
+  648:  get_field sealed
+  653:  define_field sealed
+  658:  get_loc8 5: m
+  660:  get_field open
+  665:  get_length
+  666:  define_field openCount
+  671:  get_loc8 5: m
+  673:  get_field sealed
+  678:  get_var_ref_check 8: e
+  681:  mul
+  682:  get_loc8 5: m
+  684:  get_field open
+  689:  get_length
+  690:  add
+  691:  define_field total
+  696:  get_var Date
+  701:  get_field2 now
+  706:  call_method 0
+  709:  define_field updatedAt
+  714:  call_method 2
+  717:  drop
+  718:  drop
+  719:  goto8 732
+  721:  put_loc8 15: e
+  723:  catch 731
+  728:  drop
+  729:  goto8 732
+  731:  throw
+  732:  object
+  733:  get_loc0 0: p
+  734:  get_length
+  735:  get_loc3 3: y
+  736:  sub
+  737:  define_field hot
+  742:  get_loc8 5: m
+  744:  get_field sealed
+  749:  get_var_ref_check 8: e
+  752:  mul
+  753:  get_loc8 5: m
+  755:  get_field open
+  760:  get_length
+  761:  add
+  762:  define_field archived
+  767:  get_loc8 5: m
+  769:  get_field sealed
+  774:  define_field pages
+  779:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: qq-message-archive-d42bf7e9.js:1 source_len=0 */
+qq-message-archive-d42bf7e9.js:1: function: <null>
+  mode: strict
+  args: e r t
+  locals:
+    0: var s
+    1: var l
+    2: var f
+    3: var h
+    4: var g
+    5: var p
+    6: var v
+    7: var d
+  closure vars:
+    0: a parent:loc0 const
+    1: o parent:loc1 var
+    2: n parent:loc2 var
+    3: i parent:loc3 var
+    4: c parent:loc4 var
+    5: u parent:loc5 var
+  stack_size: 6
+  opcodes:
+    0:  get_var_ref_check 0: a
+    3:  lnot
+    4:  if_false8 8
+    6:  null
+    7:  return
+    8:  get_var_ref_check 0: a
+   11:  get_field2 get
+   16:  get_arg0 0: e
+   17:  call_method 1
+   20:  set_loc0 0: s
+   21:  dup
+   22:  if_true8 40
+   24:  drop
+   25:  object
+   26:  put_loc0 0: s
+   27:  get_var_ref_check 0: a
+   30:  get_field2 set
+   35:  get_arg0 0: e
+   36:  get_loc0 0: s
+   37:  call_method 2
+   40:  drop
+   41:  get_arg1 1: r
+   42:  push_atom_value _
+   47:  add
+   48:  get_arg2 2: t
+   49:  add
+   50:  put_loc1 1: l
+   51:  get_loc0 0: s
+   52:  get_loc1 1: l
+   53:  get_array_el
+   54:  set_loc2 2: f
+   55:  lnot
+   56:  if_false 251
+   61:  get_var_ref1 1: o
+   62:  get_arg0 0: e
+   63:  get_var_ref2 2: n
+   64:  get_arg1 1: r
+   65:  get_arg2 2: t
+   66:  call2 2
+   67:  call2 2
+   68:  put_loc3 3: h
+   69:  get_var Math
+   74:  get_field2 max
+   79:  push_0 0
+   80:  get_var Number
+   85:  get_loc3 3: h
+   86:  dup
+   87:  if_false8 96
+   89:  drop
+   90:  get_loc3 3: h
+   91:  get_field sealed
+   96:  call1 1
+   97:  dup
+   98:  if_true8 102
+  100:  drop
+  101:  push_0 0
+  102:  call_method 2
+  105:  put_loc8 4: g
+  107:  array_from 0
+  110:  put_loc8 5: p
+  112:  get_var Math
+  117:  get_field2 max
+  122:  push_0 0
+  123:  get_var Number
+  128:  get_loc3 3: h
+  129:  dup
+  130:  if_false8 139
+  132:  drop
+  133:  get_loc3 3: h
+  134:  get_field openCount
+  139:  call1 1
+  140:  dup
+  141:  if_true8 145
+  143:  drop
+  144:  push_0 0
+  145:  call_method 2
+  148:  push_0 0
+  149:  gt
+  150:  if_false8 187
+  152:  get_var_ref1 1: o
+  153:  get_arg0 0: e
+  154:  get_var_ref3 3: i
+  155:  get_arg1 1: r
+  156:  get_arg2 2: t
+  157:  get_loc8 4: g
+  159:  call3 3
+  160:  call2 2
+  161:  put_loc8 6: v
+  163:  get_var Array
+  168:  get_field2 isArray
+  173:  get_loc8 6: v
+  175:  call_method 1
+  178:  dup
+  179:  if_false8 186
+  181:  drop
+  182:  get_loc8 6: v
+  184:  set_loc8 5: p
+  186:  drop
+  187:  object
+  188:  get_loc8 4: g
+  190:  define_field sealed
+  195:  get_loc8 5: p
+  197:  define_field open
+  202:  array_from 0
+  205:  define_field recentKeys
+  210:  object
+  211:  define_field recentSet
+  216:  put_loc2 2: f
+  217:  push_0 0
+  218:  put_loc8 7: d
+  220:  get_loc8 7: d
+  222:  get_loc8 5: p
+  224:  get_length
+  225:  lt
+  226:  if_false8 247
+  228:  get_var_ref 4: c
+  231:  get_loc2 2: f
+  232:  get_var_ref 5: u
+  235:  get_loc8 5: p
+  237:  get_loc8 7: d
+  239:  get_array_el
+  240:  call1 1
+  241:  call2 2
+  242:  drop
+  243:  inc_loc 7: d
+  245:  goto8 220
+  247:  get_loc0 0: s
+  248:  get_loc1 1: l
+  249:  get_loc2 2: f
+  250:  put_array_el
+  251:  get_loc2 2: f
+  252:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: qq-message-archive-d42bf7e9.js:1 source_len=0 */
+qq-message-archive-d42bf7e9.js:1: function: f
+  mode: strict
+  args: r t a s
+  locals:
+    0: var u
+    1: var c
+    2: var l
+    3: var f
+    4: var h
+    5: var g
+    6: var p
+    7: var v
+    8: var d
+    9: var y
+   10: var m
+  closure vars:
+    0: o parent:loc6 var
+    1: n parent:loc4 var
+    2: e parent:loc0 const
+    3: i parent:loc5 var
+  stack_size: 6
+  opcodes:
+    0:  object
+    1:  array_from 0
+    4:  define_field messages
+    9:  push_0 0
+   10:  define_field loadedPages
+   15:  push_minus1 -1
+   16:  define_field nextOlderPage
+   21:  push_0 0
+   22:  define_field total
+   27:  put_loc0 0: u
+   28:  get_arg0 0: r
+   29:  lnot
+   30:  dup
+   31:  if_true8 47
+   33:  drop
+   34:  push_atom_value function
+   39:  get_arg0 0: r
+   40:  get_field read
+   45:  typeof
+   46:  neq
+   47:  if_false8 51
+   49:  get_loc0 0: u
+   50:  return
+   51:  get_var_ref0 0: o
+   52:  get_arg0 0: r
+   53:  get_var_ref1 1: n
+   54:  get_arg1 1: t
+   55:  get_arg2 2: a
+   56:  call2 2
+   57:  call2 2
+   58:  set_loc1 1: c
+   59:  lnot
+   60:  if_false8 64
+   62:  get_loc0 0: u
+   63:  return
+   64:  get_var Math
+   69:  get_field2 max
+   74:  push_0 0
+   75:  get_var Number
+   80:  get_loc1 1: c
+   81:  get_field sealed
+   86:  call1 1
+   87:  dup
+   88:  if_true8 92
+   90:  drop
+   91:  push_0 0
+   92:  call_method 2
+   95:  put_loc2 2: l
+   96:  get_var Math
+  101:  get_field2 max
+  106:  push_0 0
+  107:  get_var Number
+  112:  get_loc1 1: c
+  113:  get_field openCount
+  118:  call1 1
+  119:  dup
+  120:  if_true8 124
+  122:  drop
+  123:  push_0 0
+  124:  call_method 2
+  127:  put_loc3 3: f
+  128:  get_loc0 0: u
+  129:  get_loc2 2: l
+  130:  get_var_ref_check 2: e
+  133:  mul
+  134:  get_loc3 3: f
+  135:  add
+  136:  put_field total
+  141:  get_var Math
+  146:  get_field2 max
+  151:  push_0 0
+  152:  get_var Number
+  157:  get_arg3 3: s
+  158:  call1 1
+  159:  dup
+  160:  if_true8 164
+  162:  drop
+  163:  push_0 0
+  164:  call_method 2
+  167:  put_loc8 4: h
+  169:  array_from 0
+  172:  put_loc8 5: g
+  174:  push_0 0
+  175:  put_loc8 6: p
+  177:  get_loc2 2: l
+  178:  push_1 1
+  179:  sub
+  180:  put_loc8 7: v
+  182:  get_loc8 7: v
+  184:  push_0 0
+  185:  gte
+  186:  if_false8 252
+  188:  get_loc8 6: p
+  190:  get_loc8 4: h
+  192:  lt
+  193:  if_false8 252
+  195:  get_var_ref0 0: o
+  196:  get_arg0 0: r
+  197:  get_var_ref3 3: i
+  198:  get_arg1 1: t
+  199:  get_arg2 2: a
+  200:  get_loc8 7: v
+  202:  call3 3
+  203:  call2 2
+  204:  put_loc8 8: d
+  206:  get_var Array
+  211:  get_field2 isArray
+  216:  get_loc8 8: d
+  218:  call_method 1
+  221:  lnot
+  222:  dup
+  223:  if_true8 230
+  225:  drop
+  226:  get_loc8 8: d
+  228:  get_length
+  229:  lnot
+  230:  if_true8 252
+  232:  get_loc8 5: g
+  234:  get_field2 unshift
+  239:  get_loc8 8: d
+  241:  call_method 1
+  244:  drop
+  245:  push_1 1
+  246:  add_loc 6: p
+  248:  dec_loc 7: v
+  250:  goto8 182
+  252:  get_loc8 4: h
+  254:  push_0 0
+  255:  gt
+  256:  if_false8 312
+  258:  get_loc3 3: f
+  259:  push_0 0
+  260:  gt
+  261:  if_false8 312
+  263:  get_var_ref0 0: o
+  264:  get_arg0 0: r
+  265:  get_var_ref3 3: i
+  266:  get_arg1 1: t
+  267:  get_arg2 2: a
+  268:  get_loc2 2: l
+  269:  call3 3
+  270:  call2 2
+  271:  put_loc8 9: y
+  273:  get_var Array
+  278:  get_field2 isArray
+  283:  get_loc8 9: y
+  285:  call_method 1
+  288:  dup
+  289:  if_false8 311
+  291:  drop
+  292:  get_loc8 9: y
+  294:  get_length
+  295:  dup
+  296:  if_false8 311
+  298:  drop
+  299:  get_loc8 5: g
+  301:  get_field2 push
+  306:  get_loc8 9: y
+  308:  call_method 1
+  311:  drop
+  312:  get_loc0 0: u
+  313:  get_loc8 6: p
+  315:  put_field loadedPages
+  320:  get_loc0 0: u
+  321:  get_loc2 2: l
+  322:  get_loc8 6: p
+  324:  sub
+  325:  push_1 1
+  326:  sub
+  327:  put_field nextOlderPage
+  332:  push_0 0
+  333:  put_loc8 10: m
+  335:  get_loc8 10: m
+  337:  get_loc8 5: g
+  339:  get_length
+  340:  lt
+  341:  if_false8 372
+  343:  get_loc0 0: u
+  344:  get_loc0 0: u
+  345:  get_field messages
+  350:  get_field2 concat
+  355:  get_loc8 5: g
+  357:  get_loc8 10: m
+  359:  get_array_el
+  360:  call_method 1
+  363:  put_field messages
+  368:  inc_loc 10: m
+  370:  goto8 335
+  372:  get_loc0 0: u
+  373:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: qq-message-archive-d42bf7e9.js:1 source_len=0 */
+qq-message-archive-d42bf7e9.js:1: function: h
+  mode: strict
+  args: e r t a
+  locals:
+    0: var n
+  closure vars:
+    0: o parent:loc6 var
+    1: i parent:loc5 var
+  stack_size: 6
+  opcodes:
+    0:  get_arg0 0: e
+    1:  dup
+    2:  if_false8 31
+    4:  drop
+    5:  push_atom_value function
+   10:  get_arg0 0: e
+   11:  get_field read
+   16:  typeof
+   17:  eq
+   18:  dup
+   19:  if_false8 31
+   21:  drop
+   22:  get_var Number
+   27:  get_arg3 3: a
+   28:  call1 1
+   29:  push_0 0
+   30:  gte
+   31:  lnot
+   32:  if_false8 38
+   34:  array_from 0
+   37:  return
+   38:  get_var_ref0 0: o
+   39:  get_arg0 0: e
+   40:  get_var_ref1 1: i
+   41:  get_arg1 1: r
+   42:  get_arg2 2: t
+   43:  get_arg3 3: a
+   44:  call3 3
+   45:  call2 2
+   46:  put_loc0 0: n
+   47:  get_var Array
+   52:  get_field2 isArray
+   57:  get_loc0 0: n
+   58:  call_method 1
+   61:  if_false8 65
+   63:  get_loc0 0: n
+   64:  return
+   65:  array_from 0
+   68:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: qq-message-archive-d42bf7e9.js:1 source_len=0 */
+qq-message-archive-d42bf7e9.js:1: function: g
+  mode: strict
+  args: e r
+  locals:
+    0: var t
+    1: var a
+    2: var n
+    3: var i
+    4: var o
+    5: var s
+    6: var c
+    7: var l
+  closure vars:
+    0: u parent:loc8 var
+  stack_size: 4
+  opcodes:
+    0:  array_from 0
+    3:  put_loc0 0: t
+    4:  object
+    5:  put_loc1 1: a
+    6:  get_arg0 0: e
+    7:  get_arg1 1: r
+    8:  array_from 2
+   11:  put_loc2 2: n
+   12:  push_0 0
+   13:  put_loc3 3: i
+   14:  get_loc3 3: i
+   15:  get_loc2 2: n
+   16:  get_length
+   17:  lt
+   18:  if_false8 113
+   20:  get_var Array
+   25:  get_field2 isArray
+   30:  get_loc2 2: n
+   31:  get_loc3 3: i
+   32:  get_array_el
+   33:  call_method 1
+   36:  if_false8 43
+   38:  get_loc2 2: n
+   39:  get_loc3 3: i
+   40:  get_array_el
+   41:  goto8 46
+   43:  array_from 0
+   46:  put_loc8 4: o
+   48:  push_0 0
+   49:  put_loc8 5: s
+   51:  get_loc8 5: s
+   53:  get_loc8 4: o
+   55:  get_length
+   56:  lt
+   57:  if_false8 109
+   59:  get_loc8 4: o
+   61:  get_loc8 5: s
+   63:  get_array_el
+   64:  set_loc8 6: c
+   66:  if_false8 105
+   68:  get_var_ref0 0: u
+   69:  get_loc8 6: c
+   71:  call1 1
+   72:  set_loc8 7: l
+   74:  dup
+   75:  if_false8 104
+   77:  drop
+   78:  get_loc1 1: a
+   79:  get_loc8 7: l
+   81:  get_array_el
+   82:  dup
+   83:  if_true8 104
+   85:  drop
+   86:  get_loc1 1: a
+   87:  get_loc8 7: l
+   89:  to_propkey2
+   90:  push_0 0
+   91:  lnot
+   92:  put_array_el
+   93:  get_loc0 0: t
+   94:  get_field2 push
+   99:  get_loc8 6: c
+  101:  call_method 1
+  104:  drop
+  105:  inc_loc 5: s
+  107:  goto8 51
+  109:  inc_loc 3: i
+  111:  goto8 14
+  113:  get_loc0 0: t
+  114:  get_field2 sort
+  119:  fclosure8 0: [bytecode <null>]
+  121:  call_method 1
+  124:  drop
+  125:  get_loc0 0: t
+  126:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: qq-message-archive-d42bf7e9.js:1 source_len=0 */
+qq-message-archive-d42bf7e9.js:1: function: <null>
+  mode: strict
+  args: e r
+  stack_size: 4
+  opcodes:
+    0:  get_var Number
+    5:  get_arg0 0: e
+    6:  dup
+    7:  if_false8 16
+    9:  drop
+   10:  get_arg0 0: e
+   11:  get_field time
+   16:  dup
+   17:  if_true8 21
+   19:  drop
+   20:  push_0 0
+   21:  call1 1
+   22:  get_var Number
+   27:  get_arg1 1: r
+   28:  dup
+   29:  if_false8 38
+   31:  drop
+   32:  get_arg1 1: r
+   33:  get_field time
+   38:  dup
+   39:  if_true8 43
+   41:  drop
+   42:  push_0 0
+   43:  call1 1
+   44:  sub
+   45:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: qq-message-archive-d42bf7e9.js:1 source_len=0 */
+qq-message-archive-d42bf7e9.js:1: function: p
+  mode: strict
+  args: e r
+  locals:
+    0: var t
+    1: catch e [level:6 next:-1]
+    2: catch e [level:9 next:-1]
+  stack_size: 5
+  opcodes:
+    0:  get_arg0 0: e
+    1:  lnot
+    2:  dup
+    3:  if_true8 19
+    5:  drop
+    6:  push_atom_value function
+   11:  get_arg0 0: e
+   12:  get_field read
+   17:  typeof
+   18:  neq
+   19:  if_false8 25
+   21:  array_from 0
+   24:  return
+   25:  catch 111
+   30:  get_arg0 0: e
+   31:  get_field2 read
+   36:  get_arg1 1: r
+   37:  call_method 1
+   40:  put_loc0 0: t
+   41:  push_atom_value string
+   46:  get_loc0 0: t
+   47:  typeof
+   48:  eq
+   49:  if_false8 87
+   51:  catch 74
+   56:  get_var JSON
+   61:  get_field2 parse
+   66:  get_loc0 0: t
+   67:  call_method 1
+   70:  put_loc0 0: t
+   71:  drop
+   72:  goto8 87
+   74:  put_loc1 1: e
+   75:  catch 86
+   80:  array_from 0
+   83:  nip
+   84:  nip
+   85:  return
+   86:  throw
+   87:  get_var Array
+   92:  get_field2 isArray
+   97:  get_loc0 0: t
+   98:  call_method 1
+  101:  if_false8 106
+  103:  get_loc0 0: t
+  104:  goto8 109
+  106:  array_from 0
+  109:  nip
+  110:  return
+  111:  put_loc2 2: e
+  112:  catch 122
+  117:  array_from 0
+  120:  nip
+  121:  return
+  122:  throw
+

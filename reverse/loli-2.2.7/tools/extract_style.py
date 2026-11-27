@@ -55,12 +55,21 @@ def parse_value(text):
     return '<expr>'
 
 
-def extract(lines):
-    start = None
-    for i, line in enumerate(lines):
-        if 'get_field2 assign' in line:
-            start = i + 1
-            break
+OFFSET_PREFIX = re.compile(r'^\s*\d+:\s+')
+
+
+def strip_offsets(lines):
+    # dump_bc prints absolute byte offsets like "  123:  get_field2 assign".
+    return [OFFSET_PREFIX.sub('', line) for line in lines]
+
+
+def extract(lines, start=None):
+    lines = strip_offsets(lines)
+    if start is None:
+        for i, line in enumerate(lines):
+            if 'get_field2 assign' in line:
+                start = i + 1
+                break
     if start is None:
         raise SystemExit('Object.assign not found')
 
@@ -113,7 +122,19 @@ def extract(lines):
 def main():
     path, out_json = sys.argv[1], sys.argv[2]
     lines = open(path, encoding='utf-8', errors='replace').read().splitlines()
-    style = extract(lines)
+    starts = [i + 1 for i, line in enumerate(strip_offsets(lines))
+              if 'get_field2 assign' in line]
+    best, best_len = {}, 0
+    for start in starts:
+        try:
+            root = extract(lines, start)
+        except SystemExit:
+            continue
+        if len(root) > best_len:
+            best, best_len = root, len(root)
+    if not best:
+        raise SystemExit('style root not found')
+    style = best
     json.dump(style, open(out_json, 'w'), ensure_ascii=False, indent=2)
     print('selectors', len(style))
     print(', '.join(list(style)[:30]))

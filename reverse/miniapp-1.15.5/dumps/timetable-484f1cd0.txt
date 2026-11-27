@@ -1,0 +1,1195 @@
+
+/* ===== function depth=0 ===== */
+/* debug: timetable-484f1cd0.js:1 source_len=0 */
+timetable-484f1cd0.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: r local:loc0 const
+    1: e local:loc1 const
+    2: n local:loc2 const
+    3: t local:loc3 var
+    4: i local:loc4 var
+    5: a local:loc5 var
+    6: s local:loc6 var
+    7: f local:loc7 var
+    8: l local:loc8 var
+    9: o local:loc9 var
+   10: u local:loc10 var
+  stack_size: 10
+  opcodes:
+    0:  fclosure8 0: [bytecode i]
+    2:  put_var_ref 4: i
+    5:  fclosure8 1: [bytecode a]
+    7:  put_var_ref 5: a
+   10:  fclosure8 2: [bytecode s]
+   12:  put_var_ref 6: s
+   15:  fclosure8 3: [bytecode f]
+   17:  put_var_ref 7: f
+   20:  fclosure8 4: [bytecode l]
+   22:  put_var_ref 8: l
+   25:  fclosure8 5: [bytecode o]
+   27:  put_var_ref 9: o
+   30:  fclosure8 6: [bytecode u]
+   32:  put_var_ref 10: u
+   35:  push_atom_value timetable_data_v1
+   40:  put_var_ref0 0: r
+   41:  object
+   42:  push_atom_value "08:00"
+   47:  define_field s
+   52:  push_atom_value "08:45"
+   57:  define_field e
+   62:  object
+   63:  push_atom_value "08:55"
+   68:  define_field s
+   73:  push_atom_value "09:40"
+   78:  define_field e
+   83:  object
+   84:  push_atom_value "10:00"
+   89:  define_field s
+   94:  push_atom_value "10:45"
+   99:  define_field e
+  104:  object
+  105:  push_atom_value "10:55"
+  110:  define_field s
+  115:  push_atom_value "11:40"
+  120:  define_field e
+  125:  object
+  126:  push_atom_value "14:00"
+  131:  define_field s
+  136:  push_atom_value "14:45"
+  141:  define_field e
+  146:  object
+  147:  push_atom_value "14:55"
+  152:  define_field s
+  157:  push_atom_value "15:40"
+  162:  define_field e
+  167:  object
+  168:  push_atom_value "16:00"
+  173:  define_field s
+  178:  push_atom_value "16:45"
+  183:  define_field e
+  188:  object
+  189:  push_atom_value "16:55"
+  194:  define_field s
+  199:  push_atom_value "17:40"
+  204:  define_field e
+  209:  array_from 8
+  212:  put_var_ref1 1: e
+  213:  push_atom_value "\u00e5\u0091\u00a8\u00e4\u00b8\u0080"
+  218:  push_atom_value "\u00e5\u0091\u00a8\u00e4\u00ba\u008c"
+  223:  push_atom_value "\u00e5\u0091\u00a8\u00e4\u00b8\u0089"
+  228:  push_atom_value "\u00e5\u0091\u00a8\u00e5\u009b\u009b"
+  233:  push_atom_value "\u00e5\u0091\u00a8\u00e4\u00ba\u0094"
+  238:  push_atom_value "\u00e5\u0091\u00a8\u00e5\u0085\u00ad"
+  243:  push_atom_value "\u00e5\u0091\u00a8\u00e6\u0097\u00a5"
+  248:  array_from 7
+  251:  put_var_ref2 2: n
+  252:  push_atom_value "#6d8cff"
+  257:  push_atom_value "#ff8a5c"
+  262:  push_atom_value "#5cba6d"
+  267:  push_atom_value "#e0699e"
+  272:  push_atom_value "#9b7cff"
+  277:  push_atom_value "#e6b422"
+  282:  push_atom_value "#4db6c5"
+  287:  push_atom_value "#c96a5a"
+  292:  push_atom_value "#8ab04b"
+  297:  push_atom_value "#d98cc0"
+  302:  array_from 10
+  305:  put_var_ref3 3: t
+  306:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: timetable-484f1cd0.js:1 source_len=0 */
+timetable-484f1cd0.js:1: function: i
+  mode: strict
+  args: r
+  locals:
+    0: var e
+    1: var n
+    2: var i
+  closure vars:
+    0: t parent:loc3 var
+  stack_size: 4
+  opcodes:
+    0:  get_arg0 0: r
+    1:  lnot
+    2:  if_false8 10
+    4:  push_atom_value "#3a3a44"
+    9:  return
+   10:  push_0 0
+   11:  put_loc0 0: e
+   12:  get_var String
+   17:  get_arg0 0: r
+   18:  call1 1
+   19:  put_loc1 1: n
+   20:  push_0 0
+   21:  put_loc2 2: i
+   22:  get_loc2 2: i
+   23:  get_loc1 1: n
+   24:  get_length
+   25:  lt
+   26:  if_false8 50
+   28:  push_i8 31
+   30:  get_loc0 0: e
+   31:  mul
+   32:  get_loc1 1: n
+   33:  get_field2 charCodeAt
+   38:  get_loc2 2: i
+   39:  call_method 1
+   42:  add
+   43:  push_0 0
+   44:  shr
+   45:  put_loc0 0: e
+   46:  inc_loc 2: i
+   48:  goto8 22
+   50:  get_var_ref0 0: t
+   51:  get_loc0 0: e
+   52:  get_var_ref0 0: t
+   53:  get_length
+   54:  mod
+   55:  get_array_el
+   56:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: timetable-484f1cd0.js:1 source_len=0 */
+timetable-484f1cd0.js:1: function: a
+  mode: strict
+  args: r
+  locals:
+    0: var e
+    1: var n
+    2: var t
+  stack_size: 4
+  opcodes:
+    0:  push_atom_value string
+    5:  get_arg0 0: r
+    6:  typeof
+    7:  neq
+    8:  if_false8 12
+   10:  push_minus1 -1
+   11:  return
+   12:  get_arg0 0: r
+   13:  get_field2 match
+   18:  push_const8 0: 1"^(\\d{1,2}):(\\d{2})$"
+   20:  push_const8 1: 1"\u0000\u0003\u0000O\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u000b\u0001\u001c\u0008\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u000c\u0001\u0001:\u0000\u000b\u0002\u001c\u0008\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0002\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u000c\u0002\u0006\u000c\u0000\n"
+   22:  regexp
+   23:  call_method 1
+   26:  set_loc0 0: e
+   27:  lnot
+   28:  if_false8 32
+   30:  push_minus1 -1
+   31:  return
+   32:  get_var Number
+   37:  get_loc0 0: e
+   38:  push_1 1
+   39:  get_array_el
+   40:  call1 1
+   41:  put_loc1 1: n
+   42:  get_var Number
+   47:  get_loc0 0: e
+   48:  push_2 2
+   49:  get_array_el
+   50:  call1 1
+   51:  put_loc2 2: t
+   52:  get_loc1 1: n
+   53:  push_i8 24
+   55:  gt
+   56:  dup
+   57:  if_true8 64
+   59:  drop
+   60:  get_loc2 2: t
+   61:  push_i8 59
+   63:  gt
+   64:  if_false8 68
+   66:  push_minus1 -1
+   67:  return
+   68:  push_i8 60
+   70:  get_loc1 1: n
+   71:  mul
+   72:  get_loc2 2: t
+   73:  add
+   74:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: timetable-484f1cd0.js:1 source_len=0 */
+timetable-484f1cd0.js:1: function: s
+  mode: strict
+  args: r
+  locals:
+    0: var e
+    1: var n
+  stack_size: 4
+  opcodes:
+    0:  get_var Math
+    5:  get_field2 floor
+   10:  get_arg0 0: r
+   11:  push_i8 60
+   13:  div
+   14:  call_method 1
+   17:  put_loc0 0: e
+   18:  get_arg0 0: r
+   19:  push_i8 60
+   21:  mod
+   22:  put_loc1 1: n
+   23:  get_loc0 0: e
+   24:  push_i8 10
+   26:  lt
+   27:  if_false8 33
+   29:  push_const8 0: 1"0"
+   31:  goto8 34
+   33:  push_empty_string
+   34:  get_loc0 0: e
+   35:  add
+   36:  push_atom_value ":"
+   41:  add
+   42:  get_loc1 1: n
+   43:  push_i8 10
+   45:  lt
+   46:  if_false8 52
+   48:  push_const8 1: 1"0"
+   50:  goto8 53
+   52:  push_empty_string
+   53:  add
+   54:  get_loc1 1: n
+   55:  add
+   56:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: timetable-484f1cd0.js:1 source_len=0 */
+timetable-484f1cd0.js:1: function: f
+  mode: strict
+  args: r
+  locals:
+    0: var n
+    1: var t
+    2: var i
+    3: var s
+    4: var f
+    5: var l
+    6: var o
+    7: var u
+    8: var d
+    9: var g
+   10: var c
+   11: var v
+   12: var y
+  closure vars:
+    0: e parent:loc1 const
+    1: a parent:loc5 var
+  stack_size: 6
+  opcodes:
+    0:  get_arg0 0: r
+    1:  set_loc0 0: n
+    2:  dup
+    3:  if_false8 14
+    5:  drop
+    6:  push_atom_value object
+   11:  get_loc0 0: n
+   12:  typeof
+   13:  eq
+   14:  dup
+   15:  if_true8 20
+   17:  drop
+   18:  object
+   19:  set_loc0 0: n
+   20:  drop
+   21:  get_var Number
+   26:  get_loc0 0: n
+   27:  get_field days
+   32:  call1 1
+   33:  put_loc1 1: t
+   34:  push_5 5
+   35:  get_loc1 1: t
+   36:  strict_neq
+   37:  dup
+   38:  if_false8 57
+   40:  drop
+   41:  push_6 6
+   42:  get_loc1 1: t
+   43:  strict_neq
+   44:  dup
+   45:  if_false8 57
+   47:  drop
+   48:  push_7 7
+   49:  get_loc1 1: t
+   50:  strict_neq
+   51:  dup
+   52:  if_false8 57
+   54:  drop
+   55:  push_5 5
+   56:  set_loc1 1: t
+   57:  drop
+   58:  get_var Array
+   63:  get_field2 isArray
+   68:  get_loc0 0: n
+   69:  get_field periods
+   74:  call_method 1
+   77:  set_loc2 2: i
+   78:  if_false8 99
+   80:  get_loc0 0: n
+   81:  get_field periods
+   86:  get_field2 slice
+   91:  push_0 0
+   92:  push_i8 12
+   94:  call_method 2
+   97:  goto8 102
+   99:  array_from 0
+  102:  put_loc3 3: s
+  103:  get_loc2 2: i
+  104:  dup
+  105:  if_true8 120
+  107:  drop
+  108:  get_var_ref_check 0: e
+  111:  get_field2 slice
+  116:  call_method 0
+  119:  set_loc3 3: s
+  120:  drop
+  121:  push_0 0
+  122:  put_loc8 4: f
+  124:  get_loc8 4: f
+  126:  get_loc3 3: s
+  127:  get_length
+  128:  lt
+  129:  if_false 261
+  134:  get_loc3 3: s
+  135:  get_loc8 4: f
+  137:  get_array_el
+  138:  put_loc8 5: l
+  140:  get_var_ref_check 0: e
+  143:  get_loc8 4: f
+  145:  get_array_el
+  146:  dup
+  147:  if_true8 160
+  149:  drop
+  150:  get_var_ref_check 0: e
+  153:  get_var_ref_check 0: e
+  156:  get_length
+  157:  push_1 1
+  158:  sub
+  159:  get_array_el
+  160:  put_loc8 6: o
+  162:  get_var_ref1 1: a
+  163:  get_loc8 5: l
+  165:  dup
+  166:  if_false8 176
+  168:  drop
+  169:  get_loc8 5: l
+  171:  get_field s
+  176:  call1 1
+  177:  push_0 0
+  178:  gte
+  179:  if_false8 190
+  181:  get_loc8 5: l
+  183:  get_field s
+  188:  goto8 197
+  190:  get_loc8 6: o
+  192:  get_field s
+  197:  put_loc8 7: u
+  199:  get_var_ref1 1: a
+  200:  get_loc8 5: l
+  202:  dup
+  203:  if_false8 213
+  205:  drop
+  206:  get_loc8 5: l
+  208:  get_field e
+  213:  call1 1
+  214:  push_0 0
+  215:  gte
+  216:  if_false8 227
+  218:  get_loc8 5: l
+  220:  get_field e
+  225:  goto8 234
+  227:  get_loc8 6: o
+  229:  get_field e
+  234:  put_loc8 8: d
+  236:  get_loc3 3: s
+  237:  get_loc8 4: f
+  239:  to_propkey2
+  240:  object
+  241:  get_loc8 7: u
+  243:  define_field s
+  248:  get_loc8 8: d
+  250:  define_field e
+  255:  put_array_el
+  256:  inc_loc 4: f
+  258:  goto16 124
+  261:  get_var Array
+  266:  get_field2 isArray
+  271:  get_loc0 0: n
+  272:  get_field grid
+  277:  call_method 1
+  280:  if_false8 290
+  282:  get_loc0 0: n
+  283:  get_field grid
+  288:  goto8 293
+  290:  array_from 0
+  293:  put_loc8 9: g
+  295:  push_0 0
+  296:  put_loc8 10: c
+  298:  get_loc8 10: c
+  300:  get_loc3 3: s
+  301:  get_length
+  302:  lt
+  303:  if_false 439
+  308:  get_var Array
+  313:  get_field2 isArray
+  318:  get_loc8 9: g
+  320:  get_loc8 10: c
+  322:  get_array_el
+  323:  call_method 1
+  326:  if_false8 343
+  328:  get_loc8 9: g
+  330:  get_loc8 10: c
+  332:  get_array_el
+  333:  get_field2 slice
+  338:  call_method 0
+  341:  goto8 346
+  343:  array_from 0
+  346:  put_loc8 11: v
+  348:  push_0 0
+  349:  put_loc8 12: y
+  351:  get_loc8 12: y
+  353:  get_loc1 1: t
+  354:  lt
+  355:  if_false8 416
+  357:  push_atom_value string
+  362:  get_loc8 11: v
+  364:  get_loc8 12: y
+  366:  get_array_el
+  367:  typeof
+  368:  neq
+  369:  dup
+  370:  if_false8 381
+  372:  drop
+  373:  get_loc8 11: v
+  375:  get_loc8 12: y
+  377:  to_propkey2
+  378:  push_empty_string
+  379:  insert3
+  380:  put_array_el
+  381:  drop
+  382:  get_loc8 11: v
+  384:  get_loc8 12: y
+  386:  to_propkey2
+  387:  get_loc8 11: v
+  389:  get_loc8 12: y
+  391:  get_array_el
+  392:  get_field2 slice
+  397:  push_0 0
+  398:  push_i8 10
+  400:  call_method 2
+  403:  get_field2 trim
+  408:  call_method 0
+  411:  put_array_el
+  412:  inc_loc 12: y
+  414:  goto8 351
+  416:  get_loc8 9: g
+  418:  get_loc8 10: c
+  420:  to_propkey2
+  421:  get_loc8 11: v
+  423:  get_field2 slice
+  428:  push_0 0
+  429:  get_loc1 1: t
+  430:  call_method 2
+  433:  put_array_el
+  434:  inc_loc 10: c
+  436:  goto16 298
+  439:  object
+  440:  get_loc1 1: t
+  441:  define_field days
+  446:  get_loc3 3: s
+  447:  define_field periods
+  452:  get_loc8 9: g
+  454:  define_field grid
+  459:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: timetable-484f1cd0.js:1 source_len=0 */
+timetable-484f1cd0.js:1: function: l
+  mode: strict
+  args: r e
+  locals:
+    0: var n
+    1: var t
+    2: var i
+    3: var s
+    4: var f
+    5: var l
+    6: var o
+    7: var u
+    8: var d
+  closure vars:
+    0: a parent:loc5 var
+  stack_size: 4
+  opcodes:
+    0:  object
+    1:  push_1 1
+    2:  lnot
+    3:  define_field weekend
+    8:  null
+    9:  define_field ongoing
+   14:  null
+   15:  define_field next
+   20:  put_loc0 0: n
+   21:  get_arg0 0: r
+   22:  lnot
+   23:  dup
+   24:  if_true8 45
+   26:  drop
+   27:  get_arg0 0: r
+   28:  get_field periods
+   33:  lnot
+   34:  dup
+   35:  if_true8 45
+   37:  drop
+   38:  get_arg0 0: r
+   39:  get_field grid
+   44:  lnot
+   45:  if_false8 49
+   47:  get_loc0 0: n
+   48:  return
+   49:  get_arg1 1: e
+   50:  get_field2 getDay
+   55:  call_method 0
+   58:  push_6 6
+   59:  add
+   60:  push_7 7
+   61:  mod
+   62:  set_loc1 1: t
+   63:  get_arg0 0: r
+   64:  get_field days
+   69:  gte
+   70:  if_false8 82
+   72:  get_loc0 0: n
+   73:  push_0 0
+   74:  lnot
+   75:  put_field weekend
+   80:  get_loc0 0: n
+   81:  return
+   82:  push_i8 60
+   84:  get_arg1 1: e
+   85:  get_field2 getHours
+   90:  call_method 0
+   93:  mul
+   94:  get_arg1 1: e
+   95:  get_field2 getMinutes
+  100:  call_method 0
+  103:  add
+  104:  put_loc2 2: i
+  105:  get_arg0 0: r
+  106:  get_field periods
+  111:  put_loc3 3: s
+  112:  get_arg0 0: r
+  113:  get_field grid
+  118:  put_loc8 4: f
+  120:  push_0 0
+  121:  put_loc8 5: l
+  123:  get_loc8 5: l
+  125:  get_loc3 3: s
+  126:  get_length
+  127:  lt
+  128:  if_false 309
+  133:  get_var_ref0 0: a
+  134:  get_loc3 3: s
+  135:  get_loc8 5: l
+  137:  get_array_el
+  138:  get_field s
+  143:  call1 1
+  144:  put_loc8 6: o
+  146:  get_var_ref0 0: a
+  147:  get_loc3 3: s
+  148:  get_loc8 5: l
+  150:  get_array_el
+  151:  get_field e
+  156:  call1 1
+  157:  put_loc8 7: u
+  159:  get_loc8 6: o
+  161:  push_0 0
+  162:  lt
+  163:  dup
+  164:  if_true8 180
+  166:  drop
+  167:  get_loc8 7: u
+  169:  push_0 0
+  170:  lt
+  171:  dup
+  172:  if_true8 180
+  174:  drop
+  175:  get_loc8 7: u
+  177:  get_loc8 6: o
+  179:  lt
+  180:  lnot
+  181:  if_false8 304
+  183:  get_loc8 4: f
+  185:  get_loc8 5: l
+  187:  get_array_el
+  188:  dup
+  189:  if_false8 199
+  191:  drop
+  192:  get_loc8 4: f
+  194:  get_loc8 5: l
+  196:  get_array_el
+  197:  get_loc1 1: t
+  198:  get_array_el
+  199:  dup
+  200:  if_true8 204
+  202:  drop
+  203:  push_empty_string
+  204:  set_loc8 8: d
+  206:  if_false8 304
+  208:  get_loc2 2: i
+  209:  get_loc8 6: o
+  211:  gte
+  212:  if_false8 259
+  214:  get_loc2 2: i
+  215:  get_loc8 7: u
+  217:  lte
+  218:  if_false8 259
+  220:  get_loc0 0: n
+  221:  object
+  222:  get_loc8 8: d
+  224:  define_field subject
+  229:  get_loc8 6: o
+  231:  define_field startMin
+  236:  get_loc8 7: u
+  238:  define_field endMin
+  243:  get_loc8 7: u
+  245:  get_loc2 2: i
+  246:  sub
+  247:  define_field remain
+  252:  put_field ongoing
+  257:  goto8 304
+  259:  get_loc8 6: o
+  261:  get_loc2 2: i
+  262:  gt
+  263:  if_false8 304
+  265:  get_loc0 0: n
+  266:  object
+  267:  get_loc8 8: d
+  269:  define_field subject
+  274:  get_loc8 6: o
+  276:  define_field startMin
+  281:  get_loc8 7: u
+  283:  define_field endMin
+  288:  get_loc8 6: o
+  290:  get_loc2 2: i
+  291:  sub
+  292:  define_field inMin
+  297:  put_field next
+  302:  goto8 309
+  304:  inc_loc 5: l
+  306:  goto16 123
+  309:  get_loc0 0: n
+  310:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: timetable-484f1cd0.js:1 source_len=0 */
+timetable-484f1cd0.js:1: function: o
+  mode: strict
+  args: r e
+  locals:
+    0: var n
+    1: var t
+    2: var i
+  closure vars:
+    0: l parent:loc8 var
+    1: f parent:loc7 var
+    2: s parent:loc6 var
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: r
+    1:  set_loc0 0: n
+    2:  lnot
+    3:  dup
+    4:  if_true8 15
+    6:  drop
+    7:  push_atom_value object
+   12:  get_loc0 0: n
+   13:  typeof
+   14:  neq
+   15:  if_false8 19
+   17:  push_empty_string
+   18:  return
+   19:  get_var_ref0 0: l
+   20:  get_var_ref1 1: f
+   21:  get_arg0 0: r
+   22:  call1 1
+   23:  get_arg1 1: e
+   24:  call2 2
+   25:  set_loc1 1: t
+   26:  get_field weekend
+   31:  if_false8 39
+   33:  push_atom_value "\u00e5\u0091\u00a8\u00e6\u009c\u00ab"
+   38:  return
+   39:  get_loc1 1: t
+   40:  get_field next
+   45:  if_false8 122
+   47:  get_loc1 1: t
+   48:  get_field next
+   53:  get_field inMin
+   58:  push_i8 99
+   60:  lte
+   61:  if_false8 82
+   63:  get_loc1 1: t
+   64:  get_field next
+   69:  get_field inMin
+   74:  push_atom_value "\u00e5\u0088\u0086"
+   79:  add
+   80:  goto8 95
+   82:  get_var_ref2 2: s
+   83:  get_loc1 1: t
+   84:  get_field next
+   89:  get_field startMin
+   94:  call1 1
+   95:  put_loc2 2: i
+   96:  push_atom_value "\u00e4\u00b8\u008b\u00e8\u008a\u0082 "
+  101:  get_loc1 1: t
+  102:  get_field next
+  107:  get_field subject
+  112:  add
+  113:  push_atom_value " "
+  118:  add
+  119:  get_loc2 2: i
+  120:  add
+  121:  return
+  122:  push_atom_value "\u00e5\u00b7\u00b2\u00e6\u0094\u00be\u00e5\u00ad\u00a6"
+  127:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: timetable-484f1cd0.js:1 source_len=0 */
+timetable-484f1cd0.js:1: function: u
+  mode: strict
+  args: r
+  locals:
+    0: var n
+    1: var t
+    2: var i
+    3: var s
+    4: catch r [level:5 next:-1]
+    5: var l
+    6: var o
+    7: var u
+    8: var d
+    9: var g
+   10: var c
+   11: var v
+   12: var y
+   13: var h
+   14: var p
+   15: var b
+   16: var A
+   17: var m
+   18: var x
+   19: var M
+   20: var j
+   21: var k
+   22: var N
+   23: var S
+  closure vars:
+    0: e parent:loc1 const
+    1: a parent:loc5 var
+    2: f parent:loc7 var
+  stack_size: 8
+  opcodes:
+    0:  push_atom_value string
+    5:  get_arg0 0: r
+    6:  typeof
+    7:  neq
+    8:  dup
+    9:  if_true8 14
+   11:  drop
+   12:  get_arg0 0: r
+   13:  lnot
+   14:  if_false8 18
+   16:  null
+   17:  return
+   18:  get_arg0 0: r
+   19:  get_field2 replace
+   24:  push_const8 0: 1"```json"
+   26:  push_const8 1: 1"\u0003\u0001\u0000%\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001`\u0000\u0001`\u0000\u0001`\u0000\u0001J\u0000\u0001S\u0000\u0001O\u0000\u0001N\u0000\u000c\u0000\n"
+   28:  regexp
+   29:  push_atom_value "```"
+   34:  call_method 2
+   37:  get_field2 replace
+   42:  push_const8 2: 1"```"
+   44:  push_const8 3: 1"\u0001\u0001\u0000\u0019\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001`\u0000\u0001`\u0000\u0001`\u0000\u000c\u0000\n"
+   46:  regexp
+   47:  push_empty_string
+   48:  call_method 2
+   51:  set_loc0 0: n
+   52:  get_field2 indexOf
+   57:  push_atom_value "{"
+   62:  call_method 1
+   65:  put_loc1 1: t
+   66:  get_loc0 0: n
+   67:  get_field2 lastIndexOf
+   72:  push_atom_value "}"
+   77:  call_method 1
+   80:  put_loc2 2: i
+   81:  get_loc1 1: t
+   82:  push_0 0
+   83:  lt
+   84:  dup
+   85:  if_true8 91
+   87:  drop
+   88:  get_loc2 2: i
+   89:  get_loc1 1: t
+   90:  lte
+   91:  if_false8 95
+   93:  null
+   94:  return
+   95:  null
+   96:  put_loc3 3: s
+   97:  catch 132
+  102:  get_var JSON
+  107:  get_field2 parse
+  112:  get_loc0 0: n
+  113:  get_field2 slice
+  118:  get_loc1 1: t
+  119:  get_loc2 2: i
+  120:  push_1 1
+  121:  add
+  122:  call_method 2
+  125:  call_method 1
+  128:  put_loc3 3: s
+  129:  drop
+  130:  goto8 143
+  132:  put_loc8 4: r
+  134:  catch 142
+  139:  null
+  140:  nip
+  141:  return
+  142:  throw
+  143:  get_loc3 3: s
+  144:  lnot
+  145:  dup
+  146:  if_true8 157
+  148:  drop
+  149:  push_atom_value object
+  154:  get_loc3 3: s
+  155:  typeof
+  156:  neq
+  157:  if_false8 161
+  159:  null
+  160:  return
+  161:  get_var Number
+  166:  get_loc3 3: s
+  167:  get_field days
+  172:  call1 1
+  173:  put_loc8 5: l
+  175:  push_5 5
+  176:  get_loc8 5: l
+  178:  strict_neq
+  179:  if_false 322
+  184:  push_6 6
+  185:  get_loc8 5: l
+  187:  strict_neq
+  188:  if_false 322
+  193:  push_7 7
+  194:  get_loc8 5: l
+  196:  strict_neq
+  197:  if_false8 322
+  199:  push_5 5
+  200:  put_loc8 5: l
+  202:  get_var Array
+  207:  get_field2 isArray
+  212:  get_loc3 3: s
+  213:  get_field grid
+  218:  call_method 1
+  221:  if_false8 322
+  223:  push_0 0
+  224:  put_loc8 6: o
+  226:  push_0 0
+  227:  put_loc8 7: u
+  229:  get_loc8 7: u
+  231:  get_loc3 3: s
+  232:  get_field grid
+  237:  get_length
+  238:  lt
+  239:  if_false8 299
+  241:  get_var Array
+  246:  get_field2 isArray
+  251:  get_loc3 3: s
+  252:  get_field grid
+  257:  get_loc8 7: u
+  259:  get_array_el
+  260:  call_method 1
+  263:  dup
+  264:  if_false8 294
+  266:  drop
+  267:  get_var Math
+  272:  get_field2 max
+  277:  get_loc8 6: o
+  279:  get_loc3 3: s
+  280:  get_field grid
+  285:  get_loc8 7: u
+  287:  get_array_el
+  288:  get_length
+  289:  call_method 2
+  292:  set_loc8 6: o
+  294:  drop
+  295:  inc_loc 7: u
+  297:  goto8 229
+  299:  get_loc8 6: o
+  301:  push_7 7
+  302:  gte
+  303:  if_false8 310
+  305:  push_7 7
+  306:  set_loc8 5: l
+  308:  goto8 321
+  310:  push_6 6
+  311:  get_loc8 6: o
+  313:  strict_eq
+  314:  dup
+  315:  if_false8 321
+  317:  drop
+  318:  push_6 6
+  319:  set_loc8 5: l
+  321:  drop
+  322:  get_var Array
+  327:  get_field2 isArray
+  332:  get_loc3 3: s
+  333:  get_field periods
+  338:  call_method 1
+  341:  if_false8 362
+  343:  get_loc3 3: s
+  344:  get_field periods
+  349:  get_field2 slice
+  354:  push_0 0
+  355:  push_i8 12
+  357:  call_method 2
+  360:  goto8 365
+  362:  array_from 0
+  365:  set_loc8 8: d
+  367:  get_length
+  368:  lnot
+  369:  if_false8 373
+  371:  null
+  372:  return
+  373:  push_0 0
+  374:  put_loc8 9: g
+  376:  get_loc8 9: g
+  378:  get_loc8 8: d
+  380:  get_length
+  381:  lt
+  382:  if_false 551
+  387:  get_loc8 8: d
+  389:  get_loc8 9: g
+  391:  get_array_el
+  392:  dup
+  393:  if_true8 397
+  395:  drop
+  396:  object
+  397:  put_loc8 10: c
+  399:  undefined
+  400:  get_loc8 10: c
+  402:  get_field s
+  407:  strict_neq
+  408:  if_false8 419
+  410:  get_loc8 10: c
+  412:  get_field s
+  417:  goto8 426
+  419:  get_loc8 10: c
+  421:  get_field start
+  426:  put_loc8 11: v
+  428:  undefined
+  429:  get_loc8 10: c
+  431:  get_field e
+  436:  strict_neq
+  437:  if_false8 448
+  439:  get_loc8 10: c
+  441:  get_field e
+  446:  goto8 455
+  448:  get_loc8 10: c
+  450:  get_field end
+  455:  put_loc8 12: y
+  457:  get_var_ref_check 0: e
+  460:  get_loc8 9: g
+  462:  get_array_el
+  463:  dup
+  464:  if_true8 477
+  466:  drop
+  467:  get_var_ref_check 0: e
+  470:  get_var_ref_check 0: e
+  473:  get_length
+  474:  push_1 1
+  475:  sub
+  476:  get_array_el
+  477:  put_loc8 13: h
+  479:  get_loc8 8: d
+  481:  get_loc8 9: g
+  483:  to_propkey2
+  484:  object
+  485:  get_var_ref1 1: a
+  486:  get_loc8 11: v
+  488:  call1 1
+  489:  push_0 0
+  490:  gte
+  491:  if_false8 503
+  493:  get_var String
+  498:  get_loc8 11: v
+  500:  call1 1
+  501:  goto8 510
+  503:  get_loc8 13: h
+  505:  get_field s
+  510:  define_field s
+  515:  get_var_ref1 1: a
+  516:  get_loc8 12: y
+  518:  call1 1
+  519:  push_0 0
+  520:  gte
+  521:  if_false8 533
+  523:  get_var String
+  528:  get_loc8 12: y
+  530:  call1 1
+  531:  goto8 540
+  533:  get_loc8 13: h
+  535:  get_field e
+  540:  define_field e
+  545:  put_array_el
+  546:  inc_loc 9: g
+  548:  goto16 376
+  551:  array_from 0
+  554:  put_loc8 14: p
+  556:  get_var Array
+  561:  get_field2 isArray
+  566:  get_loc3 3: s
+  567:  get_field grid
+  572:  call_method 1
+  575:  if_false8 585
+  577:  get_loc3 3: s
+  578:  get_field grid
+  583:  goto8 588
+  585:  array_from 0
+  588:  put_loc8 15: b
+  590:  push_0 0
+  591:  put_loc8 16: A
+  593:  get_loc8 16: A
+  595:  get_loc8 8: d
+  597:  get_length
+  598:  lt
+  599:  if_false 761
+  604:  get_var Array
+  609:  get_field2 isArray
+  614:  get_loc8 15: b
+  616:  get_loc8 16: A
+  618:  get_array_el
+  619:  call_method 1
+  622:  if_false8 631
+  624:  get_loc8 15: b
+  626:  get_loc8 16: A
+  628:  get_array_el
+  629:  goto8 634
+  631:  array_from 0
+  634:  put_loc8 17: m
+  636:  array_from 0
+  639:  put_loc8 18: x
+  641:  push_0 0
+  642:  put_loc8 19: M
+  644:  get_loc8 19: M
+  646:  get_loc8 5: l
+  648:  lt
+  649:  if_false8 743
+  651:  get_loc8 17: m
+  653:  get_loc8 19: M
+  655:  get_array_el
+  656:  put_loc8 20: j
+  658:  get_loc8 18: x
+  660:  get_field2 push
+  665:  push_atom_value string
+  670:  get_loc8 20: j
+  672:  typeof
+  673:  eq
+  674:  if_false8 699
+  676:  get_loc8 20: j
+  678:  get_field2 trim
+  683:  call_method 0
+  686:  get_field2 slice
+  691:  push_0 0
+  692:  push_i8 10
+  694:  call_method 2
+  697:  goto8 735
+  699:  null
+  700:  get_loc8 20: j
+  702:  eq
+  703:  if_false8 708
+  705:  push_empty_string
+  706:  goto8 735
+  708:  get_var String
+  713:  get_loc8 20: j
+  715:  call1 1
+  716:  get_field2 trim
+  721:  call_method 0
+  724:  get_field2 slice
+  729:  push_0 0
+  730:  push_i8 10
+  732:  call_method 2
+  735:  call_method 1
+  738:  drop
+  739:  inc_loc 19: M
+  741:  goto8 644
+  743:  get_loc8 14: p
+  745:  get_field2 push
+  750:  get_loc8 18: x
+  752:  call_method 1
+  755:  drop
+  756:  inc_loc 16: A
+  758:  goto16 593
+  761:  push_1 1
+  762:  lnot
+  763:  put_loc8 21: k
+  765:  push_0 0
+  766:  put_loc8 22: N
+  768:  get_loc8 22: N
+  770:  get_loc8 14: p
+  772:  get_length
+  773:  lt
+  774:  if_false8 819
+  776:  get_loc8 21: k
+  778:  lnot
+  779:  if_false8 819
+  781:  push_0 0
+  782:  put_loc8 23: S
+  784:  get_loc8 23: S
+  786:  get_loc8 14: p
+  788:  get_loc8 22: N
+  790:  get_array_el
+  791:  get_length
+  792:  lt
+  793:  if_false8 815
+  795:  get_loc8 14: p
+  797:  get_loc8 22: N
+  799:  get_array_el
+  800:  get_loc8 23: S
+  802:  get_array_el
+  803:  if_false8 811
+  805:  push_0 0
+  806:  lnot
+  807:  put_loc8 21: k
+  809:  goto8 815
+  811:  inc_loc 23: S
+  813:  goto8 784
+  815:  inc_loc 22: N
+  817:  goto8 768
+  819:  get_loc8 21: k
+  821:  if_false8 848
+  823:  get_var_ref2 2: f
+  824:  object
+  825:  get_loc8 5: l
+  827:  define_field days
+  832:  get_loc8 8: d
+  834:  define_field periods
+  839:  get_loc8 14: p
+  841:  define_field grid
+  846:  call1 1
+  847:  return
+  848:  null
+  849:  return
+

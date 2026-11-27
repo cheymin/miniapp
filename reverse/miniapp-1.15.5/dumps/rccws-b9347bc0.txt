@@ -1,0 +1,7944 @@
+
+/* ===== function depth=0 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <eval>
+  mode: strict
+  locals:
+    0: catch t [level:3 next:-1]
+  closure vars:
+    0: t parent:loc0 const
+    1: e parent:loc1 const
+    2: r parent:loc2 const
+    3: s parent:loc3 const
+    4: c local:loc0 var
+    5: i local:loc1 var
+    6: n local:loc2 const
+    7: a local:loc3 const
+    8: o local:loc4 const
+    9: h local:loc5 const
+   10: l local:loc6 const
+   11: d local:loc7 const
+   12: g local:loc8 const
+   13: u local:loc9 var
+   14: f local:loc10 var
+   15: m local:loc11 var
+   16: B local:loc12 var
+   17: v local:loc13 var
+   18: y local:loc14 var
+   19: S local:loc15 var
+   20: w local:loc16 var
+   21: _ local:loc17 var
+   22: p local:loc18 var
+   23: b local:loc19 var
+   24: k local:loc20 var
+   25: R local:loc21 const
+   26: T local:loc22 const
+   27: M local:loc23 var
+   28: W local:loc24 var
+   29: C local:loc25 var
+   30: A local:loc26 var
+   31: $ local:loc27 var
+   32: D local:loc28 var
+   33: P local:loc29 var
+   34: I local:loc30 var
+   35: F local:loc31 var
+   36: E local:loc32 var
+   37: x local:loc33 var
+   38: L local:loc34 const
+   39: U local:loc35 const
+  stack_size: 6
+  opcodes:
+    0:  fclosure8 0: [bytecode i]
+    2:  put_var_ref 5: i
+    5:  fclosure8 1: [bytecode u]
+    7:  put_var_ref 13: u
+   10:  fclosure8 2: [bytecode f]
+   12:  put_var_ref 14: f
+   15:  fclosure8 3: [bytecode m]
+   17:  put_var_ref 15: m
+   20:  fclosure8 4: [bytecode B]
+   22:  put_var_ref 16: B
+   25:  fclosure8 5: [bytecode v]
+   27:  put_var_ref 17: v
+   30:  fclosure8 6: [bytecode y]
+   32:  put_var_ref 18: y
+   35:  fclosure8 7: [bytecode S]
+   37:  put_var_ref 19: S
+   40:  fclosure8 8: [bytecode w]
+   42:  put_var_ref 20: w
+   45:  fclosure8 9: [bytecode _]
+   47:  put_var_ref 21: _
+   50:  fclosure8 10: [bytecode p]
+   52:  put_var_ref 22: p
+   55:  fclosure8 11: [bytecode b]
+   57:  put_var_ref 23: b
+   60:  fclosure8 12: [bytecode k]
+   62:  put_var_ref 24: k
+   65:  fclosure8 13: [bytecode W]
+   67:  put_var_ref 28: W
+   70:  fclosure8 14: [bytecode C]
+   72:  put_var_ref 29: C
+   75:  fclosure8 15: [bytecode A]
+   77:  put_var_ref 30: A
+   80:  fclosure8 16: [bytecode $]
+   82:  put_var_ref 31: $
+   85:  fclosure8 17: [bytecode D]
+   87:  put_var_ref 32: D
+   90:  fclosure8 18: [bytecode P]
+   92:  put_var_ref 33: P
+   95:  fclosure8 19: [bytecode I]
+   97:  put_var_ref 34: I
+  100:  fclosure8 20: [bytecode F]
+  102:  put_var_ref 35: F
+  105:  fclosure8 21: [bytecode E]
+  107:  put_var_ref 36: E
+  110:  fclosure8 22: [bytecode x]
+  112:  put_var_ref 37: x
+  115:  push_empty_string
+  116:  put_var_ref 4: c
+  119:  catch 141
+  124:  get_var require
+  129:  push_atom_value "../assets/desktop/yuanchengkongzhi.icon.png"
+  134:  call1 1
+  135:  put_var_ref 4: c
+  138:  drop
+  139:  goto8 151
+  141:  put_loc0 0: t
+  142:  catch 150
+  147:  drop
+  148:  goto8 151
+  150:  throw
+  151:  push_atom_value rccws_config
+  156:  put_var_ref 6: n
+  159:  push_atom_value rccws_sess_state
+  164:  put_var_ref 7: a
+  167:  push_atom_value rccws_background_mode
+  172:  put_var_ref 8: o
+  175:  push_atom_value rccws_msgs_
+  180:  put_var_ref 9: h
+  183:  push_i16 200
+  186:  put_var_ref 10: l
+  189:  push_i16 1000
+  192:  push_i16 2000
+  195:  push_i16 4000
+  198:  push_i16 8000
+  201:  push_i16 16000
+  204:  push_i16 30000
+  207:  array_from 6
+  210:  put_var_ref 11: d
+  213:  get_var_ref_check 3: s
+  216:  put_var_ref 12: g
+  219:  push_atom_value rccws_local_mid
+  224:  put_var_ref 25: R
+  227:  push_atom_value rccws_ask_ans
+  232:  put_var_ref 26: T
+  235:  push_0 0
+  236:  put_var_ref 27: M
+  239:  object
+  240:  fclosure8 23: [bytecode <null>]
+  242:  set_name data
+  247:  define_field data
+  252:  object
+  253:  fclosure8 24: [bytecode <null>]
+  255:  set_name initRccwsBridge
+  260:  define_field initRccwsBridge
+  265:  fclosure8 25: [bytecode <null>]
+  267:  set_name loadRccwsSettings
+  272:  define_field loadRccwsSettings
+  277:  fclosure8 26: [bytecode <null>]
+  279:  set_name saveBackgroundMode
+  284:  define_field saveBackgroundMode
+  289:  fclosure8 27: [bytecode <null>]
+  291:  set_name loadBackgroundMode
+  296:  define_field loadBackgroundMode
+  301:  fclosure8 28: [bytecode <null>]
+  303:  set_name _startBgSync
+  308:  define_field _startBgSync
+  313:  fclosure8 29: [bytecode <null>]
+  315:  set_name _stopBgSync
+  320:  define_field _stopBgSync
+  325:  fclosure8 30: [bytecode <null>]
+  327:  set_name _notifyBgEngine
+  332:  define_field _notifyBgEngine
+  337:  fclosure8 31: [bytecode <null>]
+  339:  set_name _handleBgStateChange
+  344:  define_field _handleBgStateChange
+  349:  fclosure8 32: [bytecode <null>]
+  351:  set_name _rcLiveInit
+  356:  define_field _rcLiveInit
+  361:  fclosure8 33: [bytecode <null>]
+  363:  set_name _rcMidMap
+  368:  define_field _rcMidMap
+  373:  fclosure8 34: [bytecode <null>]
+  375:  set_name _rcNoteMid
+  380:  define_field _rcNoteMid
+  385:  fclosure8 35: [bytecode <null>]
+  387:  set_name saveRccwsSettings
+  392:  define_field saveRccwsSettings
+  397:  fclosure8 36: [bytecode <null>]
+  399:  set_name rcToast
+  404:  define_field rcToast
+  409:  fclosure8 37: [bytecode <null>]
+  411:  set_name rcConnect
+  416:  define_field rcConnect
+  421:  fclosure8 38: [bytecode <null>]
+  423:  set_name rcAttachWsEvents
+  428:  define_field rcAttachWsEvents
+  433:  fclosure8 39: [bytecode <null>]
+  435:  set_name rcConsumeWsEvents
+  440:  define_field rcConsumeWsEvents
+  445:  fclosure8 40: [bytecode <null>]
+  447:  set_name rcPollWs
+  452:  define_field rcPollWs
+  457:  fclosure8 41: [bytecode <null>]
+  459:  set_name rcMarkConnected
+  464:  define_field rcMarkConnected
+  469:  fclosure8 42: [bytecode <null>]
+  471:  set_name rcHandleWsEvent
+  476:  define_field rcHandleWsEvent
+  481:  fclosure8 43: [bytecode <null>]
+  483:  set_name rcHandleClosed
+  488:  define_field rcHandleClosed
+  493:  fclosure8 44: [bytecode <null>]
+  495:  set_name rcScheduleReconnect
+  500:  define_field rcScheduleReconnect
+  505:  fclosure8 45: [bytecode <null>]
+  507:  set_name rcDisconnect
+  512:  define_field rcDisconnect
+  517:  fclosure8 46: [bytecode <null>]
+  519:  set_name rcStartPing
+  524:  define_field rcStartPing
+  529:  fclosure8 47: [bytecode <null>]
+  531:  set_name rcStopPing
+  536:  define_field rcStopPing
+  541:  fclosure8 48: [bytecode <null>]
+  543:  set_name rcSend
+  548:  define_field rcSend
+  553:  fclosure8 49: [bytecode <null>]
+  555:  set_name rcClearPendingEcho
+  560:  define_field rcClearPendingEcho
+  565:  fclosure8 50: [bytecode <null>]
+  567:  set_name rcClearAllPending
+  572:  define_field rcClearAllPending
+  577:  define_field methods
+  582:  put_var_ref 38: L
+  585:  object
+  586:  fclosure8 51: [bytecode <null>]
+  588:  set_name data
+  593:  define_field data
+  598:  fclosure8 52: [bytecode <null>]
+  600:  set_name beforeDestroy
+  605:  define_field beforeDestroy
+  610:  object
+  611:  fclosure8 53: [bytecode <null>]
+  613:  set_name initRccwsBackground
+  618:  define_field initRccwsBackground
+  623:  fclosure8 54: [bytecode <null>]
+  625:  set_name handleRccwsBgCommand
+  630:  define_field handleRccwsBgCommand
+  635:  fclosure8 55: [bytecode <null>]
+  637:  set_name _writeBgMode
+  642:  define_field _writeBgMode
+  647:  fclosure8 56: [bytecode <null>]
+  649:  set_name clearRccwsDesktopMessages
+  654:  define_field clearRccwsDesktopMessages
+  659:  fclosure8 57: [bytecode <null>]
+  661:  set_name _readRccwsSessState
+  666:  define_field _readRccwsSessState
+  671:  fclosure8 58: [bytecode <null>]
+  673:  set_name _writeRccwsSessState
+  678:  define_field _writeRccwsSessState
+  683:  fclosure8 59: [bytecode <null>]
+  685:  set_name _markRccwsSess
+  690:  define_field _markRccwsSess
+  695:  fclosure8 60: [bytecode <null>]
+  697:  set_name _pushRccwsStateToFg
+  702:  define_field _pushRccwsStateToFg
+  707:  fclosure8 61: [bytecode <null>]
+  709:  set_name startRccwsBackground
+  714:  define_field startRccwsBackground
+  719:  fclosure8 62: [bytecode <null>]
+  721:  set_name _resetRccwsBgLoopTimers
+  726:  define_field _resetRccwsBgLoopTimers
+  731:  fclosure8 63: [bytecode <null>]
+  733:  set_name stopRccwsBackground
+  738:  define_field stopRccwsBackground
+  743:  fclosure8 64: [bytecode <null>]
+  745:  set_name scheduleRccwsBgReconnect
+  750:  define_field scheduleRccwsBgReconnect
+  755:  fclosure8 65: [bytecode <null>]
+  757:  set_name markRccwsBgConnected
+  762:  define_field markRccwsBgConnected
+  767:  fclosure8 66: [bytecode <null>]
+  769:  set_name pollRccwsBg
+  774:  define_field pollRccwsBg
+  779:  fclosure8 67: [bytecode <null>]
+  781:  set_name _consumeRccwsBgEvents
+  786:  define_field _consumeRccwsBgEvents
+  791:  fclosure8 68: [bytecode <null>]
+  793:  set_name handleRccwsBgEvent
+  798:  define_field handleRccwsBgEvent
+  803:  fclosure8 69: [bytecode <null>]
+  805:  set_name _notifyRccwsEvent
+  810:  define_field _notifyRccwsEvent
+  815:  fclosure8 70: [bytecode <null>]
+  817:  set_name _handleRccwsBgFrame
+  822:  define_field _handleRccwsBgFrame
+  827:  define_field methods
+  832:  put_var_ref 39: U
+  835:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: i
+  mode: strict
+  args: t
+  locals:
+    0: var e
+  closure vars:
+    0: c parent:loc4 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: c
+    1:  if_false8 5
+    3:  get_var_ref0 0: c
+    4:  return
+    5:  get_arg0 0: t
+    6:  dup
+    7:  if_false8 16
+    9:  drop
+   10:  get_arg0 0: t
+   11:  get_field rcIconUrl
+   16:  put_loc0 0: e
+   17:  push_atom_value string
+   22:  get_loc0 0: e
+   23:  typeof
+   24:  eq
+   25:  if_false8 29
+   27:  get_loc0 0: e
+   28:  return
+   29:  push_empty_string
+   30:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: u
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var r
+  stack_size: 5
+  opcodes:
+    0:  get_var Number
+    5:  get_arg0 0: t
+    6:  call1 1
+    7:  dup
+    8:  if_true8 24
+   10:  drop
+   11:  get_var Date
+   16:  get_field2 now
+   21:  call_method 0
+   24:  put_loc0 0: e
+   25:  get_var Math
+   30:  get_field2 floor
+   35:  push_i16 1296
+   38:  get_var Math
+   43:  get_field2 random
+   48:  call_method 0
+   51:  mul
+   52:  call_method 1
+   55:  get_field2 toString
+   60:  push_i8 36
+   62:  call_method 1
+   65:  put_loc1 1: r
+   66:  get_loc0 0: e
+   67:  get_field2 toString
+   72:  push_i8 36
+   74:  call_method 1
+   77:  get_loc1 1: r
+   78:  add
+   79:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: f
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: catch t [level:5 next:-1]
+  closure vars:
+    0: g parent:loc12 const
+  stack_size: 4
+  opcodes:
+    0:  push_empty_string
+    1:  put_loc0 0: e
+    2:  null
+    3:  get_arg0 0: t
+    4:  eq
+    5:  if_false8 9
+    7:  push_empty_string
+    8:  return
+    9:  push_atom_value string
+   14:  get_arg0 0: t
+   15:  typeof
+   16:  eq
+   17:  if_false8 23
+   19:  get_arg0 0: t
+   20:  put_loc0 0: e
+   21:  goto8 58
+   23:  catch 46
+   28:  get_var JSON
+   33:  get_field2 stringify
+   38:  get_arg0 0: t
+   39:  call_method 1
+   42:  put_loc0 0: e
+   43:  drop
+   44:  goto8 58
+   46:  put_loc1 1: t
+   47:  catch 57
+   52:  push_empty_string
+   53:  put_loc0 0: e
+   54:  drop
+   55:  goto8 58
+   57:  throw
+   58:  get_var_ref_check 0: g
+   61:  get_loc0 0: e
+   62:  call1 1
+   63:  get_field2 replace
+   68:  push_const8 0: 1"\\s+"
+   70:  push_const8 1: 1"\u0001\u0001\u0000M\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u001c,\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u000c\u0000\n"
+   72:  regexp
+   73:  push_atom_value " "
+   78:  call_method 2
+   81:  get_field2 trim
+   86:  call_method 0
+   89:  set_loc0 0: e
+   90:  get_length
+   91:  push_i8 80
+   93:  gt
+   94:  dup
+   95:  if_false8 117
+   97:  drop
+   98:  get_loc0 0: e
+   99:  get_field2 slice
+  104:  push_0 0
+  105:  push_i8 77
+  107:  call_method 2
+  110:  push_atom_value "..."
+  115:  add
+  116:  set_loc0 0: e
+  117:  drop
+  118:  get_loc0 0: e
+  119:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: m
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var r
+    2: var s
+    3: var c
+    4: var i
+    5: var n
+    6: var a
+  closure vars:
+    0: g parent:loc12 const
+  stack_size: 5
+  opcodes:
+    0:  get_var Array
+    5:  get_field2 isArray
+   10:  get_arg0 0: t
+   11:  call_method 1
+   14:  lnot
+   15:  if_false8 21
+   17:  array_from 0
+   20:  return
+   21:  array_from 0
+   24:  put_loc0 0: e
+   25:  push_0 0
+   26:  put_loc1 1: r
+   27:  get_loc1 1: r
+   28:  get_arg0 0: t
+   29:  get_length
+   30:  lt
+   31:  if_false 282
+   36:  get_arg0 0: t
+   37:  get_loc1 1: r
+   38:  get_array_el
+   39:  dup
+   40:  if_true8 44
+   42:  drop
+   43:  object
+   44:  put_loc2 2: s
+   45:  push_atom_value object
+   50:  get_loc2 2: s
+   51:  typeof
+   52:  eq
+   53:  if_false 277
+   58:  array_from 0
+   61:  put_loc3 3: c
+   62:  get_var Array
+   67:  get_field2 isArray
+   72:  get_loc2 2: s
+   73:  get_field options
+   78:  call_method 1
+   81:  if_false8 91
+   83:  get_loc2 2: s
+   84:  get_field options
+   89:  goto8 94
+   91:  array_from 0
+   94:  put_loc8 4: i
+   96:  push_0 0
+   97:  put_loc8 5: n
+   99:  get_loc8 5: n
+  101:  get_loc8 4: i
+  103:  get_length
+  104:  lt
+  105:  if_false8 216
+  107:  get_loc8 4: i
+  109:  get_loc8 5: n
+  111:  get_array_el
+  112:  put_loc8 6: a
+  114:  push_atom_value string
+  119:  get_loc8 6: a
+  121:  typeof
+  122:  neq
+  123:  if_false8 188
+  125:  get_loc8 6: a
+  127:  dup
+  128:  if_false8 211
+  130:  drop
+  131:  push_atom_value object
+  136:  get_loc8 6: a
+  138:  typeof
+  139:  eq
+  140:  dup
+  141:  if_false8 211
+  143:  drop
+  144:  get_loc3 3: c
+  145:  get_field2 push
+  150:  object
+  151:  get_var_ref_check 0: g
+  154:  get_loc8 6: a
+  156:  get_field label
+  161:  call1 1
+  162:  define_field label
+  167:  get_var_ref_check 0: g
+  170:  get_loc8 6: a
+  172:  get_field description
+  177:  call1 1
+  178:  define_field description
+  183:  call_method 1
+  186:  goto8 211
+  188:  get_loc3 3: c
+  189:  get_field2 push
+  194:  object
+  195:  get_loc8 6: a
+  197:  define_field label
+  202:  push_empty_string
+  203:  define_field description
+  208:  call_method 1
+  211:  drop
+  212:  inc_loc 5: n
+  214:  goto8 99
+  216:  get_loc0 0: e
+  217:  get_field2 push
+  222:  object
+  223:  get_var_ref_check 0: g
+  226:  get_loc2 2: s
+  227:  get_field question
+  232:  call1 1
+  233:  define_field question
+  238:  get_var_ref_check 0: g
+  241:  get_loc2 2: s
+  242:  get_field header
+  247:  call1 1
+  248:  define_field header
+  253:  push_0 0
+  254:  lnot
+  255:  get_loc2 2: s
+  256:  get_field multiSelect
+  261:  strict_eq
+  262:  define_field multiSelect
+  267:  get_loc3 3: c
+  268:  define_field options
+  273:  call_method 1
+  276:  drop
+  277:  inc_loc 1: r
+  279:  goto16 27
+  282:  get_loc0 0: e
+  283:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: B
+  mode: strict
+  args: t e
+  locals:
+    0: var r
+    1: var s
+    2: var c
+    3: var i
+    4: var n
+  closure vars:
+    0: g parent:loc12 const
+  stack_size: 4
+  opcodes:
+    0:  object
+    1:  put_loc0 0: r
+    2:  get_var Array
+    7:  get_field2 isArray
+   12:  get_arg0 0: t
+   13:  call_method 1
+   16:  lnot
+   17:  if_false8 21
+   19:  get_loc0 0: r
+   20:  return
+   21:  push_0 0
+   22:  put_loc1 1: s
+   23:  get_loc1 1: s
+   24:  get_arg0 0: t
+   25:  get_length
+   26:  lt
+   27:  if_false8 89
+   29:  get_arg0 0: t
+   30:  get_loc1 1: s
+   31:  get_array_el
+   32:  dup
+   33:  if_true8 37
+   35:  drop
+   36:  object
+   37:  put_loc2 2: c
+   38:  get_var_ref_check 0: g
+   41:  get_loc2 2: c
+   42:  get_field question
+   47:  call1 1
+   48:  set_loc3 3: i
+   49:  if_false8 85
+   51:  get_var Array
+   56:  get_field2 isArray
+   61:  get_arg1 1: e
+   62:  call_method 1
+   65:  if_false8 72
+   67:  get_arg1 1: e
+   68:  get_loc1 1: s
+   69:  get_array_el
+   70:  goto8 73
+   72:  get_arg1 1: e
+   73:  put_loc8 4: n
+   75:  get_loc0 0: r
+   76:  get_loc3 3: i
+   77:  to_propkey2
+   78:  get_var_ref_check 0: g
+   81:  get_loc8 4: n
+   83:  call1 1
+   84:  put_array_el
+   85:  inc_loc 1: s
+   87:  goto8 23
+   89:  get_loc0 0: r
+   90:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: v
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: catch t [level:4 next:-1]
+  stack_size: 4
+  opcodes:
+    0:  push_atom_value string
+    5:  get_arg0 0: t
+    6:  typeof
+    7:  neq
+    8:  dup
+    9:  if_true8 14
+   11:  drop
+   12:  get_arg0 0: t
+   13:  lnot
+   14:  if_false8 18
+   16:  null
+   17:  return
+   18:  catch 56
+   23:  get_var JSON
+   28:  get_field2 parse
+   33:  get_arg0 0: t
+   34:  call_method 1
+   37:  set_loc0 0: e
+   38:  if_false8 53
+   40:  push_atom_value object
+   45:  get_loc0 0: e
+   46:  typeof
+   47:  eq
+   48:  if_false8 53
+   50:  get_loc0 0: e
+   51:  goto8 54
+   53:  null
+   54:  nip
+   55:  return
+   56:  put_loc1 1: t
+   57:  catch 65
+   62:  null
+   63:  nip
+   64:  return
+   65:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: y
+  mode: strict
+  args: t
+  closure vars:
+    0: h parent:loc9 const
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref_check 0: h
+    3:  get_arg0 0: t
+    4:  add
+    5:  push_atom_value _meta
+   10:  add
+   11:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: S
+  mode: strict
+  args: t e
+  closure vars:
+    0: h parent:loc9 const
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref_check 0: h
+    3:  get_arg0 0: t
+    4:  add
+    5:  push_atom_value _p
+   10:  add
+   11:  get_arg1 1: e
+   12:  add
+   13:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: w
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var r
+    2: var s
+  closure vars:
+    0: g parent:loc12 const
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref_check 0: g
+    3:  get_arg0 0: t
+    4:  dup
+    5:  if_false8 14
+    7:  drop
+    8:  get_arg0 0: t
+    9:  get_field text
+   14:  call1 1
+   15:  put_loc0 0: e
+   16:  get_arg0 0: t
+   17:  dup
+   18:  if_false8 27
+   20:  drop
+   21:  get_arg0 0: t
+   22:  get_field state
+   27:  put_loc1 1: r
+   28:  push_atom_value thinking
+   33:  get_loc1 1: r
+   34:  strict_eq
+   35:  dup
+   36:  if_true8 46
+   38:  drop
+   39:  push_atom_value loading
+   44:  get_loc1 1: r
+   45:  strict_eq
+   46:  if_false8 54
+   48:  get_loc0 0: e
+   49:  lnot
+   50:  if_false8 54
+   52:  null
+   53:  return
+   54:  object
+   55:  get_arg0 0: t
+   56:  if_false8 74
+   58:  get_arg0 0: t
+   59:  get_field id
+   64:  if_false8 74
+   66:  get_arg0 0: t
+   67:  get_field id
+   72:  goto8 75
+   74:  push_empty_string
+   75:  define_field id
+   80:  get_arg0 0: t
+   81:  if_false8 99
+   83:  get_arg0 0: t
+   84:  get_field role
+   89:  if_false8 99
+   91:  get_arg0 0: t
+   92:  get_field role
+   97:  goto8 104
+   99:  push_atom_value sys
+  104:  define_field role
+  109:  get_loc0 0: e
+  110:  define_field text
+  115:  push_atom_value done
+  120:  get_loc1 1: r
+  121:  strict_eq
+  122:  dup
+  123:  if_true8 133
+  125:  drop
+  126:  push_atom_value error
+  131:  get_loc1 1: r
+  132:  strict_eq
+  133:  if_false8 138
+  135:  get_loc1 1: r
+  136:  goto8 143
+  138:  push_atom_value done
+  143:  define_field state
+  148:  get_arg0 0: t
+  149:  if_false8 167
+  151:  get_arg0 0: t
+  152:  get_field meta
+  157:  if_false8 167
+  159:  get_arg0 0: t
+  160:  get_field meta
+  165:  goto8 168
+  167:  push_empty_string
+  168:  define_field meta
+  173:  get_arg0 0: t
+  174:  if_false8 192
+  176:  get_arg0 0: t
+  177:  get_field time
+  182:  if_false8 192
+  184:  get_arg0 0: t
+  185:  get_field time
+  190:  goto8 205
+  192:  get_var Date
+  197:  get_field2 now
+  202:  call_method 0
+  205:  define_field time
+  210:  get_arg0 0: t
+  211:  dup
+  212:  if_false8 224
+  214:  drop
+  215:  push_0 0
+  216:  lnot
+  217:  get_arg0 0: t
+  218:  get_field answered
+  223:  strict_eq
+  224:  define_field answered
+  229:  get_arg0 0: t
+  230:  if_false8 248
+  232:  get_arg0 0: t
+  233:  get_field answeredLabel
+  238:  if_false8 248
+  240:  get_arg0 0: t
+  241:  get_field answeredLabel
+  246:  goto8 249
+  248:  push_empty_string
+  249:  define_field answeredLabel
+  254:  put_loc2 2: s
+  255:  get_arg0 0: t
+  256:  dup
+  257:  if_false8 283
+  259:  drop
+  260:  get_arg0 0: t
+  261:  get_field kind
+  266:  dup
+  267:  if_false8 283
+  269:  drop
+  270:  get_loc2 2: s
+  271:  get_arg0 0: t
+  272:  get_field kind
+  277:  insert2
+  278:  put_field kind
+  283:  drop
+  284:  get_arg0 0: t
+  285:  dup
+  286:  if_false8 312
+  288:  drop
+  289:  get_arg0 0: t
+  290:  get_field toolName
+  295:  dup
+  296:  if_false8 312
+  298:  drop
+  299:  get_loc2 2: s
+  300:  get_arg0 0: t
+  301:  get_field toolName
+  306:  insert2
+  307:  put_field toolName
+  312:  drop
+  313:  get_arg0 0: t
+  314:  dup
+  315:  if_false8 341
+  317:  drop
+  318:  get_arg0 0: t
+  319:  get_field inputSummary
+  324:  dup
+  325:  if_false8 341
+  327:  drop
+  328:  get_loc2 2: s
+  329:  get_arg0 0: t
+  330:  get_field inputSummary
+  335:  insert2
+  336:  put_field inputSummary
+  341:  drop
+  342:  get_arg0 0: t
+  343:  dup
+  344:  if_false8 370
+  346:  drop
+  347:  get_arg0 0: t
+  348:  get_field askId
+  353:  dup
+  354:  if_false8 370
+  356:  drop
+  357:  get_loc2 2: s
+  358:  get_arg0 0: t
+  359:  get_field askId
+  364:  insert2
+  365:  put_field askId
+  370:  drop
+  371:  get_arg0 0: t
+  372:  dup
+  373:  if_false8 425
+  375:  drop
+  376:  get_var Array
+  381:  get_field2 isArray
+  386:  get_arg0 0: t
+  387:  get_field questions
+  392:  call_method 1
+  395:  dup
+  396:  if_false8 425
+  398:  drop
+  399:  get_arg0 0: t
+  400:  get_field questions
+  405:  get_length
+  406:  push_0 0
+  407:  gt
+  408:  dup
+  409:  if_false8 425
+  411:  drop
+  412:  get_loc2 2: s
+  413:  get_arg0 0: t
+  414:  get_field questions
+  419:  insert2
+  420:  put_field questions
+  425:  drop
+  426:  get_loc2 2: s
+  427:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: _
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var r
+  closure vars:
+    0: l parent:loc10 const
+  stack_size: 4
+  opcodes:
+    0:  get_arg0 0: t
+    1:  dup
+    2:  if_true8 6
+    4:  drop
+    5:  object
+    6:  put_loc0 0: e
+    7:  get_var parseInt
+   12:  get_loc0 0: e
+   13:  get_field latestShard
+   18:  push_i8 10
+   20:  call2 2
+   21:  put_loc1 1: r
+   22:  object
+   23:  push_1 1
+   24:  define_field version
+   29:  get_var_ref_check 0: l
+   32:  define_field shardSize
+   37:  get_var isNaN
+   42:  get_loc1 1: r
+   43:  call1 1
+   44:  if_false8 49
+   46:  push_minus1 -1
+   47:  goto8 50
+   49:  get_loc1 1: r
+   50:  define_field latestShard
+   55:  get_var parseInt
+   60:  get_loc0 0: e
+   61:  get_field totalMessages
+   66:  push_i8 10
+   68:  call2 2
+   69:  dup
+   70:  if_true8 74
+   72:  drop
+   73:  push_0 0
+   74:  define_field totalMessages
+   79:  get_loc0 0: e
+   80:  get_field updatedAt
+   85:  dup
+   86:  if_true8 90
+   88:  drop
+   89:  push_0 0
+   90:  define_field updatedAt
+   95:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: p
+  mode: strict
+  args: t e r s
+  locals:
+    0: var c
+    1: var i
+    2: catch t [level:4 next:-1]
+    3: var n
+    4: var a
+    5: catch t [level:11 next:-1]
+    6: var o
+    7: var h
+    8: var l
+    9: var d
+   10: var g
+   11: catch t [level:18 next:-1]
+  closure vars:
+    0: _ parent:loc21 var
+    1: y parent:loc18 var
+    2: S parent:loc19 var
+  stack_size: 6
+  opcodes:
+    0:  object
+    1:  array_from 0
+    4:  define_field messages
+    9:  push_0 0
+   10:  define_field startShard
+   15:  push_minus1 -1
+   16:  define_field endShard
+   21:  push_minus1 -1
+   22:  define_field latestShard
+   27:  push_1 1
+   28:  lnot
+   29:  define_field hasOlder
+   34:  put_loc1 1: i
+   35:  get_arg0 0: t
+   36:  lnot
+   37:  dup
+   38:  if_true8 54
+   40:  drop
+   41:  push_atom_value function
+   46:  get_arg0 0: t
+   47:  get_field read
+   52:  typeof
+   53:  neq
+   54:  if_false8 58
+   56:  get_loc1 1: i
+   57:  return
+   58:  catch 81
+   63:  get_var_ref0 0: _
+   64:  get_arg0 0: t
+   65:  get_field2 read
+   70:  get_var_ref1 1: y
+   71:  get_arg1 1: e
+   72:  call1 1
+   73:  call_method 1
+   76:  call1 1
+   77:  put_loc0 0: c
+   78:  drop
+   79:  goto8 95
+   81:  put_loc2 2: t
+   82:  catch 94
+   87:  get_var_ref0 0: _
+   88:  null
+   89:  call1 1
+   90:  put_loc0 0: c
+   91:  drop
+   92:  goto8 95
+   94:  throw
+   95:  get_loc0 0: c
+   96:  get_field latestShard
+  101:  push_0 0
+  102:  lt
+  103:  if_false8 107
+  105:  get_loc1 1: i
+  106:  return
+  107:  null
+  108:  get_arg3 3: s
+  109:  eq
+  110:  if_false8 120
+  112:  get_loc0 0: c
+  113:  get_field latestShard
+  118:  goto8 129
+  120:  get_var parseInt
+  125:  get_arg3 3: s
+  126:  push_i8 10
+  128:  call2 2
+  129:  put_loc3 3: n
+  130:  get_var isNaN
+  135:  get_loc3 3: n
+  136:  call1 1
+  137:  dup
+  138:  if_true8 144
+  140:  drop
+  141:  get_loc3 3: n
+  142:  push_0 0
+  143:  lt
+  144:  dup
+  145:  if_false8 155
+  147:  drop
+  148:  get_loc0 0: c
+  149:  get_field latestShard
+  154:  set_loc3 3: n
+  155:  drop
+  156:  get_loc3 3: n
+  157:  get_loc0 0: c
+  158:  get_field latestShard
+  163:  gt
+  164:  dup
+  165:  if_false8 175
+  167:  drop
+  168:  get_loc0 0: c
+  169:  get_field latestShard
+  174:  set_loc3 3: n
+  175:  drop
+  176:  get_loc3 3: n
+  177:  push_0 0
+  178:  gte
+  179:  if_false8 246
+  181:  catch 204
+  186:  get_arg0 0: t
+  187:  get_field2 read
+  192:  get_var_ref2 2: S
+  193:  get_arg1 1: e
+  194:  get_loc3 3: n
+  195:  call2 2
+  196:  call_method 1
+  199:  put_loc8 4: a
+  201:  drop
+  202:  goto8 218
+  204:  put_loc8 5: t
+  206:  catch 217
+  211:  null
+  212:  put_loc8 4: a
+  214:  drop
+  215:  goto8 218
+  217:  throw
+  218:  get_var Array
+  223:  get_field2 isArray
+  228:  get_loc8 4: a
+  230:  call_method 1
+  233:  if_false8 240
+  235:  get_loc8 4: a
+  237:  get_length
+  238:  if_true8 246
+  240:  get_loc3 3: n
+  241:  push_1 1
+  242:  sub
+  243:  put_loc3 3: n
+  244:  goto8 176
+  246:  get_loc3 3: n
+  247:  push_0 0
+  248:  lt
+  249:  if_false8 253
+  251:  get_loc1 1: i
+  252:  return
+  253:  get_loc0 0: c
+  254:  get_loc3 3: n
+  255:  put_field latestShard
+  260:  get_var parseInt
+  265:  get_arg2 2: r
+  266:  push_i8 10
+  268:  call2 2
+  269:  put_loc8 6: o
+  271:  get_var isNaN
+  276:  get_loc8 6: o
+  278:  call1 1
+  279:  dup
+  280:  if_true8 287
+  282:  drop
+  283:  get_loc8 6: o
+  285:  push_0 0
+  286:  lte
+  287:  dup
+  288:  if_false8 294
+  290:  drop
+  291:  push_2 2
+  292:  set_loc8 6: o
+  294:  drop
+  295:  get_var Math
+  300:  get_field2 max
+  305:  push_0 0
+  306:  get_loc3 3: n
+  307:  get_loc8 6: o
+  309:  sub
+  310:  push_1 1
+  311:  add
+  312:  call_method 2
+  315:  put_loc8 7: h
+  317:  array_from 0
+  320:  put_loc8 8: l
+  322:  get_loc8 7: h
+  324:  put_loc8 9: d
+  326:  get_loc8 9: d
+  328:  get_loc3 3: n
+  329:  lte
+  330:  if_false8 412
+  332:  catch 397
+  337:  get_arg0 0: t
+  338:  get_field2 read
+  343:  get_var_ref2 2: S
+  344:  get_arg1 1: e
+  345:  get_loc8 9: d
+  347:  call2 2
+  348:  call_method 1
+  351:  dup
+  352:  if_true8 358
+  354:  drop
+  355:  array_from 0
+  358:  put_loc8 10: g
+  360:  get_var Array
+  365:  get_field2 isArray
+  370:  get_loc8 10: g
+  372:  call_method 1
+  375:  dup
+  376:  if_false8 393
+  378:  drop
+  379:  get_loc8 8: l
+  381:  get_field2 concat
+  386:  get_loc8 10: g
+  388:  call_method 1
+  391:  set_loc8 8: l
+  393:  drop
+  394:  drop
+  395:  goto8 408
+  397:  put_loc8 11: t
+  399:  catch 407
+  404:  drop
+  405:  goto8 408
+  407:  throw
+  408:  inc_loc 9: d
+  410:  goto8 326
+  412:  object
+  413:  get_loc8 8: l
+  415:  define_field messages
+  420:  get_loc8 7: h
+  422:  define_field startShard
+  427:  get_loc3 3: n
+  428:  define_field endShard
+  433:  get_loc0 0: c
+  434:  get_field latestShard
+  439:  define_field latestShard
+  444:  get_loc0 0: c
+  445:  get_field totalMessages
+  450:  define_field totalMessages
+  455:  get_loc8 7: h
+  457:  push_0 0
+  458:  gt
+  459:  define_field hasOlder
+  464:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: b
+  mode: strict
+  args: t e
+  locals:
+    0: var r
+    1: catch t [level:5 next:-1]
+    2: var s
+    3: catch t [level:10 next:-1]
+    4: catch t [level:13 next:-1]
+  closure vars:
+    0: _ parent:loc21 var
+    1: y parent:loc18 var
+    2: S parent:loc19 var
+  stack_size: 6
+  opcodes:
+    0:  get_arg0 0: t
+    1:  if_false 140
+    6:  push_atom_value function
+   11:  get_arg0 0: t
+   12:  get_field write
+   17:  typeof
+   18:  eq
+   19:  if_false8 140
+   21:  catch 44
+   26:  get_var_ref0 0: _
+   27:  get_arg0 0: t
+   28:  get_field2 read
+   33:  get_var_ref1 1: y
+   34:  get_arg1 1: e
+   35:  call1 1
+   36:  call_method 1
+   39:  call1 1
+   40:  put_loc0 0: r
+   41:  drop
+   42:  goto8 58
+   44:  put_loc1 1: t
+   45:  catch 57
+   50:  get_var_ref0 0: _
+   51:  null
+   52:  call1 1
+   53:  put_loc0 0: r
+   54:  drop
+   55:  goto8 58
+   57:  throw
+   58:  push_0 0
+   59:  put_loc2 2: s
+   60:  get_loc2 2: s
+   61:  get_loc0 0: r
+   62:  get_field latestShard
+   67:  lte
+   68:  if_false8 109
+   70:  catch 95
+   75:  get_arg0 0: t
+   76:  get_field2 write
+   81:  get_var_ref2 2: S
+   82:  get_arg1 1: e
+   83:  get_loc2 2: s
+   84:  call2 2
+   85:  array_from 0
+   88:  call_method 2
+   91:  drop
+   92:  drop
+   93:  goto8 105
+   95:  put_loc3 3: t
+   96:  catch 104
+  101:  drop
+  102:  goto8 105
+  104:  throw
+  105:  inc_loc 2: s
+  107:  goto8 60
+  109:  catch 130
+  114:  get_arg0 0: t
+  115:  get_field2 write
+  120:  get_var_ref1 1: y
+  121:  get_arg1 1: e
+  122:  call1 1
+  123:  object
+  124:  call_method 2
+  127:  drop
+  128:  drop
+  129:  return_undef
+  130:  put_loc8 4: t
+  132:  catch 139
+  137:  drop
+  138:  return_undef
+  139:  throw
+  140:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: k
+  mode: strict
+  args: t e r s
+  locals:
+    0: var c
+    1: var i
+    2: var n
+    3: var a
+    4: var o
+    5: catch t [level:5 next:-1]
+    6: var h
+    7: catch t [level:11 next:-1]
+    8: var d
+    9: var g
+   10: catch t [level:15 next:-1]
+   11: catch t [level:18 next:-1]
+   12: catch t [level:22 next:-1]
+  closure vars:
+    0: S parent:loc19 var
+    1: l parent:loc10 const
+    2: _ parent:loc21 var
+    3: y parent:loc18 var
+  stack_size: 6
+  opcodes:
+    0:  object
+    1:  get_arg2 2: r
+    2:  define_field shard
+    7:  push_0 0
+    8:  define_field len
+   13:  put_loc0 0: c
+   14:  get_arg0 0: t
+   15:  lnot
+   16:  dup
+   17:  if_true8 33
+   19:  drop
+   20:  push_atom_value function
+   25:  get_arg0 0: t
+   26:  get_field write
+   31:  typeof
+   32:  neq
+   33:  if_false8 37
+   35:  get_loc0 0: c
+   36:  return
+   37:  get_var Array
+   42:  get_field2 isArray
+   47:  get_arg3 3: s
+   48:  call_method 1
+   51:  if_false8 56
+   53:  get_arg3 3: s
+   54:  goto8 59
+   56:  array_from 0
+   59:  set_loc1 1: i
+   60:  get_length
+   61:  lnot
+   62:  if_false8 66
+   64:  get_loc0 0: c
+   65:  return
+   66:  get_var parseInt
+   71:  get_arg2 2: r
+   72:  push_i8 10
+   74:  call2 2
+   75:  put_loc2 2: n
+   76:  get_var isNaN
+   81:  get_loc2 2: n
+   82:  call1 1
+   83:  dup
+   84:  if_true8 90
+   86:  drop
+   87:  get_loc2 2: n
+   88:  push_0 0
+   89:  lt
+   90:  dup
+   91:  if_false8 96
+   93:  drop
+   94:  push_0 0
+   95:  set_loc2 2: n
+   96:  drop
+   97:  array_from 0
+  100:  put_loc3 3: a
+  101:  catch 147
+  106:  get_arg0 0: t
+  107:  get_field2 read
+  112:  get_var_ref0 0: S
+  113:  get_arg1 1: e
+  114:  get_loc2 2: n
+  115:  call2 2
+  116:  call_method 1
+  119:  put_loc8 4: o
+  121:  get_var Array
+  126:  get_field2 isArray
+  131:  get_loc8 4: o
+  133:  call_method 1
+  136:  dup
+  137:  if_false8 143
+  139:  drop
+  140:  get_loc8 4: o
+  142:  set_loc3 3: a
+  143:  drop
+  144:  drop
+  145:  goto8 158
+  147:  put_loc8 5: t
+  149:  catch 157
+  154:  drop
+  155:  goto8 158
+  157:  throw
+  158:  push_0 0
+  159:  put_loc8 6: h
+  161:  get_loc8 6: h
+  163:  get_loc1 1: i
+  164:  get_length
+  165:  lt
+  166:  if_false8 235
+  168:  get_loc3 3: a
+  169:  get_field2 push
+  174:  get_loc1 1: i
+  175:  get_loc8 6: h
+  177:  get_array_el
+  178:  call_method 1
+  181:  drop
+  182:  get_loc3 3: a
+  183:  get_length
+  184:  get_var_ref_check 1: l
+  187:  gte
+  188:  if_false8 231
+  190:  catch 213
+  195:  get_arg0 0: t
+  196:  get_field2 write
+  201:  get_var_ref0 0: S
+  202:  get_arg1 1: e
+  203:  get_loc2 2: n
+  204:  call2 2
+  205:  get_loc3 3: a
+  206:  call_method 2
+  209:  drop
+  210:  drop
+  211:  goto8 224
+  213:  put_loc8 7: t
+  215:  catch 223
+  220:  drop
+  221:  goto8 224
+  223:  throw
+  224:  push_1 1
+  225:  add_loc 2: n
+  227:  array_from 0
+  230:  put_loc3 3: a
+  231:  inc_loc 6: h
+  233:  goto8 161
+  235:  get_loc3 3: a
+  236:  get_length
+  237:  if_false8 242
+  239:  get_loc2 2: n
+  240:  goto8 245
+  242:  get_loc2 2: n
+  243:  push_1 1
+  244:  sub
+  245:  put_loc8 9: g
+  247:  get_loc3 3: a
+  248:  get_length
+  249:  if_false8 285
+  251:  catch 274
+  256:  get_arg0 0: t
+  257:  get_field2 write
+  262:  get_var_ref0 0: S
+  263:  get_arg1 1: e
+  264:  get_loc2 2: n
+  265:  call2 2
+  266:  get_loc3 3: a
+  267:  call_method 2
+  270:  drop
+  271:  drop
+  272:  goto8 285
+  274:  put_loc8 10: t
+  276:  catch 284
+  281:  drop
+  282:  goto8 285
+  284:  throw
+  285:  catch 309
+  290:  get_var_ref2 2: _
+  291:  get_arg0 0: t
+  292:  get_field2 read
+  297:  get_var_ref3 3: y
+  298:  get_arg1 1: e
+  299:  call1 1
+  300:  call_method 1
+  303:  call1 1
+  304:  put_loc8 8: d
+  306:  drop
+  307:  goto8 325
+  309:  put_loc8 11: t
+  311:  catch 324
+  316:  get_var_ref2 2: _
+  317:  null
+  318:  call1 1
+  319:  put_loc8 8: d
+  321:  drop
+  322:  goto8 325
+  324:  throw
+  325:  get_loc8 8: d
+  327:  get_var Math
+  332:  get_field2 max
+  337:  get_loc8 8: d
+  339:  get_field latestShard
+  344:  get_loc8 9: g
+  346:  call_method 2
+  349:  put_field latestShard
+  354:  get_loc8 8: d
+  356:  get_loc8 9: g
+  358:  get_var_ref_check 1: l
+  361:  mul
+  362:  get_loc3 3: a
+  363:  get_length
+  364:  dup
+  365:  if_true8 371
+  367:  drop
+  368:  get_var_ref_check 1: l
+  371:  add
+  372:  put_field totalMessages
+  377:  get_loc8 8: d
+  379:  get_var Date
+  384:  get_field2 now
+  389:  call_method 0
+  392:  put_field updatedAt
+  397:  catch 420
+  402:  get_arg0 0: t
+  403:  get_field2 write
+  408:  get_var_ref3 3: y
+  409:  get_arg1 1: e
+  410:  call1 1
+  411:  get_loc8 8: d
+  413:  call_method 2
+  416:  drop
+  417:  drop
+  418:  goto8 431
+  420:  put_loc8 12: t
+  422:  catch 430
+  427:  drop
+  428:  goto8 431
+  430:  throw
+  431:  object
+  432:  get_loc8 9: g
+  434:  define_field shard
+  439:  get_loc3 3: a
+  440:  get_length
+  441:  define_field len
+  446:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: W
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: catch t [level:3 next:-1]
+  closure vars:
+    0: R parent:loc25 const
+  stack_size: 4
+  opcodes:
+    0:  catch 53
+    5:  get_arg0 0: t
+    6:  get_field2 read
+   11:  get_var_ref_check 0: R
+   14:  call_method 1
+   17:  set_loc0 0: e
+   18:  if_false8 50
+   20:  push_atom_value object
+   25:  get_loc0 0: e
+   26:  typeof
+   27:  eq
+   28:  if_false8 50
+   30:  get_var Array
+   35:  get_field2 isArray
+   40:  get_loc0 0: e
+   41:  call_method 1
+   44:  lnot
+   45:  if_false8 50
+   47:  get_loc0 0: e
+   48:  goto8 51
+   50:  object
+   51:  nip
+   52:  return
+   53:  put_loc1 1: t
+   54:  catch 62
+   59:  object
+   60:  nip
+   61:  return
+   62:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: C
+  mode: strict
+  args: t e
+  locals:
+    0: catch t [level:4 next:-1]
+  closure vars:
+    0: R parent:loc25 const
+  stack_size: 5
+  opcodes:
+    0:  get_arg0 0: t
+    1:  if_false8 36
+    3:  get_arg1 1: e
+    4:  if_false8 36
+    6:  catch 27
+   11:  get_arg0 0: t
+   12:  get_field2 write
+   17:  get_var_ref_check 0: R
+   20:  get_arg1 1: e
+   21:  call_method 2
+   24:  drop
+   25:  drop
+   26:  return_undef
+   27:  put_loc0 0: t
+   28:  catch 35
+   33:  drop
+   34:  return_undef
+   35:  throw
+   36:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: A
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: catch t [level:3 next:-1]
+  closure vars:
+    0: T parent:loc26 const
+  stack_size: 4
+  opcodes:
+    0:  catch 53
+    5:  get_arg0 0: t
+    6:  get_field2 read
+   11:  get_var_ref_check 0: T
+   14:  call_method 1
+   17:  set_loc0 0: e
+   18:  if_false8 50
+   20:  push_atom_value object
+   25:  get_loc0 0: e
+   26:  typeof
+   27:  eq
+   28:  if_false8 50
+   30:  get_var Array
+   35:  get_field2 isArray
+   40:  get_loc0 0: e
+   41:  call_method 1
+   44:  lnot
+   45:  if_false8 50
+   47:  get_loc0 0: e
+   48:  goto8 51
+   50:  object
+   51:  nip
+   52:  return
+   53:  put_loc1 1: t
+   54:  catch 62
+   59:  object
+   60:  nip
+   61:  return
+   62:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: $
+  mode: strict
+  args: t e r
+  locals:
+    0: var s
+    1: var c
+    2: var i
+    3: catch t [level:6 next:-1]
+  closure vars:
+    0: A parent:loc30 var
+    1: T parent:loc26 const
+  stack_size: 5
+  opcodes:
+    0:  get_arg0 0: t
+    1:  if_false8 89
+    3:  get_arg1 1: e
+    4:  if_false8 89
+    6:  get_arg2 2: r
+    7:  if_false8 89
+    9:  catch 80
+   14:  get_var_ref0 0: A
+   15:  get_arg0 0: t
+   16:  call1 1
+   17:  set_loc0 0: s
+   18:  get_arg1 1: e
+   19:  get_arg2 2: r
+   20:  put_array_el
+   21:  get_var Object
+   26:  get_field2 keys
+   31:  get_loc0 0: s
+   32:  call_method 1
+   35:  set_loc1 1: c
+   36:  get_length
+   37:  push_i16 200
+   40:  gt
+   41:  if_false8 64
+   43:  push_0 0
+   44:  put_loc2 2: i
+   45:  get_loc2 2: i
+   46:  get_loc1 1: c
+   47:  get_length
+   48:  push_i8 100
+   50:  sub
+   51:  lt
+   52:  if_false8 64
+   54:  get_loc0 0: s
+   55:  get_loc1 1: c
+   56:  get_loc2 2: i
+   57:  get_array_el
+   58:  delete
+   59:  drop
+   60:  inc_loc 2: i
+   62:  goto8 45
+   64:  get_arg0 0: t
+   65:  get_field2 write
+   70:  get_var_ref_check 1: T
+   73:  get_loc0 0: s
+   74:  call_method 2
+   77:  drop
+   78:  drop
+   79:  return_undef
+   80:  put_loc3 3: t
+   81:  catch 88
+   86:  drop
+   87:  return_undef
+   88:  throw
+   89:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: D
+  mode: strict
+  args: t e
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: t
+    1:  lnot
+    2:  dup
+    3:  if_true8 22
+    5:  drop
+    6:  get_arg1 1: e
+    7:  lnot
+    8:  dup
+    9:  if_true8 22
+   11:  drop
+   12:  push_1 1
+   13:  get_arg0 0: t
+   14:  get_field mids
+   19:  get_arg1 1: e
+   20:  get_array_el
+   21:  strict_neq
+   22:  lnot
+   23:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: P
+  mode: strict
+  args: t e r s
+  locals:
+    0: var c
+    1: var i
+  closure vars:
+    0: C parent:loc29 var
+  stack_size: 4
+  opcodes:
+    0:  get_arg1 1: e
+    1:  dup
+    2:  if_false8 71
+    4:  drop
+    5:  get_arg2 2: r
+    6:  dup
+    7:  if_false8 71
+    9:  drop
+   10:  get_arg3 3: s
+   11:  dup
+   12:  if_false8 71
+   14:  drop
+   15:  get_arg1 1: e
+   16:  get_field mids
+   21:  get_arg3 3: s
+   22:  push_1 1
+   23:  put_array_el
+   24:  get_arg1 1: e
+   25:  get_field wm
+   30:  get_arg2 2: r
+   31:  to_propkey2
+   32:  get_var String
+   37:  get_arg3 3: s
+   38:  call1 1
+   39:  put_array_el
+   40:  get_arg1 1: e
+   41:  get_field wmTimer
+   46:  dup
+   47:  if_true8 71
+   49:  drop
+   50:  get_arg0 0: t
+   51:  put_loc1 1: i
+   52:  get_arg1 1: e
+   53:  set_loc0 0: c
+   54:  get_var setTimeout
+   59:  fclosure8 0: [bytecode <null>]
+   61:  push_i16 800
+   64:  call2 2
+   65:  insert2
+   66:  put_field wmTimer
+   71:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: c local:loc0 var
+    1: C parent:loc0 var
+    2: i local:loc1 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: c
+    1:  null
+    2:  put_field wmTimer
+    7:  get_var_ref1 1: C
+    8:  get_var_ref2 2: i
+    9:  get_var_ref0 0: c
+   10:  get_field wm
+   15:  call2 2
+   16:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: I
+  mode: strict
+  args: t e r
+  locals:
+    0: var s
+    1: catch e [level:6 next:-1]
+    2: var c
+    3: catch t [level:10 next:-1]
+  closure vars:
+    0: p parent:loc22 var
+    1: k parent:loc24 var
+  stack_size: 9
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_field bufs
+    6:  get_arg2 2: r
+    7:  get_array_el
+    8:  set_loc0 0: s
+    9:  if_false 195
+   14:  get_loc0 0: s
+   15:  get_length
+   16:  if_false 195
+   21:  get_arg0 0: t
+   22:  get_field bufs
+   27:  get_arg2 2: r
+   28:  to_propkey2
+   29:  array_from 0
+   32:  put_array_el
+   33:  get_arg0 0: t
+   34:  get_field timers
+   39:  get_arg2 2: r
+   40:  get_array_el
+   41:  dup
+   42:  if_false8 71
+   44:  drop
+   45:  get_var clearTimeout
+   50:  get_arg0 0: t
+   51:  get_field timers
+   56:  get_arg2 2: r
+   57:  get_array_el
+   58:  call1 1
+   59:  drop
+   60:  get_arg0 0: t
+   61:  get_field timers
+   66:  get_arg2 2: r
+   67:  to_propkey2
+   68:  null
+   69:  insert3
+   70:  put_array_el
+   71:  drop
+   72:  get_arg1 1: e
+   73:  if_false8 195
+   75:  undefined
+   76:  get_arg0 0: t
+   77:  get_field shards
+   82:  get_arg2 2: r
+   83:  get_array_el
+   84:  strict_eq
+   85:  if_false8 134
+   87:  catch 114
+   92:  get_arg0 0: t
+   93:  get_field shards
+   98:  get_arg2 2: r
+   99:  to_propkey2
+  100:  get_var_ref0 0: p
+  101:  get_arg1 1: e
+  102:  get_arg2 2: r
+  103:  push_1 1
+  104:  call3 3
+  105:  get_field latestShard
+  110:  put_array_el
+  111:  drop
+  112:  goto8 134
+  114:  put_loc1 1: e
+  115:  catch 133
+  120:  get_arg0 0: t
+  121:  get_field shards
+  126:  get_arg2 2: r
+  127:  to_propkey2
+  128:  push_minus1 -1
+  129:  put_array_el
+  130:  drop
+  131:  goto8 134
+  133:  throw
+  134:  catch 186
+  139:  get_var_ref1 1: k
+  140:  get_arg1 1: e
+  141:  get_arg2 2: r
+  142:  get_var Math
+  147:  get_field2 max
+  152:  push_0 0
+  153:  get_arg0 0: t
+  154:  get_field shards
+  159:  get_arg2 2: r
+  160:  get_array_el
+  161:  call_method 2
+  164:  get_loc0 0: s
+  165:  call 4
+  168:  put_loc2 2: c
+  169:  get_arg0 0: t
+  170:  get_field shards
+  175:  get_arg2 2: r
+  176:  to_propkey2
+  177:  get_loc2 2: c
+  178:  get_field shard
+  183:  put_array_el
+  184:  drop
+  185:  return_undef
+  186:  put_loc3 3: t
+  187:  catch 194
+  192:  drop
+  193:  return_undef
+  194:  throw
+  195:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: F
+  mode: strict
+  args: t e
+  locals:
+    0: var r
+  closure vars:
+    0: I parent:loc34 var
+    1: C parent:loc29 var
+  stack_size: 5
+  opcodes:
+    0:  get_arg0 0: t
+    1:  if_false8 125
+    3:  get_arg0 0: t
+    4:  get_field bufs
+    9:  for_in_start
+   10:  goto8 44
+   12:  put_loc0 0: r
+   13:  get_arg0 0: t
+   14:  get_field bufs
+   19:  get_loc0 0: r
+   20:  get_array_el
+   21:  dup
+   22:  if_false8 43
+   24:  drop
+   25:  get_arg0 0: t
+   26:  get_field bufs
+   31:  get_loc0 0: r
+   32:  get_array_el
+   33:  get_length
+   34:  dup
+   35:  if_false8 43
+   37:  drop
+   38:  get_var_ref0 0: I
+   39:  get_arg0 0: t
+   40:  get_arg1 1: e
+   41:  get_loc0 0: r
+   42:  call3 3
+   43:  drop
+   44:  for_in_next
+   45:  if_false8 12
+   47:  drop
+   48:  drop
+   49:  get_arg0 0: t
+   50:  get_field wmTimer
+   55:  dup
+   56:  if_false8 80
+   58:  drop
+   59:  get_var clearTimeout
+   64:  get_arg0 0: t
+   65:  get_field wmTimer
+   70:  call1 1
+   71:  drop
+   72:  get_arg0 0: t
+   73:  null
+   74:  insert2
+   75:  put_field wmTimer
+   80:  drop
+   81:  get_arg0 0: t
+   82:  get_field wm
+   87:  dup
+   88:  if_false8 124
+   90:  drop
+   91:  get_var Object
+   96:  get_field2 keys
+  101:  get_arg0 0: t
+  102:  get_field wm
+  107:  call_method 1
+  110:  get_length
+  111:  dup
+  112:  if_false8 124
+  114:  drop
+  115:  get_var_ref1 1: C
+  116:  get_arg1 1: e
+  117:  get_arg0 0: t
+  118:  get_field wm
+  123:  call2 2
+  124:  drop
+  125:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: E
+  mode: strict
+  args: t e r
+  closure vars:
+    0: $ parent:loc31 var
+    1: g parent:loc12 const
+  stack_size: 6
+  opcodes:
+    0:  push_atom_value ask_replied
+    5:  get_arg1 1: e
+    6:  strict_eq
+    7:  if_false8 53
+    9:  get_var_ref0 0: $
+   10:  get_arg0 0: t
+   11:  get_var_ref_check 1: g
+   14:  get_arg2 2: r
+   15:  get_field ask_id
+   20:  call1 1
+   21:  push_atom_value allow
+   26:  get_var_ref_check 1: g
+   29:  get_arg2 2: r
+   30:  get_field behavior
+   35:  call1 1
+   36:  strict_eq
+   37:  if_false8 46
+   39:  push_atom_value allow
+   44:  goto8 51
+   46:  push_atom_value deny
+   51:  call3 3
+   52:  return_undef
+   53:  push_atom_value error
+   58:  get_arg1 1: e
+   59:  strict_eq
+   60:  dup
+   61:  if_false8 102
+   63:  drop
+   64:  push_atom_value ask_timeout
+   69:  get_var_ref_check 1: g
+   72:  get_arg2 2: r
+   73:  get_field code
+   78:  call1 1
+   79:  strict_eq
+   80:  dup
+   81:  if_false8 102
+   83:  drop
+   84:  get_var_ref0 0: $
+   85:  get_arg0 0: t
+   86:  get_var_ref_check 1: g
+   89:  get_arg2 2: r
+   90:  get_field ask_id
+   95:  call1 1
+   96:  push_atom_value timeout
+  101:  call3 3
+  102:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: x
+  mode: strict
+  args: t e r s c
+  locals:
+    0: var i
+  closure vars:
+    0: g parent:loc12 const
+    1: f parent:loc14 var
+    2: m parent:loc15 var
+    3: I parent:loc34 var
+    4: M parent:loc27 var
+    5: P parent:loc33 var
+    6: p parent:loc22 var
+    7: D parent:loc32 var
+    8: k parent:loc24 var
+  stack_size: 6
+  opcodes:
+    0:  get_arg1 1: e
+    1:  if_false8 65
+    3:  get_arg2 2: r
+    4:  if_false8 65
+    6:  get_arg0 0: t
+    7:  if_false8 65
+    9:  push_atom_value history
+   14:  get_arg3 3: s
+   15:  strict_neq
+   16:  if_false8 52
+   18:  fclosure8 0: [bytecode <null>]
+   20:  get_arg3 3: s
+   21:  get_arg 4: c
+   24:  call2 2
+   25:  set_loc0 0: i
+   26:  dup
+   27:  if_false8 50
+   29:  drop
+   30:  fclosure8 1: [bytecode <null>]
+   32:  get_arg1 1: e
+   33:  get_arg0 0: t
+   34:  get_arg2 2: r
+   35:  get_loc0 0: i
+   36:  get_field role
+   41:  get_loc0 0: i
+   42:  get_field fields
+   47:  call 5
+   50:  drop
+   51:  return_undef
+   52:  fclosure8 2: [bytecode <null>]
+   54:  get_arg0 0: t
+   55:  get_arg1 1: e
+   56:  get_arg2 2: r
+   57:  get_arg 4: c
+   60:  call 4
+   63:  lnot
+   64:  drop
+   65:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: var r
+  closure vars:
+    0: g parent:loc0 const
+    1: f parent:loc1 var
+    2: m parent:loc2 var
+  stack_size: 5
+  opcodes:
+    0:  push_atom_value user_msg
+    5:  get_arg0 0: t
+    6:  strict_eq
+    7:  if_false8 57
+    9:  object
+   10:  push_atom_value user
+   15:  define_field role
+   20:  object
+   21:  get_var_ref_check 0: g
+   24:  get_arg1 1: e
+   25:  get_field mid
+   30:  call1 1
+   31:  define_field mid
+   36:  get_var_ref_check 0: g
+   39:  get_arg1 1: e
+   40:  get_field text
+   45:  call1 1
+   46:  define_field text
+   51:  define_field fields
+   56:  return
+   57:  push_atom_value cc_msg
+   62:  get_arg0 0: t
+   63:  strict_eq
+   64:  if_false8 130
+   66:  object
+   67:  push_atom_value cc
+   72:  define_field role
+   77:  object
+   78:  get_var_ref_check 0: g
+   81:  get_arg1 1: e
+   82:  get_field mid
+   87:  call1 1
+   88:  define_field mid
+   93:  get_var_ref_check 0: g
+   96:  get_arg1 1: e
+   97:  get_field text
+  102:  call1 1
+  103:  define_field text
+  108:  push_atom_value done
+  113:  define_field state
+  118:  push_empty_string
+  119:  define_field meta
+  124:  define_field fields
+  129:  return
+  130:  push_atom_value tool_activity
+  135:  get_arg0 0: t
+  136:  strict_eq
+  137:  if_false8 210
+  139:  get_var_ref1 1: f
+  140:  get_arg1 1: e
+  141:  get_field brief
+  146:  call1 1
+  147:  put_loc0 0: r
+  148:  object
+  149:  push_atom_value tool
+  154:  define_field role
+  159:  object
+  160:  get_var_ref_check 0: g
+  163:  get_arg1 1: e
+  164:  get_field mid
+  169:  call1 1
+  170:  define_field mid
+  175:  get_var_ref_check 0: g
+  178:  get_arg1 1: e
+  179:  get_field tool
+  184:  call1 1
+  185:  get_loc0 0: r
+  186:  if_false8 197
+  188:  push_atom_value "\u00ef\u00bc\u009a"
+  193:  get_loc0 0: r
+  194:  add
+  195:  goto8 198
+  197:  push_empty_string
+  198:  add
+  199:  define_field text
+  204:  define_field fields
+  209:  return
+  210:  push_atom_value final
+  215:  get_arg0 0: t
+  216:  strict_eq
+  217:  if_false8 283
+  219:  object
+  220:  push_atom_value cc
+  225:  define_field role
+  230:  object
+  231:  get_var_ref_check 0: g
+  234:  get_arg1 1: e
+  235:  get_field mid
+  240:  call1 1
+  241:  define_field mid
+  246:  get_var_ref_check 0: g
+  249:  get_arg1 1: e
+  250:  get_field text
+  255:  call1 1
+  256:  define_field text
+  261:  push_atom_value done
+  266:  define_field state
+  271:  push_empty_string
+  272:  define_field meta
+  277:  define_field fields
+  282:  return
+  283:  push_atom_value ask
+  288:  get_arg0 0: t
+  289:  strict_eq
+  290:  if_false8 405
+  292:  object
+  293:  push_atom_value ask
+  298:  define_field role
+  303:  object
+  304:  get_var_ref_check 0: g
+  307:  get_arg1 1: e
+  308:  get_field ask_id
+  313:  call1 1
+  314:  define_field askId
+  319:  get_var_ref_check 0: g
+  322:  get_arg1 1: e
+  323:  get_field kind
+  328:  call1 1
+  329:  dup
+  330:  if_true8 338
+  332:  drop
+  333:  push_atom_value permission
+  338:  define_field kind
+  343:  get_var_ref_check 0: g
+  346:  get_arg1 1: e
+  347:  get_field tool_name
+  352:  call1 1
+  353:  define_field toolName
+  358:  get_var_ref1 1: f
+  359:  get_arg1 1: e
+  360:  get_field input
+  365:  call1 1
+  366:  define_field inputSummary
+  371:  get_var_ref2 2: m
+  372:  get_arg1 1: e
+  373:  get_field input
+  378:  dup
+  379:  if_false8 393
+  381:  drop
+  382:  get_arg1 1: e
+  383:  get_field input
+  388:  get_field questions
+  393:  call1 1
+  394:  define_field questions
+  399:  define_field fields
+  404:  return
+  405:  null
+  406:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t e r s c
+  locals:
+    0: var i
+    1: var n
+    2: var a
+    3: var o
+    4: var h
+    5: var l
+    6: var d
+    7: var g
+  closure vars:
+    0: I parent:loc3 var
+    1: M parent:loc4 var
+    2: P parent:loc5 var
+  stack_size: 5
+  opcodes:
+    0:  get_arg0 0: t
+    1:  if_false 535
+    6:  get_arg2 2: r
+    7:  if_false 535
+   12:  get_arg3 3: s
+   13:  if_false 535
+   18:  get_arg 4: c
+   21:  dup
+   22:  if_true8 26
+   24:  drop
+   25:  object
+   26:  set_loc0 0: i
+   27:  get_field mid
+   32:  if_false8 48
+   34:  get_var String
+   39:  get_loc0 0: i
+   40:  get_field mid
+   45:  call1 1
+   46:  goto8 49
+   48:  push_empty_string
+   49:  set_loc1 1: n
+   50:  lnot
+   51:  dup
+   52:  if_true8 64
+   54:  drop
+   55:  get_arg0 0: t
+   56:  get_field mids
+   61:  get_loc1 1: n
+   62:  get_array_el
+   63:  lnot
+   64:  if_false 535
+   69:  push_atom_value ask
+   74:  get_arg3 3: s
+   75:  strict_eq
+   76:  if_false8 132
+   78:  get_loc0 0: i
+   79:  get_field askId
+   84:  if_false8 100
+   86:  get_var String
+   91:  get_loc0 0: i
+   92:  get_field askId
+   97:  call1 1
+   98:  goto8 101
+  100:  push_empty_string
+  101:  set_loc2 2: a
+  102:  if_false8 115
+  104:  get_arg0 0: t
+  105:  get_field asks
+  110:  get_loc2 2: a
+  111:  get_array_el
+  112:  if_false8 115
+  114:  return_undef
+  115:  get_loc2 2: a
+  116:  dup
+  117:  if_false8 131
+  119:  drop
+  120:  get_arg0 0: t
+  121:  get_field asks
+  126:  get_loc2 2: a
+  127:  to_propkey2
+  128:  push_1 1
+  129:  insert3
+  130:  put_array_el
+  131:  drop
+  132:  object
+  133:  get_loc1 1: n
+  134:  dup
+  135:  if_true8 167
+  137:  drop
+  138:  push_atom_value lv
+  143:  get_var_ref1 1: M
+  144:  inc
+  145:  set_var_ref1 1: M
+  146:  add
+  147:  push_atom_value _
+  152:  add
+  153:  get_var Date
+  158:  get_field2 now
+  163:  call_method 0
+  166:  add
+  167:  define_field id
+  172:  get_arg3 3: s
+  173:  define_field role
+  178:  get_loc0 0: i
+  179:  get_field text
+  184:  dup
+  185:  if_true8 189
+  187:  drop
+  188:  push_empty_string
+  189:  define_field text
+  194:  get_loc0 0: i
+  195:  get_field time
+  200:  dup
+  201:  if_true8 217
+  203:  drop
+  204:  get_var Date
+  209:  get_field2 now
+  214:  call_method 0
+  217:  define_field time
+  222:  put_loc3 3: o
+  223:  push_atom_value cc
+  228:  get_arg3 3: s
+  229:  strict_eq
+  230:  dup
+  231:  if_false8 273
+  233:  drop
+  234:  get_loc3 3: o
+  235:  get_loc0 0: i
+  236:  get_field state
+  241:  dup
+  242:  if_true8 250
+  244:  drop
+  245:  push_atom_value done
+  250:  put_field state
+  255:  get_loc3 3: o
+  256:  get_loc0 0: i
+  257:  get_field meta
+  262:  dup
+  263:  if_true8 267
+  265:  drop
+  266:  push_empty_string
+  267:  insert2
+  268:  put_field meta
+  273:  drop
+  274:  push_atom_value ask
+  279:  get_arg3 3: s
+  280:  strict_eq
+  281:  dup
+  282:  if_false 425
+  287:  drop
+  288:  get_loc3 3: o
+  289:  push_atom_value done
+  294:  put_field state
+  299:  get_loc3 3: o
+  300:  get_loc0 0: i
+  301:  get_field kind
+  306:  dup
+  307:  if_true8 315
+  309:  drop
+  310:  push_atom_value permission
+  315:  put_field kind
+  320:  get_loc3 3: o
+  321:  get_loc0 0: i
+  322:  get_field toolName
+  327:  dup
+  328:  if_true8 332
+  330:  drop
+  331:  push_empty_string
+  332:  put_field toolName
+  337:  get_loc3 3: o
+  338:  get_loc0 0: i
+  339:  get_field inputSummary
+  344:  dup
+  345:  if_true8 349
+  347:  drop
+  348:  push_empty_string
+  349:  put_field inputSummary
+  354:  get_loc3 3: o
+  355:  get_var Array
+  360:  get_field2 isArray
+  365:  get_loc0 0: i
+  366:  get_field questions
+  371:  call_method 1
+  374:  if_false8 384
+  376:  get_loc0 0: i
+  377:  get_field questions
+  382:  goto8 387
+  384:  array_from 0
+  387:  put_field questions
+  392:  get_loc3 3: o
+  393:  get_loc0 0: i
+  394:  get_field askId
+  399:  dup
+  400:  if_true8 404
+  402:  drop
+  403:  push_empty_string
+  404:  put_field askId
+  409:  get_loc3 3: o
+  410:  push_1 1
+  411:  lnot
+  412:  put_field answered
+  417:  get_loc3 3: o
+  418:  push_empty_string
+  419:  insert2
+  420:  put_field answeredLabel
+  425:  drop
+  426:  get_arg0 0: t
+  427:  get_field bufs
+  432:  get_arg2 2: r
+  433:  get_array_el
+  434:  dup
+  435:  if_true8 451
+  437:  drop
+  438:  get_arg0 0: t
+  439:  get_field bufs
+  444:  get_arg2 2: r
+  445:  to_propkey2
+  446:  array_from 0
+  449:  insert3
+  450:  put_array_el
+  451:  set_loc8 7: g
+  453:  get_field2 push
+  458:  get_loc3 3: o
+  459:  call_method 1
+  462:  drop
+  463:  get_loc1 1: n
+  464:  dup
+  465:  if_false8 476
+  467:  drop
+  468:  get_var_ref2 2: P
+  469:  get_arg1 1: e
+  470:  get_arg0 0: t
+  471:  get_arg2 2: r
+  472:  get_loc1 1: n
+  473:  call 4
+  476:  drop
+  477:  get_loc8 7: g
+  479:  get_length
+  480:  push_i8 24
+  482:  gte
+  483:  if_false8 492
+  485:  get_var_ref0 0: I
+  486:  get_arg0 0: t
+  487:  get_arg1 1: e
+  488:  get_arg2 2: r
+  489:  call3 3
+  490:  goto8 534
+  492:  get_arg0 0: t
+  493:  get_field timers
+  498:  get_arg2 2: r
+  499:  get_array_el
+  500:  dup
+  501:  if_true8 534
+  503:  drop
+  504:  get_arg2 2: r
+  505:  put_loc8 5: l
+  507:  get_arg1 1: e
+  508:  put_loc8 6: d
+  510:  get_arg0 0: t
+  511:  set_loc8 4: h
+  513:  get_field timers
+  518:  get_loc8 5: l
+  520:  to_propkey2
+  521:  get_var setTimeout
+  526:  fclosure8 0: [bytecode <null>]
+  528:  push_i16 600
+  531:  call2 2
+  532:  insert3
+  533:  put_array_el
+  534:  drop
+  535:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: h local:loc4 var
+    1: l local:loc5 var
+    2: I parent:loc0 var
+    3: d local:loc6 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: h
+    1:  get_field timers
+    6:  get_var_ref1 1: l
+    7:  null
+    8:  put_array_el
+    9:  get_var_ref2 2: I
+   10:  get_var_ref0 0: h
+   11:  get_var_ref3 3: d
+   12:  get_var_ref1 1: l
+   13:  call3 3
+   14:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t e r s
+  locals:
+    0: var c
+    1: var i
+    2: var n
+    3: var a
+    4: var o
+    5: var h
+    6: var l
+    7: var d
+    8: var u
+    9: var f
+   10: var m
+   11: var B
+   12: var v
+   13: var y
+   14: var S
+   15: var w
+   16: var _
+   17: var b
+   18: var R
+   19: var T
+   20: var M
+   21: var W
+   22: var C
+   23: var A
+   24: var $
+   25: catch t [level:36 next:-1]
+  closure vars:
+    0: g parent:loc0 const
+    1: I parent:loc3 var
+    2: p parent:loc6 var
+    3: D parent:loc7 var
+    4: k parent:loc8 var
+    5: P parent:loc5 var
+  stack_size: 8
+  opcodes:
+    0:  get_arg3 3: s
+    1:  if_false8 32
+    3:  get_var Array
+    8:  get_field2 isArray
+   13:  get_arg3 3: s
+   14:  get_field messages
+   19:  call_method 1
+   22:  if_false8 32
+   24:  get_arg3 3: s
+   25:  get_field messages
+   30:  goto8 35
+   32:  array_from 0
+   35:  put_loc0 0: c
+   36:  get_arg0 0: t
+   37:  lnot
+   38:  dup
+   39:  if_true8 51
+   41:  drop
+   42:  get_arg2 2: r
+   43:  lnot
+   44:  dup
+   45:  if_true8 51
+   47:  drop
+   48:  get_loc0 0: c
+   49:  get_length
+   50:  lnot
+   51:  if_false8 55
+   53:  push_0 0
+   54:  return
+   55:  get_var_ref1 1: I
+   56:  get_arg1 1: e
+   57:  get_arg0 0: t
+   58:  get_arg2 2: r
+   59:  call3 3
+   60:  drop
+   61:  get_var_ref2 2: p
+   62:  get_arg0 0: t
+   63:  get_arg2 2: r
+   64:  push_1 1
+   65:  call3 3
+   66:  set_loc1 1: i
+   67:  get_field messages
+   72:  dup
+   73:  if_true8 79
+   75:  drop
+   76:  array_from 0
+   79:  put_loc2 2: n
+   80:  fclosure8 0: [bytecode <null>]
+   82:  set_name a
+   87:  put_loc3 3: a
+   88:  fclosure8 1: [bytecode <null>]
+   90:  set_name o
+   95:  put_loc8 4: o
+   97:  get_loc2 2: n
+   98:  get_length
+   99:  put_loc8 5: h
+  101:  push_0 0
+  102:  put_loc8 6: l
+  104:  array_from 0
+  107:  put_loc8 7: d
+  109:  push_0 0
+  110:  put_loc8 8: u
+  112:  get_loc8 8: u
+  114:  get_loc0 0: c
+  115:  get_length
+  116:  lt
+  117:  if_false 701
+  122:  get_loc0 0: c
+  123:  get_loc8 8: u
+  125:  get_array_el
+  126:  dup
+  127:  if_true8 131
+  129:  drop
+  130:  object
+  131:  put_loc8 9: f
+  133:  push_atom_value sys
+  138:  get_loc8 9: f
+  140:  get_field role
+  145:  strict_neq
+  146:  if_false 696
+  151:  get_var_ref_check 0: g
+  154:  get_loc8 9: f
+  156:  get_field text
+  161:  call1 1
+  162:  set_loc8 10: m
+  164:  if_false 696
+  169:  get_loc3 3: a
+  170:  get_loc8 9: f
+  172:  get_field role
+  177:  call1 1
+  178:  put_loc8 11: B
+  180:  get_loc8 4: o
+  182:  get_loc8 11: B
+  184:  get_loc8 10: m
+  186:  call2 2
+  187:  put_loc8 12: v
+  189:  push_minus1 -1
+  190:  put_loc8 13: y
+  192:  get_loc8 6: l
+  194:  put_loc8 14: S
+  196:  get_loc8 14: S
+  198:  get_loc8 5: h
+  200:  lt
+  201:  if_false 354
+  206:  get_loc8 14: S
+  208:  get_loc8 6: l
+  210:  push_i16 200
+  213:  add
+  214:  lt
+  215:  if_false 354
+  220:  get_loc2 2: n
+  221:  get_loc8 14: S
+  223:  get_array_el
+  224:  set_loc8 15: w
+  226:  if_false 349
+  231:  get_loc8 15: w
+  233:  get_field role
+  238:  get_loc8 11: B
+  240:  strict_eq
+  241:  if_false8 349
+  243:  get_loc8 4: o
+  245:  get_loc8 11: B
+  247:  get_loc8 15: w
+  249:  get_field text
+  254:  call2 2
+  255:  get_loc8 12: v
+  257:  strict_eq
+  258:  if_false8 266
+  260:  get_loc8 14: S
+  262:  put_loc8 13: y
+  264:  goto8 354
+  266:  push_atom_value cc
+  271:  get_loc8 11: B
+  273:  strict_eq
+  274:  if_false8 349
+  276:  get_loc8 12: v
+  278:  get_length
+  279:  push_i8 8
+  281:  gte
+  282:  if_false8 349
+  284:  get_var_ref_check 0: g
+  287:  get_loc8 15: w
+  289:  get_field text
+  294:  call1 1
+  295:  set_loc8 16: _
+  297:  get_length
+  298:  push_i8 8
+  300:  gte
+  301:  if_false8 349
+  303:  get_loc8 16: _
+  305:  get_field2 slice
+  310:  push_0 0
+  311:  get_loc8 12: v
+  313:  get_length
+  314:  call_method 2
+  317:  get_loc8 12: v
+  319:  strict_eq
+  320:  dup
+  321:  if_true8 341
+  323:  drop
+  324:  get_loc8 12: v
+  326:  get_field2 slice
+  331:  push_0 0
+  332:  get_loc8 16: _
+  334:  get_length
+  335:  call_method 2
+  338:  get_loc8 16: _
+  340:  strict_eq
+  341:  if_false8 349
+  343:  get_loc8 14: S
+  345:  put_loc8 13: y
+  347:  goto8 354
+  349:  inc_loc 14: S
+  351:  goto16 196
+  354:  get_loc8 13: y
+  356:  push_0 0
+  357:  gte
+  358:  if_false8 369
+  360:  get_loc8 13: y
+  362:  push_1 1
+  363:  add
+  364:  put_loc8 6: l
+  366:  goto16 696
+  369:  push_atom_value cc
+  374:  get_loc8 11: B
+  376:  strict_eq
+  377:  if_false 500
+  382:  push_empty_string
+  383:  put_loc8 17: b
+  385:  push_0 0
+  386:  put_loc8 18: R
+  388:  push_minus1 -1
+  389:  put_loc8 19: T
+  391:  get_loc8 6: l
+  393:  put_loc8 20: M
+  395:  get_loc8 20: M
+  397:  get_loc8 5: h
+  399:  lt
+  400:  if_false8 485
+  402:  get_loc8 20: M
+  404:  get_loc8 6: l
+  406:  push_i16 200
+  409:  add
+  410:  lt
+  411:  if_false8 485
+  413:  get_loc8 18: R
+  415:  push_6 6
+  416:  lt
+  417:  if_false8 485
+  419:  get_loc2 2: n
+  420:  get_loc8 20: M
+  422:  get_array_el
+  423:  set_loc8 21: W
+  425:  if_false8 481
+  427:  push_atom_value cc
+  432:  get_loc8 21: W
+  434:  get_field role
+  439:  strict_eq
+  440:  if_false8 481
+  442:  push_1 1
+  443:  add_loc 18: R
+  445:  get_loc8 17: b
+  447:  get_var_ref_check 0: g
+  450:  get_loc8 21: W
+  452:  get_field text
+  457:  call1 1
+  458:  add
+  459:  set_loc8 17: b
+  461:  get_loc8 10: m
+  463:  strict_eq
+  464:  if_false8 472
+  466:  get_loc8 20: M
+  468:  put_loc8 19: T
+  470:  goto8 485
+  472:  get_loc8 17: b
+  474:  get_length
+  475:  get_loc8 10: m
+  477:  get_length
+  478:  gte
+  479:  if_true8 485
+  481:  inc_loc 20: M
+  483:  goto8 395
+  485:  get_loc8 19: T
+  487:  push_0 0
+  488:  gte
+  489:  if_false8 500
+  491:  get_loc8 19: T
+  493:  push_1 1
+  494:  add
+  495:  put_loc8 6: l
+  497:  goto16 696
+  500:  get_var_ref_check 0: g
+  503:  get_loc8 9: f
+  505:  get_field id
+  510:  call1 1
+  511:  set_loc8 22: C
+  513:  lnot
+  514:  dup
+  515:  if_true8 524
+  517:  drop
+  518:  get_var_ref3 3: D
+  519:  get_arg1 1: e
+  520:  get_loc8 22: C
+  522:  call2 2
+  523:  lnot
+  524:  if_false 696
+  529:  object
+  530:  get_loc8 22: C
+  532:  dup
+  533:  if_true8 564
+  535:  drop
+  536:  push_atom_value hs
+  541:  get_var Date
+  546:  get_field2 now
+  551:  call_method 0
+  554:  add
+  555:  push_atom_value _
+  560:  add
+  561:  get_loc8 8: u
+  563:  add
+  564:  define_field id
+  569:  get_loc8 11: B
+  571:  define_field role
+  576:  get_loc8 10: m
+  578:  define_field text
+  583:  get_var Number
+  588:  get_loc8 9: f
+  590:  get_field ts
+  595:  call1 1
+  596:  if_false8 617
+  598:  push_i16 1000
+  601:  get_var Number
+  606:  get_loc8 9: f
+  608:  get_field ts
+  613:  call1 1
+  614:  mul
+  615:  goto8 630
+  617:  get_var Date
+  622:  get_field2 now
+  627:  call_method 0
+  630:  define_field time
+  635:  put_loc8 23: A
+  637:  push_atom_value cc
+  642:  get_loc8 11: B
+  644:  strict_eq
+  645:  dup
+  646:  if_false8 670
+  648:  drop
+  649:  get_loc8 23: A
+  651:  push_atom_value done
+  656:  put_field state
+  661:  get_loc8 23: A
+  663:  push_empty_string
+  664:  insert2
+  665:  put_field meta
+  670:  drop
+  671:  get_loc8 7: d
+  673:  get_field2 push
+  678:  get_loc8 23: A
+  680:  call_method 1
+  683:  drop
+  684:  get_loc2 2: n
+  685:  get_field2 push
+  690:  get_loc8 23: A
+  692:  call_method 1
+  695:  drop
+  696:  inc_loc 8: u
+  698:  goto16 112
+  701:  get_loc8 7: d
+  703:  get_length
+  704:  if_false8 780
+  706:  catch 769
+  711:  get_var_ref 4: k
+  714:  get_arg0 0: t
+  715:  get_arg2 2: r
+  716:  get_var Math
+  721:  get_field2 max
+  726:  push_0 0
+  727:  get_loc1 1: i
+  728:  get_field endShard
+  733:  call_method 2
+  736:  get_loc8 7: d
+  738:  call 4
+  741:  put_loc8 24: $
+  743:  get_arg1 1: e
+  744:  dup
+  745:  if_false8 765
+  747:  drop
+  748:  get_arg1 1: e
+  749:  get_field shards
+  754:  get_arg2 2: r
+  755:  to_propkey2
+  756:  get_loc8 24: $
+  758:  get_field shard
+  763:  insert3
+  764:  put_array_el
+  765:  drop
+  766:  drop
+  767:  goto8 780
+  769:  put_loc8 25: t
+  771:  catch 779
+  776:  drop
+  777:  goto8 780
+  779:  throw
+  780:  get_arg1 1: e
+  781:  dup
+  782:  if_false8 816
+  784:  drop
+  785:  get_arg3 3: s
+  786:  get_field last_mid
+  791:  dup
+  792:  if_false8 816
+  794:  drop
+  795:  get_var_ref 5: P
+  798:  get_arg0 0: t
+  799:  get_arg1 1: e
+  800:  get_arg2 2: r
+  801:  get_var String
+  806:  get_arg3 3: s
+  807:  get_field last_mid
+  812:  call1 1
+  813:  call 4
+  816:  drop
+  817:  get_loc8 7: d
+  819:  get_length
+  820:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  push_atom_value tool
+    5:  get_arg0 0: t
+    6:  strict_eq
+    7:  if_false8 15
+    9:  push_atom_value tool
+   14:  return
+   15:  push_atom_value user
+   20:  get_arg0 0: t
+   21:  strict_eq
+   22:  if_false8 30
+   24:  push_atom_value user
+   29:  return
+   30:  push_atom_value cc
+   35:  return
+
+
+/* ===== function depth=3 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t e
+  closure vars:
+    0: g parent:loc0 const
+  stack_size: 3
+  opcodes:
+    0:  push_atom_value tool
+    5:  get_arg0 0: t
+    6:  strict_eq
+    7:  if_false8 53
+    9:  get_var_ref_check 0: g
+   12:  get_arg1 1: e
+   13:  call1 1
+   14:  get_field2 split
+   19:  push_atom_value "\u00ef\u00bc\u009a"
+   24:  call_method 1
+   27:  push_0 0
+   28:  get_array_el
+   29:  get_field2 split
+   34:  push_atom_value ":"
+   39:  call_method 1
+   42:  push_0 0
+   43:  get_array_el
+   44:  get_field2 trim
+   49:  call_method 0
+   52:  return
+   53:  get_var_ref_check 0: g
+   56:  get_arg1 1: e
+   57:  call1 1
+   58:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  stack_size: 2
+  opcodes:
+    0:  object
+    1:  push_empty_string
+    2:  define_field rcToken
+    7:  push_empty_string
+    8:  define_field rcWsUrl
+   13:  push_1 1
+   14:  lnot
+   15:  define_field rcWsConnected
+   20:  push_atom_value idle
+   25:  define_field rcWsState
+   30:  push_empty_string
+   31:  define_field rcStatusMessage
+   36:  push_empty_string
+   37:  define_field rcSessionId
+   42:  array_from 0
+   45:  define_field rcSessionHistory
+   50:  push_empty_string
+   51:  define_field rcChannel
+   56:  object
+   57:  define_field rcChannelModels
+   62:  object
+   63:  define_field rcModelLists
+   68:  push_i8 50
+   70:  define_field rcUiPadX
+   75:  push_0 0
+   76:  lnot
+   77:  define_field rcUiToolFrame
+   82:  null
+   83:  define_field rcWs
+   88:  push_0 0
+   89:  define_field rcGeneration
+   94:  push_0 0
+   95:  lnot
+   96:  define_field rcManualStop
+  101:  push_0 0
+  102:  define_field rcRetryIndex
+  107:  null
+  108:  define_field rcConnectTimer
+  113:  null
+  114:  define_field rcReconnectTimer
+  119:  null
+  120:  define_field rcPollTimer
+  125:  null
+  126:  define_field rcPingTimer
+  131:  push_0 0
+  132:  define_field rcEchoSeq
+  137:  object
+  138:  define_field rcPendingEcho
+  143:  push_1 1
+  144:  lnot
+  145:  define_field autoAllowPermissions
+  150:  push_1 1
+  151:  lnot
+  152:  define_field backgroundMode
+  157:  push_1 1
+  158:  lnot
+  159:  define_field _rcBgSyncActive
+  164:  null
+  165:  define_field _rcBgMsgHandler
+  170:  null
+  171:  define_field _rcBgStateHandler
+  176:  null
+  177:  define_field $rccwsBridge
+  182:  null
+  183:  define_field $rccwsFetch
+  188:  null
+  189:  define_field $rccwsDbase
+  194:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: catch t [level:4 next:-1]
+    2: var r
+    3: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_arg0 0: t
+    3:  dup
+    4:  if_true8 8
+    6:  drop
+    7:  null
+    8:  set_loc0 0: e
+    9:  lnot
+   10:  if_false8 42
+   12:  catch 32
+   17:  get_var require
+   22:  push_atom_value bridge
+   27:  call1 1
+   28:  put_loc0 0: e
+   29:  drop
+   30:  goto8 42
+   32:  put_loc1 1: t
+   33:  catch 41
+   38:  drop
+   39:  goto8 42
+   41:  throw
+   42:  get_loc0 0: e
+   43:  dup
+   44:  if_true8 69
+   46:  drop
+   47:  push_atom_value undefined
+   52:  get_var_undef bridge
+   57:  typeof
+   58:  eq
+   59:  dup
+   60:  if_true8 69
+   62:  drop
+   63:  get_var bridge
+   68:  set_loc0 0: e
+   69:  drop
+   70:  get_loc0 0: e
+   71:  if_false 223
+   76:  get_loc0 0: e
+   77:  get_field default
+   82:  if_false8 92
+   84:  get_loc0 0: e
+   85:  get_field default
+   90:  goto8 93
+   92:  get_loc0 0: e
+   93:  put_loc2 2: r
+   94:  get_loc3 3: this
+   95:  get_loc2 2: r
+   96:  put_field $rccwsBridge
+  101:  get_loc3 3: this
+  102:  get_loc2 2: r
+  103:  get_field Fetch
+  108:  if_false8 138
+  110:  push_atom_value function
+  115:  get_loc2 2: r
+  116:  get_field Fetch
+  121:  get_field fetch
+  126:  typeof
+  127:  eq
+  128:  if_false8 138
+  130:  get_loc2 2: r
+  131:  get_field Fetch
+  136:  goto8 139
+  138:  null
+  139:  put_field $rccwsFetch
+  144:  get_loc3 3: this
+  145:  get_loc2 2: r
+  146:  get_field Datas
+  151:  if_false8 181
+  153:  push_atom_value function
+  158:  get_loc2 2: r
+  159:  get_field Datas
+  164:  get_field read
+  169:  typeof
+  170:  eq
+  171:  if_false8 181
+  173:  get_loc2 2: r
+  174:  get_field Datas
+  179:  goto8 218
+  181:  get_loc2 2: r
+  182:  get_field Dbase
+  187:  if_false8 217
+  189:  push_atom_value function
+  194:  get_loc2 2: r
+  195:  get_field Dbase
+  200:  get_field read
+  205:  typeof
+  206:  eq
+  207:  if_false8 217
+  209:  get_loc2 2: r
+  210:  get_field Dbase
+  215:  goto8 218
+  217:  null
+  218:  put_field $rccwsDbase
+  223:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: catch t [level:7 next:-1]
+    3: var this
+  closure vars:
+    0: n parent:loc6 const
+    1: g parent:loc12 const
+  stack_size: 9
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  get_field $rccwsDbase
+    8:  if_false 509
+   13:  get_loc3 3: this
+   14:  get_field2 loadBackgroundMode
+   19:  call_method 0
+   22:  drop
+   23:  catch 479
+   28:  get_loc3 3: this
+   29:  get_field $rccwsDbase
+   34:  get_field2 read
+   39:  get_var_ref_check 0: n
+   42:  call_method 1
+   45:  set_loc0 0: t
+   46:  if_false 476
+   51:  push_atom_value object
+   56:  get_loc0 0: t
+   57:  typeof
+   58:  eq
+   59:  if_false 476
+   64:  get_loc0 0: t
+   65:  get_field token
+   70:  dup
+   71:  if_false8 91
+   73:  drop
+   74:  get_loc3 3: this
+   75:  get_var_ref_check 1: g
+   78:  get_loc0 0: t
+   79:  get_field token
+   84:  call1 1
+   85:  insert2
+   86:  put_field rcToken
+   91:  drop
+   92:  get_loc0 0: t
+   93:  get_field wsUrl
+   98:  dup
+   99:  if_false8 124
+  101:  drop
+  102:  get_loc3 3: this
+  103:  get_var_ref_check 1: g
+  106:  get_loc0 0: t
+  107:  get_field wsUrl
+  112:  call1 1
+  113:  dup
+  114:  if_true8 118
+  116:  drop
+  117:  push_empty_string
+  118:  insert2
+  119:  put_field rcWsUrl
+  124:  drop
+  125:  get_loc0 0: t
+  126:  get_field currentSession
+  131:  dup
+  132:  if_false8 152
+  134:  drop
+  135:  get_loc3 3: this
+  136:  get_var_ref_check 1: g
+  139:  get_loc0 0: t
+  140:  get_field currentSession
+  145:  call1 1
+  146:  insert2
+  147:  put_field rcSessionId
+  152:  drop
+  153:  get_var Array
+  158:  get_field2 isArray
+  163:  get_loc0 0: t
+  164:  get_field history
+  169:  call_method 1
+  172:  dup
+  173:  if_false8 200
+  175:  drop
+  176:  get_loc3 3: this
+  177:  get_loc0 0: t
+  178:  get_field history
+  183:  get_field2 slice
+  188:  push_0 0
+  189:  push_i8 30
+  191:  call_method 2
+  194:  insert2
+  195:  put_field rcSessionHistory
+  200:  drop
+  201:  push_0 0
+  202:  lnot
+  203:  get_loc0 0: t
+  204:  get_field autoAllowPermissions
+  209:  strict_eq
+  210:  dup
+  211:  if_false8 223
+  213:  drop
+  214:  get_loc3 3: this
+  215:  push_0 0
+  216:  lnot
+  217:  insert2
+  218:  put_field autoAllowPermissions
+  223:  drop
+  224:  get_loc0 0: t
+  225:  get_field channel
+  230:  dup
+  231:  if_false8 251
+  233:  drop
+  234:  get_loc3 3: this
+  235:  get_var_ref_check 1: g
+  238:  get_loc0 0: t
+  239:  get_field channel
+  244:  call1 1
+  245:  insert2
+  246:  put_field rcChannel
+  251:  drop
+  252:  get_loc0 0: t
+  253:  get_field channelModels
+  258:  dup
+  259:  if_false8 316
+  261:  drop
+  262:  push_atom_value object
+  267:  get_loc0 0: t
+  268:  get_field channelModels
+  273:  typeof
+  274:  eq
+  275:  dup
+  276:  if_false8 316
+  278:  drop
+  279:  get_var Array
+  284:  get_field2 isArray
+  289:  get_loc0 0: t
+  290:  get_field channelModels
+  295:  call_method 1
+  298:  lnot
+  299:  dup
+  300:  if_false8 316
+  302:  drop
+  303:  get_loc3 3: this
+  304:  get_loc0 0: t
+  305:  get_field channelModels
+  310:  insert2
+  311:  put_field rcChannelModels
+  316:  drop
+  317:  get_loc0 0: t
+  318:  get_field channelModelLists
+  323:  dup
+  324:  if_false8 381
+  326:  drop
+  327:  push_atom_value object
+  332:  get_loc0 0: t
+  333:  get_field channelModelLists
+  338:  typeof
+  339:  eq
+  340:  dup
+  341:  if_false8 381
+  343:  drop
+  344:  get_var Array
+  349:  get_field2 isArray
+  354:  get_loc0 0: t
+  355:  get_field channelModelLists
+  360:  call_method 1
+  363:  lnot
+  364:  dup
+  365:  if_false8 381
+  367:  drop
+  368:  get_loc3 3: this
+  369:  get_loc0 0: t
+  370:  get_field channelModelLists
+  375:  insert2
+  376:  put_field rcModelLists
+  381:  drop
+  382:  get_var parseInt
+  387:  get_loc0 0: t
+  388:  get_field uiPadX
+  393:  push_i8 10
+  395:  call2 2
+  396:  put_loc1 1: e
+  397:  get_var isNaN
+  402:  get_loc1 1: e
+  403:  call1 1
+  404:  dup
+  405:  if_true8 446
+  407:  drop
+  408:  get_loc3 3: this
+  409:  get_var Math
+  414:  get_field2 min
+  419:  push_i8 120
+  421:  get_var Math
+  426:  get_field2 max
+  431:  push_i8 16
+  433:  get_loc1 1: e
+  434:  call_method 2
+  437:  call_method 2
+  440:  insert2
+  441:  put_field rcUiPadX
+  446:  drop
+  447:  undefined
+  448:  get_loc0 0: t
+  449:  get_field uiToolFrame
+  454:  strict_neq
+  455:  dup
+  456:  if_false8 475
+  458:  drop
+  459:  get_loc3 3: this
+  460:  push_0 0
+  461:  lnot
+  462:  get_loc0 0: t
+  463:  get_field uiToolFrame
+  468:  strict_eq
+  469:  insert2
+  470:  put_field rcUiToolFrame
+  475:  drop
+  476:  drop
+  477:  goto8 489
+  479:  put_loc2 2: t
+  480:  catch 488
+  485:  drop
+  486:  goto8 489
+  488:  throw
+  489:  get_loc3 3: this
+  490:  get_field backgroundMode
+  495:  dup
+  496:  if_false8 508
+  498:  drop
+  499:  get_loc3 3: this
+  500:  get_field2 _startBgSync
+  505:  call_method 0
+  508:  drop
+  509:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:4 next:-1]
+    1: var this
+  closure vars:
+    0: o parent:loc8 const
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field $rccwsDbase
+    8:  if_false8 53
+   10:  catch 44
+   15:  get_loc1 1: this
+   16:  get_field $rccwsDbase
+   21:  get_field2 write
+   26:  get_var_ref_check 0: o
+   29:  push_0 0
+   30:  lnot
+   31:  get_loc1 1: this
+   32:  get_field backgroundMode
+   37:  strict_eq
+   38:  call_method 2
+   41:  drop
+   42:  drop
+   43:  return_undef
+   44:  put_loc0 0: t
+   45:  catch 52
+   50:  drop
+   51:  return_undef
+   52:  throw
+   53:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:4 next:-1]
+    1: var this
+  closure vars:
+    0: o parent:loc8 const
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field $rccwsDbase
+    8:  if_false8 52
+   10:  catch 43
+   15:  get_loc1 1: this
+   16:  push_0 0
+   17:  lnot
+   18:  get_loc1 1: this
+   19:  get_field $rccwsDbase
+   24:  get_field2 read
+   29:  get_var_ref_check 0: o
+   32:  call_method 1
+   35:  strict_eq
+   36:  put_field backgroundMode
+   41:  drop
+   42:  return_undef
+   43:  put_loc0 0: t
+   44:  catch 51
+   49:  drop
+   50:  return_undef
+   51:  throw
+   52:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field _rcBgSyncActive
+    8:  lnot
+    9:  if_false 183
+   14:  get_loc1 1: this
+   15:  push_0 0
+   16:  lnot
+   17:  put_field _rcBgSyncActive
+   22:  get_loc1 1: this
+   23:  put_loc0 0: t
+   24:  get_loc1 1: this
+   25:  fclosure8 0: [bytecode <null>]
+   27:  put_field _rcBgMsgHandler
+   32:  get_loc1 1: this
+   33:  fclosure8 1: [bytecode <null>]
+   35:  put_field _rcBgStateHandler
+   40:  push_atom_value undefined
+   45:  get_var_undef $falcon
+   50:  typeof
+   51:  neq
+   52:  dup
+   53:  if_false8 105
+   55:  drop
+   56:  get_var $falcon
+   61:  get_field2 on
+   66:  push_atom_value rccws_bg_msg
+   71:  get_loc1 1: this
+   72:  get_field _rcBgMsgHandler
+   77:  call_method 2
+   80:  drop
+   81:  get_var $falcon
+   86:  get_field2 on
+   91:  push_atom_value rccws_bg_state
+   96:  get_loc1 1: this
+   97:  get_field _rcBgStateHandler
+  102:  call_method 2
+  105:  drop
+  106:  get_loc1 1: this
+  107:  get_field2 _notifyBgEngine
+  112:  push_atom_value fg_opened
+  117:  object
+  118:  call_method 2
+  121:  drop
+  122:  get_loc1 1: this
+  123:  get_field rcSessionId
+  128:  dup
+  129:  if_false8 182
+  131:  drop
+  132:  get_loc1 1: this
+  133:  get_field2 _rcLiveInit
+  138:  call_method 0
+  141:  drop
+  142:  get_loc1 1: this
+  143:  get_field2 rcSend
+  148:  push_atom_value "sessions.sync"
+  153:  object
+  154:  get_loc1 1: this
+  155:  get_field2 _rcMidMap
+  160:  call_method 0
+  163:  define_field marks
+  168:  get_loc1 1: this
+  169:  get_field rcSessionId
+  174:  define_field attach
+  179:  call_method 2
+  182:  drop
+  183:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: var r
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: e
+    1:  get_field data
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  get_arg0 0: e
+   11:  set_loc0 0: r
+   12:  dup
+   13:  if_false8 57
+   15:  drop
+   16:  push_atom_value frame
+   21:  get_loc0 0: r
+   22:  get_field type
+   27:  strict_eq
+   28:  dup
+   29:  if_false8 57
+   31:  drop
+   32:  get_loc0 0: r
+   33:  get_field frame
+   38:  dup
+   39:  if_false8 57
+   41:  drop
+   42:  get_var_ref0 0: t
+   43:  get_field2 handleRccwsFrame
+   48:  get_loc0 0: r
+   49:  get_field frame
+   54:  call_method 1
+   57:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: var r
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: e
+    1:  get_field data
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  get_arg0 0: e
+   11:  set_loc0 0: r
+   12:  dup
+   13:  if_false8 26
+   15:  drop
+   16:  get_var_ref0 0: t
+   17:  get_field2 _handleBgStateChange
+   22:  get_loc0 0: r
+   23:  call_method 1
+   26:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:9 next:-1]
+    1: catch t [level:14 next:-1]
+    2: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field _rcBgSyncActive
+    8:  if_false 167
+   13:  get_loc2 2: this
+   14:  push_1 1
+   15:  lnot
+   16:  put_field _rcBgSyncActive
+   21:  push_atom_value undefined
+   26:  get_var_undef $falcon
+   31:  typeof
+   32:  neq
+   33:  if_false8 151
+   35:  get_loc2 2: this
+   36:  get_field _rcBgMsgHandler
+   41:  if_false8 93
+   43:  catch 76
+   48:  get_var $falcon
+   53:  get_field2 off
+   58:  push_atom_value rccws_bg_msg
+   63:  get_loc2 2: this
+   64:  get_field _rcBgMsgHandler
+   69:  call_method 2
+   72:  drop
+   73:  drop
+   74:  goto8 86
+   76:  put_loc0 0: t
+   77:  catch 85
+   82:  drop
+   83:  goto8 86
+   85:  throw
+   86:  get_loc2 2: this
+   87:  null
+   88:  put_field _rcBgMsgHandler
+   93:  get_loc2 2: this
+   94:  get_field _rcBgStateHandler
+   99:  if_false8 151
+  101:  catch 134
+  106:  get_var $falcon
+  111:  get_field2 off
+  116:  push_atom_value rccws_bg_state
+  121:  get_loc2 2: this
+  122:  get_field _rcBgStateHandler
+  127:  call_method 2
+  130:  drop
+  131:  drop
+  132:  goto8 144
+  134:  put_loc1 1: t
+  135:  catch 143
+  140:  drop
+  141:  goto8 144
+  143:  throw
+  144:  get_loc2 2: this
+  145:  null
+  146:  put_field _rcBgStateHandler
+  151:  get_loc2 2: this
+  152:  get_field2 _notifyBgEngine
+  157:  push_atom_value fg_closed
+  162:  object
+  163:  call_method 2
+  166:  drop
+  167:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t e
+  stack_size: 6
+  opcodes:
+    0:  push_atom_value undefined
+    5:  get_var_undef $falcon
+   10:  typeof
+   11:  neq
+   12:  dup
+   13:  if_false8 52
+   15:  drop
+   16:  get_var $falcon
+   21:  get_field2 trigger
+   26:  push_atom_value rccws_bg_command
+   31:  object
+   32:  get_arg0 0: t
+   33:  define_field action
+   38:  get_arg1 1: e
+   39:  dup
+   40:  if_true8 44
+   42:  drop
+   43:  object
+   44:  define_field data
+   49:  call_method 2
+   52:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  undefined
+    3:  get_arg0 0: t
+    4:  get_field connected
+    9:  strict_neq
+   10:  dup
+   11:  if_false8 63
+   13:  drop
+   14:  get_loc0 0: this
+   15:  get_arg0 0: t
+   16:  get_field connected
+   21:  put_field rcWsConnected
+   26:  get_loc0 0: this
+   27:  get_arg0 0: t
+   28:  get_field state
+   33:  dup
+   34:  if_true8 57
+   36:  drop
+   37:  get_arg0 0: t
+   38:  get_field connected
+   43:  if_false8 52
+   45:  push_atom_value connected
+   50:  goto8 57
+   52:  push_atom_value reconnecting
+   57:  insert2
+   58:  put_field rcWsState
+   63:  drop
+   64:  undefined
+   65:  get_arg0 0: t
+   66:  get_field statusMessage
+   71:  strict_neq
+   72:  dup
+   73:  if_false8 94
+   75:  drop
+   76:  get_loc0 0: this
+   77:  get_arg0 0: t
+   78:  get_field statusMessage
+   83:  dup
+   84:  if_true8 88
+   86:  drop
+   87:  push_empty_string
+   88:  insert2
+   89:  put_field rcStatusMessage
+   94:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: W parent:loc28 var
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field _rcLive
+    8:  dup
+    9:  if_true8 75
+   11:  drop
+   12:  get_loc0 0: this
+   13:  object
+   14:  object
+   15:  define_field bufs
+   20:  object
+   21:  define_field shards
+   26:  object
+   27:  define_field timers
+   32:  object
+   33:  define_field mids
+   38:  object
+   39:  define_field asks
+   44:  object
+   45:  define_field wm
+   50:  put_field _rcLive
+   55:  get_loc0 0: this
+   56:  get_field _rcLive
+   61:  get_var_ref0 0: W
+   62:  get_loc0 0: this
+   63:  get_field $rccwsDbase
+   68:  call1 1
+   69:  insert2
+   70:  put_field wm
+   75:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 _rcLiveInit
+    8:  call_method 0
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field _rcLive
+   18:  get_field wm
+   23:  dup
+   24:  if_true8 40
+   26:  drop
+   27:  get_loc0 0: this
+   28:  get_field _rcLive
+   33:  object
+   34:  insert2
+   35:  put_field wm
+   40:  drop
+   41:  get_loc0 0: this
+   42:  get_field _rcLive
+   47:  get_field wm
+   52:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: var this
+  closure vars:
+    0: P parent:loc33 var
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_arg0 0: t
+    3:  dup
+    4:  if_false8 46
+    6:  drop
+    7:  get_arg1 1: e
+    8:  dup
+    9:  if_false8 46
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field2 _rcLiveInit
+   18:  call_method 0
+   21:  drop
+   22:  get_var_ref0 0: P
+   23:  get_loc0 0: this
+   24:  get_field $rccwsDbase
+   29:  get_loc0 0: this
+   30:  get_field _rcLive
+   35:  get_arg0 0: t
+   36:  get_var String
+   41:  get_arg1 1: e
+   42:  call1 1
+   43:  call 4
+   46:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:4 next:-1]
+    1: var this
+  closure vars:
+    0: n parent:loc6 const
+  stack_size: 9
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field $rccwsDbase
+    8:  if_false 197
+   13:  catch 188
+   18:  get_loc1 1: this
+   19:  get_field $rccwsDbase
+   24:  get_field2 write
+   29:  get_var_ref_check 0: n
+   32:  object
+   33:  get_loc1 1: this
+   34:  get_field rcToken
+   39:  define_field token
+   44:  get_loc1 1: this
+   45:  get_field rcWsUrl
+   50:  define_field wsUrl
+   55:  get_loc1 1: this
+   56:  get_field rcSessionId
+   61:  define_field currentSession
+   66:  get_loc1 1: this
+   67:  get_field rcSessionHistory
+   72:  dup
+   73:  if_true8 79
+   75:  drop
+   76:  array_from 0
+   79:  get_field2 slice
+   84:  push_0 0
+   85:  push_i8 30
+   87:  call_method 2
+   90:  define_field history
+   95:  push_0 0
+   96:  lnot
+   97:  get_loc1 1: this
+   98:  get_field autoAllowPermissions
+  103:  strict_eq
+  104:  define_field autoAllowPermissions
+  109:  get_loc1 1: this
+  110:  get_field rcChannel
+  115:  dup
+  116:  if_true8 120
+  118:  drop
+  119:  push_empty_string
+  120:  define_field channel
+  125:  get_loc1 1: this
+  126:  get_field rcChannelModels
+  131:  dup
+  132:  if_true8 136
+  134:  drop
+  135:  object
+  136:  define_field channelModels
+  141:  get_loc1 1: this
+  142:  get_field rcModelLists
+  147:  dup
+  148:  if_true8 152
+  150:  drop
+  151:  object
+  152:  define_field channelModelLists
+  157:  get_loc1 1: this
+  158:  get_field rcUiPadX
+  163:  define_field uiPadX
+  168:  push_0 0
+  169:  lnot
+  170:  get_loc1 1: this
+  171:  get_field rcUiToolFrame
+  176:  strict_eq
+  177:  define_field uiToolFrame
+  182:  call_method 2
+  185:  drop
+  186:  drop
+  187:  return_undef
+  188:  put_loc0 0: t
+  189:  catch 196
+  194:  drop
+  195:  return_undef
+  196:  throw
+  197:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: catch t [level:3 next:-1]
+    2: var this
+  closure vars:
+    0: g parent:loc12 const
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  catch 123
+    7:  push_atom_value undefined
+   12:  get_var_undef $falcon
+   17:  typeof
+   18:  eq
+   19:  if_false8 24
+   21:  null
+   22:  goto8 29
+   24:  get_var $falcon
+   29:  set_loc0 0: e
+   30:  if_false8 63
+   32:  push_atom_value function
+   37:  get_loc0 0: e
+   38:  get_field toast
+   43:  typeof
+   44:  eq
+   45:  if_false8 63
+   47:  get_loc0 0: e
+   48:  get_field2 toast
+   53:  get_var_ref_check 0: g
+   56:  get_arg0 0: t
+   57:  call1 1
+   58:  call_method 1
+   61:  goto8 120
+   63:  get_loc2 2: this
+   64:  get_field rcModal
+   69:  dup
+   70:  if_false8 120
+   72:  drop
+   73:  push_atom_value function
+   78:  get_loc2 2: this
+   79:  get_field rcModal
+   84:  get_field toast
+   89:  typeof
+   90:  eq
+   91:  dup
+   92:  if_false8 120
+   94:  drop
+   95:  get_loc2 2: this
+   96:  get_field rcModal
+  101:  get_field2 toast
+  106:  object
+  107:  get_var_ref_check 0: g
+  110:  get_arg0 0: t
+  111:  call1 1
+  112:  define_field message
+  117:  call_method 1
+  120:  drop
+  121:  drop
+  122:  return_undef
+  123:  put_loc1 1: t
+  124:  catch 131
+  129:  drop
+  130:  return_undef
+  131:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var r
+    3: var s
+    4: catch t [level:7 next:-1]
+    5: var this
+  closure vars:
+    0: g parent:loc12 const
+  stack_size: 8
+  opcodes:
+    0:  push_this
+    1:  put_loc8 5: this
+    3:  get_var_ref_check 0: g
+    6:  get_loc8 5: this
+    8:  get_field rcWsUrl
+   13:  call1 1
+   14:  get_field2 trim
+   19:  call_method 0
+   22:  put_loc0 0: t
+   23:  push_const8 0: 1"^wss?:\\/\\/"
+   25:  push_const8 1: 1"\u0002\u0001\u00005\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u0001W\u0000\u0001S\u0000\u001c\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001S\u0000\n\u0001:\u0000\u0001/\u0000\u0001/\u0000\u000c\u0000\n"
+   27:  regexp
+   28:  get_field2 test
+   33:  get_loc0 0: t
+   34:  call_method 1
+   37:  lnot
+   38:  if_false8 65
+   40:  get_loc8 5: this
+   42:  push_atom_value stopped
+   47:  put_field rcWsState
+   52:  get_loc8 5: this
+   54:  push_atom_value "\u00e5\u009c\u00b0\u00e5\u009d\u0080\u00e5\u00bf\u0085\u00e9\u00a1\u00bb\u00e4\u00bb\u00a5 ws:// \u00e6\u0088\u0096 wss:// \u00e5\u00bc\u0080\u00e5\u00a4\u00b4"
+   59:  put_field rcStatusMessage
+   64:  return_undef
+   65:  get_var_ref_check 0: g
+   68:  get_loc8 5: this
+   70:  get_field rcToken
+   75:  call1 1
+   76:  get_field2 trim
+   81:  call_method 0
+   84:  lnot
+   85:  if_false8 112
+   87:  get_loc8 5: this
+   89:  push_atom_value stopped
+   94:  put_field rcWsState
+   99:  get_loc8 5: this
+  101:  push_atom_value "\u00e8\u00af\u00b7\u00e5\u0085\u0088\u00e5\u00a1\u00ab\u00e5\u0086\u0099 token"
+  106:  put_field rcStatusMessage
+  111:  return_undef
+  112:  get_loc8 5: this
+  114:  get_loc0 0: t
+  115:  put_field rcWsUrl
+  120:  get_loc8 5: this
+  122:  get_field2 saveRccwsSettings
+  127:  call_method 0
+  130:  drop
+  131:  get_loc8 5: this
+  133:  get_field backgroundMode
+  138:  if_false8 208
+  140:  get_loc8 5: this
+  142:  push_atom_value connecting
+  147:  put_field rcWsState
+  152:  get_loc8 5: this
+  154:  push_empty_string
+  155:  put_field rcStatusMessage
+  160:  get_loc8 5: this
+  162:  get_field2 _notifyBgEngine
+  167:  push_atom_value connect
+  172:  object
+  173:  get_loc0 0: t
+  174:  define_field wsUrl
+  179:  get_var_ref_check 0: g
+  182:  get_loc8 5: this
+  184:  get_field rcToken
+  189:  call1 1
+  190:  get_field2 trim
+  195:  call_method 0
+  198:  define_field rcToken
+  203:  call_method 2
+  206:  drop
+  207:  return_undef
+  208:  get_loc8 5: this
+  210:  get_field $rccwsFetch
+  215:  lnot
+  216:  dup
+  217:  if_true8 233
+  219:  drop
+  220:  get_loc8 5: this
+  222:  get_field $rccwsFetch
+  227:  get_field WebSocket
+  232:  lnot
+  233:  if_false8 260
+  235:  get_loc8 5: this
+  237:  push_atom_value network_error
+  242:  put_field rcWsState
+  247:  get_loc8 5: this
+  249:  push_atom_value "WebSocket \u00e7\u00bb\u0084\u00e4\u00bb\u00b6\u00e4\u00b8\u008d\u00e5\u008f\u00af\u00e7\u0094\u00a8"
+  254:  put_field rcStatusMessage
+  259:  return_undef
+  260:  get_loc8 5: this
+  262:  get_field $rccwsFetch
+  267:  dup
+  268:  if_false8 283
+  270:  drop
+  271:  get_loc8 5: this
+  273:  get_field $rccwsFetch
+  278:  get_field WebSocket
+  283:  dup
+  284:  if_true8 297
+  286:  drop
+  287:  get_loc8 5: this
+  289:  get_field2 initRccwsBridge
+  294:  call_method 0
+  297:  drop
+  298:  get_loc8 5: this
+  300:  get_field2 rcDisconnect
+  305:  push_1 1
+  306:  lnot
+  307:  call_method 1
+  310:  drop
+  311:  get_loc0 0: t
+  312:  get_loc0 0: t
+  313:  get_field2 indexOf
+  318:  push_atom_value "?"
+  323:  call_method 1
+  326:  push_minus1 -1
+  327:  gt
+  328:  if_false8 337
+  330:  push_atom_value "&"
+  335:  goto8 342
+  337:  push_atom_value "?"
+  342:  add
+  343:  push_atom_value "token="
+  348:  add
+  349:  get_var encodeURIComponent
+  354:  get_var_ref_check 0: g
+  357:  get_loc8 5: this
+  359:  get_field rcToken
+  364:  call1 1
+  365:  get_field2 trim
+  370:  call_method 0
+  373:  call1 1
+  374:  add
+  375:  put_loc1 1: e
+  376:  get_loc8 5: this
+  378:  push_1 1
+  379:  lnot
+  380:  put_field rcManualStop
+  385:  get_loc8 5: this
+  387:  get_loc8 5: this
+  389:  get_field rcRetryIndex
+  394:  push_0 0
+  395:  gt
+  396:  if_false8 405
+  398:  push_atom_value reconnecting
+  403:  goto8 410
+  405:  push_atom_value connecting
+  410:  put_field rcWsState
+  415:  get_loc8 5: this
+  417:  push_empty_string
+  418:  put_field rcStatusMessage
+  423:  get_loc8 5: this
+  425:  get_field2 rcGeneration
+  430:  inc
+  431:  insert2
+  432:  put_field rcGeneration
+  437:  put_loc2 2: r
+  438:  catch 521
+  443:  get_loc8 5: this
+  445:  get_loc8 5: this
+  447:  get_field $rccwsFetch
+  452:  get_field WebSocket
+  457:  dup
+  458:  get_loc1 1: e
+  459:  array_from 0
+  462:  object
+  463:  push_1 1
+  464:  lnot
+  465:  define_field verifySSL
+  470:  call_constructor 3
+  473:  put_field rcWs
+  478:  get_loc8 5: this
+  480:  push_1 1
+  481:  lnot
+  482:  put_field rcWsConnected
+  487:  get_loc8 5: this
+  489:  get_field2 rcAttachWsEvents
+  494:  call_method 0
+  497:  drop
+  498:  get_loc8 5: this
+  500:  put_loc3 3: s
+  501:  get_loc8 5: this
+  503:  get_var setTimeout
+  508:  fclosure8 2: [bytecode <null>]
+  510:  push_i16 10000
+  513:  call2 2
+  514:  put_field rcConnectTimer
+  519:  drop
+  520:  return_undef
+  521:  put_loc8 4: t
+  523:  catch 565
+  528:  get_loc8 5: this
+  530:  push_atom_value network_error
+  535:  put_field rcWsState
+  540:  get_loc8 5: this
+  542:  push_atom_value "\u00e6\u0097\u00a0\u00e6\u00b3\u0095\u00e5\u0088\u009b\u00e5\u00bb\u00ba\u00e8\u00bf\u009e\u00e6\u008e\u00a5"
+  547:  put_field rcStatusMessage
+  552:  get_loc8 5: this
+  554:  get_field2 rcScheduleReconnect
+  559:  call_method 0
+  562:  drop
+  563:  drop
+  564:  return_undef
+  565:  throw
+
+
+/* ===== function depth=2 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: s local:loc3 var
+    1: r local:loc2 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: s
+    1:  null
+    2:  put_field rcConnectTimer
+    7:  get_var_ref1 1: r
+    8:  get_var_ref0 0: s
+    9:  get_field rcGeneration
+   14:  strict_neq
+   15:  dup
+   16:  if_true8 61
+   18:  drop
+   19:  get_var_ref0 0: s
+   20:  get_field rcWsConnected
+   25:  dup
+   26:  if_true8 61
+   28:  drop
+   29:  get_var_ref0 0: s
+   30:  push_atom_value "\u00e8\u00bf\u009e\u00e6\u008e\u00a5\u00e8\u00b6\u0085\u00e6\u0097\u00b6"
+   35:  put_field rcStatusMessage
+   40:  get_var_ref0 0: s
+   41:  get_field2 rcDisconnect
+   46:  push_1 1
+   47:  lnot
+   48:  call_method 1
+   51:  drop
+   52:  get_var_ref0 0: s
+   53:  get_field2 rcScheduleReconnect
+   58:  call_method 0
+   61:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field rcWs
+    8:  if_false8 68
+   10:  get_loc1 1: this
+   11:  put_loc0 0: t
+   12:  push_atom_value function
+   17:  get_loc1 1: this
+   18:  get_field rcWs
+   23:  get_field setEventCallback
+   28:  typeof
+   29:  neq
+   30:  if_false8 51
+   32:  get_loc1 1: this
+   33:  get_var setInterval
+   38:  fclosure8 0: [bytecode <null>]
+   40:  push_i8 80
+   42:  call2 2
+   43:  insert2
+   44:  put_field rcPollTimer
+   49:  goto8 67
+   51:  get_loc1 1: this
+   52:  get_field rcWs
+   57:  get_field2 setEventCallback
+   62:  fclosure8 1: [bytecode <null>]
+   64:  call_method 1
+   67:  drop
+   68:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 rcPollWs
+    6:  call_method 0
+    9:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 rcConsumeWsEvents
+    6:  get_arg0 0: e
+    7:  call_method 1
+   10:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var r
+    2: var s
+    3: catch t [level:5 next:-1]
+    4: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc8 4: this
+    3:  get_loc8 4: this
+    5:  get_field rcWs
+   10:  if_false 148
+   15:  catch 139
+   20:  get_arg0 0: t
+   21:  dup
+   22:  if_true8 28
+   24:  drop
+   25:  array_from 0
+   28:  put_loc0 0: e
+   29:  push_0 0
+   30:  put_loc1 1: r
+   31:  get_loc1 1: r
+   32:  get_loc0 0: e
+   33:  get_length
+   34:  lt
+   35:  if_false8 55
+   37:  get_loc8 4: this
+   39:  get_field2 rcHandleWsEvent
+   44:  get_loc0 0: e
+   45:  get_loc1 1: r
+   46:  get_array_el
+   47:  call_method 1
+   50:  drop
+   51:  inc_loc 1: r
+   53:  goto8 31
+   55:  get_loc8 4: this
+   57:  get_field rcWs
+   62:  get_field2 getReadyState
+   67:  call_method 0
+   70:  put_loc2 2: s
+   71:  push_1 1
+   72:  get_loc2 2: s
+   73:  strict_neq
+   74:  dup
+   75:  if_true8 85
+   77:  drop
+   78:  get_loc8 4: this
+   80:  get_field rcWsConnected
+   85:  if_false8 126
+   87:  push_3 3
+   88:  get_loc2 2: s
+   89:  strict_eq
+   90:  dup
+   91:  if_false8 136
+   93:  drop
+   94:  get_loc8 4: this
+   96:  get_field rcWsConnected
+  101:  dup
+  102:  if_false8 136
+  104:  drop
+  105:  get_loc8 4: this
+  107:  push_1 1
+  108:  lnot
+  109:  put_field rcWsConnected
+  114:  get_loc8 4: this
+  116:  get_field2 rcHandleClosed
+  121:  call_method 0
+  124:  goto8 136
+  126:  get_loc8 4: this
+  128:  get_field2 rcMarkConnected
+  133:  call_method 0
+  136:  drop
+  137:  drop
+  138:  return_undef
+  139:  put_loc3 3: t
+  140:  catch 147
+  145:  drop
+  146:  return_undef
+  147:  throw
+  148:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var r
+    3: catch t [level:5 next:-1]
+    4: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc8 4: this
+    3:  get_loc8 4: this
+    5:  get_field rcWs
+   10:  if_false 162
+   15:  catch 153
+   20:  get_loc8 4: this
+   22:  get_field rcWs
+   27:  get_field2 poll
+   32:  call_method 0
+   35:  dup
+   36:  if_true8 42
+   38:  drop
+   39:  array_from 0
+   42:  put_loc0 0: t
+   43:  push_0 0
+   44:  put_loc1 1: e
+   45:  get_loc1 1: e
+   46:  get_loc0 0: t
+   47:  get_length
+   48:  lt
+   49:  if_false8 69
+   51:  get_loc8 4: this
+   53:  get_field2 rcHandleWsEvent
+   58:  get_loc0 0: t
+   59:  get_loc1 1: e
+   60:  get_array_el
+   61:  call_method 1
+   64:  drop
+   65:  inc_loc 1: e
+   67:  goto8 45
+   69:  get_loc8 4: this
+   71:  get_field rcWs
+   76:  get_field2 getReadyState
+   81:  call_method 0
+   84:  put_loc2 2: r
+   85:  push_1 1
+   86:  get_loc2 2: r
+   87:  strict_neq
+   88:  dup
+   89:  if_true8 99
+   91:  drop
+   92:  get_loc8 4: this
+   94:  get_field rcWsConnected
+   99:  if_false8 140
+  101:  push_3 3
+  102:  get_loc2 2: r
+  103:  strict_eq
+  104:  dup
+  105:  if_false8 150
+  107:  drop
+  108:  get_loc8 4: this
+  110:  get_field rcWsConnected
+  115:  dup
+  116:  if_false8 150
+  118:  drop
+  119:  get_loc8 4: this
+  121:  push_1 1
+  122:  lnot
+  123:  put_field rcWsConnected
+  128:  get_loc8 4: this
+  130:  get_field2 rcHandleClosed
+  135:  call_method 0
+  138:  goto8 150
+  140:  get_loc8 4: this
+  142:  get_field2 rcMarkConnected
+  147:  call_method 0
+  150:  drop
+  151:  drop
+  152:  return_undef
+  153:  put_loc3 3: t
+  154:  catch 161
+  159:  drop
+  160:  return_undef
+  161:  throw
+  162:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field rcConnectTimer
+    8:  dup
+    9:  if_false8 33
+   11:  drop
+   12:  get_var clearTimeout
+   17:  get_loc0 0: this
+   18:  get_field rcConnectTimer
+   23:  call1 1
+   24:  drop
+   25:  get_loc0 0: this
+   26:  null
+   27:  insert2
+   28:  put_field rcConnectTimer
+   33:  drop
+   34:  get_loc0 0: this
+   35:  push_0 0
+   36:  lnot
+   37:  put_field rcWsConnected
+   42:  get_loc0 0: this
+   43:  push_atom_value connected
+   48:  put_field rcWsState
+   53:  get_loc0 0: this
+   54:  push_empty_string
+   55:  put_field rcStatusMessage
+   60:  get_loc0 0: this
+   61:  push_0 0
+   62:  put_field rcRetryIndex
+   67:  get_loc0 0: this
+   68:  get_field2 rcStartPing
+   73:  call_method 0
+   76:  drop
+   77:  get_loc0 0: this
+   78:  get_field2 onRccwsConnected
+   83:  call_method 0
+   86:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var s
+    2: var this
+  closure vars:
+    0: v parent:loc17 var
+    1: r parent:loc2 const
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_arg0 0: t
+    3:  if_false 279
+    8:  push_atom_value open
+   13:  get_arg0 0: t
+   14:  get_field type
+   19:  strict_neq
+   20:  if_false 259
+   25:  push_atom_value error
+   30:  get_arg0 0: t
+   31:  get_field type
+   36:  strict_neq
+   37:  if_false 247
+   42:  push_atom_value close
+   47:  get_arg0 0: t
+   48:  get_field type
+   53:  strict_neq
+   54:  if_false8 124
+   56:  push_atom_value message
+   61:  get_arg0 0: t
+   62:  get_field type
+   67:  strict_eq
+   68:  if_false 279
+   73:  get_arg0 0: t
+   74:  get_field data
+   79:  if_false 279
+   84:  get_var_ref0 0: v
+   85:  get_arg0 0: t
+   86:  get_field data
+   91:  call1 1
+   92:  set_loc0 0: e
+   93:  lnot
+   94:  if_false8 112
+   96:  get_var_ref_check 1: r
+   99:  push_atom_value rccws
+  104:  push_atom_value "bad frame ignored"
+  109:  call2 2
+  110:  drop
+  111:  return_undef
+  112:  get_loc2 2: this
+  113:  get_field2 handleRccwsFrame
+  118:  get_loc0 0: e
+  119:  call_method 1
+  122:  drop
+  123:  return_undef
+  124:  get_loc2 2: this
+  125:  push_1 1
+  126:  lnot
+  127:  put_field rcWsConnected
+  132:  get_var Number
+  137:  get_arg0 0: t
+  138:  get_field code
+  143:  call1 1
+  144:  dup
+  145:  if_true8 149
+  147:  drop
+  148:  push_0 0
+  149:  put_loc1 1: s
+  150:  push_i16 1008
+  153:  get_loc1 1: s
+  154:  strict_eq
+  155:  dup
+  156:  if_true8 191
+  158:  drop
+  159:  push_i16 4001
+  162:  get_loc1 1: s
+  163:  strict_eq
+  164:  dup
+  165:  if_true8 191
+  167:  drop
+  168:  push_i16 4003
+  171:  get_loc1 1: s
+  172:  strict_eq
+  173:  dup
+  174:  if_true8 191
+  176:  drop
+  177:  push_i16 401
+  180:  get_loc1 1: s
+  181:  strict_eq
+  182:  dup
+  183:  if_true8 191
+  185:  drop
+  186:  push_i16 403
+  189:  get_loc1 1: s
+  190:  strict_eq
+  191:  if_false8 236
+  193:  get_loc2 2: this
+  194:  push_atom_value auth_error
+  199:  put_field rcWsState
+  204:  get_loc2 2: this
+  205:  push_atom_value "\u00e6\u009c\u008d\u00e5\u008a\u00a1\u00e7\u00ab\u00af\u00e6\u008b\u0092\u00e7\u00bb\u009d\u00e4\u00bb\u00a4\u00e7\u0089\u008c"
+  210:  put_field rcStatusMessage
+  215:  get_loc2 2: this
+  216:  push_0 0
+  217:  lnot
+  218:  put_field rcManualStop
+  223:  get_loc2 2: this
+  224:  get_field2 rcDisconnect
+  229:  push_1 1
+  230:  lnot
+  231:  call_method 1
+  234:  goto8 245
+  236:  get_loc2 2: this
+  237:  get_field2 rcHandleClosed
+  242:  call_method 0
+  245:  drop
+  246:  return_undef
+  247:  get_loc2 2: this
+  248:  push_atom_value "WebSocket \u00e6\u008f\u00a1\u00e6\u0089\u008b\u00e6\u0088\u0096\u00e7\u00bd\u0091\u00e7\u00bb\u009c\u00e9\u0094\u0099\u00e8\u00af\u00af"
+  253:  put_field rcStatusMessage
+  258:  return_undef
+  259:  get_loc2 2: this
+  260:  get_field rcWsConnected
+  265:  dup
+  266:  if_true8 278
+  268:  drop
+  269:  get_loc2 2: this
+  270:  get_field2 rcMarkConnected
+  275:  call_method 0
+  278:  drop
+  279:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field rcManualStop
+    8:  dup
+    9:  if_true8 70
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field backgroundMode
+   18:  dup
+   19:  if_true8 70
+   21:  drop
+   22:  push_atom_value auth_error
+   27:  get_loc0 0: this
+   28:  get_field rcWsState
+   33:  strict_neq
+   34:  dup
+   35:  if_false8 50
+   37:  drop
+   38:  get_loc0 0: this
+   39:  push_atom_value network_error
+   44:  insert2
+   45:  put_field rcWsState
+   50:  drop
+   51:  get_loc0 0: this
+   52:  get_field2 rcStopPing
+   57:  call_method 0
+   60:  drop
+   61:  get_loc0 0: this
+   62:  get_field2 rcScheduleReconnect
+   67:  call_method 0
+   70:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var r
+    3: var this
+  closure vars:
+    0: d parent:loc11 const
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  get_field backgroundMode
+    8:  lnot
+    9:  if_false 151
+   14:  get_loc3 3: this
+   15:  get_field rcManualStop
+   20:  lnot
+   21:  if_false 151
+   26:  get_loc3 3: this
+   27:  get_field rcWsUrl
+   32:  if_false8 151
+   34:  get_loc3 3: this
+   35:  get_field rcReconnectTimer
+   40:  lnot
+   41:  if_false8 151
+   43:  get_var_ref_check 0: d
+   46:  get_var Math
+   51:  get_field2 min
+   56:  get_loc3 3: this
+   57:  get_field rcRetryIndex
+   62:  get_var_ref_check 0: d
+   65:  get_length
+   66:  push_1 1
+   67:  sub
+   68:  call_method 2
+   71:  get_array_el
+   72:  put_loc0 0: t
+   73:  get_loc3 3: this
+   74:  get_field2 rcRetryIndex
+   79:  push_1 1
+   80:  add
+   81:  put_field rcRetryIndex
+   86:  get_loc3 3: this
+   87:  push_atom_value reconnecting
+   92:  put_field rcWsState
+   97:  get_loc3 3: this
+   98:  get_var Math
+  103:  get_field2 round
+  108:  get_loc0 0: t
+  109:  push_i16 1000
+  112:  div
+  113:  call_method 1
+  116:  push_atom_value "s \u00e5\u0090\u008e\u00e9\u0087\u008d\u00e8\u00bf\u009e"
+  121:  add
+  122:  put_field rcStatusMessage
+  127:  get_loc3 3: this
+  128:  get_field rcGeneration
+  133:  put_loc1 1: e
+  134:  get_loc3 3: this
+  135:  put_loc2 2: r
+  136:  get_loc3 3: this
+  137:  get_var setTimeout
+  142:  fclosure8 0: [bytecode <null>]
+  144:  get_loc0 0: t
+  145:  call2 2
+  146:  put_field rcReconnectTimer
+  151:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: r local:loc2 var
+    1: e local:loc1 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: r
+    1:  null
+    2:  put_field rcReconnectTimer
+    7:  get_var_ref1 1: e
+    8:  get_var_ref0 0: r
+    9:  get_field rcGeneration
+   14:  strict_neq
+   15:  dup
+   16:  if_true8 38
+   18:  drop
+   19:  get_var_ref0 0: r
+   20:  get_field rcManualStop
+   25:  dup
+   26:  if_true8 38
+   28:  drop
+   29:  get_var_ref0 0: r
+   30:  get_field2 rcConnect
+   35:  call_method 0
+   38:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: catch t [level:7 next:-1]
+    1: catch t [level:10 next:-1]
+    2: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field backgroundMode
+    8:  if_false8 33
+   10:  push_1 1
+   11:  lnot
+   12:  get_arg0 0: t
+   13:  strict_neq
+   14:  if_false8 33
+   16:  get_loc2 2: this
+   17:  get_field2 _notifyBgEngine
+   22:  push_atom_value disconnect
+   27:  object
+   28:  call_method 2
+   31:  drop
+   32:  return_undef
+   33:  push_1 1
+   34:  lnot
+   35:  get_arg0 0: t
+   36:  strict_neq
+   37:  dup
+   38:  if_false8 73
+   40:  drop
+   41:  get_loc2 2: this
+   42:  push_0 0
+   43:  lnot
+   44:  put_field rcManualStop
+   49:  get_loc2 2: this
+   50:  push_atom_value stopped
+   55:  put_field rcWsState
+   60:  get_loc2 2: this
+   61:  get_field2 rcGeneration
+   66:  post_inc
+   67:  perm3
+   68:  put_field rcGeneration
+   73:  drop
+   74:  get_loc2 2: this
+   75:  get_field rcConnectTimer
+   80:  dup
+   81:  if_false8 105
+   83:  drop
+   84:  get_var clearTimeout
+   89:  get_loc2 2: this
+   90:  get_field rcConnectTimer
+   95:  call1 1
+   96:  drop
+   97:  get_loc2 2: this
+   98:  null
+   99:  insert2
+  100:  put_field rcConnectTimer
+  105:  drop
+  106:  get_loc2 2: this
+  107:  get_field rcReconnectTimer
+  112:  dup
+  113:  if_false8 137
+  115:  drop
+  116:  get_var clearTimeout
+  121:  get_loc2 2: this
+  122:  get_field rcReconnectTimer
+  127:  call1 1
+  128:  drop
+  129:  get_loc2 2: this
+  130:  null
+  131:  insert2
+  132:  put_field rcReconnectTimer
+  137:  drop
+  138:  get_loc2 2: this
+  139:  get_field2 rcStopPing
+  144:  call_method 0
+  147:  drop
+  148:  get_loc2 2: this
+  149:  get_field rcPollTimer
+  154:  dup
+  155:  if_false8 179
+  157:  drop
+  158:  get_var clearInterval
+  163:  get_loc2 2: this
+  164:  get_field rcPollTimer
+  169:  call1 1
+  170:  drop
+  171:  get_loc2 2: this
+  172:  null
+  173:  insert2
+  174:  put_field rcPollTimer
+  179:  drop
+  180:  get_loc2 2: this
+  181:  get_field rcWs
+  186:  if_false8 283
+  188:  catch 211
+  193:  get_loc2 2: this
+  194:  get_field rcWs
+  199:  get_field2 close
+  204:  call_method 0
+  207:  drop
+  208:  drop
+  209:  goto8 221
+  211:  put_loc0 0: t
+  212:  catch 220
+  217:  drop
+  218:  goto8 221
+  220:  throw
+  221:  catch 266
+  226:  push_atom_value function
+  231:  get_loc2 2: this
+  232:  get_field rcWs
+  237:  get_field destroy
+  242:  typeof
+  243:  eq
+  244:  dup
+  245:  if_false8 262
+  247:  drop
+  248:  get_loc2 2: this
+  249:  get_field rcWs
+  254:  get_field2 destroy
+  259:  call_method 0
+  262:  drop
+  263:  drop
+  264:  goto8 276
+  266:  put_loc1 1: t
+  267:  catch 275
+  272:  drop
+  273:  goto8 276
+  275:  throw
+  276:  get_loc2 2: this
+  277:  null
+  278:  put_field rcWs
+  283:  get_loc2 2: this
+  284:  push_1 1
+  285:  lnot
+  286:  put_field rcWsConnected
+  291:  push_1 1
+  292:  lnot
+  293:  get_arg0 0: t
+  294:  strict_neq
+  295:  dup
+  296:  if_false8 308
+  298:  drop
+  299:  get_loc2 2: this
+  300:  get_field2 onRccwsDisconnected
+  305:  call_method 0
+  308:  drop
+  309:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field2 rcStopPing
+    8:  call_method 0
+   11:  drop
+   12:  get_loc1 1: this
+   13:  put_loc0 0: t
+   14:  get_loc1 1: this
+   15:  get_var setInterval
+   20:  fclosure8 0: [bytecode <null>]
+   22:  push_i16 25000
+   25:  call2 2
+   26:  put_field rcPingTimer
+   31:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field rcWsConnected
+    6:  dup
+    7:  if_false8 25
+    9:  drop
+   10:  get_var_ref0 0: t
+   11:  get_field2 rcSend
+   16:  push_atom_value ping
+   21:  object
+   22:  call_method 2
+   25:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field rcPingTimer
+    8:  dup
+    9:  if_false8 33
+   11:  drop
+   12:  get_var clearInterval
+   17:  get_loc0 0: this
+   18:  get_field rcPingTimer
+   23:  call1 1
+   24:  drop
+   25:  get_loc0 0: this
+   26:  null
+   27:  insert2
+   28:  put_field rcPingTimer
+   33:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: var r
+    1: var s
+    2: catch t [level:9 next:-1]
+    3: var c
+    4: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc8 4: this
+    3:  object
+    4:  get_arg0 0: t
+    5:  define_field action
+   10:  get_arg1 1: e
+   11:  dup
+   12:  if_true8 16
+   14:  drop
+   15:  object
+   16:  define_field params
+   21:  push_empty_string
+   22:  define_field echo
+   27:  put_loc0 0: r
+   28:  get_loc8 4: this
+   30:  get_field2 rcEchoSeq
+   35:  push_1 1
+   36:  add
+   37:  put_field rcEchoSeq
+   42:  push_atom_value e
+   47:  get_loc8 4: this
+   49:  get_field rcEchoSeq
+   54:  add
+   55:  put_loc1 1: s
+   56:  get_loc0 0: r
+   57:  get_loc1 1: s
+   58:  put_field echo
+   63:  get_loc8 4: this
+   65:  get_field backgroundMode
+   70:  if_false8 120
+   72:  push_atom_value ping
+   77:  get_arg0 0: t
+   78:  strict_eq
+   79:  if_false8 83
+   81:  push_empty_string
+   82:  return
+   83:  get_loc8 4: this
+   85:  get_field rcWsConnected
+   90:  lnot
+   91:  if_false8 95
+   93:  push_empty_string
+   94:  return
+   95:  get_loc8 4: this
+   97:  get_field2 _notifyBgEngine
+  102:  push_atom_value ws_send
+  107:  object
+  108:  get_loc0 0: r
+  109:  define_field data
+  114:  call_method 2
+  117:  drop
+  118:  goto8 192
+  120:  get_loc8 4: this
+  122:  get_field rcWs
+  127:  lnot
+  128:  dup
+  129:  if_true8 140
+  131:  drop
+  132:  get_loc8 4: this
+  134:  get_field rcWsConnected
+  139:  lnot
+  140:  if_false8 144
+  142:  push_empty_string
+  143:  return
+  144:  catch 182
+  149:  get_loc8 4: this
+  151:  get_field rcWs
+  156:  get_field2 send
+  161:  get_var JSON
+  166:  get_field2 stringify
+  171:  get_loc0 0: r
+  172:  call_method 1
+  175:  call_method 1
+  178:  drop
+  179:  drop
+  180:  goto8 192
+  182:  put_loc2 2: t
+  183:  catch 191
+  188:  push_empty_string
+  189:  nip
+  190:  return
+  191:  throw
+  192:  push_atom_value ping
+  197:  get_arg0 0: t
+  198:  strict_neq
+  199:  if_false8 239
+  201:  get_loc8 4: this
+  203:  put_loc3 3: c
+  204:  get_loc8 4: this
+  206:  get_field rcPendingEcho
+  211:  get_loc1 1: s
+  212:  to_propkey2
+  213:  object
+  214:  get_arg0 0: t
+  215:  define_field action
+  220:  get_var setTimeout
+  225:  fclosure8 0: [bytecode <null>]
+  227:  push_i32 360000
+  232:  call2 2
+  233:  define_field timer
+  238:  put_array_el
+  239:  get_loc1 1: s
+  240:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: c local:loc3 var
+    1: s local:loc1 var
+    2: t local:arg0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: c
+    1:  get_field rcPendingEcho
+    6:  get_var_ref1 1: s
+    7:  delete
+    8:  drop
+    9:  get_var_ref0 0: c
+   10:  get_field2 onRccwsRequestTimeout
+   15:  get_var_ref2 2: t
+   16:  get_var_ref1 1: s
+   17:  call_method 2
+   20:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field rcPendingEcho
+    8:  get_arg0 0: t
+    9:  get_array_el
+   10:  set_loc0 0: e
+   11:  dup
+   12:  if_false8 46
+   14:  drop
+   15:  get_loc0 0: e
+   16:  get_field timer
+   21:  dup
+   22:  if_false8 37
+   24:  drop
+   25:  get_var clearTimeout
+   30:  get_loc0 0: e
+   31:  get_field timer
+   36:  call1 1
+   37:  drop
+   38:  get_loc1 1: this
+   39:  get_field rcPendingEcho
+   44:  get_arg0 0: t
+   45:  delete
+   46:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_var Object
+    7:  get_field2 keys
+   12:  get_loc2 2: this
+   13:  get_field rcPendingEcho
+   18:  dup
+   19:  if_true8 23
+   21:  drop
+   22:  object
+   23:  call_method 1
+   26:  put_loc0 0: t
+   27:  push_0 0
+   28:  put_loc1 1: e
+   29:  get_loc1 1: e
+   30:  get_loc0 0: t
+   31:  get_length
+   32:  lt
+   33:  if_false8 52
+   35:  get_loc2 2: this
+   36:  get_field2 rcClearPendingEcho
+   41:  get_loc0 0: t
+   42:  get_loc1 1: e
+   43:  get_array_el
+   44:  call_method 1
+   47:  drop
+   48:  inc_loc 1: e
+   50:  goto8 29
+   52:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  stack_size: 2
+  opcodes:
+    0:  object
+    1:  push_1 1
+    2:  lnot
+    3:  define_field rcBgEnabled
+    8:  push_1 1
+    9:  lnot
+   10:  define_field rcBgConnected
+   15:  push_atom_value idle
+   20:  define_field rcBgState
+   25:  push_empty_string
+   26:  define_field rcBgStatusMessage
+   31:  null
+   32:  define_field rcBgConnectTimer
+   37:  null
+   38:  define_field rcBgReconnectTimer
+   43:  null
+   44:  define_field rcBgWsTimer
+   49:  null
+   50:  define_field rcBgPingTimer
+   55:  push_0 0
+   56:  define_field rcBgRetryIndex
+   61:  push_0 0
+   62:  define_field rcBgGeneration
+   67:  push_1 1
+   68:  lnot
+   69:  define_field rcBgManualStop
+   74:  push_0 0
+   75:  define_field rcBgUnread
+   80:  push_1 1
+   81:  lnot
+   82:  define_field _rcFgActive
+   87:  push_1 1
+   88:  lnot
+   89:  define_field _rcBgPushBound
+   94:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:3 next:-1]
+    1: catch t [level:8 next:-1]
+    2: var this
+  closure vars:
+    0: F parent:loc35 var
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field2 stopRccwsBackground
+    8:  call_method 0
+   11:  drop
+   12:  catch 35
+   17:  get_var_ref0 0: F
+   18:  get_loc2 2: this
+   19:  get_field _rcLiveRec
+   24:  get_loc2 2: this
+   25:  get_field $rcBgDbase
+   30:  call2 2
+   31:  drop
+   32:  drop
+   33:  goto8 45
+   35:  put_loc0 0: t
+   36:  catch 44
+   41:  drop
+   42:  goto8 45
+   44:  throw
+   45:  push_atom_value undefined
+   50:  get_var_undef $falcon
+   55:  typeof
+   56:  neq
+   57:  if_false8 117
+   59:  get_loc2 2: this
+   60:  get_field _rcBgCmdHandler
+   65:  if_false8 117
+   67:  catch 100
+   72:  get_var $falcon
+   77:  get_field2 off
+   82:  push_atom_value rccws_bg_command
+   87:  get_loc2 2: this
+   88:  get_field _rcBgCmdHandler
+   93:  call_method 2
+   96:  drop
+   97:  drop
+   98:  goto8 110
+  100:  put_loc1 1: t
+  101:  catch 109
+  106:  drop
+  107:  goto8 110
+  109:  throw
+  110:  get_loc2 2: this
+  111:  null
+  112:  put_field _rcBgCmdHandler
+  117:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: catch t [level:7 next:-1]
+    2: var r
+    3: var this
+  closure vars:
+    0: o parent:loc8 const
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_arg0 0: t
+    3:  if_false 269
+    8:  get_arg0 0: t
+    9:  get_field default
+   14:  if_false8 24
+   16:  get_arg0 0: t
+   17:  get_field default
+   22:  goto8 25
+   24:  get_arg0 0: t
+   25:  put_loc0 0: e
+   26:  get_loc3 3: this
+   27:  get_loc0 0: e
+   28:  get_field Datas
+   33:  if_false8 63
+   35:  push_atom_value function
+   40:  get_loc0 0: e
+   41:  get_field Datas
+   46:  get_field read
+   51:  typeof
+   52:  eq
+   53:  if_false8 63
+   55:  get_loc0 0: e
+   56:  get_field Datas
+   61:  goto8 100
+   63:  get_loc0 0: e
+   64:  get_field Dbase
+   69:  if_false8 99
+   71:  push_atom_value function
+   76:  get_loc0 0: e
+   77:  get_field Dbase
+   82:  get_field read
+   87:  typeof
+   88:  eq
+   89:  if_false8 99
+   91:  get_loc0 0: e
+   92:  get_field Dbase
+   97:  goto8 100
+   99:  null
+  100:  put_field $rcBgDbase
+  105:  get_loc3 3: this
+  106:  get_loc0 0: e
+  107:  get_field Fetch
+  112:  if_false8 142
+  114:  push_atom_value function
+  119:  get_loc0 0: e
+  120:  get_field Fetch
+  125:  get_field fetch
+  130:  typeof
+  131:  eq
+  132:  if_false8 142
+  134:  get_loc0 0: e
+  135:  get_field Fetch
+  140:  goto8 143
+  142:  null
+  143:  put_field $rcBgFetch
+  148:  get_loc3 3: this
+  149:  get_field $rcBgDbase
+  154:  if_false8 269
+  156:  catch 190
+  161:  get_loc3 3: this
+  162:  push_0 0
+  163:  lnot
+  164:  get_loc3 3: this
+  165:  get_field $rcBgDbase
+  170:  get_field2 read
+  175:  get_var_ref_check 0: o
+  178:  call_method 1
+  181:  strict_eq
+  182:  put_field rcBgEnabled
+  187:  drop
+  188:  goto8 200
+  190:  put_loc1 1: t
+  191:  catch 199
+  196:  drop
+  197:  goto8 200
+  199:  throw
+  200:  get_loc3 3: this
+  201:  get_field rcBgEnabled
+  206:  dup
+  207:  if_false8 219
+  209:  drop
+  210:  get_loc3 3: this
+  211:  get_field2 startRccwsBackground
+  216:  call_method 0
+  219:  drop
+  220:  push_atom_value undefined
+  225:  get_var_undef $falcon
+  230:  typeof
+  231:  neq
+  232:  if_false8 269
+  234:  get_loc3 3: this
+  235:  put_loc2 2: r
+  236:  get_loc3 3: this
+  237:  fclosure8 0: [bytecode <null>]
+  239:  put_field _rcBgCmdHandler
+  244:  get_var $falcon
+  249:  get_field2 on
+  254:  push_atom_value rccws_bg_command
+  259:  get_loc3 3: this
+  260:  get_field _rcBgCmdHandler
+  265:  call_method 2
+  268:  drop
+  269:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: r local:loc2 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: r
+    1:  get_field2 handleRccwsBgCommand
+    6:  get_arg0 0: t
+    7:  call_method 1
+   10:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var r
+    2: var s
+    3: catch t [level:9 next:-1]
+    4: var c
+    5: catch t [level:13 next:-1]
+    6: catch t [level:20 next:-1]
+    7: var this
+  closure vars:
+    0: n parent:loc6 const
+    1: g parent:loc12 const
+  stack_size: 7
+  opcodes:
+    0:  push_this
+    1:  put_loc8 7: this
+    3:  get_arg0 0: t
+    4:  get_field data
+    9:  dup
+   10:  if_true8 14
+   12:  drop
+   13:  get_arg0 0: t
+   14:  set_loc0 0: e
+   15:  if_false 757
+   20:  get_loc0 0: e
+   21:  get_field action
+   26:  if_false 757
+   31:  get_loc0 0: e
+   32:  get_field data
+   37:  dup
+   38:  if_true8 42
+   40:  drop
+   41:  object
+   42:  put_loc1 1: r
+   43:  push_atom_value enable_bg
+   48:  get_loc0 0: e
+   49:  get_field action
+   54:  strict_eq
+   55:  if_false8 91
+   57:  get_loc8 7: this
+   59:  push_0 0
+   60:  lnot
+   61:  put_field rcBgEnabled
+   66:  get_loc8 7: this
+   68:  get_field2 _writeBgMode
+   73:  push_0 0
+   74:  lnot
+   75:  call_method 1
+   78:  drop
+   79:  get_loc8 7: this
+   81:  get_field2 startRccwsBackground
+   86:  call_method 0
+   89:  drop
+   90:  return_undef
+   91:  push_atom_value disable_bg
+   96:  get_loc0 0: e
+   97:  get_field action
+  102:  strict_eq
+  103:  if_false8 139
+  105:  get_loc8 7: this
+  107:  push_1 1
+  108:  lnot
+  109:  put_field rcBgEnabled
+  114:  get_loc8 7: this
+  116:  get_field2 _writeBgMode
+  121:  push_1 1
+  122:  lnot
+  123:  call_method 1
+  126:  drop
+  127:  get_loc8 7: this
+  129:  get_field2 stopRccwsBackground
+  134:  call_method 0
+  137:  drop
+  138:  return_undef
+  139:  push_atom_value connect
+  144:  get_loc0 0: e
+  145:  get_field action
+  150:  strict_eq
+  151:  if_false 397
+  156:  get_loc8 7: this
+  158:  push_0 0
+  159:  lnot
+  160:  put_field rcBgEnabled
+  165:  get_loc8 7: this
+  167:  get_field2 _writeBgMode
+  172:  push_0 0
+  173:  lnot
+  174:  call_method 1
+  177:  drop
+  178:  object
+  179:  put_loc2 2: s
+  180:  catch 212
+  185:  get_loc8 7: this
+  187:  get_field $rcBgDbase
+  192:  get_field2 read
+  197:  get_var_ref_check 0: n
+  200:  call_method 1
+  203:  dup
+  204:  if_true8 208
+  206:  drop
+  207:  object
+  208:  put_loc2 2: s
+  209:  drop
+  210:  goto8 222
+  212:  put_loc3 3: t
+  213:  catch 221
+  218:  drop
+  219:  goto8 222
+  221:  throw
+  222:  push_1 1
+  223:  lnot
+  224:  put_loc8 4: c
+  226:  get_loc1 1: r
+  227:  get_field wsUrl
+  232:  dup
+  233:  if_false8 269
+  235:  drop
+  236:  get_loc2 2: s
+  237:  get_field wsUrl
+  242:  get_loc1 1: r
+  243:  get_field wsUrl
+  248:  strict_neq
+  249:  dup
+  250:  if_false8 269
+  252:  drop
+  253:  get_loc2 2: s
+  254:  get_loc1 1: r
+  255:  get_field wsUrl
+  260:  put_field wsUrl
+  265:  push_0 0
+  266:  lnot
+  267:  set_loc8 4: c
+  269:  drop
+  270:  undefined
+  271:  get_loc1 1: r
+  272:  get_field rcToken
+  277:  strict_neq
+  278:  dup
+  279:  if_false8 315
+  281:  drop
+  282:  get_loc2 2: s
+  283:  get_field token
+  288:  get_loc1 1: r
+  289:  get_field rcToken
+  294:  strict_neq
+  295:  dup
+  296:  if_false8 315
+  298:  drop
+  299:  get_loc2 2: s
+  300:  get_loc1 1: r
+  301:  get_field rcToken
+  306:  put_field token
+  311:  push_0 0
+  312:  lnot
+  313:  set_loc8 4: c
+  315:  drop
+  316:  get_loc8 4: c
+  318:  if_false8 359
+  320:  catch 348
+  325:  get_loc8 7: this
+  327:  get_field $rcBgDbase
+  332:  get_field2 write
+  337:  get_var_ref_check 0: n
+  340:  get_loc2 2: s
+  341:  call_method 2
+  344:  drop
+  345:  drop
+  346:  goto8 359
+  348:  put_loc8 5: t
+  350:  catch 358
+  355:  drop
+  356:  goto8 359
+  358:  throw
+  359:  get_loc8 7: this
+  361:  get_field rcBgConnected
+  366:  if_false8 385
+  368:  get_loc8 4: c
+  370:  lnot
+  371:  if_false8 385
+  373:  get_loc8 7: this
+  375:  get_field2 _pushRccwsStateToFg
+  380:  call_method 0
+  383:  drop
+  384:  return_undef
+  385:  get_loc8 7: this
+  387:  get_field2 startRccwsBackground
+  392:  call_method 0
+  395:  drop
+  396:  return_undef
+  397:  push_atom_value disconnect
+  402:  get_loc0 0: e
+  403:  get_field action
+  408:  strict_eq
+  409:  if_false8 423
+  411:  get_loc8 7: this
+  413:  get_field2 stopRccwsBackground
+  418:  call_method 0
+  421:  drop
+  422:  return_undef
+  423:  push_atom_value ws_send
+  428:  get_loc0 0: e
+  429:  get_field action
+  434:  strict_eq
+  435:  if_false 642
+  440:  get_loc8 7: this
+  442:  get_field rcBgWs
+  447:  if_false8 518
+  449:  get_loc8 7: this
+  451:  get_field rcBgConnected
+  456:  if_false8 518
+  458:  get_loc1 1: r
+  459:  get_field data
+  464:  if_false8 518
+  466:  catch 508
+  471:  get_loc8 7: this
+  473:  get_field rcBgWs
+  478:  get_field2 send
+  483:  get_var JSON
+  488:  get_field2 stringify
+  493:  get_loc1 1: r
+  494:  get_field data
+  499:  call_method 1
+  502:  call_method 1
+  505:  drop
+  506:  drop
+  507:  return_undef
+  508:  put_loc8 6: t
+  510:  catch 517
+  515:  drop
+  516:  return_undef
+  517:  throw
+  518:  get_loc1 1: r
+  519:  get_field data
+  524:  dup
+  525:  if_false8 640
+  527:  drop
+  528:  get_loc8 7: this
+  530:  get_field2 _pushRccwsStateToFg
+  535:  call_method 0
+  538:  drop
+  539:  push_atom_value undefined
+  544:  get_var_undef $falcon
+  549:  typeof
+  550:  neq
+  551:  dup
+  552:  if_false8 640
+  554:  drop
+  555:  get_var $falcon
+  560:  get_field2 trigger
+  565:  push_atom_value rccws_bg_msg
+  570:  object
+  571:  push_atom_value frame
+  576:  define_field type
+  581:  object
+  582:  push_atom_value error
+  587:  define_field post_type
+  592:  get_var_ref_check 1: g
+  595:  get_loc1 1: r
+  596:  get_field data
+  601:  get_field echo
+  606:  call1 1
+  607:  define_field echo
+  612:  push_atom_value bg_disconnected
+  617:  define_field code
+  622:  push_atom_value "\u00e5\u0090\u008e\u00e5\u008f\u00b0\u00e8\u00bf\u009e\u00e6\u008e\u00a5\u00e6\u009c\u00aa\u00e5\u00b0\u00b1\u00e7\u00bb\u00aa\u00ef\u00bc\u008c\u00e6\u00b6\u0088\u00e6\u0081\u00af\u00e6\u009c\u00aa\u00e5\u008f\u0091\u00e5\u0087\u00ba"
+  627:  define_field message
+  632:  define_field frame
+  637:  call_method 2
+  640:  drop
+  641:  return_undef
+  642:  push_atom_value fg_opened
+  647:  get_loc0 0: e
+  648:  get_field action
+  653:  strict_eq
+  654:  if_false8 688
+  656:  get_loc8 7: this
+  658:  push_0 0
+  659:  lnot
+  660:  put_field _rcFgActive
+  665:  get_loc8 7: this
+  667:  get_field2 clearRccwsDesktopMessages
+  672:  call_method 0
+  675:  drop
+  676:  get_loc8 7: this
+  678:  get_field2 _pushRccwsStateToFg
+  683:  call_method 0
+  686:  goto8 756
+  688:  push_atom_value fg_closed
+  693:  get_loc0 0: e
+  694:  get_field action
+  699:  strict_eq
+  700:  if_false8 722
+  702:  get_loc8 7: this
+  704:  push_1 1
+  705:  lnot
+  706:  put_field _rcFgActive
+  711:  get_loc8 7: this
+  713:  push_empty_string
+  714:  insert2
+  715:  put_field _rcFgActiveSid
+  720:  goto8 756
+  722:  push_atom_value set_active
+  727:  get_loc0 0: e
+  728:  get_field action
+  733:  strict_eq
+  734:  dup
+  735:  if_false8 756
+  737:  drop
+  738:  get_loc8 7: this
+  740:  get_var_ref_check 1: g
+  743:  get_loc1 1: r
+  744:  get_field sid
+  749:  call1 1
+  750:  insert2
+  751:  put_field _rcFgActiveSid
+  756:  drop
+  757:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: catch t [level:4 next:-1]
+    1: var this
+  closure vars:
+    0: o parent:loc8 const
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field $rcBgDbase
+    8:  if_false8 48
+   10:  catch 39
+   15:  get_loc1 1: this
+   16:  get_field $rcBgDbase
+   21:  get_field2 write
+   26:  get_var_ref_check 0: o
+   29:  push_0 0
+   30:  lnot
+   31:  get_arg0 0: t
+   32:  strict_eq
+   33:  call_method 2
+   36:  drop
+   37:  drop
+   38:  return_undef
+   39:  put_loc0 0: t
+   40:  catch 47
+   45:  drop
+   46:  return_undef
+   47:  throw
+   48:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: t parent:loc0 const
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_0 0
+    4:  put_field rcBgUnread
+    9:  get_var_ref_check 0: t
+   12:  get_loc0 0: this
+   13:  push_atom_value rccws
+   18:  call2 2
+   19:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: catch t [level:3 next:-1]
+    2: var this
+  closure vars:
+    0: a parent:loc7 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  object
+    3:  put_loc0 0: t
+    4:  catch 35
+    9:  get_loc2 2: this
+   10:  get_field $rcBgDbase
+   15:  get_field2 read
+   20:  get_var_ref_check 0: a
+   23:  call_method 1
+   26:  dup
+   27:  if_true8 31
+   29:  drop
+   30:  object
+   31:  put_loc0 0: t
+   32:  drop
+   33:  goto8 45
+   35:  put_loc1 1: t
+   36:  catch 44
+   41:  drop
+   42:  goto8 45
+   44:  throw
+   45:  get_loc0 0: t
+   46:  if_false8 77
+   48:  push_atom_value object
+   53:  get_loc0 0: t
+   54:  typeof
+   55:  eq
+   56:  if_false8 77
+   58:  get_var Array
+   63:  get_field2 isArray
+   68:  get_loc0 0: t
+   69:  call_method 1
+   72:  lnot
+   73:  if_false8 77
+   75:  get_loc0 0: t
+   76:  return
+   77:  object
+   78:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: catch t [level:4 next:-1]
+    1: var this
+  closure vars:
+    0: a parent:loc7 const
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field $rcBgDbase
+    8:  if_false8 45
+   10:  catch 36
+   15:  get_loc1 1: this
+   16:  get_field $rcBgDbase
+   21:  get_field2 write
+   26:  get_var_ref_check 0: a
+   29:  get_arg0 0: t
+   30:  call_method 2
+   33:  drop
+   34:  drop
+   35:  return_undef
+   36:  put_loc0 0: t
+   37:  catch 44
+   42:  drop
+   43:  return_undef
+   44:  throw
+   45:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t e r
+  locals:
+    0: var s
+    1: var c
+    2: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_arg0 0: t
+    3:  if_false 184
+    8:  get_loc2 2: this
+    9:  get_field2 _readRccwsSessState
+   14:  call_method 0
+   17:  set_loc0 0: s
+   18:  get_arg0 0: t
+   19:  get_array_el
+   20:  dup
+   21:  if_true8 50
+   23:  drop
+   24:  object
+   25:  push_1 1
+   26:  lnot
+   27:  define_field running
+   32:  push_0 0
+   33:  define_field unread
+   38:  push_empty_string
+   39:  define_field lastText
+   44:  push_0 0
+   45:  define_field lastTime
+   50:  put_loc1 1: c
+   51:  get_arg1 1: e
+   52:  dup
+   53:  if_false8 84
+   55:  drop
+   56:  undefined
+   57:  get_arg1 1: e
+   58:  get_field running
+   63:  strict_neq
+   64:  dup
+   65:  if_false8 84
+   67:  drop
+   68:  get_loc1 1: c
+   69:  push_0 0
+   70:  lnot
+   71:  get_arg1 1: e
+   72:  get_field running
+   77:  strict_eq
+   78:  insert2
+   79:  put_field running
+   84:  drop
+   85:  get_arg1 1: e
+   86:  dup
+   87:  if_false8 134
+   89:  drop
+   90:  undefined
+   91:  get_arg1 1: e
+   92:  get_field lastText
+   97:  strict_neq
+   98:  dup
+   99:  if_false8 134
+  101:  drop
+  102:  get_loc1 1: c
+  103:  get_arg1 1: e
+  104:  get_field lastText
+  109:  put_field lastText
+  114:  get_loc1 1: c
+  115:  get_var Date
+  120:  get_field2 now
+  125:  call_method 0
+  128:  insert2
+  129:  put_field lastTime
+  134:  drop
+  135:  get_arg2 2: r
+  136:  dup
+  137:  if_false8 168
+  139:  drop
+  140:  get_loc1 1: c
+  141:  get_var parseInt
+  146:  get_loc1 1: c
+  147:  get_field unread
+  152:  push_i8 10
+  154:  call2 2
+  155:  dup
+  156:  if_true8 160
+  158:  drop
+  159:  push_0 0
+  160:  push_1 1
+  161:  add
+  162:  insert2
+  163:  put_field unread
+  168:  drop
+  169:  get_loc0 0: s
+  170:  get_arg0 0: t
+  171:  get_loc1 1: c
+  172:  put_array_el
+  173:  get_loc2 2: this
+  174:  get_field2 _writeRccwsSessState
+  179:  get_loc0 0: s
+  180:  call_method 1
+  183:  drop
+  184:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field _rcFgActive
+    8:  dup
+    9:  if_false8 80
+   11:  drop
+   12:  push_atom_value undefined
+   17:  get_var_undef $falcon
+   22:  typeof
+   23:  neq
+   24:  dup
+   25:  if_false8 80
+   27:  drop
+   28:  get_var $falcon
+   33:  get_field2 trigger
+   38:  push_atom_value rccws_bg_state
+   43:  object
+   44:  get_loc0 0: this
+   45:  get_field rcBgConnected
+   50:  define_field connected
+   55:  get_loc0 0: this
+   56:  get_field rcBgState
+   61:  define_field state
+   66:  get_loc0 0: this
+   67:  get_field rcBgStatusMessage
+   72:  define_field statusMessage
+   77:  call_method 2
+   80:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: catch t [level:4 next:-1]
+    2: var e
+    3: var r
+    4: var s
+    5: var c
+    6: catch t [level:9 next:-1]
+    7: var this
+  closure vars:
+    0: n parent:loc6 const
+    1: g parent:loc12 const
+  stack_size: 8
+  opcodes:
+    0:  push_this
+    1:  put_loc8 7: this
+    3:  get_loc8 7: this
+    5:  get_field $rcBgFetch
+   10:  lnot
+   11:  dup
+   12:  if_true8 23
+   14:  drop
+   15:  get_loc8 7: this
+   17:  get_field $rcBgDbase
+   22:  lnot
+   23:  if_false8 50
+   25:  get_loc8 7: this
+   27:  push_atom_value network_error
+   32:  put_field rcBgState
+   37:  get_loc8 7: this
+   39:  push_atom_value "\u00e5\u0090\u008e\u00e5\u008f\u00b0\u00e8\u00bf\u009e\u00e6\u008e\u00a5\u00e7\u00bb\u0084\u00e4\u00bb\u00b6\u00e4\u00b8\u008d\u00e5\u008f\u00af\u00e7\u0094\u00a8"
+   44:  put_field rcBgStatusMessage
+   49:  return_undef
+   50:  get_loc8 7: this
+   52:  get_field2 stopRccwsBackground
+   57:  push_1 1
+   58:  lnot
+   59:  call_method 1
+   62:  drop
+   63:  object
+   64:  put_loc0 0: t
+   65:  catch 97
+   70:  get_loc8 7: this
+   72:  get_field $rcBgDbase
+   77:  get_field2 read
+   82:  get_var_ref_check 0: n
+   85:  call_method 1
+   88:  dup
+   89:  if_true8 93
+   91:  drop
+   92:  object
+   93:  put_loc0 0: t
+   94:  drop
+   95:  goto8 107
+   97:  put_loc1 1: t
+   98:  catch 106
+  103:  drop
+  104:  goto8 107
+  106:  throw
+  107:  get_var_ref_check 1: g
+  110:  get_loc0 0: t
+  111:  get_field wsUrl
+  116:  call1 1
+  117:  get_field2 trim
+  122:  call_method 0
+  125:  put_loc2 2: e
+  126:  get_var_ref_check 1: g
+  129:  get_loc0 0: t
+  130:  get_field token
+  135:  call1 1
+  136:  get_field2 trim
+  141:  call_method 0
+  144:  put_loc3 3: r
+  145:  push_const8 0: 1"^wss?:\\/\\/"
+  147:  push_const8 1: 1"\u0002\u0001\u00005\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u0001W\u0000\u0001S\u0000\u001c\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001S\u0000\n\u0001:\u0000\u0001/\u0000\u0001/\u0000\u000c\u0000\n"
+  149:  regexp
+  150:  get_field2 test
+  155:  get_loc2 2: e
+  156:  call_method 1
+  159:  lnot
+  160:  if_false8 198
+  162:  get_loc8 7: this
+  164:  push_atom_value config_error
+  169:  put_field rcBgState
+  174:  get_loc8 7: this
+  176:  push_atom_value "\u00e5\u009c\u00b0\u00e5\u009d\u0080\u00e5\u00bf\u0085\u00e9\u00a1\u00bb\u00e4\u00bb\u00a5 ws:// \u00e6\u0088\u0096 wss:// \u00e5\u00bc\u0080\u00e5\u00a4\u00b4"
+  181:  put_field rcBgStatusMessage
+  186:  get_loc8 7: this
+  188:  get_field2 _pushRccwsStateToFg
+  193:  call_method 0
+  196:  drop
+  197:  return_undef
+  198:  get_loc8 7: this
+  200:  get_field $rcBgFetch
+  205:  get_field WebSocket
+  210:  lnot
+  211:  if_false8 238
+  213:  get_loc8 7: this
+  215:  push_atom_value network_error
+  220:  put_field rcBgState
+  225:  get_loc8 7: this
+  227:  push_atom_value "WebSocket \u00e7\u00bb\u0084\u00e4\u00bb\u00b6\u00e4\u00b8\u008d\u00e5\u008f\u00af\u00e7\u0094\u00a8"
+  232:  put_field rcBgStatusMessage
+  237:  return_undef
+  238:  get_loc2 2: e
+  239:  get_loc2 2: e
+  240:  get_field2 indexOf
+  245:  push_atom_value "?"
+  250:  call_method 1
+  253:  push_minus1 -1
+  254:  gt
+  255:  if_false8 264
+  257:  push_atom_value "&"
+  262:  goto8 269
+  264:  push_atom_value "?"
+  269:  push_atom_value "token="
+  274:  add
+  275:  get_var encodeURIComponent
+  280:  get_loc3 3: r
+  281:  call1 1
+  282:  add
+  283:  add
+  284:  put_loc2 2: e
+  285:  get_loc8 7: this
+  287:  push_1 1
+  288:  lnot
+  289:  put_field rcBgManualStop
+  294:  get_loc8 7: this
+  296:  get_loc8 7: this
+  298:  get_field rcBgRetryIndex
+  303:  push_0 0
+  304:  gt
+  305:  if_false8 314
+  307:  push_atom_value reconnecting
+  312:  goto8 319
+  314:  push_atom_value connecting
+  319:  put_field rcBgState
+  324:  get_loc8 7: this
+  326:  push_empty_string
+  327:  put_field rcBgStatusMessage
+  332:  get_loc8 7: this
+  334:  get_field2 rcBgGeneration
+  339:  inc
+  340:  insert2
+  341:  put_field rcBgGeneration
+  346:  put_loc8 4: s
+  348:  catch 452
+  353:  get_loc8 7: this
+  355:  get_loc8 7: this
+  357:  get_field $rcBgFetch
+  362:  get_field WebSocket
+  367:  dup
+  368:  get_loc2 2: e
+  369:  array_from 0
+  372:  object
+  373:  push_1 1
+  374:  lnot
+  375:  define_field verifySSL
+  380:  call_constructor 3
+  383:  put_field rcBgWs
+  388:  get_loc8 7: this
+  390:  push_1 1
+  391:  lnot
+  392:  put_field rcBgConnected
+  397:  get_loc8 7: this
+  399:  push_1 1
+  400:  lnot
+  401:  put_field _rcBgPushBound
+  406:  get_loc8 7: this
+  408:  get_field2 _resetRccwsBgLoopTimers
+  413:  call_method 0
+  416:  drop
+  417:  get_loc8 7: this
+  419:  put_loc8 5: c
+  421:  get_loc8 7: this
+  423:  get_var setTimeout
+  428:  fclosure8 2: [bytecode <null>]
+  430:  push_i16 10000
+  433:  call2 2
+  434:  put_field rcBgConnectTimer
+  439:  get_loc8 7: this
+  441:  get_field2 _pushRccwsStateToFg
+  446:  call_method 0
+  449:  drop
+  450:  drop
+  451:  return_undef
+  452:  put_loc8 6: t
+  454:  catch 496
+  459:  get_loc8 7: this
+  461:  push_atom_value network_error
+  466:  put_field rcBgState
+  471:  get_loc8 7: this
+  473:  push_atom_value "\u00e5\u0090\u008e\u00e5\u008f\u00b0\u00e8\u00bf\u009e\u00e6\u008e\u00a5\u00e5\u0088\u009b\u00e5\u00bb\u00ba\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  478:  put_field rcBgStatusMessage
+  483:  get_loc8 7: this
+  485:  get_field2 scheduleRccwsBgReconnect
+  490:  call_method 0
+  493:  drop
+  494:  drop
+  495:  return_undef
+  496:  throw
+
+
+/* ===== function depth=2 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: c local:loc5 var
+    1: s local:loc4 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: c
+    1:  null
+    2:  put_field rcBgConnectTimer
+    7:  get_var_ref1 1: s
+    8:  get_var_ref0 0: c
+    9:  get_field rcBgGeneration
+   14:  strict_neq
+   15:  dup
+   16:  if_true8 82
+   18:  drop
+   19:  get_var_ref0 0: c
+   20:  get_field rcBgConnected
+   25:  dup
+   26:  if_true8 82
+   28:  drop
+   29:  get_var_ref0 0: c
+   30:  get_field rcBgManualStop
+   35:  dup
+   36:  if_true8 82
+   38:  drop
+   39:  get_var_ref0 0: c
+   40:  push_atom_value timeout
+   45:  put_field rcBgState
+   50:  get_var_ref0 0: c
+   51:  push_atom_value "\u00e5\u0090\u008e\u00e5\u008f\u00b0\u00e8\u00bf\u009e\u00e6\u008e\u00a5\u00e8\u00b6\u0085\u00e6\u0097\u00b6"
+   56:  put_field rcBgStatusMessage
+   61:  get_var_ref0 0: c
+   62:  get_field2 stopRccwsBackground
+   67:  push_1 1
+   68:  lnot
+   69:  call_method 1
+   72:  drop
+   73:  get_var_ref0 0: c
+   74:  get_field2 scheduleRccwsBgReconnect
+   79:  call_method 0
+   82:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field rcBgWsTimer
+    8:  dup
+    9:  if_false8 33
+   11:  drop
+   12:  get_var clearInterval
+   17:  get_loc2 2: this
+   18:  get_field rcBgWsTimer
+   23:  call1 1
+   24:  drop
+   25:  get_loc2 2: this
+   26:  null
+   27:  insert2
+   28:  put_field rcBgWsTimer
+   33:  drop
+   34:  get_loc2 2: this
+   35:  get_field rcBgWs
+   40:  if_false8 119
+   42:  push_atom_value function
+   47:  get_loc2 2: this
+   48:  get_field rcBgWs
+   53:  get_field setEventCallback
+   58:  typeof
+   59:  eq
+   60:  if_false8 99
+   62:  get_loc2 2: this
+   63:  get_field _rcBgPushBound
+   68:  if_false8 71
+   70:  return_undef
+   71:  get_loc2 2: this
+   72:  put_loc0 0: t
+   73:  get_loc2 2: this
+   74:  get_field rcBgWs
+   79:  get_field2 setEventCallback
+   84:  fclosure8 0: [bytecode <null>]
+   86:  call_method 1
+   89:  drop
+   90:  get_loc2 2: this
+   91:  push_0 0
+   92:  lnot
+   93:  put_field _rcBgPushBound
+   98:  return_undef
+   99:  get_loc2 2: this
+  100:  put_loc1 1: e
+  101:  get_loc2 2: this
+  102:  get_var setInterval
+  107:  fclosure8 1: [bytecode <null>]
+  109:  push_i16 400
+  112:  call2 2
+  113:  put_field rcBgWsTimer
+  118:  return_undef
+  119:  get_loc2 2: this
+  120:  push_1 1
+  121:  lnot
+  122:  put_field _rcBgPushBound
+  127:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 _consumeRccwsBgEvents
+    6:  get_arg0 0: e
+    7:  call_method 1
+   10:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: e local:loc1 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: e
+    1:  get_field2 pollRccwsBg
+    6:  call_method 0
+    9:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: catch t [level:3 next:-1]
+    1: catch t [level:8 next:-1]
+    2: catch t [level:11 next:-1]
+    3: var this
+  closure vars:
+    0: F parent:loc35 var
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  catch 25
+    7:  get_var_ref0 0: F
+    8:  get_loc3 3: this
+    9:  get_field _rcLiveRec
+   14:  get_loc3 3: this
+   15:  get_field $rcBgDbase
+   20:  call2 2
+   21:  drop
+   22:  drop
+   23:  goto8 35
+   25:  put_loc0 0: t
+   26:  catch 34
+   31:  drop
+   32:  goto8 35
+   34:  throw
+   35:  push_1 1
+   36:  lnot
+   37:  get_arg0 0: t
+   38:  strict_neq
+   39:  dup
+   40:  if_false8 76
+   42:  drop
+   43:  get_loc3 3: this
+   44:  push_0 0
+   45:  lnot
+   46:  put_field rcBgManualStop
+   51:  get_loc3 3: this
+   52:  push_atom_value stopped
+   57:  put_field rcBgState
+   62:  get_loc3 3: this
+   63:  get_field2 rcBgGeneration
+   68:  push_1 1
+   69:  add
+   70:  insert2
+   71:  put_field rcBgGeneration
+   76:  drop
+   77:  get_loc3 3: this
+   78:  get_field rcBgConnectTimer
+   83:  dup
+   84:  if_false8 108
+   86:  drop
+   87:  get_var clearTimeout
+   92:  get_loc3 3: this
+   93:  get_field rcBgConnectTimer
+   98:  call1 1
+   99:  drop
+  100:  get_loc3 3: this
+  101:  null
+  102:  insert2
+  103:  put_field rcBgConnectTimer
+  108:  drop
+  109:  get_loc3 3: this
+  110:  get_field rcBgReconnectTimer
+  115:  dup
+  116:  if_false8 140
+  118:  drop
+  119:  get_var clearTimeout
+  124:  get_loc3 3: this
+  125:  get_field rcBgReconnectTimer
+  130:  call1 1
+  131:  drop
+  132:  get_loc3 3: this
+  133:  null
+  134:  insert2
+  135:  put_field rcBgReconnectTimer
+  140:  drop
+  141:  get_loc3 3: this
+  142:  get_field rcBgWsTimer
+  147:  dup
+  148:  if_false8 172
+  150:  drop
+  151:  get_var clearInterval
+  156:  get_loc3 3: this
+  157:  get_field rcBgWsTimer
+  162:  call1 1
+  163:  drop
+  164:  get_loc3 3: this
+  165:  null
+  166:  insert2
+  167:  put_field rcBgWsTimer
+  172:  drop
+  173:  get_loc3 3: this
+  174:  get_field rcBgPingTimer
+  179:  dup
+  180:  if_false8 204
+  182:  drop
+  183:  get_var clearInterval
+  188:  get_loc3 3: this
+  189:  get_field rcBgPingTimer
+  194:  call1 1
+  195:  drop
+  196:  get_loc3 3: this
+  197:  null
+  198:  insert2
+  199:  put_field rcBgPingTimer
+  204:  drop
+  205:  get_loc3 3: this
+  206:  push_1 1
+  207:  lnot
+  208:  put_field _rcBgPushBound
+  213:  get_loc3 3: this
+  214:  get_field rcBgWs
+  219:  if_false8 316
+  221:  catch 244
+  226:  get_loc3 3: this
+  227:  get_field rcBgWs
+  232:  get_field2 close
+  237:  call_method 0
+  240:  drop
+  241:  drop
+  242:  goto8 254
+  244:  put_loc1 1: t
+  245:  catch 253
+  250:  drop
+  251:  goto8 254
+  253:  throw
+  254:  catch 299
+  259:  push_atom_value function
+  264:  get_loc3 3: this
+  265:  get_field rcBgWs
+  270:  get_field destroy
+  275:  typeof
+  276:  eq
+  277:  dup
+  278:  if_false8 295
+  280:  drop
+  281:  get_loc3 3: this
+  282:  get_field rcBgWs
+  287:  get_field2 destroy
+  292:  call_method 0
+  295:  drop
+  296:  drop
+  297:  goto8 309
+  299:  put_loc2 2: t
+  300:  catch 308
+  305:  drop
+  306:  goto8 309
+  308:  throw
+  309:  get_loc3 3: this
+  310:  null
+  311:  put_field rcBgWs
+  316:  get_loc3 3: this
+  317:  push_1 1
+  318:  lnot
+  319:  put_field rcBgConnected
+  324:  get_loc3 3: this
+  325:  get_field2 _pushRccwsStateToFg
+  330:  call_method 0
+  333:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var r
+    3: var s
+    4: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc8 4: this
+    3:  get_loc8 4: this
+    5:  get_field rcBgEnabled
+   10:  if_false 162
+   15:  get_loc8 4: this
+   17:  get_field rcBgManualStop
+   22:  lnot
+   23:  if_false 162
+   28:  push_atom_value auth_error
+   33:  get_loc8 4: this
+   35:  get_field rcBgState
+   40:  strict_neq
+   41:  if_false8 162
+   43:  get_loc8 4: this
+   45:  get_field rcBgReconnectTimer
+   50:  lnot
+   51:  if_false8 162
+   53:  push_i16 1000
+   56:  push_i16 2000
+   59:  push_i16 5000
+   62:  push_i16 10000
+   65:  push_i16 30000
+   68:  array_from 5
+   71:  set_loc0 0: t
+   72:  get_var Math
+   77:  get_field2 min
+   82:  get_loc8 4: this
+   84:  get_field rcBgRetryIndex
+   89:  get_loc0 0: t
+   90:  get_length
+   91:  push_1 1
+   92:  sub
+   93:  call_method 2
+   96:  get_array_el
+   97:  put_loc1 1: e
+   98:  get_loc8 4: this
+  100:  get_field2 rcBgRetryIndex
+  105:  push_1 1
+  106:  add
+  107:  put_field rcBgRetryIndex
+  112:  get_loc8 4: this
+  114:  push_atom_value reconnecting
+  119:  put_field rcBgState
+  124:  get_loc8 4: this
+  126:  get_field rcBgGeneration
+  131:  put_loc2 2: r
+  132:  get_loc8 4: this
+  134:  put_loc3 3: s
+  135:  get_loc8 4: this
+  137:  get_var setTimeout
+  142:  fclosure8 0: [bytecode <null>]
+  144:  get_loc1 1: e
+  145:  call2 2
+  146:  put_field rcBgReconnectTimer
+  151:  get_loc8 4: this
+  153:  get_field2 _pushRccwsStateToFg
+  158:  call_method 0
+  161:  drop
+  162:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: s local:loc3 var
+    1: r local:loc2 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: s
+    1:  null
+    2:  put_field rcBgReconnectTimer
+    7:  get_var_ref1 1: r
+    8:  get_var_ref0 0: s
+    9:  get_field rcBgGeneration
+   14:  strict_eq
+   15:  dup
+   16:  if_false8 49
+   18:  drop
+   19:  get_var_ref0 0: s
+   20:  get_field rcBgManualStop
+   25:  lnot
+   26:  dup
+   27:  if_false8 49
+   29:  drop
+   30:  get_var_ref0 0: s
+   31:  get_field rcBgEnabled
+   36:  dup
+   37:  if_false8 49
+   39:  drop
+   40:  get_var_ref0 0: s
+   41:  get_field2 startRccwsBackground
+   46:  call_method 0
+   49:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: catch t [level:3 next:-1]
+    2: var e
+    3: catch t [level:7 next:-1]
+    4: var r
+    5: var this
+  closure vars:
+    0: g parent:loc12 const
+    1: n parent:loc6 const
+    2: W parent:loc28 var
+  stack_size: 7
+  opcodes:
+    0:  push_this
+    1:  put_loc8 5: this
+    3:  get_loc8 5: this
+    5:  get_field rcBgConnectTimer
+   10:  dup
+   11:  if_false8 37
+   13:  drop
+   14:  get_var clearTimeout
+   19:  get_loc8 5: this
+   21:  get_field rcBgConnectTimer
+   26:  call1 1
+   27:  drop
+   28:  get_loc8 5: this
+   30:  null
+   31:  insert2
+   32:  put_field rcBgConnectTimer
+   37:  drop
+   38:  get_loc8 5: this
+   40:  push_0 0
+   41:  lnot
+   42:  put_field rcBgConnected
+   47:  get_loc8 5: this
+   49:  push_atom_value connected
+   54:  put_field rcBgState
+   59:  get_loc8 5: this
+   61:  push_empty_string
+   62:  put_field rcBgStatusMessage
+   67:  get_loc8 5: this
+   69:  push_0 0
+   70:  put_field rcBgRetryIndex
+   75:  push_empty_string
+   76:  put_loc0 0: t
+   77:  catch 118
+   82:  get_var_ref_check 0: g
+   85:  get_loc8 5: this
+   87:  get_field $rcBgDbase
+   92:  get_field2 read
+   97:  get_var_ref_check 1: n
+  100:  call_method 1
+  103:  dup
+  104:  if_true8 108
+  106:  drop
+  107:  object
+  108:  get_field currentSession
+  113:  call1 1
+  114:  put_loc0 0: t
+  115:  drop
+  116:  goto8 128
+  118:  put_loc1 1: t
+  119:  catch 127
+  124:  drop
+  125:  goto8 128
+  127:  throw
+  128:  get_loc8 5: this
+  130:  get_field rcBgWs
+  135:  if_false 330
+  140:  catch 320
+  145:  get_loc8 5: this
+  147:  get_field _rcLiveRec
+  152:  dup
+  153:  if_true8 222
+  155:  drop
+  156:  get_loc8 5: this
+  158:  object
+  159:  object
+  160:  define_field bufs
+  165:  object
+  166:  define_field shards
+  171:  object
+  172:  define_field timers
+  177:  object
+  178:  define_field mids
+  183:  object
+  184:  define_field asks
+  189:  object
+  190:  define_field wm
+  195:  put_field _rcLiveRec
+  200:  get_loc8 5: this
+  202:  get_field _rcLiveRec
+  207:  get_var_ref2 2: W
+  208:  get_loc8 5: this
+  210:  get_field $rcBgDbase
+  215:  call1 1
+  216:  insert2
+  217:  put_field wm
+  222:  drop
+  223:  object
+  224:  get_loc8 5: this
+  226:  get_field _rcLiveRec
+  231:  get_field wm
+  236:  dup
+  237:  if_true8 241
+  239:  drop
+  240:  object
+  241:  define_field marks
+  246:  put_loc2 2: e
+  247:  get_loc0 0: t
+  248:  dup
+  249:  if_false8 260
+  251:  drop
+  252:  get_loc2 2: e
+  253:  get_loc0 0: t
+  254:  insert2
+  255:  put_field attach
+  260:  drop
+  261:  get_loc8 5: this
+  263:  get_field rcBgWs
+  268:  get_field2 send
+  273:  get_var JSON
+  278:  get_field2 stringify
+  283:  object
+  284:  push_atom_value "sessions.sync"
+  289:  define_field action
+  294:  get_loc2 2: e
+  295:  define_field params
+  300:  push_atom_value bg_sync
+  305:  define_field echo
+  310:  call_method 1
+  313:  call_method 1
+  316:  drop
+  317:  drop
+  318:  goto8 330
+  320:  put_loc3 3: t
+  321:  catch 329
+  326:  drop
+  327:  goto8 330
+  329:  throw
+  330:  get_loc8 5: this
+  332:  put_loc8 4: r
+  334:  get_loc8 5: this
+  336:  get_field rcBgPingTimer
+  341:  dup
+  342:  if_false8 358
+  344:  drop
+  345:  get_var clearInterval
+  350:  get_loc8 5: this
+  352:  get_field rcBgPingTimer
+  357:  call1 1
+  358:  drop
+  359:  get_loc8 5: this
+  361:  get_var setInterval
+  366:  fclosure8 0: [bytecode <null>]
+  368:  push_i16 25000
+  371:  call2 2
+  372:  put_field rcBgPingTimer
+  377:  get_loc8 5: this
+  379:  get_field2 _pushRccwsStateToFg
+  384:  call_method 0
+  387:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:4 next:-1]
+  closure vars:
+    0: r local:loc4 var
+  stack_size: 7
+  opcodes:
+    0:  get_var_ref0 0: r
+    1:  get_field rcBgWs
+    6:  if_false8 87
+    8:  get_var_ref0 0: r
+    9:  get_field rcBgConnected
+   14:  if_false8 87
+   16:  catch 78
+   21:  get_var_ref0 0: r
+   22:  get_field rcBgWs
+   27:  get_field2 send
+   32:  get_var JSON
+   37:  get_field2 stringify
+   42:  object
+   43:  push_atom_value ping
+   48:  define_field action
+   53:  object
+   54:  define_field params
+   59:  push_atom_value bg_ping
+   64:  define_field echo
+   69:  call_method 1
+   72:  call_method 1
+   75:  drop
+   76:  drop
+   77:  return_undef
+   78:  put_loc0 0: t
+   79:  catch 86
+   84:  drop
+   85:  return_undef
+   86:  throw
+   87:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: catch t [level:5 next:-1]
+    2: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field rcBgWs
+    8:  if_false8 64
+   10:  array_from 0
+   13:  put_loc0 0: t
+   14:  catch 44
+   19:  get_loc2 2: this
+   20:  get_field rcBgWs
+   25:  get_field2 poll
+   30:  call_method 0
+   33:  dup
+   34:  if_true8 40
+   36:  drop
+   37:  array_from 0
+   40:  put_loc0 0: t
+   41:  drop
+   42:  goto8 53
+   44:  put_loc1 1: t
+   45:  catch 52
+   50:  drop
+   51:  return_undef
+   52:  throw
+   53:  get_loc2 2: this
+   54:  get_field2 _consumeRccwsBgEvents
+   59:  get_loc0 0: t
+   60:  call_method 1
+   63:  drop
+   64:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var r
+    2: catch t [level:5 next:-1]
+    3: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  get_field rcBgWs
+    8:  if_false 146
+   13:  catch 137
+   18:  push_0 0
+   19:  put_loc0 0: e
+   20:  get_loc0 0: e
+   21:  get_arg0 0: t
+   22:  if_false8 28
+   24:  get_arg0 0: t
+   25:  get_length
+   26:  goto8 29
+   28:  push_0 0
+   29:  lt
+   30:  if_false8 49
+   32:  get_loc3 3: this
+   33:  get_field2 handleRccwsBgEvent
+   38:  get_arg0 0: t
+   39:  get_loc0 0: e
+   40:  get_array_el
+   41:  call_method 1
+   44:  drop
+   45:  inc_loc 0: e
+   47:  goto8 20
+   49:  get_loc3 3: this
+   50:  get_field rcBgWs
+   55:  get_field2 getReadyState
+   60:  call_method 0
+   63:  put_loc1 1: r
+   64:  push_1 1
+   65:  get_loc1 1: r
+   66:  strict_neq
+   67:  dup
+   68:  if_true8 77
+   70:  drop
+   71:  get_loc3 3: this
+   72:  get_field rcBgConnected
+   77:  if_false8 125
+   79:  push_3 3
+   80:  get_loc1 1: r
+   81:  strict_eq
+   82:  dup
+   83:  if_false8 134
+   85:  drop
+   86:  get_loc3 3: this
+   87:  get_field rcBgConnected
+   92:  dup
+   93:  if_false8 134
+   95:  drop
+   96:  get_loc3 3: this
+   97:  push_1 1
+   98:  lnot
+   99:  put_field rcBgConnected
+  104:  get_loc3 3: this
+  105:  get_field2 _pushRccwsStateToFg
+  110:  call_method 0
+  113:  drop
+  114:  get_loc3 3: this
+  115:  get_field2 scheduleRccwsBgReconnect
+  120:  call_method 0
+  123:  goto8 134
+  125:  get_loc3 3: this
+  126:  get_field2 markRccwsBgConnected
+  131:  call_method 0
+  134:  drop
+  135:  drop
+  136:  return_undef
+  137:  put_loc2 2: t
+  138:  catch 145
+  143:  drop
+  144:  return_undef
+  145:  throw
+  146:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var r
+    2: var this
+  closure vars:
+    0: v parent:loc17 var
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_arg0 0: t
+    3:  if_false 280
+    8:  push_atom_value open
+   13:  get_arg0 0: t
+   14:  get_field type
+   19:  strict_neq
+   20:  if_false 260
+   25:  push_atom_value error
+   30:  get_arg0 0: t
+   31:  get_field type
+   36:  strict_eq
+   37:  if_false8 62
+   39:  get_loc2 2: this
+   40:  push_atom_value network_error
+   45:  put_field rcBgState
+   50:  get_loc2 2: this
+   51:  push_atom_value "\u00e5\u0090\u008e\u00e5\u008f\u00b0 WebSocket \u00e7\u00bd\u0091\u00e7\u00bb\u009c\u00e9\u0094\u0099\u00e8\u00af\u00af"
+   56:  put_field rcBgStatusMessage
+   61:  return_undef
+   62:  push_atom_value close
+   67:  get_arg0 0: t
+   68:  get_field type
+   73:  strict_eq
+   74:  if_false 213
+   79:  get_loc2 2: this
+   80:  push_1 1
+   81:  lnot
+   82:  put_field rcBgConnected
+   87:  get_var Number
+   92:  get_arg0 0: t
+   93:  get_field code
+   98:  call1 1
+   99:  dup
+  100:  if_true8 104
+  102:  drop
+  103:  push_0 0
+  104:  put_loc0 0: e
+  105:  push_i16 1008
+  108:  get_loc0 0: e
+  109:  strict_eq
+  110:  dup
+  111:  if_true8 146
+  113:  drop
+  114:  push_i16 4001
+  117:  get_loc0 0: e
+  118:  strict_eq
+  119:  dup
+  120:  if_true8 146
+  122:  drop
+  123:  push_i16 4003
+  126:  get_loc0 0: e
+  127:  strict_eq
+  128:  dup
+  129:  if_true8 146
+  131:  drop
+  132:  push_i16 401
+  135:  get_loc0 0: e
+  136:  strict_eq
+  137:  dup
+  138:  if_true8 146
+  140:  drop
+  141:  push_i16 403
+  144:  get_loc0 0: e
+  145:  strict_eq
+  146:  if_false8 181
+  148:  get_loc2 2: this
+  149:  push_atom_value auth_error
+  154:  put_field rcBgState
+  159:  get_loc2 2: this
+  160:  push_atom_value "\u00e6\u009c\u008d\u00e5\u008a\u00a1\u00e7\u00ab\u00af\u00e6\u008b\u0092\u00e7\u00bb\u009d\u00e4\u00bb\u00a4\u00e7\u0089\u008c"
+  165:  put_field rcBgStatusMessage
+  170:  get_loc2 2: this
+  171:  push_0 0
+  172:  lnot
+  173:  insert2
+  174:  put_field rcBgManualStop
+  179:  goto8 201
+  181:  get_loc2 2: this
+  182:  push_atom_value network_error
+  187:  put_field rcBgState
+  192:  get_loc2 2: this
+  193:  get_field2 scheduleRccwsBgReconnect
+  198:  call_method 0
+  201:  drop
+  202:  get_loc2 2: this
+  203:  get_field2 _pushRccwsStateToFg
+  208:  call_method 0
+  211:  drop
+  212:  return_undef
+  213:  push_atom_value message
+  218:  get_arg0 0: t
+  219:  get_field type
+  224:  strict_eq
+  225:  if_false8 280
+  227:  get_arg0 0: t
+  228:  get_field data
+  233:  if_false8 280
+  235:  get_var_ref0 0: v
+  236:  get_arg0 0: t
+  237:  get_field data
+  242:  call1 1
+  243:  set_loc1 1: r
+  244:  dup
+  245:  if_false8 258
+  247:  drop
+  248:  get_loc2 2: this
+  249:  get_field2 _handleRccwsBgFrame
+  254:  get_loc1 1: r
+  255:  call_method 1
+  258:  drop
+  259:  return_undef
+  260:  get_loc2 2: this
+  261:  get_field rcBgConnected
+  266:  dup
+  267:  if_true8 279
+  269:  drop
+  270:  get_loc2 2: this
+  271:  get_field2 markRccwsBgConnected
+  276:  call_method 0
+  279:  drop
+  280:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var r
+    1: var s
+    2: var c
+    3: var n
+    4: var a
+    5: var o
+    6: var this
+  closure vars:
+    0: g parent:loc12 const
+    1: e parent:loc1 const
+    2: i parent:loc5 var
+  stack_size: 7
+  opcodes:
+    0:  push_this
+    1:  put_loc8 6: this
+    3:  get_var_ref_check 0: g
+    6:  get_arg0 0: t
+    7:  get_field post_type
+   12:  call1 1
+   13:  put_loc0 0: r
+   14:  push_atom_value ask
+   19:  get_loc0 0: r
+   20:  strict_eq
+   21:  if_false 284
+   26:  get_var_ref_check 0: g
+   29:  get_arg0 0: t
+   30:  get_field ask_id
+   35:  call1 1
+   36:  set_loc1 1: s
+   37:  if_false8 60
+   39:  get_loc8 6: this
+   41:  get_field _rcSeenAsks
+   46:  if_false8 60
+   48:  get_loc8 6: this
+   50:  get_field _rcSeenAsks
+   55:  get_loc1 1: s
+   56:  get_array_el
+   57:  if_false8 60
+   59:  return_undef
+   60:  get_loc1 1: s
+   61:  if_false8 165
+   63:  get_loc8 6: this
+   65:  get_field _rcSeenAsks
+   70:  dup
+   71:  if_true8 83
+   73:  drop
+   74:  get_loc8 6: this
+   76:  object
+   77:  insert2
+   78:  put_field _rcSeenAsks
+   83:  drop
+   84:  get_loc8 6: this
+   86:  get_field _rcSeenAsks
+   91:  set_loc2 2: c
+   92:  get_loc1 1: s
+   93:  to_propkey2
+   94:  get_var Date
+   99:  get_field2 now
+  104:  call_method 0
+  107:  put_array_el
+  108:  get_var Object
+  113:  get_field2 keys
+  118:  get_loc2 2: c
+  119:  call_method 1
+  122:  set_loc3 3: n
+  123:  get_length
+  124:  push_i8 50
+  126:  gt
+  127:  if_false8 165
+  129:  get_loc3 3: n
+  130:  get_field2 sort
+  135:  fclosure8 0: [bytecode <null>]
+  137:  call_method 1
+  140:  drop
+  141:  push_0 0
+  142:  put_loc8 4: a
+  144:  get_loc8 4: a
+  146:  get_loc3 3: n
+  147:  get_length
+  148:  push_i8 50
+  150:  sub
+  151:  lt
+  152:  if_false8 165
+  154:  get_loc2 2: c
+  155:  get_loc3 3: n
+  156:  get_loc8 4: a
+  158:  get_array_el
+  159:  delete
+  160:  drop
+  161:  inc_loc 4: a
+  163:  goto8 144
+  165:  push_atom_value AskUserQuestion
+  170:  get_var_ref_check 0: g
+  173:  get_arg0 0: t
+  174:  get_field tool_name
+  179:  call1 1
+  180:  strict_eq
+  181:  put_loc8 5: o
+  183:  get_var_ref_check 1: e
+  186:  get_loc8 6: this
+  188:  object
+  189:  get_loc8 5: o
+  191:  if_false8 200
+  193:  push_atom_value "\u00e2\u0097\u008f Claude \u00e5\u009c\u00a8\u00e6\u008f\u0090\u00e9\u0097\u00ae"
+  198:  goto8 205
+  200:  push_atom_value "\u00e2\u0097\u008f Claude \u00e8\u00af\u00b7\u00e6\u00b1\u0082\u00e6\u009d\u0083\u00e9\u0099\u0090"
+  205:  define_field title
+  210:  get_var_ref_check 0: g
+  213:  get_arg0 0: t
+  214:  get_field tool_name
+  219:  call1 1
+  220:  push_atom_value " \u00e7\u00ad\u0089\u00e5\u00be\u0085\u00e7\u00a1\u00ae\u00e8\u00ae\u00a4"
+  225:  add
+  226:  define_field desc
+  231:  get_var_ref2 2: i
+  232:  get_loc8 6: this
+  234:  call1 1
+  235:  define_field avatarUrl
+  240:  push_atom_value "#e0b04b"
+  245:  define_field color
+  250:  push_atom_value rccws
+  255:  define_field route
+  260:  push_atom_value rccws_
+  265:  get_var_ref_check 0: g
+  268:  get_arg0 0: t
+  269:  get_field session_id
+  274:  call1 1
+  275:  add
+  276:  define_field _mergeKey
+  281:  call2 2
+  282:  drop
+  283:  return_undef
+  284:  push_atom_value final
+  289:  get_loc0 0: r
+  290:  strict_eq
+  291:  dup
+  292:  if_false8 415
+  294:  drop
+  295:  get_var_ref_check 1: e
+  298:  get_loc8 6: this
+  300:  object
+  301:  push_atom_value "\u00e2\u0097\u008f Claude \u00e4\u00bb\u00bb\u00e5\u008a\u00a1\u00e5\u00ae\u008c\u00e6\u0088\u0090"
+  306:  define_field title
+  311:  get_var_ref_check 0: g
+  314:  get_arg0 0: t
+  315:  get_field text
+  320:  call1 1
+  321:  get_field2 replace
+  326:  push_const8 1: 1"\\s+"
+  328:  push_const8 2: 1"\u0001\u0001\u0000M\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u001c,\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u000c\u0000\n"
+  330:  regexp
+  331:  push_atom_value " "
+  336:  call_method 2
+  339:  get_field2 slice
+  344:  push_0 0
+  345:  push_i8 60
+  347:  call_method 2
+  350:  dup
+  351:  if_true8 359
+  353:  drop
+  354:  push_atom_value "\u00e6\u009c\u00ac\u00e8\u00bd\u00ae\u00e5\u00b7\u00b2\u00e7\u00bb\u0093\u00e6\u009d\u009f"
+  359:  define_field desc
+  364:  get_var_ref2 2: i
+  365:  get_loc8 6: this
+  367:  call1 1
+  368:  define_field avatarUrl
+  373:  push_atom_value "#d97757"
+  378:  define_field color
+  383:  push_atom_value rccws
+  388:  define_field route
+  393:  push_atom_value rccws_
+  398:  get_var_ref_check 0: g
+  401:  get_arg0 0: t
+  402:  get_field session_id
+  407:  call1 1
+  408:  add
+  409:  define_field _mergeKey
+  414:  call2 2
+  415:  drop
+  416:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t e
+  closure vars:
+    0: c local:loc2 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: c
+    1:  get_arg0 0: t
+    2:  get_array_el
+    3:  get_var_ref0 0: c
+    4:  get_arg1 1: e
+    5:  get_array_el
+    6:  sub
+    7:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: rccws-b9347bc0.js:1 source_len=0 */
+rccws-b9347bc0.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var r
+    2: var s
+    3: var this
+  closure vars:
+    0: g parent:loc12 const
+    1: x parent:loc37 var
+    2: E parent:loc36 var
+  stack_size: 8
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_var_ref_check 0: g
+    5:  get_arg0 0: t
+    6:  get_field post_type
+   11:  call1 1
+   12:  put_loc0 0: e
+   13:  get_loc3 3: this
+   14:  get_field _rcFgActive
+   19:  if_false8 140
+   21:  push_atom_value undefined
+   26:  get_var_undef $falcon
+   31:  typeof
+   32:  neq
+   33:  dup
+   34:  if_false8 72
+   36:  drop
+   37:  get_var $falcon
+   42:  get_field2 trigger
+   47:  push_atom_value rccws_bg_msg
+   52:  object
+   53:  push_atom_value frame
+   58:  define_field type
+   63:  get_arg0 0: t
+   64:  define_field frame
+   69:  call_method 2
+   72:  drop
+   73:  get_var_ref_check 0: g
+   76:  get_arg0 0: t
+   77:  get_field session_id
+   82:  call1 1
+   83:  put_loc1 1: r
+   84:  push_atom_value final
+   89:  get_loc0 0: e
+   90:  strict_neq
+   91:  dup
+   92:  if_false8 102
+   94:  drop
+   95:  push_atom_value ask
+  100:  get_loc0 0: e
+  101:  strict_neq
+  102:  dup
+  103:  if_true8 138
+  105:  drop
+  106:  get_loc1 1: r
+  107:  lnot
+  108:  dup
+  109:  if_true8 138
+  111:  drop
+  112:  get_loc1 1: r
+  113:  get_var_ref_check 0: g
+  116:  get_loc3 3: this
+  117:  get_field _rcFgActiveSid
+  122:  call1 1
+  123:  strict_eq
+  124:  dup
+  125:  if_true8 138
+  127:  drop
+  128:  get_loc3 3: this
+  129:  get_field2 _notifyRccwsEvent
+  134:  get_arg0 0: t
+  135:  call_method 1
+  138:  drop
+  139:  return_undef
+  140:  get_var_ref_check 0: g
+  143:  get_arg0 0: t
+  144:  get_field session_id
+  149:  call1 1
+  150:  put_loc2 2: s
+  151:  get_loc3 3: this
+  152:  get_field _rcLiveRec
+  157:  dup
+  158:  if_false8 206
+  160:  drop
+  161:  get_loc2 2: s
+  162:  dup
+  163:  if_false8 206
+  165:  drop
+  166:  get_loc3 3: this
+  167:  get_field $rcBgDbase
+  172:  dup
+  173:  if_false8 206
+  175:  drop
+  176:  get_var_ref1 1: x
+  177:  get_loc3 3: this
+  178:  get_field $rcBgDbase
+  183:  get_loc3 3: this
+  184:  get_field _rcLiveRec
+  189:  get_loc2 2: s
+  190:  get_loc0 0: e
+  191:  get_arg0 0: t
+  192:  call 5
+  195:  drop
+  196:  get_var_ref2 2: E
+  197:  get_loc3 3: this
+  198:  get_field $rcBgDbase
+  203:  get_loc0 0: e
+  204:  get_arg0 0: t
+  205:  call3 3
+  206:  drop
+  207:  push_atom_value delta
+  212:  get_loc0 0: e
+  213:  strict_neq
+  214:  if_false 477
+  219:  push_atom_value tool_activity
+  224:  get_loc0 0: e
+  225:  strict_neq
+  226:  if_false 477
+  231:  push_atom_value thinking
+  236:  get_loc0 0: e
+  237:  strict_neq
+  238:  if_false 477
+  243:  push_atom_value cc_msg
+  248:  get_loc0 0: e
+  249:  strict_neq
+  250:  if_false 477
+  255:  push_atom_value final
+  260:  get_loc0 0: e
+  261:  strict_eq
+  262:  if_false8 373
+  264:  get_loc3 3: this
+  265:  get_field2 rcBgUnread
+  270:  push_1 1
+  271:  add
+  272:  put_field rcBgUnread
+  277:  get_loc3 3: this
+  278:  get_field2 _markRccwsSess
+  283:  get_var_ref_check 0: g
+  286:  get_arg0 0: t
+  287:  get_field session_id
+  292:  call1 1
+  293:  object
+  294:  push_1 1
+  295:  lnot
+  296:  define_field running
+  301:  get_var_ref_check 0: g
+  304:  get_arg0 0: t
+  305:  get_field text
+  310:  call1 1
+  311:  get_field2 replace
+  316:  push_const8 0: 1"\\s+"
+  318:  push_const8 1: 1"\u0001\u0001\u0000M\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u001c,\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\n\u0000\u0009\u0000\u000d\u0000 \u0000 \u0000\u00a0\u0000\u00a0\u0000\u0080\u0016\u0080\u0016\u0000 \n ( ) / / _ _ \u00000\u00000\u00ff\u00fe\u00ff\u00fe\n\u000c\u0000\n"
+  320:  regexp
+  321:  push_atom_value " "
+  326:  call_method 2
+  329:  get_field2 slice
+  334:  push_0 0
+  335:  push_i8 60
+  337:  call_method 2
+  340:  dup
+  341:  if_true8 349
+  343:  drop
+  344:  push_atom_value "\u00e6\u009c\u00ac\u00e8\u00bd\u00ae\u00e5\u00b7\u00b2\u00e7\u00bb\u0093\u00e6\u009d\u009f"
+  349:  define_field lastText
+  354:  push_0 0
+  355:  lnot
+  356:  call_method 3
+  359:  drop
+  360:  get_loc3 3: this
+  361:  get_field2 _notifyRccwsEvent
+  366:  get_arg0 0: t
+  367:  call_method 1
+  370:  goto16 504
+  373:  push_atom_value turn_aborted
+  378:  get_loc0 0: e
+  379:  strict_eq
+  380:  if_false8 411
+  382:  get_loc3 3: this
+  383:  get_field2 _markRccwsSess
+  388:  get_var_ref_check 0: g
+  391:  get_arg0 0: t
+  392:  get_field session_id
+  397:  call1 1
+  398:  object
+  399:  push_1 1
+  400:  lnot
+  401:  define_field running
+  406:  call_method 2
+  409:  goto8 504
+  411:  push_atom_value ask
+  416:  get_loc0 0: e
+  417:  strict_eq
+  418:  dup
+  419:  if_false8 504
+  421:  drop
+  422:  get_loc3 3: this
+  423:  get_field2 rcBgUnread
+  428:  push_1 1
+  429:  add
+  430:  put_field rcBgUnread
+  435:  get_loc3 3: this
+  436:  get_field2 _markRccwsSess
+  441:  get_var_ref_check 0: g
+  444:  get_arg0 0: t
+  445:  get_field session_id
+  450:  call1 1
+  451:  object
+  452:  push_0 0
+  453:  lnot
+  454:  define_field running
+  459:  push_0 0
+  460:  lnot
+  461:  call_method 3
+  464:  drop
+  465:  get_loc3 3: this
+  466:  get_field2 _notifyRccwsEvent
+  471:  get_arg0 0: t
+  472:  call_method 1
+  475:  goto8 504
+  477:  get_loc3 3: this
+  478:  get_field2 _markRccwsSess
+  483:  get_var_ref_check 0: g
+  486:  get_arg0 0: t
+  487:  get_field session_id
+  492:  call1 1
+  493:  object
+  494:  push_0 0
+  495:  lnot
+  496:  define_field running
+  501:  call_method 2
+  504:  drop
+  505:  return_undef
+

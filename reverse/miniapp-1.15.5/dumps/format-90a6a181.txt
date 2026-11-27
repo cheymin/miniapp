@@ -1,0 +1,528 @@
+
+/* ===== function depth=0 ===== */
+/* debug: format-90a6a181.js:1 source_len=0 */
+format-90a6a181.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: t parent:loc0 const
+    1: e local:loc0 var
+    2: r local:loc1 var
+    3: n local:loc2 var
+    4: a local:loc3 var
+    5: i local:loc4 const
+  stack_size: 3
+  opcodes:
+    0:  fclosure8 0: [bytecode e]
+    2:  put_var_ref1 1: e
+    3:  fclosure8 1: [bytecode r]
+    5:  put_var_ref2 2: r
+    6:  fclosure8 2: [bytecode n]
+    8:  put_var_ref3 3: n
+    9:  fclosure8 3: [bytecode a]
+   11:  put_var_ref 4: a
+   14:  object
+   15:  object
+   16:  get_var_ref1 1: e
+   17:  define_field escapeShellDoubleQuoted
+   22:  get_var_ref2 2: r
+   23:  define_field safeText
+   28:  get_var_ref3 3: n
+   29:  define_field nextFrame
+   34:  get_var_ref 4: a
+   37:  define_field formatDateKey
+   42:  fclosure8 4: [bytecode <null>]
+   44:  set_name parseDateKey
+   49:  define_field parseDateKey
+   54:  fclosure8 5: [bytecode <null>]
+   56:  set_name getWeekText
+   61:  define_field getWeekText
+   66:  fclosure8 6: [bytecode <null>]
+   68:  set_name getEventValue
+   73:  define_field getEventValue
+   78:  fclosure8 7: [bytecode <null>]
+   80:  set_name normalizeOutput
+   85:  define_field normalizeOutput
+   90:  fclosure8 8: [bytecode <null>]
+   92:  set_name formatDateTime
+   97:  define_field formatDateTime
+  102:  fclosure8 9: [bytecode <null>]
+  104:  define_method initDbase,4
+  110:  fclosure8 10: [bytecode <null>]
+  112:  define_method startTickTimer,4
+  118:  fclosure8 11: [bytecode <null>]
+  120:  define_method stopTickTimer,4
+  126:  define_field methods
+  131:  put_var_ref 5: i
+  134:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: format-90a6a181.js:1 source_len=0 */
+format-90a6a181.js:1: function: e
+  mode: strict
+  args: t
+  stack_size: 4
+  opcodes:
+    0:  get_var String
+    5:  null
+    6:  get_arg0 0: t
+    7:  eq
+    8:  if_false8 13
+   10:  push_empty_string
+   11:  goto8 14
+   13:  get_arg0 0: t
+   14:  call1 1
+   15:  get_field2 replace
+   20:  push_const8 0: 1"\\\\"
+   22:  push_const8 1: 1"\u0001\u0001\u0000\u0013\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001\\\u0000\u000c\u0000\n"
+   24:  regexp
+   25:  push_atom_value "\\\\"
+   30:  call_method 2
+   33:  get_field2 replace
+   38:  push_const8 2: 1"\""
+   40:  push_const8 3: 1"\u0001\u0001\u0000\u0013\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001\"\u0000\u000c\u0000\n"
+   42:  regexp
+   43:  push_atom_value "\\\""
+   48:  call_method 2
+   51:  get_field2 replace
+   56:  push_const8 4: 1"\\$"
+   58:  push_const8 5: 1"\u0001\u0001\u0000\u0013\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001$\u0000\u000c\u0000\n"
+   60:  regexp
+   61:  push_atom_value "\\$"
+   66:  call_method 2
+   69:  get_field2 replace
+   74:  push_const8 6: 1"`"
+   76:  push_const8 7: 1"\u0001\u0001\u0000\u0013\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001`\u0000\u000c\u0000\n"
+   78:  regexp
+   79:  push_atom_value "\\`"
+   84:  tail_call_method 2
+
+
+/* ===== function depth=1 ===== */
+/* debug: format-90a6a181.js:1 source_len=0 */
+format-90a6a181.js:1: function: r
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  null
+    1:  get_arg0 0: t
+    2:  eq
+    3:  if_false8 7
+    5:  push_empty_string
+    6:  return
+    7:  push_atom_value string
+   12:  get_arg0 0: t
+   13:  typeof
+   14:  eq
+   15:  if_false8 19
+   17:  get_arg0 0: t
+   18:  return
+   19:  push_atom_value number
+   24:  get_arg0 0: t
+   25:  typeof
+   26:  eq
+   27:  dup
+   28:  if_true8 39
+   30:  drop
+   31:  push_atom_value boolean
+   36:  get_arg0 0: t
+   37:  typeof
+   38:  eq
+   39:  if_false8 49
+   41:  get_var String
+   46:  get_arg0 0: t
+   47:  call1 1
+   48:  return
+   49:  push_empty_string
+   50:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: format-90a6a181.js:1 source_len=0 */
+format-90a6a181.js:1: function: n
+  mode: strict
+  args: t
+  stack_size: 3
+  opcodes:
+    0:  get_var Promise
+    5:  dup
+    6:  fclosure8 0: [bytecode <null>]
+    8:  call_constructor 1
+   11:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: format-90a6a181.js:1 source_len=0 */
+format-90a6a181.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:arg0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var setTimeout
+    5:  fclosure8 0: [bytecode <null>]
+    7:  push_0 0
+    8:  call2 2
+    9:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: format-90a6a181.js:1 source_len=0 */
+format-90a6a181.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: e local:arg0 var
+    1: t parent:arg0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: e
+    1:  get_var_ref1 1: t
+    2:  call0 0
+    3:  call1 1
+    4:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: format-90a6a181.js:1 source_len=0 */
+format-90a6a181.js:1: function: a
+  mode: strict
+  args: t
+  stack_size: 5
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_field2 getFullYear
+    6:  call_method 0
+    9:  push_atom_value "-"
+   14:  add
+   15:  get_var String
+   20:  get_arg0 0: t
+   21:  get_field2 getMonth
+   26:  call_method 0
+   29:  push_1 1
+   30:  add
+   31:  call1 1
+   32:  get_field2 padStart
+   37:  push_2 2
+   38:  push_const8 0: 1"0"
+   40:  call_method 2
+   43:  add
+   44:  push_atom_value "-"
+   49:  add
+   50:  get_var String
+   55:  get_arg0 0: t
+   56:  get_field2 getDate
+   61:  call_method 0
+   64:  call1 1
+   65:  get_field2 padStart
+   70:  push_2 2
+   71:  push_const8 1: 1"0"
+   73:  call_method 2
+   76:  add
+   77:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: format-90a6a181.js:1 source_len=0 */
+format-90a6a181.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var r
+    2: var n
+    3: var a
+  stack_size: 5
+  opcodes:
+    0:  get_var String
+    5:  get_arg0 0: t
+    6:  dup
+    7:  if_true8 11
+    9:  drop
+   10:  push_empty_string
+   11:  call1 1
+   12:  get_field2 split
+   17:  push_atom_value "-"
+   22:  call_method 1
+   25:  put_loc0 0: e
+   26:  get_var parseInt
+   31:  get_loc0 0: e
+   32:  push_0 0
+   33:  get_array_el
+   34:  push_i8 10
+   36:  call2 2
+   37:  put_loc1 1: r
+   38:  get_var parseInt
+   43:  get_loc0 0: e
+   44:  push_1 1
+   45:  get_array_el
+   46:  push_i8 10
+   48:  call2 2
+   49:  put_loc2 2: n
+   50:  get_var parseInt
+   55:  get_loc0 0: e
+   56:  push_2 2
+   57:  get_array_el
+   58:  push_i8 10
+   60:  call2 2
+   61:  put_loc3 3: a
+   62:  get_var isNaN
+   67:  get_loc1 1: r
+   68:  call1 1
+   69:  dup
+   70:  if_true8 91
+   72:  drop
+   73:  get_var isNaN
+   78:  get_loc2 2: n
+   79:  call1 1
+   80:  dup
+   81:  if_true8 91
+   83:  drop
+   84:  get_var isNaN
+   89:  get_loc3 3: a
+   90:  call1 1
+   91:  if_false8 103
+   93:  get_var Date
+   98:  dup
+   99:  call_constructor 0
+  102:  return
+  103:  get_var Date
+  108:  dup
+  109:  get_loc1 1: r
+  110:  get_loc2 2: n
+  111:  push_1 1
+  112:  sub
+  113:  get_loc3 3: a
+  114:  call_constructor 3
+  117:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: format-90a6a181.js:1 source_len=0 */
+format-90a6a181.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 7
+  opcodes:
+    0:  push_atom_value "\u00e6\u0097\u00a5"
+    5:  push_atom_value "\u00e4\u00b8\u0080"
+   10:  push_atom_value "\u00e4\u00ba\u008c"
+   15:  push_atom_value "\u00e4\u00b8\u0089"
+   20:  push_atom_value "\u00e5\u009b\u009b"
+   25:  push_atom_value "\u00e4\u00ba\u0094"
+   30:  push_atom_value "\u00e5\u0085\u00ad"
+   35:  array_from 7
+   38:  get_arg0 0: t
+   39:  get_array_el
+   40:  dup
+   41:  if_true8 49
+   43:  drop
+   44:  push_atom_value "\u00e6\u0097\u00a5"
+   49:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: format-90a6a181.js:1 source_len=0 */
+format-90a6a181.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  push_atom_value number
+    5:  get_arg0 0: t
+    6:  typeof
+    7:  eq
+    8:  if_false8 12
+   10:  get_arg0 0: t
+   11:  return
+   12:  get_arg0 0: t
+   13:  if_false8 37
+   15:  push_atom_value number
+   20:  get_arg0 0: t
+   21:  get_field value
+   26:  typeof
+   27:  eq
+   28:  if_false8 37
+   30:  get_arg0 0: t
+   31:  get_field value
+   36:  return
+   37:  get_arg0 0: t
+   38:  if_false8 80
+   40:  get_arg0 0: t
+   41:  get_field detail
+   46:  if_false8 80
+   48:  push_atom_value number
+   53:  get_arg0 0: t
+   54:  get_field detail
+   59:  get_field value
+   64:  typeof
+   65:  eq
+   66:  if_false8 80
+   68:  get_arg0 0: t
+   69:  get_field detail
+   74:  get_field value
+   79:  return
+   80:  push_minus1 -1
+   81:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: format-90a6a181.js:1 source_len=0 */
+format-90a6a181.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  null
+    1:  get_arg0 0: t
+    2:  eq
+    3:  if_false8 7
+    5:  push_empty_string
+    6:  return
+    7:  push_atom_value object
+   12:  get_arg0 0: t
+   13:  typeof
+   14:  eq
+   15:  if_false8 39
+   17:  push_atom_value string
+   22:  get_arg0 0: t
+   23:  get_field output
+   28:  typeof
+   29:  eq
+   30:  if_false8 39
+   32:  get_arg0 0: t
+   33:  get_field output
+   38:  return
+   39:  get_var String
+   44:  get_arg0 0: t
+   45:  call1 1
+   46:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: format-90a6a181.js:1 source_len=0 */
+format-90a6a181.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: a parent:loc4 var
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: a
+    1:  get_arg0 0: t
+    2:  call1 1
+    3:  push_atom_value " "
+    8:  add
+    9:  get_var String
+   14:  get_arg0 0: t
+   15:  get_field2 getHours
+   20:  call_method 0
+   23:  call1 1
+   24:  get_field2 padStart
+   29:  push_2 2
+   30:  push_const8 0: 1"0"
+   32:  call_method 2
+   35:  add
+   36:  push_atom_value ":"
+   41:  add
+   42:  get_var String
+   47:  get_arg0 0: t
+   48:  get_field2 getMinutes
+   53:  call_method 0
+   56:  call1 1
+   57:  get_field2 padStart
+   62:  push_2 2
+   63:  push_const8 1: 1"0"
+   65:  call_method 2
+   68:  add
+   69:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: format-90a6a181.js:1 source_len=0 */
+format-90a6a181.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var e
+    1: catch t [level:3 next:-1]
+    2: var this
+  closure vars:
+    0: t parent:loc0 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  catch 27
+    7:  get_var_ref_check 0: t
+   10:  call0 0
+   11:  set_loc0 0: e
+   12:  dup
+   13:  if_false8 24
+   15:  drop
+   16:  get_loc2 2: this
+   17:  get_loc0 0: e
+   18:  insert2
+   19:  put_field $Dbase
+   24:  drop
+   25:  drop
+   26:  return_undef
+   27:  put_loc1 1: t
+   28:  catch 35
+   33:  drop
+   34:  return_undef
+   35:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: format-90a6a181.js:1 source_len=0 */
+format-90a6a181.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field tickTimer
+    8:  dup
+    9:  if_true8 33
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_var setInterval
+   18:  get_loc0 0: this
+   19:  get_field handleTick
+   24:  push_i8 50
+   26:  call2 2
+   27:  insert2
+   28:  put_field tickTimer
+   33:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: format-90a6a181.js:1 source_len=0 */
+format-90a6a181.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field tickTimer
+    8:  dup
+    9:  if_false8 33
+   11:  drop
+   12:  get_var clearInterval
+   17:  get_loc0 0: this
+   18:  get_field tickTimer
+   23:  call1 1
+   24:  drop
+   25:  get_loc0 0: this
+   26:  null
+   27:  insert2
+   28:  put_field tickTimer
+   33:  return_undef
+

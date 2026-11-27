@@ -1,0 +1,2206 @@
+
+/* ===== function depth=0 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: t parent:loc0 const
+    1: i parent:loc1 const
+    2: e parent:loc2 const
+    3: s parent:loc3 const
+    4: a parent:loc4 const
+    5: o parent:loc5 const
+    6: n parent:loc6 const
+    7: c parent:loc7 const
+    8: r parent:loc8 const
+    9: l parent:loc9 const
+   10: d parent:loc10 const
+   11: f parent:loc11 const
+   12: h parent:loc12 const
+   13: p parent:loc13 const
+   14: u parent:loc14 const
+   15: b parent:loc15 const
+   16: g parent:loc16 const
+   17: v parent:loc17 const
+   18: x local:loc0 var
+   19: T local:loc1 var
+   20: m local:loc2 const
+  stack_size: 7
+  opcodes:
+    0:  object
+    1:  push_atom_value qqbot_login
+    6:  define_field name
+   11:  fclosure8 0: [bytecode <null>]
+   13:  set_name data
+   18:  define_field data
+   23:  object
+   24:  fclosure8 1: [bytecode <null>]
+   26:  set_name passwordMask
+   31:  define_field passwordMask
+   36:  define_field computed
+   41:  fclosure8 2: [bytecode <null>]
+   43:  set_name mounted
+   48:  define_field mounted
+   53:  fclosure8 3: [bytecode <null>]
+   55:  set_name beforeDestroy
+   60:  define_field beforeDestroy
+   65:  object
+   66:  fclosure8 4: [bytecode <null>]
+   68:  set_name toast
+   73:  define_field toast
+   78:  fclosure8 5: [bytecode <null>]
+   80:  set_name logout
+   85:  define_field logout
+   90:  fclosure8 6: [bytecode <null>]
+   92:  set_name goBack
+   97:  define_field goBack
+  102:  fclosure8 7: [bytecode <null>]
+  104:  set_name goShop
+  109:  define_field goShop
+  114:  fclosure8 8: [bytecode <null>]
+  116:  set_name navTo
+  121:  define_field navTo
+  126:  fclosure8 9: [bytecode <null>]
+  128:  set_name client
+  133:  define_field client
+  138:  fclosure8 10: [bytecode <null>]
+  140:  set_name callKeyboard
+  145:  define_field callKeyboard
+  150:  fclosure8 11: [bytecode <null>]
+  152:  set_name editQq
+  157:  define_field editQq
+  162:  fclosure8 12: [bytecode <null>]
+  164:  set_name editPassword
+  169:  define_field editPassword
+  174:  fclosure8 13: [bytecode <null>]
+  176:  define_method start,4
+  182:  fclosure8 14: [bytecode <null>]
+  184:  define_method submit,4
+  190:  fclosure8 15: [bytecode <null>]
+  192:  define_method refreshDeviceToken,4
+  198:  fclosure8 16: [bytecode <null>]
+  200:  set_name finish
+  205:  define_field finish
+  210:  define_field methods
+  215:  put_var_ref 18: x
+  218:  fclosure8 17: [bytecode <null>]
+  220:  set_name T
+  225:  set_var_ref 19: T
+  228:  push_0 0
+  229:  lnot
+  230:  put_field _withStripped
+  235:  get_var_ref 18: x
+  238:  put_var_ref 20: m
+  241:  get_var_ref_check 20: m
+  244:  get_var_ref 19: T
+  247:  put_field render
+  252:  get_var_ref_check 20: m
+  255:  array_from 0
+  258:  put_field staticRenderFns
+  263:  get_var_ref_check 20: m
+  266:  push_0 0
+  267:  lnot
+  268:  put_field _compiled
+  273:  get_var_ref_check 20: m
+  276:  push_atom_value "data-v-6d1e2d30"
+  281:  put_field _scopeId
+  286:  get_var_ref_check 20: m
+  289:  object
+  290:  put_field themes
+  295:  get_var_ref_check 20: m
+  298:  get_var Object
+  303:  get_field2 assign
+  308:  object
+  309:  object
+  310:  object
+  311:  push_1 1
+  312:  define_field flex
+  317:  push_atom_value "#1c1c1e"
+  322:  define_field backgroundColor
+  327:  push_atom_value "16px"
+  332:  define_field paddingTop
+  337:  push_atom_value "20px"
+  342:  define_field paddingRight
+  347:  push_atom_value "16px"
+  352:  define_field paddingBottom
+  357:  push_atom_value "20px"
+  362:  define_field paddingLeft
+  367:  push_atom_value "#f3f4f6"
+  372:  define_field color
+  377:  define_field page
+  382:  object
+  383:  push_atom_value row
+  388:  define_field flexDirection
+  393:  push_atom_value center
+  398:  define_field alignItems
+  403:  push_atom_value "space-between"
+  408:  define_field justifyContent
+  413:  push_atom_value "44px"
+  418:  define_field height
+  423:  define_field top
+  428:  object
+  429:  push_atom_value row
+  434:  define_field flexDirection
+  439:  push_atom_value center
+  444:  define_field alignItems
+  449:  define_field "top-actions"
+  454:  object
+  455:  push_atom_value "#f3f4f6"
+  460:  define_field color
+  465:  push_atom_value "20px"
+  470:  define_field fontSize
+  475:  push_atom_value bold
+  480:  define_field fontWeight
+  485:  define_field title
+  490:  object
+  491:  push_atom_value "30px"
+  496:  define_field height
+  501:  push_atom_value "12px"
+  506:  define_field paddingLeft
+  511:  push_atom_value "12px"
+  516:  define_field paddingRight
+  521:  push_atom_value "8px"
+  526:  define_field borderRadius
+  531:  push_atom_value "#2c2c2e"
+  536:  define_field backgroundColor
+  541:  push_atom_value center
+  546:  define_field justifyContent
+  551:  push_atom_value center
+  556:  define_field alignItems
+  561:  define_field "top-btn"
+  566:  object
+  567:  push_atom_value "#f3f4f6"
+  572:  define_field color
+  577:  push_atom_value "12px"
+  582:  define_field fontSize
+  587:  define_field "top-btn-txt"
+  592:  object
+  593:  push_1 1
+  594:  define_field flex
+  599:  push_atom_value "10px"
+  604:  define_field paddingTop
+  609:  define_field body
+  614:  object
+  615:  push_atom_value "100%"
+  620:  define_field width
+  625:  define_field "form-card"
+  630:  object
+  631:  push_atom_value "46px"
+  636:  define_field height
+  641:  push_atom_value "10px"
+  646:  define_field marginBottom
+  651:  push_atom_value "14px"
+  656:  define_field paddingLeft
+  661:  push_atom_value "14px"
+  666:  define_field paddingRight
+  671:  push_atom_value "10px"
+  676:  define_field borderRadius
+  681:  push_atom_value "#2c2c2e"
+  686:  define_field backgroundColor
+  691:  push_atom_value row
+  696:  define_field flexDirection
+  701:  push_atom_value center
+  706:  define_field alignItems
+  711:  push_atom_value "space-between"
+  716:  define_field justifyContent
+  721:  define_field field
+  726:  object
+  727:  push_atom_value "#c7c7cc"
+  732:  define_field color
+  737:  push_atom_value "12px"
+  742:  define_field fontSize
+  747:  define_field "field-label"
+  752:  object
+  753:  push_atom_value "#f3f4f6"
+  758:  define_field color
+  763:  push_atom_value "15px"
+  768:  define_field fontSize
+  773:  define_field "field-value"
+  778:  object
+  779:  push_atom_value "#636366"
+  784:  define_field color
+  789:  push_atom_value "14px"
+  794:  define_field fontSize
+  799:  define_field "field-placeholder"
+  804:  object
+  805:  push_atom_value "8px"
+  810:  define_field marginTop
+  815:  push_atom_value "#f3f4f6"
+  820:  define_field color
+  825:  push_atom_value "14px"
+  830:  define_field fontSize
+  835:  push_atom_value "20px"
+  840:  define_field lineHeight
+  845:  define_field "info-text"
+  850:  object
+  851:  push_atom_value "6px"
+  856:  define_field marginTop
+  861:  push_atom_value "#ff9f0a"
+  866:  define_field color
+  871:  push_atom_value "11px"
+  876:  define_field fontSize
+  881:  push_atom_value "16px"
+  886:  define_field lineHeight
+  891:  define_field "info-warn"
+  896:  object
+  897:  push_atom_value row
+  902:  define_field flexDirection
+  907:  push_atom_value "14px"
+  912:  define_field marginTop
+  917:  define_field row
+  922:  object
+  923:  push_atom_value "34px"
+  928:  define_field height
+  933:  push_atom_value "8px"
+  938:  define_field marginRight
+  943:  push_atom_value "14px"
+  948:  define_field paddingLeft
+  953:  push_atom_value "14px"
+  958:  define_field paddingRight
+  963:  push_atom_value "9px"
+  968:  define_field borderRadius
+  973:  push_atom_value "#3a3a3c"
+  978:  define_field backgroundColor
+  983:  push_atom_value center
+  988:  define_field justifyContent
+  993:  push_atom_value center
+  998:  define_field alignItems
+ 1003:  define_field btn
+ 1008:  object
+ 1009:  push_atom_value "#0a84ff"
+ 1014:  define_field backgroundColor
+ 1019:  define_field "btn-primary"
+ 1024:  object
+ 1025:  push_atom_value "#ffffff"
+ 1030:  define_field color
+ 1035:  push_atom_value "13px"
+ 1040:  define_field fontSize
+ 1045:  push_const8 18: 1"600"
+ 1047:  define_field fontWeight
+ 1052:  define_field "btn-txt"
+ 1057:  object
+ 1058:  push_atom_value "12px"
+ 1063:  define_field marginTop
+ 1068:  push_atom_value "#c7c7cc"
+ 1073:  define_field color
+ 1078:  push_atom_value "11px"
+ 1083:  define_field fontSize
+ 1088:  push_atom_value "16px"
+ 1093:  define_field lineHeight
+ 1098:  define_field "info-hint"
+ 1103:  object
+ 1104:  push_const8 19: 0.75
+ 1106:  define_field opacity
+ 1111:  define_field "btn-press"
+ 1116:  object
+ 1117:  push_const8 20: 0.65
+ 1119:  define_field opacity
+ 1124:  define_field "top-btn-press"
+ 1129:  object
+ 1130:  push_const8 21: 0.75
+ 1132:  define_field opacity
+ 1137:  define_field "field-press"
+ 1142:  object
+ 1143:  push_atom_value "#f2f2f7"
+ 1148:  define_field backgroundColor
+ 1153:  push_atom_value "#3a3a3c"
+ 1158:  define_field color
+ 1163:  define_field "page-l"
+ 1168:  object
+ 1169:  push_atom_value "#3a3a3c"
+ 1174:  define_field color
+ 1179:  define_field "title-l"
+ 1184:  object
+ 1185:  push_atom_value "#ffffff"
+ 1190:  define_field backgroundColor
+ 1195:  define_field "top-btn-l"
+ 1200:  object
+ 1201:  push_atom_value "#3a3a3c"
+ 1206:  define_field color
+ 1211:  define_field "top-btn-txt-l"
+ 1216:  object
+ 1217:  push_atom_value "#ffffff"
+ 1222:  define_field backgroundColor
+ 1227:  define_field "field-l"
+ 1232:  object
+ 1233:  push_atom_value "#636366"
+ 1238:  define_field color
+ 1243:  define_field "field-label-l"
+ 1248:  object
+ 1249:  push_atom_value "#3a3a3c"
+ 1254:  define_field color
+ 1259:  define_field "field-value-l"
+ 1264:  object
+ 1265:  push_atom_value "#aeaeb2"
+ 1270:  define_field color
+ 1275:  define_field "field-placeholder-l"
+ 1280:  object
+ 1281:  push_atom_value "#3a3a3c"
+ 1286:  define_field color
+ 1291:  define_field "info-text-l"
+ 1296:  object
+ 1297:  push_atom_value "#ff9500"
+ 1302:  define_field color
+ 1307:  define_field "info-warn-l"
+ 1312:  object
+ 1313:  push_atom_value "#ffffff"
+ 1318:  define_field backgroundColor
+ 1323:  define_field "btn-l"
+ 1328:  object
+ 1329:  push_atom_value "#007aff"
+ 1334:  define_field backgroundColor
+ 1339:  define_field "btn-primary-l"
+ 1344:  object
+ 1345:  push_atom_value "#1c1c1e"
+ 1350:  define_field color
+ 1355:  define_field "btn-txt-l"
+ 1360:  object
+ 1361:  push_atom_value "#636366"
+ 1366:  define_field color
+ 1371:  define_field "info-hint-l"
+ 1376:  call_method 2
+ 1379:  put_field style
+ 1384:  get_var_ref_check 20: m
+ 1387:  push_atom_value "src/pages/apps/qqbot/login.vue"
+ 1392:  put_field __file
+ 1397:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  stack_size: 2
+  opcodes:
+    0:  object
+    1:  null
+    2:  define_field Fetch
+    7:  null
+    8:  define_field Dbase
+   13:  null
+   14:  define_field Shell
+   19:  null
+   20:  define_field Modal
+   25:  push_empty_string
+   26:  define_field baseUrl
+   31:  push_empty_string
+   32:  define_field deviceId
+   37:  push_empty_string
+   38:  define_field credential
+   43:  null
+   44:  define_field identity
+   49:  push_empty_string
+   50:  define_field qq
+   55:  push_empty_string
+   56:  define_field password
+   61:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e5\u0087\u0086\u00e5\u00a4\u0087\u00e7\u0099\u00bb\u00e5\u00bd\u0095\u00e2\u0080\u00a6"
+   66:  define_field statusText
+   71:  push_empty_string
+   72:  define_field notice
+   77:  push_1 1
+   78:  lnot
+   79:  define_field busy
+   84:  push_1 1
+   85:  lnot
+   86:  define_field opened
+   91:  null
+   92:  define_field startupTimer
+   97:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var i
+    2: var e
+    3: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_var String
+    7:  get_loc3 3: this
+    8:  get_field password
+   13:  dup
+   14:  if_true8 18
+   16:  drop
+   17:  push_empty_string
+   18:  call1 1
+   19:  get_length
+   20:  put_loc0 0: t
+   21:  push_empty_string
+   22:  put_loc1 1: i
+   23:  push_0 0
+   24:  put_loc2 2: e
+   25:  get_loc2 2: e
+   26:  get_loc0 0: t
+   27:  lt
+   28:  if_false8 42
+   30:  push_atom_value "\u00e2\u0080\u00a2"
+   35:  add_loc 1: i
+   37:  push_1 1
+   38:  add_loc 2: e
+   40:  goto8 25
+   42:  get_loc1 1: i
+   43:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  put_loc0 0: t
+    4:  get_loc1 1: this
+    5:  get_var setTimeout
+   10:  fclosure8 0: [bytecode <null>]
+   12:  push_i16 300
+   15:  call2 2
+   16:  put_field startupTimer
+   21:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  null
+    2:  put_field startupTimer
+    7:  get_var_ref0 0: t
+    8:  get_field opened
+   13:  dup
+   14:  if_true8 26
+   16:  drop
+   17:  get_var_ref0 0: t
+   18:  get_field2 start
+   23:  call_method 0
+   26:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field startupTimer
+    8:  dup
+    9:  if_false8 33
+   11:  drop
+   12:  get_var clearTimeout
+   17:  get_loc0 0: this
+   18:  get_field startupTimer
+   23:  call1 1
+   24:  drop
+   25:  get_loc0 0: this
+   26:  null
+   27:  insert2
+   28:  put_field startupTimer
+   33:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  closure vars:
+    0: i parent:loc1 const
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_var_ref_check 0: i
+    5:  get_loc0 0: this
+    6:  get_field Modal
+   11:  get_arg0 0: t
+   12:  call2 2
+   13:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: e parent:loc2 const
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_var_ref_check 0: e
+    5:  get_loc0 0: this
+    6:  call1 1
+    7:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 navTo
+    8:  push_atom_value apps_qqbot_entry
+   13:  call_method 1
+   16:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 navTo
+    8:  push_atom_value apps_qqbot_shop
+   13:  call_method 1
+   16:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 5
+  opcodes:
+    0:  push_atom_value undefined
+    5:  get_var_undef $falcon
+   10:  typeof
+   11:  neq
+   12:  dup
+   13:  if_false8 71
+   15:  drop
+   16:  get_var $falcon
+   21:  dup
+   22:  if_false8 71
+   24:  drop
+   25:  push_atom_value function
+   30:  get_var $falcon
+   35:  get_field navTo
+   40:  typeof
+   41:  eq
+   42:  dup
+   43:  if_false8 71
+   45:  drop
+   46:  get_var $falcon
+   51:  get_field2 navTo
+   56:  get_arg0 0: t
+   57:  object
+   58:  push_atom_value apps_qqbot_login
+   63:  define_field from
+   68:  call_method 2
+   71:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: s parent:loc3 const
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_var_ref_check 0: s
+    5:  object
+    6:  get_loc0 0: this
+    7:  get_field Fetch
+   12:  define_field fetchModule
+   17:  get_loc0 0: this
+   18:  get_field baseUrl
+   23:  define_field baseUrl
+   28:  tail_call 1
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  args: i e s
+  closure vars:
+    0: t parent:loc0 const
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref_check 0: t
+    3:  get_arg0 0: i
+    4:  dup
+    5:  if_true8 9
+    7:  drop
+    8:  push_empty_string
+    9:  get_arg1 1: e
+   10:  dup
+   11:  if_true8 15
+   13:  drop
+   14:  object
+   15:  call2 2
+   16:  get_field2 then
+   21:  fclosure8 0: [bytecode <null>]
+   23:  call_method 1
+   26:  get_field2 catch
+   31:  fclosure8 1: [bytecode <null>]
+   33:  call_method 1
+   36:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: s local:arg2 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: s
+    1:  get_arg0 0: t
+    2:  call1 1
+    3:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: s local:arg2 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: s
+    1:  null
+    2:  call1 1
+    3:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  put_loc0 0: t
+    4:  get_loc1 1: this
+    5:  get_field2 callKeyboard
+   10:  get_loc1 1: this
+   11:  get_field qq
+   16:  object
+   17:  object
+   18:  push_atom_value number
+   23:  define_field inputMode
+   28:  define_field loadOptions
+   33:  fclosure8 0: [bytecode <null>]
+   35:  call_method 3
+   38:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  args: i
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 5
+  opcodes:
+    0:  null
+    1:  get_arg0 0: i
+    2:  neq
+    3:  dup
+    4:  if_false8 46
+    6:  drop
+    7:  get_var_ref0 0: t
+    8:  get_var String
+   13:  get_arg0 0: i
+   14:  call1 1
+   15:  get_field2 replace
+   20:  push_const8 0: 1"\\D"
+   22:  push_const8 1: 1"\u0001\u0001\u0000\u001b\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0015\u0002\u0000\u0000\u0000/\u0000:\u0000\u00ff\u00ff\u000c\u0000\n"
+   24:  regexp
+   25:  push_empty_string
+   26:  call_method 2
+   29:  get_field2 slice
+   34:  push_0 0
+   35:  push_i8 12
+   37:  call_method 2
+   40:  insert2
+   41:  put_field qq
+   46:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  put_loc0 0: t
+    4:  get_loc1 1: this
+    5:  get_field2 callKeyboard
+   10:  push_empty_string
+   11:  object
+   12:  object
+   13:  push_atom_value password
+   18:  define_field inputMode
+   23:  define_field loadOptions
+   28:  fclosure8 0: [bytecode <null>]
+   30:  call_method 3
+   33:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  args: i
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  null
+    1:  get_arg0 0: i
+    2:  neq
+    3:  dup
+    4:  if_false8 21
+    6:  drop
+    7:  get_var_ref0 0: t
+    8:  get_var String
+   13:  get_arg0 0: i
+   14:  call1 1
+   15:  insert2
+   16:  put_field password
+   21:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var i
+    2: var this
+  closure vars:
+    0: a parent:loc4 const
+    1: o parent:loc5 const
+    2: n parent:loc6 const
+    3: c parent:loc7 const
+    4: r parent:loc8 const
+    5: l parent:loc9 const
+    6: d parent:loc10 const
+    7: f parent:loc11 const
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_var_ref_check 0: a
+    5:  push_atom_value undefined
+   10:  get_var_undef $falcon
+   15:  typeof
+   16:  neq
+   17:  dup
+   18:  if_false8 26
+   20:  drop
+   21:  get_var $falcon
+   26:  dup
+   27:  if_true8 31
+   29:  drop
+   30:  get_loc2 2: this
+   31:  call1 1
+   32:  set_loc0 0: t
+   33:  if_false 336
+   38:  get_loc0 0: t
+   39:  get_field Fetch
+   44:  if_false 336
+   49:  get_loc0 0: t
+   50:  get_field hydrate
+   55:  dup
+   56:  if_false8 88
+   58:  drop
+   59:  get_loc0 0: t
+   60:  get_field2 hydrate
+   65:  get_var_ref_check 1: o
+   68:  get_var_ref_check 2: n
+   71:  push_atom_value ob_account_session
+   76:  push_atom_value ob_ws_config
+   81:  array_from 4
+   84:  call_method 1
+   87:  await
+   88:  drop
+   89:  get_var_ref_check 3: c
+   92:  get_loc0 0: t
+   93:  get_field Dbase
+   98:  call1 1
+   99:  if_false 323
+  104:  get_loc2 2: this
+  105:  get_loc0 0: t
+  106:  get_field Fetch
+  111:  put_field Fetch
+  116:  get_loc2 2: this
+  117:  get_loc0 0: t
+  118:  get_field Dbase
+  123:  put_field Dbase
+  128:  get_loc2 2: this
+  129:  get_loc0 0: t
+  130:  get_field Shell
+  135:  put_field Shell
+  140:  get_loc2 2: this
+  141:  get_loc0 0: t
+  142:  get_field Modal
+  147:  put_field Modal
+  152:  get_loc2 2: this
+  153:  get_var_ref_check 4: r
+  156:  get_loc2 2: this
+  157:  get_field Dbase
+  162:  call1 1
+  163:  put_field baseUrl
+  168:  get_var_ref_check 5: l
+  171:  get_loc2 2: this
+  172:  get_field Dbase
+  177:  get_var_ref_check 1: o
+  180:  call2 2
+  181:  dup
+  182:  if_true8 186
+  184:  drop
+  185:  object
+  186:  put_loc1 1: i
+  187:  get_loc2 2: this
+  188:  get_var_ref_check 6: d
+  191:  get_loc2 2: this
+  192:  get_field Dbase
+  197:  get_var_ref_check 7: f
+  200:  get_loc2 2: this
+  201:  get_field Shell
+  206:  call1 1
+  207:  get_loc2 2: this
+  208:  get_field Shell
+  213:  call3 3
+  214:  put_field identity
+  219:  get_loc2 2: this
+  220:  get_var String
+  225:  get_loc1 1: i
+  226:  get_field deviceId
+  231:  dup
+  232:  if_true8 236
+  234:  drop
+  235:  push_empty_string
+  236:  call1 1
+  237:  put_field deviceId
+  242:  get_loc2 2: this
+  243:  get_var String
+  248:  get_var_ref_check 5: l
+  251:  get_loc2 2: this
+  252:  get_field Dbase
+  257:  get_var_ref_check 2: n
+  260:  call2 2
+  261:  dup
+  262:  if_true8 266
+  264:  drop
+  265:  push_empty_string
+  266:  call1 1
+  267:  put_field credential
+  272:  get_loc2 2: this
+  273:  get_var String
+  278:  get_loc1 1: i
+  279:  get_field deviceId
+  284:  dup
+  285:  if_true8 289
+  287:  drop
+  288:  push_empty_string
+  289:  call1 1
+  290:  put_field deviceId
+  295:  get_loc2 2: this
+  296:  get_loc2 2: this
+  297:  get_field deviceId
+  302:  if_false8 311
+  304:  push_atom_value "\u00e8\u00bf\u0099\u00e5\u008f\u00b0\u00e8\u00ae\u00be\u00e5\u00a4\u0087\u00e5\u00b7\u00b2\u00e7\u0099\u00bb\u00e8\u00ae\u00b0\u00ef\u00bc\u008c\u00e8\u00af\u00b7\u00e8\u00be\u0093\u00e5\u0085\u00a5\u00e8\u00a6\u0081\u00e7\u00bb\u0091\u00e5\u00ae\u009a\u00e7\u009a\u0084 QQ \u00e5\u008f\u00b7"
+  309:  goto8 316
+  311:  push_atom_value "\u00e8\u00af\u00b7\u00e8\u00be\u0093\u00e5\u0085\u00a5\u00e8\u00a6\u0081\u00e7\u00bb\u0091\u00e5\u00ae\u009a\u00e7\u009a\u0084 QQ \u00e5\u008f\u00b7\u00ef\u00bc\u0088\u00e4\u00bc\u009a\u00e5\u0090\u008c\u00e6\u0097\u00b6\u00e7\u0099\u00bb\u00e8\u00ae\u00b0\u00e8\u00bf\u0099\u00e5\u008f\u00b0\u00e8\u00ae\u00be\u00e5\u00a4\u0087"
+  316:  put_field statusText
+  321:  goto8 347
+  323:  get_loc2 2: this
+  324:  push_atom_value "\u00e5\u00ae\u00bf\u00e4\u00b8\u00bb\u00e5\u00ad\u0098\u00e5\u0082\u00a8\u00e6\u00a8\u00a1\u00e5\u009d\u0097\u00e4\u00b8\u008d\u00e5\u008f\u00af\u00e7\u0094\u00a8\u00ef\u00bc\u008c\u00e6\u0097\u00a0\u00e6\u00b3\u0095\u00e4\u00bf\u009d\u00e5\u00ad\u0098\u00e7\u0099\u00bb\u00e5\u00bd\u0095\u00e7\u008a\u00b6\u00e6\u0080\u0081"
+  329:  put_field statusText
+  334:  goto8 347
+  336:  get_loc2 2: this
+  337:  push_atom_value "\u00e5\u00ae\u00bf\u00e4\u00b8\u00bb\u00e7\u00bd\u0091\u00e7\u00bb\u009c\u00e6\u00a8\u00a1\u00e5\u009d\u0097\u00e4\u00b8\u008d\u00e5\u008f\u00af\u00e7\u0094\u00a8"
+  342:  put_field statusText
+  347:  undefined
+  348:  return_async
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var i
+    2: var e
+    3: var s
+    4: var a
+    5: var c
+    6: var r
+    7: var u
+    8: var x
+    9: var T
+   10: catch t [level:15 next:-1]
+   11: var m
+   12: var _
+   13: catch t [level:22 next:-1]
+   14: var S
+   15: var C
+   16: catch t [level:26 next:-1]
+   17: var q
+   18: catch t [level:30 next:-1]
+   19: var D
+   20: var y
+   21: catch t [level:33 next:-1]
+   22: var Q
+   23: var this
+  closure vars:
+    0: d parent:loc10 const
+    1: f parent:loc11 const
+    2: l parent:loc9 const
+    3: o parent:loc5 const
+    4: n parent:loc6 const
+    5: h parent:loc12 const
+    6: p parent:loc13 const
+    7: b parent:loc15 const
+    8: g parent:loc16 const
+    9: v parent:loc17 const
+  stack_size: 8
+  opcodes:
+    0:  push_this
+    1:  put_loc8 23: this
+    3:  get_loc8 23: this
+    5:  get_field busy
+   10:  lnot
+   11:  if_false 1690
+   16:  get_var String
+   21:  get_loc8 23: this
+   23:  get_field qq
+   28:  dup
+   29:  if_true8 33
+   31:  drop
+   32:  push_empty_string
+   33:  call1 1
+   34:  get_field2 replace
+   39:  push_const8 0: 1"\\D"
+   41:  push_const8 1: 1"\u0001\u0001\u0000\u001b\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0015\u0002\u0000\u0000\u0000/\u0000:\u0000\u00ff\u00ff\u000c\u0000\n"
+   43:  regexp
+   44:  push_empty_string
+   45:  call_method 2
+   48:  put_loc0 0: t
+   49:  push_const8 2: 1"^\\d{5,12}$"
+   51:  push_const8 3: 1"\u0000\u0001\u0000+\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u001c\u0008\u0000\u0000\u0000\u0005\u0000\u0000\u0000\u000c\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0015\u0001\u00000\u00009\u0000\n\u0006\u000c\u0000\n"
+   53:  regexp
+   54:  get_field2 test
+   59:  get_loc0 0: t
+   60:  call_method 1
+   63:  if_false 1678
+   68:  get_var String
+   73:  get_loc8 23: this
+   75:  get_field password
+   80:  dup
+   81:  if_true8 85
+   83:  drop
+   84:  push_empty_string
+   85:  call1 1
+   86:  set_loc1 1: i
+   87:  if_false8 119
+   89:  get_loc1 1: i
+   90:  get_length
+   91:  push_6 6
+   92:  lt
+   93:  dup
+   94:  if_true8 102
+   96:  drop
+   97:  get_loc1 1: i
+   98:  get_length
+   99:  push_i8 64
+  101:  gt
+  102:  if_false8 119
+  104:  get_loc8 23: this
+  106:  push_atom_value "\u00e5\u00af\u0086\u00e7\u00a0\u0081\u00e9\u0095\u00bf\u00e5\u00ba\u00a6\u00e9\u009c\u0080\u00e4\u00b8\u00ba 6-64 \u00e4\u00bd\u008d"
+  111:  put_field statusText
+  116:  goto16 1690
+  119:  get_loc8 23: this
+  121:  get_field Dbase
+  126:  if_false 1664
+  131:  get_loc8 23: this
+  133:  get_field Fetch
+  138:  if_false 1664
+  143:  get_loc8 23: this
+  145:  push_0 0
+  146:  lnot
+  147:  put_field busy
+  152:  get_loc8 23: this
+  154:  push_empty_string
+  155:  put_field notice
+  160:  catch 1435
+  165:  get_loc8 23: this
+  167:  get_field identity
+  172:  dup
+  173:  if_true8 205
+  175:  drop
+  176:  get_var_ref_check 0: d
+  179:  get_loc8 23: this
+  181:  get_field Dbase
+  186:  get_var_ref_check 1: f
+  189:  get_loc8 23: this
+  191:  get_field Shell
+  196:  call1 1
+  197:  get_loc8 23: this
+  199:  get_field Shell
+  204:  call3 3
+  205:  put_loc2 2: e
+  206:  get_loc8 23: this
+  208:  get_loc2 2: e
+  209:  put_field identity
+  214:  get_loc8 23: this
+  216:  get_field2 client
+  221:  call_method 0
+  224:  put_loc3 3: s
+  225:  get_var_ref_check 2: l
+  228:  get_loc8 23: this
+  230:  get_field Dbase
+  235:  get_var_ref_check 3: o
+  238:  call2 2
+  239:  dup
+  240:  if_true8 244
+  242:  drop
+  243:  object
+  244:  put_loc8 4: a
+  246:  get_var String
+  251:  get_loc8 4: a
+  253:  get_field deviceId
+  258:  dup
+  259:  if_true8 263
+  261:  drop
+  262:  push_empty_string
+  263:  call1 1
+  264:  put_loc8 5: c
+  266:  get_var String
+  271:  get_loc8 4: a
+  273:  get_field bootstrapToken
+  278:  dup
+  279:  if_true8 283
+  281:  drop
+  282:  push_empty_string
+  283:  call1 1
+  284:  put_loc8 6: r
+  286:  get_loc8 5: c
+  288:  lnot
+  289:  dup
+  290:  if_true8 296
+  292:  drop
+  293:  get_loc8 6: r
+  295:  lnot
+  296:  if_false 499
+  301:  get_loc8 23: this
+  303:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e7\u0099\u00bb\u00e8\u00ae\u00b0\u00e8\u00bf\u0099\u00e5\u008f\u00b0\u00e8\u00ae\u00be\u00e5\u00a4\u0087\u00e2\u0080\u00a6"
+  308:  put_field statusText
+  313:  get_loc3 3: s
+  314:  get_field2 registerDevice
+  319:  object
+  320:  get_var String
+  325:  get_loc2 2: e
+  326:  get_field serial
+  331:  dup
+  332:  if_true8 336
+  334:  drop
+  335:  push_empty_string
+  336:  call1 1
+  337:  define_field serial
+  342:  get_var String
+  347:  get_loc2 2: e
+  348:  get_field connectionId
+  353:  dup
+  354:  if_true8 358
+  356:  drop
+  357:  push_empty_string
+  358:  call1 1
+  359:  define_field connectionId
+  364:  push_atom_value loliapp
+  369:  define_field appVersion
+  374:  push_atom_value loliapp
+  379:  define_field platform
+  384:  call_method 1
+  387:  await
+  388:  put_loc8 7: u
+  390:  get_var String
+  395:  get_loc8 7: u
+  397:  dup
+  398:  if_false8 424
+  400:  drop
+  401:  get_loc8 7: u
+  403:  get_field device
+  408:  dup
+  409:  if_false8 424
+  411:  drop
+  412:  get_loc8 7: u
+  414:  get_field device
+  419:  get_field id
+  424:  dup
+  425:  if_true8 429
+  427:  drop
+  428:  push_empty_string
+  429:  call1 1
+  430:  put_loc8 5: c
+  432:  get_var String
+  437:  get_loc8 7: u
+  439:  dup
+  440:  if_false8 450
+  442:  drop
+  443:  get_loc8 7: u
+  445:  get_field bootstrapToken
+  450:  dup
+  451:  if_true8 455
+  453:  drop
+  454:  push_empty_string
+  455:  call1 1
+  456:  put_loc8 6: r
+  458:  get_loc8 5: c
+  460:  lnot
+  461:  dup
+  462:  if_true8 468
+  464:  drop
+  465:  get_loc8 6: r
+  467:  lnot
+  468:  if_false8 490
+  470:  get_loc8 23: this
+  472:  push_atom_value "\u00e8\u00ae\u00be\u00e5\u00a4\u0087\u00e7\u0099\u00bb\u00e8\u00ae\u00b0\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5\u00ef\u00bc\u008c\u00e8\u00af\u00b7\u00e9\u0087\u008d\u00e8\u00af\u0095"
+  477:  put_field statusText
+  482:  undefined
+  483:  nip
+  484:  gosub 1652
+  489:  return_async
+  490:  get_loc8 23: this
+  492:  get_loc8 5: c
+  494:  put_field deviceId
+  499:  get_loc8 23: this
+  501:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e8\u008e\u00b7\u00e5\u008f\u0096\u00e8\u00ae\u00be\u00e5\u00a4\u0087\u00e5\u0087\u00ad\u00e6\u008d\u00ae\u00e2\u0080\u00a6"
+  506:  put_field statusText
+  511:  get_var String
+  516:  get_var_ref_check 2: l
+  519:  get_loc8 23: this
+  521:  get_field Dbase
+  526:  get_var_ref_check 4: n
+  529:  call2 2
+  530:  dup
+  531:  if_true8 535
+  533:  drop
+  534:  push_empty_string
+  535:  call1 1
+  536:  set_loc8 8: x
+  538:  lnot
+  539:  if_false8 605
+  541:  catch 591
+  546:  get_loc3 3: s
+  547:  get_field2 issueDeviceToken
+  552:  get_loc8 5: c
+  554:  get_loc8 6: r
+  556:  call_method 2
+  559:  await
+  560:  put_loc8 9: T
+  562:  get_var String
+  567:  get_loc8 9: T
+  569:  dup
+  570:  if_false8 580
+  572:  drop
+  573:  get_loc8 9: T
+  575:  get_field token
+  580:  dup
+  581:  if_true8 585
+  583:  drop
+  584:  push_empty_string
+  585:  call1 1
+  586:  put_loc8 8: x
+  588:  drop
+  589:  goto8 605
+  591:  put_loc8 10: t
+  593:  catch 604
+  598:  push_empty_string
+  599:  put_loc8 8: x
+  601:  drop
+  602:  goto8 605
+  604:  throw
+  605:  get_loc8 23: this
+  607:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e7\u00bb\u0091\u00e5\u00ae\u009a QQ \u00e5\u008f\u00b7\u00e2\u0080\u00a6"
+  612:  put_field statusText
+  617:  get_loc3 3: s
+  618:  get_field2 bindAccountQq
+  623:  object
+  624:  get_loc0 0: t
+  625:  define_field qqUin
+  630:  call_method 1
+  633:  await
+  634:  set_loc8 11: m
+  636:  dup
+  637:  if_false8 647
+  639:  drop
+  640:  get_loc8 11: m
+  642:  get_field account
+  647:  dup
+  648:  if_true8 652
+  650:  drop
+  651:  object
+  652:  put_loc8 12: _
+  654:  get_var String
+  659:  get_loc8 12: _
+  661:  get_field qqUin
+  666:  dup
+  667:  if_true8 671
+  669:  drop
+  670:  push_empty_string
+  671:  call1 1
+  672:  get_loc0 0: t
+  673:  strict_neq
+  674:  if_false8 696
+  676:  get_loc8 23: this
+  678:  push_atom_value "\u00e6\u009c\u008d\u00e5\u008a\u00a1\u00e7\u00ab\u00af\u00e6\u00b2\u00a1\u00e6\u009c\u0089\u00e6\u008e\u00a5\u00e5\u008f\u0097\u00e8\u00bf\u0099\u00e4\u00b8\u00aa QQ \u00e5\u008f\u00b7\u00ef\u00bc\u008c\u00e8\u00af\u00b7\u00e9\u0087\u008d\u00e8\u00af\u0095"
+  683:  put_field statusText
+  688:  undefined
+  689:  nip
+  690:  gosub 1652
+  695:  return_async
+  696:  get_loc1 1: i
+  697:  if_false8 795
+  699:  get_loc8 23: this
+  701:  push_atom_value "\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e4\u00bf\u009d\u00e5\u00ad\u0098\u00e7\u00bd\u0091\u00e7\u00ab\u0099\u00e5\u00af\u0086\u00e7\u00a0\u0081\u00e2\u0080\u00a6"
+  706:  put_field statusText
+  711:  catch 743
+  716:  get_loc3 3: s
+  717:  get_field2 saveCredentials
+  722:  object
+  723:  get_loc0 0: t
+  724:  define_field qqUin
+  729:  get_loc1 1: i
+  730:  define_field password
+  735:  call_method 1
+  738:  await
+  739:  drop
+  740:  drop
+  741:  goto8 795
+  743:  put_loc8 13: t
+  745:  catch 794
+  750:  get_loc8 23: this
+  752:  push_atom_value "\u00e7\u00bd\u0091\u00e7\u00ab\u0099\u00e5\u00af\u0086\u00e7\u00a0\u0081\u00e6\u00b2\u00a1\u00e4\u00bf\u009d\u00e5\u00ad\u0098\u00e6\u0088\u0090\u00e5\u008a\u009f\u00ef\u00bc\u0088"
+  757:  get_loc8 13: t
+  759:  dup
+  760:  if_false8 770
+  762:  drop
+  763:  get_loc8 13: t
+  765:  get_field message
+  770:  dup
+  771:  if_true8 779
+  773:  drop
+  774:  push_atom_value "\u00e8\u00af\u00b7\u00e9\u0087\u008d\u00e8\u00af\u0095"
+  779:  add
+  780:  push_atom_value "\u00ef\u00bc\u0089\u00ef\u00bc\u008c\u00e5\u0085\u00b6\u00e5\u00ae\u0083\u00e6\u00ad\u00a5\u00e9\u00aa\u00a4\u00e5\u00b7\u00b2\u00e5\u00ae\u008c\u00e6\u0088\u0090\u00e3\u0080\u0082"
+  785:  add
+  786:  put_field notice
+  791:  drop
+  792:  goto8 795
+  794:  throw
+  795:  object
+  796:  object
+  797:  get_loc8 5: c
+  799:  define_field id
+  804:  define_field device
+  809:  get_loc8 6: r
+  811:  define_field bootstrapToken
+  816:  get_loc8 8: x
+  818:  define_field deviceToken
+  823:  get_loc8 12: _
+  825:  define_field account
+  830:  put_loc8 14: S
+  832:  get_var_ref_check 5: h
+  835:  get_loc8 23: this
+  837:  get_field Dbase
+  842:  get_loc8 14: S
+  844:  get_loc2 2: e
+  845:  get_loc8 23: this
+  847:  get_field baseUrl
+  852:  call 4
+  855:  put_loc8 15: C
+  857:  catch 884
+  862:  get_var_ref_check 6: p
+  865:  get_loc8 23: this
+  867:  get_field Shell
+  872:  get_loc8 23: this
+  874:  get_field Dbase
+  879:  call2 2
+  880:  drop
+  881:  drop
+  882:  goto8 895
+  884:  put_loc8 16: t
+  886:  catch 894
+  891:  drop
+  892:  goto8 895
+  894:  throw
+  895:  push_1 1
+  896:  lnot
+  897:  get_loc8 15: C
+  899:  get_field valid
+  904:  strict_eq
+  905:  dup
+  906:  if_true8 946
+  908:  drop
+  909:  get_loc8 15: C
+  911:  get_field deviceId
+  916:  lnot
+  917:  dup
+  918:  if_true8 946
+  920:  drop
+  921:  get_loc8 15: C
+  923:  get_field account
+  928:  get_field qqUin
+  933:  lnot
+  934:  dup
+  935:  if_true8 946
+  937:  drop
+  938:  get_loc8 15: C
+  940:  get_field sessionToken
+  945:  lnot
+  946:  if_false8 990
+  948:  get_loc8 23: this
+  950:  push_atom_value LOCAL_STORAGE_UNAVAILABLE
+  955:  get_loc8 15: C
+  957:  get_field errorCode
+  962:  strict_eq
+  963:  if_false8 972
+  965:  push_atom_value "\u00e5\u00ae\u00bf\u00e4\u00b8\u00bb\u00e5\u00ad\u0098\u00e5\u0082\u00a8\u00e6\u00a8\u00a1\u00e5\u009d\u0097\u00e4\u00b8\u008d\u00e5\u008f\u00af\u00e7\u0094\u00a8\u00ef\u00bc\u008c\u00e6\u0097\u00a0\u00e6\u00b3\u0095\u00e4\u00bf\u009d\u00e5\u00ad\u0098\u00e7\u0099\u00bb\u00e5\u00bd\u0095\u00e7\u008a\u00b6\u00e6\u0080\u0081"
+  970:  goto8 977
+  972:  push_atom_value "\u00e7\u0099\u00bb\u00e5\u00bd\u0095\u00e8\u00bf\u0094\u00e5\u009b\u009e\u00e4\u00bf\u00a1\u00e6\u0081\u00af\u00e4\u00b8\u008d\u00e5\u00ae\u008c\u00e6\u0095\u00b4\u00ef\u00bc\u008c\u00e8\u00af\u00b7\u00e9\u0087\u008d\u00e8\u00af\u0095"
+  977:  put_field statusText
+  982:  undefined
+  983:  nip
+  984:  gosub 1652
+  989:  return_async
+  990:  get_loc8 23: this
+  992:  get_field Dbase
+  997:  dup
+  998:  if_false8 1040
+ 1000:  drop
+ 1001:  push_atom_value function
+ 1006:  get_loc8 23: this
+ 1008:  get_field Dbase
+ 1013:  get_field flush
+ 1018:  typeof
+ 1019:  eq
+ 1020:  dup
+ 1021:  if_false8 1040
+ 1023:  drop
+ 1024:  get_loc8 23: this
+ 1026:  get_field Dbase
+ 1031:  get_field2 flush
+ 1036:  call_method 0
+ 1039:  await
+ 1040:  drop
+ 1041:  get_var String
+ 1046:  get_loc8 15: C
+ 1048:  get_field account
+ 1053:  get_field qqUin
+ 1058:  dup
+ 1059:  if_true8 1063
+ 1061:  drop
+ 1062:  push_empty_string
+ 1063:  call1 1
+ 1064:  put_loc8 17: q
+ 1066:  push_1 1
+ 1067:  lnot
+ 1068:  put_loc8 7: u
+ 1070:  catch 1214
+ 1075:  get_var_ref_check 7: b
+ 1078:  get_loc8 23: this
+ 1080:  get_field Dbase
+ 1085:  object
+ 1086:  get_loc8 17: q
+ 1088:  define_field qqUin
+ 1093:  get_var String
+ 1098:  get_loc8 15: C
+ 1100:  get_field account
+ 1105:  get_field id
+ 1110:  dup
+ 1111:  if_true8 1115
+ 1113:  drop
+ 1114:  push_empty_string
+ 1115:  call1 1
+ 1116:  define_field accountId
+ 1121:  get_var String
+ 1126:  get_loc8 15: C
+ 1128:  get_field sessionToken
+ 1133:  dup
+ 1134:  if_true8 1138
+ 1136:  drop
+ 1137:  push_empty_string
+ 1138:  call1 1
+ 1139:  define_field sessionToken
+ 1144:  get_var String
+ 1149:  get_loc8 15: C
+ 1151:  get_field account
+ 1156:  get_field nickname
+ 1161:  dup
+ 1162:  if_true8 1166
+ 1164:  drop
+ 1165:  push_empty_string
+ 1166:  call1 1
+ 1167:  define_field nickname
+ 1172:  call2 2
+ 1173:  drop
+ 1174:  get_var_ref_check 8: g
+ 1177:  get_loc8 23: this
+ 1179:  get_field Dbase
+ 1184:  get_loc8 17: q
+ 1186:  call2 2
+ 1187:  drop
+ 1188:  get_var_ref_check 9: v
+ 1191:  get_loc8 23: this
+ 1193:  get_field Dbase
+ 1198:  call1 1
+ 1199:  get_field2 some
+ 1204:  fclosure8 4: [bytecode <null>]
+ 1206:  call_method 1
+ 1209:  put_loc8 7: u
+ 1211:  drop
+ 1212:  goto8 1229
+ 1214:  put_loc8 18: t
+ 1216:  catch 1228
+ 1221:  push_1 1
+ 1222:  lnot
+ 1223:  put_loc8 7: u
+ 1225:  drop
+ 1226:  goto8 1229
+ 1228:  throw
+ 1229:  get_loc8 7: u
+ 1231:  dup
+ 1232:  if_true8 1248
+ 1234:  drop
+ 1235:  get_loc8 23: this
+ 1237:  push_atom_value "\u00e6\u009c\u00ac\u00e6\u009c\u00ba\u00e8\u00b4\u00a6\u00e5\u008f\u00b7\u00e8\u00a1\u00a8\u00e5\u0086\u0099\u00e5\u0085\u00a5\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5\u00ef\u00bc\u009a\u00e8\u00bf\u0099\u00e6\u00ac\u00a1\u00e7\u0099\u00bb\u00e5\u00bd\u0095\u00e4\u00b8\u008d\u00e4\u00bc\u009a\u00e4\u00b8\u008e\u00e5\u0085\u00b6\u00e5\u00ae\u0083 "
+ 1242:  insert2
+ 1243:  put_field notice
+ 1248:  drop
+ 1249:  get_loc8 23: this
+ 1251:  get_loc8 15: C
+ 1253:  get_field deviceId
+ 1258:  put_field deviceId
+ 1263:  get_loc8 23: this
+ 1265:  get_loc8 15: C
+ 1267:  get_field deviceToken
+ 1272:  dup
+ 1273:  if_true8 1283
+ 1275:  drop
+ 1276:  get_loc8 23: this
+ 1278:  get_field credential
+ 1283:  put_field credential
+ 1288:  get_loc8 15: C
+ 1290:  get_field deviceToken
+ 1295:  dup
+ 1296:  if_false8 1310
+ 1298:  drop
+ 1299:  get_loc8 23: this
+ 1301:  get_field2 refreshDeviceToken
+ 1306:  call_method 0
+ 1309:  await
+ 1310:  drop
+ 1311:  get_loc8 14: S
+ 1313:  dup
+ 1314:  if_false8 1324
+ 1316:  drop
+ 1317:  get_loc8 14: S
+ 1319:  get_field subscription
+ 1324:  dup
+ 1325:  if_true8 1329
+ 1327:  drop
+ 1328:  null
+ 1329:  put_loc8 19: D
+ 1331:  get_loc8 14: S
+ 1333:  dup
+ 1334:  if_false8 1344
+ 1336:  drop
+ 1337:  get_loc8 14: S
+ 1339:  get_field warnings
+ 1344:  dup
+ 1345:  if_true8 1351
+ 1347:  drop
+ 1348:  array_from 0
+ 1351:  put_loc8 20: y
+ 1353:  get_loc8 23: this
+ 1355:  get_loc8 19: D
+ 1357:  if_false8 1375
+ 1359:  get_loc8 19: D
+ 1361:  get_field authorized
+ 1366:  if_false8 1375
+ 1368:  push_atom_value "\u00e7\u0099\u00bb\u00e5\u00bd\u0095\u00e6\u0088\u0090\u00e5\u008a\u009f\u00ef\u00bc\u008c\u00e4\u00bc\u009a\u00e5\u0091\u0098\u00e6\u009c\u0089\u00e6\u0095\u0088\u00ef\u00bc\u008c\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e8\u00bf\u009b\u00e5\u0085\u00a5\u00e4\u00b8\u008b\u00e4\u00b8\u0080\u00e6\u00ad\u00a5\u00e2\u0080\u00a6"
+ 1373:  goto8 1380
+ 1375:  push_atom_value "\u00e7\u0099\u00bb\u00e5\u00bd\u0095\u00e6\u0088\u0090\u00e5\u008a\u009f\u00ef\u00bc\u008c\u00e6\u00ad\u00a3\u00e5\u009c\u00a8\u00e8\u00bf\u009b\u00e5\u0085\u00a5\u00e4\u00b8\u008b\u00e4\u00b8\u0080\u00e6\u00ad\u00a5\u00e2\u0080\u00a6"
+ 1380:  put_field statusText
+ 1385:  get_loc8 23: this
+ 1387:  get_loc8 20: y
+ 1389:  get_length
+ 1390:  if_false8 1399
+ 1392:  push_atom_value "\u00e8\u00bf\u0099\u00e4\u00b8\u00aa QQ \u00e5\u00b7\u00b2\u00e5\u009c\u00a8\u00e5\u008f\u00a6\u00e4\u00b8\u0080\u00e5\u008f\u00b0\u00e8\u00ae\u00be\u00e5\u00a4\u0087\u00e4\u00b8\u008a\u00e7\u0099\u00bb\u00e5\u00bd\u0095\u00ef\u00bc\u009a\u00e4\u00bc\u009a\u00e5\u0091\u0098\u00e5\u0085\u00b1\u00e7\u0094\u00a8\u00ef\u00bc\u008c"
+ 1397:  goto8 1400
+ 1399:  push_empty_string
+ 1400:  put_field notice
+ 1405:  get_loc8 23: this
+ 1407:  push_empty_string
+ 1408:  put_field password
+ 1413:  get_loc8 23: this
+ 1415:  get_field2 finish
+ 1420:  call_method 0
+ 1423:  drop
+ 1424:  drop
+ 1425:  undefined
+ 1426:  gosub 1652
+ 1431:  drop
+ 1432:  goto16 1690
+ 1435:  put_loc8 21: t
+ 1437:  catch 1646
+ 1442:  get_var String
+ 1447:  get_loc8 21: t
+ 1449:  dup
+ 1450:  if_false8 1460
+ 1452:  drop
+ 1453:  get_loc8 21: t
+ 1455:  get_field code
+ 1460:  dup
+ 1461:  if_true8 1465
+ 1463:  drop
+ 1464:  push_empty_string
+ 1465:  call1 1
+ 1466:  put_loc8 22: Q
+ 1468:  get_loc8 23: this
+ 1470:  push_atom_value INVALID_DEVICE_SERIAL
+ 1475:  get_loc8 22: Q
+ 1477:  strict_eq
+ 1478:  if_false8 1488
+ 1480:  push_atom_value "\u00e8\u00bf\u0099\u00e5\u008f\u00b0\u00e8\u00ae\u00be\u00e5\u00a4\u0087\u00e7\u009a\u0084\u00e5\u00ba\u008f\u00e5\u0088\u0097\u00e5\u008f\u00b7\u00e8\u00af\u00bb\u00e4\u00b8\u008d\u00e5\u0088\u00b0\u00ef\u00bc\u008c\u00e6\u0097\u00a0\u00e6\u00b3\u0095\u00e7\u0099\u00bb\u00e8\u00ae\u00b0\u00e8\u00ae\u00be\u00e5\u00a4\u0087"
+ 1485:  goto16 1631
+ 1488:  push_atom_value INVALID_CONNECTION_ID
+ 1493:  get_loc8 22: Q
+ 1495:  strict_eq
+ 1496:  if_false8 1506
+ 1498:  push_atom_value "\u00e8\u00ae\u00be\u00e5\u00a4\u0087\u00e8\u00bf\u009e\u00e6\u008e\u00a5\u00e6\u00a0\u0087\u00e8\u00af\u0086\u00e6\u0097\u00a0\u00e6\u0095\u0088\u00ef\u00bc\u008c\u00e8\u00af\u00b7\u00e9\u0080\u0080\u00e5\u0087\u00ba\u00e9\u0087\u008d\u00e8\u00bf\u009b\u00e9\u0087\u008d\u00e8\u00af\u0095"
+ 1503:  goto16 1631
+ 1506:  push_atom_value QQ_NUMBER_INVALID
+ 1511:  get_loc8 22: Q
+ 1513:  strict_eq
+ 1514:  if_false8 1523
+ 1516:  push_atom_value "QQ\u00e5\u008f\u00b7\u00e9\u009c\u0080\u00e4\u00b8\u00ba 5-12 \u00e4\u00bd\u008d\u00e6\u0095\u00b0\u00e5\u00ad\u0097"
+ 1521:  goto8 1631
+ 1523:  push_atom_value ACCOUNT_DISABLED
+ 1528:  get_loc8 22: Q
+ 1530:  strict_eq
+ 1531:  if_false8 1540
+ 1533:  push_atom_value "\u00e8\u00bf\u0099\u00e4\u00b8\u00aa\u00e8\u00b4\u00a6\u00e5\u008f\u00b7\u00e5\u00b7\u00b2\u00e8\u00a2\u00ab\u00e7\u00a6\u0081\u00e7\u0094\u00a8\u00ef\u00bc\u008c\u00e8\u00af\u00b7\u00e8\u0081\u0094\u00e7\u00b3\u00bb\u00e7\u00ae\u00a1\u00e7\u0090\u0086\u00e5\u0091\u0098"
+ 1538:  goto8 1631
+ 1540:  push_atom_value DEVICE_QQ_MISMATCH
+ 1545:  get_loc8 22: Q
+ 1547:  strict_eq
+ 1548:  if_false8 1557
+ 1550:  push_atom_value "\u00e8\u00bf\u0099\u00e5\u008f\u00b0\u00e8\u00ae\u00be\u00e5\u00a4\u0087\u00e5\u00b7\u00b2\u00e7\u00bb\u0091\u00e5\u00ae\u009a\u00e5\u0085\u00b6\u00e4\u00bb\u0096 QQ\u00ef\u00bc\u008c\u00e8\u00af\u00b7\u00e4\u00bd\u00bf\u00e7\u0094\u00a8\u00e5\u008e\u009f\u00e7\u00bb\u0091\u00e5\u00ae\u009a QQ"
+ 1555:  goto8 1631
+ 1557:  push_atom_value ACCOUNT_SESSION_INVALID
+ 1562:  get_loc8 22: Q
+ 1564:  strict_eq
+ 1565:  dup
+ 1566:  if_true8 1577
+ 1568:  drop
+ 1569:  push_atom_value ACCOUNT_REQUIRED
+ 1574:  get_loc8 22: Q
+ 1576:  strict_eq
+ 1577:  if_false8 1586
+ 1579:  push_atom_value "\u00e7\u0099\u00bb\u00e5\u00bd\u0095\u00e7\u008a\u00b6\u00e6\u0080\u0081\u00e5\u00bc\u0082\u00e5\u00b8\u00b8\u00ef\u00bc\u008c\u00e8\u00af\u00b7\u00e9\u0087\u008d\u00e8\u00af\u0095"
+ 1584:  goto8 1631
+ 1586:  push_atom_value HTTP_404
+ 1591:  get_loc8 22: Q
+ 1593:  strict_eq
+ 1594:  if_false8 1603
+ 1596:  push_atom_value "\u00e6\u009c\u008d\u00e5\u008a\u00a1\u00e7\u00ab\u00af\u00e6\u008e\u00a5\u00e5\u008f\u00a3\u00e5\u00b7\u00b2\u00e5\u008d\u0087\u00e7\u00ba\u00a7\u00ef\u00bc\u008c\u00e8\u00af\u00b7\u00e6\u009b\u00b4\u00e6\u0096\u00b0\u00e5\u00ba\u0094\u00e7\u0094\u00a8\u00e5\u0090\u008e\u00e5\u0086\u008d\u00e8\u00af\u0095"
+ 1601:  goto8 1631
+ 1603:  push_atom_value "\u00e7\u00bb\u0091\u00e5\u00ae\u009a\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5\u00ef\u00bc\u009a"
+ 1608:  get_loc8 21: t
+ 1610:  dup
+ 1611:  if_false8 1621
+ 1613:  drop
+ 1614:  get_loc8 21: t
+ 1616:  get_field message
+ 1621:  dup
+ 1622:  if_true8 1630
+ 1624:  drop
+ 1625:  push_atom_value "\u00e8\u00af\u00b7\u00e6\u00a3\u0080\u00e6\u009f\u00a5\u00e7\u00bd\u0091\u00e7\u00bb\u009c\u00e5\u0090\u008e\u00e9\u0087\u008d\u00e8\u00af\u0095"
+ 1630:  add
+ 1631:  put_field statusText
+ 1636:  drop
+ 1637:  undefined
+ 1638:  gosub 1652
+ 1643:  drop
+ 1644:  goto8 1690
+ 1646:  gosub 1652
+ 1651:  throw
+ 1652:  get_loc8 23: this
+ 1654:  push_1 1
+ 1655:  lnot
+ 1656:  put_field busy
+ 1661:  ret
+ 1662:  goto8 1690
+ 1664:  get_loc8 23: this
+ 1666:  push_atom_value "\u00e5\u00ae\u00bf\u00e4\u00b8\u00bb\u00e6\u00a8\u00a1\u00e5\u009d\u0097\u00e6\u009c\u00aa\u00e5\u00b0\u00b1\u00e7\u00bb\u00aa\u00ef\u00bc\u008c\u00e8\u00af\u00b7\u00e7\u00a8\u008d\u00e5\u0090\u008e\u00e9\u0087\u008d\u00e8\u00af\u0095"
+ 1671:  put_field statusText
+ 1676:  goto8 1690
+ 1678:  get_loc8 23: this
+ 1680:  push_atom_value "\u00e8\u00af\u00b7\u00e8\u00be\u0093\u00e5\u0085\u00a5 5-12 \u00e4\u00bd\u008d\u00e6\u0095\u00b0\u00e5\u00ad\u0097\u00e7\u009a\u0084 QQ \u00e5\u008f\u00b7"
+ 1685:  put_field statusText
+ 1690:  undefined
+ 1691:  return_async
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: q local:loc17 var
+  stack_size: 2
+  opcodes:
+    0:  get_var String
+    5:  get_arg0 0: t
+    6:  get_field qqUin
+   11:  call1 1
+   12:  get_var_ref0 0: q
+   13:  strict_eq
+   14:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var i
+    2: var e
+    3: catch t [level:5 next:-1]
+    4: var this
+  closure vars:
+    0: l parent:loc9 const
+    1: o parent:loc5 const
+    2: s parent:loc3 const
+    3: u parent:loc14 const
+    4: n parent:loc6 const
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc8 4: this
+    3:  get_var_ref_check 0: l
+    6:  get_loc8 4: this
+    8:  get_field Dbase
+   13:  get_var_ref_check 1: o
+   16:  call2 2
+   17:  dup
+   18:  if_true8 22
+   20:  drop
+   21:  object
+   22:  put_loc0 0: t
+   23:  get_var String
+   28:  get_loc0 0: t
+   29:  get_field bootstrapToken
+   34:  dup
+   35:  if_true8 39
+   37:  drop
+   38:  push_empty_string
+   39:  call1 1
+   40:  set_loc1 1: i
+   41:  lnot
+   42:  if_false8 46
+   44:  push_empty_string
+   45:  return_async
+   46:  catch 153
+   51:  get_var_ref_check 2: s
+   54:  object
+   55:  get_loc8 4: this
+   57:  get_field Fetch
+   62:  define_field fetchModule
+   67:  get_loc8 4: this
+   69:  get_field baseUrl
+   74:  define_field baseUrl
+   79:  call1 1
+   80:  get_field2 issueDeviceToken
+   85:  get_loc8 4: this
+   87:  get_field deviceId
+   92:  get_loc1 1: i
+   93:  call_method 2
+   96:  await
+   97:  set_loc2 2: e
+   98:  if_false8 150
+  100:  get_loc2 2: e
+  101:  get_field token
+  106:  if_false8 150
+  108:  get_var_ref_check 3: u
+  111:  get_loc8 4: this
+  113:  get_field Dbase
+  118:  get_var_ref_check 4: n
+  121:  get_loc2 2: e
+  122:  get_field token
+  127:  call3 3
+  128:  drop
+  129:  get_loc8 4: this
+  131:  get_loc2 2: e
+  132:  get_field token
+  137:  put_field credential
+  142:  get_loc2 2: e
+  143:  get_field token
+  148:  nip
+  149:  return_async
+  150:  drop
+  151:  goto8 163
+  153:  put_loc3 3: t
+  154:  catch 162
+  159:  drop
+  160:  goto8 163
+  162:  throw
+  163:  push_empty_string
+  164:  return_async
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  put_loc0 0: t
+    4:  get_loc1 1: this
+    5:  get_field opened
+   10:  dup
+   11:  if_true8 33
+   13:  drop
+   14:  get_loc1 1: this
+   15:  push_0 0
+   16:  lnot
+   17:  put_field opened
+   22:  get_var setTimeout
+   27:  fclosure8 0: [bytecode <null>]
+   29:  push_i16 600
+   32:  call2 2
+   33:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 navTo
+    6:  push_atom_value apps_qqbot_entry
+   11:  call_method 1
+   14:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_qqbot_login.js:1 source_len=0 */
+apps_qqbot_login.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var i
+    2: var e
+    3: var this
+  stack_size: 26
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  set_loc0 0: t
+    4:  get_field $createElement
+    9:  put_loc1 1: i
+   10:  get_loc0 0: t
+   11:  get_field _self
+   16:  get_field _c
+   21:  dup
+   22:  if_true8 26
+   24:  drop
+   25:  get_loc1 1: i
+   26:  set_loc2 2: e
+   27:  push_atom_value div
+   32:  object
+   33:  push_atom_value page
+   38:  array_from 1
+   41:  define_field staticClass
+   46:  get_loc2 2: e
+   47:  push_atom_value div
+   52:  object
+   53:  push_atom_value top
+   58:  array_from 1
+   61:  define_field staticClass
+   66:  get_loc2 2: e
+   67:  push_atom_value text
+   72:  object
+   73:  push_atom_value title
+   78:  array_from 1
+   81:  define_field staticClass
+   86:  get_loc0 0: t
+   87:  get_field2 _v
+   92:  push_atom_value "\u00e7\u0099\u00bb\u00e5\u00bd\u0095\u00e8\u00b4\u00a6\u00e5\u008f\u00b7"
+   97:  call_method 1
+  100:  array_from 1
+  103:  call3 3
+  104:  get_loc2 2: e
+  105:  push_atom_value div
+  110:  object
+  111:  push_atom_value "top-actions"
+  116:  array_from 1
+  119:  define_field staticClass
+  124:  get_loc2 2: e
+  125:  push_atom_value div
+  130:  object
+  131:  push_atom_value "top-btn"
+  136:  array_from 1
+  139:  define_field staticClass
+  144:  object
+  145:  get_loc0 0: t
+  146:  get_field logout
+  151:  define_field click
+  156:  define_field on
+  161:  get_loc2 2: e
+  162:  push_atom_value text
+  167:  object
+  168:  push_atom_value "top-btn-txt"
+  173:  array_from 1
+  176:  define_field staticClass
+  181:  get_loc0 0: t
+  182:  get_field2 _v
+  187:  push_atom_value "\u00e9\u0080\u0080\u00e5\u0087\u00ba\u00e7\u0099\u00bb\u00e5\u00bd\u0095"
+  192:  call_method 1
+  195:  array_from 1
+  198:  call3 3
+  199:  array_from 1
+  202:  call3 3
+  203:  get_loc2 2: e
+  204:  push_atom_value div
+  209:  object
+  210:  push_atom_value "top-btn"
+  215:  array_from 1
+  218:  define_field staticClass
+  223:  object
+  224:  get_loc0 0: t
+  225:  get_field goBack
+  230:  define_field click
+  235:  define_field on
+  240:  get_loc2 2: e
+  241:  push_atom_value text
+  246:  object
+  247:  push_atom_value "top-btn-txt"
+  252:  array_from 1
+  255:  define_field staticClass
+  260:  get_loc0 0: t
+  261:  get_field2 _v
+  266:  push_atom_value "\u00e7\u00a8\u008d\u00e5\u0090\u008e"
+  271:  call_method 1
+  274:  array_from 1
+  277:  call3 3
+  278:  array_from 1
+  281:  call3 3
+  282:  array_from 2
+  285:  call3 3
+  286:  array_from 2
+  289:  call3 3
+  290:  get_loc2 2: e
+  291:  push_atom_value div
+  296:  object
+  297:  push_atom_value body
+  302:  array_from 1
+  305:  define_field staticClass
+  310:  get_loc2 2: e
+  311:  push_atom_value div
+  316:  object
+  317:  push_atom_value "form-card"
+  322:  array_from 1
+  325:  define_field staticClass
+  330:  get_loc2 2: e
+  331:  push_atom_value div
+  336:  object
+  337:  push_atom_value field
+  342:  array_from 1
+  345:  define_field staticClass
+  350:  object
+  351:  get_loc0 0: t
+  352:  get_field editQq
+  357:  define_field click
+  362:  define_field on
+  367:  get_loc2 2: e
+  368:  push_atom_value text
+  373:  object
+  374:  push_atom_value "field-label"
+  379:  array_from 1
+  382:  define_field staticClass
+  387:  get_loc0 0: t
+  388:  get_field2 _v
+  393:  push_atom_value "QQ\u00e5\u008f\u00b7"
+  398:  call_method 1
+  401:  array_from 1
+  404:  call3 3
+  405:  get_loc2 2: e
+  406:  push_atom_value text
+  411:  object
+  412:  get_loc0 0: t
+  413:  get_field qq
+  418:  if_false8 427
+  420:  push_atom_value "field-value"
+  425:  goto8 432
+  427:  push_atom_value "field-placeholder"
+  432:  define_field class
+  437:  get_loc0 0: t
+  438:  get_field2 _v
+  443:  get_loc0 0: t
+  444:  get_field2 _s
+  449:  get_loc0 0: t
+  450:  get_field qq
+  455:  dup
+  456:  if_true8 464
+  458:  drop
+  459:  push_atom_value "\u00e7\u0082\u00b9\u00e5\u0087\u00bb\u00e8\u00be\u0093\u00e5\u0085\u00a5 QQ \u00e5\u008f\u00b7"
+  464:  call_method 1
+  467:  call_method 1
+  470:  array_from 1
+  473:  call3 3
+  474:  array_from 2
+  477:  call3 3
+  478:  get_loc2 2: e
+  479:  push_atom_value div
+  484:  object
+  485:  push_atom_value field
+  490:  array_from 1
+  493:  define_field staticClass
+  498:  object
+  499:  get_loc0 0: t
+  500:  get_field editPassword
+  505:  define_field click
+  510:  define_field on
+  515:  get_loc2 2: e
+  516:  push_atom_value text
+  521:  object
+  522:  push_atom_value "field-label"
+  527:  array_from 1
+  530:  define_field staticClass
+  535:  get_loc0 0: t
+  536:  get_field2 _v
+  541:  push_atom_value "\u00e7\u00bd\u0091\u00e7\u00ab\u0099\u00e5\u00af\u0086\u00e7\u00a0\u0081\u00ef\u00bc\u0088\u00e5\u008f\u00af\u00e9\u0080\u0089\u00ef\u00bc\u0089"
+  546:  call_method 1
+  549:  array_from 1
+  552:  call3 3
+  553:  get_loc2 2: e
+  554:  push_atom_value text
+  559:  object
+  560:  get_loc0 0: t
+  561:  get_field password
+  566:  if_false8 575
+  568:  push_atom_value "field-value"
+  573:  goto8 580
+  575:  push_atom_value "field-placeholder"
+  580:  define_field class
+  585:  get_loc0 0: t
+  586:  get_field2 _v
+  591:  get_loc0 0: t
+  592:  get_field2 _s
+  597:  get_loc0 0: t
+  598:  get_field passwordMask
+  603:  dup
+  604:  if_true8 612
+  606:  drop
+  607:  push_atom_value "\u00e4\u00b8\u008d\u00e5\u00a1\u00ab\u00e5\u00b0\u00b1\u00e4\u00b8\u008d\u00e8\u00ae\u00be\u00ef\u00bc\u008c\u00e5\u008f\u00af\u00e7\u00a8\u008d\u00e5\u0090\u008e\u00e5\u0086\u008d\u00e8\u00ae\u00be"
+  612:  call_method 1
+  615:  call_method 1
+  618:  array_from 1
+  621:  call3 3
+  622:  array_from 2
+  625:  call3 3
+  626:  get_loc2 2: e
+  627:  push_atom_value div
+  632:  object
+  633:  push_atom_value row
+  638:  array_from 1
+  641:  define_field staticClass
+  646:  get_loc2 2: e
+  647:  push_atom_value div
+  652:  object
+  653:  push_atom_value btn
+  658:  push_atom_value "btn-primary"
+  663:  array_from 2
+  666:  define_field staticClass
+  671:  object
+  672:  get_loc0 0: t
+  673:  get_field submit
+  678:  define_field click
+  683:  define_field on
+  688:  get_loc2 2: e
+  689:  push_atom_value text
+  694:  object
+  695:  push_atom_value "btn-txt"
+  700:  array_from 1
+  703:  define_field staticClass
+  708:  get_loc0 0: t
+  709:  get_field2 _v
+  714:  get_loc0 0: t
+  715:  get_field2 _s
+  720:  get_loc0 0: t
+  721:  get_field busy
+  726:  if_false8 735
+  728:  push_atom_value "\u00e5\u00a4\u0084\u00e7\u0090\u0086\u00e4\u00b8\u00ad\u00e2\u0080\u00a6"
+  733:  goto8 740
+  735:  push_atom_value "\u00e7\u00bb\u0091\u00e5\u00ae\u009a QQ \u00e5\u008f\u00b7"
+  740:  call_method 1
+  743:  call_method 1
+  746:  array_from 1
+  749:  call3 3
+  750:  array_from 1
+  753:  call3 3
+  754:  get_loc2 2: e
+  755:  push_atom_value div
+  760:  object
+  761:  push_atom_value btn
+  766:  array_from 1
+  769:  define_field staticClass
+  774:  object
+  775:  get_loc0 0: t
+  776:  get_field goShop
+  781:  define_field click
+  786:  define_field on
+  791:  get_loc2 2: e
+  792:  push_atom_value text
+  797:  object
+  798:  push_atom_value "btn-txt"
+  803:  array_from 1
+  806:  define_field staticClass
+  811:  get_loc0 0: t
+  812:  get_field2 _v
+  817:  push_atom_value "\u00e8\u00b4\u00ad\u00e4\u00b9\u00b0\u00e4\u00bc\u009a\u00e5\u0091\u0098"
+  822:  call_method 1
+  825:  array_from 1
+  828:  call3 3
+  829:  array_from 1
+  832:  call3 3
+  833:  array_from 2
+  836:  call3 3
+  837:  get_loc2 2: e
+  838:  push_atom_value text
+  843:  object
+  844:  push_atom_value "info-text"
+  849:  array_from 1
+  852:  define_field staticClass
+  857:  get_loc0 0: t
+  858:  get_field2 _v
+  863:  get_loc0 0: t
+  864:  get_field2 _s
+  869:  get_loc0 0: t
+  870:  get_field statusText
+  875:  call_method 1
+  878:  call_method 1
+  881:  array_from 1
+  884:  call3 3
+  885:  get_loc0 0: t
+  886:  get_field notice
+  891:  if_false8 943
+  893:  get_loc2 2: e
+  894:  push_atom_value text
+  899:  object
+  900:  push_atom_value "info-warn"
+  905:  array_from 1
+  908:  define_field staticClass
+  913:  get_loc0 0: t
+  914:  get_field2 _v
+  919:  get_loc0 0: t
+  920:  get_field2 _s
+  925:  get_loc0 0: t
+  926:  get_field notice
+  931:  call_method 1
+  934:  call_method 1
+  937:  array_from 1
+  940:  call3 3
+  941:  goto8 952
+  943:  get_loc0 0: t
+  944:  get_field2 _e
+  949:  call_method 0
+  952:  get_loc2 2: e
+  953:  push_atom_value text
+  958:  object
+  959:  push_atom_value "info-hint"
+  964:  array_from 1
+  967:  define_field staticClass
+  972:  get_loc0 0: t
+  973:  get_field2 _v
+  978:  push_atom_value "\u00e8\u00ae\u00be\u00e5\u00a4\u0087\u00e5\u008d\u00b3\u00e8\u00ba\u00ab\u00e4\u00bb\u00bd\u00ef\u00bc\u009a\u00e6\u009c\u00ac\u00e9\u00a1\u00b5\u00e5\u008f\u00aa\u00e6\u008a\u008a QQ \u00e5\u008f\u00b7\u00e8\u00ae\u00b0\u00e5\u0088\u00b0\u00e8\u00bf\u0099\u00e5\u008f\u00b0\u00e8\u00ae\u00be\u00e5\u00a4\u0087\u00e4\u00b8\u008a"
+  983:  call_method 1
+  986:  array_from 1
+  989:  call3 3
+  990:  array_from 6
+  993:  call3 3
+  994:  array_from 1
+  997:  call3 3
+  998:  array_from 2
+ 1001:  tail_call 3
+

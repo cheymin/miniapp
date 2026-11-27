@@ -1,0 +1,13 @@
+
+/* ===== function depth=0 ===== */
+/* debug: image-d8b75edd.js:1 source_len=0 */
+image-d8b75edd.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: a local:loc0 var
+  stack_size: 1
+  opcodes:
+    0:  push_atom_value "images/6918bc4688f21e925b9a4979c37d931c.png"
+    5:  put_var_ref0 0: a
+    6:  return_undef
+

@@ -1,0 +1,532 @@
+.page-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.vertical-slider {
+    width: 100%;
+    height: 100%;
+}
+
+.slide-page {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 42px;
+    padding-right: 40px;
+    padding-bottom: 24px;
+    padding-left: 40px;
+}
+
+.time-row {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.clock-wrapper {
+    width: 160px;
+    height: 160px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.analog-clock {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    background-color: rgba(255,255,255,0.03);
+    border-width: 2px;
+    border-color: rgba(255,255,255,0.1);
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-face {
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+
+.clock-center-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #0a84ff;
+    position: absolute;
+    top: 56px;
+    left: 56px;
+    z-index: <expr>;
+}
+
+.clock-mark {
+    position: absolute;
+    width: 2px;
+    height: 8px;
+    background-color: rgba(255,255,255,0.3);
+    top: 2px;
+    left: 59px;
+    transform-origin: 1px 58px;
+    border-radius: 2px;
+}
+
+.hand-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    transform-origin: 60px 60px;
+}
+
+.hand-bar {
+    position: absolute;
+    left: 50%;
+    border-radius: 2px;
+}
+
+.hour-bar {
+    width: 4px;
+    height: 32px;
+    margin-left: -2px;
+    background-color: #ffffff;
+    top: 28px;
+}
+
+.minute-bar {
+    width: 3px;
+    height: 42px;
+    margin-left: -1.5px;
+    background-color: rgba(255,255,255,0.8);
+    top: 18px;
+}
+
+.second-bar {
+    width: 1.5px;
+    height: 48px;
+    margin-left: -0.75px;
+    background-color: #ff453a;
+    top: 12px;
+}
+
+.time-info {
+    flex: 1;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 10px;
+}
+
+.time-huge {
+    color: #c7c7cc;
+    font-size: 64px;
+    font-weight: 200;
+    line-height: 72px;
+    letter-spacing: -2px;
+}
+
+.date-large {
+    color: rgba(255,255,255,0.4);
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.slide-hint {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    right: 0;
+    align-items: center;
+}
+
+.slide-hint-text {
+    color: rgba(255,255,255,0.2);
+    font-size: 11px;
+}
+
+.stopwatch-row {
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.stopwatch-left-panel {
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+.stopwatch-time-row {
+    flex-direction: row;
+    align-items: flex-end;
+    margin-bottom: 8px;
+}
+
+.stopwatch-main {
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 200;
+}
+
+.stopwatch-fraction {
+    color: #c7c7cc;
+    font-size: 20px;
+    margin-left: 2px;
+}
+
+.stopwatch-status {
+    color: rgba(255,255,255,0.3);
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+.stopwatch-btns {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sw-btn {
+    padding-top: 9px;
+    padding-right: 16px;
+    padding-bottom: 9px;
+    padding-left: 16px;
+    border-radius: 16px;
+    margin-top: 4px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    margin-left: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sw-btn-press {
+    opacity: 0.6;
+}
+
+.sw-btn-start {
+    background-color: rgba(52,199,89,0.15);
+}
+
+.sw-btn-stop {
+    background-color: rgba(255,69,58,0.15);
+}
+
+.sw-btn-glass {
+    background-color: rgba(255,255,255,0.08);
+}
+
+.sw-btn-txt {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.sw-btn-txt-start {
+    color: #34c759;
+}
+
+.sw-btn-txt-stop {
+    color: #ff453a;
+}
+
+.sw-btn-txt-glass {
+    color: rgba(255,255,255,0.6);
+}
+
+.stopwatch-right-panel {
+    width: 60%;
+    height: 100%;
+    padding-left: 14px;
+    border-left-width: 1px;
+    border-left-color: rgba(255,255,255,0.06);
+}
+
+.lap-scroller {
+    width: 100%;
+    height: 100%;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.empty-box-inline {
+    padding-top: 30px;
+    padding-right: 0;
+    padding-bottom: 30px;
+    padding-left: 0;
+    align-items: center;
+    width: 100%;
+}
+
+.empty-title-small {
+    color: rgba(255,255,255,0.25);
+    font-size: 12px;
+}
+
+.lap-item {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 9px;
+    padding-right: 0;
+    padding-bottom: 9px;
+    padding-left: 0;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(255,255,255,0.04);
+    width: 100%;
+}
+
+.lap-no {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    width: 50px;
+}
+
+.lap-delta {
+    color: rgba(255,255,255,0.3);
+    font-size: 11px;
+    flex: 1;
+}
+
+.lap-total {
+    color: #f3f4f6;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.countdown-row {
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.countdown-left-panel {
+    width: 45%;
+    justify-content: center;
+    align-items: center;
+}
+
+.countdown-right-panel {
+    width: 55%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-left-width: 1px;
+    border-left-color: rgba(255,255,255,0.06);
+}
+
+.countdown-display {
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown-display-press {
+    opacity: 0.7;
+}
+
+.countdown-huge {
+    color: #ffffff;
+    font-size: 56px;
+    font-weight: 200;
+    line-height: 64px;
+    letter-spacing: -1px;
+}
+
+.countdown-edit-hint {
+    color: rgba(255,255,255,0.3);
+    font-size: 11px;
+    margin-top: 8px;
+}
+
+.countdown-presets {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding-top: 0;
+    padding-right: 10px;
+    padding-bottom: 0;
+    padding-left: 10px;
+}
+
+.preset-btn {
+    width: 68px;
+    height: 34px;
+    border-radius: 16px;
+    background-color: rgba(255,255,255,0.08);
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+}
+
+.preset-btn-press {
+    opacity: 0.6;
+}
+
+.preset-txt {
+    color: rgba(255,255,255,0.8);
+    font-size: 13px;
+}
+
+.countdown-status-wrapper {
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+.countdown-status {
+    color: rgba(255,255,255,0.4);
+    font-size: 12px;
+}
+
+.countdown-btns {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.anim-base {
+    opacity: 0;
+    transition-property: opacity,transform;
+    transition-duration: 400;
+    transition-timing-function: cubic-bezier(0.2,0.8,0.2,1);
+    transform: translateY(20px);
+}
+
+.anim-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sw-btn-glass-press {
+    opacity: 0.65;
+}
+
+.analog-clock-l {
+    background-color: rgba(0,0,0,0.03);
+    color: rgba(0,0,0,0.1);
+}
+
+.clock-center-dot-l {
+    background-color: #007aff;
+}
+
+.clock-mark-l {
+    background-color: rgba(0,0,0,0.3);
+}
+
+.hour-bar-l {
+    background-color: #1c1c1e;
+}
+
+.minute-bar-l {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.second-bar-l {
+    background-color: #ff3b30;
+}
+
+.time-huge-l {
+    color: #636366;
+}
+
+.date-large-l {
+    color: rgba(0,0,0,0.4);
+}
+
+.slide-hint-text-l {
+    color: rgba(0,0,0,0.2);
+}
+
+.stopwatch-main-l {
+    color: #1c1c1e;
+}
+
+.stopwatch-fraction-l {
+    color: #636366;
+}
+
+.stopwatch-status-l {
+    color: rgba(0,0,0,0.3);
+}
+
+.sw-btn-start-l {
+    background-color: rgba(52,199,89,0.18);
+}
+
+.sw-btn-stop-l {
+    background-color: rgba(255,69,58,0.18);
+}
+
+.sw-btn-glass-l {
+    background-color: rgba(0,0,0,0.08);
+}
+
+.sw-btn-txt-start-l {
+    color: #34c759;
+}
+
+.sw-btn-txt-stop-l {
+    color: #ff3b30;
+}
+
+.sw-btn-txt-glass-l {
+    color: rgba(0,0,0,0.6);
+}
+
+.stopwatch-right-panel-l {
+    color: rgba(0,0,0,0.06);
+}
+
+.empty-title-small-l {
+    color: rgba(0,0,0,0.25);
+}
+
+.lap-item-l {
+    color: rgba(0,0,0,0.04);
+}
+
+.lap-no-l {
+    color: #1c1c1e;
+}
+
+.lap-delta-l {
+    color: rgba(0,0,0,0.3);
+}
+
+.lap-total-l {
+    color: #3a3a3c;
+}
+
+.countdown-right-panel-l {
+    color: rgba(0,0,0,0.06);
+}
+
+.countdown-huge-l {
+    color: #1c1c1e;
+}
+
+.countdown-edit-hint-l {
+    color: rgba(0,0,0,0.3);
+}
+
+.preset-btn-l {
+    background-color: rgba(0,0,0,0.08);
+}
+
+.preset-txt-l {
+    color: rgba(0,0,0,0.8);
+}
+
+.countdown-status-l {
+    color: rgba(0,0,0,0.4);
+}

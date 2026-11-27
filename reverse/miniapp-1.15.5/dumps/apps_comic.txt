@@ -1,0 +1,5549 @@
+
+/* ===== function depth=0 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: t parent:loc0 const
+    1: e parent:loc1 const
+    2: r parent:loc2 const
+    3: a parent:loc3 const
+    4: i parent:loc4 const
+    5: o local:loc0 const
+    6: s local:loc1 const
+    7: n local:loc2 const
+    8: c local:loc3 const
+    9: l local:loc4 const
+   10: h local:loc5 const
+   11: d local:loc6 const
+   12: g local:loc7 var
+   13: f local:loc8 var
+   14: u local:loc9 var
+   15: m local:loc10 const
+  stack_size: 7
+  opcodes:
+    0:  get_var_ref_check 2: r
+    3:  call0 0
+    4:  put_var_ref 5: o
+    7:  get_var_ref_check 3: a
+   10:  call0 0
+   11:  put_var_ref 6: s
+   14:  get_var_ref_check 4: i
+   17:  get_var_ref_check 5: o
+   20:  call1 1
+   21:  put_var_ref 7: n
+   24:  get_var_ref_check 4: i
+   27:  get_var_ref_check 6: s
+   30:  call1 1
+   31:  put_var_ref 8: c
+   34:  push_atom_value comic_favorite_v2
+   39:  put_var_ref 9: l
+   42:  push_atom_value comic_history_v2
+   47:  put_var_ref 10: h
+   50:  push_atom_value jm_favorite
+   55:  push_atom_value jm_history
+   60:  array_from 2
+   63:  put_var_ref 11: d
+   66:  object
+   67:  fclosure8 0: [bytecode <null>]
+   69:  set_name data
+   74:  define_field data
+   79:  object
+   80:  fclosure8 1: [bytecode <null>]
+   82:  set_name coverWidth
+   87:  define_field coverWidth
+   92:  fclosure8 2: [bytecode <null>]
+   94:  set_name coverHeight
+   99:  define_field coverHeight
+  104:  fclosure8 3: [bytecode <null>]
+  106:  set_name lineCount
+  111:  define_field lineCount
+  116:  fclosure8 4: [bytecode <null>]
+  118:  set_name albumMeta
+  123:  define_field albumMeta
+  128:  fclosure8 5: [bytecode <null>]
+  130:  set_name readerImageUrls
+  135:  define_field readerImageUrls
+  140:  fclosure8 6: [bytecode <null>]
+  142:  set_name readerBaseWidth
+  147:  define_field readerBaseWidth
+  152:  fclosure8 7: [bytecode <null>]
+  154:  set_name readerImgWidth
+  159:  define_field readerImgWidth
+  164:  define_field computed
+  169:  fclosure8 8: [bytecode <null>]
+  171:  set_name mounted
+  176:  define_field mounted
+  181:  fclosure8 9: [bytecode <null>]
+  183:  set_name beforeDestroy
+  188:  define_field beforeDestroy
+  193:  object
+  194:  fclosure8 10: [bytecode <null>]
+  196:  set_name eatEvent
+  201:  define_field eatEvent
+  206:  fclosure8 11: [bytecode <null>]
+  208:  set_name love
+  213:  define_field love
+  218:  fclosure8 12: [bytecode <null>]
+  220:  set_name getImgUrl
+  225:  define_field getImgUrl
+  230:  fclosure8 13: [bytecode <null>]
+  232:  set_name closeApp
+  237:  define_field closeApp
+  242:  fclosure8 14: [bytecode <null>]
+  244:  set_name coverUrl
+  249:  define_field coverUrl
+  254:  fclosure8 15: [bytecode <null>]
+  256:  set_name imageUrl
+  261:  define_field imageUrl
+  266:  fclosure8 16: [bytecode <null>]
+  268:  set_name getRawImageSource
+  273:  define_field getRawImageSource
+  278:  fclosure8 17: [bytecode <null>]
+  280:  set_name normalizeAlbumData
+  285:  define_field normalizeAlbumData
+  290:  fclosure8 18: [bytecode <null>]
+  292:  set_name normalizeChapterData
+  297:  define_field normalizeChapterData
+  302:  fclosure8 19: [bytecode <null>]
+  304:  set_name parseApiResponse
+  309:  define_field parseApiResponse
+  314:  fclosure8 20: [bytecode <null>]
+  316:  set_name fetchApi
+  321:  define_field fetchApi
+  326:  fclosure8 21: [bytecode <null>]
+  328:  set_name getFavoriteList
+  333:  define_field getFavoriteList
+  338:  fclosure8 22: [bytecode <null>]
+  340:  set_name getHistoryList
+  345:  define_field getHistoryList
+  350:  fclosure8 23: [bytecode <null>]
+  352:  set_name isFavorite
+  357:  define_field isFavorite
+  362:  fclosure8 24: [bytecode <null>]
+  364:  set_name onImageError
+  369:  define_field onImageError
+  374:  fclosure8 25: [bytecode <null>]
+  376:  set_name onReaderImageError
+  381:  define_field onReaderImageError
+  386:  fclosure8 26: [bytecode <null>]
+  388:  set_name toggleReaderSettings
+  393:  define_field toggleReaderSettings
+  398:  fclosure8 27: [bytecode <null>]
+  400:  set_name onReaderScaleChange
+  405:  define_field onReaderScaleChange
+  410:  fclosure8 28: [bytecode <null>]
+  412:  set_name zoomIn
+  417:  define_field zoomIn
+  422:  fclosure8 29: [bytecode <null>]
+  424:  set_name zoomOut
+  429:  define_field zoomOut
+  434:  fclosure8 30: [bytecode <null>]
+  436:  set_name goSearch
+  441:  define_field goSearch
+  446:  fclosure8 31: [bytecode <null>]
+  448:  set_name goHistory
+  453:  define_field goHistory
+  458:  fclosure8 32: [bytecode <null>]
+  460:  set_name cleanupLegacyComicStorage
+  465:  define_field cleanupLegacyComicStorage
+  470:  fclosure8 33: [bytecode <null>]
+  472:  set_name initBridge
+  477:  define_field initBridge
+  482:  fclosure8 34: [bytecode <null>]
+  484:  set_name resText
+  489:  define_field resText
+  494:  fclosure8 35: [bytecode <null>]
+  496:  set_name normalizeKbData
+  501:  define_field normalizeKbData
+  506:  fclosure8 36: [bytecode <null>]
+  508:  set_name openKeyboardForSearch
+  513:  define_field openKeyboardForSearch
+  518:  fclosure8 37: [bytecode <null>]
+  520:  set_name doSearch
+  525:  define_field doSearch
+  530:  fclosure8 38: [bytecode <null>]
+  532:  set_name onComicClick
+  537:  define_field onComicClick
+  542:  fclosure8 39: [bytecode <null>]
+  544:  set_name fetchAlbum
+  549:  define_field fetchAlbum
+  554:  fclosure8 40: [bytecode <null>]
+  556:  set_name closeAlbum
+  561:  define_field closeAlbum
+  566:  fclosure8 41: [bytecode <null>]
+  568:  set_name readFirst
+  573:  define_field readFirst
+  578:  fclosure8 42: [bytecode <null>]
+  580:  set_name readChapter
+  585:  define_field readChapter
+  590:  fclosure8 43: [bytecode <null>]
+  592:  set_name fetchChapterInfo
+  597:  define_field fetchChapterInfo
+  602:  fclosure8 44: [bytecode <null>]
+  604:  set_name prevChapter
+  609:  define_field prevChapter
+  614:  fclosure8 45: [bytecode <null>]
+  616:  set_name nextChapter
+  621:  define_field nextChapter
+  626:  fclosure8 46: [bytecode <null>]
+  628:  set_name switchChapter
+  633:  define_field switchChapter
+  638:  fclosure8 47: [bytecode <null>]
+  640:  set_name closeReader
+  645:  define_field closeReader
+  650:  fclosure8 48: [bytecode <null>]
+  652:  set_name saveHistory
+  657:  define_field saveHistory
+  662:  fclosure8 49: [bytecode <null>]
+  664:  set_name loadHistory
+  669:  define_field loadHistory
+  674:  define_field methods
+  679:  put_var_ref 12: g
+  682:  push_atom_value "images/36d8aa5c9c5167c039ee7f9585652a67.png"
+  687:  put_var_ref 13: f
+  690:  fclosure8 50: [bytecode <null>]
+  692:  set_name u
+  697:  set_var_ref 14: u
+  700:  push_0 0
+  701:  lnot
+  702:  put_field _withStripped
+  707:  get_var_ref 12: g
+  710:  put_var_ref 15: m
+  713:  get_var_ref_check 15: m
+  716:  get_var_ref 14: u
+  719:  put_field render
+  724:  get_var_ref_check 15: m
+  727:  array_from 0
+  730:  put_field staticRenderFns
+  735:  get_var_ref_check 15: m
+  738:  push_0 0
+  739:  lnot
+  740:  put_field _compiled
+  745:  get_var_ref_check 15: m
+  748:  push_atom_value "data-v-505f890e"
+  753:  put_field _scopeId
+  758:  get_var_ref_check 15: m
+  761:  object
+  762:  put_field themes
+  767:  get_var_ref_check 15: m
+  770:  get_var Object
+  775:  get_field2 assign
+  780:  object
+  781:  object
+  782:  object
+  783:  push_atom_value "100vw"
+  788:  define_field width
+  793:  push_atom_value "100vh"
+  798:  define_field height
+  803:  push_atom_value "#080a0c"
+  808:  define_field backgroundColor
+  813:  push_atom_value row
+  818:  define_field flexDirection
+  823:  define_field container
+  828:  object
+  829:  push_atom_value "31vh"
+  834:  define_field width
+  839:  push_atom_value center
+  844:  define_field alignItems
+  849:  push_atom_value "8vh"
+  854:  define_field paddingTop
+  859:  define_field "button-col"
+  864:  object
+  865:  push_atom_value "22vh"
+  870:  define_field width
+  875:  push_atom_value "22vh"
+  880:  define_field height
+  885:  push_atom_value "6vh"
+  890:  define_field borderRadius
+  895:  push_atom_value center
+  900:  define_field justifyContent
+  905:  push_atom_value center
+  910:  define_field alignItems
+  915:  push_atom_value "5vh"
+  920:  define_field marginBottom
+  925:  push_atom_value "#1c1c1e"
+  930:  define_field backgroundColor
+  935:  define_field "icon-btn"
+  940:  object
+  941:  push_atom_value "#ffffff"
+  946:  define_field backgroundColor
+  951:  define_field active
+  956:  object
+  957:  push_atom_value "10vh"
+  962:  define_field width
+  967:  push_atom_value "10vh"
+  972:  define_field height
+  977:  define_field "icon-img"
+  982:  object
+  983:  push_atom_value "4.2vh"
+  988:  define_field fontSize
+  993:  push_atom_value "#c7c7cc"
+  998:  define_field color
+ 1003:  push_atom_value "2vh"
+ 1008:  define_field marginTop
+ 1013:  define_field "icon-label"
+ 1018:  object
+ 1019:  push_atom_value "#1c1c1e"
+ 1024:  define_field color
+ 1029:  push_const8 51: 1"500"
+ 1031:  define_field fontWeight
+ 1036:  define_field "icon-label-active"
+ 1041:  object
+ 1042:  push_1 1
+ 1043:  define_field flex
+ 1048:  define_field "main-scroll"
+ 1053:  object
+ 1054:  push_atom_value "10vh"
+ 1059:  define_field marginTop
+ 1064:  push_atom_value "8vh"
+ 1069:  define_field marginBottom
+ 1074:  push_atom_value "#8e918f"
+ 1079:  define_field color
+ 1084:  push_atom_value "12vh"
+ 1089:  define_field fontSize
+ 1094:  push_atom_value "15vh"
+ 1099:  define_field lineHeight
+ 1104:  define_field "page-title"
+ 1109:  object
+ 1110:  push_atom_value "12vh"
+ 1115:  define_field fontSize
+ 1120:  push_atom_value center
+ 1125:  define_field textAlign
+ 1130:  push_atom_value "#8e918f"
+ 1135:  define_field color
+ 1140:  define_field loading
+ 1145:  object
+ 1146:  push_atom_value center
+ 1151:  define_field justifyContent
+ 1156:  push_atom_value center
+ 1161:  define_field alignItems
+ 1166:  push_atom_value "60vh"
+ 1171:  define_field height
+ 1176:  define_field "empty-area"
+ 1181:  object
+ 1182:  push_atom_value "#636366"
+ 1187:  define_field color
+ 1192:  push_atom_value "14px"
+ 1197:  define_field fontSize
+ 1202:  define_field "empty-text"
+ 1207:  object
+ 1208:  push_atom_value row
+ 1213:  define_field flexDirection
+ 1218:  push_atom_value wrap
+ 1223:  define_field flexWrap
+ 1228:  define_field "content-grid"
+ 1233:  object
+ 1234:  push_0 0
+ 1235:  define_field marginTop
+ 1240:  push_atom_value "3vh"
+ 1245:  define_field marginRight
+ 1250:  push_atom_value "3vh"
+ 1255:  define_field marginBottom
+ 1260:  push_0 0
+ 1261:  define_field marginLeft
+ 1266:  push_atom_value "#1c1c1e"
+ 1271:  define_field backgroundColor
+ 1276:  push_atom_value "4vh"
+ 1281:  define_field borderRadius
+ 1286:  push_atom_value hidden
+ 1291:  define_field overflow
+ 1296:  define_field "comic-card"
+ 1301:  object
+ 1302:  push_const8 52: 0.7
+ 1304:  define_field opacity
+ 1309:  define_field "comic-card-press"
+ 1314:  object
+ 1315:  push_atom_value "100%"
+ 1320:  define_field width
+ 1325:  push_1 1
+ 1326:  define_field flex
+ 1331:  push_atom_value "#2c2c2e"
+ 1336:  define_field backgroundColor
+ 1341:  define_field "card-cover"
+ 1346:  object
+ 1347:  push_atom_value "3vh"
+ 1352:  define_field paddingTop
+ 1357:  push_atom_value "3vh"
+ 1362:  define_field paddingRight
+ 1367:  push_atom_value "4vh"
+ 1372:  define_field paddingBottom
+ 1377:  push_atom_value "3vh"
+ 1382:  define_field paddingLeft
+ 1387:  define_field "card-body"
+ 1392:  object
+ 1393:  push_atom_value "#f3f4f6"
+ 1398:  define_field color
+ 1403:  push_atom_value "3.5vh"
+ 1408:  define_field fontSize
+ 1413:  push_const8 53: 1"500"
+ 1415:  define_field fontWeight
+ 1420:  push_2 2
+ 1421:  define_field lines
+ 1426:  push_atom_value ellipsis
+ 1431:  define_field textOverflow
+ 1436:  push_atom_value "1.5vh"
+ 1441:  define_field marginBottom
+ 1446:  define_field "card-title"
+ 1451:  object
+ 1452:  push_atom_value "#c7c7cc"
+ 1457:  define_field color
+ 1462:  push_atom_value "3vh"
+ 1467:  define_field fontSize
+ 1472:  define_field "card-author"
+ 1477:  object
+ 1478:  push_atom_value absolute
+ 1483:  define_field position
+ 1488:  push_0 0
+ 1489:  define_field top
+ 1494:  push_0 0
+ 1495:  define_field left
+ 1500:  push_atom_value "100%"
+ 1505:  define_field width
+ 1510:  push_atom_value "100%"
+ 1515:  define_field height
+ 1520:  push_atom_value "rgba(0,0,0,0.88)"
+ 1525:  define_field backgroundColor
+ 1530:  push_i16 999
+ 1533:  define_field zIndex
+ 1538:  push_atom_value center
+ 1543:  define_field justifyContent
+ 1548:  push_atom_value center
+ 1553:  define_field alignItems
+ 1558:  define_field overlay
+ 1563:  object
+ 1564:  push_atom_value "85%"
+ 1569:  define_field width
+ 1574:  push_atom_value "600px"
+ 1579:  define_field maxWidth
+ 1584:  push_atom_value "#1c1c1e"
+ 1589:  define_field backgroundColor
+ 1594:  push_atom_value "6vh"
+ 1599:  define_field borderRadius
+ 1604:  push_atom_value "8vh"
+ 1609:  define_field paddingTop
+ 1614:  push_atom_value "8vh"
+ 1619:  define_field paddingRight
+ 1624:  push_atom_value "8vh"
+ 1629:  define_field paddingBottom
+ 1634:  push_atom_value "8vh"
+ 1639:  define_field paddingLeft
+ 1644:  define_field panel
+ 1649:  object
+ 1650:  push_atom_value "#f3f4f6"
+ 1655:  define_field color
+ 1660:  push_atom_value "5vh"
+ 1665:  define_field fontSize
+ 1670:  push_const8 54: 1"600"
+ 1672:  define_field fontWeight
+ 1677:  push_atom_value "2vh"
+ 1682:  define_field marginBottom
+ 1687:  push_2 2
+ 1688:  define_field lines
+ 1693:  push_atom_value ellipsis
+ 1698:  define_field textOverflow
+ 1703:  define_field "panel-title"
+ 1708:  object
+ 1709:  push_atom_value "#c7c7cc"
+ 1714:  define_field color
+ 1719:  push_atom_value "3.5vh"
+ 1724:  define_field fontSize
+ 1729:  push_atom_value "4vh"
+ 1734:  define_field marginBottom
+ 1739:  define_field "panel-meta"
+ 1744:  object
+ 1745:  push_atom_value "50vh"
+ 1750:  define_field height
+ 1755:  push_atom_value "4vh"
+ 1760:  define_field marginBottom
+ 1765:  define_field "chapter-scroll"
+ 1770:  object
+ 1771:  push_atom_value "50vh"
+ 1776:  define_field height
+ 1781:  push_atom_value center
+ 1786:  define_field justifyContent
+ 1791:  push_atom_value center
+ 1796:  define_field alignItems
+ 1801:  push_atom_value "#2c2c2e"
+ 1806:  define_field backgroundColor
+ 1811:  push_atom_value "4vh"
+ 1816:  define_field borderRadius
+ 1821:  push_atom_value "4vh"
+ 1826:  define_field marginBottom
+ 1831:  define_field "chapter-empty"
+ 1836:  object
+ 1837:  push_atom_value row
+ 1842:  define_field flexDirection
+ 1847:  push_atom_value center
+ 1852:  define_field alignItems
+ 1857:  push_atom_value "12vh"
+ 1862:  define_field height
+ 1867:  push_0 0
+ 1868:  define_field paddingTop
+ 1873:  push_atom_value "4vh"
+ 1878:  define_field paddingRight
+ 1883:  push_0 0
+ 1884:  define_field paddingBottom
+ 1889:  push_atom_value "4vh"
+ 1894:  define_field paddingLeft
+ 1899:  push_atom_value "#2c2c2e"
+ 1904:  define_field backgroundColor
+ 1909:  push_atom_value "3vh"
+ 1914:  define_field borderRadius
+ 1919:  push_atom_value "2vh"
+ 1924:  define_field marginBottom
+ 1929:  define_field "chapter-item"
+ 1934:  object
+ 1935:  push_const8 55: 0.6
+ 1937:  define_field opacity
+ 1942:  define_field "chapter-item-press"
+ 1947:  object
+ 1948:  push_atom_value "#636366"
+ 1953:  define_field color
+ 1958:  push_atom_value "3.5vh"
+ 1963:  define_field fontSize
+ 1968:  push_atom_value "8vh"
+ 1973:  define_field width
+ 1978:  define_field "chapter-num"
+ 1983:  object
+ 1984:  push_1 1
+ 1985:  define_field flex
+ 1990:  push_atom_value "#f3f4f6"
+ 1995:  define_field color
+ 2000:  push_atom_value "3.5vh"
+ 2005:  define_field fontSize
+ 2010:  push_1 1
+ 2011:  define_field lines
+ 2016:  push_atom_value ellipsis
+ 2021:  define_field textOverflow
+ 2026:  define_field "chapter-name"
+ 2031:  object
+ 2032:  push_atom_value "#636366"
+ 2037:  define_field color
+ 2042:  push_atom_value "5vh"
+ 2047:  define_field fontSize
+ 2052:  define_field "chapter-arrow"
+ 2057:  object
+ 2058:  push_atom_value row
+ 2063:  define_field flexDirection
+ 2068:  define_field "panel-btns"
+ 2073:  object
+ 2074:  push_atom_value "12vh"
+ 2079:  define_field height
+ 2084:  push_atom_value center
+ 2089:  define_field justifyContent
+ 2094:  push_atom_value center
+ 2099:  define_field alignItems
+ 2104:  push_atom_value "4vh"
+ 2109:  define_field borderRadius
+ 2114:  push_1 1
+ 2115:  define_field flex
+ 2120:  push_atom_value "3vh"
+ 2125:  define_field marginRight
+ 2130:  push_atom_value "#2c2c2e"
+ 2135:  define_field backgroundColor
+ 2140:  define_field "panel-btn"
+ 2145:  object
+ 2146:  push_const8 56: 0.6
+ 2148:  define_field opacity
+ 2153:  define_field "panel-btn-press"
+ 2158:  object
+ 2159:  push_atom_value "#ffffff"
+ 2164:  define_field backgroundColor
+ 2169:  define_field "panel-btn-primary"
+ 2174:  object
+ 2175:  push_atom_value "#f3f4f6"
+ 2180:  define_field color
+ 2185:  push_atom_value "4vh"
+ 2190:  define_field fontSize
+ 2195:  push_const8 57: 1"500"
+ 2197:  define_field fontWeight
+ 2202:  define_field "panel-btn-text"
+ 2207:  object
+ 2208:  push_atom_value "#1c1c1e"
+ 2213:  define_field color
+ 2218:  define_field "panel-btn-dark"
+ 2223:  object
+ 2224:  push_atom_value absolute
+ 2229:  define_field position
+ 2234:  push_0 0
+ 2235:  define_field top
+ 2240:  push_0 0
+ 2241:  define_field left
+ 2246:  push_atom_value "100%"
+ 2251:  define_field width
+ 2256:  push_atom_value "100%"
+ 2261:  define_field height
+ 2266:  push_atom_value "#000000"
+ 2271:  define_field backgroundColor
+ 2276:  push_i16 1000
+ 2279:  define_field zIndex
+ 2284:  push_atom_value row
+ 2289:  define_field flexDirection
+ 2294:  define_field reader
+ 2299:  object
+ 2300:  push_atom_value "#0d0f12"
+ 2305:  define_field backgroundColor
+ 2310:  push_atom_value "1px"
+ 2315:  define_field borderRightWidth
+ 2320:  push_atom_value "rgba(255,255,255,0.05)"
+ 2325:  define_field borderRightColor
+ 2330:  define_field "reader-sidebar"
+ 2335:  object
+ 2336:  push_atom_value "100vh"
+ 2341:  define_field height
+ 2346:  push_atom_value "7vh"
+ 2351:  define_field paddingTop
+ 2356:  push_atom_value "12vh"
+ 2361:  define_field paddingRight
+ 2366:  push_atom_value "7vh"
+ 2371:  define_field paddingBottom
+ 2376:  push_atom_value "5vh"
+ 2381:  define_field paddingLeft
+ 2386:  push_atom_value column
+ 2391:  define_field flexDirection
+ 2396:  push_atom_value "flex-start"
+ 2401:  define_field justifyContent
+ 2406:  define_field "reader-sidebar-inner"
+ 2411:  object
+ 2412:  push_atom_value "22vh"
+ 2417:  define_field width
+ 2422:  push_atom_value "22vh"
+ 2427:  define_field height
+ 2432:  push_atom_value "7vh"
+ 2437:  define_field borderRadius
+ 2442:  push_atom_value center
+ 2447:  define_field justifyContent
+ 2452:  push_atom_value center
+ 2457:  define_field alignItems
+ 2462:  push_atom_value "#1a1b1f"
+ 2467:  define_field backgroundColor
+ 2472:  push_atom_value "4vh"
+ 2477:  define_field marginBottom
+ 2482:  define_field "reader-icon-button"
+ 2487:  object
+ 2488:  push_const8 58: 0.6
+ 2490:  define_field opacity
+ 2495:  define_field "reader-icon-button-press"
+ 2500:  object
+ 2501:  push_atom_value "60%"
+ 2506:  define_field width
+ 2511:  push_atom_value "60%"
+ 2516:  define_field height
+ 2521:  define_field "reader-icon-image"
+ 2526:  object
+ 2527:  push_1 1
+ 2528:  define_field flex
+ 2533:  push_atom_value "#000000"
+ 2538:  define_field backgroundColor
+ 2543:  define_field "reader-main"
+ 2548:  object
+ 2549:  push_1 1
+ 2550:  define_field flex
+ 2555:  define_field "reader-scroller"
+ 2560:  object
+ 2561:  push_atom_value "100%"
+ 2566:  define_field width
+ 2571:  push_atom_value center
+ 2576:  define_field alignItems
+ 2581:  define_field "reader-content-wrapper"
+ 2586:  object
+ 2587:  push_atom_value "100vh"
+ 2592:  define_field height
+ 2597:  push_atom_value center
+ 2602:  define_field justifyContent
+ 2607:  push_atom_value center
+ 2612:  define_field alignItems
+ 2617:  define_field "reader-loading"
+ 2622:  object
+ 2623:  push_atom_value "100%"
+ 2628:  define_field width
+ 2633:  push_atom_value center
+ 2638:  define_field alignItems
+ 2643:  push_atom_value "6vh"
+ 2648:  define_field paddingTop
+ 2653:  push_0 0
+ 2654:  define_field paddingRight
+ 2659:  push_atom_value "8vh"
+ 2664:  define_field paddingBottom
+ 2669:  push_0 0
+ 2670:  define_field paddingLeft
+ 2675:  define_field "reader-image-container"
+ 2680:  object
+ 2681:  push_atom_value "100%"
+ 2686:  define_field width
+ 2691:  push_0 0
+ 2692:  define_field paddingTop
+ 2697:  push_atom_value "7vh"
+ 2702:  define_field paddingRight
+ 2707:  push_atom_value "5vh"
+ 2712:  define_field paddingBottom
+ 2717:  push_atom_value "7vh"
+ 2722:  define_field paddingLeft
+ 2727:  push_atom_value row
+ 2732:  define_field flexDirection
+ 2737:  push_atom_value "space-between"
+ 2742:  define_field justifyContent
+ 2747:  push_atom_value center
+ 2752:  define_field alignItems
+ 2757:  define_field "reader-meta"
+ 2762:  object
+ 2763:  push_atom_value "70%"
+ 2768:  define_field maxWidth
+ 2773:  push_atom_value "#e3e3e3"
+ 2778:  define_field color
+ 2783:  push_atom_value "6vh"
+ 2788:  define_field fontSize
+ 2793:  push_1 1
+ 2794:  define_field lines
+ 2799:  push_atom_value ellipsis
+ 2804:  define_field textOverflow
+ 2809:  define_field "reader-title"
+ 2814:  object
+ 2815:  push_atom_value "#8e918f"
+ 2820:  define_field color
+ 2825:  push_atom_value "4vh"
+ 2830:  define_field fontSize
+ 2835:  define_field "reader-count"
+ 2840:  object
+ 2841:  push_atom_value "78vh"
+ 2846:  define_field width
+ 2851:  push_atom_value "24vh"
+ 2856:  define_field height
+ 2861:  push_atom_value "5vh"
+ 2866:  define_field marginBottom
+ 2871:  push_atom_value "8vh"
+ 2876:  define_field borderRadius
+ 2881:  push_atom_value row
+ 2886:  define_field flexDirection
+ 2891:  push_atom_value center
+ 2896:  define_field justifyContent
+ 2901:  push_atom_value center
+ 2906:  define_field alignItems
+ 2911:  push_atom_value "#1a1b1f"
+ 2916:  define_field backgroundColor
+ 2921:  define_field "reader-turning"
+ 2926:  object
+ 2927:  push_const8 59: 0.6
+ 2929:  define_field opacity
+ 2934:  define_field "reader-turning-press"
+ 2939:  object
+ 2940:  push_atom_value "15vh"
+ 2945:  define_field width
+ 2950:  push_atom_value "15vh"
+ 2955:  define_field height
+ 2960:  define_field "reader-turning-icon"
+ 2965:  object
+ 2966:  push_atom_value "4vh"
+ 2971:  define_field marginLeft
+ 2976:  push_atom_value "10vh"
+ 2981:  define_field fontSize
+ 2986:  push_atom_value "#e3e3e3"
+ 2991:  define_field color
+ 2996:  define_field "reader-turning-text"
+ 3001:  object
+ 3002:  push_atom_value "100%"
+ 3007:  define_field width
+ 3012:  push_atom_value center
+ 3017:  define_field alignItems
+ 3022:  push_atom_value "3vh"
+ 3027:  define_field marginBottom
+ 3032:  define_field "reader-image-block"
+ 3037:  object
+ 3038:  push_atom_value "#000000"
+ 3043:  define_field backgroundColor
+ 3048:  push_atom_value "2vh"
+ 3053:  define_field borderRadius
+ 3058:  define_field "reader-img-item"
+ 3063:  object
+ 3064:  push_atom_value absolute
+ 3069:  define_field position
+ 3074:  push_0 0
+ 3075:  define_field top
+ 3080:  push_0 0
+ 3081:  define_field left
+ 3086:  push_atom_value "100%"
+ 3091:  define_field width
+ 3096:  push_atom_value "100%"
+ 3101:  define_field height
+ 3106:  push_atom_value "rgba(0,0,0,0.6)"
+ 3111:  define_field backgroundColor
+ 3116:  push_atom_value center
+ 3121:  define_field justifyContent
+ 3126:  push_atom_value center
+ 3131:  define_field alignItems
+ 3136:  push_i16 1100
+ 3139:  define_field zIndex
+ 3144:  define_field "settings-mask"
+ 3149:  object
+ 3150:  push_atom_value "74vh"
+ 3155:  define_field width
+ 3160:  push_atom_value "#1a1b1f"
+ 3165:  define_field backgroundColor
+ 3170:  push_atom_value "8vh"
+ 3175:  define_field borderRadius
+ 3180:  push_atom_value "8vh"
+ 3185:  define_field paddingTop
+ 3190:  push_atom_value "8vh"
+ 3195:  define_field paddingRight
+ 3200:  push_atom_value "8vh"
+ 3205:  define_field paddingBottom
+ 3210:  push_atom_value "8vh"
+ 3215:  define_field paddingLeft
+ 3220:  define_field "settings-panel"
+ 3225:  object
+ 3226:  push_atom_value "#8e918f"
+ 3231:  define_field color
+ 3236:  push_atom_value "8vh"
+ 3241:  define_field fontSize
+ 3246:  push_atom_value "6vh"
+ 3251:  define_field marginBottom
+ 3256:  define_field "settings-title"
+ 3261:  object
+ 3262:  push_atom_value "8vh"
+ 3267:  define_field paddingTop
+ 3272:  push_atom_value "8vh"
+ 3277:  define_field paddingRight
+ 3282:  push_atom_value "8vh"
+ 3287:  define_field paddingBottom
+ 3292:  push_atom_value "8vh"
+ 3297:  define_field paddingLeft
+ 3302:  push_atom_value "8vh"
+ 3307:  define_field borderRadius
+ 3312:  push_atom_value "#1a1b1f"
+ 3317:  define_field backgroundColor
+ 3322:  define_field "settings-card"
+ 3327:  object
+ 3328:  push_atom_value row
+ 3333:  define_field flexDirection
+ 3338:  push_atom_value "space-between"
+ 3343:  define_field justifyContent
+ 3348:  push_atom_value center
+ 3353:  define_field alignItems
+ 3358:  push_atom_value "3vh"
+ 3363:  define_field marginBottom
+ 3368:  define_field "settings-card-head"
+ 3373:  object
+ 3374:  push_atom_value "10vh"
+ 3379:  define_field fontSize
+ 3384:  push_atom_value "#e3e3e3"
+ 3389:  define_field color
+ 3394:  define_field "settings-card-title"
+ 3399:  object
+ 3400:  push_atom_value "3vh"
+ 3405:  define_field marginRight
+ 3410:  push_atom_value "9vh"
+ 3415:  define_field fontSize
+ 3420:  push_atom_value "#8e918f"
+ 3425:  define_field color
+ 3430:  define_field "settings-card-value"
+ 3435:  object
+ 3436:  push_1 1
+ 3437:  define_field flex
+ 3442:  define_field "settings-card-seekbar"
+ 3447:  object
+ 3448:  push_atom_value row
+ 3453:  define_field flexDirection
+ 3458:  push_atom_value "4vh"
+ 3463:  define_field marginTop
+ 3468:  define_field "settings-actions"
+ 3473:  object
+ 3474:  push_1 1
+ 3475:  define_field flex
+ 3480:  push_atom_value "16vh"
+ 3485:  define_field height
+ 3490:  push_atom_value center
+ 3495:  define_field justifyContent
+ 3500:  push_atom_value center
+ 3505:  define_field alignItems
+ 3510:  push_atom_value "6vh"
+ 3515:  define_field borderRadius
+ 3520:  push_atom_value "rgba(255,255,255,0.06)"
+ 3525:  define_field backgroundColor
+ 3530:  define_field "settings-action"
+ 3535:  object
+ 3536:  push_const8 60: 0.6
+ 3538:  define_field opacity
+ 3543:  define_field "settings-action-press"
+ 3548:  object
+ 3549:  push_atom_value "3vh"
+ 3554:  define_field marginLeft
+ 3559:  define_field "settings-action-spaced"
+ 3564:  object
+ 3565:  push_atom_value "#e3e3e3"
+ 3570:  define_field color
+ 3575:  push_atom_value "5vh"
+ 3580:  define_field fontSize
+ 3585:  push_const8 61: 1"500"
+ 3587:  define_field fontWeight
+ 3592:  define_field "settings-action-text"
+ 3597:  object
+ 3598:  push_const8 62: 0.65
+ 3600:  define_field opacity
+ 3605:  define_field "icon-btn-press"
+ 3610:  object
+ 3611:  push_const8 63: 0.65
+ 3613:  define_field opacity
+ 3618:  define_field "overlay-press"
+ 3623:  object
+ 3624:  push_const8 64: 0.65
+ 3626:  define_field opacity
+ 3631:  define_field "panel-btn-primary-press"
+ 3636:  object
+ 3637:  push_const8 65: 0.65
+ 3639:  define_field opacity
+ 3644:  define_field "reader-press"
+ 3649:  object
+ 3650:  push_const8 66: 0.65
+ 3652:  define_field opacity
+ 3657:  define_field "settings-mask-press"
+ 3662:  object
+ 3663:  push_const8 67: 0.65
+ 3665:  define_field opacity
+ 3670:  define_field "settings-panel-press"
+ 3675:  object
+ 3676:  push_const8 68: 0.65
+ 3678:  define_field opacity
+ 3683:  define_field "settings-action-spaced-press"
+ 3688:  object
+ 3689:  push_atom_value "#ffffff"
+ 3694:  define_field backgroundColor
+ 3699:  define_field "container-l"
+ 3704:  object
+ 3705:  push_atom_value "#ffffff"
+ 3710:  define_field backgroundColor
+ 3715:  define_field "icon-btn-l"
+ 3720:  object
+ 3721:  push_atom_value "#ffffff"
+ 3726:  define_field backgroundColor
+ 3731:  define_field "active-l"
+ 3736:  object
+ 3737:  push_atom_value "#636366"
+ 3742:  define_field color
+ 3747:  define_field "icon-label-l"
+ 3752:  object
+ 3753:  push_atom_value "#ffffff"
+ 3758:  define_field color
+ 3763:  define_field "icon-label-active-l"
+ 3768:  object
+ 3769:  push_atom_value "#6b6b70"
+ 3774:  define_field color
+ 3779:  define_field "page-title-l"
+ 3784:  object
+ 3785:  push_atom_value "#6b6b70"
+ 3790:  define_field color
+ 3795:  define_field "loading-l"
+ 3800:  object
+ 3801:  push_atom_value "#aeaeb2"
+ 3806:  define_field color
+ 3811:  define_field "empty-text-l"
+ 3816:  object
+ 3817:  push_atom_value "#ffffff"
+ 3822:  define_field backgroundColor
+ 3827:  define_field "comic-card-l"
+ 3832:  object
+ 3833:  push_atom_value "#ffffff"
+ 3838:  define_field backgroundColor
+ 3843:  define_field "card-cover-l"
+ 3848:  object
+ 3849:  push_atom_value "#3a3a3c"
+ 3854:  define_field color
+ 3859:  define_field "card-title-l"
+ 3864:  object
+ 3865:  push_atom_value "#636366"
+ 3870:  define_field color
+ 3875:  define_field "card-author-l"
+ 3880:  object
+ 3881:  push_atom_value "rgba(0,0,0,0.88)"
+ 3886:  define_field backgroundColor
+ 3891:  define_field "overlay-l"
+ 3896:  object
+ 3897:  push_atom_value "#ffffff"
+ 3902:  define_field backgroundColor
+ 3907:  define_field "panel-l"
+ 3912:  object
+ 3913:  push_atom_value "#3a3a3c"
+ 3918:  define_field color
+ 3923:  define_field "panel-title-l"
+ 3928:  object
+ 3929:  push_atom_value "#636366"
+ 3934:  define_field color
+ 3939:  define_field "panel-meta-l"
+ 3944:  object
+ 3945:  push_atom_value "#ffffff"
+ 3950:  define_field backgroundColor
+ 3955:  define_field "chapter-empty-l"
+ 3960:  object
+ 3961:  push_atom_value "#ffffff"
+ 3966:  define_field backgroundColor
+ 3971:  define_field "chapter-item-l"
+ 3976:  object
+ 3977:  push_atom_value "#aeaeb2"
+ 3982:  define_field color
+ 3987:  define_field "chapter-num-l"
+ 3992:  object
+ 3993:  push_atom_value "#3a3a3c"
+ 3998:  define_field color
+ 4003:  define_field "chapter-name-l"
+ 4008:  object
+ 4009:  push_atom_value "#aeaeb2"
+ 4014:  define_field color
+ 4019:  define_field "chapter-arrow-l"
+ 4024:  object
+ 4025:  push_atom_value "#ffffff"
+ 4030:  define_field backgroundColor
+ 4035:  define_field "panel-btn-l"
+ 4040:  object
+ 4041:  push_atom_value "#ffffff"
+ 4046:  define_field backgroundColor
+ 4051:  define_field "panel-btn-primary-l"
+ 4056:  object
+ 4057:  push_atom_value "#3a3a3c"
+ 4062:  define_field color
+ 4067:  define_field "panel-btn-text-l"
+ 4072:  object
+ 4073:  push_atom_value "#ffffff"
+ 4078:  define_field color
+ 4083:  define_field "panel-btn-dark-l"
+ 4088:  object
+ 4089:  push_atom_value "#ffffff"
+ 4094:  define_field backgroundColor
+ 4099:  define_field "reader-l"
+ 4104:  object
+ 4105:  push_atom_value "#e7eaee"
+ 4110:  define_field backgroundColor
+ 4115:  push_atom_value "rgba(0,0,0,0.05)"
+ 4120:  define_field color
+ 4125:  define_field "reader-sidebar-l"
+ 4130:  object
+ 4131:  push_atom_value "#f2f2f7"
+ 4136:  define_field backgroundColor
+ 4141:  define_field "reader-icon-button-l"
+ 4146:  object
+ 4147:  push_atom_value "#ffffff"
+ 4152:  define_field backgroundColor
+ 4157:  define_field "reader-main-l"
+ 4162:  object
+ 4163:  push_atom_value "#1c1c1e"
+ 4168:  define_field color
+ 4173:  define_field "reader-title-l"
+ 4178:  object
+ 4179:  push_atom_value "#6b6b70"
+ 4184:  define_field color
+ 4189:  define_field "reader-count-l"
+ 4194:  object
+ 4195:  push_atom_value "#f2f2f7"
+ 4200:  define_field backgroundColor
+ 4205:  define_field "reader-turning-l"
+ 4210:  object
+ 4211:  push_atom_value "#1c1c1e"
+ 4216:  define_field color
+ 4221:  define_field "reader-turning-text-l"
+ 4226:  object
+ 4227:  push_atom_value "#ffffff"
+ 4232:  define_field backgroundColor
+ 4237:  define_field "reader-img-item-l"
+ 4242:  object
+ 4243:  push_atom_value "rgba(0,0,0,0.6)"
+ 4248:  define_field backgroundColor
+ 4253:  define_field "settings-mask-l"
+ 4258:  object
+ 4259:  push_atom_value "#f2f2f7"
+ 4264:  define_field backgroundColor
+ 4269:  define_field "settings-panel-l"
+ 4274:  object
+ 4275:  push_atom_value "#6b6b70"
+ 4280:  define_field color
+ 4285:  define_field "settings-title-l"
+ 4290:  object
+ 4291:  push_atom_value "#f2f2f7"
+ 4296:  define_field backgroundColor
+ 4301:  define_field "settings-card-l"
+ 4306:  object
+ 4307:  push_atom_value "#1c1c1e"
+ 4312:  define_field color
+ 4317:  define_field "settings-card-title-l"
+ 4322:  object
+ 4323:  push_atom_value "#6b6b70"
+ 4328:  define_field color
+ 4333:  define_field "settings-card-value-l"
+ 4338:  object
+ 4339:  push_atom_value "rgba(0,0,0,0.06)"
+ 4344:  define_field backgroundColor
+ 4349:  define_field "settings-action-l"
+ 4354:  object
+ 4355:  push_atom_value "#1c1c1e"
+ 4360:  define_field color
+ 4365:  define_field "settings-action-text-l"
+ 4370:  call_method 2
+ 4373:  put_field style
+ 4378:  get_var_ref_check 15: m
+ 4381:  push_atom_value "src/pages/apps/comic/comic.vue"
+ 4386:  put_field __file
+ 4391:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: e parent:loc1 const
+    1: n parent:loc7 const
+    2: c parent:loc8 const
+  stack_size: 9
+  opcodes:
+    0:  object
+    1:  null
+    2:  define_field bridge
+    7:  null
+    8:  define_field Fetch
+   13:  null
+   14:  define_field Dbase
+   19:  null
+   20:  define_field shell
+   25:  get_var_ref_check 0: e
+   28:  define_field baseUrl
+   33:  push_empty_string
+   34:  define_field keyword
+   39:  array_from 0
+   42:  define_field comics
+   47:  push_atom_value history
+   52:  define_field tab
+   57:  push_atom_value "\u00e6\u0097\u00a0\u00e9\u0098\u0085\u00e8\u00af\u00bb\u00e8\u00ae\u00b0\u00e5\u00bd\u0095"
+   62:  define_field tipText
+   67:  push_1 1
+   68:  lnot
+   69:  define_field isLoading
+   74:  push_1 1
+   75:  lnot
+   76:  define_field storageCleaned
+   81:  push_1 1
+   82:  lnot
+   83:  define_field showAlbum
+   88:  object
+   89:  define_field album
+   94:  push_1 1
+   95:  lnot
+   96:  define_field albumLoading
+  101:  push_1 1
+  102:  lnot
+  103:  define_field showReader
+  108:  push_empty_string
+  109:  define_field rPhotoId
+  114:  push_0 0
+  115:  define_field rPage
+  120:  push_0 0
+  121:  define_field rTotal
+  126:  push_empty_string
+  127:  define_field rTitle
+  132:  push_0 0
+  133:  define_field rChapterIdx
+  138:  array_from 0
+  141:  define_field rChapters
+  146:  push_empty_string
+  147:  define_field rAlbumId
+  152:  push_empty_string
+  153:  define_field rAlbumTitle
+  158:  array_from 0
+  161:  define_field rImages
+  166:  object
+  167:  define_field rLocalMap
+  172:  object
+  173:  define_field rConvertingMap
+  178:  push_0 0
+  179:  define_field imgRetryCount
+  184:  push_1 1
+  185:  define_field rScale
+  190:  push_1 1
+  191:  lnot
+  192:  define_field rShowSettings
+  197:  push_1 1
+  198:  lnot
+  199:  define_field rLoadingImage
+  204:  push_0 0
+  205:  lnot
+  206:  define_field rShowSidebar
+  211:  get_var Math
+  216:  get_field2 max
+  221:  push_1 1
+  222:  get_var_ref_check 1: n
+  225:  get_var Math
+  230:  get_field2 round
+  235:  push_const8 0: 0.39
+  237:  get_var_ref_check 2: c
+  240:  mul
+  241:  call_method 1
+  244:  sub
+  245:  call_method 2
+  248:  define_field vw
+  253:  get_var_ref_check 2: c
+  256:  define_field vh
+  261:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field vw
+    8:  get_loc0 0: this
+    9:  get_field lineCount
+   14:  div
+   15:  push_const8 0: 0.07
+   17:  get_loc0 0: this
+   18:  get_field vh
+   23:  mul
+   24:  sub
+   25:  push_1 1
+   26:  sub
+   27:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  push_const8 0: 1.35
+    4:  get_loc0 0: this
+    5:  get_field coverWidth
+   10:  mul
+   11:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_var Math
+    7:  get_field2 floor
+   12:  get_loc1 1: this
+   13:  get_field vw
+   18:  push_const8 0: 0.75
+   20:  get_loc1 1: this
+   21:  get_field vh
+   26:  mul
+   27:  div
+   28:  call_method 1
+   31:  set_loc0 0: t
+   32:  push_2 2
+   33:  lt
+   34:  if_false8 38
+   36:  push_2 2
+   37:  return
+   38:  get_loc0 0: t
+   39:  push_6 6
+   40:  gt
+   41:  if_false8 45
+   43:  push_6 6
+   44:  return
+   45:  get_loc0 0: t
+   46:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  array_from 0
+    5:  put_loc0 0: t
+    6:  get_loc2 2: this
+    7:  get_field album
+   12:  get_field author
+   17:  dup
+   18:  if_false8 41
+   20:  drop
+   21:  get_loc0 0: t
+   22:  get_field2 push
+   27:  get_loc2 2: this
+   28:  get_field album
+   33:  get_field author
+   38:  call_method 1
+   41:  drop
+   42:  get_loc2 2: this
+   43:  get_field album
+   48:  get_field chapters
+   53:  dup
+   54:  if_true8 60
+   56:  drop
+   57:  array_from 0
+   60:  get_length
+   61:  set_loc1 1: e
+   62:  dup
+   63:  if_false8 82
+   65:  drop
+   66:  get_loc0 0: t
+   67:  get_field2 push
+   72:  get_loc1 1: e
+   73:  push_atom_value "\u00e8\u00af\u009d"
+   78:  add
+   79:  call_method 1
+   82:  drop
+   83:  get_loc0 0: t
+   84:  get_field2 join
+   89:  push_atom_value " \u00c2\u00b7 "
+   94:  call_method 1
+   97:  dup
+   98:  if_true8 102
+  100:  drop
+  101:  push_empty_string
+  102:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  put_loc0 0: t
+    4:  get_var Array
+    9:  get_field2 isArray
+   14:  get_loc1 1: this
+   15:  get_field rImages
+   20:  call_method 1
+   23:  if_false8 53
+   25:  push_0 0
+   26:  get_loc1 1: this
+   27:  get_field rImages
+   32:  get_length
+   33:  strict_neq
+   34:  if_false8 53
+   36:  get_loc1 1: this
+   37:  get_field rImages
+   42:  get_field2 map
+   47:  fclosure8 0: [bytecode <null>]
+   49:  call_method 1
+   52:  return
+   53:  array_from 0
+   56:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: e r
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: e
+    1:  if_false8 15
+    3:  push_atom_value string
+    8:  get_arg0 0: e
+    9:  typeof
+   10:  eq
+   11:  if_false8 15
+   13:  get_arg0 0: e
+   14:  return
+   15:  get_var_ref0 0: t
+   16:  get_field2 getImgUrl
+   21:  get_arg1 1: r
+   22:  call_method 1
+   25:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var this
+  closure vars:
+    0: c parent:loc8 const
+    1: n parent:loc7 const
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field rShowSidebar
+    8:  if_false8 18
+   10:  push_const8 0: 0.39
+   12:  get_var_ref_check 0: c
+   15:  mul
+   16:  goto8 24
+   18:  push_const8 1: 0.12
+   20:  get_var_ref_check 0: c
+   23:  mul
+   24:  put_loc0 0: t
+   25:  get_var_ref_check 1: n
+   28:  get_loc0 0: t
+   29:  sub
+   30:  put_loc1 1: e
+   31:  get_var Math
+   36:  get_field2 min
+   41:  get_loc1 1: e
+   42:  push_const8 2: 1.05
+   44:  get_var_ref_check 0: c
+   47:  mul
+   48:  tail_call_method 2
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field readerBaseWidth
+    8:  get_loc0 0: this
+    9:  get_field rScale
+   14:  mul
+   15:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  put_loc0 0: t
+    4:  get_loc1 1: this
+    5:  push_0 0
+    6:  lnot
+    7:  put_field _pageAlive
+   12:  get_loc1 1: this
+   13:  get_var setTimeout
+   18:  fclosure8 0: [bytecode <null>]
+   20:  push_i16 600
+   23:  call2 2
+   24:  put_field _bridgeInitTimer
+   29:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  null
+    2:  put_field _bridgeInitTimer
+    7:  get_var_ref0 0: t
+    8:  get_field _pageAlive
+   13:  dup
+   14:  if_false8 26
+   16:  drop
+   17:  get_var_ref0 0: t
+   18:  get_field2 initBridge
+   23:  call_method 0
+   26:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_1 1
+    4:  lnot
+    5:  put_field _pageAlive
+   10:  get_loc0 0: this
+   11:  get_field _bridgeInitTimer
+   16:  dup
+   17:  if_false8 32
+   19:  drop
+   20:  get_var clearTimeout
+   25:  get_loc0 0: this
+   26:  get_field _bridgeInitTimer
+   31:  call1 1
+   32:  drop
+   33:  get_loc0 0: this
+   34:  null
+   35:  put_field _bridgeInitTimer
+   40:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  stack_size: 0
+  opcodes:
+    0:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var r
+    3: var a
+    4: var i
+    5: var o
+    6: catch t [level:9 next:-1]
+    7: var this
+  closure vars:
+    0: l parent:loc9 const
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc8 7: this
+    3:  get_loc8 7: this
+    5:  get_field Dbase
+   10:  if_false 308
+   15:  get_loc8 7: this
+   17:  get_field rAlbumId
+   22:  if_false 308
+   27:  catch 298
+   32:  get_var_ref_check 0: l
+   35:  put_loc0 0: t
+   36:  get_loc8 7: this
+   38:  get_field Dbase
+   43:  get_field2 read
+   48:  get_loc0 0: t
+   49:  call_method 1
+   52:  put_loc1 1: e
+   53:  get_var Array
+   58:  get_field2 isArray
+   63:  get_loc1 1: e
+   64:  call_method 1
+   67:  dup
+   68:  if_true8 75
+   70:  drop
+   71:  array_from 0
+   74:  set_loc1 1: e
+   75:  drop
+   76:  get_loc8 7: this
+   78:  get_field rAlbumId
+   83:  put_loc2 2: r
+   84:  push_1 1
+   85:  lnot
+   86:  put_loc3 3: a
+   87:  push_0 0
+   88:  put_loc8 4: i
+   90:  get_loc8 4: i
+   92:  get_loc1 1: e
+   93:  get_length
+   94:  lt
+   95:  if_false8 125
+   97:  get_loc1 1: e
+   98:  get_loc8 4: i
+  100:  get_array_el
+  101:  if_false8 121
+  103:  get_loc1 1: e
+  104:  get_loc8 4: i
+  106:  get_array_el
+  107:  get_field album_id
+  112:  get_loc2 2: r
+  113:  strict_eq
+  114:  if_false8 121
+  116:  push_0 0
+  117:  lnot
+  118:  put_loc3 3: a
+  119:  goto8 125
+  121:  inc_loc 4: i
+  123:  goto8 90
+  125:  get_loc3 3: a
+  126:  if_false8 161
+  128:  get_var $falcon
+  133:  get_field2 trigger
+  138:  push_atom_value toast
+  143:  object
+  144:  push_atom_value "\u00e5\u00b7\u00b2\u00e5\u009c\u00a8\u00e6\u0094\u00b6\u00e8\u0097\u008f\u00e4\u00b8\u00ad"
+  149:  define_field text
+  154:  call_method 2
+  157:  drop
+  158:  goto16 296
+  161:  get_loc8 7: this
+  163:  get_field2 coverUrl
+  168:  get_loc8 7: this
+  170:  get_field album
+  175:  if_false8 200
+  177:  get_loc8 7: this
+  179:  get_field album
+  184:  get_field album_id
+  189:  if_false8 200
+  191:  get_loc8 7: this
+  193:  get_field album
+  198:  goto8 207
+  200:  object
+  201:  get_loc2 2: r
+  202:  define_field album_id
+  207:  call_method 1
+  210:  put_loc8 5: o
+  212:  get_loc1 1: e
+  213:  get_field2 unshift
+  218:  object
+  219:  get_loc2 2: r
+  220:  define_field album_id
+  225:  get_loc8 7: this
+  227:  get_field rAlbumTitle
+  232:  define_field title
+  237:  get_loc8 5: o
+  239:  define_field cover_proxy
+  244:  call_method 1
+  247:  drop
+  248:  get_loc8 7: this
+  250:  get_field Dbase
+  255:  get_field2 write
+  260:  get_loc0 0: t
+  261:  get_loc1 1: e
+  262:  call_method 2
+  265:  drop
+  266:  get_var $falcon
+  271:  get_field2 trigger
+  276:  push_atom_value toast
+  281:  object
+  282:  push_atom_value "\u00e5\u00b7\u00b2\u00e5\u008a\u00a0\u00e5\u0085\u00a5\u00e6\u0094\u00b6\u00e8\u0097\u008f"
+  287:  define_field text
+  292:  call_method 2
+  295:  drop
+  296:  drop
+  297:  return_undef
+  298:  put_loc8 6: t
+  300:  catch 307
+  305:  drop
+  306:  return_undef
+  307:  throw
+  308:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field rPhotoId
+    8:  lnot
+    9:  if_false8 13
+   11:  push_empty_string
+   12:  return
+   13:  get_loc1 1: this
+   14:  get_field rPhotoId
+   19:  push_atom_value _
+   24:  add
+   25:  get_arg0 0: t
+   26:  add
+   27:  put_loc0 0: e
+   28:  get_loc1 1: this
+   29:  get_field rLocalMap
+   34:  if_false8 61
+   36:  get_loc1 1: this
+   37:  get_field rLocalMap
+   42:  get_loc0 0: e
+   43:  get_array_el
+   44:  if_false8 61
+   46:  push_atom_value "file://"
+   51:  get_loc1 1: this
+   52:  get_field rLocalMap
+   57:  get_loc0 0: e
+   58:  get_array_el
+   59:  add
+   60:  return
+   61:  get_loc1 1: this
+   62:  get_field rImages
+   67:  if_false8 107
+   69:  get_loc1 1: this
+   70:  get_field rImages
+   75:  get_length
+   76:  if_false8 107
+   78:  get_loc1 1: this
+   79:  get_field rImages
+   84:  get_arg0 0: t
+   85:  get_array_el
+   86:  if_false8 107
+   88:  get_loc1 1: this
+   89:  get_field2 imageUrl
+   94:  get_loc1 1: this
+   95:  get_field rImages
+  100:  get_arg0 0: t
+  101:  get_array_el
+  102:  get_arg0 0: t
+  103:  call_method 2
+  106:  return
+  107:  push_empty_string
+  108:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field $page
+    8:  dup
+    9:  if_false8 41
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field $page
+   18:  get_field finish
+   23:  dup
+   24:  if_false8 41
+   26:  drop
+   27:  get_loc0 0: this
+   28:  get_field $page
+   33:  get_field2 finish
+   38:  call_method 0
+   41:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_arg0 0: t
+    3:  if_false 172
+    8:  get_arg0 0: t
+    9:  get_field cover_proxy
+   14:  if_false8 60
+   16:  push_0 0
+   17:  get_arg0 0: t
+   18:  get_field cover_proxy
+   23:  get_field2 indexOf
+   28:  push_atom_value http
+   33:  call_method 1
+   36:  strict_eq
+   37:  if_false8 46
+   39:  get_arg0 0: t
+   40:  get_field cover_proxy
+   45:  return
+   46:  get_loc0 0: this
+   47:  get_field baseUrl
+   52:  get_arg0 0: t
+   53:  get_field cover_proxy
+   58:  add
+   59:  return
+   60:  get_arg0 0: t
+   61:  get_field cover
+   66:  if_false8 142
+   68:  push_0 0
+   69:  get_arg0 0: t
+   70:  get_field cover
+   75:  get_field2 indexOf
+   80:  push_atom_value http
+   85:  call_method 1
+   88:  strict_eq
+   89:  if_false8 98
+   91:  get_arg0 0: t
+   92:  get_field cover
+   97:  return
+   98:  push_0 0
+   99:  get_arg0 0: t
+  100:  get_field cover
+  105:  get_field2 indexOf
+  110:  push_atom_value "/"
+  115:  call_method 1
+  118:  strict_eq
+  119:  if_false8 135
+  121:  get_loc0 0: this
+  122:  get_field baseUrl
+  127:  get_arg0 0: t
+  128:  get_field cover
+  133:  add
+  134:  return
+  135:  get_arg0 0: t
+  136:  get_field cover
+  141:  return
+  142:  get_arg0 0: t
+  143:  get_field album_id
+  148:  if_false8 170
+  150:  get_loc0 0: this
+  151:  get_field baseUrl
+  156:  push_atom_value "/jmcomic/cover/"
+  161:  add
+  162:  get_arg0 0: t
+  163:  get_field album_id
+  168:  add
+  169:  return
+  170:  push_empty_string
+  171:  return
+  172:  push_empty_string
+  173:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: var r
+    1: var a
+    2: var i
+    3: var o
+    4: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc8 4: this
+    3:  get_arg0 0: t
+    4:  lnot
+    5:  if_false8 9
+    7:  push_empty_string
+    8:  return
+    9:  push_atom_value string
+   14:  get_arg0 0: t
+   15:  typeof
+   16:  eq
+   17:  if_false8 69
+   19:  push_0 0
+   20:  get_arg0 0: t
+   21:  get_field2 indexOf
+   26:  push_atom_value http
+   31:  call_method 1
+   34:  strict_eq
+   35:  if_false8 39
+   37:  get_arg0 0: t
+   38:  return
+   39:  push_0 0
+   40:  get_arg0 0: t
+   41:  get_field2 indexOf
+   46:  push_atom_value "/jmcomic/"
+   51:  call_method 1
+   54:  strict_eq
+   55:  if_false8 67
+   57:  get_loc8 4: this
+   59:  get_field baseUrl
+   64:  get_arg0 0: t
+   65:  add
+   66:  return
+   67:  get_arg0 0: t
+   68:  return
+   69:  get_arg0 0: t
+   70:  get_field smart_url
+   75:  if_false8 122
+   77:  push_0 0
+   78:  get_arg0 0: t
+   79:  get_field smart_url
+   84:  get_field2 indexOf
+   89:  push_atom_value http
+   94:  call_method 1
+   97:  strict_eq
+   98:  if_false8 107
+  100:  get_arg0 0: t
+  101:  get_field smart_url
+  106:  return
+  107:  get_loc8 4: this
+  109:  get_field baseUrl
+  114:  get_arg0 0: t
+  115:  get_field smart_url
+  120:  add
+  121:  return
+  122:  get_arg0 0: t
+  123:  get_field url
+  128:  dup
+  129:  if_true8 133
+  131:  drop
+  132:  push_empty_string
+  133:  set_loc0 0: r
+  134:  put_loc1 1: a
+  135:  get_loc0 0: r
+  136:  get_field2 match
+  141:  push_const8 0: 1"\\[(https?:\\/\\/[^\\]]+)\\]"
+  143:  push_const8 1: 1"\u0000\u0002\u0000a\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001[\u0000\u000b\u0001\u0001h\u0000\u0001t\u0000\u0001t\u0000\u0001p\u0000\u001c\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001s\u0000\n\u0001:\u0000\u0001/\u0000\u0001/\u0000\u001c\u000c\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0002\u0000\u0000\u0000\\\u0000^\u0000\u00ff\u00ff\n\u000c\u0001\u0001]\u0000\u000c\u0000\n"
+  145:  regexp
+  146:  call_method 1
+  149:  set_loc2 2: i
+  150:  dup
+  151:  if_false8 165
+  153:  drop
+  154:  get_loc2 2: i
+  155:  push_1 1
+  156:  get_array_el
+  157:  dup
+  158:  if_false8 165
+  160:  drop
+  161:  get_loc2 2: i
+  162:  push_1 1
+  163:  get_array_el
+  164:  set_loc1 1: a
+  165:  drop
+  166:  get_loc1 1: a
+  167:  lnot
+  168:  if_false8 172
+  170:  push_empty_string
+  171:  return
+  172:  get_loc8 4: this
+  174:  get_field imgRetryCount
+  179:  push_0 0
+  180:  gt
+  181:  if_false8 198
+  183:  push_atom_value "&retry="
+  188:  get_loc8 4: this
+  190:  get_field imgRetryCount
+  195:  add
+  196:  goto8 199
+  198:  push_empty_string
+  199:  put_loc3 3: o
+  200:  push_atom_value number
+  205:  get_arg1 1: e
+  206:  typeof
+  207:  eq
+  208:  dup
+  209:  if_false8 229
+  211:  drop
+  212:  get_arg1 1: e
+  213:  push_0 0
+  214:  gte
+  215:  dup
+  216:  if_false8 229
+  218:  drop
+  219:  get_loc3 3: o
+  220:  push_atom_value "&page="
+  225:  get_arg1 1: e
+  226:  add
+  227:  add
+  228:  set_loc3 3: o
+  229:  drop
+  230:  get_loc8 4: this
+  232:  get_field baseUrl
+  237:  push_atom_value "/jmcomic/image?url="
+  242:  add
+  243:  get_var encodeURIComponent
+  248:  get_loc1 1: a
+  249:  call1 1
+  250:  add
+  251:  get_loc3 3: o
+  252:  add
+  253:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var r
+    2: var a
+  stack_size: 4
+  opcodes:
+    0:  get_arg0 0: t
+    1:  lnot
+    2:  dup
+    3:  if_true8 14
+    5:  drop
+    6:  push_atom_value string
+   11:  get_arg0 0: t
+   12:  typeof
+   13:  eq
+   14:  if_false8 18
+   16:  push_empty_string
+   17:  return
+   18:  get_arg0 0: t
+   19:  get_field url
+   24:  dup
+   25:  if_true8 29
+   27:  drop
+   28:  push_empty_string
+   29:  set_loc0 0: e
+   30:  put_loc1 1: r
+   31:  get_loc0 0: e
+   32:  get_field2 match
+   37:  push_const8 0: 1"\\[(https?:\\/\\/[^\\]]+)\\]"
+   39:  push_const8 1: 1"\u0000\u0002\u0000a\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001[\u0000\u000b\u0001\u0001h\u0000\u0001t\u0000\u0001t\u0000\u0001p\u0000\u001c\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001s\u0000\n\u0001:\u0000\u0001/\u0000\u0001/\u0000\u001c\u000c\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0002\u0000\u0000\u0000\\\u0000^\u0000\u00ff\u00ff\n\u000c\u0001\u0001]\u0000\u000c\u0000\n"
+   41:  regexp
+   42:  call_method 1
+   45:  set_loc2 2: a
+   46:  dup
+   47:  if_false8 61
+   49:  drop
+   50:  get_loc2 2: a
+   51:  push_1 1
+   52:  get_array_el
+   53:  dup
+   54:  if_false8 61
+   56:  drop
+   57:  get_loc2 2: a
+   58:  push_1 1
+   59:  get_array_el
+   60:  set_loc1 1: r
+   61:  drop
+   62:  get_loc1 1: r
+   63:  dup
+   64:  if_true8 68
+   66:  drop
+   67:  push_empty_string
+   68:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t e r
+  locals:
+    0: var a
+    1: var i
+  stack_size: 9
+  opcodes:
+    0:  get_arg1 1: e
+    1:  if_false8 16
+    3:  push_atom_value object
+    8:  get_arg1 1: e
+    9:  typeof
+   10:  eq
+   11:  if_false8 16
+   13:  get_arg1 1: e
+   14:  goto8 17
+   16:  object
+   17:  put_loc0 0: a
+   18:  get_arg2 2: r
+   19:  if_false8 34
+   21:  push_atom_value object
+   26:  get_arg2 2: r
+   27:  typeof
+   28:  eq
+   29:  if_false8 34
+   31:  get_arg2 2: r
+   32:  goto8 35
+   34:  object
+   35:  put_loc1 1: i
+   36:  get_var Object
+   41:  get_field2 assign
+   46:  object
+   47:  get_loc1 1: i
+   48:  get_loc0 0: a
+   49:  object
+   50:  get_loc0 0: a
+   51:  get_field album_id
+   56:  dup
+   57:  if_true8 76
+   59:  drop
+   60:  get_loc1 1: i
+   61:  get_field album_id
+   66:  dup
+   67:  if_true8 76
+   69:  drop
+   70:  get_arg0 0: t
+   71:  dup
+   72:  if_true8 76
+   74:  drop
+   75:  push_empty_string
+   76:  define_field album_id
+   81:  get_loc0 0: a
+   82:  get_field cover_proxy
+   87:  dup
+   88:  if_true8 102
+   90:  drop
+   91:  get_loc1 1: i
+   92:  get_field cover_proxy
+   97:  dup
+   98:  if_true8 102
+  100:  drop
+  101:  push_empty_string
+  102:  define_field cover_proxy
+  107:  get_var Array
+  112:  get_field2 isArray
+  117:  get_loc0 0: a
+  118:  get_field chapters
+  123:  call_method 1
+  126:  if_false8 136
+  128:  get_loc0 0: a
+  129:  get_field chapters
+  134:  goto8 168
+  136:  get_var Array
+  141:  get_field2 isArray
+  146:  get_loc1 1: i
+  147:  get_field chapters
+  152:  call_method 1
+  155:  if_false8 165
+  157:  get_loc1 1: i
+  158:  get_field chapters
+  163:  goto8 168
+  165:  array_from 0
+  168:  define_field chapters
+  173:  tail_call_method 4
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+  stack_size: 4
+  opcodes:
+    0:  get_arg0 0: t
+    1:  if_false8 16
+    3:  push_atom_value object
+    8:  get_arg0 0: t
+    9:  typeof
+   10:  eq
+   11:  if_false8 16
+   13:  get_arg0 0: t
+   14:  goto8 17
+   16:  object
+   17:  put_loc0 0: e
+   18:  object
+   19:  get_loc0 0: e
+   20:  get_field page_count
+   25:  dup
+   26:  if_true8 30
+   28:  drop
+   29:  push_0 0
+   30:  define_field page_count
+   35:  get_var Array
+   40:  get_field2 isArray
+   45:  get_loc0 0: e
+   46:  get_field images
+   51:  call_method 1
+   54:  if_false8 64
+   56:  get_loc0 0: e
+   57:  get_field images
+   62:  goto8 67
+   64:  array_from 0
+   67:  define_field images
+   72:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_var JSON
+    7:  get_field2 parse
+   12:  get_loc1 1: this
+   13:  get_field2 resText
+   18:  get_arg0 0: t
+   19:  call_method 1
+   22:  call_method 1
+   25:  put_loc0 0: e
+   26:  push_1 1
+   27:  get_loc0 0: e
+   28:  get_field code
+   33:  strict_neq
+   34:  if_false8 61
+   36:  get_var Error
+   41:  dup
+   42:  get_loc0 0: e
+   43:  get_field error
+   48:  dup
+   49:  if_true8 57
+   51:  drop
+   52:  push_atom_value "\u00e6\u008e\u00a5\u00e5\u008f\u00a3\u00e9\u0094\u0099\u00e8\u00af\u00af"
+   57:  call_constructor 1
+   60:  throw
+   61:  get_loc0 0: e
+   62:  get_field data
+   67:  dup
+   68:  if_true8 72
+   70:  drop
+   71:  object
+   72:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field Fetch
+    8:  if_false8 61
+   10:  get_loc0 0: this
+   11:  get_field Fetch
+   16:  get_field2 fetch
+   21:  get_loc0 0: this
+   22:  get_field baseUrl
+   27:  get_arg0 0: t
+   28:  add
+   29:  object
+   30:  push_atom_value GET
+   35:  define_field method
+   40:  push_i8 30
+   42:  define_field timeout
+   47:  call_method 2
+   50:  get_field2 then
+   55:  fclosure8 0: [bytecode <null>]
+   57:  call_method 1
+   60:  return
+   61:  get_var Promise
+   66:  get_field2 reject
+   71:  get_var Error
+   76:  dup
+   77:  push_atom_value "Fetch \u00e6\u009c\u00aa\u00e5\u0088\u009d\u00e5\u00a7\u008b\u00e5\u008c\u0096"
+   82:  call_constructor 1
+   85:  call_method 1
+   88:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 4
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_field ok
+    6:  lnot
+    7:  if_false8 31
+    9:  get_var Error
+   14:  dup
+   15:  push_atom_value "HTTP "
+   20:  get_arg0 0: t
+   21:  get_field status
+   26:  add
+   27:  call_constructor 1
+   30:  throw
+   31:  get_arg0 0: t
+   32:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: catch t [level:4 next:-1]
+    2: var this
+  closure vars:
+    0: l parent:loc9 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field Dbase
+    8:  lnot
+    9:  if_false8 15
+   11:  array_from 0
+   14:  return
+   15:  catch 62
+   20:  get_loc2 2: this
+   21:  get_field Dbase
+   26:  get_field2 read
+   31:  get_var_ref_check 0: l
+   34:  call_method 1
+   37:  put_loc0 0: t
+   38:  get_var Array
+   43:  get_field2 isArray
+   48:  get_loc0 0: t
+   49:  call_method 1
+   52:  if_false8 57
+   54:  get_loc0 0: t
+   55:  goto8 60
+   57:  array_from 0
+   60:  nip
+   61:  return
+   62:  put_loc1 1: t
+   63:  catch 73
+   68:  array_from 0
+   71:  nip
+   72:  return
+   73:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: catch t [level:4 next:-1]
+    2: var this
+  closure vars:
+    0: h parent:loc10 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field Dbase
+    8:  lnot
+    9:  if_false8 15
+   11:  array_from 0
+   14:  return
+   15:  catch 62
+   20:  get_loc2 2: this
+   21:  get_field Dbase
+   26:  get_field2 read
+   31:  get_var_ref_check 0: h
+   34:  call_method 1
+   37:  put_loc0 0: t
+   38:  get_var Array
+   43:  get_field2 isArray
+   48:  get_loc0 0: t
+   49:  call_method 1
+   52:  if_false8 57
+   54:  get_loc0 0: t
+   55:  goto8 60
+   57:  array_from 0
+   60:  nip
+   61:  return
+   62:  put_loc1 1: t
+   63:  catch 73
+   68:  array_from 0
+   71:  nip
+   72:  return
+   73:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var r
+    2: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field2 getFavoriteList
+    8:  call_method 0
+   11:  put_loc0 0: e
+   12:  push_0 0
+   13:  put_loc1 1: r
+   14:  get_loc1 1: r
+   15:  get_loc0 0: e
+   16:  get_length
+   17:  lt
+   18:  if_false8 44
+   20:  get_loc0 0: e
+   21:  get_loc1 1: r
+   22:  get_array_el
+   23:  if_false8 40
+   25:  get_loc0 0: e
+   26:  get_loc1 1: r
+   27:  get_array_el
+   28:  get_field album_id
+   33:  get_arg0 0: t
+   34:  strict_eq
+   35:  if_false8 40
+   37:  push_0 0
+   38:  lnot
+   39:  return
+   40:  inc_loc 1: r
+   42:  goto8 14
+   44:  push_1 1
+   45:  lnot
+   46:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 0
+  opcodes:
+    0:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var r
+    2: var a
+    3: var i
+    4: var o
+    5: var s
+    6: var this
+  stack_size: 6
+  opcodes:
+    0:  push_this
+    1:  put_loc8 6: this
+    3:  get_loc8 6: this
+    5:  get_field imgRetryCount
+   10:  push_3 3
+   11:  lt
+   12:  if_false 232
+   17:  get_loc8 6: this
+   19:  set_loc0 0: e
+   20:  get_field shell
+   25:  if_false 220
+   30:  get_loc0 0: e
+   31:  get_field shell
+   36:  get_field exec
+   41:  if_false 220
+   46:  get_loc0 0: e
+   47:  get_field rImages
+   52:  if_false 220
+   57:  get_loc0 0: e
+   58:  get_field rImages
+   63:  get_arg0 0: t
+   64:  get_array_el
+   65:  if_false 220
+   70:  get_loc0 0: e
+   71:  get_field rPhotoId
+   76:  if_false 220
+   81:  get_loc0 0: e
+   82:  get_field rPhotoId
+   87:  push_atom_value _
+   92:  add
+   93:  get_arg0 0: t
+   94:  add
+   95:  put_loc1 1: r
+   96:  get_loc0 0: e
+   97:  get_field rConvertingMap
+  102:  get_loc1 1: r
+  103:  get_array_el
+  104:  lnot
+  105:  if_false8 220
+  107:  get_loc0 0: e
+  108:  get_field rLocalMap
+  113:  get_loc1 1: r
+  114:  get_array_el
+  115:  lnot
+  116:  if_false8 220
+  118:  object
+  119:  set_loc2 2: a
+  120:  get_loc1 1: r
+  121:  to_propkey2
+  122:  push_0 0
+  123:  lnot
+  124:  put_array_el
+  125:  get_loc0 0: e
+  126:  get_var Object
+  131:  get_field2 assign
+  136:  object
+  137:  get_loc0 0: e
+  138:  get_field rConvertingMap
+  143:  get_loc2 2: a
+  144:  call_method 3
+  147:  put_field rConvertingMap
+  152:  get_loc0 0: e
+  153:  get_field rImages
+  158:  get_arg0 0: t
+  159:  get_array_el
+  160:  get_field url
+  165:  dup
+  166:  if_true8 170
+  168:  drop
+  169:  push_empty_string
+  170:  set_loc3 3: i
+  171:  put_loc8 4: o
+  173:  get_loc3 3: i
+  174:  get_field2 match
+  179:  push_const8 0: 1"\\[(https?:\\/\\/[^\\]]+)\\]"
+  181:  push_const8 1: 1"\u0000\u0002\u0000a\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0001[\u0000\u000b\u0001\u0001h\u0000\u0001t\u0000\u0001t\u0000\u0001p\u0000\u001c\u0004\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u0001s\u0000\n\u0001:\u0000\u0001/\u0000\u0001/\u0000\u001c\u000c\u0000\u0000\u0000\u0001\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0002\u0000\u0000\u0000\\\u0000^\u0000\u00ff\u00ff\n\u000c\u0001\u0001]\u0000\u000c\u0000\n"
+  183:  regexp
+  184:  call_method 1
+  187:  set_loc8 5: s
+  189:  dup
+  190:  if_false8 207
+  192:  drop
+  193:  get_loc8 5: s
+  195:  push_1 1
+  196:  get_array_el
+  197:  dup
+  198:  if_false8 207
+  200:  drop
+  201:  get_loc8 5: s
+  203:  push_1 1
+  204:  get_array_el
+  205:  set_loc8 4: o
+  207:  drop
+  208:  get_var setTimeout
+  213:  fclosure8 2: [bytecode <null>]
+  215:  push_i8 10
+  217:  call2 2
+  218:  drop
+  219:  return_undef
+  220:  get_var setTimeout
+  225:  fclosure8 3: [bytecode <null>]
+  227:  push_i16 1000
+  230:  call2 2
+  231:  drop
+  232:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var a
+    1: var i
+    2: var s
+    3: var n
+    4: var c
+    5: catch t [level:5 next:-1]
+    6: var l
+  closure vars:
+    0: e local:loc0 var
+    1: t local:arg0 var
+    2: o local:loc4 var
+    3: r local:loc1 var
+  stack_size: 7
+  opcodes:
+    0:  catch 240
+    5:  push_atom_value "/tmp/comic_"
+   10:  get_var_ref0 0: e
+   11:  get_field rPhotoId
+   16:  add
+   17:  push_atom_value _
+   22:  add
+   23:  get_var_ref1 1: t
+   24:  add
+   25:  set_loc0 0: a
+   26:  push_atom_value ".webp"
+   31:  add
+   32:  put_loc1 1: i
+   33:  get_loc0 0: a
+   34:  push_atom_value ".jpg"
+   39:  add
+   40:  put_loc2 2: s
+   41:  get_var_ref0 0: e
+   42:  get_field shell
+   47:  get_field2 exec
+   52:  push_atom_value "rm -f \""
+   57:  get_loc1 1: i
+   58:  add
+   59:  push_atom_value "\" \""
+   64:  add
+   65:  get_loc2 2: s
+   66:  add
+   67:  push_atom_value "\" 2>/dev/null"
+   72:  add
+   73:  call_method 1
+   76:  drop
+   77:  get_var_ref0 0: e
+   78:  get_field shell
+   83:  get_field2 exec
+   88:  push_atom_value "curl -L --connect-timeout 10 --max-time 30 -o \""
+   93:  get_loc1 1: i
+   94:  add
+   95:  push_atom_value "\" \""
+  100:  add
+  101:  get_var_ref2 2: o
+  102:  add
+  103:  push_atom_value "\""
+  108:  add
+  109:  call_method 1
+  112:  drop
+  113:  get_var_ref0 0: e
+  114:  get_field shell
+  119:  get_field2 exec
+  124:  push_atom_value "ffmpeg -y -i \""
+  129:  get_loc1 1: i
+  130:  add
+  131:  push_atom_value "\" -frames:v 1 -q:v 2 \""
+  136:  add
+  137:  get_loc2 2: s
+  138:  add
+  139:  push_atom_value "\""
+  144:  add
+  145:  call_method 1
+  148:  drop
+  149:  get_var_ref0 0: e
+  150:  get_field shell
+  155:  get_field2 exec
+  160:  push_atom_value "ls -l \""
+  165:  get_loc2 2: s
+  166:  add
+  167:  push_atom_value "\" 2>/dev/null"
+  172:  add
+  173:  call_method 1
+  176:  set_loc3 3: n
+  177:  if_false8 237
+  179:  push_atom_value string
+  184:  get_loc3 3: n
+  185:  typeof
+  186:  eq
+  187:  if_false8 237
+  189:  push_minus1 -1
+  190:  get_loc3 3: n
+  191:  get_field2 indexOf
+  196:  get_loc2 2: s
+  197:  call_method 1
+  200:  strict_neq
+  201:  if_false8 237
+  203:  object
+  204:  set_loc8 4: c
+  206:  get_var_ref3 3: r
+  207:  get_loc2 2: s
+  208:  put_array_el
+  209:  get_var_ref0 0: e
+  210:  get_var Object
+  215:  get_field2 assign
+  220:  object
+  221:  get_var_ref0 0: e
+  222:  get_field rLocalMap
+  227:  get_loc8 4: c
+  229:  call_method 3
+  232:  put_field rLocalMap
+  237:  drop
+  238:  goto8 251
+  240:  put_loc8 5: t
+  242:  catch 250
+  247:  drop
+  248:  goto8 251
+  250:  throw
+  251:  object
+  252:  set_loc8 6: l
+  254:  get_var_ref3 3: r
+  255:  to_propkey2
+  256:  push_1 1
+  257:  lnot
+  258:  put_array_el
+  259:  get_var_ref0 0: e
+  260:  get_var Object
+  265:  get_field2 assign
+  270:  object
+  271:  get_var_ref0 0: e
+  272:  get_field rConvertingMap
+  277:  get_loc8 6: l
+  279:  call_method 3
+  282:  put_field rConvertingMap
+  287:  get_var_ref0 0: e
+  288:  get_field2 imgRetryCount
+  293:  inc
+  294:  put_field imgRetryCount
+  299:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: e local:loc0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: e
+    1:  get_field2 imgRetryCount
+    6:  inc
+    7:  put_field imgRetryCount
+   12:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_loc0 0: this
+    4:  get_field rShowSettings
+    9:  lnot
+   10:  put_field rShowSettings
+   15:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_arg0 0: t
+    4:  get_field detail
+    9:  get_field value
+   14:  push_i8 10
+   16:  div
+   17:  put_field rScale
+   22:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field rScale
+    8:  push_const8 0: 0.1
+   10:  add
+   11:  put_loc0 0: t
+   12:  get_loc1 1: this
+   13:  get_loc0 0: t
+   14:  push_2 2
+   15:  gt
+   16:  if_false8 21
+   18:  push_2 2
+   19:  goto8 41
+   21:  get_var Math
+   26:  get_field2 round
+   31:  push_i8 10
+   33:  get_loc0 0: t
+   34:  mul
+   35:  call_method 1
+   38:  push_i8 10
+   40:  div
+   41:  put_field rScale
+   46:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field rScale
+    8:  push_const8 0: 0.1
+   10:  sub
+   11:  put_loc0 0: t
+   12:  get_loc1 1: this
+   13:  get_loc0 0: t
+   14:  push_const8 1: 0.5
+   16:  lt
+   17:  if_false8 23
+   19:  push_const8 2: 0.5
+   21:  goto8 43
+   23:  get_var Math
+   28:  get_field2 round
+   33:  push_i8 10
+   35:  get_loc0 0: t
+   36:  mul
+   37:  call_method 1
+   40:  push_i8 10
+   42:  div
+   43:  put_field rScale
+   48:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_atom_value search
+    8:  put_field tab
+   13:  get_loc0 0: this
+   14:  get_field2 openKeyboardForSearch
+   19:  call_method 0
+   22:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_atom_value history
+    8:  put_field tab
+   13:  get_loc0 0: this
+   14:  get_field2 loadHistory
+   19:  call_method 0
+   22:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: catch t [level:7 next:-1]
+    2: var this
+  closure vars:
+    0: d parent:loc11 const
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field Dbase
+    8:  if_false8 99
+   10:  get_loc2 2: this
+   11:  get_field storageCleaned
+   16:  lnot
+   17:  if_false8 99
+   19:  get_loc2 2: this
+   20:  push_0 0
+   21:  lnot
+   22:  put_field storageCleaned
+   27:  catch 90
+   32:  push_atom_value function
+   37:  get_loc2 2: this
+   38:  get_field Dbase
+   43:  get_field remove
+   48:  typeof
+   49:  neq
+   50:  if_false8 54
+   52:  drop
+   53:  return_undef
+   54:  push_0 0
+   55:  put_loc0 0: t
+   56:  get_loc0 0: t
+   57:  get_var_ref_check 0: d
+   60:  get_length
+   61:  lt
+   62:  if_false8 88
+   64:  get_loc2 2: this
+   65:  get_field Dbase
+   70:  get_field2 remove
+   75:  get_var_ref_check 0: d
+   78:  get_loc0 0: t
+   79:  get_array_el
+   80:  call_method 1
+   83:  drop
+   84:  inc_loc 0: t
+   86:  goto8 56
+   88:  drop
+   89:  return_undef
+   90:  put_loc1 1: t
+   91:  catch 98
+   96:  drop
+   97:  return_undef
+   98:  throw
+   99:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var e
+    1: catch t [level:4 next:-1]
+    2: catch t [level:6 next:-1]
+    3: var this
+  closure vars:
+    0: t parent:loc0 const
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  catch 205
+    7:  null
+    8:  put_loc0 0: e
+    9:  catch 21
+   14:  get_var_ref_check 0: t
+   17:  put_loc0 0: e
+   18:  drop
+   19:  goto8 31
+   21:  put_loc1 1: t
+   22:  catch 30
+   27:  drop
+   28:  goto8 31
+   30:  throw
+   31:  get_loc0 0: e
+   32:  dup
+   33:  if_true8 58
+   35:  drop
+   36:  push_atom_value undefined
+   41:  get_var_undef bridge
+   46:  typeof
+   47:  eq
+   48:  dup
+   49:  if_true8 58
+   51:  drop
+   52:  get_var bridge
+   57:  set_loc0 0: e
+   58:  drop
+   59:  get_loc0 0: e
+   60:  dup
+   61:  if_false 202
+   66:  drop
+   67:  get_loc3 3: this
+   68:  get_loc0 0: e
+   69:  put_field bridge
+   74:  get_loc0 0: e
+   75:  get_field Fetch
+   80:  dup
+   81:  if_false8 97
+   83:  drop
+   84:  get_loc3 3: this
+   85:  get_loc0 0: e
+   86:  get_field Fetch
+   91:  insert2
+   92:  put_field Fetch
+   97:  drop
+   98:  get_loc3 3: this
+   99:  get_loc0 0: e
+  100:  get_field Datas
+  105:  dup
+  106:  if_true8 120
+  108:  drop
+  109:  get_loc0 0: e
+  110:  get_field Dbase
+  115:  dup
+  116:  if_true8 120
+  118:  drop
+  119:  null
+  120:  put_field Dbase
+  125:  get_loc3 3: this
+  126:  get_loc0 0: e
+  127:  get_field Shell
+  132:  dup
+  133:  if_true8 162
+  135:  drop
+  136:  get_loc0 0: e
+  137:  get_field default
+  142:  dup
+  143:  if_false8 157
+  145:  drop
+  146:  get_loc0 0: e
+  147:  get_field default
+  152:  get_field Shell
+  157:  dup
+  158:  if_true8 162
+  160:  drop
+  161:  null
+  162:  put_field shell
+  167:  get_loc3 3: this
+  168:  get_field2 cleanupLegacyComicStorage
+  173:  call_method 0
+  176:  drop
+  177:  push_atom_value history
+  182:  get_loc3 3: this
+  183:  get_field tab
+  188:  strict_eq
+  189:  dup
+  190:  if_false8 202
+  192:  drop
+  193:  get_loc3 3: this
+  194:  get_field2 loadHistory
+  199:  call_method 0
+  202:  drop
+  203:  drop
+  204:  return_undef
+  205:  put_loc2 2: t
+  206:  catch 213
+  211:  drop
+  212:  return_undef
+  213:  throw
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  get_arg0 0: t
+    1:  get_field text
+    6:  if_false8 18
+    8:  get_arg0 0: t
+    9:  get_field2 text
+   14:  call_method 0
+   17:  return
+   18:  get_arg0 0: t
+   19:  get_field body
+   24:  dup
+   25:  if_true8 39
+   27:  drop
+   28:  get_arg0 0: t
+   29:  get_field _body
+   34:  dup
+   35:  if_true8 39
+   37:  drop
+   38:  push_empty_string
+   39:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  push_atom_value string
+    5:  get_arg0 0: t
+    6:  typeof
+    7:  eq
+    8:  if_false8 12
+   10:  get_arg0 0: t
+   11:  return
+   12:  get_arg0 0: t
+   13:  if_false8 113
+   15:  push_atom_value object
+   20:  get_arg0 0: t
+   21:  typeof
+   22:  eq
+   23:  if_false8 113
+   25:  push_atom_value string
+   30:  get_arg0 0: t
+   31:  get_field value
+   36:  typeof
+   37:  eq
+   38:  if_false8 47
+   40:  get_arg0 0: t
+   41:  get_field value
+   46:  return
+   47:  push_atom_value string
+   52:  get_arg0 0: t
+   53:  get_field text
+   58:  typeof
+   59:  eq
+   60:  if_false8 69
+   62:  get_arg0 0: t
+   63:  get_field text
+   68:  return
+   69:  push_atom_value string
+   74:  get_arg0 0: t
+   75:  get_field data
+   80:  typeof
+   81:  eq
+   82:  if_false8 91
+   84:  get_arg0 0: t
+   85:  get_field data
+   90:  return
+   91:  push_atom_value string
+   96:  get_arg0 0: t
+   97:  get_field key
+  102:  typeof
+  103:  eq
+  104:  if_false8 113
+  106:  get_arg0 0: t
+  107:  get_field key
+  112:  return
+  113:  push_empty_string
+  114:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  put_loc0 0: t
+    4:  get_var $falcon
+    9:  get_field2 navTo
+   14:  push_atom_value tools_keyboard
+   19:  object
+   20:  get_loc0 0: t
+   21:  get_field keyword
+   26:  define_field data
+   31:  call_method 2
+   34:  drop
+   35:  fclosure8 0: [bytecode <null>]
+   37:  set_name e
+   42:  put_loc1 1: e
+   43:  get_var $falcon
+   48:  get_field2 on
+   53:  push_atom_value tools_keyboard
+   58:  get_loc1 1: e
+   59:  call_method 2
+   62:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: r
+  locals:
+    0: var a
+  closure vars:
+    0: e local:loc1 var
+    1: t local:loc0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var $falcon
+    5:  get_field2 off
+   10:  push_atom_value tools_keyboard
+   15:  get_var_ref0 0: e
+   16:  call_method 2
+   19:  drop
+   20:  get_var_ref1 1: t
+   21:  get_field2 normalizeKbData
+   26:  get_arg0 0: r
+   27:  get_field data
+   32:  call_method 1
+   35:  put_loc0 0: a
+   36:  get_var_ref1 1: t
+   37:  get_loc0 0: a
+   38:  put_field keyword
+   43:  get_loc0 0: a
+   44:  dup
+   45:  if_false8 83
+   47:  drop
+   48:  get_loc0 0: a
+   49:  get_field trim
+   54:  dup
+   55:  if_false8 83
+   57:  drop
+   58:  get_loc0 0: a
+   59:  get_field2 trim
+   64:  call_method 0
+   67:  get_length
+   68:  push_0 0
+   69:  gt
+   70:  dup
+   71:  if_false8 83
+   73:  drop
+   74:  get_var_ref1 1: t
+   75:  get_field2 doSearch
+   80:  call_method 0
+   83:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field Fetch
+    8:  if_false 153
+   13:  get_loc2 2: this
+   14:  get_field keyword
+   19:  if_false 153
+   24:  get_loc2 2: this
+   25:  get_field isLoading
+   30:  lnot
+   31:  if_false8 153
+   33:  get_loc2 2: this
+   34:  set_loc0 0: t
+   35:  get_field keyword
+   40:  get_field trim
+   45:  if_false8 63
+   47:  get_loc0 0: t
+   48:  get_field keyword
+   53:  get_field2 trim
+   58:  call_method 0
+   61:  goto8 69
+   63:  get_loc0 0: t
+   64:  get_field keyword
+   69:  push_atom_value " +\u00e9\u009d\u009eh"
+   74:  add
+   75:  put_loc1 1: e
+   76:  get_loc0 0: t
+   77:  push_0 0
+   78:  lnot
+   79:  put_field isLoading
+   84:  get_loc0 0: t
+   85:  array_from 0
+   88:  put_field comics
+   93:  get_loc0 0: t
+   94:  push_atom_value "\u00e6\u0090\u009c\u00e7\u00b4\u00a2\u00e4\u00b8\u00ad..."
+   99:  put_field tipText
+  104:  get_loc0 0: t
+  105:  get_field2 fetchApi
+  110:  push_atom_value "/jmcomic/search?keyword="
+  115:  get_var encodeURIComponent
+  120:  get_loc1 1: e
+  121:  call1 1
+  122:  add
+  123:  push_atom_value "&page=1"
+  128:  add
+  129:  call_method 1
+  132:  get_field2 then
+  137:  fclosure8 0: [bytecode <null>]
+  139:  call_method 1
+  142:  get_field2 catch
+  147:  fclosure8 1: [bytecode <null>]
+  149:  call_method 1
+  152:  drop
+  153:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: e
+  locals:
+    0: var r
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 parseApiResponse
+    6:  get_arg0 0: e
+    7:  call_method 1
+   10:  put_loc0 0: r
+   11:  get_var_ref0 0: t
+   12:  get_var Array
+   17:  get_field2 isArray
+   22:  get_loc0 0: r
+   23:  get_field results
+   28:  call_method 1
+   31:  if_false8 41
+   33:  get_loc0 0: r
+   34:  get_field results
+   39:  goto8 44
+   41:  array_from 0
+   44:  put_field comics
+   49:  get_var_ref0 0: t
+   50:  get_field comics
+   55:  get_length
+   56:  dup
+   57:  if_true8 72
+   59:  drop
+   60:  get_var_ref0 0: t
+   61:  push_atom_value "\u00e6\u009c\u00aa\u00e6\u0089\u00be\u00e5\u0088\u00b0\u00e7\u009b\u00b8\u00e5\u0085\u00b3\u00e6\u00bc\u00ab\u00e7\u0094\u00bb\u00ef\u00bc\u008c\u00e8\u00af\u00b7\u00e5\u00b0\u009d\u00e8\u00af\u0095\u00e6\u009b\u00b4\u00e6\u008d\u00a2\u00e5\u0085\u00b3\u00e9\u0094\u00ae\u00e8\u00af\u008d"
+   66:  insert2
+   67:  put_field tipText
+   72:  drop
+   73:  get_var_ref0 0: t
+   74:  push_1 1
+   75:  lnot
+   76:  put_field isLoading
+   81:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  push_atom_value "\u00e7\u00bd\u0091\u00e7\u00bb\u009c\u00e8\u00af\u00b7\u00e6\u00b1\u0082\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5: "
+    6:  get_arg0 0: e
+    7:  get_field message
+   12:  dup
+   13:  if_true8 23
+   15:  drop
+   16:  get_var String
+   21:  get_arg0 0: e
+   22:  call1 1
+   23:  add
+   24:  put_field tipText
+   29:  get_var_ref0 0: t
+   30:  push_1 1
+   31:  lnot
+   32:  put_field isLoading
+   37:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 7
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field showAlbum
+    8:  dup
+    9:  if_true8 126
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field showReader
+   18:  dup
+   19:  if_true8 126
+   21:  drop
+   22:  get_loc0 0: this
+   23:  get_loc0 0: this
+   24:  get_field2 normalizeAlbumData
+   29:  get_arg0 0: t
+   30:  get_field album_id
+   35:  object
+   36:  get_arg0 0: t
+   37:  get_field title
+   42:  define_field title
+   47:  get_arg0 0: t
+   48:  get_field author
+   53:  dup
+   54:  if_true8 58
+   56:  drop
+   57:  push_empty_string
+   58:  define_field author
+   63:  get_arg0 0: t
+   64:  get_field cover_proxy
+   69:  dup
+   70:  if_true8 74
+   72:  drop
+   73:  push_empty_string
+   74:  define_field cover_proxy
+   79:  array_from 0
+   82:  define_field chapters
+   87:  call_method 2
+   90:  put_field album
+   95:  get_loc0 0: this
+   96:  push_0 0
+   97:  lnot
+   98:  put_field showAlbum
+  103:  get_loc0 0: this
+  104:  push_0 0
+  105:  lnot
+  106:  put_field albumLoading
+  111:  get_loc0 0: this
+  112:  get_field2 fetchAlbum
+  117:  get_arg0 0: t
+  118:  get_field album_id
+  123:  call_method 1
+  126:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field Fetch
+    8:  if_false8 48
+   10:  get_loc1 1: this
+   11:  set_loc0 0: e
+   12:  get_field2 fetchApi
+   17:  push_atom_value "/jmcomic/album/"
+   22:  get_arg0 0: t
+   23:  add
+   24:  call_method 1
+   27:  get_field2 then
+   32:  fclosure8 0: [bytecode <null>]
+   34:  call_method 1
+   37:  get_field2 catch
+   42:  fclosure8 1: [bytecode <null>]
+   44:  call_method 1
+   47:  drop
+   48:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: r
+  locals:
+    0: var a
+  closure vars:
+    0: e local:loc0 var
+    1: t local:arg0 var
+  stack_size: 6
+  opcodes:
+    0:  get_var_ref0 0: e
+    1:  push_1 1
+    2:  lnot
+    3:  put_field albumLoading
+    8:  get_var_ref0 0: e
+    9:  get_field2 parseApiResponse
+   14:  get_arg0 0: r
+   15:  call_method 1
+   18:  put_loc0 0: a
+   19:  get_var_ref0 0: e
+   20:  get_var_ref0 0: e
+   21:  get_field2 normalizeAlbumData
+   26:  get_var_ref1 1: t
+   27:  get_loc0 0: a
+   28:  get_var_ref0 0: e
+   29:  get_field album
+   34:  call_method 3
+   37:  put_field album
+   42:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: e local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: e
+    1:  push_1 1
+    2:  lnot
+    3:  put_field albumLoading
+    8:  get_var_ref0 0: e
+    9:  get_field album
+   14:  get_arg0 0: t
+   15:  get_field message
+   20:  dup
+   21:  if_true8 29
+   23:  drop
+   24:  push_atom_value "\u00e5\u008a\u00a0\u00e8\u00bd\u00bd\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+   29:  put_field title
+   34:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_1 1
+    4:  lnot
+    5:  put_field showAlbum
+   10:  get_loc0 0: this
+   11:  object
+   12:  put_field album
+   17:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field album
+    8:  get_field chapters
+   13:  dup
+   14:  if_false8 56
+   16:  drop
+   17:  get_loc0 0: this
+   18:  get_field album
+   23:  get_field chapters
+   28:  get_length
+   29:  dup
+   30:  if_false8 56
+   32:  drop
+   33:  get_loc0 0: this
+   34:  get_field2 readChapter
+   39:  get_loc0 0: this
+   40:  get_field album
+   45:  get_field chapters
+   50:  push_0 0
+   51:  get_array_el
+   52:  push_0 0
+   53:  call_method 2
+   56:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_arg0 0: t
+    4:  get_field photo_id
+    9:  put_field rPhotoId
+   14:  get_loc0 0: this
+   15:  get_arg0 0: t
+   16:  get_field title
+   21:  dup
+   22:  if_true8 40
+   24:  drop
+   25:  push_atom_value "\u00e7\u00ac\u00ac"
+   30:  get_arg1 1: e
+   31:  push_1 1
+   32:  add
+   33:  add
+   34:  push_atom_value "\u00e8\u00af\u009d"
+   39:  add
+   40:  put_field rTitle
+   45:  get_loc0 0: this
+   46:  get_arg1 1: e
+   47:  put_field rChapterIdx
+   52:  get_loc0 0: this
+   53:  get_loc0 0: this
+   54:  get_field album
+   59:  get_field chapters
+   64:  dup
+   65:  if_true8 71
+   67:  drop
+   68:  array_from 0
+   71:  put_field rChapters
+   76:  get_loc0 0: this
+   77:  get_loc0 0: this
+   78:  get_field album
+   83:  get_field album_id
+   88:  dup
+   89:  if_true8 93
+   91:  drop
+   92:  push_empty_string
+   93:  put_field rAlbumId
+   98:  get_loc0 0: this
+   99:  get_loc0 0: this
+  100:  get_field album
+  105:  get_field title
+  110:  dup
+  111:  if_true8 115
+  113:  drop
+  114:  push_empty_string
+  115:  put_field rAlbumTitle
+  120:  get_loc0 0: this
+  121:  push_0 0
+  122:  put_field rPage
+  127:  get_loc0 0: this
+  128:  push_0 0
+  129:  put_field rTotal
+  134:  get_loc0 0: this
+  135:  array_from 0
+  138:  put_field rImages
+  143:  get_loc0 0: this
+  144:  object
+  145:  put_field rLocalMap
+  150:  get_loc0 0: this
+  151:  object
+  152:  put_field rConvertingMap
+  157:  get_loc0 0: this
+  158:  push_0 0
+  159:  put_field imgRetryCount
+  164:  get_loc0 0: this
+  165:  push_0 0
+  166:  lnot
+  167:  put_field rLoadingImage
+  172:  get_loc0 0: this
+  173:  push_1 1
+  174:  lnot
+  175:  put_field rShowSettings
+  180:  get_loc0 0: this
+  181:  push_1 1
+  182:  lnot
+  183:  put_field showAlbum
+  188:  get_loc0 0: this
+  189:  push_0 0
+  190:  lnot
+  191:  put_field showReader
+  196:  get_loc0 0: this
+  197:  get_field2 fetchChapterInfo
+  202:  get_arg0 0: t
+  203:  get_field photo_id
+  208:  call_method 1
+  211:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field Fetch
+    8:  if_false8 56
+   10:  get_loc1 1: this
+   11:  set_loc0 0: e
+   12:  push_0 0
+   13:  lnot
+   14:  put_field rLoadingImage
+   19:  get_loc0 0: e
+   20:  get_field2 fetchApi
+   25:  push_atom_value "/jmcomic/chapter/"
+   30:  get_arg0 0: t
+   31:  add
+   32:  call_method 1
+   35:  get_field2 then
+   40:  fclosure8 0: [bytecode <null>]
+   42:  call_method 1
+   45:  get_field2 catch
+   50:  fclosure8 1: [bytecode <null>]
+   52:  call_method 1
+   55:  drop
+   56:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var r
+  closure vars:
+    0: e local:loc0 var
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: e
+    1:  get_field2 normalizeChapterData
+    6:  get_var_ref0 0: e
+    7:  get_field2 parseApiResponse
+   12:  get_arg0 0: t
+   13:  call_method 1
+   16:  call_method 1
+   19:  put_loc0 0: r
+   20:  get_var_ref0 0: e
+   21:  get_loc0 0: r
+   22:  get_field page_count
+   27:  dup
+   28:  if_true8 32
+   30:  drop
+   31:  push_0 0
+   32:  put_field rTotal
+   37:  get_var_ref0 0: e
+   38:  get_loc0 0: r
+   39:  get_field images
+   44:  put_field rImages
+   49:  get_var_ref0 0: e
+   50:  get_field rTotal
+   55:  lnot
+   56:  dup
+   57:  if_false8 85
+   59:  drop
+   60:  get_var_ref0 0: e
+   61:  get_field rImages
+   66:  get_length
+   67:  dup
+   68:  if_false8 85
+   70:  drop
+   71:  get_var_ref0 0: e
+   72:  get_var_ref0 0: e
+   73:  get_field rImages
+   78:  get_length
+   79:  insert2
+   80:  put_field rTotal
+   85:  drop
+   86:  get_var setTimeout
+   91:  fclosure8 0: [bytecode <null>]
+   93:  push_i16 500
+   96:  call2 2
+   97:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: e parent:loc0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: e
+    1:  push_1 1
+    2:  lnot
+    3:  put_field rLoadingImage
+    8:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: e local:loc0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: e
+    1:  push_1 1
+    2:  lnot
+    3:  put_field rLoadingImage
+    8:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field rChapterIdx
+    8:  push_0 0
+    9:  gt
+   10:  dup
+   11:  if_false8 46
+   13:  drop
+   14:  get_loc0 0: this
+   15:  get_field2 switchChapter
+   20:  get_loc0 0: this
+   21:  get_field rChapters
+   26:  get_loc0 0: this
+   27:  get_field rChapterIdx
+   32:  push_1 1
+   33:  sub
+   34:  get_array_el
+   35:  get_loc0 0: this
+   36:  get_field rChapterIdx
+   41:  push_1 1
+   42:  sub
+   43:  call_method 2
+   46:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field rChapterIdx
+    8:  get_loc0 0: this
+    9:  get_field rChapters
+   14:  get_length
+   15:  push_1 1
+   16:  sub
+   17:  lt
+   18:  dup
+   19:  if_false8 54
+   21:  drop
+   22:  get_loc0 0: this
+   23:  get_field2 switchChapter
+   28:  get_loc0 0: this
+   29:  get_field rChapters
+   34:  get_loc0 0: this
+   35:  get_field rChapterIdx
+   40:  push_1 1
+   41:  add
+   42:  get_array_el
+   43:  get_loc0 0: this
+   44:  get_field rChapterIdx
+   49:  push_1 1
+   50:  add
+   51:  call_method 2
+   54:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t e
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 saveHistory
+    8:  call_method 0
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_arg0 0: t
+   14:  get_field photo_id
+   19:  put_field rPhotoId
+   24:  get_loc0 0: this
+   25:  get_arg0 0: t
+   26:  get_field title
+   31:  dup
+   32:  if_true8 50
+   34:  drop
+   35:  push_atom_value "\u00e7\u00ac\u00ac"
+   40:  get_arg1 1: e
+   41:  push_1 1
+   42:  add
+   43:  add
+   44:  push_atom_value "\u00e8\u00af\u009d"
+   49:  add
+   50:  put_field rTitle
+   55:  get_loc0 0: this
+   56:  get_arg1 1: e
+   57:  put_field rChapterIdx
+   62:  get_loc0 0: this
+   63:  push_0 0
+   64:  put_field rPage
+   69:  get_loc0 0: this
+   70:  push_0 0
+   71:  put_field rTotal
+   76:  get_loc0 0: this
+   77:  array_from 0
+   80:  put_field rImages
+   85:  get_loc0 0: this
+   86:  object
+   87:  put_field rLocalMap
+   92:  get_loc0 0: this
+   93:  object
+   94:  put_field rConvertingMap
+   99:  get_loc0 0: this
+  100:  push_0 0
+  101:  put_field imgRetryCount
+  106:  get_loc0 0: this
+  107:  push_0 0
+  108:  lnot
+  109:  put_field rLoadingImage
+  114:  get_loc0 0: this
+  115:  get_field2 fetchChapterInfo
+  120:  get_arg0 0: t
+  121:  get_field photo_id
+  126:  call_method 1
+  129:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 saveHistory
+    8:  call_method 0
+   11:  drop
+   12:  get_loc0 0: this
+   13:  push_1 1
+   14:  lnot
+   15:  put_field showReader
+   20:  get_loc0 0: this
+   21:  push_1 1
+   22:  lnot
+   23:  put_field rShowSettings
+   28:  get_loc0 0: this
+   29:  push_0 0
+   30:  put_field imgRetryCount
+   35:  get_loc0 0: this
+   36:  get_field album
+   41:  dup
+   42:  if_false8 85
+   44:  drop
+   45:  get_loc0 0: this
+   46:  get_field album
+   51:  get_field chapters
+   56:  dup
+   57:  if_false8 85
+   59:  drop
+   60:  get_loc0 0: this
+   61:  get_field album
+   66:  get_field chapters
+   71:  get_length
+   72:  dup
+   73:  if_false8 85
+   75:  drop
+   76:  get_loc0 0: this
+   77:  push_0 0
+   78:  lnot
+   79:  insert2
+   80:  put_field showAlbum
+   85:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var r
+    3: var a
+    4: catch t [level:7 next:-1]
+    5: var this
+  closure vars:
+    0: h parent:loc10 const
+  stack_size: 8
+  opcodes:
+    0:  push_this
+    1:  put_loc8 5: this
+    3:  get_loc8 5: this
+    5:  get_field Dbase
+   10:  if_false 372
+   15:  get_loc8 5: this
+   17:  get_field rAlbumId
+   22:  if_false 372
+   27:  catch 362
+   32:  get_var_ref_check 0: h
+   35:  put_loc0 0: t
+   36:  get_loc8 5: this
+   38:  get_field Dbase
+   43:  get_field2 read
+   48:  get_loc0 0: t
+   49:  call_method 1
+   52:  put_loc1 1: e
+   53:  get_var Array
+   58:  get_field2 isArray
+   63:  get_loc1 1: e
+   64:  call_method 1
+   67:  dup
+   68:  if_true8 75
+   70:  drop
+   71:  array_from 0
+   74:  set_loc1 1: e
+   75:  drop
+   76:  get_loc8 5: this
+   78:  get_field rAlbumId
+   83:  put_loc2 2: r
+   84:  push_0 0
+   85:  put_loc3 3: a
+   86:  get_loc3 3: a
+   87:  get_loc1 1: e
+   88:  get_length
+   89:  lt
+   90:  if_false8 127
+   92:  get_loc1 1: e
+   93:  get_loc3 3: a
+   94:  get_array_el
+   95:  if_false8 123
+   97:  get_loc1 1: e
+   98:  get_loc3 3: a
+   99:  get_array_el
+  100:  get_field album_id
+  105:  get_loc2 2: r
+  106:  strict_eq
+  107:  if_false8 123
+  109:  get_loc1 1: e
+  110:  get_field2 splice
+  115:  get_loc3 3: a
+  116:  push_1 1
+  117:  call_method 2
+  120:  drop
+  121:  goto8 127
+  123:  inc_loc 3: a
+  125:  goto8 86
+  127:  get_loc1 1: e
+  128:  get_field2 unshift
+  133:  object
+  134:  get_loc2 2: r
+  135:  define_field album_id
+  140:  get_loc8 5: this
+  142:  get_field rAlbumTitle
+  147:  define_field title
+  152:  get_loc8 5: this
+  154:  get_field album
+  159:  if_false8 189
+  161:  get_loc8 5: this
+  163:  get_field album
+  168:  get_field cover_proxy
+  173:  if_false8 189
+  175:  get_loc8 5: this
+  177:  get_field album
+  182:  get_field cover_proxy
+  187:  goto8 190
+  189:  push_empty_string
+  190:  define_field cover_proxy
+  195:  get_loc8 5: this
+  197:  get_field2 coverUrl
+  202:  get_loc8 5: this
+  204:  get_field album
+  209:  if_false8 234
+  211:  get_loc8 5: this
+  213:  get_field album
+  218:  get_field album_id
+  223:  if_false8 234
+  225:  get_loc8 5: this
+  227:  get_field album
+  232:  goto8 241
+  234:  object
+  235:  get_loc2 2: r
+  236:  define_field album_id
+  241:  call_method 1
+  244:  define_field cover
+  249:  get_loc8 5: this
+  251:  get_field rPhotoId
+  256:  define_field photo_id
+  261:  get_loc8 5: this
+  263:  get_field rTitle
+  268:  define_field chapter_title
+  273:  get_loc8 5: this
+  275:  get_field rChapterIdx
+  280:  define_field chapter_idx
+  285:  get_loc8 5: this
+  287:  get_field rPage
+  292:  define_field page
+  297:  get_var Date
+  302:  get_field2 now
+  307:  call_method 0
+  310:  define_field time
+  315:  call_method 1
+  318:  drop
+  319:  get_loc1 1: e
+  320:  get_length
+  321:  push_i8 100
+  323:  gt
+  324:  dup
+  325:  if_false8 341
+  327:  drop
+  328:  get_loc1 1: e
+  329:  get_field2 slice
+  334:  push_0 0
+  335:  push_i8 100
+  337:  call_method 2
+  340:  set_loc1 1: e
+  341:  drop
+  342:  get_loc8 5: this
+  344:  get_field Dbase
+  349:  get_field2 write
+  354:  get_loc0 0: t
+  355:  get_loc1 1: e
+  356:  call_method 2
+  359:  drop
+  360:  drop
+  361:  return_undef
+  362:  put_loc8 4: t
+  364:  catch 371
+  369:  drop
+  370:  return_undef
+  371:  throw
+  372:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: catch t [level:5 next:-1]
+    2: var this
+  stack_size: 5
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field Dbase
+    8:  lnot
+    9:  if_false8 32
+   11:  get_loc2 2: this
+   12:  push_atom_value "\u00e6\u0097\u00a0\u00e9\u0098\u0085\u00e8\u00af\u00bb\u00e8\u00ae\u00b0\u00e5\u00bd\u0095"
+   17:  put_field tipText
+   22:  get_loc2 2: this
+   23:  array_from 0
+   26:  put_field comics
+   31:  return_undef
+   32:  catch 121
+   37:  get_loc2 2: this
+   38:  get_field2 getHistoryList
+   43:  call_method 0
+   46:  put_loc0 0: t
+   47:  get_var Array
+   52:  get_field2 isArray
+   57:  get_loc0 0: t
+   58:  call_method 1
+   61:  lnot
+   62:  dup
+   63:  if_true8 70
+   65:  drop
+   66:  push_0 0
+   67:  get_loc0 0: t
+   68:  get_length
+   69:  strict_eq
+   70:  if_false8 95
+   72:  get_loc2 2: this
+   73:  push_atom_value "\u00e6\u0097\u00a0\u00e9\u0098\u0085\u00e8\u00af\u00bb\u00e8\u00ae\u00b0\u00e5\u00bd\u0095"
+   78:  put_field tipText
+   83:  get_loc2 2: this
+   84:  array_from 0
+   87:  put_field comics
+   92:  undefined
+   93:  nip
+   94:  return
+   95:  get_loc2 2: this
+   96:  get_loc0 0: t
+   97:  get_field2 map
+  102:  fclosure8 0: [bytecode <null>]
+  104:  call_method 1
+  107:  put_field comics
+  112:  get_loc2 2: this
+  113:  push_empty_string
+  114:  put_field tipText
+  119:  drop
+  120:  return_undef
+  121:  put_loc1 1: t
+  122:  catch 149
+  127:  get_loc2 2: this
+  128:  push_atom_value "\u00e8\u00af\u00bb\u00e5\u008f\u0096\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  133:  put_field tipText
+  138:  get_loc2 2: this
+  139:  array_from 0
+  142:  put_field comics
+  147:  drop
+  148:  return_undef
+  149:  throw
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 3
+  opcodes:
+    0:  object
+    1:  get_arg0 0: t
+    2:  get_field album_id
+    7:  define_field album_id
+   12:  get_arg0 0: t
+   13:  get_field title
+   18:  define_field title
+   23:  get_arg0 0: t
+   24:  get_field chapter_title
+   29:  dup
+   30:  if_true8 34
+   32:  drop
+   33:  push_empty_string
+   34:  define_field author
+   39:  get_arg0 0: t
+   40:  get_field cover_proxy
+   45:  dup
+   46:  if_true8 60
+   48:  drop
+   49:  get_arg0 0: t
+   50:  get_field cover
+   55:  dup
+   56:  if_true8 60
+   58:  drop
+   59:  push_empty_string
+   60:  define_field cover_proxy
+   65:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var r
+    3: var this
+  closure vars:
+    0: f parent:loc13 var
+  stack_size: 35
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  set_loc0 0: t
+    4:  get_field $createElement
+    9:  put_loc1 1: e
+   10:  get_loc0 0: t
+   11:  get_field _self
+   16:  get_field _c
+   21:  dup
+   22:  if_true8 26
+   24:  drop
+   25:  get_loc1 1: e
+   26:  set_loc2 2: r
+   27:  push_atom_value div
+   32:  object
+   33:  push_atom_value container
+   38:  array_from 1
+   41:  define_field staticClass
+   46:  get_loc2 2: r
+   47:  push_atom_value div
+   52:  object
+   53:  push_atom_value "button-col"
+   58:  array_from 1
+   61:  define_field staticClass
+   66:  get_loc2 2: r
+   67:  push_atom_value div
+   72:  object
+   73:  push_atom_value "icon-btn"
+   78:  array_from 1
+   81:  define_field staticClass
+   86:  object
+   87:  push_atom_value search
+   92:  get_loc0 0: t
+   93:  get_field tab
+   98:  strict_eq
+   99:  define_field active
+  104:  define_field class
+  109:  object
+  110:  get_loc0 0: t
+  111:  get_field goSearch
+  116:  define_field click
+  121:  define_field on
+  126:  get_loc2 2: r
+  127:  push_atom_value image
+  132:  object
+  133:  push_atom_value "icon-img"
+  138:  array_from 1
+  141:  define_field staticClass
+  146:  object
+  147:  push_atom_value "images/6299f20683241591d31ade5a7702baa1.png"
+  152:  define_field src
+  157:  define_field attrs
+  162:  call2 2
+  163:  get_loc2 2: r
+  164:  push_atom_value text
+  169:  object
+  170:  push_atom_value "icon-label"
+  175:  push_atom_value search
+  180:  get_loc0 0: t
+  181:  get_field tab
+  186:  strict_eq
+  187:  if_false8 196
+  189:  push_atom_value "icon-label-active"
+  194:  goto8 197
+  196:  push_empty_string
+  197:  array_from 2
+  200:  define_field class
+  205:  get_loc0 0: t
+  206:  get_field2 _v
+  211:  push_atom_value "\u00e6\u0090\u009c\u00e7\u00b4\u00a2"
+  216:  call_method 1
+  219:  array_from 1
+  222:  call3 3
+  223:  array_from 2
+  226:  call3 3
+  227:  get_loc2 2: r
+  228:  push_atom_value div
+  233:  object
+  234:  push_atom_value "icon-btn"
+  239:  array_from 1
+  242:  define_field staticClass
+  247:  object
+  248:  push_atom_value history
+  253:  get_loc0 0: t
+  254:  get_field tab
+  259:  strict_eq
+  260:  define_field active
+  265:  define_field class
+  270:  object
+  271:  get_loc0 0: t
+  272:  get_field goHistory
+  277:  define_field click
+  282:  define_field on
+  287:  get_loc2 2: r
+  288:  push_atom_value image
+  293:  object
+  294:  push_atom_value "icon-img"
+  299:  array_from 1
+  302:  define_field staticClass
+  307:  object
+  308:  push_atom_value "images/dc03d95e3a26ea9eef57f81d8b1b3bce.png"
+  313:  define_field src
+  318:  define_field attrs
+  323:  call2 2
+  324:  get_loc2 2: r
+  325:  push_atom_value text
+  330:  object
+  331:  push_atom_value "icon-label"
+  336:  push_atom_value history
+  341:  get_loc0 0: t
+  342:  get_field tab
+  347:  strict_eq
+  348:  if_false8 357
+  350:  push_atom_value "icon-label-active"
+  355:  goto8 358
+  357:  push_empty_string
+  358:  array_from 2
+  361:  define_field class
+  366:  get_loc0 0: t
+  367:  get_field2 _v
+  372:  push_atom_value "\u00e5\u008e\u0086\u00e5\u008f\u00b2"
+  377:  call_method 1
+  380:  array_from 1
+  383:  call3 3
+  384:  array_from 2
+  387:  call3 3
+  388:  array_from 2
+  391:  call3 3
+  392:  get_loc2 2: r
+  393:  push_atom_value scroller
+  398:  object
+  399:  push_atom_value "main-scroll"
+  404:  array_from 1
+  407:  define_field staticClass
+  412:  object
+  413:  push_atom_value "50px"
+  418:  define_field overScroll
+  423:  push_atom_value "50px"
+  428:  define_field overFling
+  433:  push_atom_value false
+  438:  define_field showScrollbar
+  443:  define_field attrs
+  448:  get_loc2 2: r
+  449:  push_atom_value text
+  454:  object
+  455:  push_atom_value "page-title"
+  460:  array_from 1
+  463:  define_field staticClass
+  468:  get_loc0 0: t
+  469:  get_field2 _v
+  474:  get_loc0 0: t
+  475:  get_field2 _s
+  480:  push_atom_value history
+  485:  get_loc0 0: t
+  486:  get_field tab
+  491:  strict_eq
+  492:  if_false8 501
+  494:  push_atom_value "\u00e9\u0098\u0085\u00e8\u00af\u00bb\u00e5\u008e\u0086\u00e5\u008f\u00b2"
+  499:  goto8 506
+  501:  push_atom_value "\u00e6\u00bc\u00ab\u00e7\u0094\u00bb\u00e6\u0090\u009c\u00e7\u00b4\u00a2"
+  506:  call_method 1
+  509:  call_method 1
+  512:  array_from 1
+  515:  call3 3
+  516:  push_0 0
+  517:  get_loc0 0: t
+  518:  get_field comics
+  523:  get_length
+  524:  strict_eq
+  525:  if_false8 601
+  527:  get_loc2 2: r
+  528:  push_atom_value div
+  533:  object
+  534:  push_atom_value "empty-area"
+  539:  array_from 1
+  542:  define_field staticClass
+  547:  get_loc2 2: r
+  548:  push_atom_value text
+  553:  object
+  554:  push_atom_value "empty-text"
+  559:  array_from 1
+  562:  define_field staticClass
+  567:  get_loc0 0: t
+  568:  get_field2 _v
+  573:  get_loc0 0: t
+  574:  get_field2 _s
+  579:  get_loc0 0: t
+  580:  get_field tipText
+  585:  call_method 1
+  588:  call_method 1
+  591:  array_from 1
+  594:  call3 3
+  595:  array_from 1
+  598:  call3 3
+  599:  goto8 642
+  601:  get_loc2 2: r
+  602:  push_atom_value div
+  607:  object
+  608:  push_atom_value "content-grid"
+  613:  array_from 1
+  616:  define_field staticClass
+  621:  get_loc0 0: t
+  622:  get_field2 _l
+  627:  get_loc0 0: t
+  628:  get_field comics
+  633:  fclosure8 0: [bytecode <null>]
+  635:  call_method 2
+  638:  push_0 0
+  639:  call 4
+  642:  array_from 2
+  645:  call3 3
+  646:  get_loc0 0: t
+  647:  get_field showAlbum
+  652:  if_false 1296
+  657:  get_loc0 0: t
+  658:  get_field showReader
+  663:  lnot
+  664:  if_false 1296
+  669:  get_loc2 2: r
+  670:  push_atom_value div
+  675:  object
+  676:  push_atom_value overlay
+  681:  array_from 1
+  684:  define_field staticClass
+  689:  object
+  690:  fclosure8 1: [bytecode <null>]
+  692:  set_name click
+  697:  define_field click
+  702:  define_field on
+  707:  get_loc2 2: r
+  708:  push_atom_value div
+  713:  object
+  714:  push_atom_value panel
+  719:  array_from 1
+  722:  define_field staticClass
+  727:  get_loc2 2: r
+  728:  push_atom_value text
+  733:  object
+  734:  push_atom_value "panel-title"
+  739:  array_from 1
+  742:  define_field staticClass
+  747:  get_loc0 0: t
+  748:  get_field2 _v
+  753:  get_loc0 0: t
+  754:  get_field2 _s
+  759:  get_loc0 0: t
+  760:  get_field album
+  765:  get_field title
+  770:  dup
+  771:  if_true8 779
+  773:  drop
+  774:  push_atom_value "\u00e5\u008a\u00a0\u00e8\u00bd\u00bd\u00e4\u00b8\u00ad..."
+  779:  call_method 1
+  782:  call_method 1
+  785:  array_from 1
+  788:  call3 3
+  789:  get_loc2 2: r
+  790:  push_atom_value text
+  795:  object
+  796:  push_atom_value "panel-meta"
+  801:  array_from 1
+  804:  define_field staticClass
+  809:  get_loc0 0: t
+  810:  get_field2 _v
+  815:  get_loc0 0: t
+  816:  get_field2 _s
+  821:  get_loc0 0: t
+  822:  get_field albumMeta
+  827:  call_method 1
+  830:  call_method 1
+  833:  array_from 1
+  836:  call3 3
+  837:  get_loc0 0: t
+  838:  get_field albumLoading
+  843:  lnot
+  844:  if_false8 922
+  846:  get_loc0 0: t
+  847:  get_field album
+  852:  get_field chapters
+  857:  if_false8 922
+  859:  get_loc0 0: t
+  860:  get_field album
+  865:  get_field chapters
+  870:  get_length
+  871:  if_false8 922
+  873:  get_loc2 2: r
+  874:  push_atom_value scroller
+  879:  object
+  880:  push_atom_value "chapter-scroll"
+  885:  array_from 1
+  888:  define_field staticClass
+  893:  get_loc0 0: t
+  894:  get_field2 _l
+  899:  get_loc0 0: t
+  900:  get_field album
+  905:  get_field chapters
+  910:  fclosure8 2: [bytecode <null>]
+  912:  call_method 2
+  915:  push_0 0
+  916:  call 4
+  919:  goto16 1056
+  922:  get_loc0 0: t
+  923:  get_field albumLoading
+  928:  if_false8 994
+  930:  get_loc2 2: r
+  931:  push_atom_value div
+  936:  object
+  937:  push_atom_value "chapter-empty"
+  942:  array_from 1
+  945:  define_field staticClass
+  950:  get_loc2 2: r
+  951:  push_atom_value text
+  956:  object
+  957:  push_atom_value "empty-text"
+  962:  array_from 1
+  965:  define_field staticClass
+  970:  get_loc0 0: t
+  971:  get_field2 _v
+  976:  push_atom_value "\u00e5\u008a\u00a0\u00e8\u00bd\u00bd\u00e4\u00b8\u00ad..."
+  981:  call_method 1
+  984:  array_from 1
+  987:  call3 3
+  988:  array_from 1
+  991:  call3 3
+  992:  goto8 1056
+  994:  get_loc2 2: r
+  995:  push_atom_value div
+ 1000:  object
+ 1001:  push_atom_value "chapter-empty"
+ 1006:  array_from 1
+ 1009:  define_field staticClass
+ 1014:  get_loc2 2: r
+ 1015:  push_atom_value text
+ 1020:  object
+ 1021:  push_atom_value "empty-text"
+ 1026:  array_from 1
+ 1029:  define_field staticClass
+ 1034:  get_loc0 0: t
+ 1035:  get_field2 _v
+ 1040:  push_atom_value "\u00e6\u009a\u0082\u00e6\u0097\u00a0\u00e7\u00ab\u00a0\u00e8\u008a\u0082"
+ 1045:  call_method 1
+ 1048:  array_from 1
+ 1051:  call3 3
+ 1052:  array_from 1
+ 1055:  call3 3
+ 1056:  get_loc2 2: r
+ 1057:  push_atom_value div
+ 1062:  object
+ 1063:  push_atom_value "panel-btns"
+ 1068:  array_from 1
+ 1071:  define_field staticClass
+ 1076:  get_loc0 0: t
+ 1077:  get_field album
+ 1082:  get_field chapters
+ 1087:  if_false8 1194
+ 1089:  get_loc0 0: t
+ 1090:  get_field album
+ 1095:  get_field chapters
+ 1100:  get_length
+ 1101:  if_false8 1194
+ 1103:  get_loc2 2: r
+ 1104:  push_atom_value div
+ 1109:  object
+ 1110:  push_atom_value "panel-btn"
+ 1115:  push_atom_value "panel-btn-primary"
+ 1120:  array_from 2
+ 1123:  define_field staticClass
+ 1128:  object
+ 1129:  get_loc0 0: t
+ 1130:  get_field readFirst
+ 1135:  define_field click
+ 1140:  define_field on
+ 1145:  get_loc2 2: r
+ 1146:  push_atom_value text
+ 1151:  object
+ 1152:  push_atom_value "panel-btn-text"
+ 1157:  push_atom_value "panel-btn-dark"
+ 1162:  array_from 2
+ 1165:  define_field staticClass
+ 1170:  get_loc0 0: t
+ 1171:  get_field2 _v
+ 1176:  push_atom_value "\u00e5\u00bc\u0080\u00e5\u00a7\u008b\u00e9\u0098\u0085\u00e8\u00af\u00bb"
+ 1181:  call_method 1
+ 1184:  array_from 1
+ 1187:  call3 3
+ 1188:  array_from 1
+ 1191:  call3 3
+ 1192:  goto8 1203
+ 1194:  get_loc0 0: t
+ 1195:  get_field2 _e
+ 1200:  call_method 0
+ 1203:  get_loc2 2: r
+ 1204:  push_atom_value div
+ 1209:  object
+ 1210:  push_atom_value "panel-btn"
+ 1215:  array_from 1
+ 1218:  define_field staticClass
+ 1223:  object
+ 1224:  get_loc0 0: t
+ 1225:  get_field closeAlbum
+ 1230:  define_field click
+ 1235:  define_field on
+ 1240:  get_loc2 2: r
+ 1241:  push_atom_value text
+ 1246:  object
+ 1247:  push_atom_value "panel-btn-text"
+ 1252:  array_from 1
+ 1255:  define_field staticClass
+ 1260:  get_loc0 0: t
+ 1261:  get_field2 _v
+ 1266:  push_atom_value "\u00e5\u0085\u00b3\u00e9\u0097\u00ad"
+ 1271:  call_method 1
+ 1274:  array_from 1
+ 1277:  call3 3
+ 1278:  array_from 1
+ 1281:  call3 3
+ 1282:  array_from 2
+ 1285:  call3 3
+ 1286:  array_from 4
+ 1289:  call3 3
+ 1290:  array_from 1
+ 1293:  call3 3
+ 1294:  goto8 1305
+ 1296:  get_loc0 0: t
+ 1297:  get_field2 _e
+ 1302:  call_method 0
+ 1305:  get_loc0 0: t
+ 1306:  get_field showReader
+ 1311:  if_false 2991
+ 1316:  get_loc2 2: r
+ 1317:  push_atom_value div
+ 1322:  object
+ 1323:  push_atom_value reader
+ 1328:  array_from 1
+ 1331:  define_field staticClass
+ 1336:  object
+ 1337:  fclosure8 3: [bytecode <null>]
+ 1339:  set_name click
+ 1344:  define_field click
+ 1349:  define_field on
+ 1354:  get_loc2 2: r
+ 1355:  push_atom_value div
+ 1360:  object
+ 1361:  object
+ 1362:  push_atom_value show
+ 1367:  define_field name
+ 1372:  push_atom_value "v-show"
+ 1377:  define_field rawName
+ 1382:  get_loc0 0: t
+ 1383:  get_field rShowSidebar
+ 1388:  define_field value
+ 1393:  push_atom_value rShowSidebar
+ 1398:  define_field expression
+ 1403:  array_from 1
+ 1406:  define_field directives
+ 1411:  push_atom_value "reader-sidebar"
+ 1416:  array_from 1
+ 1419:  define_field staticClass
+ 1424:  get_loc2 2: r
+ 1425:  push_atom_value div
+ 1430:  object
+ 1431:  push_atom_value "reader-sidebar-inner"
+ 1436:  array_from 1
+ 1439:  define_field staticClass
+ 1444:  get_loc2 2: r
+ 1445:  push_atom_value div
+ 1450:  object
+ 1451:  push_atom_value "reader-icon-button"
+ 1456:  array_from 1
+ 1459:  define_field staticClass
+ 1464:  object
+ 1465:  get_loc0 0: t
+ 1466:  get_field closeReader
+ 1471:  define_field click
+ 1476:  define_field on
+ 1481:  get_loc2 2: r
+ 1482:  push_atom_value image
+ 1487:  object
+ 1488:  push_atom_value "reader-icon-image"
+ 1493:  array_from 1
+ 1496:  define_field staticClass
+ 1501:  object
+ 1502:  get_var_ref0 0: f
+ 1503:  define_field src
+ 1508:  define_field attrs
+ 1513:  call2 2
+ 1514:  array_from 1
+ 1517:  call3 3
+ 1518:  get_loc2 2: r
+ 1519:  push_atom_value div
+ 1524:  object
+ 1525:  push_atom_value "reader-icon-button"
+ 1530:  array_from 1
+ 1533:  define_field staticClass
+ 1538:  object
+ 1539:  get_loc0 0: t
+ 1540:  get_field love
+ 1545:  define_field click
+ 1550:  define_field on
+ 1555:  get_loc2 2: r
+ 1556:  push_atom_value image
+ 1561:  object
+ 1562:  push_atom_value "reader-icon-image"
+ 1567:  array_from 1
+ 1570:  define_field staticClass
+ 1575:  object
+ 1576:  push_atom_value "images/221f2a6a5dedecaefd6ab73db82d676e.png"
+ 1581:  define_field src
+ 1586:  define_field attrs
+ 1591:  call2 2
+ 1592:  array_from 1
+ 1595:  call3 3
+ 1596:  get_loc2 2: r
+ 1597:  push_atom_value div
+ 1602:  object
+ 1603:  push_atom_value "reader-icon-button"
+ 1608:  array_from 1
+ 1611:  define_field staticClass
+ 1616:  object
+ 1617:  get_loc0 0: t
+ 1618:  get_field toggleReaderSettings
+ 1623:  define_field click
+ 1628:  define_field on
+ 1633:  get_loc2 2: r
+ 1634:  push_atom_value image
+ 1639:  object
+ 1640:  push_atom_value "reader-icon-image"
+ 1645:  array_from 1
+ 1648:  define_field staticClass
+ 1653:  object
+ 1654:  push_atom_value "images/3951d363b86ba932375d1b2952ad99ff.png"
+ 1659:  define_field src
+ 1664:  define_field attrs
+ 1669:  call2 2
+ 1670:  array_from 1
+ 1673:  call3 3
+ 1674:  array_from 3
+ 1677:  call3 3
+ 1678:  array_from 1
+ 1681:  call3 3
+ 1682:  get_loc2 2: r
+ 1683:  push_atom_value div
+ 1688:  object
+ 1689:  push_atom_value "reader-main"
+ 1694:  array_from 1
+ 1697:  define_field staticClass
+ 1702:  get_loc2 2: r
+ 1703:  push_atom_value scroller
+ 1708:  object
+ 1709:  push_atom_value "reader-scroller"
+ 1714:  array_from 1
+ 1717:  define_field staticClass
+ 1722:  object
+ 1723:  push_atom_value "50px"
+ 1728:  define_field overScroll
+ 1733:  push_atom_value "50px"
+ 1738:  define_field overFling
+ 1743:  push_atom_value false
+ 1748:  define_field showScrollbar
+ 1753:  define_field attrs
+ 1758:  get_loc2 2: r
+ 1759:  push_atom_value div
+ 1764:  object
+ 1765:  push_atom_value "reader-content-wrapper"
+ 1770:  array_from 1
+ 1773:  define_field staticClass
+ 1778:  get_loc0 0: t
+ 1779:  get_field rLoadingImage
+ 1784:  if_false8 1851
+ 1786:  get_loc2 2: r
+ 1787:  push_atom_value div
+ 1792:  object
+ 1793:  push_atom_value "reader-loading"
+ 1798:  array_from 1
+ 1801:  define_field staticClass
+ 1806:  get_loc2 2: r
+ 1807:  push_atom_value text
+ 1812:  object
+ 1813:  push_atom_value loading
+ 1818:  array_from 1
+ 1821:  define_field staticClass
+ 1826:  get_loc0 0: t
+ 1827:  get_field2 _v
+ 1832:  push_atom_value "\u00e5\u00b0\u0091\u00e5\u00a5\u00b3\u00e7\u00a5\u0088\u00e7\u00a5\u00b7\u00e4\u00b8\u00ad..."
+ 1837:  call_method 1
+ 1840:  array_from 1
+ 1843:  call3 3
+ 1844:  array_from 1
+ 1847:  call3 3
+ 1848:  goto16 2362
+ 1851:  get_loc2 2: r
+ 1852:  push_atom_value div
+ 1857:  object
+ 1858:  push_atom_value "reader-image-container"
+ 1863:  array_from 1
+ 1866:  define_field staticClass
+ 1871:  get_loc2 2: r
+ 1872:  push_atom_value div
+ 1877:  object
+ 1878:  push_atom_value "reader-meta"
+ 1883:  array_from 1
+ 1886:  define_field staticClass
+ 1891:  get_loc2 2: r
+ 1892:  push_atom_value text
+ 1897:  object
+ 1898:  push_atom_value "reader-title"
+ 1903:  array_from 1
+ 1906:  define_field staticClass
+ 1911:  get_loc0 0: t
+ 1912:  get_field2 _v
+ 1917:  get_loc0 0: t
+ 1918:  get_field2 _s
+ 1923:  get_loc0 0: t
+ 1924:  get_field rTitle
+ 1929:  call_method 1
+ 1932:  call_method 1
+ 1935:  array_from 1
+ 1938:  call3 3
+ 1939:  get_loc2 2: r
+ 1940:  push_atom_value text
+ 1945:  object
+ 1946:  push_atom_value "reader-count"
+ 1951:  array_from 1
+ 1954:  define_field staticClass
+ 1959:  get_loc0 0: t
+ 1960:  get_field2 _v
+ 1965:  get_loc0 0: t
+ 1966:  get_field2 _s
+ 1971:  get_loc0 0: t
+ 1972:  get_field rImages
+ 1977:  get_length
+ 1978:  call_method 1
+ 1981:  push_atom_value " \u00e9\u00a1\u00b5"
+ 1986:  add
+ 1987:  call_method 1
+ 1990:  array_from 1
+ 1993:  call3 3
+ 1994:  array_from 2
+ 1997:  call3 3
+ 1998:  get_loc0 0: t
+ 1999:  get_field rChapterIdx
+ 2004:  push_0 0
+ 2005:  gt
+ 2006:  if_false8 2122
+ 2008:  get_loc2 2: r
+ 2009:  push_atom_value div
+ 2014:  object
+ 2015:  push_atom_value "reader-turning"
+ 2020:  array_from 1
+ 2023:  define_field staticClass
+ 2028:  object
+ 2029:  get_loc0 0: t
+ 2030:  get_field prevChapter
+ 2035:  define_field click
+ 2040:  define_field on
+ 2045:  get_loc2 2: r
+ 2046:  push_atom_value image
+ 2051:  object
+ 2052:  push_atom_value "reader-turning-icon"
+ 2057:  array_from 1
+ 2060:  define_field staticClass
+ 2065:  object
+ 2066:  get_var_ref0 0: f
+ 2067:  define_field src
+ 2072:  define_field attrs
+ 2077:  call2 2
+ 2078:  get_loc2 2: r
+ 2079:  push_atom_value text
+ 2084:  object
+ 2085:  push_atom_value "reader-turning-text"
+ 2090:  array_from 1
+ 2093:  define_field staticClass
+ 2098:  get_loc0 0: t
+ 2099:  get_field2 _v
+ 2104:  push_atom_value "\u00e4\u00b8\u008a\u00e4\u00b8\u0080\u00e8\u00af\u009d"
+ 2109:  call_method 1
+ 2112:  array_from 1
+ 2115:  call3 3
+ 2116:  array_from 2
+ 2119:  call3 3
+ 2120:  goto8 2131
+ 2122:  get_loc0 0: t
+ 2123:  get_field2 _e
+ 2128:  call_method 0
+ 2131:  get_loc2 2: r
+ 2132:  push_atom_value div
+ 2137:  object
+ 2138:  push_atom_value "reader-image-block"
+ 2143:  array_from 1
+ 2146:  define_field staticClass
+ 2151:  get_loc2 2: r
+ 2152:  push_atom_value richtext
+ 2157:  object
+ 2158:  get_loc0 0: t
+ 2159:  get_field rPhotoId
+ 2164:  push_atom_value _
+ 2169:  add
+ 2170:  get_loc0 0: t
+ 2171:  get_field imgRetryCount
+ 2176:  add
+ 2177:  define_field key
+ 2182:  get_loc0 0: t
+ 2183:  get_field2 _l
+ 2188:  get_loc0 0: t
+ 2189:  get_field readerImageUrls
+ 2194:  fclosure8 4: [bytecode <null>]
+ 2196:  call_method 2
+ 2199:  array_from 1
+ 2202:  push_2 2
+ 2203:  call 4
+ 2206:  array_from 1
+ 2209:  push_1 1
+ 2210:  call 4
+ 2213:  get_loc0 0: t
+ 2214:  get_field rChapterIdx
+ 2219:  get_loc0 0: t
+ 2220:  get_field rChapters
+ 2225:  get_length
+ 2226:  push_1 1
+ 2227:  sub
+ 2228:  lt
+ 2229:  if_false8 2349
+ 2231:  get_loc2 2: r
+ 2232:  push_atom_value div
+ 2237:  object
+ 2238:  push_atom_value "reader-turning"
+ 2243:  array_from 1
+ 2246:  define_field staticClass
+ 2251:  object
+ 2252:  get_loc0 0: t
+ 2253:  get_field nextChapter
+ 2258:  define_field click
+ 2263:  define_field on
+ 2268:  get_loc2 2: r
+ 2269:  push_atom_value image
+ 2274:  object
+ 2275:  push_atom_value "reader-turning-icon"
+ 2280:  array_from 1
+ 2283:  define_field staticClass
+ 2288:  object
+ 2289:  push_atom_value "images/f3ca481ecf4c5332a4e48d0a777a42ca.png"
+ 2294:  define_field src
+ 2299:  define_field attrs
+ 2304:  call2 2
+ 2305:  get_loc2 2: r
+ 2306:  push_atom_value text
+ 2311:  object
+ 2312:  push_atom_value "reader-turning-text"
+ 2317:  array_from 1
+ 2320:  define_field staticClass
+ 2325:  get_loc0 0: t
+ 2326:  get_field2 _v
+ 2331:  push_atom_value "\u00e4\u00b8\u008b\u00e4\u00b8\u0080\u00e8\u00af\u009d"
+ 2336:  call_method 1
+ 2339:  array_from 1
+ 2342:  call3 3
+ 2343:  array_from 2
+ 2346:  call3 3
+ 2347:  goto8 2358
+ 2349:  get_loc0 0: t
+ 2350:  get_field2 _e
+ 2355:  call_method 0
+ 2358:  array_from 4
+ 2361:  call3 3
+ 2362:  array_from 1
+ 2365:  call3 3
+ 2366:  array_from 1
+ 2369:  call3 3
+ 2370:  array_from 1
+ 2373:  call3 3
+ 2374:  get_loc0 0: t
+ 2375:  get_field rShowSettings
+ 2380:  if_false 2976
+ 2385:  get_loc2 2: r
+ 2386:  push_atom_value div
+ 2391:  object
+ 2392:  push_atom_value "settings-mask"
+ 2397:  array_from 1
+ 2400:  define_field staticClass
+ 2405:  object
+ 2406:  get_loc0 0: t
+ 2407:  get_field toggleReaderSettings
+ 2412:  define_field click
+ 2417:  define_field on
+ 2422:  get_loc2 2: r
+ 2423:  push_atom_value div
+ 2428:  object
+ 2429:  push_atom_value "settings-panel"
+ 2434:  array_from 1
+ 2437:  define_field staticClass
+ 2442:  object
+ 2443:  fclosure8 5: [bytecode <null>]
+ 2445:  set_name click
+ 2450:  define_field click
+ 2455:  define_field on
+ 2460:  get_loc2 2: r
+ 2461:  push_atom_value text
+ 2466:  object
+ 2467:  push_atom_value "settings-title"
+ 2472:  array_from 1
+ 2475:  define_field staticClass
+ 2480:  get_loc0 0: t
+ 2481:  get_field2 _v
+ 2486:  push_atom_value "\u00e9\u0098\u0085\u00e8\u00af\u00bb\u00e8\u00ae\u00be\u00e7\u00bd\u00ae"
+ 2491:  call_method 1
+ 2494:  array_from 1
+ 2497:  call3 3
+ 2498:  get_loc2 2: r
+ 2499:  push_atom_value div
+ 2504:  object
+ 2505:  push_atom_value "settings-card"
+ 2510:  array_from 1
+ 2513:  define_field staticClass
+ 2518:  get_loc2 2: r
+ 2519:  push_atom_value div
+ 2524:  object
+ 2525:  push_atom_value "settings-card-head"
+ 2530:  array_from 1
+ 2533:  define_field staticClass
+ 2538:  get_loc2 2: r
+ 2539:  push_atom_value text
+ 2544:  object
+ 2545:  push_atom_value "settings-card-title"
+ 2550:  array_from 1
+ 2553:  define_field staticClass
+ 2558:  get_loc0 0: t
+ 2559:  get_field2 _v
+ 2564:  push_atom_value "\u00e5\u009b\u00be\u00e7\u0089\u0087\u00e7\u00bc\u00a9\u00e6\u0094\u00be"
+ 2569:  call_method 1
+ 2572:  array_from 1
+ 2575:  call3 3
+ 2576:  get_loc2 2: r
+ 2577:  push_atom_value text
+ 2582:  object
+ 2583:  push_atom_value "settings-card-value"
+ 2588:  array_from 1
+ 2591:  define_field staticClass
+ 2596:  get_loc0 0: t
+ 2597:  get_field2 _v
+ 2602:  get_loc0 0: t
+ 2603:  get_field2 _s
+ 2608:  get_loc0 0: t
+ 2609:  get_field rScale
+ 2614:  get_field2 toFixed
+ 2619:  push_1 1
+ 2620:  call_method 1
+ 2623:  call_method 1
+ 2626:  call_method 1
+ 2629:  array_from 1
+ 2632:  call3 3
+ 2633:  array_from 2
+ 2636:  call3 3
+ 2637:  get_loc2 2: r
+ 2638:  push_atom_value seekbar
+ 2643:  object
+ 2644:  push_atom_value "settings-card-seekbar"
+ 2649:  array_from 1
+ 2652:  define_field staticClass
+ 2657:  object
+ 2658:  push_5 5
+ 2659:  define_field min
+ 2664:  push_i8 20
+ 2666:  define_field max
+ 2671:  push_1 1
+ 2672:  define_field step
+ 2677:  push_i8 10
+ 2679:  get_loc0 0: t
+ 2680:  get_field rScale
+ 2685:  mul
+ 2686:  define_field value
+ 2691:  push_atom_value "#004a77"
+ 2696:  define_field activeColor
+ 2701:  push_atom_value "#8e918f"
+ 2706:  define_field backgroundColor
+ 2711:  push_atom_value "#e3e3e3"
+ 2716:  define_field handleColor
+ 2721:  push_const8 6: 0.03
+ 2723:  get_loc0 0: t
+ 2724:  get_field vh
+ 2729:  mul
+ 2730:  define_field trackSize
+ 2735:  push_const8 7: 0.12
+ 2737:  get_loc0 0: t
+ 2738:  get_field vh
+ 2743:  mul
+ 2744:  define_field handleSize
+ 2749:  define_field attrs
+ 2754:  object
+ 2755:  get_loc0 0: t
+ 2756:  get_field onReaderScaleChange
+ 2761:  define_field change
+ 2766:  define_field on
+ 2771:  call2 2
+ 2772:  array_from 2
+ 2775:  push_1 1
+ 2776:  call 4
+ 2779:  get_loc2 2: r
+ 2780:  push_atom_value div
+ 2785:  object
+ 2786:  push_atom_value "settings-actions"
+ 2791:  array_from 1
+ 2794:  define_field staticClass
+ 2799:  get_loc2 2: r
+ 2800:  push_atom_value div
+ 2805:  object
+ 2806:  push_atom_value "settings-action"
+ 2811:  array_from 1
+ 2814:  define_field staticClass
+ 2819:  object
+ 2820:  get_loc0 0: t
+ 2821:  get_field zoomOut
+ 2826:  define_field click
+ 2831:  define_field on
+ 2836:  get_loc2 2: r
+ 2837:  push_atom_value text
+ 2842:  object
+ 2843:  push_atom_value "settings-action-text"
+ 2848:  array_from 1
+ 2851:  define_field staticClass
+ 2856:  get_loc0 0: t
+ 2857:  get_field2 _v
+ 2862:  push_atom_value "\u00e7\u00bc\u00a9\u00e5\u00b0\u008f"
+ 2867:  call_method 1
+ 2870:  array_from 1
+ 2873:  call3 3
+ 2874:  array_from 1
+ 2877:  call3 3
+ 2878:  get_loc2 2: r
+ 2879:  push_atom_value div
+ 2884:  object
+ 2885:  push_atom_value "settings-action"
+ 2890:  push_atom_value "settings-action-spaced"
+ 2895:  array_from 2
+ 2898:  define_field staticClass
+ 2903:  object
+ 2904:  get_loc0 0: t
+ 2905:  get_field zoomIn
+ 2910:  define_field click
+ 2915:  define_field on
+ 2920:  get_loc2 2: r
+ 2921:  push_atom_value text
+ 2926:  object
+ 2927:  push_atom_value "settings-action-text"
+ 2932:  array_from 1
+ 2935:  define_field staticClass
+ 2940:  get_loc0 0: t
+ 2941:  get_field2 _v
+ 2946:  push_atom_value "\u00e6\u0094\u00be\u00e5\u00a4\u00a7"
+ 2951:  call_method 1
+ 2954:  array_from 1
+ 2957:  call3 3
+ 2958:  array_from 1
+ 2961:  call3 3
+ 2962:  array_from 2
+ 2965:  call3 3
+ 2966:  array_from 3
+ 2969:  call3 3
+ 2970:  array_from 1
+ 2973:  call3 3
+ 2974:  goto8 2985
+ 2976:  get_loc0 0: t
+ 2977:  get_field2 _e
+ 2982:  call_method 0
+ 2985:  array_from 3
+ 2988:  call3 3
+ 2989:  goto8 3000
+ 2991:  get_loc0 0: t
+ 2992:  get_field2 _e
+ 2997:  call_method 0
+ 3000:  array_from 4
+ 3003:  tail_call 3
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: e a
+  closure vars:
+    0: t local:loc0 var
+    1: r local:loc2 var
+  stack_size: 17
+  opcodes:
+    0:  get_var_ref1 1: r
+    1:  push_atom_value div
+    6:  object
+    7:  get_arg1 1: a
+    8:  define_field key
+   13:  push_atom_value "comic-card"
+   18:  array_from 1
+   21:  define_field staticClass
+   26:  object
+   27:  get_var_ref0 0: t
+   28:  get_field coverWidth
+   33:  define_field width
+   38:  get_var_ref0 0: t
+   39:  get_field coverHeight
+   44:  define_field height
+   49:  define_field style
+   54:  object
+   55:  fclosure8 0: [bytecode <null>]
+   57:  set_name click
+   62:  define_field click
+   67:  define_field on
+   72:  get_var_ref1 1: r
+   73:  push_atom_value image
+   78:  object
+   79:  push_atom_value "card-cover"
+   84:  array_from 1
+   87:  define_field staticClass
+   92:  object
+   93:  get_var_ref0 0: t
+   94:  get_field2 coverUrl
+   99:  get_arg0 0: e
+  100:  call_method 1
+  103:  define_field src
+  108:  push_atom_value aspectFill
+  113:  define_field mode
+  118:  define_field attrs
+  123:  object
+  124:  fclosure8 1: [bytecode <null>]
+  126:  set_name error
+  131:  define_field error
+  136:  define_field on
+  141:  call2 2
+  142:  get_var_ref1 1: r
+  143:  push_atom_value div
+  148:  object
+  149:  push_atom_value "card-body"
+  154:  array_from 1
+  157:  define_field staticClass
+  162:  get_var_ref1 1: r
+  163:  push_atom_value text
+  168:  object
+  169:  push_atom_value "card-title"
+  174:  array_from 1
+  177:  define_field staticClass
+  182:  get_var_ref0 0: t
+  183:  get_field2 _v
+  188:  get_var_ref0 0: t
+  189:  get_field2 _s
+  194:  get_arg0 0: e
+  195:  get_field title
+  200:  call_method 1
+  203:  call_method 1
+  206:  array_from 1
+  209:  call3 3
+  210:  get_var_ref1 1: r
+  211:  push_atom_value text
+  216:  object
+  217:  push_atom_value "card-author"
+  222:  array_from 1
+  225:  define_field staticClass
+  230:  get_var_ref0 0: t
+  231:  get_field2 _v
+  236:  get_var_ref0 0: t
+  237:  get_field2 _s
+  242:  get_arg0 0: e
+  243:  get_field author
+  248:  dup
+  249:  if_true8 253
+  251:  drop
+  252:  push_empty_string
+  253:  call_method 1
+  256:  call_method 1
+  259:  array_from 1
+  262:  call3 3
+  263:  array_from 2
+  266:  call3 3
+  267:  array_from 2
+  270:  tail_call 3
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: r
+  closure vars:
+    0: t parent:loc0 var
+    1: e local:arg0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 onComicClick
+    6:  get_var_ref1 1: e
+    7:  tail_call_method 1
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: r
+  closure vars:
+    0: t parent:loc0 var
+    1: e local:arg0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 onImageError
+    6:  get_var_ref1 1: e
+    7:  tail_call_method 1
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: e
+    1:  get_field2 stopPropagation
+    6:  call_method 0
+    9:  drop
+   10:  get_var_ref0 0: t
+   11:  get_field2 eatEvent
+   16:  get_arg0 0: e
+   17:  tail_call_method 1
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: e a
+  closure vars:
+    0: t local:loc0 var
+    1: r local:loc2 var
+  stack_size: 14
+  opcodes:
+    0:  get_var_ref1 1: r
+    1:  push_atom_value div
+    6:  object
+    7:  get_arg1 1: a
+    8:  define_field key
+   13:  push_atom_value "chapter-item"
+   18:  array_from 1
+   21:  define_field staticClass
+   26:  object
+   27:  fclosure8 0: [bytecode <null>]
+   29:  set_name click
+   34:  define_field click
+   39:  define_field on
+   44:  get_var_ref1 1: r
+   45:  push_atom_value text
+   50:  object
+   51:  push_atom_value "chapter-num"
+   56:  array_from 1
+   59:  define_field staticClass
+   64:  get_var_ref0 0: t
+   65:  get_field2 _v
+   70:  get_var_ref0 0: t
+   71:  get_field2 _s
+   76:  get_arg1 1: a
+   77:  push_1 1
+   78:  add
+   79:  call_method 1
+   82:  call_method 1
+   85:  array_from 1
+   88:  call3 3
+   89:  get_var_ref1 1: r
+   90:  push_atom_value text
+   95:  object
+   96:  push_atom_value "chapter-name"
+  101:  array_from 1
+  104:  define_field staticClass
+  109:  get_var_ref0 0: t
+  110:  get_field2 _v
+  115:  get_var_ref0 0: t
+  116:  get_field2 _s
+  121:  get_arg0 0: e
+  122:  get_field title
+  127:  dup
+  128:  if_true8 146
+  130:  drop
+  131:  push_atom_value "\u00e7\u00ac\u00ac"
+  136:  get_arg1 1: a
+  137:  push_1 1
+  138:  add
+  139:  add
+  140:  push_atom_value "\u00e8\u00af\u009d"
+  145:  add
+  146:  call_method 1
+  149:  call_method 1
+  152:  array_from 1
+  155:  call3 3
+  156:  get_var_ref1 1: r
+  157:  push_atom_value text
+  162:  object
+  163:  push_atom_value "chapter-arrow"
+  168:  array_from 1
+  171:  define_field staticClass
+  176:  get_var_ref0 0: t
+  177:  get_field2 _v
+  182:  push_atom_value "\u00e2\u0080\u00ba"
+  187:  call_method 1
+  190:  array_from 1
+  193:  call3 3
+  194:  array_from 3
+  197:  tail_call 3
+
+
+/* ===== function depth=3 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: r
+  closure vars:
+    0: t parent:loc0 var
+    1: e local:arg0 var
+    2: a local:arg1 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 readChapter
+    6:  get_var_ref1 1: e
+    7:  get_var_ref2 2: a
+    8:  tail_call_method 2
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: e
+    1:  get_field2 stopPropagation
+    6:  call_method 0
+    9:  drop
+   10:  get_var_ref0 0: t
+   11:  get_field2 eatEvent
+   16:  get_arg0 0: e
+   17:  tail_call_method 1
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: r local:loc2 var
+    1: t local:loc0 var
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: r
+    1:  push_atom_value image
+    6:  object
+    7:  push_atom_value "reader-img-item"
+   12:  array_from 1
+   15:  define_field staticClass
+   20:  object
+   21:  get_var_ref1 1: t
+   22:  get_field readerImgWidth
+   27:  define_field width
+   32:  define_field style
+   37:  object
+   38:  get_arg0 0: e
+   39:  define_field src
+   44:  define_field attrs
+   49:  call2 2
+   50:  get_var_ref0 0: r
+   51:  push_atom_value br
+   56:  call1 1
+   57:  array_from 2
+   60:  return
+
+
+/* ===== function depth=2 ===== */
+/* debug: apps_comic.js:1 source_len=0 */
+apps_comic.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_arg0 0: e
+    1:  get_field2 stopPropagation
+    6:  call_method 0
+    9:  drop
+   10:  get_var_ref0 0: t
+   11:  get_field2 eatEvent
+   16:  get_arg0 0: e
+   17:  tail_call_method 1
+

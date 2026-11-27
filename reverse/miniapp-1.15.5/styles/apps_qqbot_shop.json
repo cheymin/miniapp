@@ -1,0 +1,362 @@
+{
+  "page": {
+    "flex": 1,
+    "backgroundColor": "#1c1c1e",
+    "paddingTop": "16px",
+    "paddingRight": "20px",
+    "paddingBottom": "16px",
+    "paddingLeft": "20px",
+    "color": "#f3f4f6"
+  },
+  "top": {
+    "flexDirection": "row",
+    "alignItems": "center",
+    "justifyContent": "space-between",
+    "height": "44px"
+  },
+  "top-actions": {
+    "flexDirection": "row",
+    "alignItems": "center"
+  },
+  "title": {
+    "color": "#f3f4f6",
+    "fontSize": "20px",
+    "fontWeight": "bold"
+  },
+  "top-btn": {
+    "height": "30px",
+    "paddingLeft": "12px",
+    "paddingRight": "12px",
+    "borderRadius": "8px",
+    "backgroundColor": "#2c2c2e",
+    "justifyContent": "center",
+    "alignItems": "center"
+  },
+  "top-btn-txt": {
+    "color": "#f3f4f6",
+    "fontSize": "12px"
+  },
+  "body": {
+    "flex": 1,
+    "flexDirection": "row",
+    "paddingTop": "6px"
+  },
+  "left": {
+    "flex": 1,
+    "minHeight": 0,
+    "paddingRight": "4px"
+  },
+  "scroll-tail": {
+    "height": "24px"
+  },
+  "member": {
+    "color": "#34c759",
+    "fontSize": "13px"
+  },
+  "section": {
+    "marginTop": "14px",
+    "color": "#c7c7cc",
+    "fontSize": "11px"
+  },
+  "product": {
+    "flexDirection": "row",
+    "alignItems": "center",
+    "justifyContent": "space-between",
+    "marginTop": "8px",
+    "paddingTop": "12px",
+    "paddingRight": "14px",
+    "paddingBottom": "12px",
+    "paddingLeft": "14px",
+    "borderRadius": "12px",
+    "backgroundColor": "#2c2c2e"
+  },
+  "product-copy": {
+    "flexDirection": "column"
+  },
+  "product-name": {
+    "color": "#ffffff",
+    "fontSize": "15px",
+    "fontWeight": "bold"
+  },
+  "product-detail": {
+    "marginTop": "4px",
+    "color": "#c7c7cc",
+    "fontSize": "12px"
+  },
+  "product-buy": {
+    "height": "30px",
+    "marginLeft": "8px",
+    "paddingLeft": "12px",
+    "paddingRight": "12px",
+    "borderRadius": "8px",
+    "backgroundColor": "#0a84ff",
+    "justifyContent": "center",
+    "alignItems": "center"
+  },
+  "product-buy-alipay": {
+    "height": "30px",
+    "marginLeft": "8px",
+    "paddingLeft": "12px",
+    "paddingRight": "12px",
+    "borderRadius": "8px",
+    "backgroundColor": "#1677ff",
+    "justifyContent": "center",
+    "alignItems": "center"
+  },
+  "product-buy-txt": {
+    "color": "#ffffff",
+    "fontSize": "12px",
+    "fontWeight": "1\"600\""
+  },
+  "product-actions": {
+    "flexDirection": "row",
+    "alignItems": "center"
+  },
+  "product-off": {
+    "color": "#c7c7cc",
+    "fontSize": "13px"
+  },
+  "pay-hint": {
+    "marginTop": "8px",
+    "paddingTop": "8px",
+    "paddingRight": "10px",
+    "paddingBottom": "8px",
+    "paddingLeft": "10px",
+    "borderRadius": "8px",
+    "backgroundColor": "#2c2c2e",
+    "color": "#f3f4f6",
+    "fontSize": "11px",
+    "lineHeight": "15px"
+  },
+  "empty": {
+    "marginTop": "10px",
+    "color": "#c7c7cc",
+    "fontSize": "12px"
+  },
+  "status": {
+    "marginTop": "12px",
+    "color": "#f3f4f6",
+    "fontSize": "12px",
+    "lineHeight": "17px"
+  },
+  "right": {
+    "width": "210px",
+    "marginLeft": "16px",
+    "minHeight": 0
+  },
+  "site-card": {
+    "paddingTop": "12px",
+    "paddingRight": "12px",
+    "paddingBottom": "12px",
+    "paddingLeft": "12px",
+    "borderRadius": "12px",
+    "backgroundColor": "#2c2c2e",
+    "alignItems": "center"
+  },
+  "site-title": {
+    "color": "#f3f4f6",
+    "fontSize": "12px",
+    "fontWeight": "bold"
+  },
+  "site-qr": {
+    "width": "140px",
+    "height": "140px",
+    "marginTop": "8px",
+    "borderRadius": "8px",
+    "backgroundColor": "#ffffff"
+  },
+  "site-qr-empty": {
+    "backgroundColor": "#3a3a3c"
+  },
+  "site-url": {
+    "marginTop": "6px",
+    "color": "#c7c7cc",
+    "fontSize": "10px",
+    "textAlign": "center"
+  },
+  "site-hint": {
+    "marginTop": "4px",
+    "color": "#636366",
+    "fontSize": "10px",
+    "lineHeight": "14px",
+    "textAlign": "center"
+  },
+  "pay-card": {
+    "marginTop": "10px",
+    "paddingTop": "12px",
+    "paddingRight": "12px",
+    "paddingBottom": "12px",
+    "paddingLeft": "12px",
+    "borderRadius": "12px",
+    "backgroundColor": "#2c2c2e",
+    "alignItems": "center"
+  },
+  "pay-title": {
+    "color": "#34c759",
+    "fontSize": "13px",
+    "fontWeight": "bold"
+  },
+  "pay-sub": {
+    "color": "#f3f4f6",
+    "fontSize": "11px",
+    "textAlign": "center"
+  },
+  "pay-qr": {
+    "width": "130px",
+    "height": "130px",
+    "marginTop": "4px",
+    "borderRadius": "8px",
+    "backgroundColor": "#ffffff"
+  },
+  "pay-qr-empty": {
+    "backgroundColor": "#3a3a3c",
+    "justifyContent": "center",
+    "alignItems": "center"
+  },
+  "pay-qr-empty-txt": {
+    "color": "#f3f4f6",
+    "fontSize": "11px",
+    "textAlign": "center"
+  },
+  "pay-status": {
+    "marginTop": "4px",
+    "color": "#f3f4f6",
+    "fontSize": "11px",
+    "textAlign": "center"
+  },
+  "row": {
+    "flexDirection": "row",
+    "marginTop": "10px"
+  },
+  "btn": {
+    "height": "30px",
+    "marginRight": "6px",
+    "paddingLeft": "10px",
+    "paddingRight": "10px",
+    "borderRadius": "8px",
+    "backgroundColor": "#3a3a3c",
+    "justifyContent": "center",
+    "alignItems": "center"
+  },
+  "btn-primary": {
+    "backgroundColor": "#0a84ff"
+  },
+  "btn-txt": {
+    "color": "#ffffff",
+    "fontSize": "11px",
+    "fontWeight": "1\"600\""
+  },
+  "btn-press": {
+    "opacity": 0.75
+  },
+  "product-press": {
+    "opacity": 0.75
+  },
+  "top-btn-press": {
+    "opacity": 0.65
+  },
+  "product-buy-press": {
+    "opacity": 0.75
+  },
+  "product-buy-alipay-press": {
+    "opacity": 0.75
+  },
+  "page-l": {
+    "backgroundColor": "#f2f2f7",
+    "color": "#3a3a3c"
+  },
+  "title-l": {
+    "color": "#3a3a3c"
+  },
+  "top-btn-l": {
+    "backgroundColor": "#ffffff"
+  },
+  "top-btn-txt-l": {
+    "color": "#3a3a3c"
+  },
+  "member-l": {
+    "color": "#34c759"
+  },
+  "section-l": {
+    "color": "#636366"
+  },
+  "product-l": {
+    "backgroundColor": "#ffffff"
+  },
+  "product-name-l": {
+    "color": "#1c1c1e"
+  },
+  "product-detail-l": {
+    "color": "#636366"
+  },
+  "product-buy-l": {
+    "backgroundColor": "#007aff"
+  },
+  "product-buy-alipay-l": {
+    "backgroundColor": "#000814"
+  },
+  "product-buy-txt-l": {
+    "color": "#1c1c1e"
+  },
+  "product-off-l": {
+    "color": "#636366"
+  },
+  "pay-hint-l": {
+    "backgroundColor": "#ffffff",
+    "color": "#3a3a3c"
+  },
+  "empty-l": {
+    "color": "#636366"
+  },
+  "status-l": {
+    "color": "#3a3a3c"
+  },
+  "site-card-l": {
+    "backgroundColor": "#ffffff"
+  },
+  "site-title-l": {
+    "color": "#3a3a3c"
+  },
+  "site-qr-l": {
+    "backgroundColor": "#ffffff"
+  },
+  "site-qr-empty-l": {
+    "backgroundColor": "#ffffff"
+  },
+  "site-url-l": {
+    "color": "#636366"
+  },
+  "site-hint-l": {
+    "color": "#aeaeb2"
+  },
+  "pay-card-l": {
+    "backgroundColor": "#ffffff"
+  },
+  "pay-title-l": {
+    "color": "#34c759"
+  },
+  "pay-sub-l": {
+    "color": "#3a3a3c"
+  },
+  "pay-qr-l": {
+    "backgroundColor": "#ffffff"
+  },
+  "pay-qr-empty-l": {
+    "backgroundColor": "#ffffff"
+  },
+  "pay-qr-empty-txt-l": {
+    "color": "#3a3a3c"
+  },
+  "pay-status-l": {
+    "color": "#3a3a3c"
+  },
+  "btn-l": {
+    "backgroundColor": "#ffffff"
+  },
+  "btn-primary-l": {
+    "backgroundColor": "#007aff"
+  },
+  "btn-txt-l": {
+    "color": "#1c1c1e"
+  }
+}

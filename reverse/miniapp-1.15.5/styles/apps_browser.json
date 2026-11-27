@@ -1,0 +1,72 @@
+{
+  "browser-shell": {
+    "position": "relative",
+    "flexDirection": "column",
+    "width": "100%",
+    "height": "100%",
+    "backgroundColor": "#101214"
+  },
+  "browser-canvas": {
+    "flex": 1,
+    "width": "100%",
+    "backgroundColor": "#ffffff"
+  },
+  "toolbar": {
+    "width": "100%",
+    "height": "40px",
+    "flexDirection": "row",
+    "alignItems": "center",
+    "backgroundColor": "#1f252b",
+    "paddingLeft": "8px",
+    "paddingRight": "8px"
+  },
+  "nav-button": {
+    "width": "34px",
+    "height": "30px",
+    "lineHeight": "30px",
+    "textAlign": "center",
+    "color": "#ffffff",
+    "fontSize": "22px"
+  },
+  "profile-button": {
+    "fontSize": "18px"
+  },
+  "url-field": {
+    "flex": 1,
+    "height": "30px",
+    "lineHeight": "30px",
+    "marginLeft": "4px",
+    "marginRight": "4px",
+    "paddingLeft": "12px",
+    "paddingRight": "12px",
+    "color": "#17202a",
+    "backgroundColor": "#ffffff",
+    "borderRadius": "4px",
+    "fontSize": "18px"
+  },
+  "status-strip": {
+    "position": "absolute",
+    "left": 0,
+    "bottom": 0,
+    "width": "100%",
+    "minHeight": "26px",
+    "backgroundColor": "rgba(0,0,0,0.55)",
+    "paddingLeft": "8px",
+    "paddingRight": "8px",
+    "justifyContent": "center"
+  },
+  "status-text": {
+    "color": "#ffffff",
+    "fontSize": "14px",
+    "lineHeight": "22px"
+  },
+  "nav-button-press": {
+    "opacity": 0.65
+  },
+  "url-field-press": {
+    "opacity": 0.65
+  },
+  "profile-button-press": {
+    "opacity": 0.65
+  }
+}

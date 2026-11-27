@@ -1,0 +1,452 @@
+{
+  "page-wrapper": {
+    "width": "100%",
+    "height": "100%"
+  },
+  "vertical-slider": {
+    "width": "100%",
+    "height": "100%"
+  },
+  "slide-page": {
+    "width": "100%",
+    "height": "100%",
+    "justifyContent": "center",
+    "alignItems": "center",
+    "paddingTop": "42px",
+    "paddingRight": "40px",
+    "paddingBottom": "24px",
+    "paddingLeft": "40px"
+  },
+  "time-row": {
+    "flexDirection": "row",
+    "alignItems": "center",
+    "width": "100%"
+  },
+  "clock-wrapper": {
+    "width": "160px",
+    "height": "160px",
+    "justifyContent": "center",
+    "alignItems": "center",
+    "marginRight": "8px"
+  },
+  "analog-clock": {
+    "width": "150px",
+    "height": "150px",
+    "borderRadius": "75px",
+    "backgroundColor": "rgba(255,255,255,0.03)",
+    "borderWidth": "2px",
+    "borderColor": "rgba(255,255,255,0.1)",
+    "justifyContent": "center",
+    "alignItems": "center"
+  },
+  "clock-face": {
+    "width": "120px",
+    "height": "120px",
+    "position": "relative"
+  },
+  "clock-center-dot": {
+    "width": "8px",
+    "height": "8px",
+    "borderRadius": "4px",
+    "backgroundColor": "#0a84ff",
+    "position": "absolute",
+    "top": "56px",
+    "left": "56px",
+    "zIndex": "<expr>"
+  },
+  "clock-mark": {
+    "position": "absolute",
+    "width": "2px",
+    "height": "8px",
+    "backgroundColor": "rgba(255,255,255,0.3)",
+    "top": "2px",
+    "left": "59px",
+    "transformOrigin": "1px 58px",
+    "borderRadius": "2px"
+  },
+  "hand-container": {
+    "position": "absolute",
+    "top": 0,
+    "left": 0,
+    "width": "120px",
+    "height": "120px",
+    "transformOrigin": "60px 60px"
+  },
+  "hand-bar": {
+    "position": "absolute",
+    "left": "50%",
+    "borderRadius": "2px"
+  },
+  "hour-bar": {
+    "width": "4px",
+    "height": "32px",
+    "marginLeft": "-2px",
+    "backgroundColor": "#ffffff",
+    "top": "28px"
+  },
+  "minute-bar": {
+    "width": "3px",
+    "height": "42px",
+    "marginLeft": "-1.5px",
+    "backgroundColor": "rgba(255,255,255,0.8)",
+    "top": "18px"
+  },
+  "second-bar": {
+    "width": "1.5px",
+    "height": "48px",
+    "marginLeft": "-0.75px",
+    "backgroundColor": "#ff453a",
+    "top": "12px"
+  },
+  "time-info": {
+    "flex": 1,
+    "justifyContent": "center",
+    "alignItems": "flex-end",
+    "paddingRight": "10px"
+  },
+  "time-huge": {
+    "color": "#c7c7cc",
+    "fontSize": "64px",
+    "fontWeight": "1\"200\"",
+    "lineHeight": "72px",
+    "letterSpacing": "-2px"
+  },
+  "date-large": {
+    "color": "rgba(255,255,255,0.4)",
+    "fontSize": "18px",
+    "marginTop": "8px"
+  },
+  "slide-hint": {
+    "position": "absolute",
+    "bottom": "12px",
+    "left": 0,
+    "right": 0,
+    "alignItems": "center"
+  },
+  "slide-hint-text": {
+    "color": "rgba(255,255,255,0.2)",
+    "fontSize": "11px"
+  },
+  "stopwatch-row": {
+    "flexDirection": "row",
+    "width": "100%",
+    "height": "100%",
+    "alignItems": "center"
+  },
+  "stopwatch-left-panel": {
+    "width": "40%",
+    "justifyContent": "center",
+    "alignItems": "center"
+  },
+  "stopwatch-time-row": {
+    "flexDirection": "row",
+    "alignItems": "flex-end",
+    "marginBottom": "8px"
+  },
+  "stopwatch-main": {
+    "color": "#ffffff",
+    "fontSize": "48px",
+    "fontWeight": "1\"200\""
+  },
+  "stopwatch-fraction": {
+    "color": "#c7c7cc",
+    "fontSize": "20px",
+    "marginLeft": "2px"
+  },
+  "stopwatch-status": {
+    "color": "rgba(255,255,255,0.3)",
+    "fontSize": "12px",
+    "marginBottom": "16px"
+  },
+  "stopwatch-btns": {
+    "flexDirection": "row",
+    "flexWrap": "wrap",
+    "justifyContent": "center"
+  },
+  "sw-btn": {
+    "paddingTop": "9px",
+    "paddingRight": "16px",
+    "paddingBottom": "9px",
+    "paddingLeft": "16px",
+    "borderRadius": "16px",
+    "marginTop": "4px",
+    "marginRight": "4px",
+    "marginBottom": "4px",
+    "marginLeft": "4px",
+    "justifyContent": "center",
+    "alignItems": "center"
+  },
+  "sw-btn-press": {
+    "opacity": 0.6
+  },
+  "sw-btn-start": {
+    "backgroundColor": "rgba(52,199,89,0.15)"
+  },
+  "sw-btn-stop": {
+    "backgroundColor": "rgba(255,69,58,0.15)"
+  },
+  "sw-btn-glass": {
+    "backgroundColor": "rgba(255,255,255,0.08)"
+  },
+  "sw-btn-txt": {
+    "fontSize": "15px",
+    "fontWeight": "1\"600\""
+  },
+  "sw-btn-txt-start": {
+    "color": "#34c759"
+  },
+  "sw-btn-txt-stop": {
+    "color": "#ff453a"
+  },
+  "sw-btn-txt-glass": {
+    "color": "rgba(255,255,255,0.6)"
+  },
+  "stopwatch-right-panel": {
+    "width": "60%",
+    "height": "100%",
+    "paddingLeft": "14px",
+    "borderLeftWidth": "1px",
+    "borderLeftColor": "rgba(255,255,255,0.06)"
+  },
+  "lap-scroller": {
+    "width": "100%",
+    "height": "100%",
+    "paddingTop": "14px",
+    "paddingBottom": "14px",
+    "paddingLeft": "14px",
+    "paddingRight": "14px"
+  },
+  "empty-box-inline": {
+    "paddingTop": "30px",
+    "paddingRight": 0,
+    "paddingBottom": "30px",
+    "paddingLeft": 0,
+    "alignItems": "center",
+    "width": "100%"
+  },
+  "empty-title-small": {
+    "color": "rgba(255,255,255,0.25)",
+    "fontSize": "12px"
+  },
+  "lap-item": {
+    "flexDirection": "row",
+    "alignItems": "center",
+    "paddingTop": "9px",
+    "paddingRight": 0,
+    "paddingBottom": "9px",
+    "paddingLeft": 0,
+    "borderBottomWidth": "1px",
+    "borderBottomColor": "rgba(255,255,255,0.04)",
+    "width": "100%"
+  },
+  "lap-no": {
+    "color": "#ffffff",
+    "fontSize": "13px",
+    "fontWeight": "1\"500\"",
+    "width": "50px"
+  },
+  "lap-delta": {
+    "color": "rgba(255,255,255,0.3)",
+    "fontSize": "11px",
+    "flex": 1
+  },
+  "lap-total": {
+    "color": "#f3f4f6",
+    "fontSize": "13px",
+    "fontWeight": "1\"600\""
+  },
+  "countdown-row": {
+    "flexDirection": "row",
+    "width": "100%",
+    "height": "100%",
+    "alignItems": "center"
+  },
+  "countdown-left-panel": {
+    "width": "45%",
+    "justifyContent": "center",
+    "alignItems": "center"
+  },
+  "countdown-right-panel": {
+    "width": "55%",
+    "height": "100%",
+    "justifyContent": "center",
+    "alignItems": "center",
+    "borderLeftWidth": "1px",
+    "borderLeftColor": "rgba(255,255,255,0.06)"
+  },
+  "countdown-display": {
+    "alignItems": "center",
+    "justifyContent": "center"
+  },
+  "countdown-display-press": {
+    "opacity": 0.7
+  },
+  "countdown-huge": {
+    "color": "#ffffff",
+    "fontSize": "56px",
+    "fontWeight": "1\"200\"",
+    "lineHeight": "64px",
+    "letterSpacing": "-1px"
+  },
+  "countdown-edit-hint": {
+    "color": "rgba(255,255,255,0.3)",
+    "fontSize": "11px",
+    "marginTop": "8px"
+  },
+  "countdown-presets": {
+    "flexDirection": "row",
+    "flexWrap": "wrap",
+    "justifyContent": "center",
+    "width": "100%",
+    "paddingTop": 0,
+    "paddingRight": "10px",
+    "paddingBottom": 0,
+    "paddingLeft": "10px"
+  },
+  "preset-btn": {
+    "width": "68px",
+    "height": "34px",
+    "borderRadius": "16px",
+    "backgroundColor": "rgba(255,255,255,0.08)",
+    "justifyContent": "center",
+    "alignItems": "center",
+    "marginTop": "8px",
+    "marginRight": "8px",
+    "marginBottom": "8px",
+    "marginLeft": "8px"
+  },
+  "preset-btn-press": {
+    "opacity": 0.6
+  },
+  "preset-txt": {
+    "color": "rgba(255,255,255,0.8)",
+    "fontSize": "13px"
+  },
+  "countdown-status-wrapper": {
+    "height": "24px",
+    "justifyContent": "center",
+    "alignItems": "center",
+    "marginTop": "8px",
+    "marginBottom": "12px"
+  },
+  "countdown-status": {
+    "color": "rgba(255,255,255,0.4)",
+    "fontSize": "12px"
+  },
+  "countdown-btns": {
+    "flexDirection": "row",
+    "justifyContent": "center"
+  },
+  "anim-base": {
+    "opacity": 0,
+    "transitionProperty": "opacity,transform",
+    "transitionDuration": 400,
+    "transitionTimingFunction": "cubic-bezier(0.2,0.8,0.2,1)",
+    "transform": "translateY(20px)"
+  },
+  "@TRANSITION": {
+    "anim-base": {
+      "property": "opacity,transform",
+      "duration": 400,
+      "timingFunction": "cubic-bezier(0.2,0.8,0.2,1)"
+    }
+  },
+  "anim-active": {
+    "opacity": 1,
+    "transform": "translateY(0)"
+  },
+  "sw-btn-glass-press": {
+    "opacity": 0.65
+  },
+  "analog-clock-l": {
+    "backgroundColor": "rgba(0,0,0,0.03)",
+    "color": "rgba(0,0,0,0.1)"
+  },
+  "clock-center-dot-l": {
+    "backgroundColor": "#007aff"
+  },
+  "clock-mark-l": {
+    "backgroundColor": "rgba(0,0,0,0.3)"
+  },
+  "hour-bar-l": {
+    "backgroundColor": "#1c1c1e"
+  },
+  "minute-bar-l": {
+    "backgroundColor": "rgba(0,0,0,0.8)"
+  },
+  "second-bar-l": {
+    "backgroundColor": "#ff3b30"
+  },
+  "time-huge-l": {
+    "color": "#636366"
+  },
+  "date-large-l": {
+    "color": "rgba(0,0,0,0.4)"
+  },
+  "slide-hint-text-l": {
+    "color": "rgba(0,0,0,0.2)"
+  },
+  "stopwatch-main-l": {
+    "color": "#1c1c1e"
+  },
+  "stopwatch-fraction-l": {
+    "color": "#636366"
+  },
+  "stopwatch-status-l": {
+    "color": "rgba(0,0,0,0.3)"
+  },
+  "sw-btn-start-l": {
+    "backgroundColor": "rgba(52,199,89,0.18)"
+  },
+  "sw-btn-stop-l": {
+    "backgroundColor": "rgba(255,69,58,0.18)"
+  },
+  "sw-btn-glass-l": {
+    "backgroundColor": "rgba(0,0,0,0.08)"
+  },
+  "sw-btn-txt-start-l": {
+    "color": "#34c759"
+  },
+  "sw-btn-txt-stop-l": {
+    "color": "#ff3b30"
+  },
+  "sw-btn-txt-glass-l": {
+    "color": "rgba(0,0,0,0.6)"
+  },
+  "stopwatch-right-panel-l": {
+    "color": "rgba(0,0,0,0.06)"
+  },
+  "empty-title-small-l": {
+    "color": "rgba(0,0,0,0.25)"
+  },
+  "lap-item-l": {
+    "color": "rgba(0,0,0,0.04)"
+  },
+  "lap-no-l": {
+    "color": "#1c1c1e"
+  },
+  "lap-delta-l": {
+    "color": "rgba(0,0,0,0.3)"
+  },
+  "lap-total-l": {
+    "color": "#3a3a3c"
+  },
+  "countdown-right-panel-l": {
+    "color": "rgba(0,0,0,0.06)"
+  },
+  "countdown-huge-l": {
+    "color": "#1c1c1e"
+  },
+  "countdown-edit-hint-l": {
+    "color": "rgba(0,0,0,0.3)"
+  },
+  "preset-btn-l": {
+    "backgroundColor": "rgba(0,0,0,0.08)"
+  },
+  "preset-txt-l": {
+    "color": "rgba(0,0,0,0.8)"
+  },
+  "countdown-status-l": {
+    "color": "rgba(0,0,0,0.4)"
+  }
+}

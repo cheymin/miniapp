@@ -1,0 +1,4029 @@
+
+/* ===== function depth=0 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: t parent:loc0 const
+    1: e parent:loc1 const
+    2: i parent:loc2 const
+    3: a parent:loc3 const
+    4: r parent:loc4 const
+    5: o parent:loc5 const
+    6: s parent:loc6 const
+    7: n parent:loc7 const
+    8: l local:loc0 var
+    9: h local:loc1 var
+   10: c local:loc2 const
+   11: p local:loc3 var
+   12: d local:loc4 var
+   13: u local:loc5 const
+  stack_size: 7
+  opcodes:
+    0:  object
+    1:  get_var_ref_check 0: t
+    4:  array_from 1
+    7:  define_field mixins
+   12:  fclosure8 0: [bytecode <null>]
+   14:  set_name data
+   19:  define_field data
+   24:  object
+   25:  fclosure8 1: [bytecode <null>]
+   27:  define_method currentDisplayTime,4
+   33:  fclosure8 2: [bytecode <null>]
+   35:  define_method playbackRateLabel,4
+   41:  fclosure8 3: [bytecode <null>]
+   43:  define_method canvasStyle,4
+   49:  define_field computed
+   54:  fclosure8 4: [bytecode <null>]
+   56:  define_method mounted,4
+   62:  fclosure8 5: [bytecode <null>]
+   64:  define_method beforeDestroy,4
+   70:  object
+   71:  fclosure8 6: [bytecode <null>]
+   73:  define_method getBridgeModule,4
+   79:  fclosure8 7: [bytecode <null>]
+   81:  define_method getVideoPath,4
+   87:  fclosure8 8: [bytecode <null>]
+   89:  define_method getVideoTitle,4
+   95:  fclosure8 9: [bytecode <null>]
+   97:  define_method isLocalVideoPath,4
+  103:  fclosure8 10: [bytecode <null>]
+  105:  define_method shouldUseLocalProxy,4
+  111:  fclosure8 11: [bytecode <null>]
+  113:  define_method buildLocalProxyPath,4
+  119:  fclosure8 12: [bytecode <null>]
+  121:  define_method preparePlaybackPath,4
+  127:  fclosure8 13: [bytecode <null>]
+  129:  define_method splitCombinedUrl,4
+  135:  fclosure8 14: [bytecode <null>]
+  137:  define_method showPlayError,4
+  143:  fclosure8 15: [bytecode <null>]
+  145:  define_method closeErrorPopup,4
+  151:  fclosure8 16: [bytecode <null>]
+  153:  define_method initVideoPlayer,4
+  159:  fclosure8 17: [bytecode <null>]
+  161:  define_method startLoadingTimeout,4
+  167:  fclosure8 18: [bytecode <null>]
+  169:  define_method startUpdateTimer,4
+  175:  fclosure8 19: [bytecode <null>]
+  177:  define_method onScreenTap,4
+  183:  fclosure8 20: [bytecode <null>]
+  185:  define_method goBack,4
+  191:  fclosure8 21: [bytecode <null>]
+  193:  define_method toggleMuted,4
+  199:  fclosure8 22: [bytecode <null>]
+  201:  define_method toggleRotation,4
+  207:  fclosure8 23: [bytecode <null>]
+  209:  define_method toggleScaleMode,4
+  215:  fclosure8 24: [bytecode <null>]
+  217:  define_method togglePlay,4
+  223:  fclosure8 25: [bytecode <null>]
+  225:  define_method jump,4
+  231:  fclosure8 26: [bytecode <null>]
+  233:  set_name getEventValue
+  238:  define_field getEventValue
+  243:  fclosure8 27: [bytecode <null>]
+  245:  define_method onSeekChanging,4
+  251:  fclosure8 28: [bytecode <null>]
+  253:  define_method onSeekChange,4
+  259:  fclosure8 29: [bytecode <null>]
+  261:  define_method performSeek,4
+  267:  fclosure8 30: [bytecode <null>]
+  269:  define_method cleanup,4
+  275:  define_field methods
+  280:  put_var_ref 8: l
+  283:  fclosure8 31: [bytecode <null>]
+  285:  set_name h
+  290:  set_var_ref 9: h
+  293:  push_0 0
+  294:  lnot
+  295:  put_field _withStripped
+  300:  get_var_ref 8: l
+  303:  put_var_ref 10: c
+  306:  get_var_ref_check 10: c
+  309:  get_var_ref 9: h
+  312:  put_field render
+  317:  get_var_ref_check 10: c
+  320:  fclosure8 32: [bytecode <null>]
+  322:  array_from 1
+  325:  put_field staticRenderFns
+  330:  get_var_ref_check 10: c
+  333:  push_0 0
+  334:  lnot
+  335:  put_field _compiled
+  340:  get_var_ref_check 10: c
+  343:  push_atom_value "data-v-2109ec56"
+  348:  put_field _scopeId
+  353:  get_var_ref_check 10: c
+  356:  object
+  357:  put_field themes
+  362:  get_var_ref_check 10: c
+  365:  get_var Object
+  370:  get_field2 assign
+  375:  object
+  376:  object
+  377:  object
+  378:  push_atom_value absolute
+  383:  define_field position
+  388:  push_0 0
+  389:  define_field top
+  394:  push_0 0
+  395:  define_field left
+  400:  push_0 0
+  401:  define_field right
+  406:  push_0 0
+  407:  define_field bottom
+  412:  push_atom_value "#000000"
+  417:  define_field backgroundColor
+  422:  define_field page
+  427:  object
+  428:  push_atom_value absolute
+  433:  define_field position
+  438:  push_0 0
+  439:  define_field top
+  444:  push_0 0
+  445:  define_field left
+  450:  push_0 0
+  451:  define_field right
+  456:  push_0 0
+  457:  define_field bottom
+  462:  push_1 1
+  463:  define_field zIndex
+  468:  define_field "video-hole"
+  473:  object
+  474:  push_atom_value absolute
+  479:  define_field position
+  484:  push_0 0
+  485:  define_field top
+  490:  push_0 0
+  491:  define_field left
+  496:  push_0 0
+  497:  define_field right
+  502:  push_0 0
+  503:  define_field bottom
+  508:  push_atom_value "rgba(0,0,0,0.5)"
+  513:  define_field backgroundColor
+  518:  push_5 5
+  519:  define_field zIndex
+  524:  define_field "dark-overlay"
+  529:  object
+  530:  push_atom_value absolute
+  535:  define_field position
+  540:  push_0 0
+  541:  define_field top
+  546:  push_0 0
+  547:  define_field left
+  552:  push_0 0
+  553:  define_field right
+  558:  push_0 0
+  559:  define_field bottom
+  564:  push_atom_value center
+  569:  define_field justifyContent
+  574:  push_atom_value center
+  579:  define_field alignItems
+  584:  push_i8 100
+  586:  define_field zIndex
+  591:  define_field "loading-mask"
+  596:  object
+  597:  push_atom_value "120px"
+  602:  define_field width
+  607:  push_atom_value "90px"
+  612:  define_field height
+  617:  push_atom_value "rgba(0,0,0,0.8)"
+  622:  define_field backgroundColor
+  627:  push_atom_value "8px"
+  632:  define_field borderRadius
+  637:  push_atom_value center
+  642:  define_field justifyContent
+  647:  push_atom_value center
+  652:  define_field alignItems
+  657:  define_field "loading-content"
+  662:  object
+  663:  push_atom_value "24px"
+  668:  define_field width
+  673:  push_atom_value "24px"
+  678:  define_field height
+  683:  push_atom_value "3px"
+  688:  define_field borderWidth
+  693:  push_atom_value solid
+  698:  define_field borderStyle
+  703:  push_atom_value "#ffffff"
+  708:  define_field borderColor
+  713:  push_atom_value "rgba(0,0,0,0)"
+  718:  define_field borderTopColor
+  723:  push_atom_value "12px"
+  728:  define_field borderRadius
+  733:  push_atom_value "spindata-v-2109ec56"
+  738:  define_field animationName
+  743:  push_i16 800
+  746:  define_field animationDuration
+  751:  push_atom_value linear
+  756:  define_field animationTimingFunction
+  761:  push_atom_value infinite
+  766:  define_field animationIterationCount
+  771:  define_field "loading-spinner"
+  776:  object
+  777:  push_atom_value "#ffffff"
+  782:  define_field color
+  787:  push_atom_value "14px"
+  792:  define_field fontSize
+  797:  push_atom_value "12px"
+  802:  define_field marginTop
+  807:  define_field "loading-text"
+  812:  object
+  813:  push_atom_value absolute
+  818:  define_field position
+  823:  push_0 0
+  824:  define_field top
+  829:  push_0 0
+  830:  define_field left
+  835:  push_0 0
+  836:  define_field right
+  841:  push_0 0
+  842:  define_field bottom
+  847:  push_atom_value center
+  852:  define_field justifyContent
+  857:  push_atom_value center
+  862:  define_field alignItems
+  867:  push_atom_value "rgba(0,0,0,0.55)"
+  872:  define_field backgroundColor
+  877:  push_i8 120
+  879:  define_field zIndex
+  884:  push_atom_value "20px"
+  889:  define_field paddingLeft
+  894:  push_atom_value "20px"
+  899:  define_field paddingRight
+  904:  define_field "error-mask"
+  909:  object
+  910:  push_atom_value "100%"
+  915:  define_field width
+  920:  push_atom_value "60%"
+  925:  define_field height
+  930:  push_atom_value "rgba(0,0,0,0.92)"
+  935:  define_field backgroundColor
+  940:  push_atom_value "12px"
+  945:  define_field borderRadius
+  950:  push_atom_value "16px"
+  955:  define_field paddingTop
+  960:  push_atom_value "16px"
+  965:  define_field paddingRight
+  970:  push_atom_value "16px"
+  975:  define_field paddingBottom
+  980:  push_atom_value "16px"
+  985:  define_field paddingLeft
+  990:  define_field "error-content"
+  995:  object
+  996:  push_atom_value "#ffffff"
+ 1001:  define_field color
+ 1006:  push_atom_value "15px"
+ 1011:  define_field fontSize
+ 1016:  push_const8 33: 1"600"
+ 1018:  define_field fontWeight
+ 1023:  push_atom_value "12px"
+ 1028:  define_field marginBottom
+ 1033:  define_field "error-title"
+ 1038:  object
+ 1039:  push_1 1
+ 1040:  define_field flex
+ 1045:  push_atom_value "100%"
+ 1050:  define_field width
+ 1055:  define_field "error-scroller"
+ 1060:  object
+ 1061:  push_atom_value "rgba(255,255,255,0.85)"
+ 1066:  define_field color
+ 1071:  push_atom_value "11px"
+ 1076:  define_field fontSize
+ 1081:  push_atom_value "16px"
+ 1086:  define_field lineHeight
+ 1091:  define_field "error-text"
+ 1096:  object
+ 1097:  push_atom_value "44px"
+ 1102:  define_field height
+ 1107:  push_atom_value row
+ 1112:  define_field flexDirection
+ 1117:  push_atom_value "flex-end"
+ 1122:  define_field justifyContent
+ 1127:  push_atom_value center
+ 1132:  define_field alignItems
+ 1137:  push_atom_value "12px"
+ 1142:  define_field marginTop
+ 1147:  define_field "error-actions"
+ 1152:  object
+ 1153:  push_atom_value "#FF6699"
+ 1158:  define_field color
+ 1163:  push_atom_value "14px"
+ 1168:  define_field fontSize
+ 1173:  push_atom_value "16px"
+ 1178:  define_field paddingLeft
+ 1183:  push_atom_value "16px"
+ 1188:  define_field paddingRight
+ 1193:  define_field "error-btn"
+ 1198:  object
+ 1199:  push_atom_value absolute
+ 1204:  define_field position
+ 1209:  push_atom_value "60px"
+ 1214:  define_field top
+ 1219:  push_atom_value "60px"
+ 1224:  define_field bottom
+ 1229:  push_0 0
+ 1230:  define_field left
+ 1235:  push_0 0
+ 1236:  define_field right
+ 1241:  push_6 6
+ 1242:  define_field zIndex
+ 1247:  define_field "tap-area"
+ 1252:  object
+ 1253:  push_atom_value absolute
+ 1258:  define_field position
+ 1263:  push_0 0
+ 1264:  define_field top
+ 1269:  push_0 0
+ 1270:  define_field left
+ 1275:  push_0 0
+ 1276:  define_field right
+ 1281:  push_atom_value "60px"
+ 1286:  define_field height
+ 1291:  push_atom_value "linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0))"
+ 1296:  define_field backgroundImage
+ 1301:  push_atom_value row
+ 1306:  define_field flexDirection
+ 1311:  push_atom_value center
+ 1316:  define_field alignItems
+ 1321:  push_atom_value "space-between"
+ 1326:  define_field justifyContent
+ 1331:  push_atom_value "4px"
+ 1336:  define_field paddingTop
+ 1341:  push_i8 10
+ 1343:  define_field zIndex
+ 1348:  define_field "top-bar"
+ 1353:  object
+ 1354:  push_atom_value "40px"
+ 1359:  define_field width
+ 1364:  push_atom_value "60px"
+ 1369:  define_field height
+ 1374:  push_atom_value row
+ 1379:  define_field flexDirection
+ 1384:  push_atom_value "flex-start"
+ 1389:  define_field justifyContent
+ 1394:  push_atom_value center
+ 1399:  define_field alignItems
+ 1404:  push_atom_value "16px"
+ 1409:  define_field paddingLeft
+ 1414:  push_0 0
+ 1415:  define_field flexShrink
+ 1420:  define_field "top-left"
+ 1425:  object
+ 1426:  push_atom_value "30px"
+ 1431:  define_field width
+ 1436:  push_atom_value "30px"
+ 1441:  define_field height
+ 1446:  push_atom_value center
+ 1451:  define_field justifyContent
+ 1456:  push_atom_value center
+ 1461:  define_field alignItems
+ 1466:  define_field "icon-wrapper"
+ 1471:  object
+ 1472:  push_atom_value "18px"
+ 1477:  define_field width
+ 1482:  push_atom_value "18px"
+ 1487:  define_field height
+ 1492:  define_field "back-icon"
+ 1497:  object
+ 1498:  push_atom_value "#ffffff"
+ 1503:  define_field color
+ 1508:  push_atom_value "15px"
+ 1513:  define_field fontSize
+ 1518:  push_1 1
+ 1519:  define_field flex
+ 1524:  push_atom_value left
+ 1529:  define_field textAlign
+ 1534:  push_1 1
+ 1535:  define_field lines
+ 1540:  push_atom_value ellipsis
+ 1545:  define_field textOverflow
+ 1550:  push_atom_value "8px"
+ 1555:  define_field marginLeft
+ 1560:  push_atom_value "12px"
+ 1565:  define_field marginRight
+ 1570:  define_field "video-title"
+ 1575:  object
+ 1576:  push_atom_value row
+ 1581:  define_field flexDirection
+ 1586:  push_atom_value center
+ 1591:  define_field alignItems
+ 1596:  push_atom_value "60px"
+ 1601:  define_field height
+ 1606:  push_atom_value "20px"
+ 1611:  define_field paddingRight
+ 1616:  push_0 0
+ 1617:  define_field flexShrink
+ 1622:  define_field "top-right"
+ 1627:  object
+ 1628:  push_atom_value row
+ 1633:  define_field flexDirection
+ 1638:  push_atom_value center
+ 1643:  define_field alignItems
+ 1648:  push_atom_value "60px"
+ 1653:  define_field height
+ 1658:  push_atom_value "12px"
+ 1663:  define_field marginRight
+ 1668:  define_field "jump-buttons"
+ 1673:  object
+ 1674:  push_atom_value "60px"
+ 1679:  define_field height
+ 1684:  push_atom_value center
+ 1689:  define_field justifyContent
+ 1694:  push_atom_value center
+ 1699:  define_field alignItems
+ 1704:  push_atom_value "rgba(0,0,0,0)"
+ 1709:  define_field backgroundColor
+ 1714:  push_atom_value "4px"
+ 1719:  define_field marginLeft
+ 1724:  push_atom_value "8px"
+ 1729:  define_field paddingLeft
+ 1734:  push_atom_value "8px"
+ 1739:  define_field paddingRight
+ 1744:  define_field "jump-btn"
+ 1749:  object
+ 1750:  push_atom_value "#ffffff"
+ 1755:  define_field color
+ 1760:  push_atom_value "12px"
+ 1765:  define_field fontSize
+ 1770:  define_field "jump-text"
+ 1775:  object
+ 1776:  push_atom_value "60px"
+ 1781:  define_field height
+ 1786:  push_atom_value "12px"
+ 1791:  define_field paddingLeft
+ 1796:  push_atom_value "12px"
+ 1801:  define_field paddingRight
+ 1806:  push_atom_value center
+ 1811:  define_field justifyContent
+ 1816:  push_atom_value center
+ 1821:  define_field alignItems
+ 1826:  define_field "action-btn"
+ 1831:  object
+ 1832:  push_atom_value "14px"
+ 1837:  define_field fontSize
+ 1842:  define_field "action-text"
+ 1847:  object
+ 1848:  push_atom_value absolute
+ 1853:  define_field position
+ 1858:  push_0 0
+ 1859:  define_field bottom
+ 1864:  push_0 0
+ 1865:  define_field left
+ 1870:  push_0 0
+ 1871:  define_field right
+ 1876:  push_atom_value "60px"
+ 1881:  define_field height
+ 1886:  push_atom_value "linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0))"
+ 1891:  define_field backgroundImage
+ 1896:  push_atom_value row
+ 1901:  define_field flexDirection
+ 1906:  push_atom_value center
+ 1911:  define_field alignItems
+ 1916:  push_i8 10
+ 1918:  define_field zIndex
+ 1923:  push_atom_value "12px"
+ 1928:  define_field paddingBottom
+ 1933:  define_field "bottom-bar"
+ 1938:  object
+ 1939:  push_atom_value "55px"
+ 1944:  define_field width
+ 1949:  push_atom_value "50px"
+ 1954:  define_field height
+ 1959:  push_atom_value row
+ 1964:  define_field flexDirection
+ 1969:  push_atom_value "flex-start"
+ 1974:  define_field justifyContent
+ 1979:  push_atom_value center
+ 1984:  define_field alignItems
+ 1989:  push_atom_value "20px"
+ 1994:  define_field paddingLeft
+ 1999:  push_0 0
+ 2000:  define_field marginRight
+ 2005:  define_field "play-btn"
+ 2010:  object
+ 2011:  push_atom_value "24px"
+ 2016:  define_field width
+ 2021:  push_atom_value "24px"
+ 2026:  define_field height
+ 2031:  define_field "play-icon-img"
+ 2036:  object
+ 2037:  push_atom_value "42px"
+ 2042:  define_field width
+ 2047:  push_atom_value "#dddddd"
+ 2052:  define_field color
+ 2057:  push_atom_value "12px"
+ 2062:  define_field fontSize
+ 2067:  push_atom_value center
+ 2072:  define_field textAlign
+ 2077:  push_atom_value "4px"
+ 2082:  define_field marginLeft
+ 2087:  push_atom_value "8px"
+ 2092:  define_field marginRight
+ 2097:  define_field "time-current"
+ 2102:  object
+ 2103:  push_atom_value "68px"
+ 2108:  define_field width
+ 2113:  push_atom_value "#dddddd"
+ 2118:  define_field color
+ 2123:  push_atom_value "12px"
+ 2128:  define_field fontSize
+ 2133:  push_atom_value center
+ 2138:  define_field textAlign
+ 2143:  push_atom_value "4px"
+ 2148:  define_field marginLeft
+ 2153:  push_atom_value "20px"
+ 2158:  define_field paddingRight
+ 2163:  define_field "time-total"
+ 2168:  object
+ 2169:  push_1 1
+ 2170:  define_field flex
+ 2175:  push_atom_value "40px"
+ 2180:  define_field height
+ 2185:  define_field "video-seekbar"
+ 2190:  object
+ 2191:  push_const8 34: 0.65
+ 2193:  define_field opacity
+ 2198:  define_field "dark-overlay-press"
+ 2203:  object
+ 2204:  push_const8 35: 0.65
+ 2206:  define_field opacity
+ 2211:  define_field "error-btn-press"
+ 2216:  object
+ 2217:  push_const8 36: 0.65
+ 2219:  define_field opacity
+ 2224:  define_field "tap-area-press"
+ 2229:  object
+ 2230:  push_const8 37: 0.65
+ 2232:  define_field opacity
+ 2237:  define_field "top-left-press"
+ 2242:  object
+ 2243:  push_const8 38: 0.65
+ 2245:  define_field opacity
+ 2250:  define_field "jump-btn-press"
+ 2255:  object
+ 2256:  push_const8 39: 0.65
+ 2258:  define_field opacity
+ 2263:  define_field "action-btn-press"
+ 2268:  object
+ 2269:  push_const8 40: 0.65
+ 2271:  define_field opacity
+ 2276:  define_field "play-btn-press"
+ 2281:  call_method 2
+ 2284:  put_field style
+ 2289:  get_var_ref_check 10: c
+ 2292:  push_atom_value "src/components/ffmpeg.vue"
+ 2297:  put_field __file
+ 2302:  object
+ 2303:  object
+ 2304:  get_var_ref_check 10: c
+ 2307:  define_field FfmpegTool
+ 2312:  define_field components
+ 2317:  object
+ 2318:  fclosure8 41: [bytecode <null>]
+ 2320:  define_method forward,4
+ 2326:  define_field methods
+ 2331:  fclosure8 42: [bytecode <null>]
+ 2333:  define_method onLoad,4
+ 2339:  fclosure8 43: [bytecode <null>]
+ 2341:  define_method onShow,4
+ 2347:  fclosure8 44: [bytecode <null>]
+ 2349:  define_method onHide,4
+ 2355:  fclosure8 45: [bytecode <null>]
+ 2357:  define_method onUnload,4
+ 2363:  put_var_ref 11: p
+ 2366:  fclosure8 46: [bytecode <null>]
+ 2368:  set_name d
+ 2373:  set_var_ref 12: d
+ 2376:  push_0 0
+ 2377:  lnot
+ 2378:  put_field _withStripped
+ 2383:  get_var_ref 11: p
+ 2386:  put_var_ref 13: u
+ 2389:  get_var_ref_check 13: u
+ 2392:  get_var_ref 12: d
+ 2395:  put_field render
+ 2400:  get_var_ref_check 13: u
+ 2403:  array_from 0
+ 2406:  put_field staticRenderFns
+ 2411:  get_var_ref_check 13: u
+ 2414:  push_0 0
+ 2415:  lnot
+ 2416:  put_field _compiled
+ 2421:  get_var_ref_check 13: u
+ 2424:  push_atom_value "data-v-3ca59cf6"
+ 2429:  put_field _scopeId
+ 2434:  get_var_ref_check 13: u
+ 2437:  object
+ 2438:  put_field themes
+ 2443:  get_var_ref_check 13: u
+ 2446:  object
+ 2447:  put_field style
+ 2452:  get_var_ref_check 13: u
+ 2455:  push_atom_value "src/pages/apps/ffmpeg/ffmpeg.vue"
+ 2460:  put_field __file
+ 2465:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: e parent:loc1 const
+    1: i parent:loc2 const
+    2: a parent:loc3 const
+    3: n parent:loc7 const
+  stack_size: 6
+  opcodes:
+    0:  object
+    1:  null
+    2:  define_field player
+    7:  push_1 1
+    8:  lnot
+    9:  define_field isPlaying
+   14:  push_0 0
+   15:  define_field currentTime
+   20:  push_1 1
+   21:  define_field totalDuration
+   26:  push_0 0
+   27:  lnot
+   28:  define_field loading
+   33:  push_0 0
+   34:  lnot
+   35:  define_field showControls
+   40:  push_1 1
+   41:  lnot
+   42:  define_field isDarkMode
+   47:  push_1 1
+   48:  lnot
+   49:  define_field isDragging
+   54:  push_1 1
+   55:  lnot
+   56:  define_field isSeeking
+   61:  push_0 0
+   62:  define_field dragTime
+   67:  push_empty_string
+   68:  define_field videoPath
+   73:  push_empty_string
+   74:  define_field playVideoPath
+   79:  push_empty_string
+   80:  define_field videoTitle
+   85:  null
+   86:  define_field updateTimer
+   91:  null
+   92:  define_field hideTimer
+   97:  push_minus1 -1
+   98:  define_field lastCheckTime
+  103:  push_0 0
+  104:  define_field stallCount
+  109:  get_var_ref_check 0: e
+  112:  define_field playIconPlay
+  117:  get_var_ref_check 1: i
+  120:  define_field playIconPause
+  125:  get_var_ref_check 2: a
+  128:  define_field backIcon
+  133:  object
+  134:  define_field $page
+  139:  push_0 0
+  140:  lnot
+  141:  define_field videoMuted
+  146:  push_0 0
+  147:  lnot
+  148:  define_field videoRotate
+  153:  push_0 0
+  154:  lnot
+  155:  define_field keepAspect
+  160:  push_const8 0: 0.5
+  162:  push_1 1
+  163:  push_const8 1: 1.25
+  165:  push_const8 2: 1.5
+  167:  push_2 2
+  168:  array_from 5
+  171:  define_field playbackRates
+  176:  push_1 1
+  177:  define_field playbackRateIndex
+  182:  push_empty_string
+  183:  define_field audioTrackUrl
+  188:  push_1 1
+  189:  lnot
+  190:  define_field errorPopup
+  195:  push_empty_string
+  196:  define_field errorPopupText
+  201:  null
+  202:  define_field loadingTimeoutTimer
+  207:  push_0 0
+  208:  define_field playStartTime
+  213:  push_1 1
+  214:  lnot
+  215:  define_field hasReceivedFrame
+  220:  push_0 0
+  221:  define_field errorCheckCount
+  226:  null
+  227:  define_field canvasContext
+  232:  null
+  233:  define_field imageData
+  238:  push_0 0
+  239:  define_field lastFrameCount
+  244:  push_0 0
+  245:  lnot
+  246:  define_field useCanvasPlayer
+  251:  push_1 1
+  252:  lnot
+  253:  define_field cacheBeforePlay
+  258:  push_0 0
+  259:  define_field avSyncDelayMs
+  264:  get_var_ref_check 3: n
+  267:  call0 0
+  268:  get_field width
+  273:  define_field screenWidth
+  278:  get_var_ref_check 3: n
+  281:  call0 0
+  282:  get_field height
+  287:  define_field screenHeight
+  292:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field isDragging
+    8:  dup
+    9:  if_true8 18
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field isSeeking
+   18:  if_false8 27
+   20:  get_loc0 0: this
+   21:  get_field dragTime
+   26:  return
+   27:  get_loc0 0: this
+   28:  get_field currentTime
+   33:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field playbackRates
+    8:  get_loc0 0: this
+    9:  get_field playbackRateIndex
+   14:  get_array_el
+   15:  get_field2 toFixed
+   20:  push_2 2
+   21:  call_method 1
+   24:  push_atom_value x
+   29:  add
+   30:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  object
+    3:  get_loc0 0: this
+    4:  get_field screenWidth
+    9:  push_atom_value px
+   14:  add
+   15:  define_field width
+   20:  get_loc0 0: this
+   21:  get_field screenHeight
+   26:  push_atom_value px
+   31:  add
+   32:  define_field height
+   37:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_loc1 1: this
+    4:  get_field2 getVideoPath
+    9:  call_method 0
+   12:  put_field videoPath
+   17:  get_loc1 1: this
+   18:  get_loc1 1: this
+   19:  get_field videoPath
+   24:  put_field playVideoPath
+   29:  get_loc1 1: this
+   30:  get_loc1 1: this
+   31:  get_field2 getVideoTitle
+   36:  call_method 0
+   39:  put_field videoTitle
+   44:  get_loc1 1: this
+   45:  get_field2 preparePlaybackPath
+   50:  call_method 0
+   53:  drop
+   54:  get_loc1 1: this
+   55:  put_loc0 0: t
+   56:  get_var setTimeout
+   61:  fclosure8 0: [bytecode <null>]
+   63:  push_i16 300
+   66:  call2 2
+   67:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 initVideoPlayer
+    6:  call_method 0
+    9:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 cleanup
+    8:  call_method 0
+   11:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:4 next:-1]
+  closure vars:
+    0: r parent:loc4 const
+  stack_size: 2
+  opcodes:
+    0:  push_atom_value undefined
+    5:  get_var_undef bridge
+   10:  typeof
+   11:  neq
+   12:  if_false8 20
+   14:  get_var bridge
+   19:  return
+   20:  catch 30
+   25:  get_var_ref_check 0: r
+   28:  nip
+   29:  return
+   30:  put_loc0 0: t
+   31:  catch 39
+   36:  drop
+   37:  goto8 40
+   39:  throw
+   40:  null
+   41:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field $page
+    8:  if_false8 58
+   10:  get_loc0 0: this
+   11:  get_field $page
+   16:  get_field loadOptions
+   21:  if_false8 58
+   23:  get_loc0 0: this
+   24:  get_field $page
+   29:  get_field loadOptions
+   34:  get_field path
+   39:  if_false8 58
+   41:  get_loc0 0: this
+   42:  get_field $page
+   47:  get_field loadOptions
+   52:  get_field path
+   57:  return
+   58:  get_loc0 0: this
+   59:  get_field $route
+   64:  if_false8 120
+   66:  get_loc0 0: this
+   67:  get_field $route
+   72:  get_field query
+   77:  if_false8 120
+   79:  get_loc0 0: this
+   80:  get_field $route
+   85:  get_field query
+   90:  get_field path
+   95:  if_false8 120
+   97:  get_var decodeURIComponent
+  102:  get_loc0 0: this
+  103:  get_field $route
+  108:  get_field query
+  113:  get_field path
+  118:  call1 1
+  119:  return
+  120:  push_atom_value "/userdisk/My/a.mp4"
+  125:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var i
+    3: var a
+    4: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc8 4: this
+    3:  get_loc8 4: this
+    5:  get_field $page
+   10:  if_false8 70
+   12:  get_loc8 4: this
+   14:  get_field $page
+   19:  get_field loadOptions
+   24:  if_false8 70
+   26:  get_loc8 4: this
+   28:  get_field $page
+   33:  get_field loadOptions
+   38:  get_field title
+   43:  if_false8 70
+   45:  get_var decodeURIComponent
+   50:  get_loc8 4: this
+   52:  get_field $page
+   57:  get_field loadOptions
+   62:  get_field title
+   67:  tail_call 1
+   70:  get_loc8 4: this
+   72:  get_field $route
+   77:  if_false8 137
+   79:  get_loc8 4: this
+   81:  get_field $route
+   86:  get_field query
+   91:  if_false8 137
+   93:  get_loc8 4: this
+   95:  get_field $route
+  100:  get_field query
+  105:  get_field title
+  110:  if_false8 137
+  112:  get_var decodeURIComponent
+  117:  get_loc8 4: this
+  119:  get_field $route
+  124:  get_field query
+  129:  get_field title
+  134:  tail_call 1
+  137:  get_loc8 4: this
+  139:  get_field videoPath
+  144:  dup
+  145:  if_true8 149
+  147:  drop
+  148:  push_empty_string
+  149:  set_loc0 0: t
+  150:  if_false8 216
+  152:  get_loc0 0: t
+  153:  get_field2 split
+  158:  push_atom_value "/"
+  163:  call_method 1
+  166:  set_loc1 1: e
+  167:  get_loc1 1: e
+  168:  get_length
+  169:  push_1 1
+  170:  sub
+  171:  get_array_el
+  172:  dup
+  173:  if_true8 177
+  175:  drop
+  176:  push_empty_string
+  177:  set_loc2 2: i
+  178:  get_field2 lastIndexOf
+  183:  push_atom_value "."
+  188:  call_method 1
+  191:  set_loc3 3: a
+  192:  push_0 0
+  193:  gt
+  194:  dup
+  195:  if_false8 210
+  197:  drop
+  198:  get_loc2 2: i
+  199:  get_field2 substring
+  204:  push_0 0
+  205:  get_loc3 3: a
+  206:  call_method 2
+  209:  set_loc2 2: i
+  210:  drop
+  211:  get_loc2 2: i
+  212:  if_false8 216
+  214:  get_loc2 2: i
+  215:  return
+  216:  push_empty_string
+  217:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var i
+    2: var a
+  stack_size: 4
+  opcodes:
+    0:  get_arg0 0: t
+    1:  lnot
+    2:  dup
+    3:  if_true8 14
+    5:  drop
+    6:  push_atom_value string
+   11:  get_arg0 0: t
+   12:  typeof
+   13:  neq
+   14:  if_false8 19
+   16:  push_0 0
+   17:  lnot
+   18:  return
+   19:  get_arg0 0: t
+   20:  get_field2 trim
+   25:  call_method 0
+   28:  set_loc0 0: e
+   29:  lnot
+   30:  if_false8 35
+   32:  push_0 0
+   33:  lnot
+   34:  return
+   35:  get_loc0 0: e
+   36:  get_field2 match
+   41:  push_const8 0: 1"^([a-zA-Z][a-zA-Z0-9+.-]*):"
+   43:  push_const8 1: 1"\u0000\u0002\u0000L\u0000\u0000\u0000\u0008\u0006\u0000\u0000\u0000\u0004\u0007\u00f5\u00ff\u00ff\u00ff\u000b\u0000\u0005\u000b\u0001\u0015\u0002\u0000A\u0000Z\u0000a\u0000z\u0000\u001c\u0018\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u00ff\u00ff\u00ff\u007f\u0001\u0000\u0000\u0000\u0015\u0005\u0000+\u0000+\u0000-\u0000.\u00000\u00009\u0000A\u0000Z\u0000a\u0000z\u0000\n\u000c\u0001\u0001:\u0000\u000c\u0000\n"
+   45:  regexp
+   46:  call_method 1
+   49:  set_loc1 1: i
+   50:  lnot
+   51:  if_false8 56
+   53:  push_0 0
+   54:  lnot
+   55:  return
+   56:  get_loc1 1: i
+   57:  push_1 1
+   58:  get_array_el
+   59:  dup
+   60:  if_true8 64
+   62:  drop
+   63:  push_empty_string
+   64:  get_field2 toLowerCase
+   69:  call_method 0
+   72:  put_loc2 2: a
+   73:  push_atom_value file
+   78:  get_loc2 2: a
+   79:  strict_eq
+   80:  dup
+   81:  if_true8 124
+   83:  drop
+   84:  push_atom_value http
+   89:  get_loc2 2: a
+   90:  strict_neq
+   91:  dup
+   92:  if_false8 124
+   94:  drop
+   95:  push_atom_value https
+  100:  get_loc2 2: a
+  101:  strict_neq
+  102:  dup
+  103:  if_false8 124
+  105:  drop
+  106:  push_atom_value rtsp
+  111:  get_loc2 2: a
+  112:  strict_neq
+  113:  dup
+  114:  if_false8 124
+  116:  drop
+  117:  push_atom_value rtmp
+  122:  get_loc2 2: a
+  123:  strict_neq
+  124:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 isLocalVideoPath
+    8:  get_loc0 0: this
+    9:  get_field videoPath
+   14:  call_method 1
+   17:  lnot
+   18:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: catch t [level:4 next:-1]
+    2: var this
+  stack_size: 7
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_arg0 0: t
+    3:  lnot
+    4:  dup
+    5:  if_true8 16
+    7:  drop
+    8:  push_atom_value string
+   13:  get_arg0 0: t
+   14:  typeof
+   15:  neq
+   16:  if_false8 20
+   18:  get_arg0 0: t
+   19:  return
+   20:  catch 129
+   25:  get_loc2 2: this
+   26:  get_field2 getBridgeModule
+   31:  call_method 0
+   34:  set_loc0 0: e
+   35:  if_false8 126
+   37:  get_loc0 0: e
+   38:  get_field Video
+   43:  if_false8 126
+   45:  push_atom_value function
+   50:  get_loc0 0: e
+   51:  get_field Video
+   56:  get_field getProxyUrl
+   61:  typeof
+   62:  eq
+   63:  if_false8 126
+   65:  get_loc2 2: this
+   66:  get_field2 isBiliVideoUrl
+   71:  get_arg0 0: t
+   72:  call_method 1
+   75:  if_false8 109
+   77:  get_loc0 0: e
+   78:  get_field Video
+   83:  get_field2 getProxyUrl
+   88:  get_arg0 0: t
+   89:  push_atom_value "https://www.bilibili.com"
+   94:  push_atom_value "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36"
+   99:  push_atom_value "https://www.bilibili.com"
+  104:  call_method 4
+  107:  goto8 127
+  109:  get_loc0 0: e
+  110:  get_field Video
+  115:  get_field2 getProxyUrl
+  120:  get_arg0 0: t
+  121:  call_method 1
+  124:  goto8 127
+  126:  get_arg0 0: t
+  127:  nip
+  128:  return
+  129:  put_loc1 1: t
+  130:  catch 138
+  135:  drop
+  136:  goto8 139
+  138:  throw
+  139:  get_arg0 0: t
+  140:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 splitCombinedUrl
+    8:  call_method 0
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field2 shouldUseLocalProxy
+   18:  call_method 0
+   21:  dup
+   22:  if_false8 47
+   24:  drop
+   25:  get_loc0 0: this
+   26:  get_loc0 0: this
+   27:  get_field2 buildLocalProxyPath
+   32:  get_loc0 0: this
+   33:  get_field videoPath
+   38:  call_method 1
+   41:  insert2
+   42:  put_field playVideoPath
+   47:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var i
+    3: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  get_field videoPath
+    8:  get_field2 indexOf
+   13:  push_atom_value "|||"
+   18:  call_method 1
+   21:  set_loc0 0: t
+   22:  push_0 0
+   23:  gte
+   24:  if_false8 82
+   26:  get_loc3 3: this
+   27:  get_field videoPath
+   32:  get_field2 substring
+   37:  push_0 0
+   38:  get_loc0 0: t
+   39:  call_method 2
+   42:  put_loc1 1: e
+   43:  get_loc3 3: this
+   44:  get_field videoPath
+   49:  get_field2 substring
+   54:  get_loc0 0: t
+   55:  push_3 3
+   56:  add
+   57:  call_method 1
+   60:  put_loc2 2: i
+   61:  get_loc3 3: this
+   62:  get_loc1 1: e
+   63:  put_field videoPath
+   68:  get_loc3 3: this
+   69:  get_loc1 1: e
+   70:  put_field playVideoPath
+   75:  get_loc3 3: this
+   76:  get_loc2 2: i
+   77:  put_field audioTrackUrl
+   82:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_1 1
+    4:  lnot
+    5:  put_field loading
+   10:  get_loc0 0: this
+   11:  push_1 1
+   12:  lnot
+   13:  put_field isPlaying
+   18:  get_loc0 0: this
+   19:  get_arg0 0: t
+   20:  dup
+   21:  if_true8 29
+   23:  drop
+   24:  push_atom_value "\u00e8\u00a7\u0086\u00e9\u00a2\u0091\u00e6\u0092\u00ad\u00e6\u0094\u00be\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+   29:  put_field errorPopupText
+   34:  get_loc0 0: this
+   35:  push_0 0
+   36:  lnot
+   37:  put_field errorPopup
+   42:  get_loc0 0: this
+   43:  get_field updateTimer
+   48:  dup
+   49:  if_false8 73
+   51:  drop
+   52:  get_var clearInterval
+   57:  get_loc0 0: this
+   58:  get_field updateTimer
+   63:  call1 1
+   64:  drop
+   65:  get_loc0 0: this
+   66:  null
+   67:  insert2
+   68:  put_field updateTimer
+   73:  drop
+   74:  get_loc0 0: this
+   75:  get_field loadingTimeoutTimer
+   80:  dup
+   81:  if_false8 105
+   83:  drop
+   84:  get_var clearTimeout
+   89:  get_loc0 0: this
+   90:  get_field loadingTimeoutTimer
+   95:  call1 1
+   96:  drop
+   97:  get_loc0 0: this
+   98:  null
+   99:  insert2
+  100:  put_field loadingTimeoutTimer
+  105:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  push_1 1
+    4:  lnot
+    5:  put_field errorPopup
+   10:  get_loc0 0: this
+   11:  push_empty_string
+   12:  put_field errorPopupText
+   17:  get_loc0 0: this
+   18:  get_field2 goBack
+   23:  call_method 0
+   26:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var i
+    3: var a
+    4: catch t [level:7 next:-1]
+    5: var r
+    6: var s
+    7: var n
+    8: var l
+    9: catch t [level:13 next:-1]
+   10: catch t [level:18 next:-1]
+   11: catch t [level:23 next:-1]
+   12: var this
+  closure vars:
+    0: o parent:loc5 const
+  stack_size: 8
+  opcodes:
+    0:  push_this
+    1:  put_loc8 12: this
+    3:  get_loc8 12: this
+    5:  get_field2 getBridgeModule
+   10:  call_method 0
+   13:  set_loc0 0: t
+   14:  if_false 953
+   19:  get_loc0 0: t
+   20:  get_field Video
+   25:  if_false 953
+   30:  get_loc8 12: this
+   32:  get_loc0 0: t
+   33:  get_field Video
+   38:  put_field player
+   43:  get_loc8 12: this
+   45:  get_var Date
+   50:  get_field2 now
+   55:  call_method 0
+   58:  put_field playStartTime
+   63:  get_loc8 12: this
+   65:  push_1 1
+   66:  lnot
+   67:  put_field hasReceivedFrame
+   72:  get_loc8 12: this
+   74:  push_0 0
+   75:  put_field errorCheckCount
+   80:  get_loc8 12: this
+   82:  push_0 0
+   83:  put_field lastFrameCount
+   88:  catch 248
+   93:  get_loc8 12: this
+   95:  get_field2 getBridgeModule
+  100:  call_method 0
+  103:  set_loc1 1: e
+  104:  dup
+  105:  if_false8 124
+  107:  drop
+  108:  get_loc1 1: e
+  109:  get_field Datas
+  114:  dup
+  115:  if_true8 124
+  117:  drop
+  118:  get_loc1 1: e
+  119:  get_field Dbase
+  124:  set_loc2 2: i
+  125:  if_false8 245
+  127:  push_atom_value function
+  132:  get_loc2 2: i
+  133:  get_field read
+  138:  typeof
+  139:  eq
+  140:  if_false8 245
+  142:  get_loc2 2: i
+  143:  get_field2 read
+  148:  push_atom_value sys_adaptation_configs
+  153:  call_method 1
+  156:  set_loc3 3: a
+  157:  dup
+  158:  if_false8 244
+  160:  drop
+  161:  push_atom_value object
+  166:  get_loc3 3: a
+  167:  typeof
+  168:  eq
+  169:  dup
+  170:  if_false8 244
+  172:  drop
+  173:  get_loc8 12: this
+  175:  push_0 0
+  176:  lnot
+  177:  put_field useCanvasPlayer
+  182:  get_loc8 12: this
+  184:  get_loc3 3: a
+  185:  get_field cacheBeforePlay
+  190:  lnot
+  191:  lnot
+  192:  put_field cacheBeforePlay
+  197:  get_loc8 12: this
+  199:  get_var parseInt
+  204:  get_loc3 3: a
+  205:  get_field avSyncDelayMs
+  210:  push_i8 10
+  212:  call2 2
+  213:  put_field avSyncDelayMs
+  218:  get_var isNaN
+  223:  get_loc8 12: this
+  225:  get_field avSyncDelayMs
+  230:  call1 1
+  231:  dup
+  232:  if_false8 244
+  234:  drop
+  235:  get_loc8 12: this
+  237:  null
+  238:  insert2
+  239:  put_field avSyncDelayMs
+  244:  drop
+  245:  drop
+  246:  goto8 259
+  248:  put_loc8 4: t
+  250:  catch 258
+  255:  drop
+  256:  goto8 259
+  258:  throw
+  259:  push_atom_value function
+  264:  get_loc8 12: this
+  266:  get_field player
+  271:  get_field setUseCanvasPlayer
+  276:  typeof
+  277:  eq
+  278:  dup
+  279:  if_false8 306
+  281:  drop
+  282:  get_loc8 12: this
+  284:  get_field player
+  289:  get_field2 setUseCanvasPlayer
+  294:  get_loc8 12: this
+  296:  get_field useCanvasPlayer
+  301:  lnot
+  302:  lnot
+  303:  call_method 1
+  306:  drop
+  307:  push_atom_value function
+  312:  get_loc8 12: this
+  314:  get_field player
+  319:  get_field setCacheBeforePlay
+  324:  typeof
+  325:  eq
+  326:  dup
+  327:  if_false8 354
+  329:  drop
+  330:  get_loc8 12: this
+  332:  get_field player
+  337:  get_field2 setCacheBeforePlay
+  342:  get_loc8 12: this
+  344:  get_field cacheBeforePlay
+  349:  lnot
+  350:  lnot
+  351:  call_method 1
+  354:  drop
+  355:  push_atom_value function
+  360:  get_loc8 12: this
+  362:  get_field player
+  367:  get_field setAvSyncDelayMs
+  372:  typeof
+  373:  eq
+  374:  if_false8 417
+  376:  get_loc8 12: this
+  378:  get_field avSyncDelayMs
+  383:  put_loc8 5: r
+  385:  null
+  386:  get_loc8 5: r
+  388:  eq
+  389:  dup
+  390:  if_false8 398
+  392:  drop
+  393:  push_i16 300
+  396:  set_loc8 5: r
+  398:  drop
+  399:  get_loc8 12: this
+  401:  get_field player
+  406:  get_field2 setAvSyncDelayMs
+  411:  get_loc8 5: r
+  413:  call_method 1
+  416:  drop
+  417:  get_loc8 12: this
+  419:  get_field $refs
+  424:  get_field videoCanvas
+  429:  set_loc8 6: s
+  431:  if_false 709
+  436:  catch 681
+  441:  push_atom_value function
+  446:  get_var_undef createCanvasContext
+  451:  typeof
+  452:  eq
+  453:  if_false8 465
+  455:  get_var createCanvasContext
+  460:  get_loc8 6: s
+  462:  call1 1
+  463:  goto8 480
+  465:  get_loc8 6: s
+  467:  get_field2 getContext
+  472:  push_atom_value "2d"
+  477:  call_method 1
+  480:  put_loc8 7: n
+  482:  get_loc8 6: s
+  484:  get_loc8 12: this
+  486:  get_field screenWidth
+  491:  put_field width
+  496:  get_loc8 6: s
+  498:  get_loc8 12: this
+  500:  get_field screenHeight
+  505:  put_field height
+  510:  get_loc8 7: n
+  512:  push_atom_value "#000000"
+  517:  put_field fillStyle
+  522:  get_loc8 7: n
+  524:  get_field2 fillRect
+  529:  push_0 0
+  530:  push_0 0
+  531:  get_loc8 12: this
+  533:  get_field screenWidth
+  538:  get_loc8 12: this
+  540:  get_field screenHeight
+  545:  call_method 4
+  548:  drop
+  549:  get_loc8 12: this
+  551:  get_loc8 7: n
+  553:  get_field2 getImageData
+  558:  push_0 0
+  559:  push_0 0
+  560:  get_loc8 12: this
+  562:  get_field screenWidth
+  567:  get_loc8 12: this
+  569:  get_field screenHeight
+  574:  call_method 4
+  577:  put_field imageData
+  582:  get_loc8 12: this
+  584:  get_loc8 7: n
+  586:  put_field canvasContext
+  591:  get_loc8 12: this
+  593:  get_field imageData
+  598:  get_field buffer
+  603:  dup
+  604:  if_true8 624
+  606:  drop
+  607:  get_loc8 12: this
+  609:  get_field imageData
+  614:  get_field data
+  619:  get_field buffer
+  624:  set_loc8 8: l
+  626:  dup
+  627:  if_false8 677
+  629:  drop
+  630:  get_loc8 12: this
+  632:  get_field player
+  637:  get_field setRenderBuffer
+  642:  dup
+  643:  if_false8 677
+  645:  drop
+  646:  get_loc8 12: this
+  648:  get_field player
+  653:  get_field2 setRenderBuffer
+  658:  get_loc8 8: l
+  660:  get_loc8 12: this
+  662:  get_field screenWidth
+  667:  get_loc8 12: this
+  669:  get_field screenHeight
+  674:  call_method 3
+  677:  drop
+  678:  drop
+  679:  goto8 709
+  681:  put_loc8 9: t
+  683:  catch 708
+  688:  get_var_ref_check 0: o
+  691:  push_atom_value ffmpeg
+  696:  push_atom_value "canvas buffer init"
+  701:  get_loc8 9: t
+  703:  call3 3
+  704:  drop
+  705:  drop
+  706:  goto8 709
+  708:  throw
+  709:  get_loc8 12: this
+  711:  get_field audioTrackUrl
+  716:  if_false8 760
+  718:  catch 749
+  723:  get_loc8 12: this
+  725:  get_field player
+  730:  get_field2 setAudioTrack
+  735:  get_loc8 12: this
+  737:  get_field audioTrackUrl
+  742:  call_method 1
+  745:  drop
+  746:  drop
+  747:  goto8 760
+  749:  put_loc8 10: t
+  751:  catch 759
+  756:  drop
+  757:  goto8 760
+  759:  throw
+  760:  get_loc8 12: this
+  762:  get_field player
+  767:  get_field2 play
+  772:  get_loc8 12: this
+  774:  get_field playVideoPath
+  779:  push_0 0
+  780:  push_0 0
+  781:  push_0 0
+  782:  push_0 0
+  783:  call_method 5
+  786:  if_false 922
+  791:  get_loc8 12: this
+  793:  push_1 1
+  794:  lnot
+  795:  put_field videoMuted
+  800:  catch 848
+  805:  push_atom_value function
+  810:  get_loc8 12: this
+  812:  get_field player
+  817:  get_field setMuted
+  822:  typeof
+  823:  eq
+  824:  dup
+  825:  if_false8 844
+  827:  drop
+  828:  get_loc8 12: this
+  830:  get_field player
+  835:  get_field2 setMuted
+  840:  push_0 0
+  841:  call_method 1
+  844:  drop
+  845:  drop
+  846:  goto8 859
+  848:  put_loc8 11: t
+  850:  catch 858
+  855:  drop
+  856:  goto8 859
+  858:  throw
+  859:  get_loc8 12: this
+  861:  push_0 0
+  862:  lnot
+  863:  put_field isPlaying
+  868:  get_loc8 12: this
+  870:  push_0 0
+  871:  lnot
+  872:  put_field loading
+  877:  get_loc8 12: this
+  879:  get_field2 applyPlaybackRate
+  884:  call_method 0
+  887:  drop
+  888:  get_loc8 12: this
+  890:  get_field2 startUpdateTimer
+  895:  call_method 0
+  898:  drop
+  899:  get_loc8 12: this
+  901:  get_field2 scheduleHideControls
+  906:  call_method 0
+  909:  drop
+  910:  get_loc8 12: this
+  912:  get_field2 startLoadingTimeout
+  917:  call_method 0
+  920:  drop
+  921:  return_undef
+  922:  get_loc8 12: this
+  924:  get_field2 showPlayError
+  929:  push_atom_value "\u00e8\u00a7\u0086\u00e9\u00a2\u0091\u00e5\u0090\u00af\u00e5\u008a\u00a8\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5\n\n\u00e6\u0096\u0087\u00e4\u00bb\u00b6\u00e8\u00b7\u00af\u00e5\u00be\u0084: "
+  934:  get_loc8 12: this
+  936:  get_field videoPath
+  941:  add
+  942:  push_atom_value "\n\n\u00e5\u008f\u00af\u00e8\u0083\u00bd\u00e5\u008e\u009f\u00e5\u009b\u00a0:\n\u00e2\u0080\u00a2 \u00e6\u0096\u0087\u00e4\u00bb\u00b6\u00e4\u00b8\u008d\u00e5\u00ad\u0098\u00e5\u009c\u00a8\u00e6\u0088\u0096\u00e8\u00b7\u00af\u00e5\u00be\u0084\u00e9\u0094\u0099\u00e8\u00af\u00af\n\u00e2\u0080\u00a2 \u00e8\u00a7\u0086"
+  947:  add
+  948:  call_method 1
+  951:  drop
+  952:  return_undef
+  953:  get_loc8 12: this
+  955:  get_field2 showPlayError
+  960:  push_atom_value "\u00e6\u0092\u00ad\u00e6\u0094\u00be\u00e5\u0099\u00a8\u00e6\u00a8\u00a1\u00e5\u009d\u0097\u00e6\u009c\u00aa\u00e5\u008a\u00a0\u00e8\u00bd\u00bd\u00ef\u00bc\u008c\u00e6\u0097\u00a0\u00e6\u00b3\u0095\u00e6\u0092\u00ad\u00e6\u0094\u00be\u00e8\u00a7\u0086\u00e9\u00a2\u0091"
+  965:  call_method 1
+  968:  drop
+  969:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_loc2 2: this
+    3:  get_field loadingTimeoutTimer
+    8:  dup
+    9:  if_false8 24
+   11:  drop
+   12:  get_var clearTimeout
+   17:  get_loc2 2: this
+   18:  get_field loadingTimeoutTimer
+   23:  call1 1
+   24:  drop
+   25:  get_loc2 2: this
+   26:  get_field2 isLocalVideoPath
+   31:  get_loc2 2: this
+   32:  get_field videoPath
+   37:  call_method 1
+   40:  lnot
+   41:  if_false8 48
+   43:  push_i16 20000
+   46:  goto8 51
+   48:  push_i16 10000
+   51:  put_loc0 0: t
+   52:  get_loc2 2: this
+   53:  put_loc1 1: e
+   54:  get_loc2 2: this
+   55:  get_var setTimeout
+   60:  fclosure8 0: [bytecode <null>]
+   62:  get_loc0 0: t
+   63:  call2 2
+   64:  put_field loadingTimeoutTimer
+   69:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var i
+    1: catch t [level:5 next:-1]
+  closure vars:
+    0: e local:loc1 var
+    1: t local:loc0 var
+  stack_size: 5
+  opcodes:
+    0:  get_var_ref0 0: e
+    1:  null
+    2:  put_field loadingTimeoutTimer
+    7:  get_var_ref0 0: e
+    8:  get_field loading
+   13:  if_false8 104
+   15:  get_var_ref0 0: e
+   16:  get_field hasReceivedFrame
+   21:  lnot
+   22:  if_false8 104
+   24:  push_atom_value "\u00e8\u00a7\u0086\u00e9\u00a2\u0091\u00e5\u008a\u00a0\u00e8\u00bd\u00bd\u00e8\u00b6\u0085\u00e6\u0097\u00b6\u00ef\u00bc\u0088"
+   29:  get_var Math
+   34:  get_field2 round
+   39:  get_var_ref1 1: t
+   40:  push_i16 1000
+   43:  div
+   44:  call_method 1
+   47:  add
+   48:  push_atom_value "\u00e7\u00a7\u0092\u00e6\u0097\u00a0\u00e5\u0093\u008d\u00e5\u00ba\u0094\u00ef\u00bc\u0089\n\n\u00e6\u0096\u0087\u00e4\u00bb\u00b6: "
+   53:  add
+   54:  get_var_ref0 0: e
+   55:  get_field videoPath
+   60:  add
+   61:  put_loc0 0: i
+   62:  get_var_ref0 0: e
+   63:  get_field2 showPlayError
+   68:  get_loc0 0: i
+   69:  call_method 1
+   72:  drop
+   73:  catch 95
+   78:  get_var_ref0 0: e
+   79:  get_field player
+   84:  get_field2 stop
+   89:  call_method 0
+   92:  drop
+   93:  drop
+   94:  return_undef
+   95:  put_loc1 1: t
+   96:  catch 103
+  101:  drop
+  102:  return_undef
+  103:  throw
+  104:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  put_loc0 0: t
+    4:  get_loc1 1: this
+    5:  get_field updateTimer
+   10:  dup
+   11:  if_false8 26
+   13:  drop
+   14:  get_var clearInterval
+   19:  get_loc1 1: this
+   20:  get_field updateTimer
+   25:  call1 1
+   26:  drop
+   27:  get_loc1 1: this
+   28:  get_var setInterval
+   33:  fclosure8 0: [bytecode <null>]
+   35:  push_i16 500
+   38:  call2 2
+   39:  put_field updateTimer
+   44:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var e
+    1: catch t [level:7 next:-1]
+    2: catch t [level:12 next:-1]
+    3: var i
+    4: var a
+    5: catch t [level:22 next:-1]
+    6: catch t [level:27 next:-1]
+    7: var r
+    8: catch t [level:31 next:-1]
+    9: catch t [level:33 next:-1]
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 7
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field isDragging
+    6:  lnot
+    7:  if_false 821
+   12:  get_var_ref0 0: t
+   13:  get_field isSeeking
+   18:  lnot
+   19:  if_false 821
+   24:  get_var_ref0 0: t
+   25:  get_field player
+   30:  if_false 821
+   35:  catch 811
+   40:  get_var_ref0 0: t
+   41:  get_field2 errorCheckCount
+   46:  inc
+   47:  put_field errorCheckCount
+   52:  get_var_ref0 0: t
+   53:  get_field errorCheckCount
+   58:  push_4 4
+   59:  mod
+   60:  push_0 0
+   61:  eq
+   62:  if_false 194
+   67:  null
+   68:  put_loc0 0: e
+   69:  catch 92
+   74:  get_var_ref0 0: t
+   75:  get_field player
+   80:  get_field2 getState
+   85:  call_method 0
+   88:  put_loc0 0: e
+   89:  drop
+   90:  goto8 102
+   92:  put_loc1 1: t
+   93:  catch 101
+   98:  drop
+   99:  goto8 102
+  101:  throw
+  102:  get_loc0 0: e
+  103:  if_false8 194
+  105:  get_loc0 0: e
+  106:  get_field error
+  111:  if_false8 194
+  113:  get_loc0 0: e
+  114:  get_field error
+  119:  get_length
+  120:  push_0 0
+  121:  gt
+  122:  if_false8 194
+  124:  get_var_ref0 0: t
+  125:  get_field2 showPlayError
+  130:  push_atom_value "\u00e8\u00a7\u0086\u00e9\u00a2\u0091\u00e6\u0092\u00ad\u00e6\u0094\u00be\u00e5\u0087\u00ba\u00e9\u0094\u0099\n\n"
+  135:  get_loc0 0: e
+  136:  get_field error
+  141:  add
+  142:  push_atom_value "\n\n\u00e6\u0096\u0087\u00e4\u00bb\u00b6: "
+  147:  add
+  148:  get_var_ref0 0: t
+  149:  get_field videoPath
+  154:  add
+  155:  call_method 1
+  158:  drop
+  159:  catch 182
+  164:  get_var_ref0 0: t
+  165:  get_field player
+  170:  get_field2 stop
+  175:  call_method 0
+  178:  drop
+  179:  drop
+  180:  goto8 192
+  182:  put_loc2 2: t
+  183:  catch 191
+  188:  drop
+  189:  goto8 192
+  191:  throw
+  192:  drop
+  193:  return_undef
+  194:  get_var_ref0 0: t
+  195:  get_field player
+  200:  get_field2 getInfo
+  205:  call_method 0
+  208:  set_loc3 3: i
+  209:  lnot
+  210:  if_false8 214
+  212:  drop
+  213:  return_undef
+  214:  get_var_ref0 0: t
+  215:  get_field hasReceivedFrame
+  220:  lnot
+  221:  if_false 501
+  226:  get_loc3 3: i
+  227:  get_field position
+  232:  dup
+  233:  if_false8 244
+  235:  drop
+  236:  get_loc3 3: i
+  237:  get_field position
+  242:  push_0 0
+  243:  gt
+  244:  dup
+  245:  if_true8 266
+  247:  drop
+  248:  get_loc3 3: i
+  249:  get_field duration
+  254:  dup
+  255:  if_false8 266
+  257:  drop
+  258:  get_loc3 3: i
+  259:  get_field duration
+  264:  push_0 0
+  265:  gt
+  266:  lnot
+  267:  if_false 453
+  272:  get_var Date
+  277:  get_field2 now
+  282:  call_method 0
+  285:  get_var_ref0 0: t
+  286:  get_field playStartTime
+  291:  sub
+  292:  push_i16 3000
+  295:  gt
+  296:  if_false 451
+  301:  get_var_ref0 0: t
+  302:  get_field errorCheckCount
+  307:  push_2 2
+  308:  mod
+  309:  push_0 0
+  310:  eq
+  311:  if_false 451
+  316:  null
+  317:  put_loc8 4: a
+  319:  catch 343
+  324:  get_var_ref0 0: t
+  325:  get_field player
+  330:  get_field2 getState
+  335:  call_method 0
+  338:  put_loc8 4: a
+  340:  drop
+  341:  goto8 354
+  343:  put_loc8 5: t
+  345:  catch 353
+  350:  drop
+  351:  goto8 354
+  353:  throw
+  354:  get_loc8 4: a
+  356:  if_false8 451
+  358:  get_loc8 4: a
+  360:  get_field error
+  365:  if_false8 451
+  367:  get_loc8 4: a
+  369:  get_field error
+  374:  get_length
+  375:  push_0 0
+  376:  gt
+  377:  if_false8 451
+  379:  get_var_ref0 0: t
+  380:  get_field2 showPlayError
+  385:  push_atom_value "\u00e8\u00a7\u0086\u00e9\u00a2\u0091\u00e6\u0097\u00a0\u00e6\u00b3\u0095\u00e6\u0092\u00ad\u00e6\u0094\u00be\n\n"
+  390:  get_loc8 4: a
+  392:  get_field error
+  397:  add
+  398:  push_atom_value "\n\n\u00e6\u0096\u0087\u00e4\u00bb\u00b6: "
+  403:  add
+  404:  get_var_ref0 0: t
+  405:  get_field videoPath
+  410:  add
+  411:  call_method 1
+  414:  drop
+  415:  catch 438
+  420:  get_var_ref0 0: t
+  421:  get_field player
+  426:  get_field2 stop
+  431:  call_method 0
+  434:  drop
+  435:  drop
+  436:  goto8 449
+  438:  put_loc8 6: t
+  440:  catch 448
+  445:  drop
+  446:  goto8 449
+  448:  throw
+  449:  drop
+  450:  return_undef
+  451:  drop
+  452:  return_undef
+  453:  get_var_ref0 0: t
+  454:  push_0 0
+  455:  lnot
+  456:  put_field hasReceivedFrame
+  461:  get_var_ref0 0: t
+  462:  push_1 1
+  463:  lnot
+  464:  put_field loading
+  469:  get_var_ref0 0: t
+  470:  get_field loadingTimeoutTimer
+  475:  dup
+  476:  if_false8 500
+  478:  drop
+  479:  get_var clearTimeout
+  484:  get_var_ref0 0: t
+  485:  get_field loadingTimeoutTimer
+  490:  call1 1
+  491:  drop
+  492:  get_var_ref0 0: t
+  493:  null
+  494:  insert2
+  495:  put_field loadingTimeoutTimer
+  500:  drop
+  501:  push_atom_value number
+  506:  get_loc3 3: i
+  507:  get_field position
+  512:  typeof
+  513:  eq
+  514:  dup
+  515:  if_false 653
+  520:  drop
+  521:  get_loc3 3: i
+  522:  get_field duration
+  527:  push_0 0
+  528:  gt
+  529:  if_false8 619
+  531:  get_loc3 3: i
+  532:  get_field position
+  537:  push_0 0
+  538:  gt
+  539:  if_false8 619
+  541:  get_loc3 3: i
+  542:  get_field position
+  547:  get_var_ref0 0: t
+  548:  get_field lastCheckTime
+  553:  strict_eq
+  554:  if_false8 619
+  556:  get_loc3 3: i
+  557:  get_field position
+  562:  get_loc3 3: i
+  563:  get_field duration
+  568:  push_i16 2000
+  571:  sub
+  572:  gte
+  573:  dup
+  574:  if_false8 627
+  576:  drop
+  577:  get_var_ref0 0: t
+  578:  get_field2 stallCount
+  583:  inc
+  584:  put_field stallCount
+  589:  get_var_ref0 0: t
+  590:  get_field stallCount
+  595:  push_4 4
+  596:  gte
+  597:  dup
+  598:  if_false8 627
+  600:  drop
+  601:  get_var_ref0 0: t
+  602:  push_1 1
+  603:  lnot
+  604:  put_field isPlaying
+  609:  get_var_ref0 0: t
+  610:  push_0 0
+  611:  insert2
+  612:  put_field stallCount
+  617:  goto8 627
+  619:  get_var_ref0 0: t
+  620:  push_0 0
+  621:  insert2
+  622:  put_field stallCount
+  627:  drop
+  628:  get_var_ref0 0: t
+  629:  get_loc3 3: i
+  630:  get_field position
+  635:  put_field lastCheckTime
+  640:  get_var_ref0 0: t
+  641:  get_loc3 3: i
+  642:  get_field position
+  647:  insert2
+  648:  put_field currentTime
+  653:  drop
+  654:  push_atom_value number
+  659:  get_loc3 3: i
+  660:  get_field duration
+  665:  typeof
+  666:  eq
+  667:  dup
+  668:  if_false8 696
+  670:  drop
+  671:  get_loc3 3: i
+  672:  get_field duration
+  677:  push_0 0
+  678:  gt
+  679:  dup
+  680:  if_false8 696
+  682:  drop
+  683:  get_var_ref0 0: t
+  684:  get_loc3 3: i
+  685:  get_field duration
+  690:  insert2
+  691:  put_field totalDuration
+  696:  drop
+  697:  get_var_ref0 0: t
+  698:  get_field canvasContext
+  703:  if_false8 809
+  705:  get_var_ref0 0: t
+  706:  get_field imageData
+  711:  if_false8 809
+  713:  get_var_ref0 0: t
+  714:  get_field player
+  719:  get_field getFrameCounter
+  724:  if_false8 809
+  726:  catch 798
+  731:  get_var Number
+  736:  get_var_ref0 0: t
+  737:  get_field player
+  742:  get_field2 getFrameCounter
+  747:  call_method 0
+  750:  call1 1
+  751:  set_loc8 7: r
+  753:  get_var_ref0 0: t
+  754:  get_field lastFrameCount
+  759:  strict_neq
+  760:  dup
+  761:  if_false8 794
+  763:  drop
+  764:  get_var_ref0 0: t
+  765:  get_loc8 7: r
+  767:  put_field lastFrameCount
+  772:  get_var_ref0 0: t
+  773:  get_field canvasContext
+  778:  get_field2 putImageData
+  783:  get_var_ref0 0: t
+  784:  get_field imageData
+  789:  push_0 0
+  790:  push_0 0
+  791:  call_method 3
+  794:  drop
+  795:  drop
+  796:  goto8 809
+  798:  put_loc8 8: t
+  800:  catch 808
+  805:  drop
+  806:  goto8 809
+  808:  throw
+  809:  drop
+  810:  return_undef
+  811:  put_loc8 9: t
+  813:  catch 820
+  818:  drop
+  819:  return_undef
+  820:  throw
+  821:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_loc0 0: this
+    4:  get_field showControls
+    9:  lnot
+   10:  put_field showControls
+   15:  get_loc0 0: this
+   16:  get_field showControls
+   21:  dup
+   22:  if_false8 34
+   24:  drop
+   25:  get_loc0 0: this
+   26:  get_field2 scheduleHideControls
+   31:  call_method 0
+   34:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 2
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field2 cleanup
+    8:  call_method 0
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field $page
+   18:  if_false8 48
+   20:  get_loc0 0: this
+   21:  get_field $page
+   26:  get_field finish
+   31:  if_false8 48
+   33:  get_loc0 0: this
+   34:  get_field $page
+   39:  get_field2 finish
+   44:  call_method 0
+   47:  return_undef
+   48:  get_loc0 0: this
+   49:  get_field $router
+   54:  dup
+   55:  if_false8 72
+   57:  drop
+   58:  get_loc0 0: this
+   59:  get_field $router
+   64:  get_field2 back
+   69:  call_method 0
+   72:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:4 next:-1]
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_loc1 1: this
+    4:  get_field videoMuted
+    9:  lnot
+   10:  put_field videoMuted
+   15:  get_loc1 1: this
+   16:  get_field player
+   21:  if_false8 68
+   23:  catch 58
+   28:  get_loc1 1: this
+   29:  get_field player
+   34:  get_field2 setMuted
+   39:  get_loc1 1: this
+   40:  get_field videoMuted
+   45:  if_false8 50
+   47:  push_1 1
+   48:  goto8 51
+   50:  push_0 0
+   51:  call_method 1
+   54:  drop
+   55:  drop
+   56:  goto8 68
+   58:  put_loc0 0: t
+   59:  catch 67
+   64:  drop
+   65:  goto8 68
+   67:  throw
+   68:  get_loc1 1: this
+   69:  get_field2 scheduleHideControls
+   74:  call_method 0
+   77:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:4 next:-1]
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_loc1 1: this
+    4:  get_field videoRotate
+    9:  lnot
+   10:  put_field videoRotate
+   15:  get_loc1 1: this
+   16:  get_field player
+   21:  if_false8 68
+   23:  catch 58
+   28:  get_loc1 1: this
+   29:  get_field player
+   34:  get_field2 setRotate
+   39:  get_loc1 1: this
+   40:  get_field videoRotate
+   45:  if_false8 50
+   47:  push_1 1
+   48:  goto8 51
+   50:  push_0 0
+   51:  call_method 1
+   54:  drop
+   55:  drop
+   56:  goto8 68
+   58:  put_loc0 0: t
+   59:  catch 67
+   64:  drop
+   65:  goto8 68
+   67:  throw
+   68:  get_loc1 1: this
+   69:  get_field2 scheduleHideControls
+   74:  call_method 0
+   77:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:4 next:-1]
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_loc1 1: this
+    4:  get_field keepAspect
+    9:  lnot
+   10:  put_field keepAspect
+   15:  get_loc1 1: this
+   16:  get_field player
+   21:  if_false8 68
+   23:  catch 58
+   28:  get_loc1 1: this
+   29:  get_field player
+   34:  get_field2 setScaleMode
+   39:  get_loc1 1: this
+   40:  get_field keepAspect
+   45:  if_false8 50
+   47:  push_1 1
+   48:  goto8 51
+   50:  push_0 0
+   51:  call_method 1
+   54:  drop
+   55:  drop
+   56:  goto8 68
+   58:  put_loc0 0: t
+   59:  catch 67
+   64:  drop
+   65:  goto8 68
+   67:  throw
+   68:  get_loc1 1: this
+   69:  get_field2 scheduleHideControls
+   74:  call_method 0
+   77:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_loc0 0: this
+    3:  get_field player
+    8:  dup
+    9:  if_false8 119
+   11:  drop
+   12:  get_loc0 0: this
+   13:  get_field isPlaying
+   18:  if_false8 36
+   20:  get_loc0 0: this
+   21:  get_field player
+   26:  get_field2 pause
+   31:  call_method 0
+   34:  goto8 96
+   36:  get_loc0 0: this
+   37:  get_field currentTime
+   42:  get_loc0 0: this
+   43:  get_field totalDuration
+   48:  push_i16 1000
+   51:  sub
+   52:  gte
+   53:  dup
+   54:  if_false8 81
+   56:  drop
+   57:  get_loc0 0: this
+   58:  get_field player
+   63:  get_field2 seek
+   68:  push_0 0
+   69:  call_method 1
+   72:  drop
+   73:  get_loc0 0: this
+   74:  push_0 0
+   75:  insert2
+   76:  put_field currentTime
+   81:  drop
+   82:  get_loc0 0: this
+   83:  get_field player
+   88:  get_field2 resume
+   93:  call_method 0
+   96:  drop
+   97:  get_loc0 0: this
+   98:  get_loc0 0: this
+   99:  get_field isPlaying
+  104:  lnot
+  105:  put_field isPlaying
+  110:  get_loc0 0: this
+  111:  get_field2 scheduleHideControls
+  116:  call_method 0
+  119:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field player
+    8:  if_false8 89
+   10:  get_loc1 1: this
+   11:  get_field isSeeking
+   16:  dup
+   17:  if_true8 26
+   19:  drop
+   20:  get_loc1 1: this
+   21:  get_field isDragging
+   26:  if_false8 36
+   28:  get_loc1 1: this
+   29:  get_field dragTime
+   34:  goto8 42
+   36:  get_loc1 1: this
+   37:  get_field currentTime
+   42:  push_i16 1000
+   45:  get_arg0 0: t
+   46:  mul
+   47:  add
+   48:  set_loc0 0: e
+   49:  push_0 0
+   50:  lt
+   51:  dup
+   52:  if_false8 57
+   54:  drop
+   55:  push_0 0
+   56:  set_loc0 0: e
+   57:  drop
+   58:  get_loc0 0: e
+   59:  get_loc1 1: this
+   60:  get_field totalDuration
+   65:  gt
+   66:  dup
+   67:  if_false8 77
+   69:  drop
+   70:  get_loc1 1: this
+   71:  get_field totalDuration
+   76:  set_loc0 0: e
+   77:  drop
+   78:  get_loc1 1: this
+   79:  get_field2 performSeek
+   84:  get_loc0 0: e
+   85:  call_method 1
+   88:  drop
+   89:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  args: t
+  stack_size: 2
+  opcodes:
+    0:  push_atom_value number
+    5:  get_arg0 0: t
+    6:  typeof
+    7:  eq
+    8:  if_false8 12
+   10:  get_arg0 0: t
+   11:  return
+   12:  get_arg0 0: t
+   13:  if_false8 37
+   15:  push_atom_value number
+   20:  get_arg0 0: t
+   21:  get_field value
+   26:  typeof
+   27:  eq
+   28:  if_false8 37
+   30:  get_arg0 0: t
+   31:  get_field value
+   36:  return
+   37:  get_arg0 0: t
+   38:  if_false8 80
+   40:  get_arg0 0: t
+   41:  get_field detail
+   46:  if_false8 80
+   48:  push_atom_value number
+   53:  get_arg0 0: t
+   54:  get_field detail
+   59:  get_field value
+   64:  typeof
+   65:  eq
+   66:  if_false8 80
+   68:  get_arg0 0: t
+   69:  get_field detail
+   74:  get_field value
+   79:  return
+   80:  push_minus1 -1
+   81:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field2 getEventValue
+    8:  get_arg0 0: t
+    9:  call_method 1
+   12:  set_loc0 0: e
+   13:  push_0 0
+   14:  lt
+   15:  dup
+   16:  if_true8 66
+   18:  drop
+   19:  get_loc1 1: this
+   20:  push_0 0
+   21:  lnot
+   22:  put_field isDragging
+   27:  get_loc1 1: this
+   28:  push_0 0
+   29:  lnot
+   30:  put_field isSeeking
+   35:  get_loc1 1: this
+   36:  get_field hideTimer
+   41:  dup
+   42:  if_false8 57
+   44:  drop
+   45:  get_var clearTimeout
+   50:  get_loc1 1: this
+   51:  get_field hideTimer
+   56:  call1 1
+   57:  drop
+   58:  get_loc1 1: this
+   59:  get_loc0 0: e
+   60:  insert2
+   61:  put_field dragTime
+   66:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field2 getEventValue
+    8:  get_arg0 0: t
+    9:  call_method 1
+   12:  set_loc0 0: e
+   13:  push_0 0
+   14:  lt
+   15:  if_false8 34
+   17:  get_loc1 1: this
+   18:  push_1 1
+   19:  lnot
+   20:  put_field isDragging
+   25:  get_loc1 1: this
+   26:  push_1 1
+   27:  lnot
+   28:  put_field isSeeking
+   33:  return_undef
+   34:  get_loc1 1: this
+   35:  get_field2 performSeek
+   40:  get_loc0 0: e
+   41:  call_method 1
+   44:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var i
+    2: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc2 2: this
+    2:  get_arg0 0: t
+    3:  push_0 0
+    4:  lt
+    5:  dup
+    6:  if_false8 11
+    8:  drop
+    9:  push_0 0
+   10:  set_arg0 0: t
+   11:  drop
+   12:  get_arg0 0: t
+   13:  get_loc2 2: this
+   14:  get_field totalDuration
+   19:  gt
+   20:  dup
+   21:  if_false8 31
+   23:  drop
+   24:  get_loc2 2: this
+   25:  get_field totalDuration
+   30:  set_arg0 0: t
+   31:  drop
+   32:  get_loc2 2: this
+   33:  get_arg0 0: t
+   34:  put_field dragTime
+   39:  get_loc2 2: this
+   40:  push_1 1
+   41:  lnot
+   42:  put_field isDragging
+   47:  get_loc2 2: this
+   48:  push_0 0
+   49:  lnot
+   50:  put_field isSeeking
+   55:  get_loc2 2: this
+   56:  get_arg0 0: t
+   57:  put_field currentTime
+   62:  get_loc2 2: this
+   63:  push_0 0
+   64:  put_field stallCount
+   69:  get_loc2 2: this
+   70:  push_minus1 -1
+   71:  put_field lastCheckTime
+   76:  get_loc2 2: this
+   77:  get_field2 scheduleHideControls
+   82:  call_method 0
+   85:  drop
+   86:  get_loc2 2: this
+   87:  get_field seekDebounceTimer
+   92:  dup
+   93:  if_false8 108
+   95:  drop
+   96:  get_var clearTimeout
+  101:  get_loc2 2: this
+  102:  get_field seekDebounceTimer
+  107:  call1 1
+  108:  drop
+  109:  get_loc2 2: this
+  110:  get_field seekResumeTimer
+  115:  dup
+  116:  if_false8 131
+  118:  drop
+  119:  get_var clearTimeout
+  124:  get_loc2 2: this
+  125:  get_field seekResumeTimer
+  130:  call1 1
+  131:  drop
+  132:  get_loc2 2: this
+  133:  get_field seekResetTimer
+  138:  dup
+  139:  if_false8 154
+  141:  drop
+  142:  get_var clearTimeout
+  147:  get_loc2 2: this
+  148:  get_field seekResetTimer
+  153:  call1 1
+  154:  drop
+  155:  get_arg0 0: t
+  156:  put_loc0 0: e
+  157:  get_loc2 2: this
+  158:  put_loc1 1: i
+  159:  get_loc2 2: this
+  160:  get_var setTimeout
+  165:  fclosure8 0: [bytecode <null>]
+  167:  push_i8 80
+  169:  call2 2
+  170:  put_field seekDebounceTimer
+  175:  get_loc2 2: this
+  176:  get_var setTimeout
+  181:  fclosure8 1: [bytecode <null>]
+  183:  push_i16 3000
+  186:  call2 2
+  187:  put_field seekResetTimer
+  192:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:5 next:-1]
+  closure vars:
+    0: i local:loc1 var
+    1: e local:loc0 var
+  stack_size: 4
+  opcodes:
+    0:  get_var_ref0 0: i
+    1:  get_field player
+    6:  if_false8 59
+    8:  catch 32
+   13:  get_var_ref0 0: i
+   14:  get_field player
+   19:  get_field2 seek
+   24:  get_var_ref1 1: e
+   25:  call_method 1
+   28:  drop
+   29:  drop
+   30:  goto8 42
+   32:  put_loc0 0: t
+   33:  catch 41
+   38:  drop
+   39:  goto8 42
+   41:  throw
+   42:  get_var_ref0 0: i
+   43:  get_var setTimeout
+   48:  fclosure8 0: [bytecode <null>]
+   50:  push_i16 200
+   53:  call2 2
+   54:  put_field seekResumeTimer
+   59:  return_undef
+
+
+/* ===== function depth=3 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:5 next:-1]
+  closure vars:
+    0: i parent:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: i
+    1:  get_field player
+    6:  if_false8 49
+    8:  catch 31
+   13:  get_var_ref0 0: i
+   14:  get_field player
+   19:  get_field2 resume
+   24:  call_method 0
+   27:  drop
+   28:  drop
+   29:  goto8 41
+   31:  put_loc0 0: t
+   32:  catch 40
+   37:  drop
+   38:  goto8 41
+   40:  throw
+   41:  get_var_ref0 0: i
+   42:  push_0 0
+   43:  lnot
+   44:  put_field isPlaying
+   49:  return_undef
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  closure vars:
+    0: i local:loc1 var
+  stack_size: 2
+  opcodes:
+    0:  get_var_ref0 0: i
+    1:  push_1 1
+    2:  lnot
+    3:  put_field isSeeking
+    8:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: catch t [level:4 next:-1]
+    1: var this
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field updateTimer
+    8:  dup
+    9:  if_false8 24
+   11:  drop
+   12:  get_var clearInterval
+   17:  get_loc1 1: this
+   18:  get_field updateTimer
+   23:  call1 1
+   24:  drop
+   25:  get_loc1 1: this
+   26:  get_field hideTimer
+   31:  dup
+   32:  if_false8 47
+   34:  drop
+   35:  get_var clearTimeout
+   40:  get_loc1 1: this
+   41:  get_field hideTimer
+   46:  call1 1
+   47:  drop
+   48:  get_loc1 1: this
+   49:  get_field seekResetTimer
+   54:  dup
+   55:  if_false8 70
+   57:  drop
+   58:  get_var clearTimeout
+   63:  get_loc1 1: this
+   64:  get_field seekResetTimer
+   69:  call1 1
+   70:  drop
+   71:  get_loc1 1: this
+   72:  get_field seekResumeTimer
+   77:  dup
+   78:  if_false8 93
+   80:  drop
+   81:  get_var clearTimeout
+   86:  get_loc1 1: this
+   87:  get_field seekResumeTimer
+   92:  call1 1
+   93:  drop
+   94:  get_loc1 1: this
+   95:  get_field seekDebounceTimer
+  100:  dup
+  101:  if_false8 116
+  103:  drop
+  104:  get_var clearTimeout
+  109:  get_loc1 1: this
+  110:  get_field seekDebounceTimer
+  115:  call1 1
+  116:  drop
+  117:  get_loc1 1: this
+  118:  get_field loadingTimeoutTimer
+  123:  dup
+  124:  if_false8 139
+  126:  drop
+  127:  get_var clearTimeout
+  132:  get_loc1 1: this
+  133:  get_field loadingTimeoutTimer
+  138:  call1 1
+  139:  drop
+  140:  get_loc1 1: this
+  141:  null
+  142:  put_field canvasContext
+  147:  get_loc1 1: this
+  148:  null
+  149:  put_field imageData
+  154:  get_loc1 1: this
+  155:  get_field player
+  160:  if_false8 193
+  162:  catch 184
+  167:  get_loc1 1: this
+  168:  get_field player
+  173:  get_field2 stop
+  178:  call_method 0
+  181:  drop
+  182:  drop
+  183:  return_undef
+  184:  put_loc0 0: t
+  185:  catch 192
+  190:  drop
+  191:  return_undef
+  192:  throw
+  193:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var i
+    3: var this
+  stack_size: 31
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  set_loc0 0: t
+    4:  get_field $createElement
+    9:  put_loc1 1: e
+   10:  get_loc0 0: t
+   11:  get_field _self
+   16:  get_field _c
+   21:  dup
+   22:  if_true8 26
+   24:  drop
+   25:  get_loc1 1: e
+   26:  set_loc2 2: i
+   27:  push_atom_value div
+   32:  object
+   33:  push_atom_value page
+   38:  array_from 1
+   41:  define_field staticClass
+   46:  get_loc2 2: i
+   47:  push_atom_value canvas
+   52:  object
+   53:  push_atom_value videoCanvas
+   58:  define_field ref
+   63:  push_atom_value "video-hole"
+   68:  array_from 1
+   71:  define_field staticClass
+   76:  get_loc0 0: t
+   77:  get_field canvasStyle
+   82:  define_field style
+   87:  object
+   88:  get_loc0 0: t
+   89:  get_field screenWidth
+   94:  define_field width
+   99:  get_loc0 0: t
+  100:  get_field screenHeight
+  105:  define_field height
+  110:  define_field attrs
+  115:  call2 2
+  116:  get_loc0 0: t
+  117:  get_field isDarkMode
+  122:  if_false8 173
+  124:  get_loc0 0: t
+  125:  get_field showEndScreen
+  130:  lnot
+  131:  if_false8 173
+  133:  get_loc2 2: i
+  134:  push_atom_value div
+  139:  object
+  140:  push_atom_value "dark-overlay"
+  145:  array_from 1
+  148:  define_field staticClass
+  153:  object
+  154:  get_loc0 0: t
+  155:  get_field onScreenTap
+  160:  define_field click
+  165:  define_field on
+  170:  call2 2
+  171:  goto8 182
+  173:  get_loc0 0: t
+  174:  get_field2 _e
+  179:  call_method 0
+  182:  get_loc0 0: t
+  183:  get_field loading
+  188:  if_false8 226
+  190:  get_loc2 2: i
+  191:  push_atom_value div
+  196:  object
+  197:  push_atom_value "loading-mask"
+  202:  array_from 1
+  205:  define_field staticClass
+  210:  get_loc0 0: t
+  211:  get_field2 _m
+  216:  push_0 0
+  217:  call_method 1
+  220:  array_from 1
+  223:  call3 3
+  224:  goto8 235
+  226:  get_loc0 0: t
+  227:  get_field2 _e
+  232:  call_method 0
+  235:  get_loc0 0: t
+  236:  get_field errorPopup
+  241:  if_false 501
+  246:  get_loc2 2: i
+  247:  push_atom_value div
+  252:  object
+  253:  push_atom_value "error-mask"
+  258:  array_from 1
+  261:  define_field staticClass
+  266:  get_loc2 2: i
+  267:  push_atom_value div
+  272:  object
+  273:  push_atom_value "error-content"
+  278:  array_from 1
+  281:  define_field staticClass
+  286:  get_loc2 2: i
+  287:  push_atom_value text
+  292:  object
+  293:  push_atom_value "error-title"
+  298:  array_from 1
+  301:  define_field staticClass
+  306:  get_loc0 0: t
+  307:  get_field2 _v
+  312:  push_atom_value "\u00e6\u0092\u00ad\u00e6\u0094\u00be\u00e5\u00a4\u00b1\u00e8\u00b4\u00a5"
+  317:  call_method 1
+  320:  array_from 1
+  323:  call3 3
+  324:  get_loc2 2: i
+  325:  push_atom_value scroller
+  330:  object
+  331:  push_atom_value "error-scroller"
+  336:  array_from 1
+  339:  define_field staticClass
+  344:  object
+  345:  push_atom_value true
+  350:  define_field showScrollbar
+  355:  define_field attrs
+  360:  get_loc2 2: i
+  361:  push_atom_value text
+  366:  object
+  367:  push_atom_value "error-text"
+  372:  array_from 1
+  375:  define_field staticClass
+  380:  get_loc0 0: t
+  381:  get_field2 _v
+  386:  get_loc0 0: t
+  387:  get_field2 _s
+  392:  get_loc0 0: t
+  393:  get_field errorPopupText
+  398:  call_method 1
+  401:  call_method 1
+  404:  array_from 1
+  407:  call3 3
+  408:  array_from 1
+  411:  call3 3
+  412:  get_loc2 2: i
+  413:  push_atom_value div
+  418:  object
+  419:  push_atom_value "error-actions"
+  424:  array_from 1
+  427:  define_field staticClass
+  432:  get_loc2 2: i
+  433:  push_atom_value text
+  438:  object
+  439:  push_atom_value "error-btn"
+  444:  array_from 1
+  447:  define_field staticClass
+  452:  object
+  453:  get_loc0 0: t
+  454:  get_field closeErrorPopup
+  459:  define_field click
+  464:  define_field on
+  469:  get_loc0 0: t
+  470:  get_field2 _v
+  475:  push_atom_value "\u00e7\u00a1\u00ae\u00e5\u00ae\u009a"
+  480:  call_method 1
+  483:  array_from 1
+  486:  call3 3
+  487:  array_from 1
+  490:  call3 3
+  491:  array_from 3
+  494:  call3 3
+  495:  array_from 1
+  498:  call3 3
+  499:  goto8 510
+  501:  get_loc0 0: t
+  502:  get_field2 _e
+  507:  call_method 0
+  510:  get_loc0 0: t
+  511:  get_field showEndScreen
+  516:  if_false8 529
+  518:  get_loc0 0: t
+  519:  get_field2 _e
+  524:  call_method 0
+  527:  goto8 567
+  529:  get_loc2 2: i
+  530:  push_atom_value div
+  535:  object
+  536:  push_atom_value "tap-area"
+  541:  array_from 1
+  544:  define_field staticClass
+  549:  object
+  550:  get_loc0 0: t
+  551:  get_field onScreenTap
+  556:  define_field click
+  561:  define_field on
+  566:  call2 2
+  567:  get_loc0 0: t
+  568:  get_field showControls
+  573:  if_false 1599
+  578:  get_loc0 0: t
+  579:  get_field showEndScreen
+  584:  lnot
+  585:  if_false 1599
+  590:  get_loc2 2: i
+  591:  push_atom_value div
+  596:  object
+  597:  push_atom_value "top-bar"
+  602:  array_from 1
+  605:  define_field staticClass
+  610:  get_loc2 2: i
+  611:  push_atom_value div
+  616:  object
+  617:  push_atom_value "top-left"
+  622:  array_from 1
+  625:  define_field staticClass
+  630:  object
+  631:  get_loc0 0: t
+  632:  get_field goBack
+  637:  define_field click
+  642:  define_field on
+  647:  get_loc2 2: i
+  648:  push_atom_value div
+  653:  object
+  654:  push_atom_value "icon-wrapper"
+  659:  array_from 1
+  662:  define_field staticClass
+  667:  get_loc2 2: i
+  668:  push_atom_value image
+  673:  object
+  674:  push_atom_value "back-icon"
+  679:  array_from 1
+  682:  define_field staticClass
+  687:  object
+  688:  get_loc0 0: t
+  689:  get_field backIcon
+  694:  define_field src
+  699:  push_atom_value contain
+  704:  define_field resize
+  709:  define_field attrs
+  714:  call2 2
+  715:  array_from 1
+  718:  call3 3
+  719:  array_from 1
+  722:  call3 3
+  723:  get_loc0 0: t
+  724:  get_field videoTitle
+  729:  if_false8 781
+  731:  get_loc2 2: i
+  732:  push_atom_value text
+  737:  object
+  738:  push_atom_value "video-title"
+  743:  array_from 1
+  746:  define_field staticClass
+  751:  get_loc0 0: t
+  752:  get_field2 _v
+  757:  get_loc0 0: t
+  758:  get_field2 _s
+  763:  get_loc0 0: t
+  764:  get_field videoTitle
+  769:  call_method 1
+  772:  call_method 1
+  775:  array_from 1
+  778:  call3 3
+  779:  goto8 790
+  781:  get_loc0 0: t
+  782:  get_field2 _e
+  787:  call_method 0
+  790:  get_loc2 2: i
+  791:  push_atom_value div
+  796:  object
+  797:  push_atom_value "top-right"
+  802:  array_from 1
+  805:  define_field staticClass
+  810:  get_loc2 2: i
+  811:  push_atom_value div
+  816:  object
+  817:  push_atom_value "jump-buttons"
+  822:  array_from 1
+  825:  define_field staticClass
+  830:  get_loc2 2: i
+  831:  push_atom_value div
+  836:  object
+  837:  push_atom_value "jump-btn"
+  842:  array_from 1
+  845:  define_field staticClass
+  850:  object
+  851:  fclosure8 0: [bytecode <null>]
+  853:  set_name click
+  858:  define_field click
+  863:  define_field on
+  868:  get_loc2 2: i
+  869:  push_atom_value text
+  874:  object
+  875:  push_atom_value "jump-text"
+  880:  array_from 1
+  883:  define_field staticClass
+  888:  get_loc0 0: t
+  889:  get_field2 _v
+  894:  push_atom_value "-1m"
+  899:  call_method 1
+  902:  array_from 1
+  905:  call3 3
+  906:  array_from 1
+  909:  call3 3
+  910:  get_loc2 2: i
+  911:  push_atom_value div
+  916:  object
+  917:  push_atom_value "jump-btn"
+  922:  array_from 1
+  925:  define_field staticClass
+  930:  object
+  931:  fclosure8 1: [bytecode <null>]
+  933:  set_name click
+  938:  define_field click
+  943:  define_field on
+  948:  get_loc2 2: i
+  949:  push_atom_value text
+  954:  object
+  955:  push_atom_value "jump-text"
+  960:  array_from 1
+  963:  define_field staticClass
+  968:  get_loc0 0: t
+  969:  get_field2 _v
+  974:  push_atom_value "-10s"
+  979:  call_method 1
+  982:  array_from 1
+  985:  call3 3
+  986:  array_from 1
+  989:  call3 3
+  990:  get_loc2 2: i
+  991:  push_atom_value div
+  996:  object
+  997:  push_atom_value "jump-btn"
+ 1002:  array_from 1
+ 1005:  define_field staticClass
+ 1010:  object
+ 1011:  fclosure8 2: [bytecode <null>]
+ 1013:  set_name click
+ 1018:  define_field click
+ 1023:  define_field on
+ 1028:  get_loc2 2: i
+ 1029:  push_atom_value text
+ 1034:  object
+ 1035:  push_atom_value "jump-text"
+ 1040:  array_from 1
+ 1043:  define_field staticClass
+ 1048:  get_loc0 0: t
+ 1049:  get_field2 _v
+ 1054:  push_atom_value "+10s"
+ 1059:  call_method 1
+ 1062:  array_from 1
+ 1065:  call3 3
+ 1066:  array_from 1
+ 1069:  call3 3
+ 1070:  get_loc2 2: i
+ 1071:  push_atom_value div
+ 1076:  object
+ 1077:  push_atom_value "jump-btn"
+ 1082:  array_from 1
+ 1085:  define_field staticClass
+ 1090:  object
+ 1091:  fclosure8 3: [bytecode <null>]
+ 1093:  set_name click
+ 1098:  define_field click
+ 1103:  define_field on
+ 1108:  get_loc2 2: i
+ 1109:  push_atom_value text
+ 1114:  object
+ 1115:  push_atom_value "jump-text"
+ 1120:  array_from 1
+ 1123:  define_field staticClass
+ 1128:  get_loc0 0: t
+ 1129:  get_field2 _v
+ 1134:  push_atom_value "+1m"
+ 1139:  call_method 1
+ 1142:  array_from 1
+ 1145:  call3 3
+ 1146:  array_from 1
+ 1149:  call3 3
+ 1150:  array_from 4
+ 1153:  call3 3
+ 1154:  get_loc2 2: i
+ 1155:  push_atom_value div
+ 1160:  object
+ 1161:  push_atom_value "action-btn"
+ 1166:  array_from 1
+ 1169:  define_field staticClass
+ 1174:  object
+ 1175:  get_loc0 0: t
+ 1176:  get_field toggleMuted
+ 1181:  define_field click
+ 1186:  define_field on
+ 1191:  get_loc2 2: i
+ 1192:  push_atom_value text
+ 1197:  object
+ 1198:  push_atom_value "action-text"
+ 1203:  array_from 1
+ 1206:  define_field staticClass
+ 1211:  object
+ 1212:  get_loc0 0: t
+ 1213:  get_field videoMuted
+ 1218:  if_false8 1227
+ 1220:  push_atom_value "#FF6699"
+ 1225:  goto8 1232
+ 1227:  push_atom_value "#ffffff"
+ 1232:  define_field color
+ 1237:  define_field style
+ 1242:  get_loc0 0: t
+ 1243:  get_field2 _v
+ 1248:  push_atom_value "\u00e9\u009d\u0099\u00e9\u009f\u00b3"
+ 1253:  call_method 1
+ 1256:  array_from 1
+ 1259:  call3 3
+ 1260:  array_from 1
+ 1263:  call3 3
+ 1264:  get_loc2 2: i
+ 1265:  push_atom_value div
+ 1270:  object
+ 1271:  push_atom_value "action-btn"
+ 1276:  array_from 1
+ 1279:  define_field staticClass
+ 1284:  object
+ 1285:  get_loc0 0: t
+ 1286:  get_field toggleRotation
+ 1291:  define_field click
+ 1296:  define_field on
+ 1301:  get_loc2 2: i
+ 1302:  push_atom_value text
+ 1307:  object
+ 1308:  push_atom_value "action-text"
+ 1313:  array_from 1
+ 1316:  define_field staticClass
+ 1321:  object
+ 1322:  get_loc0 0: t
+ 1323:  get_field videoRotate
+ 1328:  if_false8 1337
+ 1330:  push_atom_value "#FF6699"
+ 1335:  goto8 1342
+ 1337:  push_atom_value "#ffffff"
+ 1342:  define_field color
+ 1347:  define_field style
+ 1352:  get_loc0 0: t
+ 1353:  get_field2 _v
+ 1358:  push_atom_value "\u00e6\u0097\u008b\u00e8\u00bd\u00ac"
+ 1363:  call_method 1
+ 1366:  array_from 1
+ 1369:  call3 3
+ 1370:  array_from 1
+ 1373:  call3 3
+ 1374:  get_loc2 2: i
+ 1375:  push_atom_value div
+ 1380:  object
+ 1381:  push_atom_value "action-btn"
+ 1386:  array_from 1
+ 1389:  define_field staticClass
+ 1394:  object
+ 1395:  get_loc0 0: t
+ 1396:  get_field toggleScaleMode
+ 1401:  define_field click
+ 1406:  define_field on
+ 1411:  get_loc2 2: i
+ 1412:  push_atom_value text
+ 1417:  object
+ 1418:  push_atom_value "action-text"
+ 1423:  array_from 1
+ 1426:  define_field staticClass
+ 1431:  object
+ 1432:  get_loc0 0: t
+ 1433:  get_field keepAspect
+ 1438:  if_false8 1447
+ 1440:  push_atom_value "#FF6699"
+ 1445:  goto8 1452
+ 1447:  push_atom_value "#ffffff"
+ 1452:  define_field color
+ 1457:  define_field style
+ 1462:  get_loc0 0: t
+ 1463:  get_field2 _v
+ 1468:  push_atom_value "\u00e7\u00ad\u0089\u00e6\u00af\u0094"
+ 1473:  call_method 1
+ 1476:  array_from 1
+ 1479:  call3 3
+ 1480:  array_from 1
+ 1483:  call3 3
+ 1484:  get_loc2 2: i
+ 1485:  push_atom_value div
+ 1490:  object
+ 1491:  push_atom_value "action-btn"
+ 1496:  array_from 1
+ 1499:  define_field staticClass
+ 1504:  object
+ 1505:  get_loc0 0: t
+ 1506:  get_field cyclePlaybackRate
+ 1511:  define_field click
+ 1516:  define_field on
+ 1521:  get_loc2 2: i
+ 1522:  push_atom_value text
+ 1527:  object
+ 1528:  push_atom_value "action-text"
+ 1533:  array_from 1
+ 1536:  define_field staticClass
+ 1541:  object
+ 1542:  push_atom_value "#ffffff"
+ 1547:  define_field color
+ 1552:  define_field staticStyle
+ 1557:  get_loc0 0: t
+ 1558:  get_field2 _v
+ 1563:  get_loc0 0: t
+ 1564:  get_field2 _s
+ 1569:  get_loc0 0: t
+ 1570:  get_field playbackRateLabel
+ 1575:  call_method 1
+ 1578:  call_method 1
+ 1581:  array_from 1
+ 1584:  call3 3
+ 1585:  array_from 1
+ 1588:  call3 3
+ 1589:  array_from 5
+ 1592:  call3 3
+ 1593:  array_from 3
+ 1596:  call3 3
+ 1597:  goto8 1608
+ 1599:  get_loc0 0: t
+ 1600:  get_field2 _e
+ 1605:  call_method 0
+ 1608:  get_loc0 0: t
+ 1609:  get_field showControls
+ 1614:  if_false 2071
+ 1619:  get_loc0 0: t
+ 1620:  get_field showEndScreen
+ 1625:  lnot
+ 1626:  if_false 2071
+ 1631:  get_loc2 2: i
+ 1632:  push_atom_value div
+ 1637:  object
+ 1638:  push_atom_value "bottom-bar"
+ 1643:  array_from 1
+ 1646:  define_field staticClass
+ 1651:  get_loc2 2: i
+ 1652:  push_atom_value div
+ 1657:  object
+ 1658:  push_atom_value "play-btn"
+ 1663:  array_from 1
+ 1666:  define_field staticClass
+ 1671:  object
+ 1672:  get_loc0 0: t
+ 1673:  get_field togglePlay
+ 1678:  define_field click
+ 1683:  define_field on
+ 1688:  get_loc2 2: i
+ 1689:  push_atom_value div
+ 1694:  object
+ 1695:  push_atom_value "icon-wrapper"
+ 1700:  array_from 1
+ 1703:  define_field staticClass
+ 1708:  get_loc0 0: t
+ 1709:  get_field isPlaying
+ 1714:  if_false8 1766
+ 1716:  get_loc2 2: i
+ 1717:  push_atom_value image
+ 1722:  object
+ 1723:  push_atom_value "play-icon-img"
+ 1728:  array_from 1
+ 1731:  define_field staticClass
+ 1736:  object
+ 1737:  get_loc0 0: t
+ 1738:  get_field playIconPlay
+ 1743:  define_field src
+ 1748:  push_atom_value contain
+ 1753:  define_field resize
+ 1758:  define_field attrs
+ 1763:  call2 2
+ 1764:  goto8 1814
+ 1766:  get_loc2 2: i
+ 1767:  push_atom_value image
+ 1772:  object
+ 1773:  push_atom_value "play-icon-img"
+ 1778:  array_from 1
+ 1781:  define_field staticClass
+ 1786:  object
+ 1787:  get_loc0 0: t
+ 1788:  get_field playIconPause
+ 1793:  define_field src
+ 1798:  push_atom_value contain
+ 1803:  define_field resize
+ 1808:  define_field attrs
+ 1813:  call2 2
+ 1814:  array_from 1
+ 1817:  call3 3
+ 1818:  array_from 1
+ 1821:  call3 3
+ 1822:  get_loc2 2: i
+ 1823:  push_atom_value text
+ 1828:  object
+ 1829:  push_atom_value "time-current"
+ 1834:  array_from 1
+ 1837:  define_field staticClass
+ 1842:  get_loc0 0: t
+ 1843:  get_field2 _v
+ 1848:  get_loc0 0: t
+ 1849:  get_field2 _s
+ 1854:  get_loc0 0: t
+ 1855:  get_field2 formatTime
+ 1860:  get_loc0 0: t
+ 1861:  get_field currentDisplayTime
+ 1866:  call_method 1
+ 1869:  call_method 1
+ 1872:  call_method 1
+ 1875:  array_from 1
+ 1878:  call3 3
+ 1879:  get_loc2 2: i
+ 1880:  push_atom_value seekbar
+ 1885:  object
+ 1886:  push_atom_value "video-seekbar"
+ 1891:  array_from 1
+ 1894:  define_field staticClass
+ 1899:  object
+ 1900:  push_0 0
+ 1901:  define_field min
+ 1906:  get_loc0 0: t
+ 1907:  get_field totalDuration
+ 1912:  define_field max
+ 1917:  get_loc0 0: t
+ 1918:  get_field currentDisplayTime
+ 1923:  define_field value
+ 1928:  push_atom_value "#FF6699"
+ 1933:  define_field activeColor
+ 1938:  push_atom_value "rgba(255,255,255,0.3)"
+ 1943:  define_field backgroundColor
+ 1948:  push_4 4
+ 1949:  define_field trackSize
+ 1954:  push_i8 18
+ 1956:  define_field handleSize
+ 1961:  push_atom_value "#ffffff"
+ 1966:  define_field handleColor
+ 1971:  define_field attrs
+ 1976:  object
+ 1977:  get_loc0 0: t
+ 1978:  get_field onSeekChanging
+ 1983:  define_field changing
+ 1988:  get_loc0 0: t
+ 1989:  get_field onSeekChange
+ 1994:  define_field change
+ 1999:  define_field on
+ 2004:  call2 2
+ 2005:  get_loc2 2: i
+ 2006:  push_atom_value text
+ 2011:  object
+ 2012:  push_atom_value "time-total"
+ 2017:  array_from 1
+ 2020:  define_field staticClass
+ 2025:  get_loc0 0: t
+ 2026:  get_field2 _v
+ 2031:  get_loc0 0: t
+ 2032:  get_field2 _s
+ 2037:  get_loc0 0: t
+ 2038:  get_field2 formatTime
+ 2043:  get_loc0 0: t
+ 2044:  get_field totalDuration
+ 2049:  call_method 1
+ 2052:  call_method 1
+ 2055:  call_method 1
+ 2058:  array_from 1
+ 2061:  call3 3
+ 2062:  array_from 4
+ 2065:  push_1 1
+ 2066:  call 4
+ 2069:  goto8 2080
+ 2071:  get_loc0 0: t
+ 2072:  get_field2 _e
+ 2077:  call_method 0
+ 2080:  array_from 7
+ 2083:  tail_call 3
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 jump
+    6:  push_i8 -60
+    8:  tail_call_method 1
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 jump
+    6:  push_i8 -10
+    8:  tail_call_method 1
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 jump
+    6:  push_i8 10
+    8:  tail_call_method 1
+
+
+/* ===== function depth=2 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  args: e
+  closure vars:
+    0: t local:loc0 var
+  stack_size: 3
+  opcodes:
+    0:  get_var_ref0 0: t
+    1:  get_field2 jump
+    6:  push_i8 60
+    8:  tail_call_method 1
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var e
+    2: var i
+    3: var this
+  stack_size: 10
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  set_loc0 0: t
+    4:  get_field $createElement
+    9:  put_loc1 1: e
+   10:  get_loc0 0: t
+   11:  get_field _self
+   16:  get_field _c
+   21:  dup
+   22:  if_true8 26
+   24:  drop
+   25:  get_loc1 1: e
+   26:  set_loc2 2: i
+   27:  push_atom_value div
+   32:  object
+   33:  push_atom_value "loading-content"
+   38:  array_from 1
+   41:  define_field staticClass
+   46:  get_loc2 2: i
+   47:  push_atom_value div
+   52:  object
+   53:  push_atom_value "loading-spinner"
+   58:  array_from 1
+   61:  define_field staticClass
+   66:  call2 2
+   67:  get_loc2 2: i
+   68:  push_atom_value text
+   73:  object
+   74:  push_atom_value "loading-text"
+   79:  array_from 1
+   82:  define_field staticClass
+   87:  get_loc0 0: t
+   88:  get_field2 _v
+   93:  push_atom_value "\u00e5\u008a\u00a0\u00e8\u00bd\u00bd\u00e4\u00b8\u00ad..."
+   98:  call_method 1
+  101:  array_from 1
+  104:  call3 3
+  105:  array_from 2
+  108:  tail_call 3
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  args: t
+  locals:
+    0: var e
+    1: var i
+    2: catch e [level:6 next:-1]
+    3: var this
+  closure vars:
+    0: s parent:loc6 const
+    1: o parent:loc5 const
+  stack_size: 7
+  opcodes:
+    0:  push_this
+    1:  put_loc3 3: this
+    2:  get_loc3 3: this
+    3:  get_field $refs
+    8:  get_field tool
+   13:  set_loc0 0: e
+   14:  if_false8 126
+   16:  get_loc0 0: e
+   17:  get_arg0 0: t
+   18:  get_array_el
+   19:  put_loc1 1: i
+   20:  push_atom_value function
+   25:  get_loc1 1: i
+   26:  typeof
+   27:  eq
+   28:  if_false8 92
+   30:  catch 65
+   35:  get_loc1 1: i
+   36:  get_field2 call
+   41:  get_loc0 0: e
+   42:  call_method 1
+   45:  drop
+   46:  get_var_ref_check 0: s
+   49:  push_atom_value "shell-ffmpeg"
+   54:  push_atom_value "forward ok hook="
+   59:  get_arg0 0: t
+   60:  add
+   61:  call2 2
+   62:  drop
+   63:  drop
+   64:  return_undef
+   65:  put_loc2 2: e
+   66:  catch 91
+   71:  get_var_ref_check 1: o
+   74:  push_atom_value "shell-ffmpeg"
+   79:  push_atom_value "forward \u00e8\u00b0\u0083\u00e7\u0094\u00a8\u00e6\u008a\u009b\u00e9\u0094\u0099 hook="
+   84:  get_arg0 0: t
+   85:  add
+   86:  get_loc2 2: e
+   87:  call3 3
+   88:  drop
+   89:  drop
+   90:  return_undef
+   91:  throw
+   92:  get_var_ref_check 1: o
+   95:  push_atom_value "shell-ffmpeg"
+  100:  push_atom_value "forward:\u00e7\u00bb\u0084\u00e4\u00bb\u00b6\u00e7\u00bc\u00ba\u00e5\u00b0\u0091\u00e6\u0096\u00b9\u00e6\u00b3\u0095 hook="
+  105:  get_arg0 0: t
+  106:  add
+  107:  get_var Error
+  112:  dup
+  113:  push_atom_value "ffmpeg-tool has no method "
+  118:  get_arg0 0: t
+  119:  add
+  120:  call_constructor 1
+  123:  call3 3
+  124:  drop
+  125:  return_undef
+  126:  get_var_ref_check 1: o
+  129:  push_atom_value "shell-ffmpeg"
+  134:  push_atom_value "forward:\u00e7\u00bb\u0084\u00e4\u00bb\u00b6\u00e6\u009c\u00aa\u00e6\u00b8\u00b2\u00e6\u009f\u0093 hook="
+  139:  get_arg0 0: t
+  140:  add
+  141:  get_var Error
+  146:  dup
+  147:  push_atom_value "ffmpeg-tool not mounted"
+  152:  call_constructor 1
+  155:  call3 3
+  156:  drop
+  157:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  args: t
+  closure vars:
+    0: s parent:loc6 const
+  stack_size: 7
+  opcodes:
+    0:  get_var_ref_check 0: s
+    3:  push_atom_value "shell-ffmpeg"
+    8:  push_atom_value "onLoad "
+   13:  get_var JSON
+   18:  get_field2 stringify
+   23:  get_arg0 0: t
+   24:  dup
+   25:  if_true8 29
+   27:  drop
+   28:  object
+   29:  call_method 1
+   32:  add
+   33:  call2 2
+   34:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: s parent:loc6 const
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_var_ref_check 0: s
+    5:  push_atom_value "shell-ffmpeg"
+   10:  push_atom_value onShow
+   15:  call2 2
+   16:  drop
+   17:  get_loc0 0: this
+   18:  get_field2 forward
+   23:  push_atom_value onShow
+   28:  call_method 1
+   31:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: s parent:loc6 const
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_var_ref_check 0: s
+    5:  push_atom_value "shell-ffmpeg"
+   10:  push_atom_value onHide
+   15:  call2 2
+   16:  drop
+   17:  get_loc0 0: this
+   18:  get_field2 forward
+   23:  push_atom_value onHide
+   28:  call_method 1
+   31:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var this
+  closure vars:
+    0: s parent:loc6 const
+  stack_size: 3
+  opcodes:
+    0:  push_this
+    1:  put_loc0 0: this
+    2:  get_var_ref_check 0: s
+    5:  push_atom_value "shell-ffmpeg"
+   10:  push_atom_value onUnload
+   15:  call2 2
+   16:  drop
+   17:  get_loc0 0: this
+   18:  get_field2 forward
+   23:  push_atom_value onUnload
+   28:  call_method 1
+   31:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: tools_ffmpeg.js:1 source_len=0 */
+tools_ffmpeg.js:1: function: <null>
+  mode: strict
+  locals:
+    0: var t
+    1: var this
+  stack_size: 4
+  opcodes:
+    0:  push_this
+    1:  put_loc1 1: this
+    2:  get_loc1 1: this
+    3:  get_field $createElement
+    8:  put_loc0 0: t
+    9:  get_loc1 1: this
+   10:  get_field _self
+   15:  get_field _c
+   20:  dup
+   21:  if_true8 25
+   23:  drop
+   24:  get_loc0 0: t
+   25:  push_atom_value "ffmpeg-tool"
+   30:  object
+   31:  push_atom_value tool
+   36:  define_field ref
+   41:  tail_call 2
+

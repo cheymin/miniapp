@@ -1,0 +1,70 @@
+
+/* ===== function depth=0 ===== */
+/* debug: endpoints-cad58d87.js:1 source_len=0 */
+endpoints-cad58d87.js:1: function: <eval>
+  mode: strict
+  closure vars:
+    0: o local:loc0 const
+    1: t local:loc1 const
+    2: n local:loc2 var
+    3: s local:loc3 var
+  stack_size: 1
+  opcodes:
+    0:  fclosure8 0: [bytecode n]
+    2:  put_var_ref2 2: n
+    3:  fclosure8 1: [bytecode s]
+    5:  put_var_ref3 3: s
+    6:  push_atom_value "https://api.loliyc.com"
+   11:  put_var_ref0 0: o
+   12:  push_atom_value "https://img.icons8.com/color/96"
+   17:  put_var_ref1 1: t
+   18:  return_undef
+
+
+/* ===== function depth=1 ===== */
+/* debug: endpoints-cad58d87.js:1 source_len=0 */
+endpoints-cad58d87.js:1: function: n
+  mode: strict
+  args: o t
+  stack_size: 3
+  opcodes:
+    0:  push_atom_value "https://q1.qlogo.cn/g?b=qq&nk="
+    5:  get_arg0 0: o
+    6:  add
+    7:  push_atom_value "&s="
+   12:  add
+   13:  get_arg1 1: t
+   14:  dup
+   15:  if_true8 21
+   17:  drop
+   18:  push_i16 640
+   21:  add
+   22:  return
+
+
+/* ===== function depth=1 ===== */
+/* debug: endpoints-cad58d87.js:1 source_len=0 */
+endpoints-cad58d87.js:1: function: s
+  mode: strict
+  args: o t
+  stack_size: 3
+  opcodes:
+    0:  push_atom_value "https://p.qlogo.cn/gh/"
+    5:  get_arg0 0: o
+    6:  add
+    7:  push_atom_value "/"
+   12:  add
+   13:  get_arg0 0: o
+   14:  add
+   15:  push_atom_value "/"
+   20:  add
+   21:  get_arg1 1: t
+   22:  dup
+   23:  if_true8 29
+   25:  drop
+   26:  push_i16 640
+   29:  add
+   30:  push_atom_value "/"
+   35:  add
+   36:  return
+
